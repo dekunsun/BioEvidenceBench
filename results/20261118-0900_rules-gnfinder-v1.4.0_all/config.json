@@ -1,0 +1,93 @@
+{
+  "run_id": "20261118-0900_rules-gnfinder-v1.4.0_all",
+  "created_at": "2026-11-18T09:00:13+00:00",
+  "model": "rules + gnfinder v1.4.0",
+  "condition": "RULE",
+  "gnfinder": {
+    "version": "v1.4.0",
+    "flags": "-f compact",
+    "verification": false
+  },
+  "patterns": {
+    "date": [
+      "\\b\\d{1,2}(?:st|nd|rd|th)?\\.?\\s+(?:of\\s+)?(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\.?,?\\s+1[6-9]\\d\\d\\b",
+      "\\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\.?\\s+\\d{1,2}(?:st|nd|rd|th)?,?\\s+1[6-9]\\d\\d\\b",
+      "\\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\.?,?\\s+1[6-9]\\d\\d\\b",
+      "\\b1[6-9]\\d\\d(?:\\s*[-–]\\s*(?:1[6-9]\\d\\d|\\d\\d))?\\b"
+    ],
+    "locality": [
+      "\\bHab(?:itat)?\\.?\\s*[:,]?\\s*(?P<v>[A-Z][^.;:?\\n]*)",
+      "\\b(?:in|at|near|from)\\s+(?:the\\s+)?(?P<v>[A-Z][a-z]+(?:\\s+(?:of\\s+|de\\s+|la\\s+)?[A-Z][a-z]+){0,3})"
+    ],
+    "person": [
+      "\\b(?:Mr|Mrs|Dr|Capt|Prof|Rev|Col|Lieut|Messrs)\\.?\\s+(?P<v>(?:[A-Z]\\.\\s*){0,3}[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)?)",
+      "\\((?P<v>(?:Linn|Lam|Pfr|Gmel|Brug|Desh|Sow|Gray|Lath|Temm|Vieill|Gould|Reeve|Linnæus|Lamarck)\\.?)\\)",
+      "(?m)^(?P<v>[A-Z][A-ZÆÉ]{3,}(?:\\s+[A-Z][A-Z]{2,})?)(?=,\\s+[A-Z][a-z]*\\.)"
+    ],
+    "institution": [
+      "\\bMus\\.\\s+(?:[A-Z][a-z]+\\s*){1,3}",
+      "\\b(?:[A-Z][a-z]+\\s+){1,3}(?:Museum|Society|Herbarium|College|University|Institution)\\b(?:\\s+of\\s+[A-Z][a-z]+)?"
+    ]
+  },
+  "locality_stoplist": [
+    "April",
+    "August",
+    "December",
+    "Dr",
+    "February",
+    "Fig",
+    "Figs",
+    "It",
+    "January",
+    "July",
+    "June",
+    "Lamarck",
+    "Linnaeus",
+    "Linnæus",
+    "March",
+    "May",
+    "Mr",
+    "Mrs",
+    "Mus",
+    "Museum",
+    "November",
+    "October",
+    "Plate",
+    "September",
+    "Species",
+    "That",
+    "The",
+    "These",
+    "This",
+    "Those"
+  ],
+  "page_ids": [
+    8992582,
+    8992601,
+    8992612,
+    8967047,
+    8967060,
+    8967147,
+    8992328,
+    8992379,
+    8992408,
+    8992489,
+    8992643,
+    8992644,
+    8992647,
+    8966790,
+    8966802,
+    8966930,
+    8966937,
+    8967281,
+    8967282,
+    8967290,
+    8967333,
+    8967345
+  ],
+  "versions": [
+    "expert",
+    "legacy",
+    "modern_dots-mocr"
+  ]
+}

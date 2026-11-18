@@ -73,3 +73,8 @@ def test_g1_cross_line_quote():
 
 def test_flatten_does_not_create_matches_across_unrelated_text():
     assert locate_all(LEGACY, "G0", [{"field": "taxon", "value": "Amoor Hab."}])[0]["status"] != "exact"
+
+
+def test_rule_condition_uses_given_offsets():
+    out = locate_all(PAGE, "RULE", [{"field": "locality", "start": 74, "end": 89}])[0]
+    assert out["status"] == "exact" and out["value"] == PAGE[74:89]

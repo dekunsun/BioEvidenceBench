@@ -176,7 +176,11 @@ def locate_all(text: str, condition: str, mentions: list[dict]) -> list[dict]:
         model_text = m.get("quote" if condition == "G1" else "value", "") or ""
         clean, had_label = strip_line_labels(model_text)
         clean = clean.strip() if had_label else clean
-        if condition == "G1":
+        if condition == "RULE":
+            # rule baseline: spans come with exact offsets, nothing to locate
+            r = {"status": "exact", "start": m["start"], "end": m["end"], "score": 100.0}
+            model_text = text[m["start"]:m["end"]]
+        elif condition == "G1":
             r = locate_g1(text, int(m.get("line", 0)), clean)
         else:
             key = (m.get("field"), clean)
