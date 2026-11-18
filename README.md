@@ -44,6 +44,24 @@ pytest -q
 Page texts land in `data/text/` and big intermediate files in `data/cache/`. Both are git-ignored,
 so the repo never redistributes page text; the scripts fetch it again.
 
+## Running the LLM extraction
+
+The API key is read from the environment variable `EVAL_ANTHROPIC_API_KEY` (set it in the cloud
+environment's settings; a new session picks it up). Test-page outputs are **sealed** until the gold
+labels exist: see `src/run_extraction.py` and `src/unseal.py`.
+
+```bash
+# set-up in a fresh session (texts that are not committed)
+python src/load_gt.py && python src/fetch_legacy_ocr.py && python src/fetch_modern_ocr.py
+# 1. pilot on 5 dev pages (30 requests, open output), cap $5; prints cost per page
+python src/run_extraction.py --pages dev5 --mode sync --max-usd 5
+# 2. full run, 22 pages x 3 versions x G0/G1 = 132 requests, as a Message Batch (50% price)
+python src/run_extraction.py --pages all --mode batch --estimate-from <pilot_run_id> --max-usd 15
+python src/run_extraction.py --collect <run_id>
+# 3. after the gold set is done
+python src/unseal.py <run_id> --labeller gloria
+```
+
 ## Data and licenses
 
 | Source | What we use | License |
