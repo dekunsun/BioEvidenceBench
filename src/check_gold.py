@@ -20,7 +20,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from common import TEXT
+from common import DATA, TEXT
 
 FIELDS = {"taxon", "locality", "date", "collector", "none"}
 
@@ -30,7 +30,9 @@ def check(path: Path) -> pd.DataFrame:
     out = []
     for r in g.to_dict("records"):
         status, s_start, s_end = "ok", "", ""
-        page = TEXT / "expert" / f"{r['page_id']}.txt"
+        page = DATA / "sample" / "expert" / f"{r['page_id']}.txt"   # committed sample pages
+        if not page.exists():
+            page = TEXT / "expert" / f"{r['page_id']}.txt"           # any page, after load_gt.py
         if r["field"] not in FIELDS:
             status = f"bad field '{r['field']}'"
         elif r["field"] == "none":

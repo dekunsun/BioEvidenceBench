@@ -22,6 +22,7 @@ The project brief for contributors and Claude Code is in [`CLAUDE.md`](CLAUDE.md
 | Per-page CER of each text version vs the expert transcription | `src/compute_cer.py [--version modern_dots-mocr]` | [`02_cer_legacy.md`](data/reports/02_cer_legacy.md), [`02_cer_modern_dots-mocr.md`](data/reports/02_cer_modern_dots-mocr.md), `data/cer_*.csv` |
 | TaxonFinder counts per page + proposed stratified sample | `src/propose_sample.py` | [`data/reports/03_sample_proposal.md`](data/reports/03_sample_proposal.md), `data/sample_proposal.csv` |
 | Dev / locked-test split by page blocks | `src/split_sample.py` | `data/sample_split.csv` |
+| The 22 sample pages' expert transcriptions, committed for labelling (CC-BY 3.0) | `src/export_sample_texts.py` | [`data/sample/`](data/sample/) |
 | Labelling guide and empty gold templates | — | [`ANNOTATION_GUIDE.md`](ANNOTATION_GUIDE.md), `gold/*_TEMPLATE.csv` |
 | Read-only gold checker (offsets, field names) | `src/check_gold.py` | `gold/<file>.checked.csv` |
 

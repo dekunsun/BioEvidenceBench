@@ -1,0 +1,111 @@
+     0 | BULIMUS.
+     9 | 
+    10 | PLATE LIV.
+    21 | 
+    22 | Species 353. (Fig. a and b, Mus. Cuming.)
+    64 | 
+    65 | BULIMUS ROSEATUS. Bul. testâ oblongo-ovatâ, tenuiculâ,
+   120 | vix umbilicatâ, anfractibus sex ad septem, subventri-
+   174 | cosis, transversim minutissimè impresso-striatis, colu‐
+   230 | mellâ reﬂexâ, labro subexpanso, tenui, acuto; albidâ,
+   284 | roseo exiliter tinctâ, strigis fucescentibus longitudina-
+   342 | libus interdum supernè notatâ.
+   373 | 
+   374 | THE ROSEATE BULIMUS. Shell oblong-ovate, rather thin,
+   428 | scarcely umbilicated, whorls six to seven in number,
+   481 | rather ventricose, transversely very minutely im-
+   531 | pressly striated, columella reﬂected, lip somewhat
+   582 | expanded, thin, sharp; whitish, faintly tinged with
+   634 | rose, and sometimes marked round the upper part
+   682 | with brownish longitudinal streaks.
+   718 | 
+   719 | Hab. Venezuela.
+   735 | 
+   736 | A delicately coloured species, approximating closely in
+   792 | form and style of painting to the B. oreades.
+   838 | 
+   839 | Species 354. (Mus. Cuming.)
+   867 | 
+   868 | BULIMUS FERIATUS. Bul. testâ acuminato-oblongâ, vix
+   920 | umbilicatâ, anfractibus sex, transversim sub lente minu‐
+   977 | tissimè impresso-striatis, columellâ reﬂexâ, labro ex-
+  1032 | panso, simplici, vix reﬂexo; virescente-albâ, maculis
+  1086 | paucis olivaceo-fuscis quadratis prope apicem notatis,
+  1141 | fasciâ conspicuâ circa umbilicum.
+  1175 | 
+  1176 | THE UNEMPLOYED BULIMUS. Shell acuminately oblong,
+  1226 | scarcely umbilicated, whorls six in number, trans‐
+  1277 | versely very minutely impressly striated beneath the
+  1330 | lens, columella reﬂected, lip expanded, simple, slightly
+  1387 | reﬂected; greenish-white, marked near the apex with
+  1439 | a few square olive-brown spots, and a conspicuous
+  1489 | band round the umbilicus.
+  1515 | 
+  1516 | Hab. Venezuela.
+  1532 | 
+  1533 | Another interesting new species from the same locality
+  1588 | as the preceding.
+  1606 | 
+  1607 | Species 355. (Mus. Cuming.)
+  1635 | 
+  1636 | BULIMUS PERDIX. Bul. testâ ovato-oblongâ, solidiusculâ,
+  1692 | umbilicatâ, anfractibus quinque ad sex, longitudinaliter
+  1749 | creberrimè elevato-striatis, gibbosiusculis, columellâ
+  1804 | obscurè plicatâ, labro reﬂexo; albidâ, ﬂammis maculis
+  1858 | punctisque cœruleo-nigricantibus variegatâ, columellâ
+  1912 | supernè purpurascente.
+  1935 | 
+  1936 | THE PARTRIDGE BULIMUS. Shell ovately oblong, rather
+  1988 | solid, umbilicated, whorls ﬁve to six in number, lon‐
+  2042 | gitudinally very closely elevately striated, rather
+  2094 | gibbous, columella obscurely plaited, lip reﬂected;
+  2146 | whitish, variegated with blue-black ﬂames blotches
+  2197 | and dots, columella purplish at the upper part.
+  2245 | 
+  2246 | PFEIFFER, Pro. Zool. Soc., 1847.
+  2279 | 
+  2280 | Hab. New Granada; Funck.
+  2305 | 
+  2306 | This and the three following having been described as
+  2360 | separate species, and, not to diﬀer in a case which may be
+  2419 | regarded a matter of opinion, they are here published as
+  2476 | such; I cannot however forbear expressing my conviction
+  2532 | that notwithstanding their apparent diﬀerences of form
+  2587 | and detail of growth, they are but so many modiﬁed con-
+  2643 | ditions of the same species. In the state described as
+  2698 | B. perdix, the longitudinal striæ are extremely regular, the
+  2759 | aperture is rounded, and the plait of the columella is
+  2814 | only obscurely developed at the upper part.
+  2858 | 
+  2859 | Species 356. (Mus. Cuming.)
+  2887 | 
+  2888 | BULIMUS EURYOMPHALUS. Bul. testâ fusiformi-oblongâ,
+  2940 | solidiusculâ, umbilicatâ, basi angulato-compressâ, an‐
+  2995 | fractibus quinque ad sex, creberrimè longitudinaliter
+  3049 | striatis, columellâ plicatâ, aperturâ trigono-contractâ,
+  3106 | labro reﬂexo; cœrulescente-albâ, punctis maculisque
+  3158 | fulgurantibus nigricantibus variegatâ, columellâ intensè
+  3215 | purpureâ.
+  3225 | 
+  3226 | THE BROAD‐PLAITED BULIMUS. Shell fusiformly oblong,
+  3278 | rather solid, umbilicated, angularly compressed at
+  3329 | the base, whorls ﬁve to six in number, very closely
+  3381 | longitudinally striated, columella plaited, aperture
+  3434 | triangularly contracted, lip reﬂected; bluish-white,
+  3487 | clouded with black zigzag blotches and dots, columella
+  3542 | deep purple.
+  3555 | 
+  3556 | Hab. Venezuela; Dyson.
+  3579 | 
+  3580 | Chieﬂy distinguished by its clouded zigzag style of
+  3632 | painting.
+  3642 | 
+  3643 | Species 357. (Mus. Cuming.)
+  3671 | 
+  3672 | BULIMUS GLABER. Bul. testâ subfusiformi-ovatâ, umbili‐
+  3727 | catâ, crassâ, solidâ, basi subcontractâ, anfractibus quin‐
+  3786 | que ad sex, longitudinaliter corrugato-striatis, columellâ
+  3845 | plicatâ, labro incrassato, reﬂexo; albidâ, strigis griseo-
+  3904 | rubentibus nebulatâ et variegatâ.
+  3938 | 
+  3939 | December, 1848.

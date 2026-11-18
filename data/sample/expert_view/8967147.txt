@@ -1,0 +1,118 @@
+     0 | ACHATINA.
+    10 | 
+    11 | PLATE XIV.
+    22 | 
+    23 | Species 49. (Mus. Cuming.)
+    50 | 
+    51 | ACHATINA PHILIPPIANA. Achat. testâ fusiformi-ovatâ,
+   103 | subpellucidâ, anfractibus octo, supernè rotundatis, un-
+   159 | dique longitudinaliter creberrimè costulatis, columellâ
+   215 | contortâ, attenuatè truncatâ, aperturâ parviusculâ,
+   267 | medio subdepressâ; sericeo-lutescente, strigis latis in-
+   324 | tensè purpureo-brunneis, e suturis hic illic decurrentibus,
+   384 | conspicuè pictâ.
+   401 | 
+   402 | PHILIPPI’S ACHATINA. Shell fusiformly ovate, some‐
+   453 | what transparent, whorls eight in number, rounded
+   503 | at the upper part, longitudinally very closely ﬁnely
+   556 | ribbed throughout, columella twisted, attenuately
+   606 | truncated, aperture rather small, slightly depressed
+   659 | in the middle; pale silken yellow, conspicuously
+   708 | painted with broad deep purple-brown streaks, des‐
+   759 | cending here and there from the sutures.
+   800 | 
+   801 | PFEIFFER, (Glandina,) Symbolæ, vol. iii. p. 90.
+   849 | 
+   850 | Hab. Jamaica, Gosse.
+   871 | 
+   872 | The ﬁne ribs with which the surface of this shell is
+   925 | excessively closely sculptured, give it a delicate silken aspect.
+   991 | It is very richly painted in the manner above described.
+  1048 | 
+  1049 | Species 50. (Mus. Dennison.)
+  1078 | 
+  1079 | ACHATINA MONILIFERA. Achat. testâ oblongo-ovatâ, ven-
+  1133 | tricosâ, tenui, pellucidâ, anfractibus septem, longitudi‐
+  1191 | naliter creberrimè costulato-striatis, striis basin versus
+  1250 | evanidis, columellâ contortâ, abruptè truncatâ; fulvo-
+  1305 | roseâ, corneâ, strigis angustis remotis rufo-brunneis
+  1359 | irregulariter pictâ.
+  1380 | 
+  1381 | THE NECKLACE‐BOUND ACHATINA. Shell oblong-ovate,
+  1430 | ventricose, thin, transparent, whorls seven in number,
+  1485 | longitudinally very closely striated after the manner
+  1539 | of ﬁne ribs, striæ fading towards the base, columella
+  1593 | twisted, abruptly truncated; fulvous-rose, horny,
+  1643 | irregularly painted with distant narrow red-brown
+  1693 | streaks.
+  1702 | 
+  1703 | PFEIFFER, (Glandina,) Pro. Zool. Soc., 1845. p. 75.
+  1755 | 
+  1756 | Hab. Coban, Vera Cruz, Central America; Lattre.
+  1804 | 
+  1805 | An extremely delicate transparent swollen shell in which
+  1862 | the columella is not attenuated as in the last species, but
+  1922 | abruptly truncated.
+  1942 | 
+  1943 | Species 51. (Mus. Cuming.)
+  1970 | 
+  1971 | ACHATINA OLEACEA. Achat. testâ cylindraceo-oblongâ,
+  2023 | 
+  2024 | pellucido-corneâ, spirâ brevi, anfractibus septem, lævi-
+  2081 | gatis, columellâ subprofundè arcuatâ, aperturâ oblongâ,
+  2137 | supernè angustâ, labro medio dilatato; fulvâ, nitente.
+  2192 | 
+  2193 | THE OLIVE-SHAPED ACHATINA. Shell cylindrically
+  2240 | oblong, transparent-horny, spire short, whorls seven
+  2293 | in number, smooth, columella rather deeply arched,
+  2344 | aperture oblong, narrow at the upper part, lip dilated
+  2399 | in the middle; fulvous, shining.
+  2432 | 
+  2433 | Helix (Cochlicopa) oleacea, Férussac, Prodrome, No. 360.
+  2490 | 
+  2491 | Glandina oleacea, Beck.
+  2515 | 
+  2516 | Hab. Cuba.
+  2527 | 
+  2528 | A smooth transparent fulvous horny shell, of cylindric
+  2583 | oblong form, without any design of painting.
+  2628 | 
+  2629 | Species 52. (Mus. Cuming.)
+  2656 | 
+  2657 | ACHATINA LEUCOZONIAS. Achat. testâ fusiformi-oblongâ,
+  2711 | spirâ subacuminatâ, anfractibus octo, plano-convexis,
+  2765 | longitudinaliter subtiliter et creberrimè inciso-striatis,
+  2824 | columellâ contortâ, aperturâ oblongâ, labro angulato-
+  2878 | dilatato; intensè purpureo-brunneâ, zonulis longitudi-
+  2933 | nalibus angustis albis notatâ, labro albimarginato.
+  2985 | 
+  2986 | THE WHITE‐ZONED ACHATINA. Shell fusiformly oblong,
+  3037 | spire somewhat acuminated, whorls eight in number,
+  3088 | ﬂatly convex, longitudinally ﬁnely and very closely
+  3140 | striated in a grooved manner, columella twisted,
+  3189 | aperture oblong, lip angularly dilated; deep purple-
+  3242 | brown, marked with narrow longitudinal white zones,
+  3294 | lip edged with white.
+  3316 | 
+  3317 | SOWERBY, Genera of Shells, f. 3.
+  3350 | 
+  3351 | Voluta leucozonias, Walch, Naturforsch, vol. iv. p. 40. pl. 1.
+  3414 | f. 3, 4.
+  3423 | 
+  3424 | Achatina albolineata, Lamarck.
+  3455 | Helix (Cochlicopa,) leucozonias, Férussac.
+  3498 | Polyphemus leucozonias, Jan.
+  3527 | Glandina leucozonias, Beck.
+  3555 | 
+  3556 | Hab. Martinique.
+  3573 | 
+  3574 | This species is remarkable for the angularly dilated
+  3627 | growth of the lip, which forms a slightly elevated ridge or
+  3687 | varix at intervals of from four to ﬁve in a whorl. The
+  3742 | shell being of a uniform dark purple-brown colour with
+  3797 | the lip edged with white, these delicate concentric varices
+  3857 | appear as stripes, and turning inwards over the columella
+  3915 | have the appearance of false plaits. Walch, Gmelin, and
+  3971 | Dillwyn, misled by this varicose peculiarity of growth,
+  4027 | 
+  4028 | April, 1849.

@@ -9,7 +9,7 @@ gold CSV records the guide version it used.
 
 1. **Label before you look.** Do not open any model output for a page before your gold labels for
    that page are final. This holds for every test page. For dev pages, label first if you can.
-2. **Label the expert transcription**, not the legacy OCR: `data/text/expert_view/<PageID>.txt`.
+2. **Label the expert transcription**, not the legacy OCR: `data/sample/expert_view/<PageID>.txt` (in the repo; readable on GitHub).
    Use the scan (the `bhl_url` link in `data/sample_split.csv`) to resolve doubts about layout or
    italics, but the label always points into the expert text.
 3. **Label what is printed.** Spans are copied as printed: archaic spelling, ligatures,
@@ -32,7 +32,7 @@ The unit is a **mention**: one span of characters in the expert text, plus a fie
 | `notes` | free text; `UNCLEAR: …` for doubtful cases; `UNCERTAIN-IN-SOURCE` when the print itself hedges (e.g. a `?`) |
 | `guide_version` | e.g. `v0.1` |
 
-**Finding offsets.** Each line of `expert_view/<PageID>.txt` starts with the offset where that line
+**Finding offsets.** Each line of `data/sample/expert_view/<PageID>.txt` starts with the offset where that line
 begins. Offset of a word = line offset + its column, counting from 0. You can also leave `start`
 and `end` empty and fill only `text`. `python src/check_gold.py` then reports the offsets when the
 text occurs once on the page and asks you to resolve it when it occurs more than once. Either way,

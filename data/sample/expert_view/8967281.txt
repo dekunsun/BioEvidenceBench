@@ -1,0 +1,117 @@
+     0 | TURRITELLA.
+    12 | 
+    13 | PLATE I.
+    22 | 
+    23 | Genus TURRITELLA. Lamarck.
+    50 | 
+    51 | Testa elongato-turrita, lanceolato-acuminata, nunquam um‐
+   109 | bilicata, anfractibus numerosis, sœpissimè transversim
+   164 | costatis vel striatis, nunquam longitudinaliter exsculptis,
+   224 | evaricosis, nunquam spinosis aut muricatis; aperturâ
+   277 | parviusculâ, plus minusve rotundatâ, marginibus dis-
+   330 | junctis, labro sœpè medio sinuato.
+   365 | 
+   366 | Shell elongately turreted, lanceolately acuminated, never
+   424 | umbilicated, whorls numerous, mostly transversely
+   474 | ribbed or striated, never longitudinally sculptured,
+   527 | destitute of varices, never spined or prickly; aperture
+   583 | rather small, more or less rounded, margins disjoined,
+   638 | lip often sinuated in the middle.
+   672 | 
+   673 | The genus Turritella aﬀords excellent characters for the
+   730 | distinction of species. Constructed upon the simple type
+   787 | of an enlarging tube, the shell is developed with geometri‐
+   847 | cal symmetry in short convolutions, varying from ﬁfteen to
+   906 | thirty in number, the same number in each species,
+   957 | forming a sharply acuminated screw. The whorls are
+  1008 | sometimes ﬂattened or a little concave, and being always
+  1065 | contiguous there is no indication of any umbilicus. No
+  1120 | varices or tubercles are formed, as in Cerithium, nor is
+  1177 | there any periodical developement of sculpture on the
+  1231 | margin of the aperture. The ribs and striæ of Turritella
+  1288 | range transversely, that is, spirally, never longitudinally,
+  1349 | and are rarely granulated or noduled. The best characters
+  1407 | for the discrimination of species reside in the ﬁrst eight or
+  1469 | ten whorls from the apex; beyond this point the sculpture
+  1527 | varies slightly or becomes obsolete, as the shell approaches
+  1588 | maturity. In colour the reverse of this condition is pre‐
+  1646 | sented, the pattern becoming gradually darker and more
+  1701 | deﬁned towards the aperture,
+  1730 | 
+  1731 | The genus Turritella has been somewhat neglected by
+  1783 | conchologists. Only eleven species were described by
+  1836 | Lamarck, and a monograph lately published in Paris by
+  1890 | M. Kiener includes less than half the number now before
+  1946 | me from the cabinets of Mr. Cuming, Mr. Metcalfe,
+  1996 | Mr. Hanley, Sir. Edward Belcher, the British Museum, and
+  2053 | the Banksian Collection in the museum of the Linnæan
+  2106 | Society; amounting to sixty-ﬁve all distinctly charac‐
+  2161 | terized in respect of form, sculpture, and painting.
+  2214 | 
+  2215 | The Linnæan species have not been correctly inter‐
+  2266 | preted by Lamarck, Deshayes, or Kiener, for want of access
+  2325 | to the original types of the ‘Systema Naturæ’ preserved
+  2381 | in the museum of the Linnæan Society of London. The
+  2433 | Turbo acutangulus of Linnæus proves to be a simple
+  2484 | variety of the T. duplicatus, and not the shell assigned to
+  2544 | it by M. Deshayes. The shell described as Turbo variega-
+  2601 | tus in the ‘Systema Naturæ,’ though diﬀering materially in
+  2660 | 
+  2661 | general aspect from that which served for the description
+  2719 | of the Turbo imbricatus, may, nevertheless, be traced to
+  2776 | belong to the same species; and the Turbo ungulinus of
+  2831 | Linnæus proves to be identical with Lamarck’s Turritella
+  2888 | fuscata. The British species Turbo terebra, Linn. in
+  2941 | ‘Fauna Suecica’ (not of Syst. Nat.) and Montagu, must
+  2995 | be referred to the T. cornea of Lamarck,
+  3036 | 
+  3037 | The Turritella brevialis of Lamarck (LeMesal of Adanson)
+  3094 | constitutes the type of a new genus, founded by Mr. Gray,
+  3152 | under the name MESALIA, to which I venture to add the
+  3206 | Turritella lactea of Möller, and a very characteristic species
+  3269 | from the Cumingian collection. A genus has been also intro‐
+  3329 | duced by Mr. Gray, with equal judgment, under the name
+  3384 | EGLISIA, founded on the Turritella spirata of the Tanker-
+  3442 | ville Catalogue; and to this is added a species collected
+  3500 | by Mr. Cuming at one of the Philippine Islands.
+  3548 | 
+  3549 | The Turritellœ have a wide range of habitation and dwell
+  3606 | at a considerable depth as well as near the surface. The
+  3663 | T. cornea has been recently dredged oﬀ the Shetland Islands
+  3723 | by Mr. M’Andrew at a depth of many fathoms, beyond the
+  3778 | inﬂuence of light and colourless. Only two comparatively
+  3835 | small species besides this, extend so far from north of the
+  3895 | equator as the Mediterranean. The greater number are
+  3948 | from the Eastern Seas and the shores of Central America,
+  4005 | and there are a few known from New Zealand, Australia,
+  4060 | and Van Dieman’s Land.
+  4083 | 
+  4084 | Species 1. (Mus. Cuming.)
+  4110 | 
+  4111 | TURRITELLA UNGULINA. Turr. testâ acuminato-turritâ,
+  4163 | anfractibus quindecim, convexis, lœvibus, regulariter
+  4217 | decem-striatis, interstitiis superﬁcialiter sulcatis, aper‐
+  4277 | turâ suboblongo-ovali; castaneo-rufâ, aperturam versus
+  4332 | ustulato-nigrâ.
+  4348 | 
+  4349 | THE NAIL‐BRUISED TURRITELLA. Shell acuminately
+  4396 | turreted, whorls ﬁfteen in number, convex, smooth,
+  4447 | regularly ten striated, interstices superﬁcially grooved,
+  4505 | aperture rather oblong-oval; chestnut-red, burnt
+  4554 | black towards the aperture.
+  4582 | 
+  4583 | Turbo ungulinus, Linnæus, Syst. Nat. (12th. edit.) p. 1240.
+  4643 | Turritella fuscata, Lamarck.
+  4672 | 
+  4673 | Hab. Senegal, Mouth of the Gambia, West Africa.
+  4721 | 
+  4722 | The original specimen which served Linnæus for the
+  4773 | type of his Turbo ungulinus, still preserved in the
+  4825 | museum of the Linnæan Society of London, proves, as
+  4877 | Mr. Hanley ﬁrst pointed out to me, to be Lamarck’s T.
+  4931 | fuscata. The locality “Seas of Europe” erroneously given
+  4988 | in the ‘Systema Naturæ’ led Dr. Pulteney, and recently
+  5043 | M. Deshayes, to assign the Linnæan species to the only
+  5098 | Turritella existing north of the Mediterranean; on the
+  5153 | 
+  5154 | May, 1849.
