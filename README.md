@@ -96,6 +96,10 @@ check to scripts running on cloud machines (seen 2026-11-18).
   TaxonFinder finds few or no names on them.
 - Missing `<ReadingOrder>` affects about 20% of Butler's text pages and none of Reeve's.
 
+## Learning notes
+
+- [NHM Planetary Knowledge Base: the knowledge graph (AWS blog posts, 2024)](docs/notes/nhm_pkb_knowledge_graph.md), in Chinese: pipeline, data model, entity matching, and what an evaluation of each layer should measure.
+
 ## Not yet verified
 
 - FineBooks' reported claim that modern OCR output lacks word-level coordinates and so cannot
