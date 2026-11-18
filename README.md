@@ -62,6 +62,21 @@ python src/run_extraction.py --collect <run_id>
 python src/unseal.py <run_id> --labeller gloria
 ```
 
+**Second LLM: Gemini** (`--provider gemini`, key in `GEMINI_API_KEY`, Google Gen AI SDK
+`google-genai`). Same system prompt, task templates, schemas and `PROMPT_VERSION`; records are
+written in the same format, so `locate.py`, the cost summary and `unseal.py` work unchanged.
+See `src/gemini_backend.py` for what is sent (JSON schema via `response_json_schema`, thinking at
+the model default, `max_output_tokens` 32,768 including thinking) and how usage is converted.
+Prices are the promo rates valid until 2026-11-30 (they double on Dec 1); update
+`gemini_backend.PRICES` before running later.
+
+```bash
+python src/run_extraction.py --provider gemini --model gemini-4-carbon --pages dev5 --mode sync --max-usd 3
+python src/run_extraction.py --provider gemini --model gemini-4-carbon --pages all --mode batch \
+    --estimate-from <gemini_pilot_run_id> --max-usd 6
+python src/run_extraction.py --collect <run_id>      # provider is read from config.json
+```
+
 ## Data and licenses
 
 | Source | What we use | License |

@@ -8,3 +8,5 @@ rapidfuzz>=3.6     # fast Levenshtein distance for CER
 matplotlib>=3.8    # CER histogram
 tabulate>=0.9      # pandas .to_markdown() for the reports
 pytest>=8
+anthropic>=2.10   # LLM extraction (Claude)
+google-genai>=3.5 # LLM extraction (Gemini)
