@@ -1,0 +1,507 @@
+PageID,book,SequenceOrder,PageNumber,PageTypeName,gt_chars,cer_nocase,word_miss,cer_band,n_names,latin_hint,place_hint,date_hint,is_list_page,is_poor_ocr,is_entity_rich,is_low_density,is_no_entities,names_sample,bhl_url
+8992360,Butler,13,,Title Page,573,0.032,0.0707,medium,1,0,0,0,False,False,False,True,False,Passeres,https://www.biodiversitylibrary.org/page/8992360
+8992356,Butler,17,,Table of Contents,2431,0.4839,0.2937,high,27,34,0,0,True,True,True,False,False,Acanthis; Acanthis flavirostris; Acanthis linaria; Aedon galactodes; Alauda; Alauda arborea,https://www.biodiversitylibrary.org/page/8992356
+8992355,Butler,18,,Text,2602,0.5248,0.2348,high,23,33,0,0,True,True,True,False,False,Loxia; Loxia bifasciata; Motacilla; Motacilla borealis; Muscicapa; Muscicapa atricapilla,https://www.biodiversitylibrary.org/page/8992355
+8992354,Butler,19,,Text,1299,0.0116,0.0228,low,2,0,0,0,False,False,False,True,False,Oriolus; Passeres,https://www.biodiversitylibrary.org/page/8992354
+8992353,Butler,20,2,Text,1816,0.0121,0.0256,low,2,1,7,3,False,False,False,True,False,Damara; Oriolus,https://www.biodiversitylibrary.org/page/8992353
+8992350,Butler,23,3,Text,3111,0.0093,0.0147,low,0,0,5,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992350
+8992317,Butler,24,4,Text,2872,0.0243,0.0365,medium,0,1,1,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992317
+8992318,Butler,25,5,Text,2077,0.0178,0.0386,low,1,1,1,0,False,False,False,True,False,Lanius; Lanius,https://www.biodiversitylibrary.org/page/8992318
+8992319,Butler,26,6,Text,1854,0.0345,0.0654,medium,2,0,2,1,False,False,False,True,False,Lanius excubitor; Lanius major,https://www.biodiversitylibrary.org/page/8992319
+8992322,Butler,29,7,Text,2872,0.0188,0.0335,low,1,1,4,3,False,False,False,True,False,Parus,https://www.biodiversitylibrary.org/page/8992322
+8992323,Butler,30,8,Text,2599,0.025,0.0368,medium,0,0,0,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992323
+8992326,Butler,33,9,Text,1250,0.0387,0.0691,medium,1,0,7,8,False,False,False,True,False,Lanius,https://www.biodiversitylibrary.org/page/8992326
+8992327,Butler,34,10,Text,2933,0.014,0.0227,low,1,0,16,11,False,False,False,True,False,Damara,https://www.biodiversitylibrary.org/page/8992327
+8992328,Butler,35,11,Text,3155,0.0067,0.0036,low,1,0,0,1,False,False,False,True,False,Lanius collurio,https://www.biodiversitylibrary.org/page/8992328
+8992329,Butler,36,12,Text,3054,0.0118,0.0195,low,0,0,0,10,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992329
+8992332,Butler,39,13,Text,1825,0.016,0.0191,low,2,1,9,7,False,False,False,True,False,Lanius; Lanius pomeranus,https://www.biodiversitylibrary.org/page/8992332
+8992333,Butler,40,14,Text,2901,0.0231,0.0431,medium,0,1,3,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992333
+8992334,Butler,41,15,Text,2952,0.0146,0.0283,low,1,1,3,3,False,False,False,True,False,Lanius collurio,https://www.biodiversitylibrary.org/page/8992334
+8992335,Butler,42,16,Text,960,0.0575,0.0926,medium,0,1,1,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992335
+8992336,Butler,43,17,Text,1853,0.0157,0.0393,low,2,0,0,0,False,False,False,True,False,Accentor; Liothrix,https://www.biodiversitylibrary.org/page/8992336
+8992337,Butler,44,18,Text,2345,0.0162,0.0246,low,0,1,7,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992337
+8992340,Butler,47,19,Text,2923,0.0048,0.0079,low,0,0,1,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992340
+8992341,Butler,48,20,Text,2129,0.025,0.0468,medium,0,2,0,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992341
+8992344,Butler,51,21,Text,1699,0.0172,0.0287,low,2,3,5,0,False,False,False,True,False,Muscicapa grisola; Polioptila,https://www.biodiversitylibrary.org/page/8992344
+8992345,Butler,52,22,Text,2896,0.0148,0.0374,low,0,0,2,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992345
+8992346,Butler,53,23,Text,2919,0.0117,0.0147,low,0,0,1,9,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992346
+8992347,Butler,54,24,Text,2538,0.0224,0.05,medium,0,0,0,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992347
+8992373,Butler,57,25,Text,2231,0.0121,0.0158,low,0,2,10,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992373
+8992374,Butler,58,26,Text,2938,0.0092,0.0109,low,0,1,1,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992374
+8992375,Butler,59,27,Text,2966,0.0091,0.0113,low,1,1,3,1,False,False,False,True,False,Muscicapa grisola,https://www.biodiversitylibrary.org/page/8992375
+8992376,Butler,60,28,Text,1925,0.0156,0.0298,low,1,2,15,17,False,False,False,True,False,Muscicapa parva,https://www.biodiversitylibrary.org/page/8992376
+8992379,Butler,63,29,Text,2878,0.0115,0.0159,low,4,2,7,15,False,False,True,False,False,Munia atricapilla; Paroaria; Paroaria cervicalis; Quelea quelea,https://www.biodiversitylibrary.org/page/8992379
+8992380,Butler,64,30,Text,2204,0.0322,0.0526,medium,0,1,1,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992380
+8992381,Butler,65,31,Text,1940,0.0139,0.0288,low,0,3,1,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992381
+8992382,Butler,66,32,Text,2220,0.028,0.034,medium,0,1,6,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992382
+8992385,Butler,69,33,Text,3012,0.018,0.023,low,0,0,3,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992385
+8992386,Butler,70,34,Text,2091,0.0196,0.0363,low,0,0,2,6,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992386
+8992389,Butler,73,35,Text,990,0.0521,0.1006,medium,0,2,8,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992389
+8992390,Butler,74,36,Text,2889,0.018,0.0315,low,0,1,0,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992390
+8992391,Butler,75,37,Text,2924,0.0174,0.0294,low,0,0,0,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992391
+8992392,Butler,76,38,Text,1718,0.0356,0.0525,medium,0,1,2,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992392
+8992395,Butler,79,39,Text,2943,0.0112,0.0188,low,0,1,3,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992395
+8992396,Butler,80,40,Text,3047,0.0265,0.0533,medium,0,0,0,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992396
+8992397,Butler,81,41,Text,2042,0.0176,0.0343,low,0,0,3,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992397
+8992398,Butler,82,42,Text,2555,0.0336,0.0524,medium,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992398
+8992401,Butler,85,43,Text,2213,0.0222,0.0255,medium,0,1,4,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992401
+8992402,Butler,86,44,Text,2991,0.0156,0.0148,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992402
+8992403,Butler,87,45,Text,2979,0.0157,0.038,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992403
+8992404,Butler,88,46,Text,1777,0.0175,0.037,low,0,1,6,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992404
+8992406,Butler,90,47,Text,2928,0.018,0.0294,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992406
+8992407,Butler,91,48,Text,2775,0.0165,0.0364,low,2,1,1,3,False,False,False,True,False,Black-tailed; Horatio,https://www.biodiversitylibrary.org/page/8992407
+8992408,Butler,92,49,Text,1869,0.0369,0.071,medium,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992408
+8992409,Butler,93,50,Text,2296,0.0183,0.0465,low,0,1,10,11,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992409
+8992412,Butler,96,51,Text,2227,0.0112,0.023,low,2,0,0,3,False,False,False,True,False,Liothrix; Passeres,https://www.biodiversitylibrary.org/page/8992412
+8992413,Butler,97,52,Text,2414,0.0241,0.0413,medium,1,2,2,0,False,False,False,True,False,Cyanospiza ciris,https://www.biodiversitylibrary.org/page/8992413
+8992416,Butler,100,53,Text,2896,0.0145,0.0226,low,0,0,3,7,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992416
+8992417,Butler,101,54,Text,2883,0.026,0.0583,medium,0,0,0,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992417
+8992418,Butler,102,55,Text,1954,0.0189,0.0366,low,0,0,0,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992418
+8992419,Butler,103,56,Text,1696,0.0478,0.0676,medium,0,0,4,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992419
+8992422,Butler,106,57,Text,2221,0.0207,0.039,medium,1,1,6,1,False,False,False,True,False,Pyrrhula pyrrhula,https://www.biodiversitylibrary.org/page/8992422
+8992423,Butler,107,58,Text,2928,0.0187,0.0352,low,0,0,3,7,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992423
+8992424,Butler,108,59,Text,2914,0.0157,0.0267,low,0,0,1,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992424
+8992425,Butler,109,60,Text,1698,0.0224,0.0266,medium,1,1,4,1,False,False,False,True,False,Carpodacus,https://www.biodiversitylibrary.org/page/8992425
+8992428,Butler,112,61,Text,1865,0.0188,0.0393,low,2,2,5,4,False,False,False,True,False,Serinus; Serinus hortulanus,https://www.biodiversitylibrary.org/page/8992428
+8992429,Butler,113,62,Text,3030,0.0119,0.0227,low,0,0,12,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992429
+8992430,Butler,114,63,Text,2927,0.0109,0.021,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992430
+8992431,Butler,115,64,Text,2841,0.0148,0.0347,low,0,0,1,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992431
+8992434,Butler,118,65,Text,1782,0.0265,0.0523,medium,0,1,8,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992434
+8992435,Butler,119,66,Text,3006,0.0325,0.0539,medium,0,0,2,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992435
+8992436,Butler,120,67,Text,3141,0.0197,0.0464,low,0,0,1,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992436
+8992437,Butler,121,68,Text,2053,0.0307,0.0565,medium,0,1,0,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992437
+8992440,Butler,124,69,Text,2330,0.0369,0.0504,medium,0,0,4,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992440
+8992441,Butler,125,70,Text,2864,0.023,0.0402,medium,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992441
+8992442,Butler,126,71,Text,2845,0.0428,0.0798,medium,0,0,1,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992442
+8992443,Butler,127,72,Text,2881,0.0235,0.0407,medium,0,0,0,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992443
+8992448,Butler,132,73,Text,1816,0.0313,0.0462,medium,1,1,0,0,False,False,False,True,False,Acanthis linaria,https://www.biodiversitylibrary.org/page/8992448
+8992449,Butler,133,74,Text,3135,0.0252,0.0371,medium,0,2,7,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992449
+8992450,Butler,134,75,Text,2725,0.0128,0.017,low,0,0,2,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992450
+8992451,Butler,135,76,Text,2851,0.0137,0.0277,low,0,1,2,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992451
+8992454,Butler,138,77,Text,1740,0.045,0.1139,medium,0,0,7,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992454
+8992455,Butler,139,78,Text,3258,0.023,0.0509,medium,0,1,6,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992455
+8992456,Butler,140,79,Text,2852,0.0137,0.0198,low,0,0,3,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992456
+8992457,Butler,141,80,Text,2171,0.018,0.041,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992457
+8992460,Butler,144,81,Text,2333,0.0275,0.0357,medium,0,1,8,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992460
+8992461,Butler,145,82,Text,2792,0.0161,0.0469,low,0,0,1,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992461
+8992462,Butler,146,83,Text,2801,0.0121,0.0157,low,0,0,1,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992462
+8992463,Butler,147,84,Text,1523,0.0255,0.0459,medium,0,1,0,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992463
+8992466,Butler,150,85,Text,2337,0.0359,0.0469,medium,0,1,4,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992466
+8992467,Butler,151,86,Text;Illustration,1460,0.0199,0.0353,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992467
+8992468,Butler,152,87,Text,2956,0.0175,0.027,low,0,0,0,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992468
+8992469,Butler,153,88,Text,2957,0.0308,0.0432,medium,1,2,0,3,False,False,False,True,False,Acanthis,https://www.biodiversitylibrary.org/page/8992469
+8992472,Butler,156,89,Text,1871,0.0209,0.0417,medium,1,1,1,2,False,False,False,True,False,Passer,https://www.biodiversitylibrary.org/page/8992472
+8992473,Butler,157,90,Text,2848,0.0274,0.0558,medium,0,0,1,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992473
+8992474,Butler,158,91,Text,3103,0.0171,0.0364,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992474
+8992475,Butler,159,92,Text,2894,0.0173,0.0318,low,0,0,2,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992475
+8992478,Butler,162,93,Text,1678,0.0287,0.0523,medium,1,1,5,0,False,False,False,True,False,Passer,https://www.biodiversitylibrary.org/page/8992478
+8992479,Butler,163,94,Text,2913,0.0161,0.037,low,0,0,11,7,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992479
+8992480,Butler,164,95,Text,3018,0.0076,0.0132,low,0,0,7,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992480
+8992481,Butler,165,96,Text,2939,0.0204,0.0352,medium,0,2,0,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992481
+8992484,Butler,168,97,Text,1911,0.0309,0.0631,medium,1,1,4,0,False,False,False,True,False,Fringilla,https://www.biodiversitylibrary.org/page/8992484
+8992485,Butler,169,98,Text,2993,0.0213,0.0386,medium,1,2,0,1,False,False,False,True,False,Sycalis,https://www.biodiversitylibrary.org/page/8992485
+8992486,Butler,170,99,Text,2865,0.0326,0.0556,medium,0,0,2,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992486
+8992487,Butler,171,100,Text,3009,0.0199,0.039,low,0,2,1,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992487
+8992488,Butler,172,101,Text,3169,0.0116,0.0237,low,0,0,0,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992488
+8992489,Butler,173,102,Text,2283,0.0474,0.0661,medium,2,1,4,0,False,False,False,True,False,Brami; Linx,https://www.biodiversitylibrary.org/page/8992489
+8992492,Butler,176,103,Text,2787,0.0118,0.0373,low,0,1,5,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992492
+8992493,Butler,177,104,Text,2920,0.0153,0.0285,low,2,0,0,1,False,False,False,True,False,Accentor; Baya,https://www.biodiversitylibrary.org/page/8992493
+8992494,Butler,178,105,Text,1372,0.0271,0.046,medium,0,2,3,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992494
+8992495,Butler,179,106,Text,2332,0.0353,0.0477,medium,0,3,5,15,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992495
+8992498,Butler,182,107,Text,2855,0.0133,0.0199,low,0,0,5,12,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992498
+8992499,Butler,183,108,Text,2802,0.0118,0.0198,low,0,0,2,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992499
+8992502,Butler,186,109,Text,1945,0.0196,0.0413,low,0,1,7,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992502
+8992503,Butler,187,110,Text,2941,0.0241,0.0365,medium,0,2,0,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992503
+8992504,Butler,188,111,Text,2950,0.0176,0.0303,low,0,2,1,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992504
+8992505,Butler,189,112,Text,1703,0.0371,0.0594,medium,0,1,4,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992505
+8992508,Butler,192,113,Text,3015,0.0126,0.0214,low,0,0,1,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992508
+8992509,Butler,193,114,Text,2955,0.0172,0.0266,low,0,0,3,7,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992509
+8992510,Butler,194,115,Text,2866,0.0104,0.0159,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992510
+8992511,Butler,195,116,Text,2185,0.016,0.0256,low,0,0,0,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992511
+8992514,Butler,198,117,Text,1143,0.0646,0.1033,medium,0,3,7,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992514
+8992515,Butler,199,118,Text,3192,0.0269,0.0531,medium,1,0,7,5,False,False,False,True,False,Emus,https://www.biodiversitylibrary.org/page/8992515
+8992516,Butler,200,119,Text,3033,0.0207,0.0406,medium,0,2,5,7,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992516
+8992517,Butler,201,120,Text,2212,0.0258,0.0509,medium,0,3,1,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992517
+8992520,Butler,204,121,Text,2343,0.0317,0.0501,medium,1,1,14,3,False,False,False,True,False,Linx,https://www.biodiversitylibrary.org/page/8992520
+8992521,Butler,205,122,Text,2831,0.0194,0.0436,low,1,0,2,1,False,False,False,True,False,Emberiza,https://www.biodiversitylibrary.org/page/8992521
+8992522,Butler,206,123,Text,2914,0.0141,0.024,low,0,0,1,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992522
+8992523,Butler,207,124,Text,785,0.0616,0.1484,medium,0,0,3,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992523
+8992524,Butler,208,125,Text,1405,0.0495,0.0991,medium,0,3,10,20,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992524
+8992525,Butler,209,126,Text,1190,0.0475,0.0887,medium,0,1,10,7,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992525
+8992528,Butler,212,127,Text,2797,0.0097,0.0231,low,0,1,4,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992528
+8992529,Butler,213,128,Text,2989,0.0184,0.0528,low,0,0,7,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992529
+8992530,Butler,214,129,Text,2825,0.0198,0.0311,low,0,2,2,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992530
+8992531,Butler,215,130,Text,1703,0.0247,0.0387,medium,0,1,4,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992531
+8992534,Butler,218,131,Text,2957,0.0135,0.0259,low,0,0,13,13,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992534
+8992535,Butler,219,132,Text,2949,0.021,0.0408,medium,0,0,4,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992535
+8992536,Butler,220,133,Text,3053,0.0199,0.0432,low,0,0,1,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992536
+8992537,Butler,221,134,Text,1770,0.0301,0.0769,medium,0,1,7,6,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992537
+8992540,Butler,224,135,Text,2854,0.0157,0.0333,low,0,1,6,8,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992540
+8992541,Butler,225,136,Text,2856,0.0192,0.0337,low,0,1,4,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992541
+8992542,Butler,226,137,Text,2997,0.0133,0.032,low,0,1,1,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992542
+8992543,Butler,227,138,Text,2146,0.0382,0.0923,medium,1,0,0,3,False,False,False,True,False,Corvida,https://www.biodiversitylibrary.org/page/8992543
+8992546,Butler,230,139,Text,1557,0.0316,0.0547,medium,0,1,3,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992546
+8992547,Butler,231,140,Text,2951,0.0203,0.0536,medium,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992547
+8992548,Butler,232,141,Text,2619,0.0188,0.0398,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992548
+8992549,Butler,233,142,Text,2904,0.0158,0.0308,low,0,1,3,9,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992549
+8992552,Butler,236,143,Text,1792,0.0117,0.0299,low,1,3,12,3,False,False,False,True,False,Pastor,https://www.biodiversitylibrary.org/page/8992552
+8992553,Butler,237,144,Text,2863,0.0136,0.0241,low,1,2,9,9,False,False,False,True,False,Pastor,https://www.biodiversitylibrary.org/page/8992553
+8992554,Butler,238,145,Text,2893,0.0107,0.0214,low,1,2,1,1,False,False,False,True,False,Pastor,https://www.biodiversitylibrary.org/page/8992554
+8992555,Butler,239,146,Text,1931,0.016,0.0266,low,1,2,0,0,False,False,False,True,False,Pastor,https://www.biodiversitylibrary.org/page/8992555
+8992556,Butler,240,147,Text,2488,0.0221,0.0266,medium,2,0,2,0,False,False,False,True,False,Corvida; Pica,https://www.biodiversitylibrary.org/page/8992556
+8992557,Butler,241,148,Text,2379,0.0324,0.0574,medium,0,3,14,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992557
+8992560,Butler,244,149,Text,2818,0.0167,0.0305,low,0,0,3,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992560
+8992561,Butler,245,150,Text,1684,0.0225,0.0449,medium,0,0,1,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992561
+8992564,Butler,248,151,Text,2308,0.0264,0.0511,medium,1,1,10,6,False,False,False,True,False,Passerine,https://www.biodiversitylibrary.org/page/8992564
+8992565,Butler,249,152,Text,2972,0.0121,0.0278,low,1,2,6,16,False,False,False,True,False,Pastor,https://www.biodiversitylibrary.org/page/8992565
+8992566,Butler,250,153,Text,2839,0.0102,0.0195,low,0,0,1,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992566
+8992567,Butler,251,154,Text,2232,0.0157,0.0344,low,0,0,0,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992567
+8992570,Butler,254,155,Text,2212,0.0126,0.0217,low,0,2,5,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992570
+8992571,Butler,255,156,Text,2882,0.018,0.0268,low,0,2,0,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992571
+8992572,Butler,256,157,Text,2982,0.0094,0.0162,low,0,0,0,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992572
+8992573,Butler,257,158,Text,2123,0.0076,0.0101,low,0,0,0,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992573
+8992576,Butler,260,159,Text,2269,0.0128,0.0152,low,1,1,4,0,False,False,False,True,False,Pica,https://www.biodiversitylibrary.org/page/8992576
+8992577,Butler,261,160,Text,2919,0.0178,0.0267,low,0,1,2,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992577
+8992578,Butler,262,161,Text,2844,0.0173,0.0278,low,0,1,6,6,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992578
+8992579,Butler,263,162,Text,1702,0.0236,0.0405,medium,1,1,3,0,False,False,False,True,False,Corvida,https://www.biodiversitylibrary.org/page/8992579
+8992582,Butler,266,163,Text,2904,0.0089,0.0116,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992582
+8992583,Butler,267,164,Text,2942,0.0347,0.0681,medium,0,0,2,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992583
+8992584,Butler,268,165,Text,2829,0.0209,0.0438,medium,0,0,0,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992584
+8992585,Butler,269,166,Text,1976,0.0324,0.0615,medium,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992585
+8992588,Butler,272,167,Text,2079,0.0179,0.0355,low,1,1,5,2,False,False,False,True,False,Corvus corax,https://www.biodiversitylibrary.org/page/8992588
+8992589,Butler,273,168,Text,2924,0.0099,0.0275,low,0,0,1,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992589
+8992590,Butler,274,169,Text,2838,0.0215,0.0321,medium,1,0,3,1,False,False,False,True,False,Emus,https://www.biodiversitylibrary.org/page/8992590
+8992591,Butler,275,170,Text,2868,0.0198,0.0384,low,0,0,0,6,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992591
+8992594,Butler,278,171,Text,1668,0.0187,0.0315,low,0,0,4,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992594
+8992595,Butler,279,172,Text,2839,0.0176,0.0309,low,0,1,2,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992595
+8992596,Butler,280,173,Text,2918,0.0092,0.0189,low,0,1,2,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992596
+8992597,Butler,281,174,Text,2334,0.0197,0.0333,low,0,0,1,6,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992597
+8992600,Butler,284,175,Text,2216,0.0208,0.0323,medium,0,0,5,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992600
+8992601,Butler,285,176,Text,2980,0.0201,0.0455,medium,1,0,3,4,False,False,False,True,False,Weser,https://www.biodiversitylibrary.org/page/8992601
+8992602,Butler,286,177,Text,2894,0.0194,0.041,low,0,1,4,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992602
+8992603,Butler,287,178,Text,1664,0.0284,0.0436,medium,0,1,3,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992603
+8992606,Butler,290,179,Text,2930,0.014,0.0214,low,1,1,1,0,False,False,False,True,False,Agrotis,https://www.biodiversitylibrary.org/page/8992606
+8992607,Butler,291,180,Text,2877,0.0851,0.037,medium,0,0,5,9,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992607
+8992608,Butler,292,181,Text,2971,0.0199,0.0307,low,0,2,0,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992608
+8992609,Butler,293,182,Text,2412,0.0399,0.0674,medium,0,0,2,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992609
+8992612,Butler,296,183,Text,1652,0.0292,0.0593,medium,6,2,8,1,False,False,True,False,False,Alauda; Alauda australis; Alauda dulcivox; Alauda japonica; Alauda liopus; Alauda sala,https://www.biodiversitylibrary.org/page/8992612
+8992613,Butler,297,184,Text,2955,0.0249,0.0497,medium,0,0,1,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992613
+8992614,Butler,298,185,Text,2836,0.0145,0.0319,low,0,0,4,6,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992614
+8992615,Butler,299,186,Text,2843,0.02,0.0432,medium,0,0,1,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992615
+8992616,Butler,300,187,Text,2221,0.0103,0.017,low,0,0,0,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992616
+8992617,Butler,301,188,Text,2226,0.0225,0.0239,medium,0,1,7,3,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992617
+8992620,Butler,304,189,Text,2829,0.0233,0.0475,medium,1,0,3,3,False,False,False,True,False,Lullula,https://www.biodiversitylibrary.org/page/8992620
+8992621,Butler,305,190,Text,2856,0.014,0.0281,low,0,0,3,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992621
+8992624,Butler,308,191,Text,1837,0.0207,0.0383,medium,1,1,12,0,False,False,False,True,False,Alanda,https://www.biodiversitylibrary.org/page/8992624
+8992625,Butler,309,192,Text,2790,0.0211,0.0367,medium,1,1,2,2,False,False,False,True,False,Andalucia,https://www.biodiversitylibrary.org/page/8992625
+8992626,Butler,310,193,Text,2819,0.0238,0.0527,medium,0,2,2,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992626
+8992627,Butler,311,194,Text,1744,0.0212,0.0492,medium,0,3,4,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992627
+8992628,Butler,312,195,Text,1079,0.0168,0.033,low,0,1,6,9,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992628
+8992629,Butler,313,196,Text,2186,0.0192,0.0349,low,0,1,14,5,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992629
+8992632,Butler,316,197,Text,2874,0.0153,0.0248,low,0,1,1,4,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992632
+8992633,Butler,317,198,Text,2415,0.027,0.0571,medium,0,0,3,6,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992633
+8992636,Butler,320,199,Text,2204,0.0155,0.0182,low,1,2,4,5,False,False,False,True,False,Linx,https://www.biodiversitylibrary.org/page/8992636
+8992637,Butler,321,200,Text,2752,0.0196,0.0316,low,1,1,3,4,False,False,False,True,False,Crustacea,https://www.biodiversitylibrary.org/page/8992637
+8992638,Butler,322,201,Text,2745,0.0127,0.0199,low,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8992638
+8992639,Butler,323,202,Text,1577,0.0153,0.0372,low,0,1,2,2,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992639
+8992640,Butler,324,203,Text,1098,0.0416,0.0829,medium,2,4,9,15,False,False,False,True,False,Pratincola maura; Saxicola; Saxicola,https://www.biodiversitylibrary.org/page/8992640
+8992641,Butler,325,204,Text,1225,0.0363,0.0729,medium,2,2,12,34,False,False,False,True,False,Daulias; Red-spotted,https://www.biodiversitylibrary.org/page/8992641
+8992642,Butler,326,205,Text,1498,0.0464,0.068,medium,1,1,15,37,False,False,False,True,False,Barra,https://www.biodiversitylibrary.org/page/8992642
+8992643,Butler,327,206,Text,784,0.1234,0.2222,high,1,3,4,11,False,True,False,True,False,Phylloscopus viridanus,https://www.biodiversitylibrary.org/page/8992643
+8992644,Butler,328,207,Text,667,0.1371,0.1981,high,1,3,6,9,False,True,False,True,False,Lusciniola,https://www.biodiversitylibrary.org/page/8992644
+8992645,Butler,329,208,Text,1232,0.0459,0.0773,medium,1,2,19,27,False,False,False,True,False,Hypolais,https://www.biodiversitylibrary.org/page/8992645
+8992646,Butler,330,209,Text,1745,0.0254,0.0373,medium,1,1,30,28,False,False,False,True,False,Accentor,https://www.biodiversitylibrary.org/page/8992646
+8992647,Butler,331,210,Text,725,0.0784,0.1724,medium,3,3,4,5,False,False,True,False,False,Motacilla; Motacilla beema; Motacilla cinereocapilla,https://www.biodiversitylibrary.org/page/8992647
+8992648,Butler,332,211,Text,1058,0.0142,0.0053,low,0,0,17,22,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8992648
+8992650,Butler,334,213,Text,3701,0.2852,0.0806,high,57,50,0,0,True,True,True,False,False,Acanthis; Acanthis linaria; Accentor; Accentor collaris; Accentor modularis; Acredula caudata,https://www.biodiversitylibrary.org/page/8992650
+8992651,Butler,335,214,Text,4981,0.3838,0.1621,high,62,53,0,0,True,True,True,False,False,Hirundo; Hirundo rustica; Hypolais; Hypolais icterina; Hypolais icterina; Hypolais polyglotta,https://www.biodiversitylibrary.org/page/8992651
+8992652,Butler,336,215,Text,1650,0.4255,0.3221,high,17,22,0,0,True,True,True,False,False,Sylivia undata; Sylvia; Sylvia atricapilla; Sylvia cinerea; Sylvia curruca; Sylvia hortensis,https://www.biodiversitylibrary.org/page/8992652
+8992653,Butler,337,216,Text,2632,0.3764,0.3933,high,0,0,0,0,True,True,False,False,True,,https://www.biodiversitylibrary.org/page/8992653
+8966760,Reeve,7,,Title Page,648,0.104,0.1263,high,10,0,0,1,False,True,True,False,False,Achatina; Bulimus subgen. Bulimus; Cassidaria; Cassis; Dolium; Eburna,https://www.biodiversitylibrary.org/page/8966760
+8966754,Reeve,13,,Text,4972,0.032,0.0841,medium,3,3,5,3,False,False,False,False,False,Bulimus subgen. Bulimus; Hesperides; Testa,https://www.biodiversitylibrary.org/page/8966754
+8966753,Reeve,14,,Text,5502,0.0194,0.0446,low,3,2,5,1,False,False,False,False,False,Achatina; Achatinella; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966753
+8966752,Reeve,15,,Text,4681,0.0715,0.1448,medium,2,0,10,2,False,False,False,True,False,Bulimus lignarius; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966752
+8966751,Reeve,16,,Text,3931,0.0497,0.1485,medium,2,1,6,2,False,False,False,True,False,Bulimus subgen. Bulimus; Helix,https://www.biodiversitylibrary.org/page/8966751
+8966748,Reeve,19,,Text,4335,0.0498,0.1565,medium,5,0,9,5,False,False,False,False,False,Bulimus solidus; Bulimus subgen. Bulimus; Daphnis; Gilvus; Helix,https://www.biodiversitylibrary.org/page/8966748
+8966747,Reeve,20,,Text,1041,0.051,0.1688,medium,1,0,3,0,False,False,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966747
+8966744,Reeve,23,,Text,4428,0.0633,0.1994,medium,3,0,12,6,False,False,False,False,False,Bulimus subgen. Bulimus; Faunus; Helix,https://www.biodiversitylibrary.org/page/8966744
+8966714,Reeve,27,,Text,4092,0.0438,0.1537,medium,3,1,8,5,False,False,False,False,False,Bulimus chrysalidiformis; Bulimus nimbosus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966714
+8966715,Reeve,28,,Text,2254,0.0415,0.1105,medium,2,1,4,1,False,False,False,True,False,Bulimus nimbosus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966715
+8966718,Reeve,31,,Text,4373,0.0379,0.1382,medium,4,1,8,2,False,False,False,False,False,Bulimus bicoloratus; Bulimus electritius; Bulimus subgen. Bulimus; Nobilis,https://www.biodiversitylibrary.org/page/8966718
+8966719,Reeve,32,,Text,1126,0.0749,0.1941,medium,0,0,3,1,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8966719
+8966722,Reeve,35,,Text,4104,0.0787,0.1925,medium,5,0,9,5,False,False,False,False,False,Bulimus citrinus; Bulimus fraseri; Bulimus maculiferus; Bulimus smaragdinus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966722
+8966723,Reeve,36,,Text,1901,0.0554,0.1636,medium,2,1,4,1,False,False,False,True,False,Bulimus subgen. Bulimus; Satyrus,https://www.biodiversitylibrary.org/page/8966723
+8966726,Reeve,39,,Text,3957,0.0533,0.1402,medium,4,0,8,5,False,False,False,False,False,Bulimus carinatus; Bulimus cincinnus; Bulimus subgen. Bulimus; Bulimus virens,https://www.biodiversitylibrary.org/page/8966726
+8966727,Reeve,40,,Text,2363,0.0712,0.2356,medium,1,0,4,2,False,False,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966727
+8966730,Reeve,43,,Text,3926,0.103,0.217,high,4,0,9,6,False,True,False,False,False,Bulimus carinatus; Bulimus dactylus; Bulimus subgen. Bulimus; Calista,https://www.biodiversitylibrary.org/page/8966730
+8966731,Reeve,44,,Text,2525,0.0751,0.2032,medium,1,0,7,3,False,False,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966731
+8966734,Reeve,47,,Text,4009,0.0886,0.2272,medium,5,5,10,6,False,False,False,False,False,Bulimus paradoxus; Bulimus subgen. Bulimus; Bulinus fictilis; Sylvanus; Testa,https://www.biodiversitylibrary.org/page/8966734
+8966738,Reeve,51,,Text,3963,0.063,0.2014,medium,4,0,7,5,False,False,False,False,False,Bulimus leucophaeus; Bulimus subgen. Bulimus; Bulinus pictor; Egle,https://www.biodiversitylibrary.org/page/8966738
+8966739,Reeve,52,,Text,2988,0.0453,0.149,medium,2,1,7,3,False,False,False,True,False,Bulimus subgen. Bulimus; Helix,https://www.biodiversitylibrary.org/page/8966739
+8966742,Reeve,55,,Text,3953,0.0604,0.182,medium,3,1,9,4,False,False,False,False,False,Bulimus ovoideus; Bulimus subgen. Bulimus; Helix,https://www.biodiversitylibrary.org/page/8966742
+8966743,Reeve,56,,Text,2748,0.0505,0.1736,medium,5,2,6,3,False,False,False,False,False,Bulimus; Bulimus acuminatus; Bulimus pyramidalis; Bulimus subgen. Bulimus; Helix pyramidalis,https://www.biodiversitylibrary.org/page/8966743
+8966769,Reeve,59,,Text,3801,0.0491,0.1816,medium,6,2,10,7,False,False,True,False,False,Bulimus breviculus; Bulimus effusus; Bulimus simplex; Bulimus subgen. Bulimus; Helix decipiens; Helix modesta,https://www.biodiversitylibrary.org/page/8966769
+8966770,Reeve,60,,Text,3093,0.0798,0.241,medium,2,1,6,4,False,False,False,True,False,Bulimus dilatatus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966770
+8966773,Reeve,63,,Text,3901,0.2988,0.1942,high,3,0,10,5,False,True,False,False,False,Bulimus evanescens; Bulimus subgen. Bulimus; Bulinus translucens,https://www.biodiversitylibrary.org/page/8966773
+8966774,Reeve,64,,Text,2197,0.1064,0.2042,high,1,0,2,1,False,True,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966774
+8966777,Reeve,67,,Text,3802,0.0744,0.2348,medium,5,0,9,6,False,False,False,False,False,Bulimus elongatulus; Bulimus micra; Bulimus subgen. Bulimus; Bulimus terebralis; Chilon,https://www.biodiversitylibrary.org/page/8966777
+8966778,Reeve,68,,Text,3860,0.084,0.2323,medium,2,0,7,3,False,False,False,True,False,Bulimus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966778
+8966781,Reeve,71,,Text,4243,0.0821,0.1811,medium,3,1,5,2,False,False,False,False,False,Bulimus phasianella; Bulimus rosaceus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966781
+8966782,Reeve,72,,Text,2695,0.0686,0.212,medium,2,4,5,1,False,False,False,True,False,Bulimus princeps; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966782
+8966785,Reeve,75,,Text,4203,0.1212,0.2634,high,11,1,4,4,False,True,True,False,False,Bulimus; Bulimus granulosus; Bulimus poecilus; Bulimus punctulifer; Bulimus rupicolus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966785
+8966786,Reeve,76,,Text,2761,0.0882,0.2621,medium,2,0,4,2,False,False,False,True,False,Bulimus subgen. Bulimus; Succinea,https://www.biodiversitylibrary.org/page/8966786
+8966789,Reeve,79,,Text,4157,0.0792,0.2169,medium,5,2,7,2,False,False,False,False,False,Bolina; Bulimus nucleus; Bulimus rosaceus; Bulimus sordidus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966789
+8966790,Reeve,80,,Text,1275,0.1002,0.2251,high,0,1,1,0,False,True,False,False,False,,https://www.biodiversitylibrary.org/page/8966790
+8966793,Reeve,83,,Text,4016,0.0742,0.227,medium,3,3,4,4,False,False,False,False,False,Bulimus subgen. Bulimus; Deshayes; Nitidus,https://www.biodiversitylibrary.org/page/8966793
+8966794,Reeve,84,,Text,3597,0.0896,0.2241,medium,2,1,4,2,False,False,False,True,False,Onca; Tigris,https://www.biodiversitylibrary.org/page/8966794
+8966797,Reeve,87,,Text,3806,0.1436,0.2677,high,6,2,5,6,False,True,True,False,False,Ambo; Bulimus subgen. Bulimus; Bulimus versicolor; Elegans; Questa; Succinea,https://www.biodiversitylibrary.org/page/8966797
+8966798,Reeve,88,,Text,2572,0.0512,0.1845,medium,3,1,4,4,False,False,False,False,False,Bulimus rosaceus; Bulimus subgen. Bulimus; Chilon,https://www.biodiversitylibrary.org/page/8966798
+8966801,Reeve,91,,Text,3818,0.1439,0.3391,high,3,0,10,5,False,True,False,False,False,Bulimus subgen. Bulimus; Pruinosus; Rugulosus,https://www.biodiversitylibrary.org/page/8966801
+8966802,Reeve,92,,Text,3438,0.2353,0.2787,high,2,0,8,4,False,True,False,True,False,Bulimus pustulosus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966802
+8966805,Reeve,95,,Text,3935,0.0714,0.2061,medium,4,2,5,6,False,False,False,False,False,Bulimus subgen. Bulimus; Bulimus ustulatus; Bulinus bilineatus; Narcissus sect. Meridionalis,https://www.biodiversitylibrary.org/page/8966805
+8966806,Reeve,96,,Text,3142,0.0938,0.2523,medium,1,0,10,4,False,False,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966806
+8966809,Reeve,99,,Text,3742,0.1041,0.2727,high,5,0,6,5,False,True,False,False,False,Bulimus albicans; Bulimus subgen. Bulimus; Bulimus versicolor; Bulinus conspersus; Striatus; Striatus,https://www.biodiversitylibrary.org/page/8966809
+8966810,Reeve,100,,Text,2992,0.0698,0.2014,medium,3,0,5,2,False,False,False,False,False,Apodemetes; Bulimus subgen. Bulimus; Striatulus; Striatulus,https://www.biodiversitylibrary.org/page/8966810
+8966813,Reeve,103,,Text,3521,0.0573,0.2033,medium,5,0,6,4,False,False,False,False,False,Bulimus rubescens; Bulimus subgen. Bulimus; Bulinus unifasciatus; Chilon; Discrepans,https://www.biodiversitylibrary.org/page/8966813
+8966814,Reeve,104,,Text,4034,0.066,0.2088,medium,4,1,8,4,False,False,False,False,False,Bulimus; Bulimus affinis; Bulimus subgen. Bulimus; Deshayes,https://www.biodiversitylibrary.org/page/8966814
+8966817,Reeve,107,,Text,4291,0.0515,0.1782,medium,5,1,3,2,False,False,False,False,False,Bulimus; Bulimus pardalis; Bulimus subgen. Bulimus; Cumana; Ramaria subsect. Terrestres,https://www.biodiversitylibrary.org/page/8966817
+8966818,Reeve,108,,Text,4535,0.0444,0.1669,medium,4,3,6,1,False,False,False,False,False,Bulimus bellulus; Bulimus subgen. Bulimus; Colonia; Helix,https://www.biodiversitylibrary.org/page/8966818
+8966821,Reeve,111,,Text,4122,0.0549,0.1827,medium,2,1,3,2,False,False,False,True,False,Bulimus subgen. Bulimus; Merida,https://www.biodiversitylibrary.org/page/8966821
+8966822,Reeve,112,,Text,1353,0.1386,0.266,high,4,3,1,0,False,True,False,False,False,Auricula; Auricula caprella; Auris; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966822
+8966825,Reeve,115,,Text,4258,0.1076,0.2176,high,1,0,2,2,False,True,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966825
+8966829,Reeve,119,,Text,4124,0.0894,0.2089,medium,3,5,2,2,False,False,False,False,False,Bulimus subgen. Bulimus; Cauca; Pamplona,https://www.biodiversitylibrary.org/page/8966829
+8966833,Reeve,123,,Text,4097,0.0668,0.1661,medium,4,1,4,4,False,False,False,False,False,Auricula; Bulimus fibratus; Bulimus subgen. Bulimus; Mida,https://www.biodiversitylibrary.org/page/8966833
+8966834,Reeve,124,,Text,3305,0.0558,0.1742,medium,2,1,3,0,False,False,False,True,False,Bulimus rhodocheilus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966834
+8966837,Reeve,127,,Text,4106,0.1797,0.3105,high,2,2,7,2,False,True,False,True,False,Bulimus subgen. Bulimus; Loxa,https://www.biodiversitylibrary.org/page/8966837
+8966838,Reeve,128,,Text,2523,0.0505,0.1685,medium,2,1,3,0,False,False,False,True,False,Bulimus subgen. Bulimus; Helix,https://www.biodiversitylibrary.org/page/8966838
+8966841,Reeve,131,,Text,3986,0.066,0.2343,medium,6,5,3,2,False,False,True,False,False,Auris; Bulimus imperator; Bulimus subgen. Bulimus; Columna; Deshayes; Helix,https://www.biodiversitylibrary.org/page/8966841
+8966842,Reeve,132,,Text,3740,0.0633,0.1928,medium,3,2,6,2,False,False,False,False,False,Auricula; Bulimus subgen. Bulimus; Helix,https://www.biodiversitylibrary.org/page/8966842
+8966845,Reeve,135,,Text,4123,0.1618,0.3059,high,5,5,3,2,False,True,False,False,False,Bulimus citrinus; Bulimus subgen. Bulimus; Helix; Helix perversa; Iranada,https://www.biodiversitylibrary.org/page/8966845
+8966846,Reeve,136,,Text,3198,0.0727,0.1782,medium,8,10,4,0,False,False,True,False,False,Bulimus planidens; Bulimus pudicus; Bulimus subgen. Bulimus; Bulimus unidentatus; Deshayes; Helix pudica,https://www.biodiversitylibrary.org/page/8966846
+8966849,Reeve,139,,Text,3915,0.1086,0.2551,high,3,0,5,4,False,True,False,False,False,Bulimus crystallinus; Bulimus subgen. Bulimus; Castaneus; Castaneus,https://www.biodiversitylibrary.org/page/8966849
+8966850,Reeve,140,,Text,2922,0.0456,0.1464,medium,5,2,3,1,False,False,False,False,False,Bolina; Bulimus heterotrichus; Bulimus subgen. Bulimus; Deshayes; Helix,https://www.biodiversitylibrary.org/page/8966850
+8966853,Reeve,143,,Text,4129,0.0742,0.2547,medium,5,3,3,2,False,False,False,False,False,Auricula; Bulimus; Bulimus bilabiatus; Bulimus subgen. Bulimus; Helix,https://www.biodiversitylibrary.org/page/8966853
+8966854,Reeve,144,,Text,568,0.0494,0.1368,medium,2,3,1,0,False,False,False,True,False,Bulimus subgen. Bulimus; Helix melanodoma,https://www.biodiversitylibrary.org/page/8966854
+8966857,Reeve,147,,Text,4522,0.0745,0.2016,medium,5,5,3,3,False,False,False,False,False,Bulimus goniostoma; Bulimus subgen. Bulimus; Cochlogena; Goniostoma; Mangifera sect. Limus,https://www.biodiversitylibrary.org/page/8966857
+8966861,Reeve,151,,Text,4867,0.0471,0.1125,medium,3,1,6,3,False,False,False,False,False,Bulimus subgen. Bulimus; Labeo; Lacunosus,https://www.biodiversitylibrary.org/page/8966861
+8966862,Reeve,152,,Text,4095,0.046,0.1363,medium,5,6,4,0,False,False,False,False,False,Bulimus; Bulimus granulosus; Bulimus oblongus; Bulimus ovatus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966862
+8966865,Reeve,155,,Text,3824,0.1143,0.2827,high,6,2,4,3,False,True,True,False,False,Bulimus abyssorum; Bulimus fenestratus; Bulimus subgen. Bulimus; Bulla ovata; Helix; Ovatus,https://www.biodiversitylibrary.org/page/8966865
+8966866,Reeve,156,,Text,747,0.0765,0.243,medium,1,0,1,0,False,False,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966866
+8966869,Reeve,159,,Text,3847,0.1024,0.2634,high,5,0,4,2,False,True,False,False,False,Bulimus contusus; Bulimus subgen. Bulimus; Goudoti; Helix; Microscydmus subgen. Misc,https://www.biodiversitylibrary.org/page/8966869
+8966870,Reeve,160,,Text,2492,0.1122,0.2551,high,2,0,6,2,False,True,False,True,False,Bulimus chloris; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966870
+8966873,Reeve,163,,Text,4413,0.1014,0.261,high,11,5,4,2,False,True,True,False,False,Bulimus; Bulimus exesus; Bulimus odontostoma; Bulimus subgen. Bulimus; Clausilia; Clausilia,https://www.biodiversitylibrary.org/page/8966873
+8966874,Reeve,164,,Text,4432,0.0644,0.2185,medium,17,11,6,1,False,False,True,False,False,Bulimus subgen. Bulimus; Bulimus vitreus; Clausilia; Clausilia striata; Cyclodonta; Cyclodontina,https://www.biodiversitylibrary.org/page/8966874
+8966877,Reeve,167,,Text,4184,0.094,0.2735,medium,7,8,4,5,False,False,True,False,False,Bulimus; Bulimus inflatus; Bulimus magus; Bulimus multicolor; Bulimus subgen. Bulimus; Bulimus zonatus,https://www.biodiversitylibrary.org/page/8966877
+8966878,Reeve,168,,Text,4489,0.0611,0.2284,medium,6,0,8,2,False,False,True,False,False,Ambo; Bulimus granulosus; Bulimus jussieui; Bulimus melo; Bulimus subgen. Bulimus; Gonyostoma,https://www.biodiversitylibrary.org/page/8966878
+8966881,Reeve,171,,Text,3852,0.0701,0.25,medium,8,5,5,2,False,False,True,False,False,Bulimulus undulatus; Bulimus; Bulimus angulatus; Bulimus lucidus; Bulimus subgen. Bulimus; Bulimus vimineus,https://www.biodiversitylibrary.org/page/8966881
+8966882,Reeve,172,,Text,4120,0.0971,0.2254,medium,9,3,5,1,False,False,True,False,False,Bulimus; Bulimus angulatus; Bulimus serperastrus; Bulimus subgen. Bulimus; Deshayes; Deshayesii,https://www.biodiversitylibrary.org/page/8966882
+8966885,Reeve,175,,Text,3823,0.0572,0.2229,medium,4,3,4,4,False,False,False,False,False,Bulimus canaliculatus; Bulimus subgen. Bulimus; Helix distorta; Trochus,https://www.biodiversitylibrary.org/page/8966885
+8966886,Reeve,176,,Text,4115,0.0575,0.2027,medium,10,10,4,1,False,False,True,False,False,Auricula leporis; Bulimus auris-leporis; Bulimus auris-muris; Bulimus coarctatus; Bulimus navicula; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966886
+8966889,Reeve,179,,Text,4099,0.0658,0.2269,medium,3,0,4,5,False,False,False,False,False,Bulimus quadricolor; Bulimus subgen. Bulimus; Merida,https://www.biodiversitylibrary.org/page/8966889
+8966890,Reeve,180,,Text,3355,0.0552,0.1942,medium,4,0,3,1,False,False,False,False,False,Bulimus glandiformis; Bulimus plectostylus; Bulimus subgen. Bulimus; Merida,https://www.biodiversitylibrary.org/page/8966890
+8966893,Reeve,183,,Text,3899,0.065,0.2491,medium,3,0,5,2,False,False,False,False,False,Bulimus subgen. Bulimus; Bulimus xanthostoma; Helix,https://www.biodiversitylibrary.org/page/8966893
+8966894,Reeve,184,,Text,1599,0.0665,0.2566,medium,1,0,2,0,False,False,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966894
+8966897,Reeve,187,,Text,3811,0.0801,0.2642,medium,7,1,5,3,False,False,True,False,False,Bicolor; Bicolor; Bulimus exilis; Bulimus geometricus; Bulimus rubrifasciatus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966897
+8966898,Reeve,188,,Text,1775,0.0584,0.2269,medium,3,0,3,1,False,False,False,False,False,Bama subgen. Bama; Bolivianus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966898
+8966901,Reeve,191,,Text,3659,0.0629,0.2354,medium,3,1,5,5,False,False,False,False,False,Bulimus onager; Bulimus subgen. Bulimus; Bulimus venosus,https://www.biodiversitylibrary.org/page/8966901
+8966902,Reeve,192,,Text,2490,0.044,0.1657,medium,3,2,4,0,False,False,False,False,False,Bulimus subgen. Bulimus; Deshayes; Helix tenuissima,https://www.biodiversitylibrary.org/page/8966902
+8966905,Reeve,195,,Text,3584,0.0851,0.2531,medium,5,0,5,3,False,False,False,False,False,Bulimus cinnamomeo-lineatus; Bulimus exilis; Bulimus subgen. Bulimus; Helix; Vitrinoides,https://www.biodiversitylibrary.org/page/8966905
+8966906,Reeve,196,,Text,2774,0.047,0.2107,medium,6,1,4,0,False,False,True,False,False,Abyssinicus; Benguelensis; Bulimus multifasciatus; Bulimus subgen. Bulimus; Deshayes; Helix picturata,https://www.biodiversitylibrary.org/page/8966906
+8966909,Reeve,199,,Text,3648,0.0895,0.2465,medium,4,0,5,2,False,False,False,False,False,Bulimus crepundia; Bulimus subgen. Bulimus; Bulimus vibex; Pupa,https://www.biodiversitylibrary.org/page/8966909
+8966910,Reeve,200,,Text,3863,0.0536,0.2033,medium,5,0,6,0,False,False,False,False,False,Bulimus constrictus; Bulimus digitale; Bulimus fuscagula; Bulimus subgen. Bulimus; Pupa,https://www.biodiversitylibrary.org/page/8966910
+8966913,Reeve,203,,Text,3728,0.0726,0.2322,medium,7,1,4,2,False,False,True,False,False,Bulimus angiostomus; Bulimus subgen. Bulimus; Bulimus trilineatus; Helix; Maculatus; Oreades,https://www.biodiversitylibrary.org/page/8966913
+8966914,Reeve,204,,Text,3956,0.0875,0.1843,medium,5,1,8,1,False,False,False,False,False,Bontia; Bulimus confusus; Bulimus monilifer; Bulimus subgen. Bulimus; Helix,https://www.biodiversitylibrary.org/page/8966914
+8966917,Reeve,207,,Text,3922,0.1745,0.2053,high,9,4,6,3,False,True,True,False,False,Bulimus; Bulimus canaliculatus; Bulimus miltocheilus; Bulimus rhodostomus; Bulimus subgen. Bulimus; Bulimus virgulatus,https://www.biodiversitylibrary.org/page/8966917
+8966918,Reeve,208,,Text,2169,0.0645,0.2174,medium,2,1,3,0,False,False,False,True,False,Bulimus subgen. Bulimus; Bulimus taeniolus,https://www.biodiversitylibrary.org/page/8966918
+8966921,Reeve,211,,Text,2810,0.0486,0.1962,medium,3,1,5,2,False,False,False,False,False,Bulimus speciosus; Bulimus subgen. Bulimus; Ruppellianus,https://www.biodiversitylibrary.org/page/8966921
+8966925,Reeve,215,,Text,3634,0.0692,0.2622,medium,4,3,7,4,False,False,False,False,False,Bulimus subgen. Bulimus; Helix; Mullus auratus; Symbola; Symbola,https://www.biodiversitylibrary.org/page/8966925
+8966926,Reeve,216,,Text,3442,0.0446,0.1974,medium,3,0,4,0,False,False,False,False,False,Bulimus effeminatus; Bulimus subgen. Bulimus; Olivieri; Olivieri,https://www.biodiversitylibrary.org/page/8966926
+8966929,Reeve,219,,Text,3946,0.041,0.1717,medium,9,5,5,2,False,False,True,False,False,Bulimus calcareus; Bulimus haplostylus; Bulimus maritimus; Bulimus obeliscus; Bulimus subgen. Bulimus; Deshayes,https://www.biodiversitylibrary.org/page/8966929
+8966930,Reeve,220,,Text,2003,0.275,0.1799,high,6,3,2,1,False,True,True,False,False,Bulimus calcareus; Bulimus clavator; Bulimus subgen. Bulimus; Deshayes; Helix; Helix calcarea,https://www.biodiversitylibrary.org/page/8966930
+8966933,Reeve,223,,Text,3718,0.0727,0.2207,medium,6,0,5,2,False,False,True,False,False,Bulimus flammeus; Bulimus spectralis; Bulimus subgen. Bulimus; Bulimus suffusus; Bulimus tenebricus; Consimilis,https://www.biodiversitylibrary.org/page/8966933
+8966934,Reeve,224,,Text,1690,0.0687,0.213,medium,3,0,3,0,False,False,False,False,False,Bulimus subgen. Bulimus; Flammeus; Helix,https://www.biodiversitylibrary.org/page/8966934
+8966937,Reeve,227,,Text,3954,0.4374,0.265,high,5,0,4,3,False,True,False,False,False,Bulimus; Bulimus feriatus; Bulimus glaber; Bulimus oreades; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966937
+8966938,Reeve,228,,Text,3708,0.0554,0.211,medium,8,3,4,1,False,False,True,False,False,Auricula; Bulimus culmineus; Bulimus distortus; Bulimus rimatus; Bulimus subgen. Bulimus; Cochlogena,https://www.biodiversitylibrary.org/page/8966938
+8966941,Reeve,231,,Text,4018,0.071,0.2491,medium,5,1,7,4,False,False,False,False,False,Andicola; Bulimus; Bulimus pallidior; Bulimus subgen. Bulimus; Velutinus,https://www.biodiversitylibrary.org/page/8966941
+8966942,Reeve,232,,Text,2513,0.0464,0.1845,medium,4,1,4,0,False,False,False,False,False,Bulimus; Bulimus manupictus; Bulimus nigrofasciatus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966942
+8966945,Reeve,235,,Text,3639,0.0822,0.2658,medium,6,0,5,3,False,False,True,False,False,Bolina; Bulimus; Bulimus cinereus; Bulimus electrum; Bulimus subgen. Bulimus; Narcissus sect. Meridionalis,https://www.biodiversitylibrary.org/page/8966945
+8966946,Reeve,236,,Text,2954,0.0687,0.2343,medium,3,0,3,0,False,False,False,False,False,Bulimus oblitus; Bulimus subgen. Bulimus; Philadelphus sect. Californicus,https://www.biodiversitylibrary.org/page/8966946
+8966949,Reeve,239,,Text,3786,0.0812,0.2634,medium,4,0,5,5,False,False,False,False,False,Bulimus erubescens; Bulimus primula; Bulimus subgen. Bulimus; Merida,https://www.biodiversitylibrary.org/page/8966949
+8966950,Reeve,240,,Text,2747,0.0514,0.2054,medium,4,0,4,1,False,False,False,False,False,Bulimus liquabilis; Bulimus subgen. Bulimus; Merida; Meridanus,https://www.biodiversitylibrary.org/page/8966950
+8966953,Reeve,243,,Text,4047,0.0972,0.2806,medium,3,0,6,3,False,False,False,False,False,Bulimus erectus; Bulimus subgen. Bulimus; Mexicanus; Mexicanus,https://www.biodiversitylibrary.org/page/8966953
+8966954,Reeve,244,,Text,1496,0.1654,0.1692,high,2,0,3,0,False,True,False,True,False,Bulimus opalinus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966954
+8966957,Reeve,247,,Text,3618,0.0933,0.2617,medium,7,8,5,5,False,False,True,False,False,Bulimus luteus; Bulimus subgen. Bulimus; Bulimus trilineatus; Cochlogena; Helix; Helix detrita,https://www.biodiversitylibrary.org/page/8966957
+8966958,Reeve,248,,Text,3089,0.0474,0.181,medium,7,1,5,1,False,False,True,False,False,Angostura; Bulimus constrictus; Bulimus sordidus; Bulimus subgen. Bulimus; Lycia; Pisidia,https://www.biodiversitylibrary.org/page/8966958
+8966961,Reeve,251,,Text,3653,0.3076,0.2469,high,4,0,5,5,False,True,False,False,False,Bulimus candelaris; Bulimus subgen. Bulimus; Lycia; Syriacus; Syriacus,https://www.biodiversitylibrary.org/page/8966961
+8966962,Reeve,252,,Text,4103,0.0648,0.2449,medium,8,4,6,1,False,False,True,False,False,Bulimus; Bulimus labiosus; Bulimus labrosus; Bulimus labrosus; Bulimus subgen. Bulimus; Caeneus,https://www.biodiversitylibrary.org/page/8966962
+8966965,Reeve,255,,Text,3690,0.0915,0.272,medium,4,4,8,3,False,False,False,False,False,Bulimus eburneus; Bulimus subgen. Bulimus; Pupa; Sarcodes,https://www.biodiversitylibrary.org/page/8966965
+8966966,Reeve,256,,Text,2994,0.0791,0.262,medium,11,6,9,0,False,False,True,False,False,Bulimus; Bulimus cylindricus; Bulimus fusiformis; Bulimus obsoletus; Bulimus subgen. Bulimus; Candida,https://www.biodiversitylibrary.org/page/8966966
+8966969,Reeve,259,,Text,3793,0.0507,0.1958,medium,3,1,7,4,False,False,False,False,False,Bulimus ferrugineus; Bulimus irroratus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966969
+8966970,Reeve,260,,Text,2545,0.0379,0.1459,medium,4,0,3,0,False,False,False,False,False,Bulimus subgen. Bulimus; Helix pseudo-succinea; Lineatus; Natalensis; Natalensis,https://www.biodiversitylibrary.org/page/8966970
+8966973,Reeve,263,,Text,3595,0.0636,0.2344,medium,12,5,7,4,False,False,True,False,False,Bulimus; Bulimus emarginatus; Bulimus leptodon; Bulimus perspectivus; Bulimus subgen. Bulimus; Deshayes,https://www.biodiversitylibrary.org/page/8966973
+8966974,Reeve,264,,Text,3830,0.0486,0.186,medium,6,1,5,1,False,False,True,False,False,Bulimus fraterculus; Bulimus oblongus; Bulimus rubescens; Bulimus subgen. Bulimus; Bulinus scalariformis; Kraussi,https://www.biodiversitylibrary.org/page/8966974
+8966977,Reeve,267,,Text,3685,0.0696,0.2638,medium,8,3,7,4,False,False,True,False,False,Bahiensis; Bulimus articulatus; Bulimus cylindricus; Bulimus reticulatus; Bulimus signatus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966977
+8966978,Reeve,268,,Text,3573,0.0515,0.2122,medium,4,2,6,0,False,False,False,False,False,Bulimus coronatus; Bulimus formosus; Bulimus subgen. Bulimus; Cochlogena,https://www.biodiversitylibrary.org/page/8966978
+8966981,Reeve,271,,Text,3763,0.0799,0.2724,medium,6,1,5,6,False,False,True,False,False,Bulimus; Bulimus costatus; Bulimus irregularis; Bulimus subgen. Bulimus; Punctatus; Pupa,https://www.biodiversitylibrary.org/page/8966981
+8966982,Reeve,272,,Text,3453,0.0565,0.2093,medium,4,0,6,1,False,False,False,False,False,Bulimus cyclostoma; Bulimus subgen. Bulimus; Bulinus conspersus; Cyclostoma,https://www.biodiversitylibrary.org/page/8966982
+8966985,Reeve,275,,Text,3866,0.0568,0.2117,medium,3,0,6,5,False,False,False,False,False,Bulimus subgen. Bulimus; Bulimus variatus; Bulimus zebriolus,https://www.biodiversitylibrary.org/page/8966985
+8966986,Reeve,276,,Text,4616,0.0673,0.2373,medium,11,10,8,0,False,False,True,False,False,Bidens; Bulimus; Bulimus acutus; Bulimus badiosus; Bulimus subgen. Bulimus; Helie,https://www.biodiversitylibrary.org/page/8966986
+8966989,Reeve,279,,Text,3530,0.0713,0.2796,medium,5,2,7,4,False,False,False,False,False,Achatina; Bulimus fragilis; Bulimus subgen. Bulimus; Bulimus subtilis; Bulimus tener,https://www.biodiversitylibrary.org/page/8966989
+8966990,Reeve,280,,Text,3398,0.1903,0.1765,high,8,3,7,2,False,True,True,False,False,Bulimus; Bulimus arcuatus; Bulimus olivaceus; Bulimus pullus; Bulimus subgen. Bulimus; Lycia,https://www.biodiversitylibrary.org/page/8966990
+8966993,Reeve,283,,Text,3876,0.0616,0.2429,medium,5,1,6,3,False,False,False,False,False,Bulimus impressus; Bulimus subgen. Bulimus; Deshayes; Oryza; Tuckeri; Tuckeri,https://www.biodiversitylibrary.org/page/8966993
+8966994,Reeve,284,,Text,4372,0.0422,0.1697,medium,11,6,6,1,False,False,True,False,False,Bulimus deceptus; Bulimus interstinctus; Bulimus spoliatus; Bulimus subgen. Bulimus; Bulimus subuliformis; Deshayes,https://www.biodiversitylibrary.org/page/8966994
+8966997,Reeve,287,,Text,3573,0.0738,0.2727,medium,10,4,6,3,False,False,True,False,False,Bulimus; Bulimus coenopictus; Bulimus folliculus; Bulimus gracilis; Bulimus procerus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8966997
+8966998,Reeve,288,,Text,4005,0.0438,0.1564,medium,7,6,4,4,False,False,True,False,False,Bulimus nivicola; Bulimus subgen. Bulimus; Bulimus ventrosus; Helix acuta; Helix ventrosa; Indicus,https://www.biodiversitylibrary.org/page/8966998
+8967001,Reeve,291,,Text,3641,0.0687,0.2174,medium,7,0,5,2,False,False,True,False,False,Bulimus; Bulimus columella; Bulimus gracilis; Bulimus subgen. Bulimus; Cereus; Jamaicensis,https://www.biodiversitylibrary.org/page/8967001
+8967002,Reeve,292,,Text,3911,0.0737,0.2588,medium,3,3,8,0,False,False,False,False,False,Bulimus subgen. Bulimus; Bulimus zoographicus; Helix obesata,https://www.biodiversitylibrary.org/page/8967002
+8967003,Reeve,293,,Text,2533,0.072,0.2672,medium,5,1,4,0,False,False,False,False,False,Bulimus; Bulimus costulatus; Bulimus subgen. Bulimus; Deshayes; Helix,https://www.biodiversitylibrary.org/page/8967003
+8967007,Reeve,297,,Text,4029,0.0713,0.2563,medium,4,0,4,2,False,False,False,False,False,Bulimus labeo; Bulimus scitulus; Bulimus subgen. Bulimus; Caxamarca,https://www.biodiversitylibrary.org/page/8967007
+8967008,Reeve,298,,Text,1750,0.0378,0.1313,medium,1,0,3,0,False,False,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967008
+8967011,Reeve,301,,Text,4087,0.0456,0.1881,medium,3,0,3,2,False,False,False,False,False,Bulimus myristicus; Bulimus subgen. Bulimus; Caxamarca,https://www.biodiversitylibrary.org/page/8967011
+8967012,Reeve,302,,Text,975,0.0494,0.1748,medium,1,0,2,0,False,False,False,True,False,Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967012
+8967015,Reeve,305,,Text,3925,0.0879,0.2561,medium,4,0,5,2,False,False,False,False,False,Bulimus depstus; Bulimus nigropileatus; Bulimus subgen. Bulimus; Clausilioides,https://www.biodiversitylibrary.org/page/8967015
+8967016,Reeve,306,,Text,1988,0.0479,0.1815,medium,3,0,2,0,False,False,False,False,False,Bulimus columellaris; Bulimus subgen. Bulimus; Caxamarca,https://www.biodiversitylibrary.org/page/8967016
+8967019,Reeve,309,,Text,3806,0.0519,0.2207,medium,3,1,6,3,False,False,False,False,False,Bulimus lilacinus; Bulimus solivagus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967019
+8967020,Reeve,310,,Text,3249,0.0503,0.2009,medium,4,0,4,0,False,False,False,False,False,Bulimus cerussatus; Bulimus spadiceus; Bulimus subgen. Bulimus; Bulimus succinctus,https://www.biodiversitylibrary.org/page/8967020
+8967023,Reeve,313,,Text,3689,0.0512,0.2162,medium,7,1,6,4,False,False,True,False,False,Buliminus ingens; Bulimus barbara; Bulimus solutus; Bulimus subgen. Bulimus; Ehrenbergii; Ehrenbergii,https://www.biodiversitylibrary.org/page/8967023
+8967024,Reeve,314,,Text,3659,0.0408,0.2176,medium,5,0,7,2,False,False,False,False,False,Bulimus compactus; Bulimus membranaceus; Bulimus subgen. Bulimus; Bulimus trichodes; Varna,https://www.biodiversitylibrary.org/page/8967024
+8967027,Reeve,317,,Text,3718,0.0749,0.2296,medium,5,1,5,3,False,False,False,False,False,Bulimus; Bulimus gelidus; Bulimus neuricus; Bulimus obliquus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967027
+8967028,Reeve,318,,Text,3211,0.0462,0.2038,medium,4,0,8,0,False,False,False,False,False,Bulimus delumbis; Bulimus fidustus; Bulimus ovulum; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967028
+8967031,Reeve,321,,Text,3747,0.0595,0.227,medium,6,0,5,2,False,False,True,False,False,Bulimus coagulatus; Bulimus exornatus; Bulimus ignavus; Bulimus subgen. Bulimus; Bulimus umbraticus; Chilon,https://www.biodiversitylibrary.org/page/8967031
+8967032,Reeve,322,,Text,2909,0.0501,0.1974,medium,6,0,5,0,False,False,True,False,False,Bulimus mollicellus; Bulimus nigrilineatus; Bulimus subgen. Bulimus; Bulimus transparens; Bulinus scalariformis; Lymnea,https://www.biodiversitylibrary.org/page/8967032
+8967035,Reeve,325,,Text,3778,0.0555,0.2359,medium,3,1,5,2,False,False,False,False,False,Bulimus ceratinus; Bulimus subgen. Bulimus; Bulimus zebra,https://www.biodiversitylibrary.org/page/8967035
+8967036,Reeve,326,,Text,4220,0.0443,0.1794,medium,4,0,8,2,False,False,False,False,False,Bulimus conulus; Bulimus eremita; Bulimus rusticus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967036
+8967039,Reeve,329,,Text,3623,0.059,0.2325,medium,5,1,6,2,False,False,False,False,False,Bolina; Bulimus contiguus; Bulimus micra; Bulimus subgen. Bulimus; Partula,https://www.biodiversitylibrary.org/page/8967039
+8967040,Reeve,330,,Text,3552,0.0563,0.2178,medium,8,2,6,0,False,False,True,False,False,Bulimus macilentum; Bulimus nanus; Bulimus segregatus; Bulimus subgen. Bulimus; Cochlostyla; Euboea,https://www.biodiversitylibrary.org/page/8967040
+8967043,Reeve,333,,Text,3488,0.1664,0.2967,high,7,1,10,3,False,True,True,False,False,Bulimus; Bulimus decorticatus; Bulimus subgen. Bulimus; Hiona subgen. Opara; Nitidulus; Scalaria,https://www.biodiversitylibrary.org/page/8967043
+8967044,Reeve,334,,Text,2281,0.0728,0.2406,medium,3,0,5,1,False,False,False,False,False,Bulimus clavulinus; Bulimus harti; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967044
+8967047,Reeve,337,,Text,3925,0.1225,0.2804,high,4,0,5,3,False,True,False,False,False,Bivittatus; Bulimus spectatus; Bulimus subgen. Bulimus; Merida,https://www.biodiversitylibrary.org/page/8967047
+8967048,Reeve,338,,Text,3461,0.0596,0.1951,medium,4,0,4,0,False,False,False,False,False,Bulimus albizonatus; Bulimus furcillatus; Bulimus sinistralis; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967048
+8967051,Reeve,341,,Text,4214,0.0636,0.2284,medium,4,1,5,2,False,False,False,False,False,Bulimus adoptus; Bulimus caliginosus; Bulimus subgen. Bulimus; Bulinus proximus,https://www.biodiversitylibrary.org/page/8967051
+8967055,Reeve,345,,Text,3722,0.0636,0.2241,medium,4,1,8,2,False,False,False,False,False,Bulimus; Bulimus fucatus; Bulimus gibber; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967055
+8967056,Reeve,346,,Text,3644,0.0514,0.1909,medium,4,1,5,0,False,False,False,False,False,Bulimus; Bulimus occultus; Bulimus pretiosus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967056
+8967059,Reeve,349,,Text,3691,0.0791,0.2162,medium,5,3,9,4,False,False,False,False,False,Bulimus minimus; Bulimus mirabilis; Bulimus subgen. Bulimus; Helix; Terebella,https://www.biodiversitylibrary.org/page/8967059
+8967060,Reeve,350,,Text,2202,0.0588,0.2026,medium,2,0,3,0,False,False,False,True,False,Bulimus subgen. Bulimus; Bulimus tutulus,https://www.biodiversitylibrary.org/page/8967060
+8967063,Reeve,353,,Text,3722,0.1037,0.2663,high,3,1,5,3,False,True,False,False,False,Bulimus nucinus; Bulimus subgen. Bulimus; Linostoma,https://www.biodiversitylibrary.org/page/8967063
+8967064,Reeve,354,,Text,3582,0.043,0.1909,medium,7,0,7,1,False,False,True,False,False,Bulimus flavidus; Bulimus granulosus; Bulimus immaculatus; Bulimus ovoideus; Bulimus spretus; Bulimus stramineus,https://www.biodiversitylibrary.org/page/8967064
+8967067,Reeve,357,,Text,3684,0.0868,0.2981,medium,7,3,4,2,False,False,True,False,False,Bulimus; Bulimus puellaris; Bulimus seductilis; Bulimus subgen. Bulimus; Helix tridens; Pupa tridens,https://www.biodiversitylibrary.org/page/8967067
+8967068,Reeve,358,,Text,3732,0.0466,0.1855,medium,5,0,8,0,False,False,False,False,False,Bulimus confinis; Bulimus eous; Bulimus inutilis; Bulimus subgen. Bulimus; Bulimus turgidulus,https://www.biodiversitylibrary.org/page/8967068
+8967071,Reeve,361,,Text,3761,0.0591,0.2012,medium,13,11,9,5,False,False,True,False,False,Achatina lubrica; Bulimus hordeaceus; Bulimus lubricus; Bulimus nitens; Bulimus obscurus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967071
+8967072,Reeve,362,,Text,4025,0.056,0.2299,medium,16,7,8,1,False,False,True,False,False,Bulimus; Bulimus conoideus; Bulimus subgen. Bulimus; Bulimus subula; Chondrus quadridens; Gonodon quadridens,https://www.biodiversitylibrary.org/page/8967072
+8967075,Reeve,365,,Text,3747,0.0656,0.2773,medium,5,2,6,2,False,False,False,False,False,Bulimus concentricus; Bulimus contortuplicatus; Bulimus erubescens; Bulimus subgen. Bulimus; Glandina,https://www.biodiversitylibrary.org/page/8967075
+8967076,Reeve,366,,Text,2044,0.0494,0.1979,medium,4,1,3,0,False,False,False,False,False,Bulimus subgen. Bulimus; Dominicus; Geraes; Pupa,https://www.biodiversitylibrary.org/page/8967076
+8967079,Reeve,369,,Text,2673,0.0413,0.1553,medium,2,1,7,2,False,False,False,True,False,Bulimus ovatus; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967079
+8967081,Reeve,371,,Index,3233,0.4728,0.1573,high,7,0,0,1,True,True,True,False,False,Abyssinicus; Andicola; Benguelensis; Bolivianus; Bulimus subgen. Bulimus; Gyrulus subgen. Turton,https://www.biodiversitylibrary.org/page/8967081
+8967082,Reeve,372,,Index,3983,0.3277,0.2273,high,5,0,0,1,True,True,False,False,False,Calliandra ser. Chilensis; Clausilioides; Helix; Philadelphus sect. Californicus; Pupa,https://www.biodiversitylibrary.org/page/8967082
+8967083,Reeve,373,,Index,2848,0.3318,0.211,high,8,0,0,0,True,True,True,False,False,Dardanus; Deshayes; Deshayesii; Dominicus; Dryas; Ehrenbergi,https://www.biodiversitylibrary.org/page/8967083
+8967084,Reeve,374,,Index,3955,0.4908,0.1575,high,4,0,0,0,True,True,False,False,False,Guerini; Guerini; Helix; Indicus; Indicus; Jamaicensis,https://www.biodiversitylibrary.org/page/8967084
+8967085,Reeve,375,,Index,3946,0.3411,0.2254,high,2,0,0,1,True,True,False,True,False,Helix; Meridanus,https://www.biodiversitylibrary.org/page/8967085
+8967086,Reeve,376,,Index,3952,0.3993,0.1593,high,6,0,0,0,True,True,True,False,False,Helix; Natalensis; Natalensis; Nympha; Oreades; Physoides,https://www.biodiversitylibrary.org/page/8967086
+8967087,Reeve,377,,Index,3981,0.4758,0.1277,high,4,0,0,0,True,True,False,False,False,Helix; Pupoides; Satyrus; Sikkimensis,https://www.biodiversitylibrary.org/page/8967087
+8967088,Reeve,378,,Index,4016,0.6656,0.6221,high,4,0,0,0,True,True,False,False,False,Gyrulus subgen. Turton; Helix; Tuckeri; Tuckeri; Tunetanus,https://www.biodiversitylibrary.org/page/8967088
+8967089,Reeve,379,,Index,1721,0.3373,0.1755,high,3,0,0,0,True,True,False,False,False,Helix; Vitrinoides; Wagneri; Wagneri,https://www.biodiversitylibrary.org/page/8967089
+8967090,Reeve,380,,Errata,3754,0.046,0.1328,medium,6,2,6,9,False,False,True,False,False,Buccinum; Buccinum melanostoma; Buccinum vexillum; Helix cincinniformis; Luzonicus; Mida,https://www.biodiversitylibrary.org/page/8967090
+8967091,Reeve,381,,Issue Start,265,0.0494,0.0652,medium,1,0,0,0,False,False,False,True,False,Achatina,https://www.biodiversitylibrary.org/page/8967091
+8967095,Reeve,385,,Text,4286,0.0551,0.1775,medium,5,3,1,3,False,False,False,False,False,Achatina; Achatina variegata; Achatina virginea; Glandina; Testa,https://www.biodiversitylibrary.org/page/8967095
+8967096,Reeve,386,,Text,2078,0.044,0.1781,medium,11,6,4,0,False,False,True,False,False,Achatina; Achatina bicolor; Achatina cochlea; Achatina perdix; Buccinum; Buccinum achatinum,https://www.biodiversitylibrary.org/page/8967096
+8967099,Reeve,389,,Text,4084,0.0556,0.1672,medium,4,3,4,3,False,False,False,False,False,Achatina; Achatina reticulata; Helix borbonica; Mauritiana,https://www.biodiversitylibrary.org/page/8967099
+8967100,Reeve,390,,Text,631,0.11,0.25,high,1,0,1,1,False,True,False,True,False,Achatina,https://www.biodiversitylibrary.org/page/8967100
+8967103,Reeve,393,,Text,2859,0.0557,0.2327,medium,7,1,3,2,False,False,True,False,False,Achatina; Achatina panthera; Acuta; Chatina; Deshayes; Fulva,https://www.biodiversitylibrary.org/page/8967103
+8967107,Reeve,397,,Text,3298,0.0632,0.2112,medium,5,2,3,2,False,False,False,False,False,Achatina; Achatina; Achatina amphora; Achatina purpurea; Bulla purpurea; Deshayes,https://www.biodiversitylibrary.org/page/8967107
+8967111,Reeve,401,,Text,2121,0.0706,0.243,medium,4,5,3,2,False,False,False,False,False,Achatina; Achatina sinistrorsa; Bulla bicarinata; Deshayes,https://www.biodiversitylibrary.org/page/8967111
+8967115,Reeve,405,,Text,3547,0.0534,0.1904,medium,9,3,5,4,False,False,True,False,False,Achatina; Achatina costulata; Achatina rosea; Achatina striata; Achatina zebra; Buccinum striatum,https://www.biodiversitylibrary.org/page/8967115
+8967119,Reeve,409,,Text,2764,0.0862,0.2417,medium,4,4,3,2,False,False,False,False,False,Achatina; Achatina carinata; Buccinum achatinum; Deshayes,https://www.biodiversitylibrary.org/page/8967119
+8967123,Reeve,413,,Text,2878,0.115,0.237,high,5,3,4,3,False,True,False,False,False,Achatina; Achatina lignaria; Achatina rosea; Buccinum striatum; Deshayes,https://www.biodiversitylibrary.org/page/8967123
+8967127,Reeve,417,,Text,4050,0.0529,0.1894,medium,7,0,6,3,False,False,True,False,False,Achatina; Achatina alabaster; Achatina fasciata; Achatina fusiformis; Deshayes; Helix alabaster,https://www.biodiversitylibrary.org/page/8967127
+8967128,Reeve,418,,Text,1219,0.0577,0.1839,medium,1,0,2,1,False,False,False,True,False,Achatina,https://www.biodiversitylibrary.org/page/8967128
+8967131,Reeve,421,,Text,3552,0.049,0.1782,medium,16,15,5,3,False,False,True,False,False,Achatina; Achatina crenata; Achatina fasciata; Achatina lineata; Achatina pallida; Achatina virginea,https://www.biodiversitylibrary.org/page/8967131
+8967135,Reeve,425,,Text,2735,0.0648,0.2068,medium,5,2,4,3,False,False,False,False,False,Achatina; Achatina columna; Achatina semisculpta; Helix columna; Limax,https://www.biodiversitylibrary.org/page/8967135
+8967139,Reeve,429,,Text,3408,0.1314,0.2463,high,7,1,6,3,False,True,True,False,False,Achatina; Achatina flammigera; Achatina lactea; Achatina ustulata; Bulimus subgen. Bulimus; Cochlitoma ustulata,https://www.biodiversitylibrary.org/page/8967139
+8967143,Reeve,433,,Text,3725,0.0678,0.2254,medium,10,2,5,2,False,False,True,False,False,Achatina; Achatina cyanostoma; Achatina rosea; Achatina truncata; Algira; Cochlicopa,https://www.biodiversitylibrary.org/page/8967143
+8967144,Reeve,434,,Text,1611,0.0403,0.1514,medium,4,2,2,0,False,False,False,False,False,Achatina; Bulla; Glandina; Glaudina,https://www.biodiversitylibrary.org/page/8967144
+8967147,Reeve,437,,Text,4040,0.0568,0.2022,medium,10,2,4,4,False,False,True,False,False,Achatina; Achatina; Achatina albolineata; Achatina oleacea; Cochlicopa; Glandina oleacea,https://www.biodiversitylibrary.org/page/8967147
+8967148,Reeve,438,,Text,4507,0.0718,0.2048,medium,12,3,4,3,False,False,True,False,False,Achatina; Achatina columna; Achatina voluta; Bulimus glans; Bulla; Bulla voluta,https://www.biodiversitylibrary.org/page/8967148
+8967149,Reeve,439,,Text,2963,0.0683,0.1939,medium,6,2,4,0,False,False,True,False,False,Achatina; Achatina glabra; Cochlicopa; Deshayes; Glandina; Peruviana,https://www.biodiversitylibrary.org/page/8967149
+8967153,Reeve,443,,Text,3737,0.0701,0.2244,medium,3,0,6,6,False,False,False,False,False,Achatina; Glandina; Jamaicensis; Jamaicensis,https://www.biodiversitylibrary.org/page/8967153
+8967154,Reeve,444,,Text,3826,0.0547,0.2068,medium,3,0,4,3,False,False,False,False,False,Achatina; Achatina assimilis; Bangiana,https://www.biodiversitylibrary.org/page/8967154
+8967157,Reeve,447,,Text,3846,0.0714,0.2415,medium,5,2,7,2,False,False,False,False,False,Achatina; Achatina clavata; Achatina semitarum; Helix semitarum; Symbola; Symbola,https://www.biodiversitylibrary.org/page/8967157
+8967158,Reeve,448,,Text,2992,0.0788,0.2138,medium,5,1,5,1,False,False,False,False,False,Achatina; Achatina clavus; Achatina paxillus; Achatina tenuispira; Bulimus subgen. Bulimus,https://www.biodiversitylibrary.org/page/8967158
+8967161,Reeve,451,,Text,3609,0.0794,0.2434,medium,6,2,8,4,False,False,True,False,False,Achatina; Achatina octona; Amentum; Bulimus octona; Helix octona; Rhododendron ser. Javanica,https://www.biodiversitylibrary.org/page/8967161
+8967162,Reeve,452,,Text,1615,0.0498,0.1573,medium,1,0,3,0,False,False,False,True,False,Achatina; Achatina,https://www.biodiversitylibrary.org/page/8967162
+8967165,Reeve,455,,Text,3688,0.0595,0.254,medium,6,4,4,5,False,False,True,False,False,Achatina; Achatina incerta; Achatina orysacea; Achatina solidula; Helix; Pleurotoma subgen. Subulata,https://www.biodiversitylibrary.org/page/8967165
+8967166,Reeve,456,,Text,3608,0.0656,0.1981,medium,3,0,6,2,False,False,False,False,False,Achatina; Achatina lamellata; Merida,https://www.biodiversitylibrary.org/page/8967166
+8967169,Reeve,459,,Text,3505,0.0778,0.2449,medium,5,0,8,5,False,False,False,False,False,Achatina; Achatina accincta; Achatina consimilis; Achatinella; Splendida,https://www.biodiversitylibrary.org/page/8967169
+8967170,Reeve,460,,Text,2685,0.0555,0.2373,medium,5,0,4,0,False,False,False,False,False,Achatina; Achatina; Achatina anomala; Bulimus subgen. Bulimus; Orophila; Symbola,https://www.biodiversitylibrary.org/page/8967170
+8967173,Reeve,463,,Text,3534,0.2736,0.2029,high,11,5,7,5,False,True,True,False,False,Achatina; Achatina acicula; Achatina alba; Achatina costulata; Acicula eburnea; Adamsi,https://www.biodiversitylibrary.org/page/8967173
+8967174,Reeve,464,,Text,1937,0.0411,0.1729,medium,5,2,4,2,False,False,False,False,False,Achatina; Bulimus subgen. Bulimus; Glandina; Hatina; Xylorhiza sect. Californica,https://www.biodiversitylibrary.org/page/8967174
+8967177,Reeve,467,,Text,3730,0.0605,0.2069,medium,1,0,5,4,False,False,False,True,False,Achatina,https://www.biodiversitylibrary.org/page/8967177
+8967178,Reeve,468,,Text,1809,0.0441,0.1909,medium,3,0,3,2,False,False,False,False,False,Achatina; Isabellina; Oreas,https://www.biodiversitylibrary.org/page/8967178
+8967181,Reeve,471,,Text,3500,0.0527,0.1927,medium,9,5,5,2,False,False,True,False,False,Achatina; Achatina; Achatina coroca; Achatina crassula; Achatina gracilis; Glandina,https://www.biodiversitylibrary.org/page/8967181
+8967182,Reeve,472,,Text,1936,0.0541,0.1993,medium,4,2,3,0,False,False,False,False,False,Achatina; Achatina frumentum; Achatina gemma; Auricula,https://www.biodiversitylibrary.org/page/8967182
+8967185,Reeve,475,,Text,3749,0.0687,0.1939,medium,5,3,6,3,False,False,False,False,False,Achatina; Achatina mucida; Achatina obeliscus; Bulimus baeticatus; Bulimus torridus,https://www.biodiversitylibrary.org/page/8967185
+8967186,Reeve,476,,Text,653,0.0339,0.1648,medium,1,0,1,0,False,False,False,True,False,Achatina,https://www.biodiversitylibrary.org/page/8967186
+8967187,Reeve,477,,Index,3237,0.7233,0.6417,high,7,0,0,0,True,True,True,False,False,Achatina; Dominicensis; Helix; Jamaicensis; Jamaicensis; Kraussi,https://www.biodiversitylibrary.org/page/8967187
+8967188,Reeve,478,,Index,2520,0.3967,0.1319,high,9,0,0,0,True,True,True,False,False,Bangiana; Bulimus subgen. Bulimus; Bulla; Helix; Melampoides; Oreas,https://www.biodiversitylibrary.org/page/8967188
+8967189,Reeve,479,,Issue Start,211,0.1866,0.3143,high,0,1,0,0,False,True,False,False,False,,https://www.biodiversitylibrary.org/page/8967189
+8967193,Reeve,483,,Text,3848,0.0542,0.1578,medium,6,6,5,2,False,False,True,False,False,Deshayes; Dolium; Dolium galea; Dolium perdix; Malea; Testa,https://www.biodiversitylibrary.org/page/8967193
+8967197,Reeve,487,,Text,2051,0.1131,0.1859,high,1,1,4,3,False,True,False,True,False,Dolium galea,https://www.biodiversitylibrary.org/page/8967197
+8967201,Reeve,491,,Text,2881,0.0457,0.1439,medium,5,6,5,2,False,False,False,False,False,Deshayes; Dolium; Dolium fimbriatum; Dolium maculatum; Dolium tessellatum,https://www.biodiversitylibrary.org/page/8967201
+8967205,Reeve,495,,Text,2830,0.0704,0.2211,medium,5,3,4,2,False,False,False,False,False,Cassis; Cassis labrosa; Deshayes; Dolium; Malea,https://www.biodiversitylibrary.org/page/8967205
+8967209,Reeve,499,,Text,2851,0.0638,0.1932,medium,5,1,4,2,False,False,False,False,False,Deshayes; Dolium; Dolium costatum; Dolium fasciatum; Lolium,https://www.biodiversitylibrary.org/page/8967209
+8967213,Reeve,503,,Text,3246,0.0509,0.1598,medium,5,3,2,2,False,False,False,False,False,Chinense; Deshayes; Dolium; Dolium variegatum; Perdix,https://www.biodiversitylibrary.org/page/8967213
+8967217,Reeve,507,,Text,3591,0.0608,0.1758,medium,2,2,3,2,False,False,False,True,False,Dolium crenulatum; Dolium zonatum,https://www.biodiversitylibrary.org/page/8967217
+8967221,Reeve,511,,Text,4167,0.0618,0.1693,medium,5,5,5,2,False,False,False,False,False,Bulla canaliculata; Deshayes; Deshayesii; Dolium; Dolium olearium,https://www.biodiversitylibrary.org/page/8967221
+8967223,Reeve,513,,Index,981,0.446,0.5929,high,0,0,0,0,True,True,False,False,True,,https://www.biodiversitylibrary.org/page/8967223
+8967225,Reeve,515,,Issue Start,238,0.0511,0.1163,medium,1,0,1,0,False,False,False,True,False,Cassis,https://www.biodiversitylibrary.org/page/8967225
+8967229,Reeve,519,,Text,4485,0.0371,0.1092,medium,8,2,4,3,False,False,True,False,False,Buccinum; Cassis; Cassis rufa; Cassis sulcosa; Cassis torquata; Deshayes,https://www.biodiversitylibrary.org/page/8967229
+8967230,Reeve,520,,Text,4116,0.0598,0.1754,medium,6,4,3,0,False,False,True,False,False,Cassidea; Cassidea cornuta; Cassis; Cassis labiata; Cassis semigranosa; Deshayes,https://www.biodiversitylibrary.org/page/8967230
+8967233,Reeve,523,,Text,3856,0.067,0.1867,medium,7,2,2,2,False,False,True,False,False,Buccinum; Cassidula decussata; Cassis; Cassis areola; Cassis decussata; Cassis zebra,https://www.biodiversitylibrary.org/page/8967233
+8967237,Reeve,527,,Text,3778,0.1462,0.3155,high,8,3,6,2,False,True,True,False,False,Buccinum striatum; Cassidea canaliculata; Cassis; Cassis; Cassis bisulcata; Cassis tuberosa,https://www.biodiversitylibrary.org/page/8967237
+8967241,Reeve,531,,Text,3915,0.1179,0.254,high,12,12,3,2,False,True,True,False,False,Buccinum maculosum; Buccinum plicatum; Buccinum testiculus; Cassidea; Cassidea testiculus; Cassis crumena,https://www.biodiversitylibrary.org/page/8967241
+8967245,Reeve,535,,Text,3412,0.1634,0.2774,high,4,2,2,2,False,True,False,False,False,Cassidea; Cassis; Deshayes; Flammea,https://www.biodiversitylibrary.org/page/8967245
+8967249,Reeve,539,,Text,3569,0.066,0.2046,medium,8,0,4,2,False,False,True,False,False,Cassis; Cassis coarctata; Cassis pennata; Cassis rufa; Cassis tenuis; Cassis testiculus,https://www.biodiversitylibrary.org/page/8967249
+8967253,Reeve,543,,Text,4094,0.1219,0.2702,high,8,7,5,2,False,True,True,False,False,Buccinum; Buccinum erinaceus; Buccinum recurvirostrum; Cassis; Cassis; Cassis inflata,https://www.biodiversitylibrary.org/page/8967253
+8967254,Reeve,544,,Text,1113,0.045,0.1364,medium,1,0,1,0,False,False,False,True,False,Cassis vibex,https://www.biodiversitylibrary.org/page/8967254
+8967257,Reeve,547,,Text,4394,0.0736,0.1512,medium,8,3,4,4,False,False,True,False,False,Cassis; Cassis abbreviata; Cassis centiquadrata; Cassis granulosa; Cassis lactea; Cassis paucirugis,https://www.biodiversitylibrary.org/page/8967257
+8967258,Reeve,548,,Text,1767,0.0784,0.2031,medium,6,10,2,0,False,False,True,False,False,Buccinum; Buccinum; Cassidea; Cassidea rufa; Cassis rufa; Deshayes,https://www.biodiversitylibrary.org/page/8967258
+8967261,Reeve,551,,Text,4426,0.0499,0.1695,medium,11,3,3,3,False,False,True,False,False,Cassia inflata; Cassidea granulosa; Cassis; Cassis; Cassis abbreviata; Cassis granulosa,https://www.biodiversitylibrary.org/page/8967261
+8967262,Reeve,552,,Text,1514,0.0704,0.2294,medium,5,3,3,0,False,False,False,False,False,Bezoardica; Buccinum areola; Cassidea areola; Cassis; Deshayes,https://www.biodiversitylibrary.org/page/8967262
+8967265,Reeve,555,,Text,4148,0.0941,0.2448,medium,7,7,5,2,False,False,True,False,False,Cassidea areola; Cassis; Cassis areola; Cassis plicaria; Cassis plicata; Cassis undata,https://www.biodiversitylibrary.org/page/8967265
+8967266,Reeve,556,,Text,1465,0.0588,0.1757,medium,3,2,3,0,False,False,False,False,False,Algoa; Cassis achatina; Deshayes,https://www.biodiversitylibrary.org/page/8967266
+8967269,Reeve,559,,Text,2206,0.0751,0.2295,medium,8,3,2,2,False,False,True,False,False,Buccinum; Buccinum undulatum; Cassidea sulcosa; Cassis; Cassis pyrum; Cassis sulcosa,https://www.biodiversitylibrary.org/page/8967269
+8967273,Reeve,563,,Text,4455,0.1625,0.2913,high,5,4,5,2,False,True,False,False,False,Cassidea; Cassis; Cassis coronulata; Cassis exarata; Cassis glauca,https://www.biodiversitylibrary.org/page/8967273
+8967275,Reeve,565,,Index,1773,0.3992,0.3913,high,2,0,0,0,True,True,False,True,False,Cassidea; Heliotropium sect. Zeylanica,https://www.biodiversitylibrary.org/page/8967275
+8967281,Reeve,571,,Text,5164,0.0316,0.0802,medium,16,13,6,2,False,False,True,False,False,Cerithium; Deshayes; Eglisia; Mesalia; Testa; Turbo,https://www.biodiversitylibrary.org/page/8967281
+8967282,Reeve,572,,Text,4699,0.074,0.1563,medium,11,12,6,0,False,False,True,False,False,Deshayes; Duplicata; Turbo; Turbo; Turbo; Turbo acutangulus,https://www.biodiversitylibrary.org/page/8967282
+8967285,Reeve,575,,Text,3643,0.0554,0.1569,medium,4,1,3,2,False,False,False,False,False,Leucostoma; Turritella; Turritella; Turritella bacillum; Turritella terebra,https://www.biodiversitylibrary.org/page/8967285
+8967289,Reeve,579,,Text,4186,0.0378,0.1258,medium,5,0,3,2,False,False,False,False,False,Tigrina; Turritella; Turritella goniostoma; Turritella lentiginosa; Turritella tigrina,https://www.biodiversitylibrary.org/page/8967289
+8967290,Reeve,580,,Text,762,0.0262,0.0484,medium,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8967290
+8967293,Reeve,583,,Text,4160,0.1146,0.274,high,3,1,5,2,False,True,False,False,False,Carinifera; Dracocephalum ser. Nodulosa; Turritella,https://www.biodiversitylibrary.org/page/8967293
+8967294,Reeve,584,,Text,751,0.0201,0.0614,medium,0,0,1,0,False,False,False,False,False,,https://www.biodiversitylibrary.org/page/8967294
+8967297,Reeve,587,,Text,4177,0.0677,0.1734,medium,9,7,4,2,False,False,True,False,False,Annulata; Deshayes; Mesalia; Turbo imbricatus; Turbo variegatus; Turritella,https://www.biodiversitylibrary.org/page/8967297
+8967298,Reeve,588,,Text,2123,0.0567,0.1757,medium,5,1,4,0,False,False,False,False,False,Blainville; Deshayes; Praya; Torulosa; Turritella; Turritella,https://www.biodiversitylibrary.org/page/8967298
+8967301,Reeve,591,,Text,4089,0.0897,0.2135,medium,8,3,5,2,False,False,True,False,False,Deshayes; Exoleta; Mericella cingulata; Turbo; Turbo torcularis; Turritella,https://www.biodiversitylibrary.org/page/8967301
+8967302,Reeve,592,,Text,2863,0.0543,0.1901,medium,3,0,3,0,False,False,False,False,False,Crocea; Turritella; Turritella gemmata,https://www.biodiversitylibrary.org/page/8967302
+8967305,Reeve,595,,Text,3980,0.0568,0.1902,medium,6,0,6,2,False,False,True,False,False,Radula; Turritella; Turritella exoleta; Turritella ferruginea; Turritella hastula; Turritella maculata,https://www.biodiversitylibrary.org/page/8967305
+8967306,Reeve,596,,Text,5080,0.0625,0.1451,medium,8,7,6,0,False,False,True,False,False,Deshayes; Turbo; Turbo; Turbo; Turbo terebra; Turritella,https://www.biodiversitylibrary.org/page/8967306
+8967309,Reeve,599,,Text,3666,0.0788,0.2115,medium,5,0,4,2,False,False,False,False,False,Candida; Candida; Turritella; Turritella clathrata; Turritella punctata; Turritella spectrum,https://www.biodiversitylibrary.org/page/8967309
+8967310,Reeve,600,,Text,1528,0.0361,0.1149,medium,3,1,1,0,False,False,False,False,False,Rosea; Turritella; Turritella rosea,https://www.biodiversitylibrary.org/page/8967310
+8967313,Reeve,603,,Text,3871,0.0928,0.222,medium,4,0,4,2,False,False,False,False,False,Tasmanica; Turritella; Turritella nivea; Turritella triplicata,https://www.biodiversitylibrary.org/page/8967313
+8967314,Reeve,604,,Text,700,0.046,0.1616,medium,1,0,2,0,False,False,False,True,False,Turritella,https://www.biodiversitylibrary.org/page/8967314
+8967317,Reeve,607,,Text,3458,0.1079,0.2407,high,5,0,7,2,False,True,False,False,False,Turritella; Turritella constricta; Turritella erosa; Turritella fascialis; Turritella monilifera,https://www.biodiversitylibrary.org/page/8967317
+8967318,Reeve,608,,Text,2846,0.0524,0.1969,medium,5,0,4,0,False,False,False,False,False,Eglisia; Opalina; Turritella; Turritella conspersa; Turritella multilirata,https://www.biodiversitylibrary.org/page/8967318
+8967321,Reeve,611,,Text,3658,0.0641,0.2147,medium,6,0,5,2,False,False,True,False,False,Canaliculata; Turritella; Turritella congelata; Turritella conspersa; Turritella pagoda; Turritella vittulata,https://www.biodiversitylibrary.org/page/8967321
+8967322,Reeve,612,,Text,2865,0.0527,0.1722,medium,5,1,6,0,False,False,False,False,False,Dendranthema sect. Sinuata; Turritella; Turritella cingulifera; Turritella fragilis; Turritella incisa,https://www.biodiversitylibrary.org/page/8967322
+8967323,Reeve,613,,Index,3177,0.4615,0.3878,high,6,0,0,0,True,True,True,False,False,Candida; Candida; Deshayes; Ix; Risso; Tasmanica,https://www.biodiversitylibrary.org/page/8967323
+8967329,Reeve,619,,Text,4407,0.0418,0.1254,medium,10,5,2,2,False,False,True,False,False,Deshayes; Mesalia; Mesalia brevialis; Mesalia lactea; Mesalia sulcata; Testa,https://www.biodiversitylibrary.org/page/8967329
+8967330,Reeve,620,,Text,1074,0.0722,0.2188,medium,3,1,1,0,False,False,False,False,False,Deshayes; Eglisia; Mesalia,https://www.biodiversitylibrary.org/page/8967330
+8967331,Reeve,621,,Text,3804,0.0406,0.1385,medium,6,6,9,2,False,False,True,False,False,Eglisia; Eglisia; Eglisia lanceolata; Eglisia tricarinata; Turbo suturalis; Turritella,https://www.biodiversitylibrary.org/page/8967331
+8967333,Reeve,623,,Issue Start,325,0.0155,0.0,low,1,0,1,0,False,False,False,True,False,Cassidaria,https://www.biodiversitylibrary.org/page/8967333
+8967337,Reeve,627,,Text,4066,0.0335,0.1089,medium,16,11,4,2,False,False,True,False,False,Buccinum; Buccinum echinophorum; Buccinum nodosum; Buccinum ochroleucum; Buccinum strigosum; Cassidaria,https://www.biodiversitylibrary.org/page/8967337
+8967338,Reeve,628,,Text,914,0.0495,0.2017,medium,2,0,1,0,False,False,False,True,False,Cassidaria; Deshayes,https://www.biodiversitylibrary.org/page/8967338
+8967343,Reeve,633,,Text,4161,0.0948,0.2277,medium,8,3,2,3,False,False,True,False,False,Cassidaria oniscus; Deshayes; Oniscia; Oniscia cancellata; Strombiformis; Strombus,https://www.biodiversitylibrary.org/page/8967343
+8967344,Reeve,634,,Text,4639,0.0413,0.1521,medium,5,2,7,1,False,False,False,False,False,Cassidaria cancellata; Deshayes; Oniscia; Oniscia cancellata; Oniscia tuberculosa,https://www.biodiversitylibrary.org/page/8967344
+8967345,Reeve,635,,Issue Start,247,0.0857,0.1458,medium,0,0,0,0,False,False,False,False,True,,https://www.biodiversitylibrary.org/page/8967345
+8967349,Reeve,639,,Text,4287,0.0831,0.1769,medium,11,2,2,2,False,False,True,False,False,Buccinum; Deshayes; Eburna; Eburna ambulacrum; Eburna australis; Eburna glabrata,https://www.biodiversitylibrary.org/page/8967349
+8967350,Reeve,640,,Text,4278,0.0508,0.1852,medium,10,7,6,1,False,False,True,False,False,Buccinum; Buccinum spiratum; Cancellaria; Cancellaria spirata; Deshayes; Eburna,https://www.biodiversitylibrary.org/page/8967350
+8967351,Reeve,641,,Text,1346,0.0442,0.1823,medium,4,0,2,0,False,False,False,False,False,Deshayes; Eburna; Valentia; Valentiana,https://www.biodiversitylibrary.org/page/8967351

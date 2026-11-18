@@ -1,0 +1,11 @@
+# Page texts and big caches are fetched by scripts, never committed
+data/text/
+data/cache/
+
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.ipynb_checkpoints/
