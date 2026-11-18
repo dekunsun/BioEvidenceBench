@@ -1,7 +1,8 @@
 # Annotation guide
 
-**Version v0.2, draft, 2026-11-18.** Written before any labelling. v0.2 aligns the entity types with the
-NHM BHL prototype (see section 2).
+**Version v0.3, draft, 2026-11-18.** Written before any labelling. v0.2 aligned the entity types with the
+NHM BHL prototype (see section 2); v0.3 writes default answers for the span-boundary questions found in
+the Opus p2 dev run (decisions 5-9 below).
 Defaults marked **[DEFAULT]** were chosen to get started; Gloria confirms or changes them. Items
 marked **[OPEN]** need a decision. Every change gets a line in the changelog at the bottom, and the
 gold CSV records the guide version it used.
@@ -12,26 +13,36 @@ Collected 2026-11-18 from the guide and from the Opus p2 run on dev pages. Each 
 counts as a correct span, so settle them before labelling; then the prompt is updated once (p3)
 and Opus is re-run once (about $1.30).
 
+Items 1-4 are still open. Items 5-9 have a **[DEFAULT]** answer written into the rules in v0.3
+(sections 2.0-2.4); Gloria confirms or changes it.
+
 1. **Vernacular names** (`Hedge-Sparrow`, `THE CHASTE BULIMUS`): label as `taxon`, as a separate
    field, or not at all? Default: not at all.
 2. **Relative words in localities** (`near Dover`): drop `near` from the span? Default: drop it.
 3. **Month-only phenology** (`arrives in April`): a `date`? Default: no.
 4. **Journal titles** (`Pro. Zool. Soc.`): an `institution`? Default: no.
-5. **A full stop that ends an abbreviation** (`Mus. Cuming.`, `LINN.`): inside the span or not?
-   The value score ignores edge punctuation; only the exact-span score is affected. Suggested:
-   include a full stop that belongs to an abbreviation (`LINN.`), exclude a sentence-ending one
-   (`Mus. Cuming`).
-6. **Titles other than Mr./Dr./Capt.** (`Lord Lilford`, `Herr Gätke`): part of the person span?
-   Suggested: treat like honorifics, span `Lilford`.
-7. **Descriptive words before a place** (`valley of the Amoor`): span `Amoor` or the whole phrase?
-   The guide now says a place with its narrowing parts is one span (`north coast of Norfolk`), so
-   by that rule the whole phrase. Confirm.
-8. **Same name in two roles on one page** (`Mus. Adams` = institution; `ADAMS, MS.` = person, a
-   manuscript source): label each by its role, as the guide says. Add as an example? Suggested: yes.
+5. **A full stop at the end of a span** (`Mus. Cuming.`, `LINN.`). **[DEFAULT, v0.3]** Keep it
+   only when the word before it is shortened (`LINN.`, `Pfr.`, `Mus.`); drop it after a word
+   printed in full (`Mus. Cuming`, `Lamarck`, `Brazil`). Rule 2.0.2. The value score ignores edge
+   punctuation; only the exact-span score is affected.
+6. **Titles other than Mr./Dr./Capt.** (`Lord Lilford`, `Herr Gätke`). **[DEFAULT, v0.3]** Treat
+   every title like an honorific: span `Lilford`, `Gätke`, title in notes. Rule 2.3.
+7. **Descriptive words before a place** (`valley of the Amoor`). **[DEFAULT, v0.3]** The whole
+   phrase, following the existing narrowing-parts rule (`north coast of Norfolk`). Words that
+   name a *part* of the place stay in; words that place something *relative to* it stay out
+   (item 2). Rule 2.2.
+8. **Same name in two roles on one page** (`Mus. Adams.` = institution; `ADAMS, MS.` = person, a
+   manuscript source). **[DEFAULT, v0.3]** Label each by its role; added as worked examples in
+   2.3 and 2.4.
+9. **A name broken across lines** (`A. blak-|istoni`, `Ja‐|maica`). **[DEFAULT, v0.3]** One span
+   from the first to the last character of the whole name, hyphen and line break included, for
+   every field. Rule 2.0.3. A model output that covers only the first fragment is then not an
+   exact match. Whether it earns credit under overlap match is a scoring decision for
+   `PREREGISTRATION.md`, not a labelling rule.
 
 Known prompt fix for p3 (not a guide question): the G1 prompt told the model to quote only the
 first line of a name broken across lines, which truncates `A. blak-|istoni` to `A. blak-`. The
-locator now handles quotes that run across lines, so p3 will ask for the whole name.
+locator now handles quotes that run across lines, so p3 will ask for the whole name (matching 9).
 
 ## 0. Ground rules
 
@@ -58,7 +69,7 @@ The unit is a **mention**: one span of characters in the expert text, plus a fie
 | `field` | `taxon`, `person`, `locality`, `institution` or `date` |
 | `text` | the span, copied exactly |
 | `notes` | free text; `UNCLEAR: …` for doubtful cases; `UNCERTAIN-IN-SOURCE` when the print itself hedges (e.g. a `?`) |
-| `guide_version` | e.g. `v0.2` |
+| `guide_version` | e.g. `v0.3` |
 
 **Finding offsets.** Each line of `data/sample/expert_view/<PageID>.txt` starts with the offset where that line
 begins. Offset of a word = line offset + its column, counting from 0. You can also leave `start`
@@ -76,6 +87,22 @@ localities, institutions), so our numbers can be read next to theirs. `date` is 
 `taxon`, `person`, `locality` and `institution` are **named-entity mentions**: label every mention,
 whatever role it plays on the page (collector, cited author, naming authority, distribution
 statement...). `date` stays narrower: occurrence dates only (2.5).
+
+### 2.0 Span edges (all fields)
+
+1. A span starts at the first character of the entity and ends at its last character. Brackets,
+   quotation marks, commas and semicolons around it stay out: `(Mus. Taylor.)` gives
+   `Mus. Taylor`.
+2. **[DEFAULT, v0.3]** **Full stop at the end.** Keep it only when the word right before it is a
+   shortened form, because then the full stop is part of the abbreviation: `LINN.`, `Linn.`,
+   `Pfr.`, `Gmel.`. Drop it after a word printed in full, where it is punctuation:
+   `(Mus. Cuming.)` gives `Mus. Cuming`; `Achatina albolineata, Lamarck.` gives `Lamarck`;
+   `Hab. Brazil.` gives `Brazil`. Full stops *inside* the span always stay (`Mus. Cuming`,
+   `J. Smith`, `A. arvensis`). If you cannot tell whether a word is shortened, drop the full stop
+   and write `UNCLEAR: abbreviation?` in notes.
+3. **[DEFAULT, v0.3]** **Line breaks.** A name broken across lines is one span, from its first to
+   its last character, with the hyphen and line break inside it: `A. blak-` + `istoni` is one
+   `taxon`; `Ja‐` + `maica` is one `locality`. Never label only the first fragment.
 
 ### 2.1 `taxon`: scientific names
 
@@ -103,7 +130,11 @@ Label:
   observation statements, and other mentions such as `Key to the species of the Argentine Republic`.
   `Hab. Central America?` gives span `Central America`, with notes `UNCERTAIN-IN-SOURCE`.
 - A place with its narrowing parts as one span: `Isle of Luzon, Philippine Islands`;
-  `north coast of Norfolk`.
+  `north coast of Norfolk`. **[DEFAULT, v0.3]** This includes descriptive words that name a part
+  of the place: `valley of the Amoor`, `slopes of the Atlas Mountains`, `South-east Mongolia`.
+  The test: the words name a piece of the place itself (coast, valley, slopes, mouth, interior,
+  a compass part). Words that place something *relative to* the place (`near`, `north of`,
+  `about ten miles from`) stay out; see the next list.
 - Distribution statements in prose: in `it breeds in Scotland` the span is `Scotland`.
 - Several different places as separate mentions: `Cornwall and Devon` gives two.
 
@@ -123,6 +154,13 @@ Label:
   authors (`PFEIFFER, Pro. Zool. Soc.` gives `PFEIFFER`; `Giusti's (1997)` gives `Giusti`), and
   naming authorities, abbreviated or not (`Linn.`, `Pfr.`, `Lamarck`).
 - Initials belong to the name (`J. Smith`); honorifics do not (`Mr.`, `Dr.`, `Capt.`; put them in notes).
+  **[DEFAULT, v0.3]** The same holds for every other title, rank or form of address: `Lord`,
+  `Sir`, `Herr`, `Rev.`, `Prof.`, `Lieut.`, `Col.`. `Lord Lilford` gives `Lilford` and
+  `Herr Gätke` gives `Gätke`, with the title in notes.
+- **[DEFAULT, v0.3]** Label a name by the role it plays at that spot, even when the same name has
+  another role elsewhere on the page. On one Reeve page, `ADAMS, MS.` (a species described from
+  Adams's manuscript) gives person `ADAMS` (`MS.` is not labelled), while `(Mus. Adams.)` gives
+  institution `Mus. Adams` and no person.
 - **[OPTIONAL]** The role in notes: `collector`, `author`, `authority`, `other`. It helps later
   analysis but is not scored in V1.
 
@@ -135,7 +173,10 @@ Do not label:
 Label:
 - Museums, herbaria, private collections, societies, universities, expeditions:
   `Mus. Cuming`, `Mus. Dennison`, `British Museum`, `Zoological Society of London`.
-- The whole name as printed, including abbreviations such as `Mus.`.
+- The whole name as printed, including abbreviations such as `Mus.`. The full stop after the
+  collector's name follows rule 2.0.2: `(Mus. Cuming.)` gives `Mus. Cuming`.
+- A private collection named after a person who also appears as a person on the page: see the
+  `Mus. Adams` / `ADAMS, MS.` example in 2.3.
 
 Do not label:
 - **[DEFAULT]** Journal titles in citations (`Pro. Zool. Soc.`, `Ann. Mag. Nat. Hist.`): they name a
@@ -186,3 +227,4 @@ disagreement. A disagreement caused by the guide leads to a rule change and a ne
 |---|---|---|
 | v0.1 | 2026-11-18 | First draft. No pages labelled yet. |
 | v0.2 | 2026-11-18 | Entity types aligned with the NHM BHL prototype: `collector` replaced by `person` (every named person); new `institution`; `locality` covers every named place, not only occurrence statements. `date` unchanged. No pages labelled yet. |
+| v0.3 | 2026-11-18 | Default answers for decisions 5-9 (from the Opus p2 dev run): new 2.0 on span edges (full stop at the end kept only after a shortened word; names broken across lines are one span, every field); all titles treated like honorifics; descriptive part-of-place words stay in the locality span; `Mus. Adams` / `ADAMS, MS.` worked example. Decisions 1-4 still open. Prompt still `p2-guide-v0.2`; p3 waits until 1-4 are settled. No pages labelled yet. |
