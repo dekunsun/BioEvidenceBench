@@ -1,1 +1,1 @@
-page_id,start,end,text,match_type,gbif_usage_key,accepted_name,notes
+page_id,start,end,text,resolution_status,match_method,matched_rank,taxonomic_status,matched_usage_key,accepted_usage_key,evidence_source,notes

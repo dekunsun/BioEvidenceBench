@@ -6,9 +6,13 @@ It asks where the reliability of extracted scientific data is lost: in OCR, in e
 evidence verification, in entity resolution, or in human review. It also asks where the next
 unit of effort should go.
 
-**Status: ready for labelling.** The data pipeline, CER analysis, sample (22 pages, split into
-6 dev and 16 locked test pages) and annotation guide v0.1 are in. No model has been run, and there
-is no gold set yet. V1 scope is in [`CLAUDE.md` section 4a](CLAUDE.md).
+**Status: ready for labelling; no results yet.** In place: data pipeline, CER analysis, a
+22-page sample (6 dev, 16 locked test pages), annotation guide v0.4 (English and Chinese), rule
+baseline, LLM extraction pipeline, scorer, and a draft pre-registration. Claude Opus 5.5 has been
+run with earlier prompt versions (superseded; test-page outputs sealed and unopened); prompt `p3`
+is written and not yet run. There is no gold set yet, so there are no scores. Entity types are
+inspired by NHM's BHL prototype, but our scores are not comparable to NHM's reported results.
+V1 scope is in [`CLAUDE.md` section 4a](CLAUDE.md).
 
 The project brief for contributors and Claude Code is in [`CLAUDE.md`](CLAUDE.md).
 

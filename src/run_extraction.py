@@ -64,8 +64,9 @@ def now() -> str:
 
 
 def text_path(version: str, page_id: int) -> Path:
-    if version == "expert":
-        return DATA / "sample" / "expert" / f"{page_id}.txt"   # committed copy of the GT text
+    committed = DATA / "sample" / version / f"{page_id}.txt"   # committed copy of the sample pages
+    if version == "expert" or committed.exists():
+        return committed
     return TEXT / version / f"{page_id}.txt"
 
 

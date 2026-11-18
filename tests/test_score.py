@@ -26,14 +26,14 @@ def test_alignment_maps_ocr_span_to_expert_span():
 def test_value_level_separates_misread_from_correct():
     gold = pd.DataFrame([{"field": "taxon", "start": 0, "end": 14, "text": "BULIMUS CASTUS"}])
     misread = _pred([("taxon", 0, 14, "BuLIMUS CASTDS", 0, 14)])
-    c = match_page(gold, misread)
+    c = match_page(gold, misread)["taxon"]
     assert c["lenient"] == (1, 0, 0) and c["exact"] == (1, 0, 0) and c["value"] == (0, 1, 1)
 
 
 def test_unaligned_prediction_is_false_positive():
     gold = pd.DataFrame([{"field": "locality", "start": 21, "end": 36, "text": "Central America"}])
     p = _pred([("locality", 0, 3, "xyz", None, None)])
-    assert match_page(gold, p)["lenient"] == (0, 1, 1)
+    assert match_page(gold, p)["locality"]["lenient"] == (0, 1, 1)
 
 
 def test_norm_value_joins_line_end_hyphenation():
@@ -48,3 +48,27 @@ def test_prf():
 def test_norm_value_ignores_markdown_emphasis():
     assert norm_value("**BULIMUS CASTUS.**") == norm_value("BULIMUS CASTUS.")
     assert norm_value("*A. dulcivox*") == norm_value("A. dulcivox")
+
+
+def test_ambiguous_gold_rows_are_optional():
+    gold = pd.DataFrame([
+        {"field": "taxon", "start": 0, "end": 14, "text": "BULIMUS CASTUS", "adjudication": "ambiguous"},
+        {"field": "taxon", "start": 30, "end": 37, "text": "Bulimus", "adjudication": ""}])
+    hit = _pred([("taxon", 0, 14, "BULIMUS CASTUS", 0, 14)])
+    assert match_page(gold, hit)["taxon"]["lenient"] == (0, 0, 1)      # no credit, no FP; other row missed
+    assert match_page(gold, _pred([]))["taxon"]["lenient"] == (0, 0, 1)  # the ambiguous row is not an FN
+
+
+def test_prediction_takes_the_gold_span_it_overlaps_most():
+    gold = pd.DataFrame([
+        {"field": "locality", "start": 0, "end": 5, "text": "Dover", "adjudication": ""},
+        {"field": "locality", "start": 10, "end": 16, "text": "Calais", "adjudication": ""}])
+    p = _pred([("locality", 4, 16, "r and Calais", 4, 16), ("locality", 0, 5, "Dover", 0, 5)])
+    assert match_page(gold, p)["locality"]["lenient"] == (2, 0, 0)
+
+
+def test_vernacular_is_scored_apart_from_taxon():
+    gold = pd.DataFrame([{"field": "vernacular", "start": 0, "end": 8, "text": "Sky-Lark", "adjudication": ""}])
+    p = _pred([("taxon", 0, 8, "Sky-Lark", 0, 8)])
+    c = match_page(gold, p)
+    assert c["taxon"]["lenient"] == (0, 1, 0) and c["vernacular"]["lenient"] == (0, 0, 1)

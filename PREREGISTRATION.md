@@ -97,6 +97,68 @@ commit, model id, prompt version in every `results/<run_id>/`); record input SHA
 whether a data source has changed format before reusing it (BHL's OCR export renamed its files
 between 2025 and 2026, and ADEPT's asset script stopped matching them).
 
+## 9. Additions after the guide decisions and a design review (2026-11-18, still draft)
+
+**Frozen before unsealing** (ANNOTATION_GUIDE section 4). Fill in at the freeze commit:
+
+| Item | Value |
+|---|---|
+| `guide_version` | v0.4 (or later, if labelling adds rules) |
+| `prompt_version` | `p3-guide-v0.4` |
+| Output schema | `SCHEMA_G0`, `SCHEMA_G1` in `src/prompts.py` at the freeze commit |
+| Scorer | `src/score.py` and `src/locate.py` at the freeze commit |
+| Model configuration | per run `config.json`: model id, effort, max tokens, provider |
+
+**Fields.** The primary number is `ALL_PRIMARY` (taxon, person, locality, institution, date).
+`vernacular` is scored and reported in its own rows and never enters `ALL_PRIMARY` or the taxon F1.
+Section 1's Opus run is the `p3` run (the `p2` run is superseded).
+
+**Ambiguous gold rows** (`adjudication = ambiguous`) are optional: no credit, no penalty, not a
+false negative. Their count is reported per book and field. All `UNCLEAR` rows must be adjudicated
+before scoring; `score.py` stops if any is left.
+
+**Section 2 correction.** Matching is not "first unused gold mention": each prediction takes the
+unused gold mention it overlaps most, so the result does not depend on row order.
+
+**Known differences between text versions other than character accuracy.** They limit what RQ1
+can claim, and are stated with the results:
+- The modern OCR text is Markdown: scientific names often arrive wrapped in `*…*` or `**…**`, a
+  cue the expert and legacy texts do not carry. It also has one paragraph per line, while expert
+  and legacy keep the printed line breaks (so names broken across lines exist only there).
+  A model could therefore score *higher* on modern OCR than on the expert text for reasons that
+  are not OCR accuracy.
+- Planned control (needs Gloria's go-ahead, about one third more API cost): a fourth text
+  version, modern OCR with Markdown marks stripped (`common.strip_markdown`).
+- The expert text itself is one reading order; about 20% of Butler's text pages lack an explicit
+  `<ReadingOrder>`.
+
+**Run-to-run noise.** Claude Opus 5.5 does not allow a fixed temperature, and each condition is one
+sample. Planned (needs go-ahead, about $0.40 per repeat): three repeats of the dev pages under the
+frozen configuration. A difference between conditions on the test set that is smaller than the
+spread across repeats is reported as not distinguishable from noise.
+
+**Where a gold mention is lost (the main answer).** For every gold mention and each OCR version:
+(a) preserved in the OCR text or not (entity-span check); (b) extracted or not (lenient); (c) value
+correct or not. The headline table is the count of mentions lost at (a), at (b) given (a), and at
+(c) given (b), per book and version. "OCR is the bottleneck" means most losses are at (a).
+
+**Sample strata.** The strata were defined before `person`, `institution` and `vernacular` were
+added, using cues for names, places and dates only. A "no_entities" page may therefore contain
+people, institutions or vernacular names. False positives on empty pages are computed on pages
+whose gold is a single `none` row, whatever their stratum.
+
+**Sample size, stated plainly.** 7 Butler and 9 Reeve test pages give wide page-level intervals;
+several decision rules in section 3 will probably come out "inconclusive". That outcome is
+reported as such, with the mention counts.
+
+**Rule baseline.** Its regexes were written with knowledge of these two books (for example the
+list of authority abbreviations) and checked on dev pages. It is an in-domain baseline, and is
+described that way.
+
+**Still to build before the freeze commit**: paired page-bootstrap for differences between
+conditions; the per-stage loss table above; `evaluation_settings.json` and `discrepancies.csv`
+(section 8, rule 6); the RQ3 counters and the RQ4 flag.
+
 ## Deviations log
 
 | Date | Change | Reason |

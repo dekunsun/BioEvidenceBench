@@ -32,7 +32,19 @@ def main() -> None:
         (OUT / "expert_view" / f"{r.PageID}.txt").write_text(view, encoding="utf-8")
         rows.append({"page_id": r.PageID, "split": r.split, "book": r.book, "stratum": r.stratum,
                      "chars": len(text), "sha256": sha256_text(text), "bhl_url": r.bhl_url})
-    pd.DataFrame(rows).to_csv(OUT / "manifest.csv", index=False)
+    # The two OCR versions of the same pages, exactly as fetched. BHL refreshes its OCR
+    # (and NHM proposes to re-OCR all of BHL), so the legacy text could not be re-fetched later.
+    for version in ("legacy", "modern_dots-mocr"):
+        (OUT / version).mkdir(parents=True, exist_ok=True)
+        for r in split.itertuples():
+            text = (TEXT / version / f"{r.PageID}.txt").read_text(encoding="utf-8")
+            (OUT / version / f"{r.PageID}.txt").write_text(text, encoding="utf-8")
+            rows.append({"page_id": r.PageID, "split": r.split, "book": r.book, "stratum": r.stratum,
+                         "chars": len(text), "sha256": sha256_text(text), "bhl_url": r.bhl_url,
+                         "version": version})
+    man = pd.DataFrame(rows)
+    man["version"] = man.version.fillna("expert")
+    man.to_csv(OUT / "manifest.csv", index=False)
     print(f"Wrote {len(rows)} pages to {OUT}")
 
 

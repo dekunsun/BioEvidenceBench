@@ -16,3 +16,15 @@ The text is unchanged from the dataset's `text` field (checked by SHA-256 in `ma
 The `expert_view/` files add only a line-offset prefix for labelling. Page scans:
 <https://www.biodiversitylibrary.org/page/{PageID}>. Both books are public domain
 (`NOT_IN_COPYRIGHT` in the BHL item table).
+
+## OCR versions of the same pages
+
+- `legacy/`: BHL's OCR text for these pages, fetched 2026-11-18 from the BHL open-data bucket
+  (`https://bhl-open-data.s3.amazonaws.com/ocr/...`). Both books are `NOT_IN_COPYRIGHT` in the BHL
+  item table. Source: Biodiversity Heritage Library.
+- `modern_dots-mocr/`: output of `rednote-hilab/dots.mocr` on the same page images, as published by
+  FineBooks in `hf://buckets/finebooks/bhl-ocr-outputs` (row `dots-mocr`, licence MIT per its
+  `manifest.json`).
+
+`manifest.csv` holds the SHA-256 of every file; they equal the input hashes recorded in the
+extraction runs under `results/`.

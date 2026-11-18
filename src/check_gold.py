@@ -22,7 +22,8 @@ import pandas as pd
 
 from common import DATA, TEXT
 
-FIELDS = {"taxon", "person", "locality", "institution", "date", "none"}
+FIELDS = {"taxon", "vernacular", "person", "locality", "institution", "date", "none"}
+ADJUDICATION = {"", "adjudicated", "ambiguous"}
 
 
 def check(path: Path) -> pd.DataFrame:
@@ -35,6 +36,10 @@ def check(path: Path) -> pd.DataFrame:
             page = TEXT / "expert" / f"{r['page_id']}.txt"           # any page, after load_gt.py
         if r["field"] not in FIELDS:
             status = f"bad field '{r['field']}'"
+        elif str(r.get("adjudication", "")).strip() not in ADJUDICATION:
+            status = f"bad adjudication '{r['adjudication']}' (use adjudicated or ambiguous)"
+        elif "UNCLEAR" in str(r.get("notes", "")) and not str(r.get("adjudication", "")).strip():
+            status = "ok (UNCLEAR: needs adjudication before scoring)"
         elif r["field"] == "none":
             status = "ok (page has no target entities)"
         elif not page.exists():

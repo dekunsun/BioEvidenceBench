@@ -14,46 +14,57 @@ Design rules (CLAUDE.md sections 4 and 4a):
 """
 from __future__ import annotations
 
-PROMPT_VERSION = "p2-guide-v0.2"
-FIELDS = ["taxon", "person", "locality", "institution", "date"]
+PROMPT_VERSION = "p3-guide-v0.4"
+FIELDS = ["taxon", "vernacular", "person", "locality", "institution", "date"]
 
 SYSTEM = """You extract biodiversity occurrence information from one page of a historical natural-history book (19th or early 20th century). The page is given as numbered lines. The text may be a transcription or raw OCR and may contain recognition errors, odd spacing, broken words and stray characters. Never correct, normalise, expand or modernise anything: report what is written on the page.
 
-Extract every MENTION of these five fields. A mention is one occurrence in the text; if the same name appears three times, report it three times. Report mentions in the order they appear. If the page has none, return an empty list.
+Extract every MENTION of these six fields. A mention is one occurrence in the text; if the same name appears three times, report it three times. Report mentions in the order they appear. If the page has none, return an empty list.
+
+Edges of a mention, for every field:
+- Leave out brackets, quotation marks, commas and semicolons around it: "(Mus. Taylor.)" gives "Mus. Taylor".
+- A full stop at the end is kept only when the word before it is shortened, because it then belongs to the abbreviation ("Linn.", "Pfr."). After a word printed in full it is left out: "(Mus. Cuming.)" gives "Mus. Cuming"; "Hab. Brazil." gives "Brazil".
+- A name broken across two lines is one mention: report the whole name, never only its first part.
 
 taxon: a scientific (Latin) name of an organism.
 - Include binomials and trinomials ("Accentor modularis"), names of a single word at any rank used as the name of a taxon ("Bulimus", "Turdidae"), and an abbreviated genus followed by an epithet ("A. modularis"). Names in capitals or small capitals count ("BULIMUS CASTUS").
 - The authority after a name is not part of the taxon: for "Accentor modularis (Linn.)" the taxon is "Accentor modularis" and "Linn." is a separate person mention.
 - Exclude a bare abbreviated genus that only opens a Latin description ("Bul. testa ...").
 - Exclude running heads, page headers and plate headings repeated at the top of pages.
-- Exclude vernacular (English) names such as "Hedge-Sparrow" or "THE CHASTE BULIMUS".
+- Vernacular names are never taxon; they are the separate field vernacular.
+
+vernacular: a common-language name that identifies a particular kind of organism (a species or a named group).
+- Examples: "Hedge-Sparrow", "Sky-Lark", "Lesser Redpoll"; "the Buntings" gives "Buntings"; "THE CHASTE BULIMUS" gives "CHASTE BULIMUS" (no leading article).
+- Exclude generic words that name no particular kind ("bird", "shell", "species", "the male", "the young"), and running heads repeated at the top of pages.
 
 locality: a named real geographic place, in whatever role it appears.
 - Include habitat, distribution, collection and observation statements and any other mention of a place. In "Hab. Central America?" the mention is "Central America".
-- A place with its narrowing parts is one mention: "Isle of Luzon, Philippine Islands"; "north coast of Norfolk". Different places are separate mentions: "Cornwall and Devon" is two.
-- Exclude a leading preposition or relative word: in "near Dover" the mention is "Dover".
+- A place with its narrowing parts is one mention: "Isle of Luzon, Philippine Islands". Different places are separate mentions: "Cornwall and Devon" is two.
+- Words that name a part of the place stay in the mention: "valley of the Amoor", "north coast of Norfolk", "South-east Mongolia", "mouth of the Thames", "interior of Brazil".
+- Words that place something relative to the place, and plain prepositions, stay out: "near Dover" gives "Dover"; "ten miles north of York" gives "York"; "off the coast of Peru" gives "coast of Peru"; "throughout Europe" gives "Europe".
 - Exclude habitat types without a place name ("woods", "on rocks"), places of publication inside bibliographic citations, places that are part of an institution's name, adjectives such as "British", and places in titles or running heads.
 
-date: when an occurrence happened (collected, observed, shot, nested, arrived).
-- Include the whole date expression as printed: "3rd May, 1890", "May 1890", "1890", "1880-85".
-- Exclude publication years in citations ("Pro. Zool. Soc., 1846"), seasons or months without a year that only describe general behaviour ("in spring", "arrives in April"), ages, durations and page numbers.
+date: the date of a particular event (a specimen collected, shot, captured or seen, a nest found, an arrival recorded).
+- Include the whole date expression as printed: "3rd May, 1890", "May 1890", "1890", "1880-85". A month without a year counts when it belongs to a particular event: "one was collected in April" gives "April".
+- Exclude publication dates and years in citations ("Pro. Zool. Soc., 1846", "published in April 1890"), general behaviour that is not one event ("arrives in April", "breeds in spring"), ages, durations and page numbers.
 
 person: any named person, in whatever role: collector or observer, cited author, naming authority (abbreviated or not).
 - Examples: "shot by Mr. J. Smith" gives "J. Smith"; "PFEIFFER, Pro. Zool. Soc." gives "PFEIFFER"; "Giusti's (1997)" gives "Giusti"; "(Linn.)" gives "Linn.".
-- Keep initials, drop honorifics ("Mr.", "Dr.", "Capt.").
+- Keep initials. Drop every title, rank or form of address ("Mr.", "Dr.", "Capt.", "Lord", "Sir", "Herr", "Rev.", "Prof."): "Lord Lilford" gives "Lilford".
+- Label a name by its role at that spot: "ADAMS, MS." gives the person "ADAMS", while "(Mus. Adams.)" is an institution and no person.
 - Exclude a person's name that is part of a taxon name ("Cumingii") or of an institution name ("Cuming" in "Mus. Cuming").
 
 institution: a named museum, herbarium, private collection, society, university or expedition.
 - Report the whole name as printed, abbreviations included: "Mus. Cuming", "Mus. Dennison", "British Museum".
 - Exclude journal titles in citations ("Pro. Zool. Soc.") and generic words without a name ("the museum")."""
 
-TASK_G0 = """Extract all mentions from the page below. For each mention give its field and its value.
+TASK_G0 = """Extract all mentions from the page below. For each mention give its field and its value, copied as written on the page. Never include the line labels (such as "L07|") in a value.
 
 <page>
 {numbered_text}
 </page>"""
 
-TASK_G1 = """Extract all mentions from the page below. For each mention give its field, the number of the line where it appears, and a quote: the mention copied character for character from that line, exactly as written there, including any errors, spacing and punctuation inside it. The quote is checked automatically against the line; a quote that is not an exact copy counts as unsupported. If a mention is broken across two lines, give the first line and quote only the part on that line.
+TASK_G1 = """Extract all mentions from the page below. For each mention give its field, the number of the line where it appears, and a quote: the mention copied character for character from that line, exactly as written there, including any errors, spacing and punctuation inside it. The quote is checked automatically against the line; a quote that is not an exact copy counts as unsupported. If a mention is broken across two lines, give the line where it starts and quote the whole mention, writing the line break as one space and keeping any hyphen that is printed there. Never include the line labels (such as "L07|") in a quote.
 
 <page>
 {numbered_text}

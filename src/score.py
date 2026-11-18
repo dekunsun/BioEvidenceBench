@@ -9,8 +9,13 @@ have (or that the alignment cannot place, e.g. re-ordered paragraphs) is
 counted as UNALIGNED: it is a false positive, and it is also reported on its
 own.
 
+Scores are written per field and for ALL_PRIMARY (taxon, person, locality,
+institution, date). `vernacular` is scored separately and never enters
+ALL_PRIMARY. Gold rows marked adjudication = ambiguous are optional (no
+credit, no penalty).
+
 Three matching levels, per field, one-to-one (each gold mention matches at
-most one prediction):
+most one prediction; a prediction takes the unused gold mention it overlaps most):
   lenient   same field and the spans overlap by at least one character
   exact     same field and the mapped span equals the gold span exactly
   value     lenient, AND the predicted value equals the gold text after light
@@ -43,7 +48,10 @@ from rapidfuzz.distance import Levenshtein
 from common import DATA, ROOT, TEXT
 
 RESULTS = ROOT / "results"
-FIELDS = ["taxon", "person", "locality", "institution", "date"]
+PRIMARY_FIELDS = ["taxon", "person", "locality", "institution", "date"]
+SEPARATE_FIELDS = ["vernacular"]   # scored, but never part of the primary all-fields number
+FIELDS = PRIMARY_FIELDS + SEPARATE_FIELDS
+LEVELS = ("exact", "lenient", "value")
 OCR_VERSIONS = ["legacy", "modern_dots-mocr"]
 N_BOOT = 1000
 
@@ -70,10 +78,9 @@ def norm_value(s: str) -> str:
 
 
 def page_text(version: str, page_id: int) -> str:
-    if version == "expert":
-        p = DATA / "sample" / "expert" / f"{page_id}.txt"
-        if p.exists():
-            return p.read_text(encoding="utf-8")
+    p = DATA / "sample" / version / f"{page_id}.txt"
+    if p.exists():
+        return p.read_text(encoding="utf-8")
     return (TEXT / version / f"{page_id}.txt").read_text(encoding="utf-8")
 
 
@@ -100,37 +107,49 @@ def map_span(cmap: tuple, start: int, end: int) -> tuple[int, int] | None:
 
 
 # ---------------------------------------------------------------- matching
+def _ok(level: str, pr: dict, gr: dict) -> bool:
+    same = pr["m_start"] == gr["start"] and pr["m_end"] == gr["end"]
+    overlap = pr["m_start"] < gr["end"] and gr["start"] < pr["m_end"]
+    if level == "exact":
+        return same
+    if level == "lenient":
+        return overlap
+    return overlap and norm_value(pr["value"]) == norm_value(gr["text"])
+
+
 def match_page(gold: pd.DataFrame, pred: pd.DataFrame) -> dict:
-    """One-to-one greedy matching per field; returns counts per level."""
+    """One-to-one matching per field. Returns {field: {level: (tp, fp, fn)}}.
+
+    Each prediction takes the unused gold mention it overlaps most (not simply
+    the first one), so the result does not depend on row order.
+    Gold rows with adjudication == "ambiguous" are optional: a prediction
+    that matches one earns no credit and no penalty, and missing one is not
+    a false negative (ANNOTATION_GUIDE section 4).
+    """
     out = {}
-    for level in ("exact", "lenient", "value"):
-        tp = fp = fn = 0
-        for field in FIELDS:
-            g = gold[gold.field == field].to_dict("records")
-            p = pred[pred.field == field].to_dict("records")
+    for field in FIELDS:
+        g = gold[gold.field == field].to_dict("records")
+        p = pred[pred.field == field].to_dict("records")
+        out[field] = {}
+        for level in LEVELS:
+            tp = fp = 0
             used = set()
             for pr in p:
                 if pr["m_start"] is None or pd.isna(pr["m_start"]):
                     fp += 1
                     continue
-                hit = None
-                for gi, gr in enumerate(g):
-                    if gi in used:
-                        continue
-                    same = (pr["m_start"] == gr["start"] and pr["m_end"] == gr["end"])
-                    overlap = pr["m_start"] < gr["end"] and gr["start"] < pr["m_end"]
-                    ok = {"exact": same, "lenient": overlap,
-                          "value": overlap and norm_value(pr["value"]) == norm_value(gr["text"])}[level]
-                    if ok:
-                        hit = gi
-                        break
-                if hit is None:
+                cands = [(min(pr["m_end"], gr["end"]) - max(pr["m_start"], gr["start"]), -gi)
+                         for gi, gr in enumerate(g) if gi not in used and _ok(level, pr, gr)]
+                if not cands:
                     fp += 1
-                else:
-                    used.add(hit)
+                    continue
+                gi = -max(cands)[1]
+                used.add(gi)
+                if g[gi].get("adjudication", "") != "ambiguous":
                     tp += 1
-            fn += len(g) - len(used)
-        out[level] = (tp, fp, fn)
+            fn = sum(1 for gi, gr in enumerate(g)
+                     if gi not in used and gr.get("adjudication", "") != "ambiguous")
+            out[field][level] = (tp, fp, fn)
     return out
 
 
@@ -155,16 +174,29 @@ def bootstrap_f1(per_page: pd.DataFrame, level: str, rng: np.random.Generator) -
 
 # ---------------------------------------------------------------- main scoring
 def load_gold(path) -> pd.DataFrame:
-    g = pd.read_csv(path, dtype={"text": str}, keep_default_na=False)
+    g = pd.read_csv(path, dtype=str, keep_default_na=False)
+    g["page_id"] = g.page_id.astype(int)
     g = g[g.field != "none"].copy()
-    g["start"], g["end"] = g.start.astype(int), g.end.astype(int)
+    unresolved = g[g.notes.str.contains("UNCLEAR") & (g.get("adjudication", "") == "")] \
+        if "adjudication" in g else g[g.notes.str.contains("UNCLEAR")]
+    if len(unresolved):
+        raise SystemExit(f"{len(unresolved)} UNCLEAR gold rows have no adjudication value "
+                         "(ANNOTATION_GUIDE section 4). Resolve them before scoring.")
+    if "adjudication" not in g:
+        g["adjudication"] = ""
+    g["start"], g["end"] = g.start.astype(float).astype(int), g.end.astype(float).astype(int)
     return g
+
+
+def _to_int(x):
+    """Offsets arrive as '353', '353.0' or '' (not located)."""
+    return None if str(x).strip() == "" else int(float(x))
 
 
 def score_run(run_id: str, gold_path, split: str) -> tuple[pd.DataFrame, pd.DataFrame]:
     run_dir = RESULTS / run_id
-    mentions = pd.read_csv(run_dir / f"{split}_mentions.csv", dtype={"value": str, "model_text": str},
-                           keep_default_na=False)
+    mentions = pd.read_csv(run_dir / f"{split}_mentions.csv", dtype=str, keep_default_na=False)
+    mentions["page_id"] = mentions.page_id.astype(int)
     gold = load_gold(gold_path)
     pages = pd.read_csv(DATA / "sample_split.csv").query("split == @split")[["PageID", "book"]]
     missing = set(pages.PageID) - set(pd.read_csv(gold_path).page_id.astype(int))
@@ -175,32 +207,46 @@ def score_run(run_id: str, gold_path, split: str) -> tuple[pd.DataFrame, pd.Data
     combos = mentions[["version", "condition"]].drop_duplicates().itertuples(index=False)
     for version, condition in combos:
         for pid, book in pages.itertuples(index=False):
-            expert = page_text("expert", pid)
-            src = page_text(version, pid)
-            cmap = char_map(src, expert)
+            cmap = char_map(page_text(version, pid), page_text("expert", pid))
             pr = mentions[(mentions.page_id == pid) & (mentions.version == version)
                           & (mentions.condition == condition)].copy()
-            spans = [map_span(cmap, int(s), int(e)) if str(s) != "" else None
-                     for s, e in zip(pr.start, pr.end)]
-            pr["m_start"] = [s[0] if s else None for s in spans]
-            pr["m_end"] = [s[1] if s else None for s in spans]
-            counts = match_page(gold[gold.page_id == pid], pr)
-            row = {"page_id": pid, "book": book, "version": version, "condition": condition,
-                   "n_pred": len(pr), "n_gold": int((gold.page_id == pid).sum()),
-                   "unaligned": int(pr.m_start.isna().sum()),
-                   "not_located": int(pr.status.isin(["not_found", "invalid_evidence"]).sum())}
-            for level, (tp, fp, fn) in counts.items():
-                row |= {f"{level}_tp": tp, f"{level}_fp": fp, f"{level}_fn": fn}
-            rows.append(row)
+            spans = []
+            for s_, e_ in zip(pr.start, pr.end):
+                a_, b_ = _to_int(s_), _to_int(e_)
+                spans.append(map_span(cmap, a_, b_) if a_ is not None else None)
+            pr["m_start"] = [sp[0] if sp else None for sp in spans]
+            pr["m_end"] = [sp[1] if sp else None for sp in spans]
+            g_page = gold[gold.page_id == pid]
+            counts = match_page(g_page, pr)
+            for field in FIELDS:
+                pf, gf = pr[pr.field == field], g_page[g_page.field == field]
+                row = {"page_id": pid, "book": book, "version": version, "condition": condition,
+                       "field": field, "n_pred": len(pf),
+                       "n_gold": int((gf.adjudication != "ambiguous").sum()),
+                       "n_gold_ambiguous": int((gf.adjudication == "ambiguous").sum()),
+                       "unaligned": int(pf.m_start.isna().sum()),
+                       "not_located": int(pf.status.isin(["not_found", "invalid_evidence"]).sum())}
+                for level, (tp, fp, fn) in counts[field].items():
+                    row |= {f"{level}_tp": tp, f"{level}_fp": fp, f"{level}_fn": fn}
+                rows.append(row)
     by_page = pd.DataFrame(rows)
+
+    # One summary row per field, plus ALL_PRIMARY (the five primary fields added up per page).
+    num = [c for c in by_page.columns if c not in ("page_id", "book", "version", "condition", "field")]
+    prim = (by_page[by_page.field.isin(PRIMARY_FIELDS)]
+            .groupby(["page_id", "book", "version", "condition"], as_index=False)[num].sum()
+            .assign(field="ALL_PRIMARY"))
+    long = pd.concat([by_page, prim], ignore_index=True)
 
     rng = np.random.default_rng(20261118)
     summary = []
-    for (book, version, condition), d in by_page.groupby(["book", "version", "condition"]):
-        rec = {"book": book, "version": version, "condition": condition, "pages": len(d),
-               "gold": int(d.n_gold.sum()), "pred": int(d.n_pred.sum()),
-               "unaligned": int(d.unaligned.sum()), "not_located": int(d.not_located.sum())}
-        for level in ("exact", "lenient", "value"):
+    for (book, version, condition, field), d in long.groupby(["book", "version", "condition", "field"]):
+        rec = {"split": split, "book": book, "version": version, "condition": condition, "field": field,
+               "pages": len(d), "gold": int(d.n_gold.sum()), "gold_ambiguous": int(d.n_gold_ambiguous.sum()),
+               "pred": int(d.n_pred.sum()), "unaligned": int(d.unaligned.sum()),
+               "not_located": int(d.not_located.sum()),
+               "too_few_to_compare": bool(d.n_gold.sum() < 10)}
+        for level in LEVELS:
             p, r, f = prf(*(d[f"{level}_{k}"].sum() for k in ("tp", "fp", "fn")))
             lo, hi = bootstrap_f1(d, level, rng)
             rec |= {f"{level}_P": round(p, 3), f"{level}_R": round(r, 3), f"{level}_F1": round(f, 3),
@@ -221,7 +267,7 @@ def entity_span_cer(gold_path, split: str) -> pd.DataFrame:
             span = map_span(char_map(expert, ocr), g.start, g.end)
             ocr_text = ocr[span[0]:span[1]] if span else ""
             a, b = norm_value(ocr_text), norm_value(g.text)
-            rows.append({"page_id": g.page_id, "field": g.field, "version": v, "gold_text": g.text,
+            rows.append({"page_id": int(g.page_id), "field": g.field, "version": v, "gold_text": g.text,
                          "ocr_text": ocr_text, "aligned": span is not None,
                          "span_cer": round(Levenshtein.distance(a, b) / max(len(b), 1), 4),
                          "preserved": a == b})
@@ -238,10 +284,10 @@ def main() -> None:
         summary, by_page = score_run(run_id, a.gold, a.split)
         summary.to_csv(RESULTS / run_id / f"scores_{a.split}.csv", index=False)
         by_page.to_csv(RESULTS / run_id / f"scores_{a.split}_by_page.csv", index=False)
-        cols = ["book", "version", "condition", "gold", "pred", "unaligned",
-                "lenient_F1", "lenient_F1_lo", "lenient_F1_hi", "value_F1", "exact_F1"]
+        cols = ["book", "version", "condition", "field", "gold", "pred", "unaligned",
+                "lenient_F1", "value_F1", "value_F1_lo", "value_F1_hi", "exact_F1"]
         print(run_id)
-        print(summary[cols].to_string(index=False))
+        print(summary[summary.field == "ALL_PRIMARY"][cols].to_string(index=False))
     esc = entity_span_cer(a.gold, a.split)
     esc.to_csv(RESULTS / f"entity_span_cer_{a.split}.csv", index=False)
     print(esc.groupby(["version", "field"]).agg(mentions=("span_cer", "size"),
