@@ -93,8 +93,9 @@ def flatten(text: str, mode: str) -> tuple[str, list[int]]:
 
 
 def _flat_find(text: str, needle: str, region: tuple[int, int] | None = None,
-               ignore_case: bool = False) -> tuple[int, int] | None:
-    """Find needle in text ignoring layout; return original (start, end)."""
+               ignore_case: bool = False, skip: set[int] | None = None) -> tuple[int, int] | None:
+    """Find needle in text ignoring layout; return original (start, end).
+    skip: start positions already used by earlier mentions, not to be returned again."""
     for mode in ("join", "hyphen", "hyphen_space"):
         flat, idx = flatten(text, mode)
         nd = flatten(needle, mode)[0].strip()
@@ -104,7 +105,7 @@ def _flat_find(text: str, needle: str, region: tuple[int, int] | None = None,
         k = hay.find(nd2)
         while k != -1:
             start, end = idx[k], idx[k + len(nd2) - 1] + 1
-            if region is None or region[0] <= start < region[1]:
+            if (region is None or region[0] <= start < region[1]) and not (skip and start in skip):
                 return start, end
             k = hay.find(nd2, k + 1)
     return None
@@ -125,14 +126,28 @@ def _fuzzy(needle: str, hay: str) -> tuple[float, int, int]:
     return a.score, a.dest_start, a.dest_end
 
 
-def locate_g1(text: str, line: int, quote: str) -> dict:
+def _find_all(hay: str, needle: str) -> list[int]:
+    hits, i = [], hay.find(needle)
+    while i != -1:
+        hits.append(i)
+        i = hay.find(needle, i + 1)
+    return hits
+
+
+def locate_g1(text: str, line: int, quote: str, nth: int = 0) -> dict:
+    """nth: this is the nth time the model gave this exact quote for this line
+    (and field), so a word printed several times in one line maps to its
+    successive occurrences instead of always the first. If the model gives the
+    quote more often than the line contains it, the extra ones stay on the last
+    occurrence (and show up as duplicate spans)."""
     lines = text.split("\n")
     starts = line_starts(text)
     if not (1 <= line <= len(lines)) or not quote:
         return {"status": "invalid_evidence", "start": None, "end": None, "score": 0.0}
     l_text, l_start = lines[line - 1], starts[line - 1]
-    i = l_text.find(quote)
-    if i != -1:
+    hits = _find_all(l_text, quote)
+    if hits:
+        i = hits[min(nth, len(hits) - 1)]
         return {"status": "exact", "start": l_start + i, "end": l_start + i + len(quote), "score": 100.0}
     hit = _flat_find(text, quote, region=(l_start, l_start + len(l_text) + 1))
     if hit:
@@ -148,13 +163,17 @@ def locate_g1(text: str, line: int, quote: str) -> dict:
 
 def locate_g0(text: str, value: str, nth: int = 0) -> dict:
     """nth: this is the nth time the model reported this exact value on the
-    page, so repeated mentions map to successive occurrences."""
+    page, so repeated mentions map to successive occurrences. When the value is
+    reported more often than it is printed exactly, a further occurrence broken
+    by layout (such as "Ja-" / "maica" for "Jamaica") is used before falling
+    back to the last exact one."""
     if not value:
         return {"status": "not_found", "start": None, "end": None, "score": 0.0}
-    hits, i = [], text.find(value)
-    while i != -1:
-        hits.append(i)
-        i = text.find(value, i + 1)
+    hits = _find_all(text, value)
+    if hits and nth >= len(hits):
+        extra = _flat_find(text, value, skip=set(hits))
+        if extra:
+            return {"status": "layout_variant", "start": extra[0], "end": extra[1], "score": 100.0}
     if hits:
         k = hits[min(nth, len(hits) - 1)]
         return {"status": "exact", "start": k, "end": k + len(value), "score": 100.0}
@@ -181,7 +200,9 @@ def locate_all(text: str, condition: str, mentions: list[dict]) -> list[dict]:
             r = {"status": "exact", "start": m["start"], "end": m["end"], "score": 100.0}
             model_text = text[m["start"]:m["end"]]
         elif condition == "G1":
-            r = locate_g1(text, int(m.get("line", 0)), clean)
+            key = (m.get("field"), m.get("line"), clean)
+            r = locate_g1(text, int(m.get("line", 0)), clean, seen.get(key, 0))
+            seen[key] = seen.get(key, 0) + 1
         else:
             key = (m.get("field"), clean)
             r = locate_g0(text, clean, seen.get(key, 0))

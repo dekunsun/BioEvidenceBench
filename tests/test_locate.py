@@ -78,3 +78,27 @@ def test_flatten_does_not_create_matches_across_unrelated_text():
 def test_rule_condition_uses_given_offsets():
     out = locate_all(PAGE, "RULE", [{"field": "locality", "start": 74, "end": 89}])[0]
     assert out["status"] == "exact" and out["value"] == PAGE[74:89]
+
+
+def test_g1_repeated_quotes_in_one_line_map_to_successive_occurrences():
+    # modern OCR text has one paragraph per line, so a word often repeats in a line
+    page = "Title\nThe Jackdaw nests here; the Jackdaw also robs the Barn Owl."
+    ms = [{"field": "vernacular", "line": 2, "quote": "Jackdaw"}] * 2
+    out = locate_all(page, "G1", ms)
+    assert [o["start"] for o in out] == [10, 34] and all(o["status"] == "exact" for o in out)
+    # a third quote has no third occurrence: it stays on the last one
+    assert locate_all(page, "G1", ms * 2)[2]["start"] == 34
+
+
+def test_g1_same_quote_on_different_lines_is_counted_per_line():
+    page = "Hab. Cuba.\nHab. Cuba."
+    out = locate_all(page, "G1", [{"field": "locality", "line": 1, "quote": "Cuba"},
+                                  {"field": "locality", "line": 2, "quote": "Cuba"}])
+    assert [o["start"] for o in out] == [5, 16]
+
+
+def test_g0_extra_repeat_uses_a_line_broken_occurrence():
+    page = "Hab. Jamaica.\nfrom Ja-\nmaica."
+    out = locate_all(page, "G0", [{"field": "locality", "value": "Jamaica"}] * 2)
+    assert out[0]["status"] == "exact" and out[0]["start"] == 5
+    assert out[1]["status"] == "layout_variant" and out[1]["value"] == "Ja-\nmaica"

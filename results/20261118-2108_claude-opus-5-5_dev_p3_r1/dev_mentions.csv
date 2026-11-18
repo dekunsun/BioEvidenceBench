@@ -141,7 +141,7 @@ latus",layout_variant,2409,2423,100.0
 8992601,modern_dots-mocr,G1,18,date,5.0,12th to the 30th of October,False,12th to the 30th of October,exact,1343,1370,100.0
 8992601,modern_dots-mocr,G1,19,person,5.0,T. H. Nelson,False,T. H. Nelson,exact,1380,1392,100.0
 8992601,modern_dots-mocr,G1,20,person,5.0,F. Pilling,False,F. Pilling,exact,1398,1408,100.0
-8992601,modern_dots-mocr,G1,21,vernacular,5.0,Hoodies,False,Hoodies,exact,1326,1333,100.0
+8992601,modern_dots-mocr,G1,21,vernacular,5.0,Hoodies,False,Hoodies,exact,1423,1430,100.0
 8992601,modern_dots-mocr,G1,22,person,5.0,Seebohm,False,Seebohm,exact,1532,1539,100.0
 8992601,modern_dots-mocr,G1,23,person,5.0,Gätke,False,Gätke,exact,1574,1579,100.0
 8992601,modern_dots-mocr,G1,24,locality,5.0,Heligoland,False,Heligoland,exact,2086,2096,100.0
@@ -199,7 +199,7 @@ latus",layout_variant,2409,2423,100.0
 8992612,modern_dots-mocr,G1,20,locality,9.0,China,False,China,exact,629,634,100.0
 8992612,modern_dots-mocr,G1,21,locality,9.0,North-west India,False,North-west India,exact,636,652,100.0
 8992612,modern_dots-mocr,G1,22,locality,9.0,Afghanistan,False,Afghanistan,exact,654,665,100.0
-8992612,modern_dots-mocr,G1,23,locality,9.0,Persia,False,Persia,exact,601,607,100.0
+8992612,modern_dots-mocr,G1,23,locality,9.0,Persia,False,Persia,exact,667,673,100.0
 8992612,modern_dots-mocr,G1,24,locality,9.0,Asia Minor,False,Asia Minor,exact,675,685,100.0
 8992612,modern_dots-mocr,G1,25,locality,9.0,Palestine,False,Palestine,exact,687,696,100.0
 8992612,modern_dots-mocr,G1,26,locality,9.0,Egypt,False,Egypt,exact,701,706,100.0
@@ -268,7 +268,7 @@ latus",layout_variant,2409,2423,100.0
 8992601,modern_dots-mocr_plain,G1,18,date,5.0,12th to the 30th of October,False,12th to the 30th of October,exact,1343,1370,100.0
 8992601,modern_dots-mocr_plain,G1,19,person,5.0,T. H. Nelson,False,T. H. Nelson,exact,1380,1392,100.0
 8992601,modern_dots-mocr_plain,G1,20,person,5.0,F. Pilling,False,F. Pilling,exact,1398,1408,100.0
-8992601,modern_dots-mocr_plain,G1,21,vernacular,5.0,Hoodies,False,Hoodies,exact,1326,1333,100.0
+8992601,modern_dots-mocr_plain,G1,21,vernacular,5.0,Hoodies,False,Hoodies,exact,1423,1430,100.0
 8992601,modern_dots-mocr_plain,G1,22,person,5.0,Seebohm,False,Seebohm,exact,1532,1539,100.0
 8992601,modern_dots-mocr_plain,G1,23,person,5.0,Gätke,False,Gätke,exact,1574,1579,100.0
 8992601,modern_dots-mocr_plain,G1,24,locality,5.0,Heligoland,False,Heligoland,exact,2086,2096,100.0
@@ -286,7 +286,9 @@ latus",layout_variant,2409,2423,100.0
 8967060,legacy,G0,8,locality,,Jamaica,False,Jamaica,exact,1145,1152,100.0
 8967060,legacy,G0,9,taxon,,Bulimi,False,Bulimi,exact,1244,1250,100.0
 8967060,legacy,G0,10,taxon,,Achalina,False,Achalina,exact,1255,1263,100.0
-8967060,legacy,G0,11,locality,,Jamaica,False,Jamaica,exact,1145,1152,100.0
+8967060,legacy,G0,11,locality,,Jamaica,False,"Ja- 
+
+ maica",layout_variant,1269,1281,100.0
 8967060,legacy,G0,12,institution,,Mus. Benson,False,Mus. Benson,exact,1511,1522,100.0
 8967060,legacy,G0,13,taxon,,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1528,1543,100.0
 8967060,legacy,G0,14,vernacular,,LITTLE TUFT BuLiMUS,False,LITTLE TUFT BuLiMUS,exact,1831,1850,100.0
@@ -437,17 +439,17 @@ latus",layout_variant,2409,2423,100.0
 8992582,modern_dots-mocr,G1,2,locality,8.0,Continent,False,Continent,exact,505,514,100.0
 8992582,modern_dots-mocr,G1,3,locality,8.0,England,False,England,exact,518,525,100.0
 8992582,modern_dots-mocr,G1,4,locality,8.0,cliffs of Dover,False,cliffs of Dover,exact,594,609,100.0
-8992582,modern_dots-mocr,G1,5,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
-8992582,modern_dots-mocr,G1,6,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr,G1,5,vernacular,8.0,Jackdaw,False,Jackdaw,exact,736,743,100.0
+8992582,modern_dots-mocr,G1,6,vernacular,8.0,Jackdaw,False,Jackdaw,exact,801,808,100.0
 8992582,modern_dots-mocr,G1,7,person,8.0,Lilford,False,Lilford,exact,935,942,100.0
-8992582,modern_dots-mocr,G1,8,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr,G1,8,vernacular,8.0,Jackdaw,False,Jackdaw,exact,1047,1054,100.0
 8992582,modern_dots-mocr,G1,9,locality,8.0,Lilford,False,Lilford,exact,935,942,100.0
 8992582,modern_dots-mocr,G1,10,vernacular,8.0,Barn Owl,False,Barn Owl,exact,1474,1482,100.0
 8992582,modern_dots-mocr,G1,11,vernacular,8.0,Daws,False,Daws,exact,1568,1572,100.0
 8992582,modern_dots-mocr,G1,12,vernacular,8.0,Owls,False,Owls,exact,1778,1782,100.0
-8992582,modern_dots-mocr,G1,13,vernacular,8.0,Barn Owl,False,Barn Owl,exact,1474,1482,100.0
+8992582,modern_dots-mocr,G1,13,vernacular,8.0,Barn Owl,False,Barn Owl,exact,2013,2021,100.0
 8992582,modern_dots-mocr,G1,14,vernacular,8.0,Jackdaws,False,Jackdaws,exact,2111,2119,100.0
-8992582,modern_dots-mocr,G1,15,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr,G1,15,vernacular,8.0,Jackdaw,False,Jackdaw,exact,2111,2118,100.0
 8992582,modern_dots-mocr,G1,16,vernacular,8.0,House-Sparrow,False,House-Sparrow,exact,2321,2334,100.0
 8992582,modern_dots-mocr,G1,17,vernacular,8.0,Daw,False,Daw,exact,1568,1571,100.0
 8992582,modern_dots-mocr,G1,18,person,10.0,Seebohm,False,Seebohm,exact,2555,2562,100.0
@@ -806,7 +808,7 @@ istoni",cross_line,1163,1178,100.0
 8992612,modern_dots-mocr_plain,G1,20,locality,9.0,China,False,China,exact,620,625,100.0
 8992612,modern_dots-mocr_plain,G1,21,locality,9.0,North-west India,False,North-west India,exact,627,643,100.0
 8992612,modern_dots-mocr_plain,G1,22,locality,9.0,Afghanistan,False,Afghanistan,exact,645,656,100.0
-8992612,modern_dots-mocr_plain,G1,23,locality,9.0,Persia,False,Persia,exact,592,598,100.0
+8992612,modern_dots-mocr_plain,G1,23,locality,9.0,Persia,False,Persia,exact,658,664,100.0
 8992612,modern_dots-mocr_plain,G1,24,locality,9.0,Asia Minor,False,Asia Minor,exact,666,676,100.0
 8992612,modern_dots-mocr_plain,G1,25,locality,9.0,Palestine,False,Palestine,exact,678,687,100.0
 8992612,modern_dots-mocr_plain,G1,26,locality,9.0,Egypt,False,Egypt,exact,692,697,100.0
@@ -1293,17 +1295,17 @@ maica",cross_line,1188,1197,100.0
 8992582,modern_dots-mocr_plain,G1,1,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
 8992582,modern_dots-mocr_plain,G1,2,locality,8.0,England,False,England,exact,518,525,100.0
 8992582,modern_dots-mocr_plain,G1,3,locality,8.0,cliffs of Dover,False,cliffs of Dover,exact,594,609,100.0
-8992582,modern_dots-mocr_plain,G1,4,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
-8992582,modern_dots-mocr_plain,G1,5,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr_plain,G1,4,vernacular,8.0,Jackdaw,False,Jackdaw,exact,734,741,100.0
+8992582,modern_dots-mocr_plain,G1,5,vernacular,8.0,Jackdaw,False,Jackdaw,exact,799,806,100.0
 8992582,modern_dots-mocr_plain,G1,6,person,8.0,Lilford,False,Lilford,exact,933,940,100.0
-8992582,modern_dots-mocr_plain,G1,7,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr_plain,G1,7,vernacular,8.0,Jackdaw,False,Jackdaw,exact,1045,1052,100.0
 8992582,modern_dots-mocr_plain,G1,8,locality,8.0,Lilford,False,Lilford,exact,933,940,100.0
 8992582,modern_dots-mocr_plain,G1,9,vernacular,8.0,Barn Owl,False,Barn Owl,exact,1472,1480,100.0
 8992582,modern_dots-mocr_plain,G1,10,vernacular,8.0,Daws,False,Daws,exact,1566,1570,100.0
 8992582,modern_dots-mocr_plain,G1,11,vernacular,8.0,Owls,False,Owls,exact,1776,1780,100.0
-8992582,modern_dots-mocr_plain,G1,12,vernacular,8.0,Barn Owl,False,Barn Owl,exact,1472,1480,100.0
+8992582,modern_dots-mocr_plain,G1,12,vernacular,8.0,Barn Owl,False,Barn Owl,exact,2011,2019,100.0
 8992582,modern_dots-mocr_plain,G1,13,vernacular,8.0,Jackdaws,False,Jackdaws,exact,2109,2117,100.0
-8992582,modern_dots-mocr_plain,G1,14,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr_plain,G1,14,vernacular,8.0,Jackdaw,False,Jackdaw,exact,2109,2116,100.0
 8992582,modern_dots-mocr_plain,G1,15,vernacular,8.0,House-Sparrow,False,House-Sparrow,exact,2319,2332,100.0
 8992582,modern_dots-mocr_plain,G1,16,vernacular,8.0,Daw,False,Daw,exact,1566,1569,100.0
 8992582,modern_dots-mocr_plain,G1,17,person,10.0,Seebohm,False,Seebohm,exact,2553,2560,100.0
