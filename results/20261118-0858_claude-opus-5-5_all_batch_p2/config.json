@@ -1,0 +1,54 @@
+{
+  "run_id": "20261118-0858_claude-opus-5-5_all_batch_p2",
+  "created_at": "2026-11-18T08:58:36+00:00",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "max_tokens": 16000,
+  "mode": "batch",
+  "prompt_version": "p2-guide-v0.2",
+  "system_sha256": "a77b26dbda5bce8ef94c6b74e89c56ffc991823de1667678548f42b642b19375",
+  "pages": "all",
+  "page_ids": [
+    8992582,
+    8992601,
+    8992612,
+    8967047,
+    8967060,
+    8967147,
+    8992328,
+    8992379,
+    8992408,
+    8992489,
+    8992643,
+    8992644,
+    8992647,
+    8966790,
+    8966802,
+    8966930,
+    8966937,
+    8967281,
+    8967282,
+    8967290,
+    8967333,
+    8967345
+  ],
+  "versions": [
+    "expert",
+    "legacy",
+    "modern_dots-mocr"
+  ],
+  "conditions": [
+    "G0",
+    "G1"
+  ],
+  "prices_usd_per_mtok": [
+    4.0,
+    20.0,
+    5.0,
+    0.2
+  ],
+  "anthropic_sdk": "2.10.0",
+  "max_usd": 3.0,
+  "n_requests": 132,
+  "dry_run": false
+}
