@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from common import legacy_ocr_url, normalize_for_cer  # noqa: E402
+from common import legacy_ocr_url, markdown_drop_mask, markdown_to_plain, normalize_for_cer  # noqa: E402
 from compute_cer import band, cer, word_miss  # noqa: E402
 from load_gt import offset_view  # noqa: E402
 
@@ -35,3 +35,17 @@ def test_offset_view_offsets_slice_back_to_the_text():
 
 def test_legacy_url_padding():
     assert legacy_ocr_url(35904, 8967091, 381).endswith("item-035904/item-035904-08967091-0381.txt")
+
+
+def test_markdown_ablation_only_deletes_marks_and_keeps_lines():
+    md = "# BULIMUS.\n\n**BULIMUS CASTUS.** *Bul. testâ* thus * marked\n### Species 124. (*Mus. Cuming.*)"
+    plain = markdown_to_plain(md)
+    assert plain == "BULIMUS.\n\nBULIMUS CASTUS. Bul. testâ thus * marked\nSpecies 124. (Mus. Cuming.)"
+    assert plain.count("\n") == md.count("\n")
+    dropped = {c for c, d in zip(md, markdown_drop_mask(md)) if d}
+    assert dropped <= {"*", "#", " "}
+
+
+def test_markdown_pairs_never_span_a_line_break():
+    md = "one * footnote mark\nand another * here"
+    assert markdown_to_plain(md) == md

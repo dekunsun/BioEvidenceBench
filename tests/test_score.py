@@ -27,13 +27,13 @@ def test_value_level_separates_misread_from_correct():
     gold = pd.DataFrame([{"field": "taxon", "start": 0, "end": 14, "text": "BULIMUS CASTUS"}])
     misread = _pred([("taxon", 0, 14, "BuLIMUS CASTDS", 0, 14)])
     c = match_page(gold, misread)["taxon"]
-    assert c["lenient"] == (1, 0, 0) and c["exact"] == (1, 0, 0) and c["value"] == (0, 1, 1)
+    assert c["lenient"][:3] == (1, 0, 0) and c["exact"][:3] == (1, 0, 0) and c["value"][:3] == (0, 1, 1)
 
 
 def test_unaligned_prediction_is_false_positive():
     gold = pd.DataFrame([{"field": "locality", "start": 21, "end": 36, "text": "Central America"}])
     p = _pred([("locality", 0, 3, "xyz", None, None)])
-    assert match_page(gold, p)["locality"]["lenient"] == (0, 1, 1)
+    assert match_page(gold, p)["locality"]["lenient"][:3] == (0, 1, 1)
 
 
 def test_norm_value_joins_line_end_hyphenation():
@@ -55,8 +55,8 @@ def test_ambiguous_gold_rows_are_optional():
         {"field": "taxon", "start": 0, "end": 14, "text": "BULIMUS CASTUS", "adjudication": "ambiguous"},
         {"field": "taxon", "start": 30, "end": 37, "text": "Bulimus", "adjudication": ""}])
     hit = _pred([("taxon", 0, 14, "BULIMUS CASTUS", 0, 14)])
-    assert match_page(gold, hit)["taxon"]["lenient"] == (0, 0, 1)      # no credit, no FP; other row missed
-    assert match_page(gold, _pred([]))["taxon"]["lenient"] == (0, 0, 1)  # the ambiguous row is not an FN
+    assert match_page(gold, hit)["taxon"]["lenient"] == (0, 0, 1, 1)      # no credit, no FP; counted as excluded
+    assert match_page(gold, _pred([]))["taxon"]["lenient"] == (0, 0, 1, 0)  # the ambiguous row is not an FN
 
 
 def test_prediction_takes_the_gold_span_it_overlaps_most():
@@ -64,11 +64,43 @@ def test_prediction_takes_the_gold_span_it_overlaps_most():
         {"field": "locality", "start": 0, "end": 5, "text": "Dover", "adjudication": ""},
         {"field": "locality", "start": 10, "end": 16, "text": "Calais", "adjudication": ""}])
     p = _pred([("locality", 4, 16, "r and Calais", 4, 16), ("locality", 0, 5, "Dover", 0, 5)])
-    assert match_page(gold, p)["locality"]["lenient"] == (2, 0, 0)
+    assert match_page(gold, p)["locality"]["lenient"][:3] == (2, 0, 0)
 
 
 def test_vernacular_is_scored_apart_from_taxon():
     gold = pd.DataFrame([{"field": "vernacular", "start": 0, "end": 8, "text": "Sky-Lark", "adjudication": ""}])
     p = _pred([("taxon", 0, 8, "Sky-Lark", 0, 8)])
     c = match_page(gold, p)
-    assert c["taxon"]["lenient"] == (0, 1, 0) and c["vernacular"]["lenient"] == (0, 0, 1)
+    assert c["taxon"]["lenient"][:3] == (0, 1, 0) and c["vernacular"]["lenient"][:3] == (0, 0, 1)
+
+
+def test_two_predictions_on_one_gold_mention_give_one_tp_and_one_fp():
+    gold = pd.DataFrame([{"field": "taxon", "start": 0, "end": 14, "text": "BULIMUS CASTUS", "adjudication": ""}])
+    p = _pred([("taxon", 0, 7, "BULIMUS", 0, 7), ("taxon", 8, 14, "CASTUS", 8, 14),
+               ("taxon", 0, 14, "BULIMUS CASTUS", 0, 14)])
+    assert match_page(gold, p)["taxon"]["lenient"][:3] == (1, 2, 0)
+
+
+def test_one_prediction_cannot_match_two_gold_mentions():
+    gold = pd.DataFrame([
+        {"field": "locality", "start": 0, "end": 8, "text": "Cornwall", "adjudication": ""},
+        {"field": "locality", "start": 13, "end": 18, "text": "Devon", "adjudication": ""}])
+    p = _pred([("locality", 0, 18, "Cornwall and Devon", 0, 18)])
+    assert match_page(gold, p)["locality"]["lenient"][:3] == (1, 0, 1)
+
+
+def test_assignment_is_optimal_not_greedy():
+    # A greedy pass would give the wide prediction to the first gold span and strand the second one.
+    gold = pd.DataFrame([
+        {"field": "taxon", "start": 0, "end": 5, "text": "aaaaa", "adjudication": ""},
+        {"field": "taxon", "start": 6, "end": 11, "text": "bbbbb", "adjudication": ""}])
+    p = _pred([("taxon", 0, 11, "aaaaa bbbbb", 0, 11), ("taxon", 0, 5, "aaaaa", 0, 5)])
+    assert match_page(gold, p)["taxon"]["lenient"][:3] == (2, 0, 0)
+
+
+def test_strict_gold_is_preferred_over_ambiguous():
+    gold = pd.DataFrame([
+        {"field": "taxon", "start": 0, "end": 5, "text": "aaaaa", "adjudication": "ambiguous"},
+        {"field": "taxon", "start": 4, "end": 9, "text": "abbbb", "adjudication": ""}])
+    p = _pred([("taxon", 0, 9, "aaaaabbbb", 0, 9)])
+    assert match_page(gold, p)["taxon"]["lenient"] == (1, 0, 0, 0)

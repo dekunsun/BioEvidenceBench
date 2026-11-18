@@ -49,7 +49,8 @@ from locate import locate_all
 from prompts import CONDITIONS, PROMPT_VERSION, SYSTEM, number_lines
 
 RESULTS = ROOT / "results"
-VERSIONS = ["expert", "legacy", "modern_dots-mocr"]
+# modern_dots-mocr_plain = the same OCR text with Markdown marks deleted (formatting ablation)
+VERSIONS = ["expert", "legacy", "modern_dots-mocr", "modern_dots-mocr_plain"]
 # $ per million tokens: input, output, cache write (5 min), cache read. From the
 # Claude API pricing table (2026-11). Batch requests cost 50% of these.
 PRICES = {

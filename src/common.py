@@ -121,3 +121,46 @@ def strip_markdown(s: str) -> str:
     s = _MD_BOLD.sub(r"\1", s)
     s = _MD_ITAL.sub(r"\1", s)
     return _HTML.sub("", s)
+
+
+# --- Markdown formatting ablation (text version "modern_dots-mocr_plain") -------------------
+_ABL_HEAD = re.compile(r"#{1,6}[ \t]+")
+_ABL_BOLD = re.compile(r"\*\*(?=\S)(.+?)(?<=\S)\*\*")
+_ABL_ITAL = re.compile(r"(?<!\*)\*(?=[^\s*])(.+?)(?<=[^\s*])\*(?!\*)")
+
+
+def markdown_drop_mask(s: str) -> list[bool]:
+    """Which characters of a Markdown OCR text are formatting marks.
+
+    Marks are found line by line (a pair never spans a line break):
+      * heading marks at the start of a line: "## " (the hashes and the blanks after them)
+      * the asterisks of **bold** and *italic* pairs
+    Everything else is kept, including a lone asterisk (a printed footnote mark).
+    """
+    drop = [False] * len(s)
+    pos = 0
+    for line in s.split("\n"):
+        m = _ABL_HEAD.match(line)
+        if m:
+            for i in range(m.end()):
+                drop[pos + i] = True
+        work = list(line)
+        for m in _ABL_BOLD.finditer(line):
+            for i in (m.start(), m.start() + 1, m.end() - 2, m.end() - 1):
+                drop[pos + i] = True
+                work[i] = "\x00"            # hide from the italic pass
+        for m in _ABL_ITAL.finditer("".join(work)):
+            drop[pos + m.start()] = drop[pos + m.end() - 1] = True
+        pos += len(line) + 1
+    return drop
+
+
+def markdown_to_plain(s: str) -> str:
+    """The same OCR text with formatting marks deleted and nothing else changed.
+
+    Built by deletion only, so by construction no OCR character is altered,
+    added or re-ordered, and every line break is kept (see tests/test_common.py
+    and the checks in export_sample_texts.py).
+    """
+    drop = markdown_drop_mask(s)
+    return "".join(ch for ch, d in zip(s, drop) if not d)

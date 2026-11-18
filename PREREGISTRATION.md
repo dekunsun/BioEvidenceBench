@@ -12,7 +12,7 @@ Frozen at commit: `__________` (fill in when Gloria approves)
 | Item | Value |
 |---|---|
 | Pages | 16 locked test pages (`data/sample_split.csv`, split = test): Butler 7, Reeve 9 |
-| Text versions | `expert` (IMPACT-BHL transcription), `legacy` (BHL OCR), `modern_dots-mocr` (FineBooks output) |
+| Text versions | `expert` (IMPACT-BHL transcription), `legacy` (BHL OCR), `modern_dots-mocr` (FineBooks output, Markdown), `modern_dots-mocr_plain` (same text, Markdown marks deleted) |
 | Extractors | rule baseline (gnfinder v1.4.0 + regex, condition `RULE`); Claude Opus 5.5 with prompt `p2-guide-v0.2` (conditions `G0`, `G1`); Gemini 4 Carbon with the same prompt once run (for RQ4) |
 | Runs | `20261118-0903_rules-gnfinder-v1.4.0_all`; the p2 Opus run (`*_claude-opus-5-5_all_batch_p2`); the Gemini run (to be added before freezing) |
 | Gold | `gold/gold_mentions_gloria.csv`, ANNOTATION_GUIDE version recorded in each row (expected v1) |
@@ -117,8 +117,16 @@ Section 1's Opus run is the `p3` run (the `p2` run is superseded).
 false negative. Their count is reported per book and field. All `UNCLEAR` rows must be adjudicated
 before scoring; `score.py` stops if any is left.
 
-**Section 2 correction.** Matching is not "first unused gold mention": each prediction takes the
-unused gold mention it overlaps most, so the result does not depend on row order.
+**Section 2 correction.** Matching is strictly one-to-one with an optimal assignment
+(`scipy.optimize.linear_sum_assignment` in `score.match_page`): a gold mention is matched by at
+most one prediction and a prediction matches at most one gold mention; two predictions on one
+gold mention count as one true positive and one false positive. Unit tests cover these cases.
+Both the number of ambiguous gold rows excluded and the number of predictions that fell on them
+are reported (`gold_ambiguous_excluded`, `pred_on_ambiguous_excluded`).
+
+**Order of work (Gloria, 2026-11-18).** Dev results and this plan are reported first; the
+configuration is frozen; only then are the test pages run with the frozen prompt and unsealed.
+Earlier sealed test outputs (prompts p1 and p2) are never unsealed for results.
 
 **Known differences between text versions other than character accuracy.** They limit what RQ1
 can claim, and are stated with the results:
@@ -127,14 +135,21 @@ can claim, and are stated with the results:
   and legacy keep the printed line breaks (so names broken across lines exist only there).
   A model could therefore score *higher* on modern OCR than on the expert text for reasons that
   are not OCR accuracy.
-- Planned control (needs Gloria's go-ahead, about one third more API cost): a fourth text
-  version, modern OCR with Markdown marks stripped (`common.strip_markdown`).
+- Control (approved by Gloria, 2026-11-18): a fourth text version, `modern_dots-mocr_plain`, the
+  same OCR text with Markdown emphasis and heading marks deleted. It is built by deletion only
+  (`common.markdown_to_plain`): no OCR character, reading order or line break changes, which
+  `export_sample_texts.py` checks for every page; lone printed asterisks (footnote marks) are
+  kept. Its input hashes are recorded separately in `data/sample/manifest.csv`. Comparing it with
+  `modern_dots-mocr` isolates the effect of formatting; comparing it with `expert` is the cleaner
+  test of OCR character accuracy.
 - The expert text itself is one reading order; about 20% of Butler's text pages lack an explicit
   `<ReadingOrder>`.
 
 **Run-to-run noise.** Claude Opus 5.5 does not allow a fixed temperature, and each condition is one
-sample. Planned (needs go-ahead, about $0.40 per repeat): three repeats of the dev pages under the
-frozen configuration. A difference between conditions on the test set that is smaller than the
+sample. Approved by Gloria (2026-11-18): three repeats of the dev pages with prompt p3, all text
+versions and G0/G1, reported by `src/repeat_report.py` (output consistency; and, once dev gold
+exists, each repeat's F1 with mean and standard deviation). The test set is never used to choose a
+prompt or a best condition. A difference between conditions on the test set that is smaller than the
 spread across repeats is reported as not distinguishable from noise.
 
 **Where a gold mention is lost (the main answer).** For every gold mention and each OCR version:

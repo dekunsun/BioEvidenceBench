@@ -1,7 +1,7 @@
 {
   "model": "rules + gnfinder v1.4.0",
   "batch": false,
-  "requests": 66,
+  "requests": 88,
   "pages": 22,
   "usd_total": 0.0,
   "usd_per_page_all_conditions": 0.0,
@@ -13,7 +13,7 @@
     "cache_read_input_tokens": 0
   },
   "stop_reasons": {
-    "end_turn": 66
+    "end_turn": 88
   },
   "errors": 0
 }

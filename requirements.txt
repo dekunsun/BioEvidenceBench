@@ -8,3 +8,4 @@ rapidfuzz>=3.6     # fast Levenshtein distance for CER
 matplotlib>=3.8    # CER histogram
 tabulate>=0.9      # pandas .to_markdown() for the reports
 pytest>=8
+scipy>=1.11        # optimal one-to-one matching in score.py

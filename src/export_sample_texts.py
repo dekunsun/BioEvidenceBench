@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from common import DATA, TEXT, sha256_text
+from common import DATA, TEXT, markdown_drop_mask, markdown_to_plain, sha256_text
 
 OUT = DATA / "sample"
 
@@ -42,6 +42,24 @@ def main() -> None:
             rows.append({"page_id": r.PageID, "split": r.split, "book": r.book, "stratum": r.stratum,
                          "chars": len(text), "sha256": sha256_text(text), "bhl_url": r.bhl_url,
                          "version": version})
+    # Markdown formatting ablation: the modern OCR text with emphasis and heading marks deleted.
+    # Checked here for every page: deletions only, only "*", "#" and heading blanks are deleted,
+    # and the number of lines is unchanged.
+    src_dir, dst_dir = OUT / "modern_dots-mocr", OUT / "modern_dots-mocr_plain"
+    dst_dir.mkdir(parents=True, exist_ok=True)
+    for r in split.itertuples():
+        md = (src_dir / f"{r.PageID}.txt").read_text(encoding="utf-8")
+        mask = markdown_drop_mask(md)
+        plain = markdown_to_plain(md)
+        dropped = {ch for ch, d in zip(md, mask) if d}
+        assert dropped <= {"*", "#", " ", "\t"}, (r.PageID, dropped)
+        assert plain.count("\n") == md.count("\n"), r.PageID
+        assert len(plain) == len(md) - sum(mask), r.PageID
+        (dst_dir / f"{r.PageID}.txt").write_text(plain, encoding="utf-8")
+        rows.append({"page_id": r.PageID, "split": r.split, "book": r.book, "stratum": r.stratum,
+                     "chars": len(plain), "sha256": sha256_text(plain), "bhl_url": r.bhl_url,
+                     "version": "modern_dots-mocr_plain", "derived_from_sha256": sha256_text(md),
+                     "marks_deleted": int(sum(mask)), "asterisks_kept": plain.count("*")})
     man = pd.DataFrame(rows)
     man["version"] = man.version.fillna("expert")
     man.to_csv(OUT / "manifest.csv", index=False)

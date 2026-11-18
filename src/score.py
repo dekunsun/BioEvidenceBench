@@ -14,8 +14,9 @@ institution, date). `vernacular` is scored separately and never enters
 ALL_PRIMARY. Gold rows marked adjudication = ambiguous are optional (no
 credit, no penalty).
 
-Three matching levels, per field, one-to-one (each gold mention matches at
-most one prediction; a prediction takes the unused gold mention it overlaps most):
+Three matching levels, per field, strictly one-to-one with an optimal
+assignment (see match_page): a gold mention is matched by at most one
+prediction and a prediction matches at most one gold mention.
   lenient   same field and the spans overlap by at least one character
   exact     same field and the mapped span equals the gold span exactly
   value     lenient, AND the predicted value equals the gold text after light
@@ -44,6 +45,7 @@ from functools import lru_cache
 import numpy as np
 import pandas as pd
 from rapidfuzz.distance import Levenshtein
+from scipy.optimize import linear_sum_assignment
 
 from common import DATA, ROOT, TEXT
 
@@ -52,7 +54,7 @@ PRIMARY_FIELDS = ["taxon", "person", "locality", "institution", "date"]
 SEPARATE_FIELDS = ["vernacular"]   # scored, but never part of the primary all-fields number
 FIELDS = PRIMARY_FIELDS + SEPARATE_FIELDS
 LEVELS = ("exact", "lenient", "value")
-OCR_VERSIONS = ["legacy", "modern_dots-mocr"]
+OCR_VERSIONS = ["legacy", "modern_dots-mocr", "modern_dots-mocr_plain"]
 N_BOOT = 1000
 
 
@@ -118,38 +120,51 @@ def _ok(level: str, pr: dict, gr: dict) -> bool:
 
 
 def match_page(gold: pd.DataFrame, pred: pd.DataFrame) -> dict:
-    """One-to-one matching per field. Returns {field: {level: (tp, fp, fn)}}.
+    """One-to-one matching per field. Returns {field: {level: (tp, fp, fn, on_ambiguous)}}.
 
-    Each prediction takes the unused gold mention it overlaps most (not simply
-    the first one), so the result does not depend on row order.
-    Gold rows with adjudication == "ambiguous" are optional: a prediction
-    that matches one earns no credit and no penalty, and missing one is not
-    a false negative (ANNOTATION_GUIDE section 4).
+    One-to-one means: a gold mention is matched by at most one prediction and
+    a prediction matches at most one gold mention. Two predictions on the same
+    gold mention give one true positive and one false positive.
+
+    The assignment is optimal, not greedy (scipy's linear_sum_assignment): it
+    first maximises the number of matches with strict gold rows, then matches
+    with ambiguous rows, then total character overlap, so the result does not
+    depend on row order.
+
+    Gold rows with adjudication == "ambiguous" are left out of strict scoring
+    (ANNOTATION_GUIDE section 4): a prediction matched to one is neither a
+    true nor a false positive (counted in on_ambiguous), and an unmatched
+    ambiguous row is not a false negative.
     """
     out = {}
     for field in FIELDS:
         g = gold[gold.field == field].to_dict("records")
         p = pred[pred.field == field].to_dict("records")
+        placed = [pr for pr in p if pr["m_start"] is not None and not pd.isna(pr["m_start"])]
         out[field] = {}
         for level in LEVELS:
-            tp = fp = 0
-            used = set()
-            for pr in p:
-                if pr["m_start"] is None or pd.isna(pr["m_start"]):
-                    fp += 1
-                    continue
-                cands = [(min(pr["m_end"], gr["end"]) - max(pr["m_start"], gr["start"]), -gi)
-                         for gi, gr in enumerate(g) if gi not in used and _ok(level, pr, gr)]
-                if not cands:
-                    fp += 1
-                    continue
-                gi = -max(cands)[1]
-                used.add(gi)
-                if g[gi].get("adjudication", "") != "ambiguous":
-                    tp += 1
-            fn = sum(1 for gi, gr in enumerate(g)
-                     if gi not in used and gr.get("adjudication", "") != "ambiguous")
-            out[field][level] = (tp, fp, fn)
+            w = np.zeros((len(placed), len(g)))
+            for i, pr in enumerate(placed):
+                for j, gr in enumerate(g):
+                    if _ok(level, pr, gr):
+                        overlap = min(pr["m_end"], gr["end"]) - max(pr["m_start"], gr["start"])
+                        strict = gr.get("adjudication", "") != "ambiguous"
+                        w[i, j] = (1e9 if strict else 1e5) + overlap
+            tp = amb = 0
+            matched_gold = set()
+            if w.size:
+                rows_, cols_ = linear_sum_assignment(w, maximize=True)
+                for i, j in zip(rows_, cols_):
+                    if w[i, j] > 0:
+                        matched_gold.add(j)
+                        if g[j].get("adjudication", "") == "ambiguous":
+                            amb += 1
+                        else:
+                            tp += 1
+            fp = len(p) - tp - amb          # unplaced predictions are false positives too
+            fn = sum(1 for j, gr in enumerate(g)
+                     if j not in matched_gold and gr.get("adjudication", "") != "ambiguous")
+            out[field][level] = (tp, fp, fn, amb)
     return out
 
 
@@ -226,8 +241,9 @@ def score_run(run_id: str, gold_path, split: str) -> tuple[pd.DataFrame, pd.Data
                        "n_gold_ambiguous": int((gf.adjudication == "ambiguous").sum()),
                        "unaligned": int(pf.m_start.isna().sum()),
                        "not_located": int(pf.status.isin(["not_found", "invalid_evidence"]).sum())}
-                for level, (tp, fp, fn) in counts[field].items():
-                    row |= {f"{level}_tp": tp, f"{level}_fp": fp, f"{level}_fn": fn}
+                for level, (tp, fp, fn, amb) in counts[field].items():
+                    row |= {f"{level}_tp": tp, f"{level}_fp": fp, f"{level}_fn": fn,
+                            f"{level}_pred_on_ambiguous": amb}
                 rows.append(row)
     by_page = pd.DataFrame(rows)
 
@@ -242,7 +258,9 @@ def score_run(run_id: str, gold_path, split: str) -> tuple[pd.DataFrame, pd.Data
     summary = []
     for (book, version, condition, field), d in long.groupby(["book", "version", "condition", "field"]):
         rec = {"split": split, "book": book, "version": version, "condition": condition, "field": field,
-               "pages": len(d), "gold": int(d.n_gold.sum()), "gold_ambiguous": int(d.n_gold_ambiguous.sum()),
+               "pages": len(d), "gold": int(d.n_gold.sum()),
+               "gold_ambiguous_excluded": int(d.n_gold_ambiguous.sum()),
+               "pred_on_ambiguous_excluded": int(d.lenient_pred_on_ambiguous.sum()),
                "pred": int(d.n_pred.sum()), "unaligned": int(d.unaligned.sum()),
                "not_located": int(d.not_located.sum()),
                "too_few_to_compare": bool(d.n_gold.sum() < 10)}
