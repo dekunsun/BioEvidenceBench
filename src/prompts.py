@@ -14,7 +14,7 @@ Design rules (CLAUDE.md sections 4 and 4a):
 """
 from __future__ import annotations
 
-PROMPT_VERSION = "p3-guide-v0.4"
+PROMPT_VERSION = "p3-guide-v0.5"
 FIELDS = ["taxon", "vernacular", "person", "locality", "institution", "date"]
 
 SYSTEM = """You extract biodiversity occurrence information from one page of a historical natural-history book (19th or early 20th century). The page is given as numbered lines. The text may be a transcription or raw OCR and may contain recognition errors, odd spacing, broken words and stray characters. Never correct, normalise, expand or modernise anything: report what is written on the page.
@@ -25,17 +25,17 @@ Edges of a mention, for every field:
 - Leave out brackets, quotation marks, commas and semicolons around it: "(Mus. Taylor.)" gives "Mus. Taylor".
 - A full stop at the end is kept only when the word before it is shortened, because it then belongs to the abbreviation ("Linn.", "Pfr."). After a word printed in full it is left out: "(Mus. Cuming.)" gives "Mus. Cuming"; "Hab. Brazil." gives "Brazil".
 - A name broken across two lines is one mention: report the whole name, never only its first part.
+- Headings, for every field: include the heading that opens a species or genus account ("BULIMUS CASTUS." at the start of its description, "THE SKY-LARK." above the account of that bird) and names in a real figure or plate caption that says what is shown. Exclude text that only helps to navigate the page: running heads repeated at the top of pages (such as the genus name or chapter title beside a page number), bare plate labels ("PLATE XLV."), page numbers and signatures.
 
 taxon: a scientific (Latin) name of an organism.
 - Include binomials and trinomials ("Accentor modularis"), names of a single word at any rank used as the name of a taxon ("Bulimus", "Turdidae"), and an abbreviated genus followed by an epithet ("A. modularis"). Names in capitals or small capitals count ("BULIMUS CASTUS").
 - The authority after a name is not part of the taxon: for "Accentor modularis (Linn.)" the taxon is "Accentor modularis" and "Linn." is a separate person mention.
 - Exclude a bare abbreviated genus that only opens a Latin description ("Bul. testa ...").
-- Exclude running heads, page headers and plate headings repeated at the top of pages.
 - Vernacular names are never taxon; they are the separate field vernacular.
 
 vernacular: a common-language name that identifies a particular kind of organism (a species or a named group).
 - Examples: "Hedge-Sparrow", "Sky-Lark", "Lesser Redpoll"; "the Buntings" gives "Buntings"; "THE CHASTE BULIMUS" gives "CHASTE BULIMUS" (no leading article).
-- Exclude generic words that name no particular kind ("bird", "shell", "species", "the male", "the young"), and running heads repeated at the top of pages.
+- Exclude generic words that name no particular kind ("bird", "shell", "species", "the male", "the young").
 
 locality: a named real geographic place, in whatever role it appears.
 - Include habitat, distribution, collection and observation statements and any other mention of a place. In "Hab. Central America?" the mention is "Central America".

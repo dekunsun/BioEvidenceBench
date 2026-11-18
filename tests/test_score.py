@@ -104,3 +104,13 @@ def test_strict_gold_is_preferred_over_ambiguous():
         {"field": "taxon", "start": 4, "end": 9, "text": "abbbb", "adjudication": ""}])
     p = _pred([("taxon", 0, 9, "aaaaabbbb", 0, 9)])
     assert match_page(gold, p)["taxon"]["lenient"] == (1, 0, 0, 0)
+
+
+def test_issue_regions_are_parsed_as_expert_offsets(tmp_path):
+    from score import load_issues
+    f = tmp_path / "issues.csv"
+    f.write_text("page_id,issue_type,field,full_text,frag1_start,frag1_end,frag2_start,frag2_end,notes\n"
+                 "8992612,non_contiguous,taxon,Alauda arvensis,10,16,40,48,caption between\n"
+                 "8992612,other,locality,Dover,90,95,,,\n")
+    assert load_issues(f) == {8992612: [(10, 16), (40, 48), (90, 95)]}
+    assert load_issues(None) == {}

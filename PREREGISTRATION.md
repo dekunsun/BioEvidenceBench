@@ -103,8 +103,9 @@ between 2025 and 2026, and ADEPT's asset script stopped matching them).
 
 | Item | Value |
 |---|---|
-| `guide_version` | v0.4 (or later, if labelling adds rules) |
-| `prompt_version` | `p3-guide-v0.4` |
+| `guide_version` | v0.5 (or later, if labelling adds rules) |
+| Gold files | SHA-256 of `gold_mentions_*.csv`, `annotation_issues_*.csv`, `gold_links_*.csv` at the freeze |
+| `prompt_version` | `p3-guide-v0.5` |
 | Output schema | `SCHEMA_G0`, `SCHEMA_G1` in `src/prompts.py` at the freeze commit |
 | Scorer | `src/score.py` and `src/locate.py` at the freeze commit |
 | Model configuration | per run `config.json`: model id, effort, max tokens, provider |
@@ -123,6 +124,17 @@ most one prediction and a prediction matches at most one gold mention; two predi
 gold mention count as one true positive and one false positive. Unit tests cover these cases.
 Both the number of ambiguous gold rows excluded and the number of predictions that fell on them
 are reported (`gold_ambiguous_excluded`, `pred_on_ambiguous_excluded`).
+
+**Guide v0.5 additions (Gloria, 2026-11-18).** (a) Non-contiguous text makes no gold row; it is
+listed in `gold/annotation_issues_<labeller>.csv`, and `score.py --issues` sets aside every
+prediction that touches a listed fragment (neither right nor wrong; counts reported as
+`pred_in_issue_region_excluded`). (b) Linking is correct only when `resolved` at the printed rank;
+`partial` (genus-only for a species name), `ambiguous` and `unresolved` are reported as separate
+counts and never added to species-level success. (c) The gold set is complete before unsealing:
+double labelling of 5 test pages, adjudication of every disagreement and `UNCLEAR` row, then the
+gold files' SHA-256 are written here. Corrections after unsealing go through independent review
+without model answers, are logged in `gold/gold_changes.csv`, and scores are reported for both
+the frozen and the corrected gold. (d) The prompt is `p3-guide-v0.5`.
 
 **Order of work (Gloria, 2026-11-18).** Dev results and this plan are reported first; the
 configuration is frozen; only then are the test pages run with the frozen prompt and unsealed.

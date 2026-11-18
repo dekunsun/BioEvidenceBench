@@ -2,9 +2,9 @@
 
 > 中文版在本文件下方：[跳到中文版](#标注规范中文版)。两个版本内容相同；如有出入，以英文版为准，并请指出来改正。
 
-**Version v0.4, 2026-11-18.** Written before any labelling. Gloria settled the nine open decisions
-and asked for the changes listed in the changelog. This version is the one the prompt (`p3`) and
-the gold set use. Later changes get a new version number and a changelog line; the gold CSV
+**Version v0.5, 2026-11-18.** Written before any labelling. Gloria settled the nine open decisions
+(v0.4) and asked for four further changes (v0.5); see the changelog. This version is the one the
+prompt (`p3`) and the gold set use. Later changes get a new version number and a changelog line; the gold CSV
 records the guide version of every row.
 
 ## Decision record (Gloria, 2026-11-18)
@@ -19,7 +19,7 @@ records the guide version of every row.
 | 6 | Titles (`Lord`, `Herr`, `Mr.`) | Never part of a `person` span | 2.4 |
 | 7 | Descriptive words before a place (`valley of the Amoor`) | Part-of-place words stay in; relative words stay out | 2.3 |
 | 8 | Same name, two roles on one page | Labelled by its role at that spot | 2.4, 2.5 |
-| 9 | Name broken across lines | One continuous span; non-contiguous cases flagged, not forced | 2.0.3 |
+| 9 | Name broken across lines | One continuous span; non-contiguous cases go in the issues file, not in the gold set | 2.0.3 |
 
 ## 0. Ground rules
 
@@ -51,7 +51,7 @@ The unit is a **mention**: one span of characters in the expert text, plus a fie
 | `field` | `taxon`, `vernacular`, `person`, `locality`, `institution` or `date` |
 | `text` | the span, copied exactly |
 | `qualifier` | localities only: the relative words left out of the span (`near`, `ten miles north of`). Empty otherwise. Recorded, not scored in V1 |
-| `notes` | free text; `UNCLEAR: …` for doubtful cases; `UNCERTAIN-IN-SOURCE` when the print itself hedges (e.g. a `?`); `NON-CONTIGUOUS: …` (2.0.3); `NO-YEAR` (2.6) |
+| `notes` | free text; `UNCLEAR: …` for doubtful cases; `UNCERTAIN-IN-SOURCE` when the print itself hedges (e.g. a `?`); `NO-YEAR` (2.6) |
 | `adjudication` | empty for a clear row. For a row that was `UNCLEAR`: `adjudicated` (decided; scored normally) or `ambiguous` (still open; left out of strict scoring). See section 4 |
 | `guide_version` | e.g. `v0.4` |
 
@@ -63,6 +63,23 @@ once. Either way, the checker confirms that `text == page[start:end]` for every 
 
 A page with no target entities still gets one row: `field` = `none`, `start`/`end` empty. This
 tells "labelled, nothing found" apart from "not labelled yet".
+
+**Annotation issues file.** Text that cannot be labelled as one clean span does not go in the gold
+file. It goes in `gold/annotation_issues_<labeller>.csv` (rule 2.0.3):
+
+| Column | Meaning |
+|---|---|
+| `page_id` | BHL PageID |
+| `issue_type` | `non_contiguous` (a name split by unrelated text), `reading_order` (text out of order), or `other` |
+| `field` | the field the entity would have had |
+| `full_text` | the whole name as it should read |
+| `frag1_start`, `frag1_end` | offsets of the first fragment |
+| `frag2_start`, `frag2_end` | offsets of the second fragment (empty if there is none) |
+| `notes` | what separates the fragments |
+
+The scorer ignores these regions completely: a model output that overlaps a listed fragment is
+neither right nor wrong, and nothing there counts as missed. The number of regions and of
+outputs set aside is reported.
 
 ## 2. Fields
 
@@ -96,9 +113,23 @@ it is tied to an event, and only dates of occurrences are labelled (2.6). So in
    fragment.
    **Exception: non-contiguous text.** If anything other than a hyphen, spaces and one line break
    sits between the two fragments (text from another column, a caption, a footnote, a page
-   number, a running head), do **not** stretch one span over it. Label the first fragment only,
-   write `NON-CONTIGUOUS: <the full name>` in notes, and set `adjudication` to `ambiguous`. A
-   wrong character range must never enter the gold set.
+   number, a running head), do **not** stretch one span over it, and do **not** label a fragment
+   as if it were the entity: a fragment is not a real mention. Make no gold row. Record the case
+   in the annotation issues file (section 1) with both fragment positions and the full name.
+   A wrong or partial character range must never enter the gold set.
+4. **Headings and page furniture (same rule for every field, `taxon` and `vernacular` alike).**
+   Label text that carries scientific content; do not label text that is only there for
+   navigating the page.
+   - **Label**: the heading that opens a species or genus account (`BULIMUS CASTUS.` at the start
+     of its description; `THE SKY-LARK.` above the account of that bird); names in a real plate
+     legend or figure caption that says what is shown (`Fig. 3. Bulimus castus`).
+   - **Do not label**: running heads repeated at the top of pages (`BULIMUS.` on every page of the
+     monograph; `THE JACKDAW` beside a page number); a bare plate label (`PLATE XLV.`); page
+     numbers, signatures, catchwords and other decoration.
+   - Test: would the page lose information about *which organism is treated here* if this text
+     were removed? An account heading or a caption: yes. A running head that repeats the genus
+     or the chapter: no.
+   - If you cannot tell which it is, label it and write `UNCLEAR: running head?` in notes.
 
 ### 2.1 `taxon`: scientific names
 
@@ -112,8 +143,8 @@ Do not label:
 - The authority after a name as part of the taxon: in `Accentor modularis (Linn.)` the taxon
   span is `Accentor modularis`; `Linn.` is a separate `person` mention (2.4).
 - A bare abbreviated genus that only opens a Latin diagnosis: `Bul. testâ subfusiformi…`.
-- Running heads, plate headings and other page furniture: the `BULIMUS.` printed at the top of
-  every page of the monograph.
+- Running heads and other page furniture (rule 2.0.4). A heading that opens a species account
+  *is* labelled.
 - Vernacular names: they are `vernacular` (2.2), never `taxon`.
 
 ### 2.2 `vernacular`: common names of organisms
@@ -138,9 +169,8 @@ Label:
 
 Do not label:
 - Generic words that name no particular kind: `bird`, `shell`, `species`, `the male`, `the young`.
-- Running heads and plate headings (same rule as `taxon`). **[DEFAULT]** A heading that opens a
-  species account is labelled; a running head repeated on every page is not. If you cannot tell
-  which it is, label it and write `UNCLEAR: running head?`.
+- Running heads and other page furniture (rule 2.0.4, the same rule as for `taxon`). A heading
+  that opens a species account *is* labelled.
 - Adjective uses inside another name (`Sparrow-Hawk` is one name, not `Sparrow` plus `Hawk`).
 
 ### 2.3 `locality`: a named geographic place
@@ -253,9 +283,10 @@ matching *and* be a synonym of an accepted name; one combined label could not sa
 | Column | Values | Meaning |
 |---|---|---|
 | `page_id`, `start`, `end`, `text` | | copied from the mention row |
-| `resolution_status` | `resolved` / `ambiguous` / `unresolved` | Did you settle which taxon the text means? `ambiguous`: several candidates remain (list them in notes). `unresolved`: no usable record |
+| `printed_rank` | `species` / `subspecies` / `genus` / `family` / … | Rank of the name as printed. `Alauda arvensis` is `species`; `Alauda` is `genus` |
+| `resolution_status` | `resolved` / `partial` / `ambiguous` / `unresolved` | `resolved`: you settled the taxon **at the printed rank**. `partial`: only a higher rank could be matched (a binomial matched to its genus). `ambiguous`: several candidates remain (list them in notes). `unresolved`: no usable record |
 | `match_method` | `exact` / `fuzzy` / `manual` | How the record was found: the printed string as is; a spelling variant; or your own research beyond string search |
-| `matched_rank` | `species` / `subspecies` / `genus` / `family` / … | Rank of the matched record. A binomial matched only at genus level is `genus` |
+| `matched_rank` | `species` / `subspecies` / `genus` / `family` / … | Rank of the matched record. A binomial matched only at genus level is `genus`, and its status is `partial`, never `resolved` |
 | `taxonomic_status` | `accepted` / `synonym` / `uncertain` | Status of the matched name in the source today |
 | `matched_usage_key` | GBIF key | The name record actually matched |
 | `accepted_usage_key` | GBIF key | The accepted taxon it belongs to (same as matched when `accepted`) |
@@ -265,26 +296,39 @@ matching *and* be a synonym of an accepted name; one combined label could not sa
 Leave the key columns empty when `resolution_status` is `unresolved`. Reeve's names are not
 linked in V1: historical molluscan names need a specialist.
 
+**How linking is counted.** A link is correct only when it is `resolved`, that is, at the printed
+rank. For names printed as species, results are reported as four separate counts: species-level
+correct, `partial` (genus or higher only), `ambiguous`, `unresolved`. A genus-only match for a
+species name is never added to the species-level success rate.
+
 ## 4. Adjudication, agreement and freezing
 
 **Unclear rows are not ground truth until resolved.** Before any scoring, every row with
 `UNCLEAR` in notes gets an `adjudication` value:
 - `adjudicated`: a decision was made (if the rule was missing, it is added to the guide as a new
   version). Scored like any other row.
-- `ambiguous`: reasonable labellers could differ, or the text is non-contiguous. Left out of
-  strict scoring: a prediction that matches it earns no credit and costs nothing, and missing it
-  is not an error. The number of such rows is reported.
+- `ambiguous`: reasonable labellers could differ. Left out of strict scoring: a prediction that
+  matches it earns no credit and costs nothing, and missing it is not an error. The number of
+  such rows is reported. (Non-contiguous text is not an `ambiguous` row; it goes in the
+  annotation issues file.)
 
 **Agreement check.** A second labeller labels 5 test pages independently with this guide, without
 seeing Gloria's labels. We report span-level agreement per field (exact and overlap) and discuss
 every disagreement. A disagreement is settled by adjudication: the gold row is corrected, or
 marked `ambiguous`, or the guide gets a clearer rule.
 
-**Freeze before unsealing.** Before any test output is unsealed, these are frozen and written
-into `PREREGISTRATION.md`: `guide_version`, `prompt_version`, the output schema, the scorer
-(code commit), and each model's configuration. After unsealing, disagreements may still be
-adjudicated by people, but scoring rules are never changed to improve a score. Any change made
-after unsealing is listed in the pre-registration's deviations log with its reason.
+**The gold set is finished before anything is unsealed.** The order is fixed: (1) Gloria labels;
+(2) the second labeller labels 5 test pages; (3) every disagreement and every `UNCLEAR` row is
+adjudicated; (4) the gold files are frozen (their SHA-256 goes into `PREREGISTRATION.md`);
+(5) only then is any test output unsealed. Frozen with the gold set: `guide_version`,
+`prompt_version`, the output schema, the scorer (code commit), and each model's configuration.
+
+**Corrections after unsealing.** If a real labelling mistake is found later, it is corrected by an
+independent review: the reviewer decides from the page and the guide, without looking at any model
+answer for that mention. The original label is kept. Each correction is one row in
+`gold/gold_changes.csv` (date, page, old row, new row, reason, reviewer, whether model output had
+been seen), the gold file gets a new version, and scores are reported for both the frozen and the
+corrected gold. Scoring rules are never changed to improve a score.
 
 ## Changelog
 
@@ -294,12 +338,13 @@ after unsealing is listed in the pre-registration's deviations log with its reas
 | v0.2 | 2026-11-18 | Entity types aligned with the NHM BHL prototype: `collector` replaced by `person` (every named person); new `institution`; `locality` covers every named place, not only occurrence statements. `date` unchanged. |
 | v0.3 | 2026-11-18 | Default answers for the span-edge questions found in the Opus p2 dev run: 2.0 on span edges; all titles treated like honorifics; part-of-place words stay in the locality span; `Mus. Adams` / `ADAMS, MS.` worked example. |
 | v0.4 | 2026-11-18 | Gloria's decisions on all nine questions. New field `vernacular`, scored separately (decision 1). New `qualifier` column for relative words (2). More in/out examples for place boundaries (7). Non-contiguous exception for names broken across lines (9). Fixed the `PFEIFFER … 1846` example and stated the mixed design: entity fields are general NER, `date` is event-bound; a month without a year counts when it belongs to a particular event. NHM statement reworded: types inspired by NHM, scores not comparable. Taxon linking split into resolution status, match method, matched rank and taxonomic status. New `adjudication` column and rules for unclear rows; dev and test discipline separated; freeze list before unsealing. No pages labelled yet. |
+| v0.5 | 2026-11-18 | Four changes asked for by Gloria. One heading rule for all fields (2.0.4): account headings and real captions are labelled, running heads and bare plate labels are not; `taxon` and `vernacular` now agree. Non-contiguous text makes no gold row; it is recorded in the annotation issues file and the scorer ignores those regions. Linking: new `printed_rank` and status `partial`; a genus-only match for a species name is never counted as species-level correct. Gold set (double labelling, adjudication, freeze) is finished before unsealing; later corrections go through independent review and `gold/gold_changes.csv`. No pages labelled yet. |
 
 ---
 
 # 标注规范（中文版）
 
-**版本 v0.4，2026-11-18。** 写于任何标注开始之前。Gloria 已经对九个待定问题做了决定，并提出了变更记录里列出的修改。提示词（`p3`）和 gold set 都以这一版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
+**版本 v0.5，2026-11-18。** 写于任何标注开始之前。Gloria 已经对九个待定问题做了决定（v0.4），之后又提出四处修改（v0.5），见变更记录。提示词（`p3`）和 gold set 都以这一版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
 
 ## 决定记录（Gloria，2026-11-18）
 
@@ -313,7 +358,7 @@ after unsealing is listed in the pre-registration's deviations log with its reas
 | 6 | 头衔（`Lord`、`Herr`、`Mr.`） | 一律不算进 `person` 片段 | 2.4 |
 | 7 | 地名前的描述词（`valley of the Amoor`） | 表示地点一部分的词留下；表示相对位置的词不算 | 2.3 |
 | 8 | 同一页上同一个名字有两种角色 | 按它在那个位置的角色标 | 2.4、2.5 |
-| 9 | 跨行断开的名字 | 标成一个连续片段；不连续的情况做标记，不硬凑 | 2.0.3 |
+| 9 | 跨行断开的名字 | 标成一个连续片段；不连续的情况记到问题表里，不进 gold set | 2.0.3 |
 
 ## 0. 基本原则
 
@@ -336,13 +381,27 @@ after unsealing is listed in the pre-registration's deviations log with its reas
 | `field` | `taxon`、`vernacular`、`person`、`locality`、`institution` 或 `date` |
 | `text` | 片段，原样抄写 |
 | `qualifier` | 只用于地点：没有算进片段的相对位置词（`near`、`ten miles north of`）。其他情况留空。只记录，V1 不评分 |
-| `notes` | 自由文本；拿不准的写 `UNCLEAR: …`；原文本身有保留（比如带 `?`）时写 `UNCERTAIN-IN-SOURCE`；另有 `NON-CONTIGUOUS: …`（2.0.3）和 `NO-YEAR`（2.6） |
+| `notes` | 自由文本；拿不准的写 `UNCLEAR: …`；原文本身有保留（比如带 `?`）时写 `UNCERTAIN-IN-SOURCE`；另有 `NO-YEAR`（2.6） |
 | `adjudication` | 清楚的行留空。曾经标过 `UNCLEAR` 的行填：`adjudicated`（已裁定，正常评分）或 `ambiguous`（仍有歧义，不纳入严格评分）。见第 4 节 |
 | `guide_version` | 例如 `v0.4` |
 
 **怎么找位置。** `data/sample/expert_view/<PageID>.txt` 每一行开头都是这一行起始字符的位置。一个词的位置 = 行起始位置 + 它在这一行里的列号（从 0 开始数）。你也可以把 `start` 和 `end` 留空，只填 `text`：运行 `python src/check_gold.py`，文字在页面上只出现一次时它会给出位置，出现多次时会列出所有位置让你选。不管哪种方式，检查脚本都会确认每一行都满足 `text == page[start:end]`。
 
 没有目标实体的页面也要写一行：`field` 填 `none`，`start`/`end` 留空。这样能区分"标过了，什么都没有"和"还没标"。
+
+**标注问题表。** 没法标成一个干净片段的文字不进 gold 文件，而是记到 `gold/annotation_issues_<标注人>.csv`（规则 2.0.3）：
+
+| 列 | 含义 |
+|---|---|
+| `page_id` | BHL PageID |
+| `issue_type` | `non_contiguous`（名字被无关文字隔开）、`reading_order`（文字顺序错乱）或 `other` |
+| `field` | 这个实体本来应该属于的字段 |
+| `full_text` | 完整的名字应该怎么读 |
+| `frag1_start`、`frag1_end` | 第一段的位置 |
+| `frag2_start`、`frag2_end` | 第二段的位置（没有就留空） |
+| `notes` | 两段之间隔着什么 |
+
+评分代码会完全忽略这些区域：模型输出和表里的某一段重叠时，既不算对也不算错，这里也不算漏。这类区域的数量和被搁置的模型输出数量会单独报告。
 
 ## 2. 字段
 
@@ -355,7 +414,12 @@ after unsealing is listed in the pre-registration's deviations log with its reas
 1. 片段从实体的第一个字符开始，到它的最后一个字符结束。外面的括号、引号、逗号、分号都不算：`(Mus. Taylor.)` 标成 `Mus. Taylor`。
 2. **末尾的句点。** 只有句点前的词是缩写形式时才保留，因为这时句点是缩写的一部分：`LINN.`、`Linn.`、`Pfr.`、`Gmel.`。前面是完整拼写的词时去掉，因为这时句点只是标点：`(Mus. Cuming.)` 标成 `Mus. Cuming`；`Achatina albolineata, Lamarck.` 标成 `Lamarck`；`Hab. Brazil.` 标成 `Brazil`。片段*内部*的句点一律保留（`Mus. Cuming`、`J. Smith`、`A. arvensis`）。分不清一个词是不是缩写时，去掉句点，并在备注里写 `UNCLEAR: abbreviation?`。
 3. **换行。** 因为普通断词或换行而跨行的名字是一个片段，从第一个字符到最后一个字符，中间的连字符和换行包括在内：`A. blak-` + `istoni` 是一个 `taxon`；`Ja‐` + `maica` 是一个 `locality`。不要只标第一段。
-   **例外：文字不连续。** 如果两段之间除了连字符、空格和一个换行之外还夹着别的东西（另一栏的文字、图注、脚注、页码、页眉），**不要**用一个片段把它们硬连起来。只标第一段，在备注里写 `NON-CONTIGUOUS: <完整的名字>`，并把 `adjudication` 设为 `ambiguous`。错误的字符范围绝不能进入 gold set。
+   **例外：文字不连续。** 如果两段之间除了连字符、空格和一个换行之外还夹着别的东西（另一栏的文字、图注、脚注、页码、页眉），**不要**用一个片段把它们硬连起来，也**不要**把其中一段当成实体来标：一个片段不是真正的提及。gold 里不写这一行，而是把它记到标注问题表（第 1 节），写上两段的位置和完整的名字。错误的或不完整的字符范围绝不能进入 gold set。
+4. **标题和版面元素（所有字段同一条规则，`taxon` 和 `vernacular` 一样）。** 承载科学内容的文字要标；只用来在页面上导航的文字不标。
+   - **要标**：物种或属的条目开头的标题（描述开头的 `BULIMUS CASTUS.`；某种鸟的条目上方的 `THE SKY-LARK.`）；真正的图版说明或图注里说明图中内容的名字（`Fig. 3. Bulimus castus`）。
+   - **不标**：每页顶部重复出现的页眉（专著每页顶上的 `BULIMUS.`；页码旁边的 `THE JACKDAW`）；光秃秃的图版编号（`PLATE XLV.`）；页码、印张记号、接页词等装饰性内容。
+   - 判断方法：去掉这段文字，页面会不会丢掉"这里讲的是哪种生物"的信息？条目标题和图注：会。只是重复属名或章节名的页眉：不会。
+   - 分不清是哪一种时，先标上，并在备注里写 `UNCLEAR: running head?`。
 
 ### 2.1 `taxon`：学名
 
@@ -368,7 +432,7 @@ after unsealing is listed in the pre-registration's deviations log with its reas
 不标：
 - 名字后面的命名人不算在学名里：`Accentor modularis (Linn.)` 中，学名片段是 `Accentor modularis`；`Linn.` 另外标成一个 `person`（2.4）。
 - 只是用来开头一段拉丁文描述的单独缩写属名：`Bul. testâ subfusiformi…`。
-- 页眉、图版标题等版面元素：比如专著每页顶部印的 `BULIMUS.`。
+- 页眉等版面元素（规则 2.0.4）。物种条目开头的标题*要*标。
 - 俗名：它们是 `vernacular`（2.2），不是 `taxon`。
 
 ### 2.2 `vernacular`：生物的俗名
@@ -389,7 +453,7 @@ after unsealing is listed in the pre-registration's deviations log with its reas
 
 不标：
 - 不指特定类群的泛称：`bird`、`shell`、`species`、`the male`、`the young`。
-- 页眉和图版标题（和 `taxon` 的规则相同）。**[默认]** 物种条目开头的标题要标；每页重复出现的页眉不标。分不清是哪一种时，先标上，并写 `UNCLEAR: running head?`。
+- 页眉等版面元素（规则 2.0.4，和 `taxon` 是同一条规则）。物种条目开头的标题*要*标。
 - 另一个名字内部的修饰成分（`Sparrow-Hawk` 是一个名字，不是 `Sparrow` 加 `Hawk`）。
 
 ### 2.3 `locality`：有名字的地理位置
@@ -478,9 +542,10 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 | 列 | 取值 | 含义 |
 |---|---|---|
 | `page_id`、`start`、`end`、`text` | | 从提及那一行复制 |
-| `resolution_status` | `resolved` / `ambiguous` / `unresolved` | 你有没有确定原文指的是哪个分类单元？`ambiguous`：还剩几个候选（在备注里列出来）。`unresolved`：没有可用的记录 |
+| `printed_rank` | `species` / `subspecies` / `genus` / `family` / … | 原文印的名字是什么等级。`Alauda arvensis` 是 `species`；`Alauda` 是 `genus` |
+| `resolution_status` | `resolved` / `partial` / `ambiguous` / `unresolved` | `resolved`：你**在原文印的等级上**确定了分类单元。`partial`：只匹配到更高的等级（一个二名只匹配到它的属）。`ambiguous`：还剩几个候选（在备注里列出来）。`unresolved`：没有可用的记录 |
 | `match_method` | `exact` / `fuzzy` / `manual` | 记录是怎么找到的：按印刷的字符串原样找到；按拼写变体找到；或者靠字符串搜索以外的人工查证 |
-| `matched_rank` | `species` / `subspecies` / `genus` / `family` / … | 匹配到的记录的等级。一个二名只匹配到属，就填 `genus` |
+| `matched_rank` | `species` / `subspecies` / `genus` / `family` / … | 匹配到的记录的等级。一个二名只匹配到属，就填 `genus`，状态是 `partial`，不能填 `resolved` |
 | `taxonomic_status` | `accepted` / `synonym` / `uncertain` | 匹配到的名字今天在该来源里的状态 |
 | `matched_usage_key` | GBIF key | 实际匹配到的名称记录 |
 | `accepted_usage_key` | GBIF key | 它所属的有效分类单元（状态是 `accepted` 时和上一列相同） |
@@ -489,15 +554,19 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 
 `resolution_status` 是 `unresolved` 时，两个 key 列留空。V1 不关联 Reeve 的名字：历史上的软体动物名称需要专家判断。
 
+**关联结果怎么统计。** 只有 `resolved`（也就是在原文印的等级上确定）才算关联正确。对原文印成物种的名字，结果分四个数分别报告：物种级正确、`partial`（只到属或更高）、`ambiguous`、`unresolved`。物种名只匹配到属，绝不计入物种级的成功率。
+
 ## 4. 裁定、一致性检查和冻结
 
 **不清楚的行在处理之前不算标准答案。** 评分之前，备注里写了 `UNCLEAR` 的每一行都要填 `adjudication`：
 - `adjudicated`：已经做了决定（如果是缺规则，就把规则补进规范，出一个新版本）。和其他行一样评分。
-- `ambiguous`：合理的标注人可能有不同标法，或者文字不连续。不纳入严格评分：模型的预测和它匹配上，不加分也不扣分；漏掉它也不算错。这类行的数量会单独报告。
+- `ambiguous`：合理的标注人可能有不同标法。不纳入严格评分：模型的预测和它匹配上，不加分也不扣分；漏掉它也不算错。这类行的数量会单独报告。（文字不连续的情况不是 `ambiguous` 行，它记在标注问题表里。）
 
 **一致性检查。** 第二位标注人按这份规范独立标注 5 页测试页，不看 Gloria 的标签。我们按字段报告片段级的一致性（完全一致和重叠两种口径），并逐条讨论每一处分歧。分歧通过裁定解决：改正 gold 的那一行，或者标成 `ambiguous`，或者给规范补一条更清楚的规则。
 
-**解封前先冻结。** 任何测试输出解封之前，以下内容要冻结并写进 `PREREGISTRATION.md`：`guide_version`、`prompt_version`、输出格式（schema）、评分代码（提交号），以及每个模型的配置。解封之后，分歧仍然可以由人来裁定，但绝不为了提高分数而修改评分规则。解封后做的任何改动都要连同原因写进预注册的偏离记录。
+**gold set 要在解封之前全部完成。** 顺序是固定的：（1）Gloria 标注；（2）第二位标注人标 5 页测试页；（3）所有分歧和所有 `UNCLEAR` 行都裁定完；（4）冻结 gold 文件（把它们的 SHA-256 写进 `PREREGISTRATION.md`）；（5）这之后才解封测试输出。和 gold set 一起冻结的还有：`guide_version`、`prompt_version`、输出格式（schema）、评分代码（提交号），以及每个模型的配置。
+
+**解封之后的更正。** 如果之后确实发现了标注错误，要通过独立审核来更正：审核人只根据页面和规范来判断，不看模型对这个提及给出的答案。原来的标签保留。每一处更正在 `gold/gold_changes.csv` 里记一行（日期、页面、原来的行、新的行、原因、审核人、是否已经看过模型输出），gold 文件出一个新版本，并且同时报告冻结版和更正版两套分数。绝不为了提高分数而修改评分规则。
 
 ## 变更记录
 
@@ -507,3 +576,4 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 | v0.2 | 2026-11-18 | 实体类型对齐 NHM 的 BHL 原型：`collector` 改为 `person`（所有有名字的人）；新增 `institution`；`locality` 覆盖所有有名字的地点，不只是发生记录。`date` 不变。 |
 | v0.3 | 2026-11-18 | 为 Opus p2 开发集结果里发现的片段边界问题写默认答案：2.0 片段边界；所有头衔按敬称处理；表示地点一部分的词留在地点片段里；增加 `Mus. Adams` / `ADAMS, MS.` 示例。 |
 | v0.4 | 2026-11-18 | Gloria 对九个问题的决定。新增字段 `vernacular`，单独评分（决定 1）。新增 `qualifier` 列记录相对位置词（2）。地点边界增加更多正反例（7）。跨行名字增加"文字不连续"的例外（9）。修正 `PFEIFFER … 1846` 的例子，并写明混合设计：实体字段是一般的命名实体识别，`date` 和事件绑定；属于一次具体事件、没有年份的月份也算。NHM 的说法改为：类型参考 NHM，分数不可比。学名关联拆成解析状态、匹配方式、匹配等级和分类学状态。新增 `adjudication` 列和不清楚行的处理规则；开发页和测试页的纪律分开；解封前的冻结清单。尚未标注任何页面。 |
+| v0.5 | 2026-11-18 | Gloria 提出的四处修改。所有字段用同一条标题规则（2.0.4）：条目标题和真正的图注要标，页眉和光秃秃的图版编号不标；`taxon` 和 `vernacular` 现在一致。文字不连续的情况不写 gold 行，记到标注问题表里，评分时忽略这些区域。学名关联新增 `printed_rank` 和状态 `partial`；物种名只匹配到属，绝不算物种级正确。gold set（双人标注、裁定、冻结）要在解封之前完成；之后的更正要经过独立审核并记入 `gold/gold_changes.csv`。尚未标注任何页面。 |

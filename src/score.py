@@ -203,16 +203,31 @@ def load_gold(path) -> pd.DataFrame:
     return g
 
 
+def load_issues(path) -> dict:
+    """Regions the labeller could not label as one clean span (ANNOTATION_GUIDE 2.0.3).
+    Returns {page_id: [(start, end), ...]} in expert-text offsets."""
+    regions: dict = {}
+    if not path:
+        return regions
+    d = pd.read_csv(path, dtype=str, keep_default_na=False)
+    for r in d.itertuples():
+        for a_, b_ in ((r.frag1_start, r.frag1_end), (r.frag2_start, r.frag2_end)):
+            if str(a_).strip() and str(b_).strip():
+                regions.setdefault(int(r.page_id), []).append((int(float(a_)), int(float(b_))))
+    return regions
+
+
 def _to_int(x):
     """Offsets arrive as '353', '353.0' or '' (not located)."""
     return None if str(x).strip() == "" else int(float(x))
 
 
-def score_run(run_id: str, gold_path, split: str) -> tuple[pd.DataFrame, pd.DataFrame]:
+def score_run(run_id: str, gold_path, split: str, issues_path=None) -> tuple[pd.DataFrame, pd.DataFrame]:
     run_dir = RESULTS / run_id
     mentions = pd.read_csv(run_dir / f"{split}_mentions.csv", dtype=str, keep_default_na=False)
     mentions["page_id"] = mentions.page_id.astype(int)
     gold = load_gold(gold_path)
+    issues = load_issues(issues_path)
     pages = pd.read_csv(DATA / "sample_split.csv").query("split == @split")[["PageID", "book"]]
     missing = set(pages.PageID) - set(pd.read_csv(gold_path).page_id.astype(int))
     if missing:
@@ -231,6 +246,13 @@ def score_run(run_id: str, gold_path, split: str) -> tuple[pd.DataFrame, pd.Data
                 spans.append(map_span(cmap, a_, b_) if a_ is not None else None)
             pr["m_start"] = [sp[0] if sp else None for sp in spans]
             pr["m_end"] = [sp[1] if sp else None for sp in spans]
+            # Predictions that touch an annotation-issue region are set aside: neither right
+            # nor wrong. No gold row exists there, so nothing is counted as missed either.
+            in_issue = [sp is not None and any(sp[0] < b_ and a_ < sp[1] for a_, b_ in issues.get(pid, []))
+                        for sp in spans]
+            pr["in_issue"] = in_issue
+            set_aside = pr[pr.in_issue]
+            pr = pr[~pr.in_issue]
             g_page = gold[gold.page_id == pid]
             counts = match_page(g_page, pr)
             for field in FIELDS:
@@ -239,6 +261,8 @@ def score_run(run_id: str, gold_path, split: str) -> tuple[pd.DataFrame, pd.Data
                        "field": field, "n_pred": len(pf),
                        "n_gold": int((gf.adjudication != "ambiguous").sum()),
                        "n_gold_ambiguous": int((gf.adjudication == "ambiguous").sum()),
+                       "pred_in_issue_region": int((set_aside.field == field).sum()),
+                       "issue_regions": len(issues.get(pid, [])) if field == FIELDS[0] else 0,
                        "unaligned": int(pf.m_start.isna().sum()),
                        "not_located": int(pf.status.isin(["not_found", "invalid_evidence"]).sum())}
                 for level, (tp, fp, fn, amb) in counts[field].items():
@@ -261,7 +285,9 @@ def score_run(run_id: str, gold_path, split: str) -> tuple[pd.DataFrame, pd.Data
                "pages": len(d), "gold": int(d.n_gold.sum()),
                "gold_ambiguous_excluded": int(d.n_gold_ambiguous.sum()),
                "pred_on_ambiguous_excluded": int(d.lenient_pred_on_ambiguous.sum()),
-               "pred": int(d.n_pred.sum()), "unaligned": int(d.unaligned.sum()),
+               "pred": int(d.n_pred.sum()),
+               "pred_in_issue_region_excluded": int(d.pred_in_issue_region.sum()),
+               "unaligned": int(d.unaligned.sum()),
                "not_located": int(d.not_located.sum()),
                "too_few_to_compare": bool(d.n_gold.sum() < 10)}
         for level in LEVELS:
@@ -297,9 +323,10 @@ def main() -> None:
     ap.add_argument("--run", required=True, nargs="+")
     ap.add_argument("--gold", required=True)
     ap.add_argument("--split", choices=["dev", "test"], default="dev")
+    ap.add_argument("--issues", help="gold/annotation_issues_<labeller>.csv, if any")
     a = ap.parse_args()
     for run_id in a.run:
-        summary, by_page = score_run(run_id, a.gold, a.split)
+        summary, by_page = score_run(run_id, a.gold, a.split, a.issues)
         summary.to_csv(RESULTS / run_id / f"scores_{a.split}.csv", index=False)
         by_page.to_csv(RESULTS / run_id / f"scores_{a.split}_by_page.csv", index=False)
         cols = ["book", "version", "condition", "field", "gold", "pred", "unaligned",

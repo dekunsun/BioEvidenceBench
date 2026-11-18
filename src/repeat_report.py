@@ -73,11 +73,11 @@ def consistency(runs: list[str]) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def f1_by_repeat(runs: list[str], gold: str) -> tuple[pd.DataFrame, pd.DataFrame]:
+def f1_by_repeat(runs: list[str], gold: str, issues: str | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
     from score import score_run   # imported here so Part 1 works without gold or scipy
     parts = []
     for i, r in enumerate(runs, 1):
-        s, _ = score_run(r, gold, "dev")
+        s, _ = score_run(r, gold, "dev", issues)
         parts.append(s.assign(repeat=i, run=r))
     long = pd.concat(parts, ignore_index=True)
     keys = ["book", "version", "condition", "field"]
@@ -94,6 +94,7 @@ def main() -> None:
     ap.add_argument("--runs", nargs="+", required=True)
     ap.add_argument("--name", required=True)
     ap.add_argument("--gold")
+    ap.add_argument("--issues")
     a = ap.parse_args()
     if len(a.runs) < 2:
         raise SystemExit("Give at least two runs")
@@ -116,7 +117,7 @@ def main() -> None:
              cons[cons.field == "ALL"].drop(columns="field").to_markdown(index=False), "",
              "By field: `consistency.csv`.", ""]
     if a.gold:
-        long, summ = f1_by_repeat(a.runs, a.gold)
+        long, summ = f1_by_repeat(a.runs, a.gold, a.issues)
         long.to_csv(out / "f1_by_repeat.csv", index=False)
         summ.to_csv(out / "f1_summary.csv", index=False)
         show = summ[summ.field == "ALL_PRIMARY"][["book", "version", "condition", "gold", "value_F1_mean",
