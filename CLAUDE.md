@@ -82,10 +82,14 @@ Keep the core matrix small. Use 2 LLMs. Run the context ablation (single page vs
 
 Ship fast: the lean V1 below, no fixed delivery dates. Everything else is V2.
 
-**Working main question** (default until Gloria confirms): *What limits the reliability of scientific knowledge extraction from historical literature, and where should effort go: OCR, extraction, evidence verification, entity resolution, or human review?* The "OCR stops mattering below some CER" idea stays as an RQ1 hypothesis, not as a promised threshold.
+**Main question: unchanged** (Gloria, 2026-11-18): *When does improved OCR stop being the main bottleneck, and when do evidence verification and entity resolution become the limiting factors for trustworthy scientific data extraction?* Treat "when" as something to measure, not a promise that one threshold exists; "no single threshold" is a valid answer.
+
+**Do not build an OCR benchmark.** FineBooks already scores 26 OCR models on these pages, and NHM (Hiris Gu) has re-run the benchmark with Mistral OCR 3, the model NHM plans to use (Rod Page, BHL forum, 2026-08-12). Our contribution is what happens *downstream* of OCR.
+
+**Modern OCR source**: FineBooks' public per-page outputs, `hf://buckets/finebooks/bhl-ocr-outputs` (`src/fetch_modern_ocr.py`). Default row `dots-mocr` (lowest CER on the board, MIT licence). Its output is Markdown with one paragraph per line and no coordinates. Other rows of the same bucket give more OCR-quality levels *for the same page*, which is the cleanest way to vary CER while holding the page constant.
 
 **In V1**
-- **E1 OCR**: legacy OCR vs expert transcription (modern OCR when a model is available). Besides page CER, measure **entity-span CER** (CER inside gold spans) and **entity preservation** (gold name survives intact). Add **controlled perturbation** of the expert text, using the character confusions observed in real legacy OCR; report it separately from natural OCR.
+- **E1 OCR**: legacy OCR vs modern OCR (dots.mocr) vs expert transcription. Besides page CER, measure **entity-span CER** (CER inside gold spans) and **entity preservation** (gold name survives intact). Add **controlled perturbation** of the expert text, using the character confusions observed in real legacy OCR; report it separately from natural OCR.
 - **E2 extraction**: mention-level rule baseline run on the same text (gnfinder for names, regex for localities and dates); `page_name` (TaxonFinder) is a page-level baseline only. Two LLMs from different families.
 - **E3 evidence**: G0 (extraction only, code aligns values to the source afterwards) vs G1 (same schema plus evidence). In G1 the model returns `line` + a **verbatim quote**; code finds the quote in that line and slices the value from the source. A quote that does not match the source exactly is logged as a *silent correction*. Metrics: invalid evidence rate, unsupported claim rate, incorrect normalisation rate (not "hallucination rate", which is zero by construction when values are sliced).
 - **E4-lite entity resolution**: Butler taxon mentions only. Gold link type per mention: exact / synonym / fuzzy / higher_rank / none / ambiguous, plus GBIF usage key. GBIF match is a signal, not proof.

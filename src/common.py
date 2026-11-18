@@ -104,3 +104,20 @@ def normalize_for_cer(s: str) -> str:
 def collapse_ws(s: str) -> str:
     """Whitespace-only normalisation, for the stricter 'raw' CER."""
     return _WS.sub(" ", s).strip()
+
+
+_MD_HEAD = re.compile(r"^#{1,6}\s+", re.M)
+_MD_BOLD = re.compile(r"\*\*(.+?)\*\*", re.S)
+_MD_ITAL = re.compile(r"(?<![\w*])\*(?=\S)(.+?)(?<=\S)\*(?![\w*])", re.S)
+_HTML = re.compile(r"</?(?:br|sup|sub|i|b|em|strong|u|span|p)\b[^>]*>", re.I)
+
+
+def strip_markdown(s: str) -> str:
+    """Remove the Markdown that modern OCR models add (headings, **bold**,
+    *italic*, a few inline HTML tags) so CER compares characters, not markup.
+    A lone printed asterisk ("Those marked thus *") is kept, because the
+    italic pattern needs a matching pair around non-space text."""
+    s = _MD_HEAD.sub("", s)
+    s = _MD_BOLD.sub(r"\1", s)
+    s = _MD_ITAL.sub(r"\1", s)
+    return _HTML.sub("", s)
