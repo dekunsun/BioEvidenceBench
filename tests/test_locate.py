@@ -44,3 +44,32 @@ def test_g0_repeated_values_map_to_successive_occurrences():
     page = "Hab. Cuba.\nHab. Cuba."
     out = locate_all(page, "G0", [{"field": "locality", "value": "Cuba"}] * 2)
     assert [o["start"] for o in out] == [5, 16]
+
+
+LEGACY = "The bird of the valley of the \n Amoor is A. blak- \n istoni, and B. annu-\nlatus.\nHab. Ja- \n maica."
+
+
+def test_g0_layout_variants_are_found_not_hallucinations():
+    for v, want in [("valley of the Amoor", "valley of the \n Amoor"),
+                    ("A. blak- istoni", "A. blak- \n istoni"),
+                    ("A. blakistoni", "A. blak- \n istoni"),
+                    ("B. annulatus", "B. annu-\nlatus"),
+                    ("B. annu-\nlatus", "B. annu-\nlatus")]:
+        r = locate_all(LEGACY, "G0", [{"field": "taxon", "value": v}])[0]
+        assert r["status"] in ("exact", "layout_variant"), (v, r)
+        assert r["value"] == want, (v, r["value"])
+
+
+def test_line_labels_copied_by_the_model_are_removed_and_flagged():
+    r = locate_all(LEGACY, "G0", [{"field": "locality", "value": "Ja- \nL074| \nL075|  maica"}])[0]
+    assert r["had_line_label"] and r["status"] == "layout_variant" and r["value"] == "Ja- \n maica"
+
+
+def test_g1_cross_line_quote():
+    # cited line 2 is " Amoor is A. blak- "; the quote runs onto line 3
+    r = locate_all(LEGACY, "G1", [{"field": "taxon", "line": 2, "quote": "A. blakistoni"}])[0]
+    assert r["status"] == "cross_line" and r["value"] == "A. blak- \n istoni"
+
+
+def test_flatten_does_not_create_matches_across_unrelated_text():
+    assert locate_all(LEGACY, "G0", [{"field": "taxon", "value": "Amoor Hab."}])[0]["status"] != "exact"
