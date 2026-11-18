@@ -103,6 +103,8 @@ Ship fast: the lean V1 below, no fixed delivery dates. Everything else is V2.
 **Decisions after the first Opus run (Gloria, 2026-11-18)**
 - Entity types follow the NHM BHL prototype (BHL Day 2026 slides): `taxon`, `person`, `locality`, `institution`, plus our `date`. ANNOTATION_GUIDE v0.2, `PROMPT_VERSION = "p2-guide-v0.2"`. The first Opus runs (p1, `collector` field) are superseded; keep them as history.
 - Order: re-run Opus with p2, settle the guide defaults, fields, sample and scoring code on Opus FIRST; only then run Gemini 4 Carbon and Mistral OCR 3, so three models are not reworked. Gemini code waits on branch `gemini-provider` (not merged, $0 spent).
+- Pending prompt p3 (do together with Gloria's answers to the "Decisions needed before labelling" list at the top of ANNOTATION_GUIDE.md, then re-run Opus once): G1 should quote a name that breaks across lines in full, not only its first-line part.
+- Built 2026-11-18 night: rule baseline (`src/baseline_rules.py`, gnfinder v1.4.0 installed with `go install github.com/gnames/gnfinder@v1.4.0`), scorer (`src/score.py`), draft `PREREGISTRATION.md` (awaiting Gloria).
 - The project is for learning evals from NHM and FineBooks, not for novelty. NHM's public repos: `NaturalHistoryMuseum/PKB` and `NaturalHistoryMuseum/planetary-knowledge-base` (reference tables, record linkage); the BHL-prototype pipeline code was not found in public repos (2026-11-18 search).
 
 **V2**: relation extraction, real human-review timing study with a reviewer who did not label gold, vision-language end-to-end baseline, multilingual books, a larger sample.

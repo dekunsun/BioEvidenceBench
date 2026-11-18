@@ -6,6 +6,33 @@ Defaults marked **[DEFAULT]** were chosen to get started; Gloria confirms or cha
 marked **[OPEN]** need a decision. Every change gets a line in the changelog at the bottom, and the
 gold CSV records the guide version it used.
 
+## Decisions needed before labelling (Gloria)
+
+Collected 2026-11-18 from the guide and from the Opus p2 run on dev pages. Each one changes what
+counts as a correct span, so settle them before labelling; then the prompt is updated once (p3)
+and Opus is re-run once (about $1.30).
+
+1. **Vernacular names** (`Hedge-Sparrow`, `THE CHASTE BULIMUS`): label as `taxon`, as a separate
+   field, or not at all? Default: not at all.
+2. **Relative words in localities** (`near Dover`): drop `near` from the span? Default: drop it.
+3. **Month-only phenology** (`arrives in April`): a `date`? Default: no.
+4. **Journal titles** (`Pro. Zool. Soc.`): an `institution`? Default: no.
+5. **A full stop that ends an abbreviation** (`Mus. Cuming.`, `LINN.`): inside the span or not?
+   The value score ignores edge punctuation; only the exact-span score is affected. Suggested:
+   include a full stop that belongs to an abbreviation (`LINN.`), exclude a sentence-ending one
+   (`Mus. Cuming`).
+6. **Titles other than Mr./Dr./Capt.** (`Lord Lilford`, `Herr Gätke`): part of the person span?
+   Suggested: treat like honorifics, span `Lilford`.
+7. **Descriptive words before a place** (`valley of the Amoor`): span `Amoor` or the whole phrase?
+   The guide now says a place with its narrowing parts is one span (`north coast of Norfolk`), so
+   by that rule the whole phrase. Confirm.
+8. **Same name in two roles on one page** (`Mus. Adams` = institution; `ADAMS, MS.` = person, a
+   manuscript source): label each by its role, as the guide says. Add as an example? Suggested: yes.
+
+Known prompt fix for p3 (not a guide question): the G1 prompt told the model to quote only the
+first line of a name broken across lines, which truncates `A. blak-|istoni` to `A. blak-`. The
+locator now handles quotes that run across lines, so p3 will ask for the whole name.
+
 ## 0. Ground rules
 
 1. **Label before you look.** Do not open any model output for a page before your gold labels for
