@@ -1,5 +1,7 @@
 # Annotation guide
 
+> 中文版在本文件下方：[跳到中文版](#标注规范中文版)。两个版本内容相同；如有出入，以英文版为准，并请指出来改正。
+
 **Version v0.3, draft, 2026-11-18.** Written before any labelling. v0.2 aligned the entity types with the
 NHM BHL prototype (see section 2); v0.3 writes default answers for the span-boundary questions found in
 the Opus p2 dev run (decisions 5-9 below).
@@ -228,3 +230,155 @@ disagreement. A disagreement caused by the guide leads to a rule change and a ne
 | v0.1 | 2026-11-18 | First draft. No pages labelled yet. |
 | v0.2 | 2026-11-18 | Entity types aligned with the NHM BHL prototype: `collector` replaced by `person` (every named person); new `institution`; `locality` covers every named place, not only occurrence statements. `date` unchanged. No pages labelled yet. |
 | v0.3 | 2026-11-18 | Default answers for decisions 5-9 (from the Opus p2 dev run): new 2.0 on span edges (full stop at the end kept only after a shortened word; names broken across lines are one span, every field); all titles treated like honorifics; descriptive part-of-place words stay in the locality span; `Mus. Adams` / `ADAMS, MS.` worked example. Decisions 1-4 still open. Prompt still `p2-guide-v0.2`; p3 waits until 1-4 are settled. No pages labelled yet. |
+
+---
+
+# 标注规范（中文版）
+
+**版本 v0.3，草稿，2026-11-18。** 写于任何标注开始之前。v0.2 把实体类型和 NHM 的 BHL 原型对齐（见第 2 节）；v0.3 为 Opus p2 在开发集上发现的片段边界问题写了默认答案（见下面第 5–9 条）。
+标 **[默认]** 的是为了先开始而选的做法，由 Gloria 确认或修改；标 **[待定]** 的需要做决定。每次修改都在文末的变更记录里加一行，gold CSV 里也记录所用的规范版本。
+
+## 标注前需要决定的事（Gloria）
+
+2026-11-18 从规范本身和 Opus p2 的开发集结果中整理。每一条都会改变"什么片段算对"，所以要在标注前定下来；定好后提示词只改一次（p3），Opus 只重跑一次（约 $1.30）。
+
+第 1–4 条还没定。第 5–9 条在 v0.3 里已经写了 **[默认]** 答案（第 2.0–2.4 节），由 Gloria 确认或修改。
+
+1. **英文俗名**（`Hedge-Sparrow`、`THE CHASTE BULIMUS`）：标成 `taxon`、单独设一个字段，还是不标？默认：不标。
+2. **地点里的相对位置词**（`near Dover`）：片段里去掉 `near` 吗？默认：去掉。
+3. **只有月份的物候**（`arrives in April`）：算 `date` 吗？默认：不算。
+4. **期刊名**（`Pro. Zool. Soc.`）：算 `institution` 吗？默认：不算。
+5. **片段末尾的句点**（`Mus. Cuming.`、`LINN.`）。**[默认，v0.3]** 只有句点前的词是缩写时才保留（`LINN.`、`Pfr.`、`Mus.`）；前面是完整拼写的词时去掉（`Mus. Cuming`、`Lamarck`、`Brazil`）。见规则 2.0.2。按值评分时忽略首尾标点，只影响"位置完全一致"这一级的分数。
+6. **Mr./Dr./Capt. 以外的头衔**（`Lord Lilford`、`Herr Gätke`）。**[默认，v0.3]** 所有头衔都按敬称处理：片段是 `Lilford`、`Gätke`，头衔写进备注。见规则 2.3。
+7. **地名前的描述词**（`valley of the Amoor`）。**[默认，v0.3]** 整个短语都算，沿用已有的"缩小范围的部分算在地名里"规则（`north coast of Norfolk`）。表示地点*一部分*的词留在片段里；表示*相对于*这个地点的位置的词不算（见第 2 条）。见规则 2.2。
+8. **同一页上同一个名字有两种角色**（`Mus. Adams.` 是机构；`ADAMS, MS.` 是人，指手稿出处）。**[默认，v0.3]** 按各自的角色分别标；已在 2.3 和 2.4 中加了示例。
+9. **跨行断开的名字**（`A. blak-|istoni`、`Ja‐|maica`）。**[默认，v0.3]** 所有字段都标成一个片段，从整个名字的第一个字符到最后一个字符，中间的连字符和换行都包括在内。见规则 2.0.3。模型输出如果只覆盖第一段，就不算"位置完全一致"；在"位置重叠"这一级算不算对，是 `PREREGISTRATION.md` 里的评分决定，不是标注规则。
+
+p3 已知要修的提示词问题（不是规范问题）：G1 的提示词让模型对跨行断开的名字只引用第一行的部分，结果 `A. blak-|istoni` 被截成了 `A. blak-`。定位代码现在已经能处理跨行引文，所以 p3 会要求模型引用完整的名字（与第 9 条一致）。
+
+## 0. 基本原则
+
+1. **先标注，后看输出。** 一页的 gold 标签定稿之前，不要打开这一页的任何模型输出。所有测试页都必须这样；开发页能做到最好。
+2. **在专家转录上标注**，不是在旧 OCR 上：`data/sample/expert_view/<PageID>.txt`（在仓库里，GitHub 上就能看）。版式或斜体有疑问时可以看扫描图（`data/sample_split.csv` 里的 `bhl_url` 链接），但标签始终指向专家转录的文字。
+3. **按印刷原样标。** 片段照原样抄：古旧拼法、连字、缩写、断词都保留。不要在片段里改正、展开或现代化。
+4. **每个标注人一个文件**：`gold/gold_mentions_<标注人>.csv`，从模板复制。
+5. 规则没覆盖到的情况，按你的最佳判断标，在 `notes` 里写 `UNCLEAR:` 和原因，然后继续。不清楚的情况会在下一版规范里变成规则。
+
+## 1. 一个标签是什么
+
+标注单位是一个**提及**（mention）：专家转录里的一段字符，加上字段类型。
+
+| 列 | 含义 |
+|---|---|
+| `page_id` | BHL PageID |
+| `start` | 第一个字符的位置，从 0 开始数 |
+| `end` | 最后一个字符*之后*的位置（Python 切片：`text[start:end]`） |
+| `field` | `taxon`、`person`、`locality`、`institution` 或 `date` |
+| `text` | 片段，原样抄写 |
+| `notes` | 自由文本；拿不准的写 `UNCLEAR: …`；原文本身就有保留（比如带 `?`）时写 `UNCERTAIN-IN-SOURCE` |
+| `guide_version` | 例如 `v0.3` |
+
+**怎么找位置。** `data/sample/expert_view/<PageID>.txt` 每一行开头都是这一行起始字符的位置。一个词的位置 = 行起始位置 + 它在这一行里的列号（从 0 开始数）。你也可以把 `start` 和 `end` 留空，只填 `text`：运行 `python src/check_gold.py`，文字在页面上只出现一次时它会给出位置，出现多次时会列出所有位置让你选。不管哪种方式，检查脚本都会确认每一行都满足 `text == page[start:end]`。
+
+没有目标实体的页面也要写一行：`field` 填 `none`，`start`/`end` 留空。这样能区分"标过了，什么都没有"和"还没标"。
+
+## 2. 字段
+
+实体类型沿用 NHM 的 BHL 原型（Hartley、Gu、Smith，BHL Day 2026：学名、人、地点、机构），这样我们的数字可以和他们的放在一起看。`date` 是我们另加的。`taxon`、`person`、`locality`、`institution` 是**命名实体提及**：不管它在页面上起什么作用（采集人、被引用的作者、命名人、分布描述……），每一次出现都要标。`date` 范围窄一些：只标发生日期（2.5）。
+
+### 2.0 片段边界（所有字段）
+
+1. 片段从实体的第一个字符开始，到它的最后一个字符结束。外面的括号、引号、逗号、分号都不算：`(Mus. Taylor.)` 标成 `Mus. Taylor`。
+2. **[默认，v0.3]** **末尾的句点。** 只有句点前的词是缩写形式时才保留，因为这时句点是缩写的一部分：`LINN.`、`Linn.`、`Pfr.`、`Gmel.`。前面是完整拼写的词时去掉，因为这时句点只是标点：`(Mus. Cuming.)` 标成 `Mus. Cuming`；`Achatina albolineata, Lamarck.` 标成 `Lamarck`；`Hab. Brazil.` 标成 `Brazil`。片段*内部*的句点一律保留（`Mus. Cuming`、`J. Smith`、`A. arvensis`）。分不清一个词是不是缩写时，去掉句点，并在备注里写 `UNCLEAR: abbreviation?`。
+3. **[默认，v0.3]** **换行。** 跨行断开的名字是一个片段，从第一个字符到最后一个字符，中间的连字符和换行包括在内：`A. blak-` + `istoni` 是一个 `taxon`；`Ja‐` + `maica` 是一个 `locality`。不要只标第一段。
+
+### 2.1 `taxon`：学名
+
+要标：
+- 二名和三名：`Accentor modularis`、`Bulimus castus`。
+- 用作任一等级分类单元名称的单名：`Bulimus`、`Turdidae`、`Coleoptera`。
+- 缩写属名*加*种加词：`A. modularis`、`Bul. castus`。
+- 任何大小写或字体都算：`BULIMUS CASTUS`（小型大写）也算。
+- 跨行断开的名字：一个片段，包括连字符和换行。
+
+不标：
+- 名字后面的命名人不算在学名里：`Accentor modularis (Linn.)` 中，学名片段是 `Accentor modularis`；`Linn.` 另外标成一个 `person`（2.3）。
+- 只是用来开头一段拉丁文描述的单独缩写属名：`Bul. testâ subfusiformi…`。
+- 页眉、图版标题等版面元素：比如专著每页顶部印的 `BULIMUS.`。
+- **[默认]** 英文俗名（`Hedge-Sparrow`、`THE CHASTE BULIMUS`）。**[待定]** 要不要标，比如作为单独字段？Butler 大多用英文名称呼鸟，所以这个决定对 Butler 的计数影响很大。
+
+### 2.2 `locality`：有名字的地理位置
+
+要标：
+- 文中任何有名字的真实地点，不管起什么作用：栖息地、分布、采集或观察记录，以及其他提到地点的地方，比如 `Key to the species of the Argentine Republic`。`Hab. Central America?` 标成 `Central America`，备注写 `UNCERTAIN-IN-SOURCE`。
+- 地点连同缩小范围的部分算一个片段：`Isle of Luzon, Philippine Islands`；`north coast of Norfolk`。**[默认，v0.3]** 这也包括表示地点一部分的描述词：`valley of the Amoor`、`slopes of the Atlas Mountains`、`South-east Mongolia`。判断标准：这些词指的是地点本身的一部分（海岸、河谷、山坡、河口、内陆、某个方位的部分）。表示*相对于*这个地点的位置的词（`near`、`north of`、`about ten miles from`）不算进去，见下一组。
+- 正文中的分布描述：`it breeds in Scotland` 中，片段是 `Scotland`。
+- 几个不同的地点分别标：`Cornwall and Devon` 是两个。
+
+不标：
+- 开头的介词和相对位置词：`near Dover` 中，片段是 `Dover`，备注写 `near`。**[待定]** 相对位置词（"near"、"about"、"north of"）保留还是去掉？
+- 没有地名的生境类型：`woods`、`marshes`、`on rocks`。
+- **[默认]** 文献引用里的地点（出版地）。
+- 属于机构名称一部分的地点：`Zoological Society of London` 是一个 `institution`，不是地点。
+- 形容词，比如 `British birds` 里的 `British`；标题或页眉里的地点。
+
+### 2.3 `person`：有名字的人
+
+要标：
+- 任何有名字的人：采集人和观察者（`shot by Mr. J. Smith` 标成 `J. Smith`），被引用的作者（`PFEIFFER, Pro. Zool. Soc.` 标成 `PFEIFFER`；`Giusti's (1997)` 标成 `Giusti`），以及命名人，缩写与否都算（`Linn.`、`Pfr.`、`Lamarck`）。
+- 首字母缩写属于名字（`J. Smith`）；敬称不属于（`Mr.`、`Dr.`、`Capt.`，写进备注）。**[默认，v0.3]** 其他头衔、军衔和称呼也一样：`Lord`、`Sir`、`Herr`、`Rev.`、`Prof.`、`Lieut.`、`Col.`。`Lord Lilford` 标成 `Lilford`，`Herr Gätke` 标成 `Gätke`，头衔写进备注。
+- **[默认，v0.3]** 按名字在那个位置的角色来标，即使同一个名字在同一页别处有另一种角色。Reeve 的某一页上，`ADAMS, MS.`（根据 Adams 的手稿描述的物种）标成人 `ADAMS`（`MS.` 不标），而 `(Mus. Adams.)` 标成机构 `Mus. Adams`，不另标人。
+- **[可选]** 在备注里写角色：`collector`、`author`、`authority`、`other`。对之后的分析有帮助，V1 不计分。
+
+不标：
+- 学名里的人名（`Bulimus Cumingii` 里的 `Cumingii`），或机构名里的人名（`Mus. Cuming` 里的 `Cuming`）。
+
+### 2.4 `institution`：有名字的博物馆、收藏或组织
+
+要标：
+- 博物馆、植物标本馆、私人收藏、学会、大学、考察队：`Mus. Cuming`、`Mus. Dennison`、`British Museum`、`Zoological Society of London`。
+- 按印刷的完整名称标，包括 `Mus.` 这样的缩写。收藏者名字后面的句点按规则 2.0.2 处理：`(Mus. Cuming.)` 标成 `Mus. Cuming`。
+- 以某个人命名、而这个人在同一页上也作为人出现的私人收藏：见 2.3 里 `Mus. Adams` / `ADAMS, MS.` 的例子。
+
+不标：
+- **[默认]** 文献引用里的期刊名（`Pro. Zool. Soc.`、`Ann. Mag. Nat. Hist.`）：它们指的是出版物，不是组织本身。**[待定]** 保留这个默认吗？
+- 没有名字的泛称（`the museum`、`a collection`）。
+
+### 2.5 `date`：发生的日期
+
+要标：
+- 采集、观察、捕获、筑巢或抵达的日期：`3rd May, 1890`；`May 1890`；`1890`；`1880–85` 这样的范围（一个片段）。
+- 按印刷的完整日期表达式标，包括序数后缀和中间的逗号。
+
+不标：
+- 文献引用里的出版年份：`PFEIFFER, Pro. Zool. Soc., 1846, p. 112` 里什么都不标。
+- 只描述一般物候、没有年份的季节和月份：`in spring`、`arrives in April`。**[待定]** 只有月份的物候（`arrives in April`）要不要标？默认：不标。
+- 年龄、时长、页码。
+
+Reeve 里日期预计会很少。这是一个发现，不是问题。
+
+## 3. 学名关联（E4-lite，只做 Butler）
+
+这是单独的一轮，在一页的提及标签定稿**之后**做，用单独的文件 `gold/gold_links_<标注人>.csv`。每个 `taxon` 提及一行：
+
+| 列 | 含义 |
+|---|---|
+| `page_id`、`start`、`end`、`text` | 从提及那一行复制 |
+| `match_type` | `exact`（这个名字就是现在的有效名）· `synonym`（是某个有效分类单元的旧名）· `fuzzy`（已知名字的拼写变体）· `higher_rank`（只能确定到属或科）· `none`（找不到记录）· `ambiguous`（有几个候选，在备注里列出来） |
+| `gbif_usage_key` | 这个名字所指分类单元的 GBIF key（`synonym` 填对应有效分类单元的） |
+| `accepted_name` | GBIF 里现在的有效名 |
+| `notes` | 查过的来源和理由 |
+
+在 gbif.org 上手动查（物种搜索）。用了其他来源也要记下来，比如 Avibase 或 IOC World Bird List。V1 不关联 Reeve 的名字：历史上的软体动物名称需要专家判断。
+
+## 4. 一致性检查
+
+第二位标注人按这份规范独立标注 5 页测试页，不看 Gloria 的标签。我们按字段报告片段级的一致性（完全一致和重叠两种口径），并逐条讨论每一处分歧。因规范不清而产生的分歧会变成规则修改和新版本。
+
+## 变更记录
+
+| 版本 | 日期 | 修改 |
+|---|---|---|
+| v0.1 | 2026-11-18 | 初稿。尚未标注任何页面。 |
+| v0.2 | 2026-11-18 | 实体类型对齐 NHM 的 BHL 原型：`collector` 改为 `person`（所有有名字的人）；新增 `institution`；`locality` 覆盖所有有名字的地点，不只是发生记录。`date` 不变。尚未标注任何页面。 |
+| v0.3 | 2026-11-18 | 为第 5–9 条写默认答案（来自 Opus p2 的开发集结果）：新增 2.0 片段边界（末尾句点只在缩写后保留；跨行断开的名字在所有字段都算一个片段）；所有头衔按敬称处理；表示地点一部分的描述词留在地点片段里；增加 `Mus. Adams` / `ADAMS, MS.` 示例。第 1–4 条仍待定。提示词仍是 `p2-guide-v0.2`；p3 等第 1–4 条定下来再改。尚未标注任何页面。中文版于同日加入本文件。 |
