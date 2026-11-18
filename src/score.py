@@ -38,6 +38,7 @@ Output: results/<run_id>/scores_<split>.csv, scores_<split>_by_page.csv,
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import unicodedata
 from functools import lru_cache
@@ -119,17 +120,41 @@ def _ok(level: str, pr: dict, gr: dict) -> bool:
     return overlap and norm_value(pr["value"]) == norm_value(gr["text"])
 
 
+def _placed(pr: dict) -> bool:
+    return pr["m_start"] is not None and not pd.isna(pr["m_start"])
+
+
+def assign_pairs(g: list[dict], p: list[dict], level: str) -> list[tuple[int, int]]:
+    """Optimal one-to-one assignment between predictions p and gold mentions g of ONE field.
+
+    Returns (prediction index, gold index) pairs. A gold mention appears in at
+    most one pair and so does a prediction. The assignment (scipy's
+    linear_sum_assignment) first maximises the number of matches with strict
+    gold rows, then matches with ambiguous rows, then total character overlap,
+    so it does not depend on row order.
+    """
+    placed = [i for i, pr in enumerate(p) if _placed(pr)]
+    w = np.zeros((len(placed), len(g)))
+    for a_, i in enumerate(placed):
+        for j, gr in enumerate(g):
+            if _ok(level, p[i], gr):
+                overlap = min(p[i]["m_end"], gr["end"]) - max(p[i]["m_start"], gr["start"])
+                strict = gr.get("adjudication", "") != "ambiguous"
+                w[a_, j] = (1e9 if strict else 1e5) + overlap
+    pairs = []
+    if w.size:
+        rows_, cols_ = linear_sum_assignment(w, maximize=True)
+        pairs = [(placed[a_], j) for a_, j in zip(rows_, cols_) if w[a_, j] > 0]
+    return pairs
+
+
 def match_page(gold: pd.DataFrame, pred: pd.DataFrame) -> dict:
     """One-to-one matching per field. Returns {field: {level: (tp, fp, fn, on_ambiguous)}}.
 
     One-to-one means: a gold mention is matched by at most one prediction and
-    a prediction matches at most one gold mention. Two predictions on the same
-    gold mention give one true positive and one false positive.
-
-    The assignment is optimal, not greedy (scipy's linear_sum_assignment): it
-    first maximises the number of matches with strict gold rows, then matches
-    with ambiguous rows, then total character overlap, so the result does not
-    depend on row order.
+    a prediction matches at most one gold mention (see assign_pairs). Two
+    predictions on the same gold mention give one true positive and one false
+    positive.
 
     Gold rows with adjudication == "ambiguous" are left out of strict scoring
     (ANNOTATION_GUIDE section 4): a prediction matched to one is neither a
@@ -140,30 +165,15 @@ def match_page(gold: pd.DataFrame, pred: pd.DataFrame) -> dict:
     for field in FIELDS:
         g = gold[gold.field == field].to_dict("records")
         p = pred[pred.field == field].to_dict("records")
-        placed = [pr for pr in p if pr["m_start"] is not None and not pd.isna(pr["m_start"])]
         out[field] = {}
         for level in LEVELS:
-            w = np.zeros((len(placed), len(g)))
-            for i, pr in enumerate(placed):
-                for j, gr in enumerate(g):
-                    if _ok(level, pr, gr):
-                        overlap = min(pr["m_end"], gr["end"]) - max(pr["m_start"], gr["start"])
-                        strict = gr.get("adjudication", "") != "ambiguous"
-                        w[i, j] = (1e9 if strict else 1e5) + overlap
-            tp = amb = 0
-            matched_gold = set()
-            if w.size:
-                rows_, cols_ = linear_sum_assignment(w, maximize=True)
-                for i, j in zip(rows_, cols_):
-                    if w[i, j] > 0:
-                        matched_gold.add(j)
-                        if g[j].get("adjudication", "") == "ambiguous":
-                            amb += 1
-                        else:
-                            tp += 1
+            pairs = assign_pairs(g, p, level)
+            amb = sum(1 for _, j in pairs if g[j].get("adjudication", "") == "ambiguous")
+            tp = len(pairs) - amb
+            matched = {j for _, j in pairs}
             fp = len(p) - tp - amb          # unplaced predictions are false positives too
             fn = sum(1 for j, gr in enumerate(g)
-                     if j not in matched_gold and gr.get("adjudication", "") != "ambiguous")
+                     if j not in matched and gr.get("adjudication", "") != "ambiguous")
             out[field][level] = (tp, fp, fn, amb)
     return out
 
@@ -184,6 +194,8 @@ def bootstrap_f1(per_page: pd.DataFrame, level: str, rng: np.random.Generator) -
     for _ in range(N_BOOT):
         idx = rng.integers(0, n, n)
         f1s.append(prf(tp[idx].sum(), fp[idx].sum(), fn[idx].sum())[2])
+    if np.all(np.isnan(f1s)):          # no gold mentions and no predictions in this group
+        return float("nan"), float("nan")
     return tuple(np.nanpercentile(f1s, [2.5, 97.5]))
 
 
@@ -223,9 +235,24 @@ def _to_int(x):
 
 
 def score_run(run_id: str, gold_path, split: str, issues_path=None) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Summary and per-page counts (see score_run_detail for the per-mention rows)."""
+    d = score_run_detail(run_id, gold_path, split, issues_path)
+    return d["summary"], d["by_page"]
+
+
+def score_run_detail(run_id: str, gold_path, split: str, issues_path=None) -> dict:
+    """Score one run. Returns a dict of DataFrames:
+      summary        one row per book x version x condition x field (+ ALL_PRIMARY)
+      by_page        the same counts per page (input of every bootstrap)
+      gold_outcomes  one row per gold mention x version x condition: was it matched
+                     at each level, and by which predicted value
+      pred_outcomes  one row per prediction: true positive / false positive / set aside
+    """
     run_dir = RESULTS / run_id
     mentions = pd.read_csv(run_dir / f"{split}_mentions.csv", dtype=str, keep_default_na=False)
     mentions["page_id"] = mentions.page_id.astype(int)
+    cfg_path = run_dir / "config.json"
+    cfg = json.loads(cfg_path.read_text()) if cfg_path.exists() else {}
     gold = load_gold(gold_path)
     issues = load_issues(issues_path)
     pages = pd.read_csv(DATA / "sample_split.csv").query("split == @split")[["PageID", "book"]]
@@ -233,7 +260,7 @@ def score_run(run_id: str, gold_path, split: str, issues_path=None) -> tuple[pd.
     if missing:
         raise SystemExit(f"Gold has no rows for {split} pages {sorted(missing)}")
 
-    rows = []
+    rows, gold_rows, pred_rows = [], [], []
     combos = mentions[["version", "condition"]].drop_duplicates().itertuples(index=False)
     for version, condition in combos:
         for pid, book in pages.itertuples(index=False):
@@ -255,6 +282,47 @@ def score_run(run_id: str, gold_path, split: str, issues_path=None) -> tuple[pd.
             pr = pr[~pr.in_issue]
             g_page = gold[gold.page_id == pid]
             counts = match_page(g_page, pr)
+            base = {"page_id": pid, "book": book, "version": version, "condition": condition}
+            for r in set_aside.itertuples():
+                pred_rows.append(base | {"field": r.field, "i": r.i, "value": r.value, "status": r.status,
+                                         "src_start": _to_int(r.start), "src_end": _to_int(r.end),
+                                         "m_start": r.m_start, "m_end": r.m_end, "outcome": "set_aside_issue_region",
+                                         "lenient": False, "exact": False, "value_ok": False, "gold_text": ""})
+            for field in FIELDS:
+                g = g_page[g_page.field == field].to_dict("records")
+                p = pr[pr.field == field].to_dict("records")
+                pairs = {lvl: assign_pairs(g, p, lvl) for lvl in LEVELS}
+                by_gold = {lvl: {j: i for i, j in pairs[lvl]} for lvl in LEVELS}
+                by_pred = {lvl: {i: j for i, j in pairs[lvl]} for lvl in LEVELS}
+                for j, gr in enumerate(g):
+                    li = by_gold["lenient"].get(j)
+                    gold_rows.append(base | {
+                        "field": field, "start": gr["start"], "end": gr["end"], "text": gr["text"],
+                        "adjudication": gr.get("adjudication", ""),
+                        "lenient": j in by_gold["lenient"], "exact": j in by_gold["exact"],
+                        "value_ok": j in by_gold["value"],
+                        "pred_value": p[li]["value"] if li is not None else "",
+                        "pred_status": p[li]["status"] if li is not None else ""})
+                for i, prd in enumerate(p):
+                    lj = by_pred["lenient"].get(i)
+                    on_amb = lj is not None and g[lj].get("adjudication", "") == "ambiguous"
+                    if on_amb:
+                        outcome = "set_aside_ambiguous_gold"
+                    elif i in by_pred["value"]:
+                        outcome = "tp_value"
+                    elif lj is not None:
+                        outcome = "fp_value_wrong"       # right place, wrong text (or boundary)
+                    elif not _placed(prd):
+                        outcome = "fp_unaligned"
+                    else:
+                        outcome = "fp_no_gold"
+                    pred_rows.append(base | {
+                        "field": field, "i": prd["i"], "value": prd["value"], "status": prd["status"],
+                        "src_start": _to_int(prd["start"]), "src_end": _to_int(prd["end"]),
+                        "m_start": prd["m_start"], "m_end": prd["m_end"], "outcome": outcome,
+                        "lenient": lj is not None and not on_amb, "exact": i in by_pred["exact"],
+                        "value_ok": i in by_pred["value"],
+                        "gold_text": g[lj]["text"] if lj is not None else ""})
             for field in FIELDS:
                 pf, gf = pr[pr.field == field], g_page[g_page.field == field]
                 row = {"page_id": pid, "book": book, "version": version, "condition": condition,
@@ -281,7 +349,9 @@ def score_run(run_id: str, gold_path, split: str, issues_path=None) -> tuple[pd.
     rng = np.random.default_rng(20261118)
     summary = []
     for (book, version, condition, field), d in long.groupby(["book", "version", "condition", "field"]):
-        rec = {"split": split, "book": book, "version": version, "condition": condition, "field": field,
+        rec = {"run": run_id, "split": split, "prompt_version": cfg.get("prompt_version", ""),
+               "model": cfg.get("model", ""), "book": book, "version": version, "condition": condition,
+               "field": field,
                "pages": len(d), "gold": int(d.n_gold.sum()),
                "gold_ambiguous_excluded": int(d.n_gold_ambiguous.sum()),
                "pred_on_ambiguous_excluded": int(d.lenient_pred_on_ambiguous.sum()),
@@ -296,7 +366,9 @@ def score_run(run_id: str, gold_path, split: str, issues_path=None) -> tuple[pd.
             rec |= {f"{level}_P": round(p, 3), f"{level}_R": round(r, 3), f"{level}_F1": round(f, 3),
                     f"{level}_F1_lo": round(lo, 3), f"{level}_F1_hi": round(hi, 3)}
         summary.append(rec)
-    return pd.DataFrame(summary), by_page
+    return {"summary": pd.DataFrame(summary), "by_page": by_page.assign(run=run_id),
+            "gold_outcomes": pd.DataFrame(gold_rows).assign(run=run_id),
+            "pred_outcomes": pd.DataFrame(pred_rows).assign(run=run_id)}
 
 
 def entity_span_cer(gold_path, split: str) -> pd.DataFrame:
@@ -311,7 +383,8 @@ def entity_span_cer(gold_path, split: str) -> pd.DataFrame:
             span = map_span(char_map(expert, ocr), g.start, g.end)
             ocr_text = ocr[span[0]:span[1]] if span else ""
             a, b = norm_value(ocr_text), norm_value(g.text)
-            rows.append({"page_id": int(g.page_id), "field": g.field, "version": v, "gold_text": g.text,
+            rows.append({"page_id": int(g.page_id), "field": g.field, "version": v,
+                         "gold_start": g.start, "gold_end": g.end, "gold_text": g.text,
                          "ocr_text": ocr_text, "aligned": span is not None,
                          "span_cer": round(Levenshtein.distance(a, b) / max(len(b), 1), 4),
                          "preserved": a == b})

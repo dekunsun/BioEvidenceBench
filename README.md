@@ -29,6 +29,11 @@ The project brief for contributors and Claude Code is in [`CLAUDE.md`](CLAUDE.md
 | The 22 sample pages' expert transcriptions, committed for labelling (CC-BY 3.0) | `src/export_sample_texts.py` | [`data/sample/`](data/sample/) |
 | Labelling guide and empty gold templates | — | [`ANNOTATION_GUIDE.md`](ANNOTATION_GUIDE.md), `gold/*_TEMPLATE.csv` |
 | Read-only gold checker (offsets, field names) | `src/check_gold.py` | `gold/<file>.checked.csv` |
+| Rule baseline (gnfinder v1.4.0 + regex) | `src/baseline_rules.py` | `results/<run>_rules-…/` |
+| LLM extraction, with sealed test outputs | `src/run_extraction.py`, `src/unseal.py` | `results/<run>/` |
+| Scoring: one-to-one matching, per field, page-bootstrap intervals | `src/score.py` | `scores_<split>.csv` |
+| Run-to-run noise across repeated dev runs | `src/repeat_report.py` | `results/repeats_<name>/` |
+| Pre-registered analyses: paired bootstrap, stage of loss, evidence counters, shadow evaluation | `src/analyze.py`, `src/analysis.py` | `results/analysis_<name>/` |
 
 ## Reproduce
 

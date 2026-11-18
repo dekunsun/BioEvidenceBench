@@ -182,9 +182,45 @@ reported as such, with the mention counts.
 list of authority abbreviations) and checked on dev pages. It is an in-domain baseline, and is
 described that way.
 
-**Still to build before the freeze commit**: paired page-bootstrap for differences between
-conditions; the per-stage loss table above; `evaluation_settings.json` and `discrepancies.csv`
-(section 8, rule 6); the RQ3 counters and the RQ4 flag.
+**Built (2026-11-18): `src/analysis.py`, run by `src/analyze.py`, unit-tested in
+`tests/test_analysis.py`.** These definitions are now part of the plan:
+
+- *Paired bootstrap* (`paired_bootstrap`): metric(A) - metric(B) on the pages both arms share, the
+  same pages drawn for both arms in each of 1,000 resamples (seed 20261118), percentile 95%
+  interval. `verdict` compares the interval with the rule from section 3: `supports` / `against` /
+  `inconclusive` (interval contains the threshold) / `no data` (no gold mentions in an arm).
+  Rules as coded: RQ1 modern - legacy value F1 `at_least 0.10` and expert - modern value F1
+  `less_than 0.05` (Reeve, primary fields together); RQ2 LLM - rule recall `greater_than 0` per
+  primary field and book, and LLM - rule value F1 `greater_than 0` for taxon on the expert text;
+  RQ3 recall(G1) - recall(G0) `greater_than -0.05` per book and text version. All other
+  comparisons in `comparisons.csv` are descriptive.
+- *Stage of loss* (`stage_loss`), one stage per strict gold mention: `lost_at_ocr` (the OCR text of
+  the span is not the gold text after value normalisation; `of_which_still_found` counts those
+  the model located anyway), `lost_at_extraction` (survived OCR, no lenient match),
+  `lost_at_value` (matched, text differs: boundary), `kept`. On the expert text nothing is lost
+  at OCR.
+- *RQ3 counters* (`evidence_counters`): unsupported outputs as defined in section 3, plus
+  `wrong_line`, `type_check_failed` and copied line labels, per book, version and condition.
+- *Type check* (`type_check`), deliberately loose: empty; longer than 100 characters; a `date`
+  with neither a year (1500-1999) nor a month; no letters; no capital letter (taxon, person,
+  locality, institution); a digit (taxon, vernacular).
+- *RQ4 flag* (`flag_auto_accept`), on the main LLM's G1 predictions: flagged when the second
+  model's G1 output has an overlapping span of the same field on the same page and text version
+  (one-to-one), the evidence status is `exact` or `cross_line`, and the type check passes.
+  Tiers for the risk-coverage curve: 0 flagged; 1 agreement only; 2 clean evidence only; 3 neither.
+  Correctness is value level. `rq4_summary` reports precision of flagged vs unflagged with a
+  paired bootstrap (rule `at_least 0.10`), errors inside the flagged set, and gold mentions
+  missed by both models. Two runs of the *same* model agree on about 99% of mentions (dev
+  repeats), so the flag is only informative with a second model from another provider.
+- *Request outcomes* (`outcome_table`): `ok` / `empty` / `api_error` / `parse_error` / `truncated`.
+- *Audit trail*: `evaluation_settings.json` (hashes of gold, issues and every mentions file,
+  code commit, matching and bootstrap settings) and `discrepancies.csv` (every false positive
+  and false negative, with empty `error_group` and `error_note` columns for section 5).
+
+**Still to build or run before the freeze commit**: the second LLM's run (Gemini 4 Carbon, code on
+branch `gemini-provider`); scoring of taxon links (`gold_links`); the controlled-perturbation
+experiment; the review-sheet CSV export; the Level 3 image-region demo. The first is needed for
+RQ4; the others can be declared out of the frozen plan if Gloria prefers.
 
 ## Deviations log
 
