@@ -100,6 +100,11 @@ Ship fast: the lean V1 below, no fixed delivery dates. Everything else is V2.
 
 **Next steps (handoff, 2026-11-18)**: the extraction pipeline is built and tested offline (`src/prompts.py`, `src/locate.py`, `src/run_extraction.py`, `src/unseal.py`). Gloria approved Claude Opus 5.5 and a total budget of $15–30. Order: (1) fetch texts, (2) pilot `--pages dev5 --mode sync --max-usd 5`, report cost per page, (3) full `--pages all --mode batch` with the pilot as `--estimate-from` and `--max-usd 15`, (4) never open or print sealed test outputs; Gloria labels next. The prompt uses ANNOTATION_GUIDE v0.1 defaults; if she changes them, bump `PROMPT_VERSION` and re-run. A second LLM from another provider is still to be chosen (needs its own key).
 
+**Decisions after the first Opus run (Gloria, 2026-11-18)**
+- Entity types follow the NHM BHL prototype (BHL Day 2026 slides): `taxon`, `person`, `locality`, `institution`, plus our `date`. ANNOTATION_GUIDE v0.2, `PROMPT_VERSION = "p2-guide-v0.2"`. The first Opus runs (p1, `collector` field) are superseded; keep them as history.
+- Order: re-run Opus with p2, settle the guide defaults, fields, sample and scoring code on Opus FIRST; only then run Gemini 4 Carbon and Mistral OCR 3, so three models are not reworked. Gemini code waits on branch `gemini-provider` (not merged, $0 spent).
+- The project is for learning evals from NHM and FineBooks, not for novelty. NHM's public repos: `NaturalHistoryMuseum/PKB` and `NaturalHistoryMuseum/planetary-knowledge-base` (reference tables, record linkage); the BHL-prototype pipeline code was not found in public repos (2026-11-18 search).
+
 **V2**: relation extraction, real human-review timing study with a reviewer who did not label gold, vision-language end-to-end baseline, multilingual books, a larger sample.
 
 ## 5. Metrics

@@ -22,7 +22,7 @@ import pandas as pd
 
 from common import DATA, TEXT
 
-FIELDS = {"taxon", "locality", "date", "collector", "none"}
+FIELDS = {"taxon", "person", "locality", "institution", "date", "none"}
 
 
 def check(path: Path) -> pd.DataFrame:

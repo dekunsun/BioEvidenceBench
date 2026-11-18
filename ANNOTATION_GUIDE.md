@@ -1,6 +1,7 @@
 # Annotation guide
 
-**Version v0.1, draft, 2026-11-18.** Written before any labelling and before any model output exists.
+**Version v0.2, draft, 2026-11-18.** Written before any labelling. v0.2 aligns the entity types with the
+NHM BHL prototype (see section 2).
 Defaults marked **[DEFAULT]** were chosen to get started; Gloria confirms or changes them. Items
 marked **[OPEN]** need a decision. Every change gets a line in the changelog at the bottom, and the
 gold CSV records the guide version it used.
@@ -27,10 +28,10 @@ The unit is a **mention**: one span of characters in the expert text, plus a fie
 | `page_id` | BHL PageID |
 | `start` | offset of the first character, counting from 0 |
 | `end` | offset just *after* the last character (Python slice: `text[start:end]`) |
-| `field` | `taxon`, `locality`, `date` or `collector` |
+| `field` | `taxon`, `person`, `locality`, `institution` or `date` |
 | `text` | the span, copied exactly |
 | `notes` | free text; `UNCLEAR: …` for doubtful cases; `UNCERTAIN-IN-SOURCE` when the print itself hedges (e.g. a `?`) |
-| `guide_version` | e.g. `v0.1` |
+| `guide_version` | e.g. `v0.2` |
 
 **Finding offsets.** Each line of `data/sample/expert_view/<PageID>.txt` starts with the offset where that line
 begins. Offset of a word = line offset + its column, counting from 0. You can also leave `start`
@@ -43,8 +44,11 @@ tells "labelled, nothing found" apart from "not labelled yet".
 
 ## 2. Fields
 
-The fields follow what a biodiversity database would keep from a page: **who was where, when**.
-That is why citation years and naming authorities are *not* labelled in V1.
+The entity types follow the NHM BHL prototype (Hartley, Gu & Smith, BHL Day 2026: taxa, people,
+localities, institutions), so our numbers can be read next to theirs. `date` is our addition.
+`taxon`, `person`, `locality` and `institution` are **named-entity mentions**: label every mention,
+whatever role it plays on the page (collector, cited author, naming authority, distribution
+statement...). `date` stays narrower: occurrence dates only (2.5).
 
 ### 2.1 `taxon`: scientific names
 
@@ -56,8 +60,8 @@ Label:
 - A name broken across a line: one span, including the hyphen and line break.
 
 Do not label:
-- The authority or citation after a name: in `Accentor modularis (Linn.)` the span is
-  `Accentor modularis` only.
+- The authority after a name as part of the taxon: in `Accentor modularis (Linn.)` the taxon
+  span is `Accentor modularis`; `Linn.` is a separate `person` mention (2.3).
 - A bare abbreviated genus that only opens a Latin diagnosis: `Bul. testâ subfusiformi…`.
 - Running heads, plate headings and other page furniture: the `BULIMUS.` printed at the top of
   every page of the monograph.
@@ -65,10 +69,11 @@ Do not label:
   be labelled, perhaps as a separate field? Butler names most birds in English, so this choice
   changes Butler's counts a lot.
 
-### 2.2 `locality`: where an organism lives, was found, or was seen
+### 2.2 `locality`: a named geographic place
 
 Label:
-- Place names in a habitat, distribution, collection or observation statement:
+- Any named real place in the text, in whatever role: habitat, distribution, collection or
+  observation statements, and other mentions such as `Key to the species of the Argentine Republic`.
   `Hab. Central America?` gives span `Central America`, with notes `UNCERTAIN-IN-SOURCE`.
 - A place with its narrowing parts as one span: `Isle of Luzon, Philippine Islands`;
   `north coast of Norfolk`.
@@ -79,10 +84,38 @@ Do not label:
 - Leading prepositions and relative words: in `near Dover` the span is `Dover`, with notes
   `near`. **[OPEN]** Keep or drop relative qualifiers ("near", "about", "north of")?
 - Habitat types with no place name: `woods`, `marshes`, `on rocks`.
-- Places in bibliographic citations, publishers, or museum names: `Mus. Cuming` is not a locality.
+- **[DEFAULT]** Places inside bibliographic citations (place of publication).
+- Places that are part of an institution's name: `Zoological Society of London` is one
+  `institution`, not a locality.
 - Adjectives like `British` in `British birds`, and places in titles or running heads.
 
-### 2.3 `date`: when an occurrence happened
+### 2.3 `person`: a named person
+
+Label:
+- Any named person: collectors and observers (`shot by Mr. J. Smith` gives `J. Smith`), cited
+  authors (`PFEIFFER, Pro. Zool. Soc.` gives `PFEIFFER`; `Giusti's (1997)` gives `Giusti`), and
+  naming authorities, abbreviated or not (`Linn.`, `Pfr.`, `Lamarck`).
+- Initials belong to the name (`J. Smith`); honorifics do not (`Mr.`, `Dr.`, `Capt.`; put them in notes).
+- **[OPTIONAL]** The role in notes: `collector`, `author`, `authority`, `other`. It helps later
+  analysis but is not scored in V1.
+
+Do not label:
+- A person's name inside a taxon name (`Cumingii` in `Bulimus Cumingii`) or inside an institution
+  name (`Cuming` in `Mus. Cuming`).
+
+### 2.4 `institution`: a named museum, collection or organisation
+
+Label:
+- Museums, herbaria, private collections, societies, universities, expeditions:
+  `Mus. Cuming`, `Mus. Dennison`, `British Museum`, `Zoological Society of London`.
+- The whole name as printed, including abbreviations such as `Mus.`.
+
+Do not label:
+- **[DEFAULT]** Journal titles in citations (`Pro. Zool. Soc.`, `Ann. Mag. Nat. Hist.`): they name a
+  publication, not the organisation. **[OPEN]** Keep this default?
+- Generic words without a name (`the museum`, `a collection`).
+
+### 2.5 `date`: when an occurrence happened
 
 Label:
 - Dates of collection, observation, capture, nesting or arrival: `3rd May, 1890`; `May 1890`;
@@ -96,18 +129,6 @@ Do not label:
 - Ages, durations, page numbers.
 
 Dates are expected to be rare in Reeve. That is a finding, not a problem.
-
-### 2.4 `collector`: who collected or observed it
-
-Label:
-- A person named as collecting, shooting, finding, observing or sending the specimen:
-  in `shot by Mr. J. Smith` the span is `J. Smith` (honorific excluded, notes `Mr.`).
-
-Do not label:
-- Naming authorities and cited authors: `Pfeiffer`, `Lamarck`, `Linn.`.
-- Collections, museums and owners: `Mus. Dennison`, `Mus. Cuming`. In Reeve, `Mus.` means the
-  specimen's collection, not who collected it. If the text says so explicitly
-  (`collected by Mr. Cuming`), label it.
 
 ## 3. Taxon linking (E4-lite, Butler only)
 
@@ -137,3 +158,4 @@ disagreement. A disagreement caused by the guide leads to a rule change and a ne
 | Version | Date | Change |
 |---|---|---|
 | v0.1 | 2026-11-18 | First draft. No pages labelled yet. |
+| v0.2 | 2026-11-18 | Entity types aligned with the NHM BHL prototype: `collector` replaced by `person` (every named person); new `institution`; `locality` covers every named place, not only occurrence statements. `date` unchanged. No pages labelled yet. |
