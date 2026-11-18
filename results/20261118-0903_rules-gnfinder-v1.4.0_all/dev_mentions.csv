@@ -57,19 +57,19 @@ istoni",exact,1163,1178,100.0
 8992612,legacy,RULE,12,locality,,Bermudas,False,Bermudas,exact,1727,1735,100.0
 8992612,modern_dots-mocr,RULE,0,locality,,North America,False,North America,exact,89,102,100.0
 8992612,modern_dots-mocr,RULE,1,locality,,Malayana,False,Malayana,exact,172,180,100.0
-8992612,modern_dots-mocr,RULE,2,taxon,,*Alauda arvensis,False,*Alauda arvensis,exact,236,252,100.0
+8992612,modern_dots-mocr,RULE,2,taxon,,Alauda arvensis,False,Alauda arvensis,exact,237,252,100.0
 8992612,modern_dots-mocr,RULE,3,locality,,Scandinavia,False,Scandinavia,exact,336,347,100.0
 8992612,modern_dots-mocr,RULE,4,locality,,North Africa,False,North Africa,exact,384,396,100.0
 8992612,modern_dots-mocr,RULE,5,locality,,Russia,False,Russia,exact,488,494,100.0
 8992612,modern_dots-mocr,RULE,6,locality,,Japan,False,Japan,exact,534,539,100.0
 8992612,modern_dots-mocr,RULE,7,taxon,,Palestine,False,Palestine,exact,687,696,100.0
 8992612,modern_dots-mocr,RULE,8,locality,,Madeira,False,Madeira,exact,732,739,100.0
-8992612,modern_dots-mocr,RULE,9,taxon,,*A. dulcivox*,False,*A. dulcivox*,exact,1101,1114,100.0
-8992612,modern_dots-mocr,RULE,10,taxon,,*A. cantarella*,False,*A. cantarella*,exact,1131,1146,100.0
-8992612,modern_dots-mocr,RULE,11,taxon,,*A. liopus*,False,*A. liopus*,exact,1148,1159,100.0
-8992612,modern_dots-mocr,RULE,12,taxon,,*A. gulgula*,False,*A. gulgula*,exact,1180,1192,100.0
-8992612,modern_dots-mocr,RULE,13,taxon,,*A. australis*,False,*A. australis*,exact,1194,1208,100.0
-8992612,modern_dots-mocr,RULE,14,taxon,,*A. wattersi*,False,*A. wattersi*,exact,1224,1237,100.0
+8992612,modern_dots-mocr,RULE,9,taxon,,A. dulcivox,False,A. dulcivox,exact,1102,1113,100.0
+8992612,modern_dots-mocr,RULE,10,taxon,,A. cantarella,False,A. cantarella,exact,1132,1145,100.0
+8992612,modern_dots-mocr,RULE,11,taxon,,A. liopus,False,A. liopus,exact,1149,1158,100.0
+8992612,modern_dots-mocr,RULE,12,taxon,,A. gulgula,False,A. gulgula,exact,1181,1191,100.0
+8992612,modern_dots-mocr,RULE,13,taxon,,A. australis,False,A. australis,exact,1195,1207,100.0
+8992612,modern_dots-mocr,RULE,14,taxon,,A. wattersi,False,A. wattersi,exact,1225,1236,100.0
 8992612,modern_dots-mocr,RULE,15,locality,,Bermudas,False,Bermudas,exact,1642,1650,100.0
 8992612,modern_dots-mocr,RULE,16,date,,1850,False,1850,exact,1655,1659,100.0
 8967047,expert,RULE,0,taxon,,BULIMUS,False,BULIMUS,exact,0,7,100.0
@@ -134,35 +134,35 @@ latus may",exact,2409,2427,100.0
 8967047,legacy,RULE,17,date,,1849,False,1849,exact,4251,4255,100.0
 8967047,modern_dots-mocr,RULE,0,taxon,,BULIMUS,False,BULIMUS,exact,2,9,100.0
 8967047,modern_dots-mocr,RULE,1,institution,,Mus. Taylor,False,Mus. Taylor,exact,43,54,100.0
-8967047,modern_dots-mocr,RULE,2,taxon,,**BULIMUS,False,**BULIMUS,exact,58,67,100.0
-8967047,modern_dots-mocr,RULE,3,taxon,,BIVITTATUS.**,False,BIVITTATUS.**,exact,68,81,100.0
-8967047,modern_dots-mocr,RULE,4,taxon,,BULIMUS.**,False,BULIMUS.**,exact,351,361,100.0
+8967047,modern_dots-mocr,RULE,2,taxon,,BULIMUS,False,BULIMUS,exact,60,67,100.0
+8967047,modern_dots-mocr,RULE,3,taxon,,BIVITTATUS,False,BIVITTATUS,exact,68,78,100.0
+8967047,modern_dots-mocr,RULE,4,taxon,,BULIMUS,False,BULIMUS,exact,351,358,100.0
 8967047,modern_dots-mocr,RULE,5,locality,,Brazil,False,Brazil,exact,675,681,100.0
-8967047,modern_dots-mocr,RULE,6,taxon,,*B. auris-leporis*,False,*B. auris-leporis*,exact,753,771,100.0
+8967047,modern_dots-mocr,RULE,6,taxon,,B. auris-leporis,False,B. auris-leporis,exact,754,770,100.0
 8967047,modern_dots-mocr,RULE,7,institution,,Mus. Taylor,False,Mus. Taylor,exact,791,802,100.0
-8967047,modern_dots-mocr,RULE,8,taxon,,**BULIMUS,False,**BULIMUS,exact,806,815,100.0
-8967047,modern_dots-mocr,RULE,9,taxon,,BULIMUS.**,False,BULIMUS.**,exact,1096,1106,100.0
+8967047,modern_dots-mocr,RULE,8,taxon,,BULIMUS,False,BULIMUS,exact,808,815,100.0
+8967047,modern_dots-mocr,RULE,9,taxon,,BULIMUS,False,BULIMUS,exact,1096,1103,100.0
 8967047,modern_dots-mocr,RULE,10,locality,,New Granada,False,New Granada,exact,1378,1389,100.0
 8967047,modern_dots-mocr,RULE,11,institution,,Mus. Cuming,False,Mus. Cuming,exact,1470,1481,100.0
-8967047,modern_dots-mocr,RULE,12,taxon,,**BULIMUS,False,**BULIMUS,exact,1485,1494,100.0
-8967047,modern_dots-mocr,RULE,13,taxon,,BOLIVIANUS.**,False,BOLIVIANUS.**,exact,1495,1508,100.0
-8967047,modern_dots-mocr,RULE,14,taxon,,BULIMUS.**,False,BULIMUS.**,exact,1864,1874,100.0
+8967047,modern_dots-mocr,RULE,12,taxon,,BULIMUS,False,BULIMUS,exact,1487,1494,100.0
+8967047,modern_dots-mocr,RULE,13,taxon,,BOLIVIANUS,False,BOLIVIANUS,exact,1495,1505,100.0
+8967047,modern_dots-mocr,RULE,14,taxon,,BULIMUS,False,BULIMUS,exact,1864,1871,100.0
 8967047,modern_dots-mocr,RULE,15,person,,PFEIFFER,False,PFEIFFER,exact,2217,2225,100.0
 8967047,modern_dots-mocr,RULE,16,date,,1846,False,1846,exact,2244,2248,100.0
 8967047,modern_dots-mocr,RULE,17,locality,,"Near Merida, Andes of Bolivia",False,"Near Merida, Andes of Bolivia",exact,2263,2292,100.0
 8967047,modern_dots-mocr,RULE,18,taxon,,Merida,False,Merida,exact,2268,2274,100.0
 8967047,modern_dots-mocr,RULE,19,person,,Pfeiffer,False,Pfeiffer,exact,2375,2383,100.0
 8967047,modern_dots-mocr,RULE,20,locality,,Pl,False,Pl,exact,2425,2427,100.0
-8967047,modern_dots-mocr,RULE,21,taxon,,*B. annulatus*,False,*B. annulatus*,exact,2453,2467,100.0
+8967047,modern_dots-mocr,RULE,21,taxon,,B. annulatus,False,B. annulatus,exact,2454,2466,100.0
 8967047,modern_dots-mocr,RULE,22,institution,,Mus. Taylor,False,Mus. Taylor,exact,2597,2608,100.0
-8967047,modern_dots-mocr,RULE,23,taxon,,**BULIMUS,False,**BULIMUS,exact,2612,2621,100.0
-8967047,modern_dots-mocr,RULE,24,taxon,,PATRICIUS.**,False,PATRICIUS.**,exact,2622,2634,100.0
-8967047,modern_dots-mocr,RULE,25,taxon,,BULIMUS.**,False,BULIMUS.**,exact,2920,2930,100.0
+8967047,modern_dots-mocr,RULE,23,taxon,,BULIMUS,False,BULIMUS,exact,2614,2621,100.0
+8967047,modern_dots-mocr,RULE,24,taxon,,PATRICIUS,False,PATRICIUS,exact,2622,2631,100.0
+8967047,modern_dots-mocr,RULE,25,taxon,,BULIMUS,False,BULIMUS,exact,2920,2927,100.0
 8967047,modern_dots-mocr,RULE,26,locality,,New Granada,False,New Granada,exact,3257,3268,100.0
 8967047,modern_dots-mocr,RULE,27,institution,,Mus. Taylor,False,Mus. Taylor,exact,3361,3372,100.0
-8967047,modern_dots-mocr,RULE,28,taxon,,**BULIMUS,False,**BULIMUS,exact,3376,3385,100.0
-8967047,modern_dots-mocr,RULE,29,taxon,,SPECTATUS.**,False,SPECTATUS.**,exact,3386,3398,100.0
-8967047,modern_dots-mocr,RULE,30,taxon,,BULIMUS.**,False,BULIMUS.**,exact,3721,3731,100.0
+8967047,modern_dots-mocr,RULE,28,taxon,,BULIMUS,False,BULIMUS,exact,3378,3385,100.0
+8967047,modern_dots-mocr,RULE,29,taxon,,SPECTATUS,False,SPECTATUS,exact,3386,3395,100.0
+8967047,modern_dots-mocr,RULE,30,taxon,,BULIMUS,False,BULIMUS,exact,3721,3728,100.0
 8967060,expert,RULE,0,taxon,,BULIMUS,False,BULIMUS,exact,151,158,100.0
 8967060,expert,RULE,1,locality,,Jamaica,False,Jamaica,exact,398,405,100.0
 8967060,expert,RULE,2,institution,,Mus. Adams,False,Mus. Adams,exact,639,649,100.0
@@ -287,28 +287,28 @@ H",exact,2672,2683,100.0
  growth of the l",exact,3842,3862,100.0
 8967147,modern_dots-mocr,RULE,0,taxon,,ACHATINA,False,ACHATINA,exact,2,10,100.0
 8967147,modern_dots-mocr,RULE,1,institution,,Mus. Cuming,False,Mus. Cuming,exact,41,52,100.0
-8967147,modern_dots-mocr,RULE,2,taxon,,**ACHATINA,False,**ACHATINA,exact,56,66,100.0
-8967147,modern_dots-mocr,RULE,3,taxon,,PHILIPPIANA.**,False,PHILIPPIANA.**,exact,67,81,100.0
-8967147,modern_dots-mocr,RULE,4,taxon,,ACHATINA.**,False,ACHATINA.**,exact,422,433,100.0
-8967147,modern_dots-mocr,RULE,5,taxon,,"(Glandina,)**",False,"(Glandina,)**",exact,821,834,100.0
+8967147,modern_dots-mocr,RULE,2,taxon,,ACHATINA,False,ACHATINA,exact,58,66,100.0
+8967147,modern_dots-mocr,RULE,3,taxon,,PHILIPPIANA,False,PHILIPPIANA,exact,67,78,100.0
+8967147,modern_dots-mocr,RULE,4,taxon,,ACHATINA,False,ACHATINA,exact,422,430,100.0
+8967147,modern_dots-mocr,RULE,5,taxon,,(Glandina,False,(Glandina,exact,821,830,100.0
 8967147,modern_dots-mocr,RULE,6,institution,,Mus. Dennison,False,Mus. Dennison,exact,1079,1092,100.0
-8967147,modern_dots-mocr,RULE,7,taxon,,**ACHATINA,False,**ACHATINA,exact,1096,1106,100.0
-8967147,modern_dots-mocr,RULE,8,taxon,,MONILIFERA.**,False,MONILIFERA.**,exact,1107,1120,100.0
-8967147,modern_dots-mocr,RULE,9,taxon,,ACHATINA.**,False,ACHATINA.**,exact,1420,1431,100.0
-8967147,modern_dots-mocr,RULE,10,taxon,,"(Glandina,)**",False,"(Glandina,)**",exact,1738,1751,100.0
+8967147,modern_dots-mocr,RULE,7,taxon,,ACHATINA,False,ACHATINA,exact,1098,1106,100.0
+8967147,modern_dots-mocr,RULE,8,taxon,,MONILIFERA,False,MONILIFERA,exact,1107,1117,100.0
+8967147,modern_dots-mocr,RULE,9,taxon,,ACHATINA,False,ACHATINA,exact,1420,1428,100.0
+8967147,modern_dots-mocr,RULE,10,taxon,,(Glandina,False,(Glandina,exact,1738,1747,100.0
 8967147,modern_dots-mocr,RULE,11,date,,1845,False,1845,exact,1769,1773,100.0
 8967147,modern_dots-mocr,RULE,12,institution,,Mus. Cuming,False,Mus. Cuming,exact,1987,1998,100.0
-8967147,modern_dots-mocr,RULE,13,taxon,,**ACHATINA,False,**ACHATINA,exact,2002,2012,100.0
-8967147,modern_dots-mocr,RULE,14,taxon,,ACHATINA.**,False,ACHATINA.**,exact,2246,2257,100.0
-8967147,modern_dots-mocr,RULE,15,taxon,,*Helix (Cochlicopa) oleacea*,False,*Helix (Cochlicopa) oleacea*,exact,2471,2499,100.0
+8967147,modern_dots-mocr,RULE,13,taxon,,ACHATINA,False,ACHATINA,exact,2004,2012,100.0
+8967147,modern_dots-mocr,RULE,14,taxon,,ACHATINA,False,ACHATINA,exact,2246,2254,100.0
+8967147,modern_dots-mocr,RULE,15,taxon,,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2472,2498,100.0
 8967147,modern_dots-mocr,RULE,16,taxon,,(Cochlicopa,False,(Cochlicopa,exact,2478,2489,100.0
-8967147,modern_dots-mocr,RULE,17,taxon,,*Glandina oleacea*,False,*Glandina oleacea*,exact,2530,2548,100.0
+8967147,modern_dots-mocr,RULE,17,taxon,,Glandina oleacea,False,Glandina oleacea,exact,2531,2547,100.0
 8967147,modern_dots-mocr,RULE,18,institution,,Mus. Cuming,False,Mus. Cuming,exact,2688,2699,100.0
-8967147,modern_dots-mocr,RULE,19,taxon,,**ACHATINA,False,**ACHATINA,exact,2703,2713,100.0
-8967147,modern_dots-mocr,RULE,20,taxon,,ACHATINA.**,False,ACHATINA.**,exact,3053,3064,100.0
-8967147,modern_dots-mocr,RULE,21,taxon,,*Voluta leucozonias*,False,*Voluta leucozonias*,exact,3409,3429,100.0
-8967147,modern_dots-mocr,RULE,22,taxon,,*Achatina albolineata*,False,*Achatina albolineata*,exact,3484,3506,100.0
-8967147,modern_dots-mocr,RULE,23,taxon,,*Helix,False,*Helix,exact,3518,3524,100.0
-8967147,modern_dots-mocr,RULE,24,taxon,,"(Cochlicopa,)*",False,"(Cochlicopa,)*",exact,3525,3539,100.0
-8967147,modern_dots-mocr,RULE,25,taxon,,*Polyphemus leucozonias*,False,*Polyphemus leucozonias*,exact,3564,3588,100.0
-8967147,modern_dots-mocr,RULE,26,taxon,,*Glandina leucozonias*,False,*Glandina leucozonias*,exact,3596,3618,100.0
+8967147,modern_dots-mocr,RULE,19,taxon,,ACHATINA,False,ACHATINA,exact,2705,2713,100.0
+8967147,modern_dots-mocr,RULE,20,taxon,,ACHATINA,False,ACHATINA,exact,3053,3061,100.0
+8967147,modern_dots-mocr,RULE,21,taxon,,Voluta leucozonias,False,Voluta leucozonias,exact,3410,3428,100.0
+8967147,modern_dots-mocr,RULE,22,taxon,,Achatina albolineata,False,Achatina albolineata,exact,3485,3505,100.0
+8967147,modern_dots-mocr,RULE,23,taxon,,Helix,False,Helix,exact,3519,3524,100.0
+8967147,modern_dots-mocr,RULE,24,taxon,,(Cochlicopa,False,(Cochlicopa,exact,3525,3536,100.0
+8967147,modern_dots-mocr,RULE,25,taxon,,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3565,3587,100.0
+8967147,modern_dots-mocr,RULE,26,taxon,,Glandina leucozonias,False,Glandina leucozonias,exact,3597,3617,100.0

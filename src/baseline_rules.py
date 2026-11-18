@@ -85,10 +85,13 @@ def find_taxa(path) -> list[dict]:
     data = json.loads(out.strip().splitlines()[-1])
     rows = []
     for n in data.get("names") or []:
-        start, end, verb = n["start"], n["end"], n["verbatim"]
-        # gnfinder includes trailing punctuation in `verbatim` ("castus."); drop it from the span.
-        stripped = verb.rstrip(" .,;:)")
-        rows.append({"field": "taxon", "start": start, "end": start + len(stripped)})
+        start, verb = n["start"], n["verbatim"]
+        # gnfinder's `verbatim` can carry trailing punctuation ("castus.") and, in Markdown
+        # text, emphasis marks ("*A. dulcivox*", "BULIMUS.**"); trim them from the span.
+        lead = len(verb) - len(verb.lstrip("*_ "))
+        core = verb[lead:].rstrip(" .,;:)*_")
+        if core:
+            rows.append({"field": "taxon", "start": start + lead, "end": start + lead + len(core)})
     return rows
 
 
