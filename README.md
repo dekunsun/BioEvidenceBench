@@ -6,9 +6,9 @@ It asks where the reliability of extracted scientific data is lost: in OCR, in e
 evidence verification, in entity resolution, or in human review. It also asks where the next
 unit of effort should go.
 
-**Status (2026-11-18): setup.** The data pipeline and the CER analysis are in. The page sample
-is *proposed* and waits for approval. No model has been run yet, and there is no gold set yet.
-The research design is under review (see the open questions below).
+**Status: ready for labelling.** The data pipeline, CER analysis, sample (22 pages, split into
+6 dev and 16 locked test pages) and annotation guide v0.1 are in. No model has been run, and there
+is no gold set yet. V1 scope is in [`CLAUDE.md` section 4a](CLAUDE.md).
 
 The project brief for contributors and Claude Code is in [`CLAUDE.md`](CLAUDE.md).
 
@@ -20,6 +20,9 @@ The project brief for contributors and Claude Code is in [`CLAUDE.md`](CLAUDE.md
 | Fetch BHL legacy OCR for every text page | `src/fetch_legacy_ocr.py` | `data/text/legacy/` (not committed) + SHA-256 manifest |
 | Per-page CER of legacy OCR vs the expert transcription | `src/compute_cer.py` | [`data/reports/02_cer_legacy.md`](data/reports/02_cer_legacy.md), `data/cer_legacy.csv` |
 | TaxonFinder counts per page + proposed stratified sample | `src/propose_sample.py` | [`data/reports/03_sample_proposal.md`](data/reports/03_sample_proposal.md), `data/sample_proposal.csv` |
+| Dev / locked-test split by page blocks | `src/split_sample.py` | `data/sample_split.csv` |
+| Labelling guide and empty gold templates | — | [`ANNOTATION_GUIDE.md`](ANNOTATION_GUIDE.md), `gold/*_TEMPLATE.csv` |
+| Read-only gold checker (offsets, field names) | `src/check_gold.py` | `gold/<file>.checked.csv` |
 
 ## Reproduce
 
@@ -30,6 +33,7 @@ python src/load_gt.py           # ~30 s
 python src/fetch_legacy_ocr.py  # ~30 s, 715 small files from BHL's S3 bucket
 python src/compute_cer.py       # ~10 s
 python src/propose_sample.py    # ~1-3 min the first time (queries page_name on Hugging Face)
+python src/split_sample.py
 pytest -q
 ```
 
