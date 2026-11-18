@@ -89,10 +89,10 @@ Ship fast: the lean V1 below, no fixed delivery dates. Everything else is V2.
 **Modern OCR source**: FineBooks' public per-page outputs, `hf://buckets/finebooks/bhl-ocr-outputs` (`src/fetch_modern_ocr.py`). Default row `dots-mocr` (lowest CER on the board, MIT licence). Its output is Markdown with one paragraph per line and no coordinates. Other rows of the same bucket give more OCR-quality levels *for the same page*, which is the cleanest way to vary CER while holding the page constant.
 
 **In V1**
-- **E1 OCR**: legacy OCR vs modern OCR (dots.mocr) vs expert transcription. Besides page CER, measure **entity-span CER** (CER inside gold spans) and **entity preservation** (gold name survives intact). Add **controlled perturbation** of the expert text, using the character confusions observed in real legacy OCR; report it separately from natural OCR.
+- **E1 OCR**: legacy OCR vs modern OCR (dots.mocr) vs expert transcription. Besides page CER, measure **entity-span CER** (CER inside gold spans) and **entity preservation** (gold name survives intact). (Controlled perturbation of the expert text was moved to V2 by Gloria, 2026-11-18.)
 - **E2 extraction**: mention-level rule baseline run on the same text (gnfinder for names, regex for localities and dates); `page_name` (TaxonFinder) is a page-level baseline only. Two LLMs from different families.
 - **E3 evidence**: G0 (extraction only, code aligns values to the source afterwards) vs G1 (same schema plus evidence). In G1 the model returns `line` + a **verbatim quote**; code finds the quote in that line and slices the value from the source. A quote that does not match the source exactly is logged as a *silent correction*. Metrics: invalid evidence rate, unsupported claim rate, incorrect normalisation rate (not "hallucination rate", which is zero by construction when values are sliced).
-- **E4-lite entity resolution**: Butler taxon mentions only. Gold link type per mention: exact / synonym / fuzzy / higher_rank / none / ambiguous, plus GBIF usage key. GBIF match is a signal, not proof.
+- **E4-lite entity resolution**: Butler taxon mentions only. Gold link schema is in ANNOTATION_GUIDE section 3 (`printed_rank`, `resolution_status`, keys, `evidence_source`); scored by `src/link_taxa.py` against a plain GBIF name lookup. GBIF match is a signal, not proof.
 - **RQ4**: shadow evaluation plus a **risk-coverage curve**. No review is skipped.
 - **Dev / locked test split** (`data/sample_split.csv`). Prompts, checks and thresholds are tuned on dev only. Write `PREREGISTRATION.md` (analysis plan and what would falsify each hypothesis) before touching the test set.
 - Report per book. Book and CER are confounded (Reeve has 2 low-CER pages, Butler 8 high-CER pages), so pooled F1-vs-CER is descriptive only.
@@ -112,8 +112,9 @@ Ship fast: the lean V1 below, no fixed delivery dates. Everything else is V2.
 - The 22 pages' legacy and modern OCR texts are committed under `data/sample/` (hashes equal the run inputs); `run_extraction.py` and `score.py` read them from there.
 - `score.py` now reports per field plus `ALL_PRIMARY`, treats ambiguous gold rows as optional, and refuses to score while `UNCLEAR` rows are unadjudicated. Section 5's "hallucination rate" and the section 4 schema (`collector`) are obsolete; section 4a and the guide win.
 - The project is for learning evals from NHM and FineBooks, not for novelty. NHM's public repos: `NaturalHistoryMuseum/PKB` and `NaturalHistoryMuseum/planetary-knowledge-base` (reference tables, record linkage); the BHL-prototype pipeline code was not found in public repos (2026-11-18 search).
+- **Scope decision (Gloria, 2026-11-18, "学名关联评分纳入，其余三项放 V2")**: taxon-link scoring is in the frozen plan and is built (`src/link_taxa.py`, tests in `tests/test_link_taxa.py`; outcomes `correct` / `wrong_taxon` / `partial_only` / `no_link` / `not_extracted` / `overclaim` / `correct_abstain` / `ambiguous_gold`; linker variants `printed` and `expanded`; GBIF responses cached in `results/linking_<name>/`). Moved to V2: controlled perturbation, the review-sheet CSV export (rule 6 in section 8), the Level 3 image-region demo. Before the freeze only the Gemini 4 Carbon run is still missing (RQ4).
 
-**V2**: relation extraction, real human-review timing study with a reviewer who did not label gold, vision-language end-to-end baseline, multilingual books, a larger sample.
+**V2**: controlled perturbation of the expert text, review-sheet CSV export, Level 3 image-region demo, relation extraction, real human-review timing study with a reviewer who did not label gold, vision-language end-to-end baseline, multilingual books, a larger sample.
 
 ## 5. Metrics
 

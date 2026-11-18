@@ -7,10 +7,11 @@ evidence verification, in entity resolution, or in human review. It also asks wh
 unit of effort should go.
 
 **Status: ready for labelling; no results yet.** In place: data pipeline, CER analysis, a
-22-page sample (6 dev, 16 locked test pages), annotation guide v0.4 (English and Chinese), rule
-baseline, LLM extraction pipeline, scorer, and a draft pre-registration. Claude Opus 5.5 has been
-run with earlier prompt versions (superseded; test-page outputs sealed and unopened); prompt `p3`
-is written and not yet run. There is no gold set yet, so there are no scores. Entity types are
+22-page sample (6 dev, 16 locked test pages), annotation guide v0.5 (English and Chinese), rule
+baseline, LLM extraction pipeline, scorer, the pre-registered analyses, taxon-link scoring, and a
+draft pre-registration. Claude Opus 5.5 has been run three times with prompt `p3` on the dev pages
+only; test pages wait for the frozen configuration (earlier test-page outputs are superseded,
+sealed and unopened). There is no gold set yet, so there are no scores. Entity types are
 inspired by NHM's BHL prototype, but our scores are not comparable to NHM's reported results.
 V1 scope is in [`CLAUDE.md` section 4a](CLAUDE.md).
 
@@ -34,6 +35,7 @@ The project brief for contributors and Claude Code is in [`CLAUDE.md`](CLAUDE.md
 | Scoring: one-to-one matching, per field, page-bootstrap intervals | `src/score.py` | `scores_<split>.csv` |
 | Run-to-run noise across repeated dev runs | `src/repeat_report.py` | `results/repeats_<name>/` |
 | Pre-registered analyses: paired bootstrap, stage of loss, evidence counters, shadow evaluation | `src/analyze.py`, `src/analysis.py` | `results/analysis_<name>/` |
+| Taxon linking (Butler): GBIF name lookup scored against the gold links, with cached responses | `src/link_taxa.py` | `results/linking_<name>/` |
 
 ## Reproduce
 
@@ -124,7 +126,7 @@ CLAUDE.md      project brief (read automatically by Claude Code)
 data/          page lists, CER table, sample proposal, reports (texts are fetched, not committed)
 gold/          Gloria's gold labels (empty until labelling starts)
 src/           scripts
-results/       one folder per model run (none yet)
+results/       one folder per model run or analysis
 memo/          one-page Research-to-Product memo (later)
 tests/         unit tests for the helpers
 ```

@@ -21,7 +21,7 @@
 2. **规范如果要改，在这一步改完。** 遇到规则没覆盖的情况，按最佳判断标，在 `notes` 里写 `UNCLEAR:` 加原因。标完开发集后把这些情况发给 Claude，统一补进规范。
 3. **再标 16 页测试集。** 测试页必须在看到任何模型输出之前标完。测试页还没有用新提示词跑过模型，旧的输出是封存的，不要打开 `results/` 下的 `sealed/` 文件。
 4. **请一位朋友独立标 5 页测试页**（建议：Butler 8992379、8992643；Reeve 8966802、8967281、8967290），不看你的标签。
-5. **Butler 的学名关联**（`gold_links_gloria.csv`）放在提及全部定稿之后。
+5. **Butler 的学名关联**（`gold_links_gloria.csv`）放在提及全部定稿之后。 评分脚本（`src/link_taxa.py`）要求每行都填 `printed_rank`；`resolution_status` 为 `resolved` 的行必须填 `accepted_usage_key`，否则脚本会停下来提示。`evidence_source` 请如实填：如果一个判断只靠在 gbif.org 上查到，就填 `GBIF`；另外查过 Avibase 或 IOC 就填它们。因为被评的关联方法本身就是查 GBIF，只靠 GBIF 定的金标准会让一致率偏高，报告里会按这一列分开列出。
 
 ## 每一页怎么标
 

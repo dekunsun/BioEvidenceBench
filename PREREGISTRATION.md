@@ -42,7 +42,7 @@ inconclusive.
 | RQ2 baseline | Lenient and value F1, LLM (G1) vs rule baseline, on each text version | LLM recall is higher for every field; the gap is largest for person and institution | Rule baseline F1 equal to or above the LLM for taxon on the expert text |
 | RQ3 evidence | Unsupported-output rate (G0: `not_found` + `fuzzy`; G1: `invalid_evidence` + `silent_correction`) and recall, G1 vs G0 | G1 lowers the unsupported rate and loses less than 0.05 recall | G1 recall lower by 0.05 or more with no drop in unsupported outputs |
 | RQ4 review | Precision of mentions flagged "proposed auto-accept" (both LLMs extract it at lenient level in the same version, and it is located `exact` or `cross_line`) vs the rest; risk-coverage curve; mentions both models missed | Flagged precision exceeds unflagged precision by at least 0.10 | No difference, or most flagged errors are shared by both models |
-| Entity resolution (Butler taxa) | Link-type accuracy against `gold/gold_links_gloria.csv` | To be specified once the linking step exists | — |
+| Entity resolution (Butler taxa only) | Link recall (correct / gold `resolved`) and link precision of a plain GBIF name lookup against `gold/gold_links_gloria.csv`, on the gold mention text and end to end per text version (`src/link_taxa.py`). `correct` needs the printed rank and the gold accepted taxon. | With Opus G1 on the expert and on the modern OCR text, more gold-resolved names are lost at linking (wrong taxon, genus only, no record) than before it (not extracted). Rule: share lost at linking minus share lost before it `greater_than 0`, paired page bootstrap. | The interval of that difference lies at or below 0: OCR and extraction still lose more names than linking does |
 
 Every outcome above is reportable, including all of them failing. The main question ("when does
 OCR stop being the bottleneck") is answered from RQ1 plus the error analysis, and "no single
@@ -108,6 +108,7 @@ between 2025 and 2026, and ADEPT's asset script stopped matching them).
 | `prompt_version` | `p3-guide-v0.5` |
 | Output schema | `SCHEMA_G0`, `SCHEMA_G1` in `src/prompts.py` at the freeze commit |
 | Scorer | `src/score.py` and `src/locate.py` at the freeze commit |
+| Linker | `src/link_taxa.py` at the freeze commit: GBIF `species/match` v1, name only (no rank or class hint), `clean_name` and `expand_abbreviation` as coded |
 | Model configuration | per run `config.json`: model id, effort, max tokens, provider |
 
 **Fields.** The primary number is `ALL_PRIMARY` (taxon, person, locality, institution, date).
@@ -217,10 +218,35 @@ described that way.
   code commit, matching and bootstrap settings) and `discrepancies.csv` (every false positive
   and false negative, with empty `error_group` and `error_note` columns for section 5).
 
-**Still to build or run before the freeze commit**: the second LLM's run (Gemini 4 Carbon, code on
-branch `gemini-provider`); scoring of taxon links (`gold_links`); the controlled-perturbation
-experiment; the review-sheet CSV export; the Level 3 image-region demo. The first is needed for
-RQ4; the others can be declared out of the frozen plan if Gloria prefers.
+- *Taxon linking* (`src/link_taxa.py`, Butler only; built 2026-11-18, smoke-tested against a
+  throwaway reference). The linker is a plain lookup of the name string in GBIF's
+  `species/match` service. Two variants are always reported: `printed` (the string as it
+  stands, after layout clean-up only) and `expanded` (an abbreviated genus such as `A. gulgula`
+  is first expanded from the nearest earlier binomial on the page). `expanded` is the primary
+  variant. One outcome per gold link row:
+  gold `resolved`: `correct` (record at the printed rank and its accepted key equals the gold
+  `accepted_usage_key`), `wrong_taxon`, `partial_only` (another rank, e.g. genus for a species
+  name; never correct), `no_link`, `not_extracted` (end to end only);
+  gold `partial` or `unresolved`: `overclaim` (a record at the printed rank was returned) or
+  `correct_abstain`; gold `ambiguous`: set aside and counted.
+  Link recall = correct / gold resolved. Link precision = correct / (correct + wrong_taxon +
+  overclaim). Two arms: the gold mention text (linking alone) and each run's extracted values
+  per text version (end to end; the name is the lenient-matched prediction's value). Results
+  are also split by name form, printed rank and `evidence_source`. Intervals: page bootstrap.
+  Raw GBIF responses are saved with their fetch time, because the backbone changes.
+  *Known limits.* (1) Where a gold link was itself decided on gbif.org, gold and linker share
+  a source and agreement is optimistic; the split by `evidence_source` shows how much rests on
+  it. (2) Three dev and seven test pages of one book: most intervals will be wide. (3) The
+  linker gets no class hint and no fuzzy threshold of ours; GBIF's own matching decides.
+
+**Scope decision (Gloria, 2026-11-18): "学名关联评分纳入，其余三项放 V2".** Taxon-link scoring
+is in the frozen plan (above). Moved to V2 and **not** part of this pre-registration: the
+controlled-perturbation experiment, the review-sheet CSV export, and the Level 3 image-region
+demo. E1 therefore rests on natural OCR only (legacy, modern, expert, plus the Markdown
+ablation) with entity-span CER and entity preservation; no claim about synthetic noise is made.
+
+**Still to run before the freeze commit**: the second LLM (Gemini 4 Carbon, code on branch
+`gemini-provider`), needed for RQ4. Everything else in this document is built.
 
 ## Deviations log
 
