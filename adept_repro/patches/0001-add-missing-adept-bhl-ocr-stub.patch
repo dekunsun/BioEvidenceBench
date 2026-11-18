@@ -1,0 +1,40 @@
+diff --git a/adept/bhl/ocr.py b/adept/bhl/ocr.py
+new file mode 100644
+index 0000000..a82b3ee
+--- /dev/null
++++ b/adept/bhl/ocr.py
+@@ -0,0 +1,34 @@
++"""
++BioEvidenceBench reproduction stub (NOT part of upstream ADEPT v1.0.0).
++
++Upstream `adept/tasks/description/bhl/text.py` imports `adept.bhl.ocr.BHLOCR`,
++but the module is missing from the tagged release (commit 8c6cf4e), so the
++whole BHL pipeline fails at import. This stub restores the one method that
++is called, `get_page_ocr(page_id)`, as the README describes it: "If the BHL
++OCR archive is not local, ADEPT will retrieve page text via the BHL API".
++
++The upstream implementation is unknown. We use BHL's public page-text
++endpoint. From our container it is blocked by Cloudflare (HTTP 403), so in
++practice text comes from the local OCR archive, which we fill from the BHL
++open-data S3 bucket (see adept_repro/scripts/fetch_s3_ocr.py).
++"""
++import requests
++
++from adept.config import logger
++
++
++class BHLOCR:
++
++    url_template = "https://www.biodiversitylibrary.org/pagetext/{page_id}"
++
++    def get_page_ocr(self, page_id):
++        url = self.url_template.format(page_id=page_id)
++        try:
++            r = requests.get(url, timeout=30)
++        except requests.RequestException as e:
++            logger.error("BHLOCR stub: request for page %s failed: %s", page_id, e)
++            return None
++        if r.status_code != 200:
++            logger.error("BHLOCR stub: page %s returned HTTP %s", page_id, r.status_code)
++            return None
++        return r.text

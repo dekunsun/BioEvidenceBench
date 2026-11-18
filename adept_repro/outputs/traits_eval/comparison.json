@@ -1,0 +1,38 @@
+{
+  "overall_ours": [
+    {
+      "averaging": "micro",
+      "records": 50,
+      "taxa": 49,
+      "fields": 81,
+      "excluded_cells": 0,
+      "reference_values": 1299,
+      "predicted_values": 1194,
+      "tp": 1081,
+      "fp": 113,
+      "fn": 218,
+      "precision": 0.90536013400335,
+      "recall": 0.8321785989222479,
+      "f1": 0.8672282390693943
+    }
+  ],
+  "overall_published": [
+    {
+      "averaging": "micro",
+      "records": 50,
+      "taxa": 49,
+      "fields": 81,
+      "excluded_cells": 0,
+      "reference_values": 1299,
+      "predicted_values": 1194,
+      "tp": 1081,
+      "fp": 113,
+      "fn": 218,
+      "precision": 0.90536013400335,
+      "recall": 0.8321785989222479,
+      "f1": 0.8672282390693943
+    }
+  ],
+  "overall_identical": true,
+  "per_field_identical": true
+}

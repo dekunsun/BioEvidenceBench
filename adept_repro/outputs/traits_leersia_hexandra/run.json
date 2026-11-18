@@ -1,0 +1,34 @@
+{
+  "command": "adept traits --taxa \"Leersia hexandra\" --group angiosperm",
+  "run_started_utc": "2026-11-18T09:07:27Z",
+  "exported_utc": "2026-11-18T09:11:08+00:00",
+  "adept_commit": "8c6cf4e8c5a25ff79a1364bdde3f5c22752e77ab",
+  "adept_local_changes": "patches/0001-add-missing-adept-bhl-ocr-stub.patch (stub module; no logic change)",
+  "text_source": "BHL legacy OCR from s3://bhl-open-data/ocr/ copied into ADEPT's local OCR archive (scripts/fetch_s3_ocr.py); no BHL API calls succeeded",
+  "names_index": {
+    "path": "adept/.cache/bhl-names.parquet (subset for queried taxa; see build_bhl_names_index.py)",
+    "rows": 13219,
+    "sha256": "80034894674efbbc721528e6a531d3d2f233477a9d90dc6668da23764237d655"
+  },
+  "funnel": {
+    "bhl_name_occurrences": 1355,
+    "bhl_pages_with_name_or_synonym": 866,
+    "bhl_pages_passing_trait_term_filter(min_terms=15,min_chars=2500)": 80,
+    "bhl_pages_with_detected_description": 13,
+    "bhl_description_paragraphs": 25
+  },
+  "sources": {
+    "ecoflora_description_found": false,
+    "efloras_http_403_errors_in_log": 1,
+    "efloras_no_results_warnings": 1,
+    "luigi_summary": [
+      "This progress looks :) because there were no failed tasks or missing dependencies"
+    ]
+  },
+  "files": {
+    "traits_combined.csv": "sheet 'combined' of angiosperm-leersia-hexandra.bhl.traits.xlsx (empty columns dropped)",
+    "traits_bhl.csv": "sheet 'bhl' of angiosperm-leersia-hexandra.bhl.traits.xlsx (empty columns dropped)",
+    "traits_provenance.csv": "sheet 'provenance' of angiosperm-leersia-hexandra.bhl.traits.xlsx (empty columns dropped)",
+    "bhl_descriptions.yaml": "BHLDescriptionTask output (page id -> detected description text)"
+  }
+}

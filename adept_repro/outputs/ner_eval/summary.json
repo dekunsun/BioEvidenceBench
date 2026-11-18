@@ -1,0 +1,113 @@
+{
+  "run_utc": "2026-11-18T09:02:37+00:00",
+  "adept_commit": "8c6cf4e8c5a25ff79a1364bdde3f5c22752e77ab",
+  "model": {
+    "repo": "benhartley/en_adept_ner_trf",
+    "revision": "857dba16758cc25e50dfd7a9d42795f4747f6394",
+    "pipeline": [
+      "sentencizer",
+      "transformer",
+      "tagger",
+      "parser",
+      "attribute_ruler",
+      "lemmatizer",
+      "ner"
+    ],
+    "labels": [
+      "CARDINAL",
+      "DIMENSION",
+      "MEASUREMENT",
+      "NUMERIC_CADJ"
+    ],
+    "trained_with_spacy": ">=3.4.4,<3.5.0",
+    "run_with_spacy": "3.7.5"
+  },
+  "inputs_sha256": {
+    "test_numeric.spacy": "4918f04c6d8e21ec111e82f1f2d9337dae5ba6ae8fce4623d23da655a59067b6",
+    "train_numeric.spacy": "a1ace9559dfe3765d71b342e8bf9d980e41297a3299a26567901548df07ca0ea",
+    "val_numeric.spacy": "058275804f3217f0dcf1a71e4d0e4c7cf28c5680c4536de2763014c35ddedc38"
+  },
+  "split_check": {
+    "json_rows": 6843,
+    "label_counts": {
+      "MEASUREMENT": 3686,
+      "CARDINAL": 1164,
+      "MULTI": 978,
+      "DIMENSION": 831,
+      "NUMERIC_CADJ": 184
+    },
+    "train_docs": 4790,
+    "train_resplit_equal": true,
+    "val_docs": 1027,
+    "val_resplit_equal": true,
+    "test_docs": 1026,
+    "test_resplit_equal": true,
+    "test_in_train": 41,
+    "val_in_train": 38
+  },
+  "scores": {
+    "test": {
+      "ents_p": 0.958904109589041,
+      "ents_r": 0.9692307692307692,
+      "ents_f": 0.9640397857689365,
+      "ents_per_type": {
+        "MEASUREMENT": {
+          "p": 0.9568151147098516,
+          "r": 0.9581081081081081,
+          "f": 0.9574611748818367
+        },
+        "NUMERIC_CADJ": {
+          "p": 0.9857142857142858,
+          "r": 1.0,
+          "f": 0.9928057553956835
+        },
+        "DIMENSION": {
+          "p": 0.9642857142857143,
+          "r": 0.9642857142857143,
+          "f": 0.9642857142857143
+        },
+        "CARDINAL": {
+          "p": 0.9552238805970149,
+          "r": 0.9907120743034056,
+          "f": 0.9726443768996961
+        }
+      },
+      "n_docs": 1026,
+      "n_gold_ents": 1300
+    },
+    "val": {
+      "ents_p": 0.9736247174076865,
+      "ents_r": 0.9758308157099698,
+      "ents_f": 0.9747265182949831,
+      "ents_per_type": {
+        "MEASUREMENT": {
+          "p": 0.9739368998628258,
+          "r": 0.9739368998628258,
+          "f": 0.9739368998628258
+        },
+        "NUMERIC_CADJ": {
+          "p": 0.9824561403508771,
+          "r": 1.0,
+          "f": 0.9911504424778761
+        },
+        "DIMENSION": {
+          "p": 0.9710982658959537,
+          "r": 0.9710982658959537,
+          "f": 0.9710982658959537
+        },
+        "CARDINAL": {
+          "p": 0.9728260869565217,
+          "r": 0.9781420765027322,
+          "f": 0.9754768392370572
+        }
+      },
+      "n_docs": 1027,
+      "n_gold_ents": 1324
+    }
+  },
+  "published": {
+    "ents_p": 0.9736247174,
+    "ents_r": 0.9758308157,
+    "ents_f": 0.9747265183
+  }
+}

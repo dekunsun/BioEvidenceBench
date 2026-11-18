@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "run_utc": "2026-11-18T09:27:38+00:00",
+    "adept_commit": "8c6cf4e8c5a25ff79a1364bdde3f5c22752e77ab",
+    "bhl_item": 48989,
+    "pages": [
+      13793662,
+      13793669,
+      13793689,
+      13793690,
+      13793698
+    ],
+    "ocr_source": "BHL open-data S3 (legacy BHL OCR)",
+    "rights": "item.CopyrightStatus = NOT_IN_COPYRIGHT (BHL item table, S3 export of 2026-06-06)",
+    "gold_labels": "none"
+  },
+  "records": [
+    {
+      "page_id": 13793669,
+      "query_taxon": "Medicago sativa",
+      "description": "\n\nStem, lower surface of leaves, and calyx pilose with long soft white appressed hairs ; leaflets linear-oblong, apiculate from a truncate apex, about 2% cm. long, 5-10 mm. wide, peduncles 8-9 cm. long, equalling the racemes ; flowers 10-12 mm. long, with the filiform divisions of the calyx twice as long as the tube.",
+      "traits": {
+        "habitat": "terrestrial",
+        "habitat_verbatim": "Stem",
+        "habit": "erect leafy",
+        "habit_verbatim": "Stem",
+        "clonality": "solitary plant",
+        "clonality_verbatim": "Stem",
+        "perennial organ": "stem",
+        "perennial organ_verbatim": "Stem",
+        "flower shape": "tubulate",
+        "flower shape_verbatim": "tube"
+      }
+    },
+    {
+      "page_id": 13793689,
+      "query_taxon": "Cnicus Drummondii",
+      "description": "\n\nGlaucous and glabrous except for some slight arachnoid tomentum on the stems, petioles, and involucral bracts: stems stout, erect, leafy, 6 dm. or more high, branching from the base and also above; leaves with numerous linear-lanceolate divisions which are 2-6 cm. long, 5 mm. wide and irregularly parted near the base, generally on one side only, into similar lobes varying in length and sometimes as long as the main division, margin laciniate-dentate, spiny, lateral spines 2 mm. long, terminal 4-5 mm. ; radical leaves petiolate, 1%-3 dm. long, 6-10 cm. wide; cauline, sessile, 10-15 cm, long, 5-6 cm. wide: heads corymbose at the ends of the leafy branches, almost sessile, narrow, cylindrical, 4% cm. long, 1 cm. or more wide; involucre of appressed, imbricated bracts, successively shorter, in seven ranks, the lower ones pointed with a weak prickle 3-5 mm. long, the upper attenuate to a scarious tip, minutely puberulent; flowers purple; corolla with tube about half as long as the throat and divisions, throat about one-third as long as the linear, clavate-tipped divisions ; stamens surpassing the corolla ; style straight with the node 24 mm. from the tip; akenes glabrous, shining, flattened, obovateoblong, 6 mm. long, 3 mm. wide, surmounted with a yellow ring.",
+      "traits": {
+        "habitat": "terrestrial",
+        "habitat_verbatim": "stems",
+        "habit": "erect leafy",
+        "habit_verbatim": "stems",
+        "clonality": "solitary plant",
+        "clonality_verbatim": "stems",
+        "perennial organ": "stem",
+        "perennial organ_verbatim": "stems",
+        "spinescence": "spiny, spinescent",
+        "spinescence_verbatim": "spiny, spines",
+        "leaf architecture": "partite",
+        "leaf architecture_verbatim": "parted",
+        "leaf shape": "lanceolate",
+        "leaf shape_verbatim": "linear-lanceolate",
+        "leaf margin": "laciniate, dentate",
+        "leaf margin_verbatim": "laciniate, dentate",
+        "leaf min. width [cm]": "0.5 cm",
+        "leaf max. width [cm]": "0.5 cm",
+        "leaf min. length [cm]": "2 cm",
+        "leaf max. length [cm]": "6 cm",
+        "flower colour": "purple",
+        "flower colour_verbatim": "purple",
+        "petal fusion": "fusion",
+        "petal fusion_verbatim": "tube"
+      }
+    },
+    {
+      "page_id": 13793690,
+      "query_taxon": "Cnicus Hesperius",
+      "description": "\n\nStem stout, simple, erect, leafy from the base, ribbed, almost glabrous, 3-4 dm. in height, 2 cm. in diameter : leaves 10-15 cm. long, 114-2 cm. wide, upper surface glabrous, lower tomentose, ascending, linear-lanceolate, with numerous rounded lobes, spiny-margined with two to three large, yellow, subulate spines, 5 mm. long, and several shorter ones: heads sessile, crowded, in an oblong, terminal, erect, leafy, glomerule; involucre 2 cm.\nlong, 2% cm. wide, with bracts 3 mm. broad at the yellow, glabrous, ovate base, tapering to a long brown-purple spine 1 cm. long, arachnoid with silky wool except at the glabrous yellow apex: flowers light purple ; corolla tube almost equalling the throat and divisions ; throat fusiform, contracted under the divisions which are linear with thickened apex and about half as long as the throat ; anthers surpassing the petals by 3 mm., sparingly arachnoid except at the pointed tips ; style with inconspicuous node concealed by the anthers and stigma, exserted 2 mm. ; coma I cm. long.",
+      "traits": {
+        "habitat": "terrestrial",
+        "habitat_verbatim": "Stem",
+        "habit": "erect leafy",
+        "habit_verbatim": "Stem",
+        "clonality": "solitary plant",
+        "clonality_verbatim": "Stem",
+        "perennial organ": "stem",
+        "perennial organ_verbatim": "Stem",
+        "indumentum": "tomentose, glabrous",
+        "indumentum_verbatim": "tomentose, glabrous",
+        "spinescence": "spinescent",
+        "spinescence_verbatim": "spiny-margined, spines",
+        "leaf arrangement": "simple",
+        "leaf arrangement_verbatim": "simple",
+        "leaf shape": "rounded, oblong, setiform, orbicular, lanceolate",
+        "leaf shape_verbatim": "oblong, linear-lanceolate, rounded, subulate",
+        "leaf apex": "rounded, subulate",
+        "leaf apex_verbatim": "rounded, subulate",
+        "leaf base": "rounded",
+        "leaf base_verbatim": "rounded",
+        "petal fusion": "fusion",
+        "petal fusion_verbatim": "tube"
+      }
+    },
+    {
+      "page_id": 13793698,
+      "query_taxon": "Eriodictyon niveum,",
+      "description": "\n\nDensely white-tomentose or flavescent; stems three or four feet high, growing in clumps, very leafy below the inflorescence: leaves thick, ellipticalovate or obovate, 4-6 cm. long, 1-3 cm. wide, entire or crenate, except on the cuneate base, apex acute or obtuse, lower surface reticulate-rugose, upper with veins scarcely discernible; petiole broad, 5-10 mm. long: panicle terminating a long, naked peduncle, compactly or widely branched, the stout branches varying much in length on different plants; cymes densely flowered, with the lower bracts obovate or spatulate, tapering to broad petioles, the upper oblanceolate to linear; flowers small, almost sessile; calyx equalling the corolla tube, divisions linear-subulate, densely clothed with white silky hairs; corolla white or tinged with lavender, 4 mm. long, urceolate, glandular-hirsute externally, glabrous within, tube furrowed longitudinally, slightly contracted under the five small spreading lobes; stamens with the free portion short, inserted below the throat, anthers oval, 1 mm. long; styles shorter than the sepals; capsules orbicular, obtusely 5-angled, tomentose, especially on the angles; seeds four or sometimes five, brown, minutely favose, variable in shape, often keeled, more than 1 mm. long.",
+      "traits": {
+        "habitat": "terrestrial",
+        "habitat_verbatim": "stems",
+        "habit": "erect leafy",
+        "habit_verbatim": "stems",
+        "clonality": "solitary plant",
+        "clonality_verbatim": "stems",
+        "perennial organ": "stem",
+        "perennial organ_verbatim": "stems",
+        "petal fusion": "fusion",
+        "petal fusion_verbatim": "urceolate, tube",
+        "calyx colour": "white",
+        "calyx colour_verbatim": "white",
+        "corolla colour": "purple, white",
+        "corolla colour_verbatim": "lavender, white",
+        "corolla tube min. length [cm]": "0.4 cm",
+        "corolla tube max. length [cm]": "0.4 cm",
+        "stamen min. length [cm]": "0.1 cm",
+        "stamen max. length [cm]": "0.1 cm",
+        "fruit type": "capsule",
+        "fruit type_verbatim": "capsules",
+        "fruit structure": "dry",
+        "fruit structure_verbatim": "capsules",
+        "fruit dehiscence": "dehiscent",
+        "fruit dehiscence_verbatim": "capsules",
+        "seed colour": "brown",
+        "seed colour_verbatim": "brown",
+        "seed min. length [mm]": "1 mm",
+        "seed max. length [mm]": "1 mm"
+      }
+    }
+  ]
+}

@@ -9,3 +9,9 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .ipynb_checkpoints/
+
+# ADEPT reproduction (adept_repro/): venv, vendored checkout with models/caches, big BHL assets
+adept_repro/.venv-adept/
+adept_repro/vendor/
+adept_repro/.assets/
+adept_repro/outputs/logs/*.log

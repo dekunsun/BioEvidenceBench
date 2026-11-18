@@ -1,0 +1,37 @@
+
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]
+Fetching 13 files:   8%|▊         | 1/13 [00:00<00:06,  1.93it/s]
+Fetching 13 files:  69%|██████▉   | 9/13 [00:01<00:00,  5.13it/s]
+Fetching 13 files:  92%|█████████▏| 12/13 [02:11<00:14, 14.35s/it]
+Fetching 13 files: 100%|██████████| 13/13 [02:11<00:00, 10.09s/it]
+Invalid model-index. Not loading eval results into CardData.
+
+Fetching 24 files:   0%|          | 0/24 [00:00<?, ?it/s]
+Fetching 24 files:   4%|▍         | 1/24 [00:00<00:03,  7.44it/s]
+Fetching 24 files:  21%|██        | 5/24 [00:00<00:02,  8.75it/s]
+Fetching 24 files: 100%|██████████| 24/24 [00:00<00:00, 38.51it/s]
+ERROR: 403 Client Error: Forbidden for url: http://efloras.org/browse.aspx?flora_id=0&name_str=Achillea+millefolium
+WARNING: No results for Achillea millefolium in efloras
+===== Luigi Execution Summary =====
+
+Scheduled 10284 tasks of which:
+* 1 complete ones were encountered:
+    - 1 EcofloraIndexTask()
+* 10283 ran successfully:
+    - 1 AggregateTrainingDescriptionsTask(taxa=["Achillea millefolium"])
+    - 1 BHLDescriptionTask(taxon=Achillea millefolium)
+    - 1 BHLSearchTask(taxon=Achillea millefolium)
+    - 10274 BHLTextTask(page_id=10015663, item_id=38246, seq_order=90) ...
+    - 1 EcofloraDescriptionTask(taxon=Achillea millefolium)
+    ...
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+Processing complete: descriptions written to /home/user/BioEvidenceBench/adept_repro/vendor/ADEPT/adept/data/processing/intermediate/training-descriptions/bhl.descriptions.csv
+Processing time: 744.3165333271027
+
+real	15m12.514s
+user	29m57.121s
+sys	1m47.392s

@@ -1,0 +1,36 @@
+{
+  "command": "adept descriptions --taxa \"Achillea millefolium\"",
+  "run_started_utc": "2026-11-18T09:10:38Z",
+  "exported_utc": "2026-11-18T09:26:24+00:00",
+  "adept_commit": "8c6cf4e8c5a25ff79a1364bdde3f5c22752e77ab",
+  "adept_local_changes": "patches/0001-add-missing-adept-bhl-ocr-stub.patch (stub module; no logic change)",
+  "text_source": "BHL legacy OCR from s3://bhl-open-data/ocr/ copied into ADEPT's local OCR archive (scripts/fetch_s3_ocr.py); no BHL API calls succeeded",
+  "names_index": {
+    "path": "adept/.cache/bhl-names.parquet (subset for queried taxa; see build_bhl_names_index.py)",
+    "rows": 13219,
+    "sha256": "80034894674efbbc721528e6a531d3d2f233477a9d90dc6668da23764237d655"
+  },
+  "funnel": {
+    "bhl_name_occurrences": 11864,
+    "bhl_pages_with_name_or_synonym": 10274,
+    "bhl_pages_passing_trait_term_filter(min_terms=15,min_chars=2500)": 334,
+    "bhl_pages_with_detected_description": 38,
+    "bhl_description_paragraphs": 144
+  },
+  "sources": {
+    "ecoflora_description_found": true,
+    "efloras_http_403_errors_in_log": 1,
+    "efloras_no_results_warnings": 1,
+    "luigi_summary": [
+      "This progress looks :) because there were no failed tasks or missing dependencies"
+    ],
+    "descriptions_per_source": {
+      "bhl": 38,
+      "ecoflora": 1
+    }
+  },
+  "files": {
+    "descriptions.csv": "adept/data/processing/intermediate/training-descriptions/bhl.descriptions.csv",
+    "bhl_descriptions.yaml": "BHLDescriptionTask output (page id -> detected description text)"
+  }
+}
