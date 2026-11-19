@@ -29,7 +29,8 @@ ROOT = Path(__file__).resolve().parents[1]
 FREEZE = ROOT / "FREEZE.json"
 GOLD = ["gold/gold_mentions_gloria.csv", "gold/gold_mentions_gloria_test.csv", "gold/gold_links_gloria.csv",
         "gold/gold_links_gloria_names.csv", "gold/gold_changes_gloria.csv", "data/transcription_errata.csv",
-        "data/sample_split.csv", "data/sample/manifest.csv"]
+        "data/sample_split.csv", "data/sample/manifest.csv", "gold/gold_mentions_friend.csv",
+        "gold/agreement_adjudication_gloria.csv"]
 OPTIONAL_GOLD = ["gold/annotation_issues_gloria.csv"]      # frozen if it exists
 CODE = ["ANNOTATION_GUIDE.md", "PREREGISTRATION.md", "src/prompts.py", "src/score.py", "src/locate.py",
         "src/analysis.py", "src/analyze.py", "src/link_taxa.py", "src/baseline_rules.py",

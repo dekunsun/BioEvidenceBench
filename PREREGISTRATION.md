@@ -1,11 +1,13 @@
 # Pre-registration: analysis plan for the locked test set
 
-**Status: DRAFT, written 2026-11-18 by Claude Code for Gloria to review.** Nothing in the test set
-has been opened. This plan is frozen, together with the code it names, by recording the commit
-hash below **before** `src/unseal.py` is run on any test outputs. Anything decided after unsealing
-goes in the deviations log at the bottom, with the reason.
+**Status: final draft for Gloria's confirmation (2026-11-20).** First written 2026-11-18; sections
+9 and later record what was added since. Nothing in the test set has been opened. This plan is
+frozen, together with the code and gold it names, by `src/freeze.py`, which writes `FREEZE.json`
+(code commit and SHA-256 of every frozen file) **before** any test page is run with the frozen
+prompt and before `src/unseal.py` opens anything. Anything decided after unsealing goes in the
+deviations log at the bottom, with the reason.
 
-Frozen at commit: `__________` (fill in when Gloria approves)
+Frozen at: see `FREEZE.json` (`code_commit`, `frozen_at`).
 
 ## 1. What is scored
 
@@ -13,10 +15,10 @@ Frozen at commit: `__________` (fill in when Gloria approves)
 |---|---|
 | Pages | 16 locked test pages (`data/sample_split.csv`, split = test): Butler 7, Reeve 9 |
 | Text versions | `expert` (IMPACT-BHL transcription), `legacy` (BHL OCR), `modern_dots-mocr` (FineBooks output, Markdown), `modern_dots-mocr_plain` (same text, Markdown marks deleted) |
-| Extractors | rule baseline (gnfinder v1.4.0 + regex, condition `RULE`); Claude Opus 5.5 with prompt `p2-guide-v0.2` (conditions `G0`, `G1`); Gemini 4 Carbon with the same prompt once run (for RQ4) |
-| Runs | `20261118-0903_rules-gnfinder-v1.4.0_all`; the p2 Opus run (`*_claude-opus-5-5_all_batch_p2`); the Gemini run (to be added before freezing) |
-| Gold | `gold/gold_mentions_gloria.csv`, ANNOTATION_GUIDE version recorded in each row (expected v1) |
-| Agreement | 5 test pages labelled independently by a second person; span agreement per field reported before scoring. The second labeller gets the pack built by `src/make_labeller_pack.py`: guide v0.10 with the same rules, but the two worked examples taken from her pages (`"Foreign Finches in Captivity"`, 8992379; `B. rugiferus and Darwinii`, 8966802) replaced by invented ones and the changelog left out (it names the page each later rule came from). No AI assistant, no access to Gloria's labels or the repository |
+| Extractors | rule baseline (gnfinder v1.4.0 + regex, condition `RULE`); Claude Opus 5.5 and Gemini 4 Carbon, both with prompt `p4-guide-v0.6` (conditions `G0`, `G1`). Opus is the primary model for RQ1-RQ3 and linking; Gemini is the second model for RQ4 |
+| Runs | rule baseline: `20261118-2102_rules-gnfinder-v1.4.0_all` (all four text versions; test outputs sealed). LLMs: two new runs on the 16 test pages after the freeze, with the settings of the dev runs named in `FREEZE.json`: Opus as `20261119-0113_claude-opus-5-5_dev_p4_r1` (batch, effort medium, max tokens 16,000), Gemini as `20261119-0236_gemini-4-carbon_dev_p4_sync_r1` (sync, JSON schema enforced, model defaults for thinking and temperature). One run each, one retry for failed requests. Earlier test outputs (p1, p2) stay sealed and are never used |
+| Gold | `gold/gold_mentions_gloria_test.csv` (421 gold mentions; guide v0.10; rows decided by a rule added after the prompt are marked in `later_rule`), `gold/gold_links_gloria.csv` (Butler taxon links), `data/transcription_errata.csv`. Dev gold `gold/gold_mentions_gloria.csv` is for tuning only |
+| Agreement | 5 test pages labelled independently by a second person; span agreement per field reported before scoring. Result (2026-11-20, `results/agreement_independent/`): ALL_PRIMARY exact 0.898, overlap 0.949 (Butler 0.891 / 0.931, Reeve 0.901 / 0.958); locality exact 0.754. Gloria adjudicated all 23 disagreements as "keep gold" (`gold/agreement_adjudication_gloria.csv`); no gold row changed. The second labeller gets the pack built by `src/make_labeller_pack.py`: guide v0.10 with the same rules, but the two worked examples taken from her pages (`"Foreign Finches in Captivity"`, 8992379; `B. rugiferus and Darwinii`, 8966802) replaced by invented ones and the changelog left out (it names the page each later rule came from). No AI assistant, no access to Gloria's labels or the repository |
 
 Pages are never pooled across books for a headline number; every result is reported per book.
 
@@ -335,8 +337,8 @@ Google's batch mode ignored the JSON schema and 3 of 48 answers were lost. Rules
   twice on a single unflagged mention.
 
 **Still to run before the freeze commit**: nothing on dev. Everything in this document is built.
-All 16 test pages and Butler's taxon links are labelled. What remains is the second labeller's
-five pages and their adjudication, then the freeze commit, then the test runs with Gloria's go-ahead.
+All 16 test pages and Butler's taxon links are labelled. The second labeller's five pages are done and adjudicated (no gold change). What remains is
+Gloria's confirmation of this plan, the freeze (`src/freeze.py`), then the test runs with her go-ahead.
 
 **Agreement and freeze tools (built 2026-11-20).**
 - `src/agreement.py`: mention-level agreement between two labellers, per book and field and for
