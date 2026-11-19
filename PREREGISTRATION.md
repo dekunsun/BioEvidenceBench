@@ -16,7 +16,7 @@ Frozen at commit: `__________` (fill in when Gloria approves)
 | Extractors | rule baseline (gnfinder v1.4.0 + regex, condition `RULE`); Claude Opus 5.5 with prompt `p2-guide-v0.2` (conditions `G0`, `G1`); Gemini 4 Carbon with the same prompt once run (for RQ4) |
 | Runs | `20261118-0903_rules-gnfinder-v1.4.0_all`; the p2 Opus run (`*_claude-opus-5-5_all_batch_p2`); the Gemini run (to be added before freezing) |
 | Gold | `gold/gold_mentions_gloria.csv`, ANNOTATION_GUIDE version recorded in each row (expected v1) |
-| Agreement | 5 test pages labelled independently by a second person; span agreement per field reported before scoring |
+| Agreement | 5 test pages labelled independently by a second person; span agreement per field reported before scoring. The second labeller gets the pack built by `src/make_labeller_pack.py`: guide v0.10 with the same rules, but the two worked examples taken from her pages (`"Foreign Finches in Captivity"`, 8992379; `B. rugiferus and Darwinii`, 8966802) replaced by invented ones and the changelog left out (it names the page each later rule came from). No AI assistant, no access to Gloria's labels or the repository |
 
 Pages are never pooled across books for a headline number; every result is reported per book.
 
