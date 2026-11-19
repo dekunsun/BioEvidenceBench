@@ -148,3 +148,17 @@ def test_loss_at_linking_versus_before_it(tmp_path):
     assert s.loc["expanded", "lost_at_linking"] == 0
     assert s.loc["expanded", "linking_minus_earlier_loss"] == round(-1 / 3, 3)
     assert s.loc["expanded", "loss_diff_verdict"] in ("against", "inconclusive")
+
+
+def test_expand_links_copies_each_name_decision_to_every_mention(tmp_path):
+    import expand_links as ex
+    names = tmp_path / "names.csv"
+    names.write_text("name,printed_rank,resolution_status,accepted_usage_key,evidence_source,notes\n"
+                     "TURDIDÆ,family,resolved,5290,GBIF,\nA. blakistoni,species,partial,2490696,GBIF,genus only\n")
+    links = tmp_path / "links.csv"
+    links.write_text("page_id,start,end,text,printed_rank,resolution_status,match_method,matched_rank,"
+                     "taxonomic_status,matched_usage_key,accepted_usage_key,evidence_source,notes\n"
+                     "1,0,7,TURDIDÆ,,,,,,,,,\n2,0,7,TURDIDÆ,,,,,,,,,\n2,9,24,\"A. blak-\nistoni\",,,,,,,,,\n")
+    out = ex.expand(names, links)
+    assert out.resolution_status.tolist() == ["resolved", "resolved", "partial"]
+    assert out.accepted_usage_key.tolist() == ["5290", "5290", "2490696"]

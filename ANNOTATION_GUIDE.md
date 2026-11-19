@@ -347,6 +347,15 @@ matching *and* be a synonym of an accepted name; one combined label could not sa
 Leave the key columns empty when `resolution_status` is `unresolved`. Reeve's names are not
 linked in V1: historical molluscan names need a specialist.
 
+**Short procedure (Gloria, 2026-11-20).** Fill one row per distinct printed name in
+`gold/gold_links_gloria_names.csv`; `python src/expand_links.py` copies each decision to every
+mention. Only four columns are required, because only they are scored: `printed_rank`,
+`resolution_status`, `accepted_usage_key` (empty for `unresolved`), `evidence_source`; the other
+columns are optional. For a species name: look the name up in Avibase first (independent of
+GBIF) to learn the current species, then take that species' key on GBIF. Spend **at most about
+three minutes per name**; if it is not settled by then, write `ambiguous` (candidates in notes)
+or `unresolved` (where you looked in notes). Both are legitimate answers and are counted apart.
+
 **How linking is counted.** A link is correct only when it is `resolved`, that is, at the printed
 rank. For names printed as species, results are reported as four separate counts: species-level
 correct, `partial` (genus or higher only), `ambiguous`, `unresolved`. A genus-only match for a
@@ -653,6 +662,8 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 | `notes` | | 为什么有歧义或没解决；候选名单 |
 
 `resolution_status` 是 `unresolved` 时，两个 key 列留空。V1 不关联 Reeve 的名字：历史上的软体动物名称需要专家判断。
+
+**简化做法（Gloria，2026-11-20）。** 在 `gold/gold_links_gloria_names.csv` 里每个不同的名字填一行，`python src/expand_links.py` 会把你的决定复制到这个名字的每一次出现。只有四列必填，因为评分只用到它们：`printed_rank`、`resolution_status`、`accepted_usage_key`（`unresolved` 留空）、`evidence_source`；其余几列可以留空。种名的查法：先在 Avibase 查这个名字现在对应哪个物种（和 GBIF 无关的独立来源），再到 GBIF 找那个物种的编号。**每个名字最多花三分钟左右**；到时还定不了，就填 `ambiguous`（候选写进 notes）或 `unresolved`（查过哪里写进 notes）。这两种都是合法答案，会单独计数。
 
 **关联结果怎么统计。** 只有 `resolved`（也就是在原文印的等级上确定）才算关联正确。对原文印成物种的名字，结果分四个数分别报告：物种级正确、`partial`（只到属或更高）、`ambiguous`、`unresolved`。物种名只匹配到属，绝不计入物种级的成功率。
 
