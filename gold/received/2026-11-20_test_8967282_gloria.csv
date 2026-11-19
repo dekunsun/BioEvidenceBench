@@ -1,0 +1,62 @@
+page_id,start,end,field,text,qualifier,notes,scan_text,adjudication,guide_version
+8967282,38,44,person,Kiener,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,141,148,person,Linnæus,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,198,207,taxon,T. cornea,,Scientific species name or abbreviation.,,,v0.9
+8967282,209,216,person,Lamarck,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,221,229,person,Deshayes,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,231,242,taxon,T. ungulina,,Scientific species name or abbreviation.,,,v0.9
+8967282,320,331,institution,Mus. Cuming,,Named private collection in species account.,,,v0.9
+8967282,335,355,taxon,TURRITELLA DUPLICATA,,Scientific species name or abbreviation.,,,v0.9
+8967282,669,689,vernacular,DUPLICATE TURRITELLA,,Full vernacular common name in species account; no leading THE.,,,v0.9
+8967282,1042,1049,person,LAMARCK,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1069,1077,person,Deshayes,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1104,1120,taxon,Turbo duplicatus,,Scientific species name or abbreviation.,,,v0.9
+8967282,1122,1129,person,Linnæus,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1142,1159,taxon,Turbo acutangulus,,Scientific species name or abbreviation.,,,v0.9
+8967282,1161,1168,person,Linnæus,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1185,1201,taxon,Turbo replicatus,,Scientific species name or abbreviation.,,,v0.9
+8967282,1203,1210,person,Linnæus,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1218,1230,locality,Eastern Seas,,Named region or island; connected but not a comma-separated hierarchy in this sentence.,,,v0.9
+8967282,1237,1254,taxon,Turbo acutangulus,,Scientific species name or abbreviation.,,,v0.9
+8967282,1258,1265,person,Linnæus,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1292,1308,taxon,Turbo duplicatus,,Scientific species name or abbreviation.,,,v0.9
+8967282,1370,1388,institution,Linnæan collection,,UNCLEAR: Eponymic historic collection mentioned in prose: arguably named institution/collection.,,,v0.9
+8967282,1425,1433,person,Deshayes,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1472,1478,person,Kiener,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1565,1585,taxon,Turritella duplicata,,Scientific species name or abbreviation.,,,v0.9
+8967282,1828,1835,person,Linnæus,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,1838,1855,taxon,Turbo acutangulus,,Scientific species name or abbreviation.,,,v0.9
+8967282,2054,2065,institution,Mus. Cuming,,Named private collection in species account.,,,v0.9
+8967282,2069,2087,taxon,TURRITELLA TEREBRA,,Scientific species name or abbreviation.,,,v0.9
+8967282,2302,2318,vernacular,AUGUR TURRITELLA,,Full vernacular common name in species account; no leading THE.,,,v0.9
+8967282,2525,2532,person,LAMARCK,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,2552,2560,person,Deshayes,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,2587,2600,taxon,Turbo terebra,,Scientific species name or abbreviation.,,,v0.9
+8967282,2602,2609,person,Linnæus,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,2646,2667,taxon,Turritella Archimedis,,Scientific species name or abbreviation.,,,v0.9
+8967282,2669,2676,person,Dillwyn,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,2678,2682,person,Mawe,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,2690,2708,locality,Philippine Islands,,Named region or island; connected but not a comma-separated hierarchy in this sentence.,,,v0.9
+8967282,2710,2716,person,Cuming,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,2797,2803,person,Martyn,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,3131,3137,person,Cuming,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,3170,3186,locality,Island of Negros,,Named region or island; connected but not a comma-separated hierarchy in this sentence.,,,v0.9
+8967282,3199,3210,locality,Philippines,,Named region or island; connected but not a comma-separated hierarchy in this sentence.,,,v0.9
+8967282,3216,3226,taxon,T. terebra,,Scientific species name or abbreviation.,,,v0.9
+8967282,3274,3283,taxon,T. Linnei,,Scientific species name or abbreviation.,,,v0.9
+8967282,3288,3297,taxon,ungulinus,,UNCLEAR: Epithet-only scientific shorthand coordinated with T. Linnei; compare Darwinii in another test page.,,,v0.9
+8967282,3299,3307,person,Deshayes,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,3309,3320,taxon,T. communis,,Scientific species name or abbreviation.,,,v0.9
+8967282,3322,3330,person,Philippi,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,3339,3348,taxon,T. cornea,,Scientific species name or abbreviation.,,,v0.9
+8967282,3352,3359,person,Lamarck,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,3374,3385,institution,Mus. Cuming,,Named private collection in species account.,,,v0.9
+8967282,3389,3409,taxon,TURRITELLA ATTENUATA,,Scientific species name or abbreviation.,,,v0.9
+8967282,3665,3686,vernacular,ATTENUATED TURRITELLA,,Full vernacular common name in species account; no leading THE.,,,v0.9
+8967282,3956,3977,taxon,Turritella acutangula,,Scientific species name or abbreviation.,,,v0.9
+8967282,3979,3987,person,Deshayes,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,4027,4044,taxon,Turbo acutangulus,,Scientific species name or abbreviation.,,,v0.9
+8967282,4046,4051,person,Linn.,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,4098,4105,person,Linnæus,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,,v0.9
+8967282,4126,4143,taxon,Turbo acutangulus,,Scientific species name or abbreviation.,,,v0.9
+8967282,4198,4211,taxon,T. duplicatus,,Scientific species name or abbreviation.,,,v0.9
