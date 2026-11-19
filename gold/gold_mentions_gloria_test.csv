@@ -220,7 +220,7 @@ Humber",,,"One place: the Lincolnshire bank of the Humber (existing part-of-plac
 8966802,2276,2288,vernacular,BALD BULIMUS,,,Vernacular species-account heading; the leading THE is excluded.,,v0.9,
 8966802,2486,2493,person,SOWERBY,,,"Cited author, not part of the publication title.",,v0.9,
 8966802,2531,2556,locality,"James' Island, Gallapagos",,,"Single hierarchical locality, with Island retained as part of the proper place name.",,v0.9,
-8966802,2576,2581,vernacular,grass,,,Standalone biological-group name in dried tufts of grass; v0.7 includes materials.,,v0.9,
+8966802,2576,2581,vernacular,grass,,,Standalone biological-group name in dried tufts of grass; v0.7 includes materials.,,v0.9,v0.7
 8966802,2584,2590,person,Cuming,,,Collector credited on the Hab. line; separate from Mus. Cuming collection labels.,,v0.9,
 8966802,2682,2693,institution,Mus. Cuming,,,"Named private collection, retained Mus. abbreviation; exclude trailing full stop.",,v0.9,
 8966802,2697,2715,taxon,BULIMUS PUSTULOSUS,,,Scientific name in a species account or a comparative species mention.,,v0.9,
