@@ -1,0 +1,32 @@
+page_id,start,end,field,text,qualifier,notes,scan_text,adjudication,guide_version
+8992643,22,29,taxon,TURDIDÆ,,Family heading for a species account; not a running head.,,,v0.9
+8992643,42,50,taxon,SYLVIINÆ,,Subfamily heading for a species account; not a running head.,,,v0.9
+8992643,53,75,vernacular,PALLAS' WILLOW-WARBLER,,Species-account heading; PALLAS is not separately annotated as person.,,,v0.9
+8992643,78,101,taxon,Phylloscopus proregulus,,,,,v0.9
+8992643,152,159,locality,Norfolk,,,,,v0.9
+8992643,164,177,date,"October, 1896",,Dated specimen occurrence.,,,v0.9
+8992643,192,201,vernacular,Chiﬀchaﬀs,,Transcription uses Unicode ligature ﬀ; copy exactly.,,,v0.9
+8992643,214,223,locality,Shetlands,,,,,v0.9
+8992643,232,257,date,"April 15th and 24th,
+1904",,One observed visit interval; includes literal line break.,,,v0.9
+8992643,262,282,date,May of the same year,,NO-YEAR; year 1904 established by preceding clause; relative-year date span.,,,v0.9
+8992643,303,318,person,John S. Tulloch,,Observer; title Mr. excluded.,,,v0.9
+8992643,322,329,locality,Lerwick,,,,,v0.9
+8992643,338,346,date,May 27th,,NO-YEAR; year 1904 inferred from earlier clause; dated killing.,,,v0.9
+8992643,374,377,vernacular,cat,,"Standalone common name of an organism, in context as predator (v0.7).",,,v0.9
+8992643,387,394,taxon,TURDIDÆ,,Family heading for a species account; not a running head.,,,v0.9
+8992643,407,415,taxon,SYLVIINÆ,,Subfamily heading for a species account; not a running head.,,,v0.9
+8992643,422,441,vernacular,SIBERIAN CHIFFCHAFF,,Species-account heading; initial THE excluded.,,,v0.9
+8992643,444,464,taxon,Phylloscopus tristis,,,,,v0.9
+8992643,466,471,person,BLYTH,,"Naming authority; following full stop is sentence punctuation, excluded.",,,v0.9
+8992643,521,528,locality,Orkneys,oﬀ,Off the Orkneys; source spells off with Unicode ﬀ ligature.,,,v0.9
+8992643,532,536,date,1902,,Year of a particular obtained specimen.,,,v0.9
+8992643,546,553,taxon,TURDIDÆ,,Family heading for a species account; not a running head.,,,v0.9
+8992643,566,574,taxon,SYLVIINÆ,,Subfamily heading for a species account; not a running head.,,,v0.9
+8992643,581,604,vernacular,GREENISH WILLOW-WARBLER,,Species-account heading; initial THE excluded.,,,v0.9
+8992643,607,629,taxon,Phylloscopus viridanus,,,,,v0.9
+8992643,631,636,person,BLYTH,,Naming authority; following full stop omitted.,,,v0.9
+8992643,665,677,locality,Lincolnshire,,,,,v0.9
+8992643,682,701,date,"September 5th, 1896",,,,,v0.9
+8992643,719,759,locality,Sule Skerry Lighthouse (Sutherlandshire),,"ADJUDICATED: One composite locality (named lighthouse with parenthetical regional qualifier), per user decision. Preserve the full printed span; not an institution.",,adjudicated,v0.9
+8992643,764,783,date,"September 5th, 1902",,,,,v0.9
