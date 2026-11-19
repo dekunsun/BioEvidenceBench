@@ -1,0 +1,30 @@
+name	printed_rank	resolution_status	accepted_name	evidence_source
+Lanius collurio	species	resolved	Lanius collurio	Avibase
+M. minuta	species	resolved	Ficedula parva	other
+M. leucura	species	resolved	Ficedula albicilla	Avibase
+M. parva	species	resolved	Ficedula parva	Avibase
+M. hyperythra	species	ambiguous	 	Avibase
+Munia atricapilla	species	resolved	Lonchura atricapilla	Avibase
+Quelea quelea	species	resolved	Quelea quelea	Avibase
+Q. russi	species	resolved	Quelea quelea	other
+Paroaria cervicalis	species	resolved	Paroaria gularis	Avibase
+P. capitata	species	resolved	Paroaria capitata	Avibase
+Fringilla	genus	resolved	Fringilla	GBIF
+Passer	genus	resolved	Passer	GBIF
+Emberizinœ	subfamily	resolved	Emberizinae	GBIF
+FRINGILLIDÆ	family	resolved	Fringillidae	GBIF
+FRINGILLINÆ	subfamily	resolved	Fringillinae	GBIF
+Fringilla nontifringilla	species	resolved	Fringilla montifringilla	Avibase
+TURDIDÆ	family	resolved	Turdidae	GBIF
+SYLVIINÆ	subfamily	resolved	Sylviinae	GBIF
+Phylloscopus proregulus	species	resolved	Phylloscopus proregulus	Avibase
+Phylloscopus tristis	species	resolved	Phylloscopus tristis	Avibase
+Phylloscopus viridanus	species	resolved	Phylloscopus trochiloides	Avibase
+Aedon galactodes	species	resolved	Cercotrichas galactotes	Avibase
+Aedon familiaris	species	resolved	Cercotrichas galactotes	Avibase
+Lusciniola schwarzi	species	resolved	Phylloscopus schwarzi	Avibase
+MOTACILLIDÆ	family	resolved	Motacillidae	GBIF
+Motacilla melanocephala	species	resolved	Motacilla flava	other
+M. ﬂava	species	resolved	Motacilla flava	Avibase
+Motacilla beema	species	resolved	Motacilla flava	Avibase
+Motacilla cinereocapilla	species	resolved	Motacilla flava	Avibase

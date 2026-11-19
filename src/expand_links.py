@@ -32,9 +32,26 @@ def name_of(text: str) -> str:
 
 
 def gbif_exact(name: str, fetch=None) -> dict:
-    fetch = fetch or (lambda n: requests.get(GBIF_MATCH, params={"name": n, "strict": "true"}, timeout=30,
+    """Strict match with alternatives (verbose), so that a homonym can be told apart below."""
+    fetch = fetch or (lambda n: requests.get(GBIF_MATCH, params={"name": n, "strict": "true", "verbose": "true"},
+                                             timeout=30,
                                              headers={"User-Agent": "bioevidencebench-linking-eval"}).json())
     return fetch(name)
+
+
+def bird_homonym(r: dict, accepted_name: str, expected_rank: str) -> dict | None:
+    """GBIF refuses to choose when a name has several records (e.g. `Passer` is a bird genus and
+    also the spelling of three other, synonym records) and returns a higher rank instead. Every
+    name in the Butler sample is a bird, so take the alternative only if there is exactly one
+    EXACT, ACCEPTED record with that name, at the expected rank, in class Aves. Anything else
+    stays unfilled."""
+    # the top result counts too: for `Fringilla` GBIF returns the genus itself but labels it
+    # HIGHERRANK, because odd SPECIES records spelled "Fringilla" also exist
+    top = [r | {"matchType": "EXACT"}] if r.get("matchType") == "HIGHERRANK" else []
+    hits = [a for a in top + r.get("alternatives", []) if a.get("matchType") == "EXACT" and a.get("status") == "ACCEPTED"
+            and (a.get("canonicalName") or "").lower() == accepted_name.strip().lower()
+            and (a.get("rank") or "").lower() == expected_rank.lower() and a.get("class") == "Aves"]
+    return hits[0] if len(hits) == 1 else None
 
 
 def key_for(accepted_name: str, expected_rank: str, fetch=None) -> tuple[str, str]:
@@ -42,6 +59,9 @@ def key_for(accepted_name: str, expected_rank: str, fetch=None) -> tuple[str, st
     canonical name equals the given name and whose rank is the expected one."""
     r = gbif_exact(accepted_name, fetch)
     if r.get("matchType") != "EXACT":
+        alt = bird_homonym(r, accepted_name, expected_rank)
+        if alt:
+            return str(alt["usageKey"]), ""
         return "", f"no exact match (matchType {r.get('matchType')})"
     if (r.get("canonicalName") or "").lower() != accepted_name.strip().lower():
         return "", f"matched another name: {r.get('canonicalName')}"

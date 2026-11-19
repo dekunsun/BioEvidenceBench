@@ -18,3 +18,9 @@ adjudicated; dev-page labels are in `gold/gold_mentions_gloria.csv`.
 So for every page so far the independent version is on file: as delivered for five pages, and
 reconstructed for 8992643. From the next delivery on, the independent version is to be sent before
 any discussion, so that nothing has to be reconstructed.
+
+## Butler taxon links (short procedure)
+
+| File | Received | Notes |
+|---|---|---|
+| `2026-11-20_test_links_butler_names_gloria.tsv` | 2026-11-20 | the 29 names, pasted in chat as five tab-separated columns without a header; the header line was added on archiving, nothing else changed. No `notes` were given. Copied unchanged into `gold/gold_links_gloria_names.xlsx`/`.csv`, then `src/expand_links.py` |

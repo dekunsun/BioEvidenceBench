@@ -173,3 +173,22 @@ def test_expand_links_turns_accepted_names_into_keys_and_copies_to_every_mention
     assert out.accepted_usage_key.tolist() == ["5290", "5290", "2490696", ""]   # a synonym is not filled in
     assert out.resolution_status.tolist() == ["resolved", "resolved", "partial", "resolved"]
     assert "SYNONYM" in (tmp_path / "lookup.csv").read_text()
+
+
+def test_expand_links_takes_the_single_accepted_bird_record_of_a_homonym():
+    import expand_links as ex
+    passer = {"matchType": "HIGHERRANK", "canonicalName": "Chordata", "rank": "PHYLUM", "usageKey": 44,
+              "alternatives": [
+                  {"matchType": "EXACT", "canonicalName": "Passer", "rank": "GENUS", "status": "ACCEPTED",
+                   "usageKey": 2492321, "class": "Aves"},
+                  {"matchType": "EXACT", "canonicalName": "Passer", "rank": "GENUS", "status": "SYNONYM",
+                   "usageKey": 7864359}]}
+    assert ex.key_for("Passer", "genus", fetch=lambda n: passer) == ("2492321", "")
+    two = passer | {"alternatives": passer["alternatives"] + [passer["alternatives"][0] | {"usageKey": 1}]}
+    assert ex.key_for("Passer", "genus", fetch=lambda n: two)[0] == ""          # two candidates: not filled
+    assert ex.key_for("Passer", "species", fetch=lambda n: passer)[0] == ""     # wrong rank: not filled
+    fringilla = {"matchType": "HIGHERRANK", "canonicalName": "Fringilla", "rank": "GENUS", "status": "ACCEPTED",
+                 "usageKey": 2494421, "class": "Aves",
+                 "alternatives": [{"matchType": "EXACT", "canonicalName": "Fringilla", "rank": "SPECIES",
+                                   "status": "ACCEPTED", "usageKey": 11969741, "class": "Aves"}]}
+    assert ex.key_for("Fringilla", "genus", fetch=lambda n: fringilla) == ("2494421", "")
