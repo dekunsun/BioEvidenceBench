@@ -1,0 +1,771 @@
+page_id,book,version,condition,field,i,value,status,src_start,src_end,m_start,m_end,outcome,lenient,exact,value_ok,gold_text,run,agree,clean,type_ok,flagged,tier
+8992582,Butler,modern_dots-mocr_plain,G1,person,7,Lilford,exact,933,940,946,953,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,person,21,Seebohm,exact,2553,2560,2561,2568,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,locality,2,Continent,exact,505,514,520,529,tp_value,True,True,True,Continent,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,locality,3,England,exact,518,525,533,540,tp_value,True,True,True,England,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,locality,4,cliffs of Dover,exact,594,609,608,622,tp_value,True,True,True,cliﬀs of Dover,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,locality,9,Lilford,exact,1279,1286,1291,1298,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,0,Jackdaw,exact,28,35,46,53,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,1,Jackdaw,exact,461,468,477,484,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,5,Jackdaw,exact,734,741,747,754,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,6,Jackdaw,exact,799,806,812,819,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,8,Jackdaw,exact,1045,1052,1057,1064,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,10,Barn Owl,exact,1472,1480,1484,1492,tp_value,True,True,True,Barn Owl,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,11,Daws,exact,1566,1570,1577,1581,tp_value,True,True,True,Daws,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,12,chickens,exact,1609,1617,1619,1627,tp_value,True,True,True,chickens,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,13,pheasants,exact,1619,1628,1629,1638,tp_value,True,True,True,pheasants,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,14,partridges,exact,1634,1644,1644,1654,tp_value,True,True,True,partridges,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,15,Owls,exact,1776,1780,1786,1790,tp_value,True,True,True,Owls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,16,Barn Owl,exact,2011,2019,2021,2029,tp_value,True,True,True,Barn Owl,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,17,Jackdaws,exact,2109,2117,2119,2127,tp_value,True,True,True,Jackdaws,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,18,Jackdaw,exact,2250,2257,2259,2266,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,19,House-Sparrow,exact,2319,2332,2328,2341,tp_value,True,True,True,House-Sparrow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,20,Daw,exact,2419,2422,2428,2431,tp_value,True,True,True,Daw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,22,Gulls,exact,2622,2627,2630,2635,tp_value,True,True,True,Gulls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,23,Jackdaw,exact,2641,2648,2649,2656,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,24,Rook,exact,2689,2693,2697,2701,tp_value,True,True,True,Rook,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr_plain,G1,vernacular,25,Jackdaw,exact,2828,2835,2835,2842,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,person,0,Stevenson,exact,247,256,269,278,tp_value,True,True,True,Stevenson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,person,1,St. John,exact,288,296,310,318,tp_value,True,True,True,St. John,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,person,19,T. H. Nelson,exact,1380,1392,1405,1417,tp_value,True,True,True,T. H. Nelson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,person,20,F. Pilling,exact,1398,1408,1423,1433,tp_value,True,True,True,F. Pilling,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,person,22,Seebohm,exact,1532,1539,1557,1564,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,person,23,Gätke,exact,1574,1579,1599,1604,tp_value,True,True,True,Gätke,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,person,27,Gätke,exact,2730,2735,2751,2756,tp_value,True,True,True,Gätke,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,locality,24,Heligoland,exact,2086,2096,2107,2117,tp_value,True,True,True,Heligoland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,locality,25,Weser,exact,2500,2505,2521,2526,tp_value,True,True,True,Weser,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,locality,26,Bremerhaven,exact,2526,2537,2547,2558,tp_value,True,True,True,Bremerhaven,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,date,18,12th to the 30th of October,exact,1343,1370,1368,1395,tp_value,True,True,True,12th to the 30th of October,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,2,grouse,exact,462,468,484,490,tp_value,True,True,True,grouse,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,3,partridges,exact,470,480,492,502,tp_value,True,True,True,partridges,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,4,hares,exact,482,487,504,509,tp_value,True,True,True,hares,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,5,wild duck,exact,674,683,698,707,tp_value,True,True,True,wild duck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,6,pheasant,exact,685,693,709,717,tp_value,True,True,True,pheasant,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,7,Hooded Crow,exact,732,743,756,767,tp_value,True,True,True,Hooded Crow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,8,Peewits,exact,897,904,921,928,tp_value,True,True,True,Peewits,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,9,Gulls,exact,906,911,930,935,tp_value,True,True,True,Gulls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,10,Redshanks,exact,913,922,937,946,tp_value,True,True,True,Redshanks,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,11,Crow,exact,956,960,980,984,tp_value,True,True,True,Crow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,12,hoody,exact,1007,1012,1031,1036,tp_value,True,True,True,hoody,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,13,ducks,exact,1041,1046,1065,1070,tp_value,True,True,True,ducks,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,14,eagle,exact,1144,1149,1168,1173,tp_value,True,True,True,eagle,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,15,peregrine falcon,exact,1151,1167,1175,1191,tp_value,True,True,True,peregrine falcon,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,16,osprey,exact,1172,1178,1196,1202,tp_value,True,True,True,osprey,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,17,Hoodies,exact,1326,1333,1351,1358,tp_value,True,True,True,Hoodies,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr_plain,G1,vernacular,21,Hoodies,exact,1423,1430,1448,1455,tp_value,True,True,True,Hoodies,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,0,Alaudidæ,exact,16,24,35,43,tp_value,True,True,True,Alaudidæ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,6,ALAUDIDÆ,exact,203,211,222,230,tp_value,True,True,True,ALAUDIDÆ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,8,Alauda arvensis,exact,229,244,248,263,tp_value,True,True,True,Alauda arvensis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,37,A. dulcivox,exact,1092,1103,1111,1122,tp_value,True,True,True,A. dulcivox,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,38,A. japonica,exact,1105,1116,1124,1135,tp_value,True,True,True,A. japonica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,39,A. cantarella,exact,1118,1131,1137,1150,tp_value,True,True,True,A. cantarella,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,40,A. liopus,exact,1133,1142,1152,1161,tp_value,True,True,True,A. liopus,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,41,A. blak- istoni,exact,1144,1159,1163,1178,fp_value_wrong,True,True,False,"A. blak-
+istoni",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,42,A. gulgula,exact,1161,1171,1180,1190,tp_value,True,True,True,A. gulgula,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,43,A. australis,exact,1173,1185,1192,1204,tp_value,True,True,True,A. australis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,44,A. cœlivox,exact,1187,1197,1206,1216,tp_value,True,True,True,A. cœlivox,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,45,A. wattersi,exact,1199,1210,1218,1229,tp_value,True,True,True,A. wattersi,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,taxon,46,A. sala,exact,1216,1223,1235,1242,tp_value,True,True,True,A. sala,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,person,3,Jerdon,exact,113,119,132,138,tp_value,True,True,True,Jerdon,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,person,9,LINN.,exact,246,251,265,270,tp_value,True,True,True,LINN.,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,1,Old World,exact,39,48,58,67,tp_value,True,True,True,Old World,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,2,North America,exact,87,100,106,119,tp_value,True,True,True,North America,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,4,Malayana,exact,170,178,189,197,tp_value,True,True,True,Malayana,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,5,Australia,exact,183,192,202,211,tp_value,True,True,True,Australia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,10,Europe,exact,308,314,327,333,tp_value,True,True,True,Europe,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,11,Scandinavia,exact,327,338,346,357,tp_value,True,True,True,Scandinavia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,12,North Africa,exact,375,387,394,406,tp_value,True,True,True,North Africa,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,13,slopes of the Atlas Mountains,exact,428,457,447,476,tp_value,True,True,True,slopes of the Atlas Mountains,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,14,Russia,exact,479,485,498,504,tp_value,True,True,True,Russia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,15,Siberia,exact,490,497,509,516,tp_value,True,True,True,Siberia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,16,Japan,exact,525,530,544,549,tp_value,True,True,True,Japan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,17,valley of the Amoor,exact,536,555,555,574,tp_value,True,True,True,"valley of the
+Amoor",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,18,South-east Mongolia,exact,557,576,576,595,tp_value,True,True,True,South-east Mongolia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,19,Turkestan,exact,578,587,597,606,tp_value,True,True,True,Turkestan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,20,Persia,exact,592,598,611,617,tp_value,True,True,True,Persia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,21,China,exact,620,625,639,644,tp_value,True,True,True,China,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,22,North-west India,exact,627,643,646,662,tp_value,True,True,True,North-west India,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,23,Afghanistan,exact,645,656,664,675,tp_value,True,True,True,Afghanistan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,24,Persia,exact,658,664,677,683,tp_value,True,True,True,Persia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,25,Asia Minor,exact,666,676,685,695,tp_value,True,True,True,Asia Minor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,26,Palestine,exact,678,687,697,706,tp_value,True,True,True,Palestine,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,27,Egypt,exact,692,697,711,716,tp_value,True,True,True,Egypt,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,28,Madeira,exact,723,730,742,749,tp_value,True,True,True,Madeira,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,29,Greenland,exact,767,776,786,795,tp_value,True,True,True,Greenland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,30,United States,exact,815,828,834,847,tp_value,True,True,True,United States,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,31,New Zealand,exact,831,842,850,861,tp_value,True,True,True,New Zealand,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,32,Australia,exact,847,856,866,875,tp_value,True,True,True,Australia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,33,Great Britain,exact,870,883,889,902,tp_value,True,True,True,Great Britain,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,34,Ireland,exact,888,895,907,914,tp_value,True,True,True,Ireland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,locality,48,Bermudas,exact,1613,1621,1634,1642,tp_value,True,True,True,Bermudas,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,date,49,1850,exact,1626,1630,1647,1651,tp_value,True,True,True,1850,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,vernacular,7,SKY-LARK,exact,218,226,237,245,tp_value,True,True,True,SKY-LARK,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,vernacular,35,Sky-Lark,exact,901,909,920,928,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,vernacular,36,Sky-Lark,exact,1022,1030,1041,1049,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr_plain,G1,vernacular,47,Sky-Lark,exact,1346,1354,1365,1373,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,taxon,1,BULIMUS BIVITTATUS,exact,53,71,53,71,tp_value,True,True,True,BULIMUS BIVITTATUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,taxon,5,B. auris-leporis,exact,738,754,732,748,tp_value,True,True,True,B. auris-leporis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,taxon,7,BULIMUS MULIEBRIS,exact,786,803,780,797,tp_value,True,True,True,BULIMUS MULIEBRIS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,taxon,11,BULIMUS BOLIVIANUS,exact,1452,1470,1449,1467,tp_value,True,True,True,BULIMUS BOLIVIANUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,taxon,16,B. annulatus,exact,2410,2422,2409,2423,tp_value,True,True,True,"B. annu-
+latus",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,taxon,18,BULIMUS PATRICIUS,exact,2564,2581,2564,2581,tp_value,True,True,True,BULIMUS PATRICIUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,taxon,22,BULIMUS SPECTATUS,exact,3315,3332,3316,3333,tp_value,True,True,True,BULIMUS SPECTATUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,person,3,SOWERBY,exact,609,616,604,611,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,person,13,PFEIFFER,exact,2174,2182,2174,2182,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,person,15,Pfeiffer,exact,2332,2340,2332,2339,tp_value,True,True,True,Pfeiﬀer,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,locality,4,Brazil,exact,660,666,655,661,tp_value,True,True,True,Brazil,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,locality,9,New Granada,exact,1348,1359,1346,1357,tp_value,True,True,True,New Granada,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,locality,14,"Merida, Andes of Bolivia",exact,2225,2249,2225,2249,tp_value,True,True,True,"Merida, Andes of Bolivia",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,locality,20,New Granada,exact,3199,3210,3200,3211,tp_value,True,True,True,New Granada,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,institution,0,Mus. Taylor,exact,38,49,38,49,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,institution,6,Mus. Taylor,exact,771,782,765,776,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,institution,10,Mus. Cuming,exact,1437,1448,1434,1445,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,institution,17,Mus. Taylor,exact,2549,2560,2549,2560,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,institution,21,Mus. Taylor,exact,3300,3311,3301,3312,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,vernacular,2,TWO-FILLETED BULIMUS,exact,325,345,322,342,tp_value,True,True,True,TWO-FILLETED BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,vernacular,8,EFFEMINATE BULIMUS,exact,1057,1075,1053,1071,tp_value,True,True,True,EFFEMINATE BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,vernacular,12,BOLIVIAN BULIMUS,exact,1814,1830,1810,1826,tp_value,True,True,True,BOLIVIAN BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,vernacular,19,PATRICIAN BULIMUS,exact,2854,2871,2856,2873,tp_value,True,True,True,PATRICIAN BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr_plain,G1,vernacular,23,CHOICE BULIMUS,exact,3645,3659,3649,3663,tp_value,True,True,True,CHOICE BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,taxon,3,B. minimus,exact,480,490,507,517,tp_value,True,True,True,B. minimus,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,taxon,5,BULIMUS PAUPERCULUS,exact,626,645,653,672,tp_value,True,True,True,BULIMUS PAUPERCULUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,taxon,9,Bulimi,exact,1134,1140,1163,1169,tp_value,True,True,True,Bulimi,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,taxon,10,Achatinæ,exact,1145,1153,1174,1182,fp_value_wrong,True,True,False,Achatinœ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,taxon,13,BULIMUS TUTULUS,exact,1397,1412,1426,1441,tp_value,True,True,True,BULIMUS TUTULUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,person,1,ADAMS,exact,353,358,381,386,tp_value,True,True,True,ADAMS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,person,7,ADAMS,exact,1024,1029,1053,1058,tp_value,True,True,True,ADAMS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,person,15,BENSON,exact,1985,1991,2013,2019,tp_value,True,True,True,BENSON,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,person,17,Benson,exact,2035,2041,2063,2069,tp_value,True,True,True,Benson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,locality,2,Jamaica,exact,370,377,398,405,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,locality,8,Jamaica,exact,1041,1048,1070,1077,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,locality,11,Jamaica,exact,1159,1166,1188,1197,tp_value,True,True,True,"Ja‐
+maica",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,locality,16,"Humeerpore, Bundelkhund, India",exact,2003,2033,2031,2061,tp_value,True,True,True,"Humeerpore, Bundelkhund, India",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,institution,4,Mus. Adams,exact,612,622,639,649,tp_value,True,True,True,Mus. Adams,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,institution,12,Mus. Benson,exact,1382,1393,1411,1422,tp_value,True,True,True,Mus. Benson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,vernacular,0,VERY SMALL BULIMUS,exact,115,133,140,158,tp_value,True,True,True,VERY SMALL BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,vernacular,6,MEAN-LOOKING BULIMUS,exact,819,839,846,866,tp_value,True,True,True,MEAN-LOOKING BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr_plain,G1,vernacular,14,LITTLE TUFT BULIMUS,exact,1679,1698,1708,1727,tp_value,True,True,True,LITTLE TUFT BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,1,ACHATINA PHILIPPIANA,exact,51,71,51,71,tp_value,True,True,True,ACHATINA PHILIPPIANA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,4,Glandina,exact,805,813,812,820,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,8,ACHATINA MONILIFERA,exact,1072,1091,1079,1098,tp_value,True,True,True,ACHATINA MONILIFERA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,11,Glandina,exact,1703,1711,1714,1722,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,15,ACHATINA OLEACEA,exact,1959,1975,1971,1987,tp_value,True,True,True,ACHATINA OLEACEA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,17,Helix (Cochlicopa) oleacea,exact,2418,2444,2433,2459,tp_value,True,True,True,Helix (Cochlicopa) oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,19,Glandina oleacea,exact,2475,2491,2491,2507,tp_value,True,True,True,Glandina oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,23,ACHATINA LEUCOZONIAS,exact,2641,2661,2657,2677,tp_value,True,True,True,ACHATINA LEUCOZONIAS,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,26,Voluta leucozonias,exact,3333,3351,3351,3369,tp_value,True,True,True,Voluta leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,28,Achatina albolineata,exact,3406,3426,3424,3444,tp_value,True,True,True,Achatina albolineata,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,30,"Helix (Cochlicopa,) leucozonias",exact,3438,3469,3455,3486,tp_value,True,True,True,"Helix (Cochlicopa,) leucozonias",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,32,Polyphemus leucozonias,exact,3482,3504,3498,3520,tp_value,True,True,True,Polyphemus leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,34,Glandina leucozonias,exact,3512,3532,3527,3547,tp_value,True,True,True,Glandina leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,3,PFEIFFER,exact,794,802,801,809,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,6,Gosse,exact,856,861,864,869,tp_value,True,True,True,Gosse,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,10,PFEIFFER,exact,1692,1700,1703,1711,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,13,Lattre,exact,1784,1790,1796,1802,tp_value,True,True,True,Lattre,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,18,Férussac,exact,2446,2454,2461,2469,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,20,Beck.,exact,2493,2498,2509,2514,tp_value,True,False,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,25,SOWERBY,exact,3299,3306,3317,3324,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,27,Walch,exact,3353,3358,3371,3376,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,29,Lamarck,exact,3428,3435,3446,3453,tp_value,True,True,True,Lamarck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,31,Férussac,exact,3471,3479,3488,3496,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,33,Jan,exact,3506,3509,3522,3525,tp_value,True,True,True,Jan,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,35,Beck.,exact,3534,3539,3549,3554,tp_value,True,False,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,37,Walch,exact,3938,3943,3952,3957,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,38,Gmelin,exact,3945,3951,3959,3965,tp_value,True,True,True,Gmelin,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,person,39,Dillwyn,exact,3957,3964,3971,3978,tp_value,True,True,True,Dillwyn,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,locality,5,Jamaica,exact,847,854,855,862,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,locality,12,"Coban, Vera Cruz, Central America",exact,1749,1782,1761,1794,tp_value,True,True,True,"Coban, Vera Cruz, Central America",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,locality,21,Cuba,exact,2505,2509,2521,2525,tp_value,True,True,True,Cuba,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,locality,36,Martinique,exact,3546,3556,3561,3571,tp_value,True,True,True,Martinique,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,institution,0,Mus. Cuming,exact,36,47,36,47,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,institution,7,Mus. Dennison,exact,1055,1068,1062,1075,tp_value,True,True,True,Mus. Dennison,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,institution,14,Mus. Cuming,exact,1944,1955,1956,1967,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,institution,22,Mus. Cuming,exact,2626,2637,2642,2653,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,2,PHILIPPI'S ACHATINA,exact,398,417,402,421,tp_value,True,True,True,PHILIPPI’S ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,9,NECKLACE-BOUND ACHATINA,exact,1373,1396,1385,1408,tp_value,True,True,True,NECKLACE‐BOUND ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,16,OLIVE-SHAPED ACHATINA,exact,2182,2203,2197,2218,tp_value,True,True,True,OLIVE-SHAPED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,24,WHITE-ZONED ACHATINA,exact,2971,2991,2990,3010,tp_value,True,True,True,WHITE‐ZONED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8992582,Butler,legacy,G1,person,7,Lilford,exact,998,1005,946,953,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,person,20,Seebohm,exact,2687,2694,2561,2568,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,locality,2,Continent,exact,552,561,520,529,tp_value,True,True,True,Continent,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,locality,3,England,exact,565,572,533,540,tp_value,True,True,True,England,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,locality,4,cliffs of Dover,exact,646,661,608,622,tp_value,True,True,True,cliﬀs of Dover,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,locality,9,Lilford,exact,1360,1367,1291,1298,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,0,Jackdaw,exact,48,55,46,53,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,1,Jackdaw,exact,504,511,477,484,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,5,Jackdaw,exact,789,796,747,754,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,6,Jackdaw,exact,857,864,812,819,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,8,Jackdaw,exact,1114,1121,1057,1064,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,10,Barn Owl,exact,1562,1570,1484,1492,tp_value,True,True,True,Barn Owl,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,11,Daws,exact,1659,1663,1577,1581,tp_value,True,True,True,Daws,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,12,pheasants,exact,1715,1724,1629,1638,tp_value,True,True,True,pheasants,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,13,partridges,exact,1730,1740,1644,1654,tp_value,True,True,True,partridges,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,14,Owls',exact,1879,1884,1786,1791,fp_value_wrong,True,False,False,Owls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,15,Barn Owl,exact,2121,2129,2021,2029,tp_value,True,True,True,Barn Owl,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,16,Jackdaws,exact,2225,2233,2119,2127,tp_value,True,True,True,Jackdaws,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,17,Jackdaw,exact,2369,2376,2259,2266,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,18,House-Sparrow,exact,2441,2454,2328,2341,tp_value,True,True,True,House-Sparrow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,19,Daw,exact,2547,2550,2428,2431,tp_value,True,True,True,Daw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,21,Gulls,exact,2756,2761,2630,2635,tp_value,True,True,True,Gulls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,22,Jackdaw,exact,2778,2785,2649,2656,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,23,Rook,exact,2828,2832,2697,2701,tp_value,True,True,True,Rook,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,legacy,G1,vernacular,24,Jackdaw's,exact,2976,2985,2835,2844,fp_value_wrong,True,False,False,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,person,0,Stevenson,exact,284,293,269,278,tp_value,True,True,True,Stevenson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,person,1,vSt. John,exact,325,334,310,318,fp_value_wrong,True,True,False,St. John,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,person,19,T. H. Nelson,exact,1478,1490,1405,1417,tp_value,True,True,True,T. H. Nelson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,person,20,F. Pilling,exact,1499,1509,1423,1433,tp_value,True,True,True,F. Pilling,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,person,22,Seebohm,exact,1638,1645,1557,1564,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,person,23,Gatke,exact,1685,1690,1599,1604,fp_value_wrong,True,True,False,Gätke,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,person,27,Gatke,exact,2892,2897,2751,2756,fp_value_wrong,True,True,False,Gätke,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,locality,24,Heligoland,exact,2220,2230,2107,2117,tp_value,True,True,True,Heligoland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,locality,25,Weser,exact,2653,2658,2521,2526,tp_value,True,True,True,Weser,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,locality,26,Bremerhaven,exact,2679,2690,2547,2558,tp_value,True,True,True,Bremerhaven,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,date,18,12th to the 30th of October,exact,1441,1468,1368,1395,tp_value,True,True,True,12th to the 30th of October,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,2,grouse,exact,513,519,484,490,tp_value,True,True,True,grouse,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,3,partridges,exact,524,534,492,502,tp_value,True,True,True,partridges,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,4,hares,exact,536,541,504,509,tp_value,True,True,True,hares,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,5,wild duck,exact,737,746,698,707,tp_value,True,True,True,wild duck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,6,pheasant,exact,748,756,709,717,tp_value,True,True,True,pheasant,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,7,Hooded Crow,exact,799,810,756,767,tp_value,True,True,True,Hooded Crow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,8,Peewits,exact,970,977,921,928,tp_value,True,True,True,Peewits,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,9,Gulls,exact,979,984,930,935,tp_value,True,True,True,Gulls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,10,Redshanks,exact,986,995,937,946,tp_value,True,True,True,Redshanks,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,11,Crow,exact,1033,1037,980,984,tp_value,True,True,True,Crow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,12,hoody,exact,1085,1090,1031,1036,tp_value,True,True,True,hoody,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,13,ducks,exact,1123,1128,1065,1070,tp_value,True,True,True,ducks,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,14,eagle,exact,1230,1235,1168,1173,tp_value,True,True,True,eagle,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,15,peregrine falcon,exact,1237,1253,1175,1191,tp_value,True,True,True,peregrine falcon,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,16,osprc}',exact,1261,1268,1196,1202,fp_value_wrong,True,True,False,osprey,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,17,Hoodies,exact,1424,1431,1351,1358,tp_value,True,True,True,Hoodies,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,legacy,G1,vernacular,21,Hoodies,exact,1526,1533,1448,1455,tp_value,True,True,True,Hoodies,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,0,Aluudida,exact,38,46,35,43,fp_value_wrong,True,True,False,Alaudidæ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,6,ALAUDID.E,exact,239,248,222,230,fp_value_wrong,True,True,False,ALAUDIDÆ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,8,Alauda iDVCiisis,exact,272,288,248,263,fp_value_wrong,True,True,False,Alauda arvensis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,37,A. dulcivox,exact,1174,1185,1111,1122,tp_value,True,True,True,A. dulcivox,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,38,A. japonica,exact,1187,1198,1124,1135,tp_value,True,True,True,A. japonica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,39,A. caiitarclla,exact,1200,1214,1137,1150,fp_value_wrong,True,True,False,A. cantarella,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,40,A. liopus,exact,1216,1225,1152,1161,tp_value,True,True,True,A. liopus,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,41,"A. blak- 
+
+ istoni",cross_line,1227,1245,1163,1178,tp_value,True,True,True,"A. blak-
+istoni",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,42,A. giilgiila,exact,1247,1259,1180,1190,fp_value_wrong,True,True,False,A. gulgula,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,43,A. australis,exact,1261,1273,1192,1204,tp_value,True,True,True,A. australis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,44,A. axlivox,exact,1275,1285,1206,1216,fp_value_wrong,True,True,False,A. cœlivox,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,45,A. ivai/crsi,exact,1287,1299,1218,1229,fp_value_wrong,True,True,False,A. wattersi,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,taxon,46,A. sala,exact,1306,1313,1235,1242,tp_value,True,True,True,A. sala,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,person,3,Jerdon,exact,139,145,132,138,tp_value,True,True,True,Jerdon,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,person,9,LiNN.,exact,290,295,265,270,tp_value,True,True,True,LINN.,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,1,Old World,exact,61,70,58,67,tp_value,True,True,True,Old World,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,2,North America,exact,113,126,106,119,tp_value,True,True,True,North America,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,4,j\Iala3-ana,exact,199,210,189,197,fp_value_wrong,True,True,False,Malayana,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,5,Australia,exact,215,224,202,211,tp_value,True,True,True,Australia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,10,Europe,exact,355,361,327,333,tp_value,True,True,True,Europe,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,11,Scandinavia,exact,377,388,346,357,tp_value,True,True,True,Scandinavia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,12,North Africa,exact,425,437,394,406,tp_value,True,True,True,North Africa,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,13,slopes of the Atlas Mountains,exact,481,510,447,476,tp_value,True,True,True,slopes of the Atlas Mountains,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,14,Russia,exact,535,541,498,504,tp_value,True,True,True,Russia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,15,Siberia,exact,546,553,509,516,tp_value,True,True,True,Siberia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,16,Japan,exact,581,586,544,549,tp_value,True,True,True,Japan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,17,"valley of the 
+
+ Amoor",cross_line,592,614,555,574,tp_value,True,True,True,"valley of the
+Amoor",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,18,South-east IMongolia,exact,616,636,576,595,fp_value_wrong,True,True,False,South-east Mongolia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,19,Turkestan,exact,638,647,597,606,tp_value,True,True,True,Turkestan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,20,Persia,exact,652,658,611,617,tp_value,True,True,True,Persia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,21,China,exact,680,685,639,644,tp_value,True,True,True,China,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,22,North-west India,exact,690,706,646,662,tp_value,True,True,True,North-west India,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,23,Afghanistan,exact,708,719,664,675,tp_value,True,True,True,Afghanistan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,24,Persia,exact,721,727,677,683,tp_value,True,True,True,Persia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,25,Asia Minor,exact,729,739,685,695,tp_value,True,True,True,Asia Minor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,26,Palestine,exact,741,750,697,706,tp_value,True,True,True,Palestine,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,27,Egypt,exact,755,760,711,716,tp_value,True,True,True,Egypt,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,28,Madeira,exact,789,796,742,749,tp_value,True,True,True,Madeira,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,29,Greenland,exact,833,842,786,795,tp_value,True,True,True,Greenland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,30,United States,exact,884,897,834,847,tp_value,True,True,True,United States,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,31,New Zealand,exact,900,911,850,861,tp_value,True,True,True,New Zealand,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,32,Australia,exact,916,925,866,875,tp_value,True,True,True,Australia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,33,Great Britain,exact,942,955,889,902,tp_value,True,True,True,Great Britain,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,34,Ireland,exact,960,967,907,914,tp_value,True,True,True,Ireland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,locality,48,Bermudas,exact,1727,1735,1634,1642,tp_value,True,True,True,Bermudas,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,date,49,1S50,exact,1740,1744,1647,1651,fp_value_wrong,True,True,False,1850,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,False,False,1
+8992612,Butler,legacy,G1,vernacular,7,Sky-Lark,exact,258,266,237,245,tp_value,True,True,True,SKY-LARK,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,vernacular,35,Sky-Lark,exact,973,981,920,928,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,vernacular,36,Sky-Lark,exact,1101,1109,1041,1049,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,legacy,G1,vernacular,47,Sky-Lark,exact,1446,1454,1365,1373,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,taxon,1,r^ULiMUS BiviTTATUs,exact,69,88,54,71,fp_value_wrong,True,False,False,BULIMUS BIVITTATUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,taxon,5,B. auris-h'poris,exact,805,821,732,748,fp_value_wrong,True,True,False,B. auris-leporis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,taxon,7,BuLIMVS MULIEBUIS,exact,860,877,780,797,fp_value_wrong,True,True,False,BULIMUS MULIEBRIS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,taxon,11,BuLiJlus Boliviands,exact,1592,1611,1449,1467,fp_value_wrong,True,True,False,BULIMUS BOLIVIANUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,taxon,16,"B. annu- 
+
+ latus",cross_line,2614,2631,2409,2423,tp_value,True,True,True,"B. annu-
+latus",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,taxon,18,liuLTMrs PATRTOius,exact,2785,2803,2566,2581,fp_value_wrong,True,False,False,BULIMUS PATRICIUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,taxon,22,Bulimus speotatus,exact,3608,3625,3316,3333,fp_value_wrong,True,True,False,BULIMUS SPECTATUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,person,3,SowERBY,exact,664,671,604,611,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,person,13,Pfeiffer,exact,2367,2375,2174,2182,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,person,15,Pfeiffer,exact,2533,2541,2332,2339,tp_value,True,True,True,Pfeiﬀer,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,locality,4,Brazil,exact,719,725,655,661,tp_value,True,True,True,Brazil,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,locality,9,New Granada,exact,1479,1490,1346,1357,tp_value,True,True,True,New Granada,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,locality,14,"Merida, Andes of Bolivia",exact,2420,2444,2225,2249,tp_value,True,True,True,"Merida, Andes of Bolivia",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,locality,20,New Granada,exact,3482,3493,3200,3211,tp_value,True,True,True,New Granada,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,institution,0,"Mus, Taylor",exact,51,62,38,49,fp_value_wrong,True,True,False,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,institution,6,Mus. Taylor,exact,842,853,765,776,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,institution,10,Mus. Cuuiiug,exact,1574,1586,1434,1445,fp_value_wrong,True,True,False,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,institution,17,Mus. Taylor,exact,2767,2778,2549,2560,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,institution,21,Mus. Taylor,exact,3590,3601,3301,3312,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,vernacular,2,two-filleted Bulijids,exact,360,381,322,342,fp_value_wrong,True,True,False,TWO-FILLETED BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,vernacular,8,effeminate Bulimus,exact,1163,1181,1053,1071,tp_value,True,True,True,EFFEMINATE BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,vernacular,12,Bolivian Bulimus,exact,1979,1995,1810,1826,tp_value,True,True,True,BOLIVIAN BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,vernacular,19,patrician Buluius,exact,3112,3129,2856,2873,fp_value_wrong,True,True,False,PATRICIAN BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,legacy,G1,vernacular,23,choice Bulimus,exact,3966,3980,3649,3663,tp_value,True,True,True,CHOICE BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,taxon,3,B. minimus,exact,547,557,507,517,tp_value,True,True,True,B. minimus,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,taxon,5,BuLiMUs PAUPEECCLUs,exact,706,725,653,672,fp_value_wrong,True,True,False,BULIMUS PAUPERCULUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,taxon,9,Bulimi,exact,1244,1250,1163,1169,tp_value,True,True,True,Bulimi,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,taxon,10,Achalina,exact,1255,1263,1174,1182,fp_value_wrong,True,True,False,Achatinœ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,taxon,13,BULIMUS TUTULUS,exact,1528,1543,1426,1441,tp_value,True,True,True,BULIMUS TUTULUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,person,1,Adams,exact,412,417,381,386,tp_value,True,True,True,ADAMS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,person,7,Abams,exact,1125,1130,1053,1058,fp_value_wrong,True,True,False,ADAMS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,person,15,Benson,exact,2154,2160,2013,2019,tp_value,True,True,True,BENSON,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,person,17,Benson,exact,2207,2213,2063,2069,tp_value,True,True,True,Benson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,locality,2,Jamaica,exact,431,438,398,405,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,locality,8,Jamaica,exact,1145,1152,1070,1077,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,locality,11,"Ja- 
+
+ maica",cross_line,1269,1281,1188,1197,tp_value,True,True,True,"Ja‐
+maica",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,locality,16,"Humeerpore, Bmidelkhund, ludia",exact,2174,2204,2031,2061,fp_value_wrong,True,True,False,"Humeerpore, Bundelkhund, India",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,institution,4,Mus. Adams,exact,689,699,639,649,tp_value,True,True,True,Mus. Adams,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,institution,12,Mus. Benson,exact,1511,1522,1411,1422,tp_value,True,True,True,Mus. Benson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,vernacular,0,very small Bdlimus,exact,153,171,140,158,fp_value_wrong,True,True,False,VERY SMALL BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,vernacular,6,MEAN-LOOKING Bdlimus,exact,902,922,846,866,fp_value_wrong,True,True,False,MEAN-LOOKING BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,legacy,G1,vernacular,14,LITTLE TUFT BuLiMUS,exact,1831,1850,1708,1727,tp_value,True,True,True,LITTLE TUFT BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,legacy,G1,taxon,1,AcHATiNA Philippiana,exact,53,73,51,71,tp_value,True,True,True,ACHATINA PHILIPPIANA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,4,OlamUna,exact,861,868,812,820,fp_value_wrong,True,True,False,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,8,Achatina monilifera,exact,1149,1168,1079,1098,tp_value,True,True,True,ACHATINA MONILIFERA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,11,Olandina,exact,1827,1835,1714,1722,fp_value_wrong,True,True,False,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,15,Achatina oleacea,exact,2102,2118,1971,1987,tp_value,True,True,True,ACHATINA OLEACEA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,17,Helix (Cochlicopa) oleacea,exact,2595,2621,2433,2459,tp_value,True,True,True,Helix (Cochlicopa) oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,19,Glandina oleacea,exact,2654,2670,2491,2507,tp_value,True,True,True,Glandina oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,23,Achatina leicozonias,exact,2833,2853,2657,2677,fp_value_wrong,True,True,False,ACHATINA LEUCOZONIAS,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,26,Valuta leucozonias,exact,3548,3566,3351,3369,fp_value_wrong,True,True,False,Voluta leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,28,Achatina albolineata,exact,3627,3647,3424,3444,tp_value,True,True,True,Achatina albolineata,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,30,"Helix {Cochlicopa,) leucozonias",exact,3661,3692,3455,3486,fp_value_wrong,True,True,False,"Helix (Cochlicopa,) leucozonias",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,32,Polyphemus leucozonias,exact,3707,3729,3498,3520,tp_value,True,True,True,Polyphemus leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,taxon,34,Glmidina leucozonias,exact,3739,3759,3527,3547,fp_value_wrong,True,True,False,Glandina leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,3,Pfeiffer,exact,850,858,801,809,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,6,Gosse,exact,916,921,864,869,tp_value,True,True,True,Gosse,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,10,Pfeiffer,exact,1816,1824,1703,1711,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,13,Lattre,exact,1912,1918,1796,1802,tp_value,True,True,True,Lattre,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,18,Femssac,exact,2623,2630,2461,2469,fp_value_wrong,True,True,False,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,20,Beck,exact,2672,2676,2509,2513,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,25,SowERBY,exact,3511,3518,3317,3324,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,27,Walch,exact,3568,3573,3371,3376,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,29,Lamarck,exact,3649,3656,3446,3453,tp_value,True,True,True,Lamarck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,31,Ferussac,exact,3694,3702,3488,3496,fp_value_wrong,True,True,False,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,33,Jan,exact,3731,3734,3522,3525,tp_value,True,True,True,Jan,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,35,Beck,exact,3761,3765,3549,3553,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,37,Walch,exact,4189,4194,3952,3957,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,38,Gmelin,exact,4196,4202,3959,3965,tp_value,True,True,True,Gmelin,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,person,39,Dillwyn,exact,4211,4218,3971,3978,tp_value,True,True,True,Dillwyn,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,locality,5,Jamaica,exact,907,914,855,862,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,locality,12,"Coban, Vera Cruz, Central America",exact,1876,1909,1761,1794,tp_value,True,True,True,"Coban, Vera Cruz, Central America",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,locality,21,Cuba,exact,2687,2691,2521,2525,tp_value,True,True,True,Cuba,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,locality,36,Martinique,exact,3775,3785,3561,3571,tp_value,True,True,True,Martinique,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,institution,0,Mus. Cuming,exact,35,46,36,47,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,institution,7,Mus. Dennison,exact,1129,1142,1062,1075,tp_value,True,True,True,Mus. Dennison,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,institution,14,Mus. Cuming,exact,2085,2096,1956,1967,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,institution,22,Mus. Cuming,exact,2816,2827,2642,2653,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,vernacular,2,Philippi's Achatina,exact,423,442,402,421,tp_value,True,True,True,PHILIPPI’S ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,vernacular,9,necklace-bound Achatina,exact,1474,1497,1385,1408,tp_value,True,True,True,NECKLACE‐BOUND ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,vernacular,16,olive-shaped Achatina,exact,2344,2365,2197,2218,tp_value,True,True,True,OLIVE-SHAPED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,legacy,G1,vernacular,24,white-zoned Achatina,exact,3159,3179,2990,3010,tp_value,True,True,True,WHITE‐ZONED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8992582,Butler,expert,G1,person,7,Lilford,exact,946,953,946,953,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,person,20,Seebohm,exact,2561,2568,2561,2568,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,locality,2,Continent,exact,520,529,520,529,tp_value,True,True,True,Continent,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,locality,3,England,exact,533,540,533,540,tp_value,True,True,True,England,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,locality,4,cliﬀs of Dover,exact,608,622,608,622,tp_value,True,True,True,cliﬀs of Dover,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,locality,9,Lilford,exact,1291,1298,1291,1298,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,0,Jackdaw,exact,46,53,46,53,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,1,Jackdaw,exact,477,484,477,484,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,5,Jackdaw,exact,747,754,747,754,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,6,Jackdaw,exact,812,819,812,819,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,8,Jackdaw,exact,1057,1064,1057,1064,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,10,Barn Owl,exact,1484,1492,1484,1492,tp_value,True,True,True,Barn Owl,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,11,Daws,exact,1577,1581,1577,1581,tp_value,True,True,True,Daws,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,12,pheasants,exact,1629,1638,1629,1638,tp_value,True,True,True,pheasants,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,13,partridges,exact,1644,1654,1644,1654,tp_value,True,True,True,partridges,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,14,Owls,exact,1786,1790,1786,1790,tp_value,True,True,True,Owls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,15,Barn Owl,exact,2021,2029,2021,2029,tp_value,True,True,True,Barn Owl,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,16,Jackdaws,exact,2119,2127,2119,2127,tp_value,True,True,True,Jackdaws,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,17,Jackdaw,exact,2259,2266,2259,2266,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,18,House-Sparrow,exact,2328,2341,2328,2341,tp_value,True,True,True,House-Sparrow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,19,Daw,exact,2428,2431,2428,2431,tp_value,True,True,True,Daw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,21,Gulls,exact,2630,2635,2630,2635,tp_value,True,True,True,Gulls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,22,Jackdaw,exact,2649,2656,2649,2656,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,23,Rook,exact,2697,2701,2697,2701,tp_value,True,True,True,Rook,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,expert,G1,vernacular,24,Jackdaw,exact,2835,2842,2835,2842,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,person,0,Stevenson,exact,269,278,269,278,tp_value,True,True,True,Stevenson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,person,1,St. John,exact,310,318,310,318,tp_value,True,True,True,St. John,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,person,19,T. H. Nelson,exact,1405,1417,1405,1417,tp_value,True,True,True,T. H. Nelson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,person,20,F. Pilling,exact,1423,1433,1423,1433,tp_value,True,True,True,F. Pilling,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,person,22,Seebohm,exact,1557,1564,1557,1564,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,person,23,Gätke,exact,1599,1604,1599,1604,tp_value,True,True,True,Gätke,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,person,27,Gätke,exact,2751,2756,2751,2756,tp_value,True,True,True,Gätke,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,locality,24,Heligoland,exact,2107,2117,2107,2117,tp_value,True,True,True,Heligoland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,locality,25,Weser,exact,2521,2526,2521,2526,tp_value,True,True,True,Weser,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,locality,26,Bremerhaven,exact,2547,2558,2547,2558,tp_value,True,True,True,Bremerhaven,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,date,18,12th to the 30th of October,exact,1368,1395,1368,1395,tp_value,True,True,True,12th to the 30th of October,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,2,grouse,exact,484,490,484,490,tp_value,True,True,True,grouse,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,3,partridges,exact,492,502,492,502,tp_value,True,True,True,partridges,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,4,hares,exact,504,509,504,509,tp_value,True,True,True,hares,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,5,wild duck,exact,698,707,698,707,tp_value,True,True,True,wild duck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,6,pheasant,exact,709,717,709,717,tp_value,True,True,True,pheasant,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,7,Hooded Crow,exact,756,767,756,767,tp_value,True,True,True,Hooded Crow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,8,Peewits,exact,921,928,921,928,tp_value,True,True,True,Peewits,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,9,Gulls,exact,930,935,930,935,tp_value,True,True,True,Gulls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,10,Redshanks,exact,937,946,937,946,tp_value,True,True,True,Redshanks,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,11,Crow,exact,980,984,980,984,tp_value,True,True,True,Crow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,12,hoody,exact,1031,1036,1031,1036,tp_value,True,True,True,hoody,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,13,ducks,exact,1065,1070,1065,1070,tp_value,True,True,True,ducks,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,14,eagle,exact,1168,1173,1168,1173,tp_value,True,True,True,eagle,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,15,peregrine falcon,exact,1175,1191,1175,1191,tp_value,True,True,True,peregrine falcon,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,16,osprey,exact,1196,1202,1196,1202,tp_value,True,True,True,osprey,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,17,Hoodies,exact,1351,1358,1351,1358,tp_value,True,True,True,Hoodies,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,expert,G1,vernacular,21,Hoodies,exact,1448,1455,1448,1455,tp_value,True,True,True,Hoodies,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,0,Alaudidæ,exact,35,43,35,43,tp_value,True,True,True,Alaudidæ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,6,ALAUDIDÆ,exact,222,230,222,230,tp_value,True,True,True,ALAUDIDÆ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,8,Alauda arvensis,exact,248,263,248,263,tp_value,True,True,True,Alauda arvensis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,37,A. dulcivox,exact,1111,1122,1111,1122,tp_value,True,True,True,A. dulcivox,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,38,A. japonica,exact,1124,1135,1124,1135,tp_value,True,True,True,A. japonica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,39,A. cantarella,exact,1137,1150,1137,1150,tp_value,True,True,True,A. cantarella,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,40,A. liopus,exact,1152,1161,1152,1161,tp_value,True,True,True,A. liopus,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,41,"A. blak-
+istoni",cross_line,1163,1178,1163,1178,tp_value,True,True,True,"A. blak-
+istoni",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,42,A. gulgula,exact,1180,1190,1180,1190,tp_value,True,True,True,A. gulgula,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,43,A. australis,exact,1192,1204,1192,1204,tp_value,True,True,True,A. australis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,44,A. cœlivox,exact,1206,1216,1206,1216,tp_value,True,True,True,A. cœlivox,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,45,A. wattersi,exact,1218,1229,1218,1229,tp_value,True,True,True,A. wattersi,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,taxon,46,A. sala,exact,1235,1242,1235,1242,tp_value,True,True,True,A. sala,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,person,3,Jerdon,exact,132,138,132,138,tp_value,True,True,True,Jerdon,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,person,9,LINN.,exact,265,270,265,270,tp_value,True,True,True,LINN.,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,1,Old World,exact,58,67,58,67,tp_value,True,True,True,Old World,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,2,North America,exact,106,119,106,119,tp_value,True,True,True,North America,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,4,Malayana,exact,189,197,189,197,tp_value,True,True,True,Malayana,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,5,Australia,exact,202,211,202,211,tp_value,True,True,True,Australia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,10,Europe,exact,327,333,327,333,tp_value,True,True,True,Europe,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,11,Scandinavia,exact,346,357,346,357,tp_value,True,True,True,Scandinavia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,12,North Africa,exact,394,406,394,406,tp_value,True,True,True,North Africa,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,13,slopes of the Atlas Mountains,exact,447,476,447,476,tp_value,True,True,True,slopes of the Atlas Mountains,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,14,Russia,exact,498,504,498,504,tp_value,True,True,True,Russia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,15,Siberia,exact,509,516,509,516,tp_value,True,True,True,Siberia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,16,Japan,exact,544,549,544,549,tp_value,True,True,True,Japan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,17,"valley of the
+Amoor",cross_line,555,574,555,574,tp_value,True,True,True,"valley of the
+Amoor",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,18,South-east Mongolia,exact,576,595,576,595,tp_value,True,True,True,South-east Mongolia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,19,Turkestan,exact,597,606,597,606,tp_value,True,True,True,Turkestan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,20,Persia,exact,611,617,611,617,tp_value,True,True,True,Persia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,21,China,exact,639,644,639,644,tp_value,True,True,True,China,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,22,North-west India,exact,646,662,646,662,tp_value,True,True,True,North-west India,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,23,Afghanistan,exact,664,675,664,675,tp_value,True,True,True,Afghanistan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,24,Persia,exact,677,683,677,683,tp_value,True,True,True,Persia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,25,Asia Minor,exact,685,695,685,695,tp_value,True,True,True,Asia Minor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,26,Palestine,exact,697,706,697,706,tp_value,True,True,True,Palestine,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,27,Egypt,exact,711,716,711,716,tp_value,True,True,True,Egypt,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,28,Madeira,exact,742,749,742,749,tp_value,True,True,True,Madeira,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,29,Greenland,exact,786,795,786,795,tp_value,True,True,True,Greenland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,30,United States,exact,834,847,834,847,tp_value,True,True,True,United States,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,31,New Zealand,exact,850,861,850,861,tp_value,True,True,True,New Zealand,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,32,Australia,exact,866,875,866,875,tp_value,True,True,True,Australia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,33,Great Britain,exact,889,902,889,902,tp_value,True,True,True,Great Britain,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,34,Ireland,exact,907,914,907,914,tp_value,True,True,True,Ireland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,locality,48,Bermudas,exact,1634,1642,1634,1642,tp_value,True,True,True,Bermudas,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,date,49,1850,exact,1647,1651,1647,1651,tp_value,True,True,True,1850,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,vernacular,7,SKY-LARK,exact,237,245,237,245,tp_value,True,True,True,SKY-LARK,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,vernacular,35,Sky-Lark,exact,920,928,920,928,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,vernacular,36,Sky-Lark,exact,1041,1049,1041,1049,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,expert,G1,vernacular,47,Sky-Lark,exact,1365,1373,1365,1373,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,taxon,1,BULIMUS BIVITTATUS,exact,53,71,53,71,tp_value,True,True,True,BULIMUS BIVITTATUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,taxon,5,B. auris-leporis,exact,732,748,732,748,tp_value,True,True,True,B. auris-leporis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,taxon,7,BULIMUS MULIEBRIS,exact,780,797,780,797,tp_value,True,True,True,BULIMUS MULIEBRIS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,taxon,11,BULIMUS BOLIVIANUS,exact,1449,1467,1449,1467,tp_value,True,True,True,BULIMUS BOLIVIANUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,taxon,16,"B. annu-
+latus",cross_line,2409,2423,2409,2423,tp_value,True,True,True,"B. annu-
+latus",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,taxon,18,BULIMUS PATRICIUS,exact,2564,2581,2564,2581,tp_value,True,True,True,BULIMUS PATRICIUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,taxon,22,BULIMUS SPECTATUS,exact,3316,3333,3316,3333,tp_value,True,True,True,BULIMUS SPECTATUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,person,3,SOWERBY,exact,604,611,604,611,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,person,13,PFEIFFER,exact,2174,2182,2174,2182,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,person,15,Pfeiﬀer,exact,2332,2339,2332,2339,tp_value,True,True,True,Pfeiﬀer,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,locality,4,Brazil,exact,655,661,655,661,tp_value,True,True,True,Brazil,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,locality,9,New Granada,exact,1346,1357,1346,1357,tp_value,True,True,True,New Granada,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,locality,14,"Merida, Andes of Bolivia",exact,2225,2249,2225,2249,tp_value,True,True,True,"Merida, Andes of Bolivia",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,locality,20,New Granada,exact,3200,3211,3200,3211,tp_value,True,True,True,New Granada,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,institution,0,Mus. Taylor,exact,38,49,38,49,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,institution,6,Mus. Taylor,exact,765,776,765,776,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,institution,10,Mus. Cuming,exact,1434,1445,1434,1445,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,institution,17,Mus. Taylor,exact,2549,2560,2549,2560,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,institution,21,Mus. Taylor,exact,3301,3312,3301,3312,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,vernacular,2,TWO-FILLETED BULIMUS,exact,322,342,322,342,tp_value,True,True,True,TWO-FILLETED BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,vernacular,8,EFFEMINATE BULIMUS,exact,1053,1071,1053,1071,tp_value,True,True,True,EFFEMINATE BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,vernacular,12,BOLIVIAN BULIMUS,exact,1810,1826,1810,1826,tp_value,True,True,True,BOLIVIAN BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,vernacular,19,PATRICIAN BULIMUS,exact,2856,2873,2856,2873,tp_value,True,True,True,PATRICIAN BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,expert,G1,vernacular,23,CHOICE BULIMUS,exact,3649,3663,3649,3663,tp_value,True,True,True,CHOICE BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,taxon,3,B. minimus,exact,507,517,507,517,tp_value,True,True,True,B. minimus,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,taxon,5,BULIMUS PAUPERCULUS,exact,653,672,653,672,tp_value,True,True,True,BULIMUS PAUPERCULUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,taxon,9,Bulimi,exact,1163,1169,1163,1169,tp_value,True,True,True,Bulimi,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,taxon,10,Achatinœ,exact,1174,1182,1174,1182,tp_value,True,True,True,Achatinœ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,taxon,13,BULIMUS TUTULUS,exact,1426,1441,1426,1441,tp_value,True,True,True,BULIMUS TUTULUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,person,1,ADAMS,exact,381,386,381,386,tp_value,True,True,True,ADAMS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,person,7,ADAMS,exact,1053,1058,1053,1058,tp_value,True,True,True,ADAMS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,person,15,BENSON,exact,2013,2019,2013,2019,tp_value,True,True,True,BENSON,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,person,17,Benson,exact,2063,2069,2063,2069,tp_value,True,True,True,Benson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,locality,2,Jamaica,exact,398,405,398,405,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,locality,8,Jamaica,exact,1070,1077,1070,1077,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,locality,11,"Ja‐
+maica",cross_line,1188,1197,1188,1197,tp_value,True,True,True,"Ja‐
+maica",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,locality,16,"Humeerpore, Bundelkhund, India",exact,2031,2061,2031,2061,tp_value,True,True,True,"Humeerpore, Bundelkhund, India",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,institution,4,Mus. Adams,exact,639,649,639,649,tp_value,True,True,True,Mus. Adams,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,institution,12,Mus. Benson,exact,1411,1422,1411,1422,tp_value,True,True,True,Mus. Benson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,vernacular,0,VERY SMALL BULIMUS,exact,140,158,140,158,tp_value,True,True,True,VERY SMALL BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,vernacular,6,MEAN-LOOKING BULIMUS,exact,846,866,846,866,tp_value,True,True,True,MEAN-LOOKING BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,expert,G1,vernacular,14,LITTLE TUFT BULIMUS,exact,1708,1727,1708,1727,tp_value,True,True,True,LITTLE TUFT BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,expert,G1,taxon,1,ACHATINA PHILIPPIANA,exact,51,71,51,71,tp_value,True,True,True,ACHATINA PHILIPPIANA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,4,Glandina,exact,812,820,812,820,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,8,ACHATINA MONILIFERA,exact,1079,1098,1079,1098,tp_value,True,True,True,ACHATINA MONILIFERA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,11,Glandina,exact,1714,1722,1714,1722,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,15,ACHATINA OLEACEA,exact,1971,1987,1971,1987,tp_value,True,True,True,ACHATINA OLEACEA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,17,Helix (Cochlicopa) oleacea,exact,2433,2459,2433,2459,tp_value,True,True,True,Helix (Cochlicopa) oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,19,Glandina oleacea,exact,2491,2507,2491,2507,tp_value,True,True,True,Glandina oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,23,ACHATINA LEUCOZONIAS,exact,2657,2677,2657,2677,tp_value,True,True,True,ACHATINA LEUCOZONIAS,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,26,Voluta leucozonias,exact,3351,3369,3351,3369,tp_value,True,True,True,Voluta leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,28,Achatina albolineata,exact,3424,3444,3424,3444,tp_value,True,True,True,Achatina albolineata,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,30,"Helix (Cochlicopa,) leucozonias",exact,3455,3486,3455,3486,tp_value,True,True,True,"Helix (Cochlicopa,) leucozonias",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,32,Polyphemus leucozonias,exact,3498,3520,3498,3520,tp_value,True,True,True,Polyphemus leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,taxon,34,Glandina leucozonias,exact,3527,3547,3527,3547,tp_value,True,True,True,Glandina leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,3,PFEIFFER,exact,801,809,801,809,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,6,Gosse,exact,864,869,864,869,tp_value,True,True,True,Gosse,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,10,PFEIFFER,exact,1703,1711,1703,1711,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,13,Lattre,exact,1796,1802,1796,1802,tp_value,True,True,True,Lattre,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,18,Férussac,exact,2461,2469,2461,2469,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,20,Beck,exact,2509,2513,2509,2513,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,25,SOWERBY,exact,3317,3324,3317,3324,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,27,Walch,exact,3371,3376,3371,3376,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,29,Lamarck,exact,3446,3453,3446,3453,tp_value,True,True,True,Lamarck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,31,Férussac,exact,3488,3496,3488,3496,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,33,Jan,exact,3522,3525,3522,3525,tp_value,True,True,True,Jan,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,35,Beck,exact,3549,3553,3549,3553,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,37,Walch,exact,3952,3957,3952,3957,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,38,Gmelin,exact,3959,3965,3959,3965,tp_value,True,True,True,Gmelin,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,person,39,Dillwyn,exact,3971,3978,3971,3978,tp_value,True,True,True,Dillwyn,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,locality,5,Jamaica,exact,855,862,855,862,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,locality,12,"Coban, Vera Cruz, Central America",exact,1761,1794,1761,1794,tp_value,True,True,True,"Coban, Vera Cruz, Central America",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,locality,21,Cuba,exact,2521,2525,2521,2525,tp_value,True,True,True,Cuba,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,locality,36,Martinique,exact,3561,3571,3561,3571,tp_value,True,True,True,Martinique,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,institution,0,Mus. Cuming,exact,36,47,36,47,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,institution,7,Mus. Dennison,exact,1062,1075,1062,1075,tp_value,True,True,True,Mus. Dennison,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,institution,14,Mus. Cuming,exact,1956,1967,1956,1967,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,institution,22,Mus. Cuming,exact,2642,2653,2642,2653,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,vernacular,2,PHILIPPI’S ACHATINA,exact,402,421,402,421,tp_value,True,True,True,PHILIPPI’S ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,vernacular,9,NECKLACE‐BOUND ACHATINA,exact,1385,1408,1385,1408,tp_value,True,True,True,NECKLACE‐BOUND ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,vernacular,16,OLIVE-SHAPED ACHATINA,exact,2197,2218,2197,2218,tp_value,True,True,True,OLIVE-SHAPED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,expert,G1,vernacular,24,WHITE‐ZONED ACHATINA,exact,2990,3010,2990,3010,tp_value,True,True,True,WHITE‐ZONED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8992582,Butler,modern_dots-mocr,G1,person,7,Lilford,exact,935,942,946,953,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,person,20,Seebohm,exact,2555,2562,2561,2568,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,locality,2,Continent,exact,505,514,520,529,tp_value,True,True,True,Continent,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,locality,3,England,exact,518,525,533,540,tp_value,True,True,True,England,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,locality,4,cliffs of Dover,exact,594,609,608,622,tp_value,True,True,True,cliﬀs of Dover,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,locality,9,Lilford,exact,1281,1288,1291,1298,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,0,Jackdaw,exact,28,35,46,53,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,1,Jackdaw,exact,461,468,477,484,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,5,Jackdaw,exact,736,743,747,754,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,6,Jackdaw,exact,801,808,812,819,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,8,Jackdaw,exact,1047,1054,1057,1064,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,10,Barn Owl,exact,1474,1482,1484,1492,tp_value,True,True,True,Barn Owl,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,11,Daws,exact,1568,1572,1577,1581,tp_value,True,True,True,Daws,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,12,pheasants,exact,1621,1630,1629,1638,tp_value,True,True,True,pheasants,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,13,partridges,exact,1636,1646,1644,1654,tp_value,True,True,True,partridges,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,14,Owls,exact,1778,1782,1786,1790,tp_value,True,True,True,Owls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,15,Barn Owl,exact,2013,2021,2021,2029,tp_value,True,True,True,Barn Owl,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,16,Jackdaws,exact,2111,2119,2119,2127,tp_value,True,True,True,Jackdaws,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,17,Jackdaw,exact,2252,2259,2259,2266,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,18,House-Sparrow,exact,2321,2334,2328,2341,tp_value,True,True,True,House-Sparrow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,19,Daw,exact,2421,2424,2428,2431,tp_value,True,True,True,Daw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,21,Gulls,exact,2624,2629,2630,2635,tp_value,True,True,True,Gulls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,22,Jackdaw,exact,2643,2650,2649,2656,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,23,Rook,exact,2691,2695,2697,2701,tp_value,True,True,True,Rook,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992582,Butler,modern_dots-mocr,G1,vernacular,24,Jackdaw,exact,2830,2837,2835,2842,tp_value,True,True,True,Jackdaw,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,person,0,Stevenson,exact,247,256,269,278,tp_value,True,True,True,Stevenson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,person,1,St. John,exact,288,296,310,318,tp_value,True,True,True,St. John,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,person,19,T. H. Nelson,exact,1380,1392,1405,1417,tp_value,True,True,True,T. H. Nelson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,person,20,F. Pilling,exact,1398,1408,1423,1433,tp_value,True,True,True,F. Pilling,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,person,22,Seebohm,exact,1532,1539,1557,1564,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,person,23,Gätke,exact,1574,1579,1599,1604,tp_value,True,True,True,Gätke,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,person,27,Gätke,exact,2730,2735,2751,2756,tp_value,True,True,True,Gätke,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,locality,24,Heligoland,exact,2086,2096,2107,2117,tp_value,True,True,True,Heligoland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,locality,25,Weser,exact,2500,2505,2521,2526,tp_value,True,True,True,Weser,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,locality,26,Bremerhaven,exact,2526,2537,2547,2558,tp_value,True,True,True,Bremerhaven,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,date,18,12th to the 30th of October,exact,1343,1370,1368,1395,tp_value,True,True,True,12th to the 30th of October,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,2,grouse,exact,462,468,484,490,tp_value,True,True,True,grouse,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,3,partridges,exact,470,480,492,502,tp_value,True,True,True,partridges,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,4,hares,exact,482,487,504,509,tp_value,True,True,True,hares,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,5,wild duck,exact,674,683,698,707,tp_value,True,True,True,wild duck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,6,pheasant,exact,685,693,709,717,tp_value,True,True,True,pheasant,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,7,Hooded Crow,exact,732,743,756,767,tp_value,True,True,True,Hooded Crow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,8,Peewits,exact,897,904,921,928,tp_value,True,True,True,Peewits,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,9,Gulls,exact,906,911,930,935,tp_value,True,True,True,Gulls,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,10,Redshanks,exact,913,922,937,946,tp_value,True,True,True,Redshanks,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,11,Crow,exact,956,960,980,984,tp_value,True,True,True,Crow,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,12,hoody,exact,1007,1012,1031,1036,tp_value,True,True,True,hoody,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,13,ducks,exact,1041,1046,1065,1070,tp_value,True,True,True,ducks,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,14,eagle,exact,1144,1149,1168,1173,tp_value,True,True,True,eagle,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,15,peregrine falcon,exact,1151,1167,1175,1191,tp_value,True,True,True,peregrine falcon,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,16,osprey,exact,1172,1178,1196,1202,tp_value,True,True,True,osprey,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,17,Hoodies,exact,1326,1333,1351,1358,tp_value,True,True,True,Hoodies,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992601,Butler,modern_dots-mocr,G1,vernacular,21,Hoodies,exact,1423,1430,1448,1455,tp_value,True,True,True,Hoodies,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,0,Alaudidæ,exact,17,25,35,43,tp_value,True,True,True,Alaudidæ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,6,ALAUDIDÆ,exact,206,214,222,230,tp_value,True,True,True,ALAUDIDÆ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,8,Alauda arvensis,exact,237,252,248,263,tp_value,True,True,True,Alauda arvensis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,37,A. dulcivox,exact,1102,1113,1111,1122,tp_value,True,True,True,A. dulcivox,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,38,A. japonica,exact,1117,1128,1124,1135,tp_value,True,True,True,A. japonica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,39,A. cantarella,exact,1132,1145,1137,1150,tp_value,True,True,True,A. cantarella,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,40,A. liopus,exact,1149,1158,1152,1161,tp_value,True,True,True,A. liopus,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,41,A. blak- istoni,exact,1162,1177,1163,1178,fp_value_wrong,True,True,False,"A. blak-
+istoni",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,42,A. gulgula,exact,1181,1191,1180,1190,tp_value,True,True,True,A. gulgula,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,43,A. australis,exact,1195,1207,1192,1204,tp_value,True,True,True,A. australis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,44,A. cœlivox,exact,1211,1221,1206,1216,tp_value,True,True,True,A. cœlivox,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,45,A. wattersi,exact,1225,1236,1218,1229,tp_value,True,True,True,A. wattersi,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,taxon,46,A. sala,exact,1244,1251,1235,1242,tp_value,True,True,True,A. sala,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,person,3,Jerdon,exact,115,121,132,138,tp_value,True,True,True,Jerdon,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,person,9,LINN.,exact,254,259,265,270,tp_value,True,True,True,LINN.,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,1,Old World,exact,41,50,58,67,tp_value,True,True,True,Old World,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,2,North America,exact,89,102,106,119,tp_value,True,True,True,North America,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,4,Malayana,exact,172,180,189,197,tp_value,True,True,True,Malayana,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,5,Australia,exact,185,194,202,211,tp_value,True,True,True,Australia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,10,Europe,exact,317,323,327,333,tp_value,True,True,True,Europe,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,11,Scandinavia,exact,336,347,346,357,tp_value,True,True,True,Scandinavia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,12,North Africa,exact,384,396,394,406,tp_value,True,True,True,North Africa,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,13,slopes of the Atlas Mountains,exact,437,466,447,476,tp_value,True,True,True,slopes of the Atlas Mountains,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,14,Russia,exact,488,494,498,504,tp_value,True,True,True,Russia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,15,Siberia,exact,499,506,509,516,tp_value,True,True,True,Siberia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,16,Japan,exact,534,539,544,549,tp_value,True,True,True,Japan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,17,valley of the Amoor,exact,545,564,555,574,tp_value,True,True,True,"valley of the
+Amoor",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,18,South-east Mongolia,exact,566,585,576,595,tp_value,True,True,True,South-east Mongolia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,19,Turkestan,exact,587,596,597,606,tp_value,True,True,True,Turkestan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,20,Persia,exact,601,607,611,617,tp_value,True,True,True,Persia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,21,China,exact,629,634,639,644,tp_value,True,True,True,China,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,22,North-west India,exact,636,652,646,662,tp_value,True,True,True,North-west India,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,23,Afghanistan,exact,654,665,664,675,tp_value,True,True,True,Afghanistan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,24,Persia,exact,667,673,677,683,tp_value,True,True,True,Persia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,25,Asia Minor,exact,675,685,685,695,tp_value,True,True,True,Asia Minor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,26,Palestine,exact,687,696,697,706,tp_value,True,True,True,Palestine,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,27,Egypt,exact,701,706,711,716,tp_value,True,True,True,Egypt,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,28,Madeira,exact,732,739,742,749,tp_value,True,True,True,Madeira,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,29,Greenland,exact,776,785,786,795,tp_value,True,True,True,Greenland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,30,United States,exact,824,837,834,847,tp_value,True,True,True,United States,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,31,New Zealand,exact,840,851,850,861,tp_value,True,True,True,New Zealand,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,32,Australia,exact,856,865,866,875,tp_value,True,True,True,Australia,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,33,Great Britain,exact,879,892,889,902,tp_value,True,True,True,Great Britain,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,34,Ireland,exact,897,904,907,914,tp_value,True,True,True,Ireland,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,locality,48,Bermudas,exact,1642,1650,1634,1642,tp_value,True,True,True,Bermudas,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,date,49,1850,exact,1655,1659,1647,1651,tp_value,True,True,True,1850,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,vernacular,7,SKY-LARK,exact,225,233,237,245,tp_value,True,True,True,SKY-LARK,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,vernacular,35,Sky-Lark,exact,910,918,920,928,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,vernacular,36,Sky-Lark,exact,1031,1039,1041,1049,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8992612,Butler,modern_dots-mocr,G1,vernacular,47,Sky-Lark,exact,1375,1383,1365,1373,tp_value,True,True,True,Sky-Lark,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,taxon,1,BULIMUS BIVITTATUS,exact,60,78,53,71,tp_value,True,True,True,BULIMUS BIVITTATUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,taxon,5,B. auris-leporis,exact,754,770,732,748,tp_value,True,True,True,B. auris-leporis,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,taxon,7,BULIMUS MULIEBRIS,exact,808,825,780,797,tp_value,True,True,True,BULIMUS MULIEBRIS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,taxon,11,BULIMUS BOLIVIANUS,exact,1487,1505,1449,1467,tp_value,True,True,True,BULIMUS BOLIVIANUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,taxon,16,B. annulatus,exact,2454,2466,2409,2423,tp_value,True,True,True,"B. annu-
+latus",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,taxon,18,BULIMUS PATRICIUS,exact,2614,2631,2564,2581,tp_value,True,True,True,BULIMUS PATRICIUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,taxon,22,BULIMUS SPECTATUS,exact,3378,3395,3316,3333,tp_value,True,True,True,BULIMUS SPECTATUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,person,3,SOWERBY,exact,624,631,604,611,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,person,13,PFEIFFER,exact,2217,2225,2174,2182,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,person,15,Pfeiffer,exact,2375,2383,2332,2339,tp_value,True,True,True,Pfeiﬀer,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,locality,4,Brazil,exact,675,681,655,661,tp_value,True,True,True,Brazil,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,locality,9,New Granada,exact,1378,1389,1346,1357,tp_value,True,True,True,New Granada,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,locality,14,"Merida, Andes of Bolivia",exact,2268,2292,2225,2249,tp_value,True,True,True,"Merida, Andes of Bolivia",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,locality,20,New Granada,exact,3257,3268,3200,3211,tp_value,True,True,True,New Granada,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,institution,0,Mus. Taylor,exact,43,54,38,49,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,institution,6,Mus. Taylor,exact,791,802,765,776,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,institution,10,Mus. Cuming,exact,1470,1481,1434,1445,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,institution,17,Mus. Taylor,exact,2597,2608,2549,2560,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,institution,21,Mus. Taylor,exact,3361,3372,3301,3312,tp_value,True,True,True,Mus. Taylor,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,vernacular,2,TWO-FILLETED BULIMUS,exact,338,358,322,342,tp_value,True,True,True,TWO-FILLETED BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,vernacular,8,EFFEMINATE BULIMUS,exact,1085,1103,1053,1071,tp_value,True,True,True,EFFEMINATE BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,vernacular,12,BOLIVIAN BULIMUS,exact,1855,1871,1810,1826,tp_value,True,True,True,BOLIVIAN BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,vernacular,19,PATRICIAN BULIMUS,exact,2910,2927,2856,2873,tp_value,True,True,True,PATRICIAN BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967047,Reeve,modern_dots-mocr,G1,vernacular,23,CHOICE BULIMUS,exact,3714,3728,3649,3663,tp_value,True,True,True,CHOICE BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,taxon,3,B. minimus,exact,481,491,507,517,tp_value,True,True,True,B. minimus,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,taxon,5,BULIMUS PAUPERCULUS,exact,628,647,653,672,tp_value,True,True,True,BULIMUS PAUPERCULUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,taxon,9,Bulimi,exact,1139,1145,1163,1169,tp_value,True,True,True,Bulimi,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,taxon,10,Achatinæ,exact,1152,1160,1174,1182,fp_value_wrong,True,True,False,Achatinœ,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,taxon,13,BULIMUS TUTULUS,exact,1405,1420,1426,1441,tp_value,True,True,True,BULIMUS TUTULUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,person,1,ADAMS,exact,353,358,381,386,tp_value,True,True,True,ADAMS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,person,7,ADAMS,exact,1028,1033,1053,1058,tp_value,True,True,True,ADAMS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,person,15,BENSON,exact,1995,2001,2013,2019,tp_value,True,True,True,BENSON,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,person,17,Benson,exact,2045,2051,2063,2069,tp_value,True,True,True,Benson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,locality,2,Jamaica,exact,370,377,398,405,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,locality,8,Jamaica,exact,1045,1052,1070,1077,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,locality,11,Jamaica,exact,1167,1174,1188,1197,tp_value,True,True,True,"Ja‐
+maica",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,locality,16,"Humeerpore, Bundelkhund, India",exact,2013,2043,2031,2061,tp_value,True,True,True,"Humeerpore, Bundelkhund, India",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,institution,4,Mus. Adams,exact,614,624,639,649,tp_value,True,True,True,Mus. Adams,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,institution,12,Mus. Benson,exact,1390,1401,1411,1422,tp_value,True,True,True,Mus. Benson,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,vernacular,0,VERY SMALL BULIMUS,exact,115,133,140,158,tp_value,True,True,True,VERY SMALL BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,vernacular,6,MEAN-LOOKING BULIMUS,exact,823,843,846,866,tp_value,True,True,True,MEAN-LOOKING BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967060,Reeve,modern_dots-mocr,G1,vernacular,14,LITTLE TUFT BULIMUS,exact,1689,1708,1708,1727,tp_value,True,True,True,LITTLE TUFT BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,1,ACHATINA PHILIPPIANA,exact,58,78,51,71,tp_value,True,True,True,ACHATINA PHILIPPIANA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,4,Glandina,exact,822,830,812,820,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,8,ACHATINA MONILIFERA,exact,1098,1117,1079,1098,tp_value,True,True,True,ACHATINA MONILIFERA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,11,Glandina,exact,1739,1747,1714,1722,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,15,ACHATINA OLEACEA,exact,2004,2020,1971,1987,tp_value,True,True,True,ACHATINA OLEACEA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,17,Helix (Cochlicopa) oleacea,exact,2472,2498,2433,2459,tp_value,True,True,True,Helix (Cochlicopa) oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,19,Glandina oleacea,exact,2531,2547,2491,2507,tp_value,True,True,True,Glandina oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,23,ACHATINA LEUCOZONIAS,exact,2705,2725,2657,2677,tp_value,True,True,True,ACHATINA LEUCOZONIAS,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,26,Voluta leucozonias,exact,3410,3428,3351,3369,tp_value,True,True,True,Voluta leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,28,Achatina albolineata,exact,3485,3505,3424,3444,tp_value,True,True,True,Achatina albolineata,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,30,Helix,exact,3519,3524,3455,3460,fp_no_gold,False,False,False,,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,31,Cochlicopa,exact,3526,3536,3462,3472,fp_value_wrong,True,False,False,"Helix (Cochlicopa,) leucozonias",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,33,Polyphemus leucozonias,exact,3565,3587,3498,3520,tp_value,True,True,True,Polyphemus leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,35,Glandina leucozonias,exact,3597,3617,3527,3547,tp_value,True,True,True,Glandina leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,3,PFEIFFER,exact,811,819,801,809,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,6,Gosse,exact,877,882,864,869,tp_value,True,True,True,Gosse,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,10,PFEIFFER,exact,1728,1736,1703,1711,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,13,Lattre,exact,1824,1830,1796,1802,tp_value,True,True,True,Lattre,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,18,Férussac,exact,2501,2509,2461,2469,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,20,Beck,exact,2550,2554,2509,2513,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,25,SOWERBY,exact,3373,3380,3317,3324,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,27,Walch,exact,3431,3436,3371,3376,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,29,Lamarck,exact,3508,3515,3446,3453,tp_value,True,True,True,Lamarck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,32,Férussac,exact,3553,3561,3488,3496,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,34,Jan,exact,3590,3593,3522,3525,tp_value,True,True,True,Jan,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,36,Beck,exact,3620,3624,3549,3553,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,38,Walch,exact,4026,4031,3952,3957,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,39,Gmelin,exact,4033,4039,3959,3965,tp_value,True,True,True,Gmelin,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,person,40,Dillwyn,exact,4045,4052,3971,3978,tp_value,True,True,True,Dillwyn,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,locality,5,Jamaica,exact,868,875,855,862,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,locality,12,"Coban, Vera Cruz, Central America",exact,1789,1822,1761,1794,tp_value,True,True,True,"Coban, Vera Cruz, Central America",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,locality,21,Cuba,exact,2564,2568,2521,2525,tp_value,True,True,True,Cuba,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,locality,37,Martinique,exact,3634,3644,3561,3571,tp_value,True,True,True,Martinique,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,institution,0,Mus. Cuming,exact,41,52,36,47,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,institution,7,Mus. Dennison,exact,1079,1092,1062,1075,tp_value,True,True,True,Mus. Dennison,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,institution,14,Mus. Cuming,exact,1987,1998,1956,1967,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,institution,22,Mus. Cuming,exact,2688,2699,2642,2653,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,vernacular,2,PHILIPPI'S ACHATINA,exact,411,430,402,421,tp_value,True,True,True,PHILIPPI’S ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,vernacular,9,NECKLACE-BOUND ACHATINA,exact,1405,1428,1385,1408,tp_value,True,True,True,NECKLACE‐BOUND ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,vernacular,16,OLIVE-SHAPED ACHATINA,exact,2233,2254,2197,2218,tp_value,True,True,True,OLIVE-SHAPED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,vernacular,24,WHITE-ZONED ACHATINA,exact,3041,3061,2990,3010,tp_value,True,True,True,WHITE‐ZONED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2

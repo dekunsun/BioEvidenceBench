@@ -1,0 +1,579 @@
+page_id,field,version,gold_start,gold_end,gold_text,ocr_text,aligned,span_cer,preserved
+8992582,vernacular,legacy,46,53,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,46,53,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,46,53,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,legacy,477,484,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,477,484,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,477,484,Jackdaw,Jackdaw,True,0.0,True
+8992582,locality,legacy,520,529,Continent,Continent,True,0.0,True
+8992582,locality,modern_dots-mocr,520,529,Continent,Continent,True,0.0,True
+8992582,locality,modern_dots-mocr_plain,520,529,Continent,Continent,True,0.0,True
+8992582,locality,legacy,533,540,England,England,True,0.0,True
+8992582,locality,modern_dots-mocr,533,540,England,England,True,0.0,True
+8992582,locality,modern_dots-mocr_plain,533,540,England,England,True,0.0,True
+8992582,locality,legacy,608,622,cliﬀs of Dover,cliffs of Dover,True,0.0,True
+8992582,locality,modern_dots-mocr,608,622,cliﬀs of Dover,cliffs of Dover,True,0.0,True
+8992582,locality,modern_dots-mocr_plain,608,622,cliﬀs of Dover,cliffs of Dover,True,0.0,True
+8992582,vernacular,legacy,747,754,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,747,754,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,747,754,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,legacy,812,819,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,812,819,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,812,819,Jackdaw,Jackdaw,True,0.0,True
+8992582,person,legacy,946,953,Lilford,Lilford,True,0.0,True
+8992582,person,modern_dots-mocr,946,953,Lilford,Lilford,True,0.0,True
+8992582,person,modern_dots-mocr_plain,946,953,Lilford,Lilford,True,0.0,True
+8992582,vernacular,legacy,1057,1064,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,1057,1064,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,1057,1064,Jackdaw,Jackdaw,True,0.0,True
+8992582,locality,legacy,1291,1298,Lilford,Lilford,True,0.0,True
+8992582,locality,modern_dots-mocr,1291,1298,Lilford,Lilford,True,0.0,True
+8992582,locality,modern_dots-mocr_plain,1291,1298,Lilford,Lilford,True,0.0,True
+8992582,vernacular,legacy,1484,1492,Barn Owl,Barn Owl,True,0.0,True
+8992582,vernacular,modern_dots-mocr,1484,1492,Barn Owl,Barn Owl,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,1484,1492,Barn Owl,Barn Owl,True,0.0,True
+8992582,vernacular,legacy,1577,1581,Daws,Daws,True,0.0,True
+8992582,vernacular,modern_dots-mocr,1577,1581,Daws,Daws,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,1577,1581,Daws,Daws,True,0.0,True
+8992582,vernacular,legacy,1619,1627,chickens,chickens,True,0.0,True
+8992582,vernacular,modern_dots-mocr,1619,1627,chickens,chickens,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,1619,1627,chickens,chickens,True,0.0,True
+8992582,vernacular,legacy,1629,1638,pheasants,pheasants,True,0.0,True
+8992582,vernacular,modern_dots-mocr,1629,1638,pheasants,pheasants,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,1629,1638,pheasants,pheasants,True,0.0,True
+8992582,vernacular,legacy,1644,1654,partridges,partridges,True,0.0,True
+8992582,vernacular,modern_dots-mocr,1644,1654,partridges,partridges,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,1644,1654,partridges,partridges,True,0.0,True
+8992582,vernacular,legacy,1786,1790,Owls,Owls,True,0.0,True
+8992582,vernacular,modern_dots-mocr,1786,1790,Owls,Owls,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,1786,1790,Owls,Owls,True,0.0,True
+8992582,vernacular,legacy,2021,2029,Barn Owl,Barn Owl,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2021,2029,Barn Owl,Barn Owl,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2021,2029,Barn Owl,Barn Owl,True,0.0,True
+8992582,vernacular,legacy,2119,2127,Jackdaws,Jackdaws,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2119,2127,Jackdaws,Jackdaws,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2119,2127,Jackdaws,Jackdaws,True,0.0,True
+8992582,vernacular,legacy,2259,2266,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2259,2266,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2259,2266,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,legacy,2328,2341,House-Sparrow,House-Sparrow,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2328,2341,House-Sparrow,House-Sparrow,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2328,2341,House-Sparrow,House-Sparrow,True,0.0,True
+8992582,vernacular,legacy,2428,2431,Daw,Daw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2428,2431,Daw,Daw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2428,2431,Daw,Daw,True,0.0,True
+8992582,person,legacy,2561,2568,Seebohm,Seebohm,True,0.0,True
+8992582,person,modern_dots-mocr,2561,2568,Seebohm,Seebohm,True,0.0,True
+8992582,person,modern_dots-mocr_plain,2561,2568,Seebohm,Seebohm,True,0.0,True
+8992582,vernacular,legacy,2630,2635,Gulls,Gulls,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2630,2635,Gulls,Gulls,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2630,2635,Gulls,Gulls,True,0.0,True
+8992582,vernacular,legacy,2649,2656,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2649,2656,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2649,2656,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,legacy,2697,2701,Rook,Rook,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2697,2701,Rook,Rook,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2697,2701,Rook,Rook,True,0.0,True
+8992582,vernacular,legacy,2835,2842,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr,2835,2842,Jackdaw,Jackdaw,True,0.0,True
+8992582,vernacular,modern_dots-mocr_plain,2835,2842,Jackdaw,Jackdaw,True,0.0,True
+8992601,person,legacy,269,278,Stevenson,Stevenson,True,0.0,True
+8992601,person,modern_dots-mocr,269,278,Stevenson,Stevenson,True,0.0,True
+8992601,person,modern_dots-mocr_plain,269,278,Stevenson,Stevenson,True,0.0,True
+8992601,person,legacy,310,318,St. John,St. John,True,0.0,True
+8992601,person,modern_dots-mocr,310,318,St. John,St. John,True,0.0,True
+8992601,person,modern_dots-mocr_plain,310,318,St. John,St. John,True,0.0,True
+8992601,vernacular,legacy,484,490,grouse,grouse,True,0.0,True
+8992601,vernacular,modern_dots-mocr,484,490,grouse,grouse,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,484,490,grouse,grouse,True,0.0,True
+8992601,vernacular,legacy,492,502,partridges,partridges,True,0.0,True
+8992601,vernacular,modern_dots-mocr,492,502,partridges,partridges,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,492,502,partridges,partridges,True,0.0,True
+8992601,vernacular,legacy,504,509,hares,hares,True,0.0,True
+8992601,vernacular,modern_dots-mocr,504,509,hares,hares,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,504,509,hares,hares,True,0.0,True
+8992601,vernacular,legacy,698,707,wild duck,wild duck,True,0.0,True
+8992601,vernacular,modern_dots-mocr,698,707,wild duck,wild duck,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,698,707,wild duck,wild duck,True,0.0,True
+8992601,vernacular,legacy,709,717,pheasant,pheasant,True,0.0,True
+8992601,vernacular,modern_dots-mocr,709,717,pheasant,pheasant,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,709,717,pheasant,pheasant,True,0.0,True
+8992601,vernacular,legacy,756,767,Hooded Crow,Hooded Crow,True,0.0,True
+8992601,vernacular,modern_dots-mocr,756,767,Hooded Crow,Hooded Crow,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,756,767,Hooded Crow,Hooded Crow,True,0.0,True
+8992601,vernacular,legacy,921,928,Peewits,Peewits,True,0.0,True
+8992601,vernacular,modern_dots-mocr,921,928,Peewits,Peewits,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,921,928,Peewits,Peewits,True,0.0,True
+8992601,vernacular,legacy,930,935,Gulls,Gulls,True,0.0,True
+8992601,vernacular,modern_dots-mocr,930,935,Gulls,Gulls,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,930,935,Gulls,Gulls,True,0.0,True
+8992601,vernacular,legacy,937,946,Redshanks,Redshanks,True,0.0,True
+8992601,vernacular,modern_dots-mocr,937,946,Redshanks,Redshanks,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,937,946,Redshanks,Redshanks,True,0.0,True
+8992601,vernacular,legacy,980,984,Crow,Crow,True,0.0,True
+8992601,vernacular,modern_dots-mocr,980,984,Crow,Crow,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,980,984,Crow,Crow,True,0.0,True
+8992601,vernacular,legacy,1031,1036,hoody,hoody,True,0.0,True
+8992601,vernacular,modern_dots-mocr,1031,1036,hoody,hoody,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,1031,1036,hoody,hoody,True,0.0,True
+8992601,vernacular,legacy,1065,1070,ducks,ducks,True,0.0,True
+8992601,vernacular,modern_dots-mocr,1065,1070,ducks,ducks,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,1065,1070,ducks,ducks,True,0.0,True
+8992601,vernacular,legacy,1168,1173,eagle,eagle,True,0.0,True
+8992601,vernacular,modern_dots-mocr,1168,1173,eagle,eagle,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,1168,1173,eagle,eagle,True,0.0,True
+8992601,vernacular,legacy,1175,1191,peregrine falcon,peregrine falcon,True,0.0,True
+8992601,vernacular,modern_dots-mocr,1175,1191,peregrine falcon,peregrine falcon,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,1175,1191,peregrine falcon,peregrine falcon,True,0.0,True
+8992601,vernacular,legacy,1196,1202,osprey,osprc}',True,0.5,False
+8992601,vernacular,modern_dots-mocr,1196,1202,osprey,osprey,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,1196,1202,osprey,osprey,True,0.0,True
+8992601,vernacular,legacy,1351,1358,Hoodies,Hoodies,True,0.0,True
+8992601,vernacular,modern_dots-mocr,1351,1358,Hoodies,Hoodies,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,1351,1358,Hoodies,Hoodies,True,0.0,True
+8992601,date,legacy,1368,1395,12th to the 30th of October,12th to the 30th of October,True,0.0,True
+8992601,date,modern_dots-mocr,1368,1395,12th to the 30th of October,12th to the 30th of October,True,0.0,True
+8992601,date,modern_dots-mocr_plain,1368,1395,12th to the 30th of October,12th to the 30th of October,True,0.0,True
+8992601,person,legacy,1405,1417,T. H. Nelson,T. H. Nelson,True,0.0,True
+8992601,person,modern_dots-mocr,1405,1417,T. H. Nelson,T. H. Nelson,True,0.0,True
+8992601,person,modern_dots-mocr_plain,1405,1417,T. H. Nelson,T. H. Nelson,True,0.0,True
+8992601,person,legacy,1423,1433,F. Pilling,F. Pilling,True,0.0,True
+8992601,person,modern_dots-mocr,1423,1433,F. Pilling,F. Pilling,True,0.0,True
+8992601,person,modern_dots-mocr_plain,1423,1433,F. Pilling,F. Pilling,True,0.0,True
+8992601,vernacular,legacy,1448,1455,Hoodies,Hoodies,True,0.0,True
+8992601,vernacular,modern_dots-mocr,1448,1455,Hoodies,Hoodies,True,0.0,True
+8992601,vernacular,modern_dots-mocr_plain,1448,1455,Hoodies,Hoodies,True,0.0,True
+8992601,person,legacy,1557,1564,Seebohm,Seebohm,True,0.0,True
+8992601,person,modern_dots-mocr,1557,1564,Seebohm,Seebohm,True,0.0,True
+8992601,person,modern_dots-mocr_plain,1557,1564,Seebohm,Seebohm,True,0.0,True
+8992601,person,legacy,1599,1604,Gätke,Gatke,True,0.2,False
+8992601,person,modern_dots-mocr,1599,1604,Gätke,Gätke,True,0.0,True
+8992601,person,modern_dots-mocr_plain,1599,1604,Gätke,Gätke,True,0.0,True
+8992601,locality,legacy,2107,2117,Heligoland,Heligoland,True,0.0,True
+8992601,locality,modern_dots-mocr,2107,2117,Heligoland,Heligoland,True,0.0,True
+8992601,locality,modern_dots-mocr_plain,2107,2117,Heligoland,Heligoland,True,0.0,True
+8992601,locality,legacy,2521,2526,Weser,Weser,True,0.0,True
+8992601,locality,modern_dots-mocr,2521,2526,Weser,Weser,True,0.0,True
+8992601,locality,modern_dots-mocr_plain,2521,2526,Weser,Weser,True,0.0,True
+8992601,locality,legacy,2547,2558,Bremerhaven,Bremerhaven,True,0.0,True
+8992601,locality,modern_dots-mocr,2547,2558,Bremerhaven,Bremerhaven,True,0.0,True
+8992601,locality,modern_dots-mocr_plain,2547,2558,Bremerhaven,Bremerhaven,True,0.0,True
+8992601,person,legacy,2751,2756,Gätke,Gatke,True,0.2,False
+8992601,person,modern_dots-mocr,2751,2756,Gätke,Gätke,True,0.0,True
+8992601,person,modern_dots-mocr_plain,2751,2756,Gätke,Gätke,True,0.0,True
+8992612,taxon,legacy,35,43,Alaudidæ,Aluudida,True,0.25,False
+8992612,taxon,modern_dots-mocr,35,43,Alaudidæ,Alaudidæ,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,35,43,Alaudidæ,Alaudidæ,True,0.0,True
+8992612,locality,legacy,58,67,Old World,Old World,True,0.0,True
+8992612,locality,modern_dots-mocr,58,67,Old World,Old World,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,58,67,Old World,Old World,True,0.0,True
+8992612,locality,legacy,106,119,North America,North America,True,0.0,True
+8992612,locality,modern_dots-mocr,106,119,North America,North America,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,106,119,North America,North America,True,0.0,True
+8992612,person,legacy,132,138,Jerdon,Jerdon,True,0.0,True
+8992612,person,modern_dots-mocr,132,138,Jerdon,Jerdon,True,0.0,True
+8992612,person,modern_dots-mocr_plain,132,138,Jerdon,Jerdon,True,0.0,True
+8992612,locality,legacy,189,197,Malayana,Iala3-ana,True,0.375,False
+8992612,locality,modern_dots-mocr,189,197,Malayana,Malayana,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,189,197,Malayana,Malayana,True,0.0,True
+8992612,locality,legacy,202,211,Australia,Australia,True,0.0,True
+8992612,locality,modern_dots-mocr,202,211,Australia,Australia,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,202,211,Australia,Australia,True,0.0,True
+8992612,taxon,legacy,222,230,ALAUDIDÆ,ALAUDID.E,True,0.25,False
+8992612,taxon,modern_dots-mocr,222,230,ALAUDIDÆ,ALAUDIDÆ,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,222,230,ALAUDIDÆ,ALAUDIDÆ,True,0.0,True
+8992612,vernacular,legacy,237,245,SKY-LARK,Sky-Lark,True,0.0,True
+8992612,vernacular,modern_dots-mocr,237,245,SKY-LARK,SKY-LARK,True,0.0,True
+8992612,vernacular,modern_dots-mocr_plain,237,245,SKY-LARK,SKY-LARK,True,0.0,True
+8992612,taxon,legacy,248,263,Alauda arvensis,Alauda iDVCiisis,True,0.3333,False
+8992612,taxon,modern_dots-mocr,248,263,Alauda arvensis,Alauda arvensis,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,248,263,Alauda arvensis,Alauda arvensis,True,0.0,True
+8992612,person,legacy,265,270,LINN.,LiNN.,True,0.0,True
+8992612,person,modern_dots-mocr,265,270,LINN.,LINN.,True,0.0,True
+8992612,person,modern_dots-mocr_plain,265,270,LINN.,LINN.,True,0.0,True
+8992612,locality,legacy,327,333,Europe,Europe,True,0.0,True
+8992612,locality,modern_dots-mocr,327,333,Europe,Europe,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,327,333,Europe,Europe,True,0.0,True
+8992612,locality,legacy,346,357,Scandinavia,Scandinavia,True,0.0,True
+8992612,locality,modern_dots-mocr,346,357,Scandinavia,Scandinavia,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,346,357,Scandinavia,Scandinavia,True,0.0,True
+8992612,locality,legacy,394,406,North Africa,North Africa,True,0.0,True
+8992612,locality,modern_dots-mocr,394,406,North Africa,North Africa,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,394,406,North Africa,North Africa,True,0.0,True
+8992612,locality,legacy,447,476,slopes of the Atlas Mountains,slopes of the Atlas Mountains,True,0.0,True
+8992612,locality,modern_dots-mocr,447,476,slopes of the Atlas Mountains,slopes of the Atlas Mountains,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,447,476,slopes of the Atlas Mountains,slopes of the Atlas Mountains,True,0.0,True
+8992612,locality,legacy,498,504,Russia,Russia,True,0.0,True
+8992612,locality,modern_dots-mocr,498,504,Russia,Russia,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,498,504,Russia,Russia,True,0.0,True
+8992612,locality,legacy,509,516,Siberia,Siberia,True,0.0,True
+8992612,locality,modern_dots-mocr,509,516,Siberia,Siberia,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,509,516,Siberia,Siberia,True,0.0,True
+8992612,locality,legacy,544,549,Japan,Japan,True,0.0,True
+8992612,locality,modern_dots-mocr,544,549,Japan,Japan,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,544,549,Japan,Japan,True,0.0,True
+8992612,locality,legacy,555,574,"valley of the
+Amoor","valley of the 
+
+ Amoor",True,0.0,True
+8992612,locality,modern_dots-mocr,555,574,"valley of the
+Amoor",valley of the Amoor,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,555,574,"valley of the
+Amoor",valley of the Amoor,True,0.0,True
+8992612,locality,legacy,576,595,South-east Mongolia,South-east IMongolia,True,0.0526,False
+8992612,locality,modern_dots-mocr,576,595,South-east Mongolia,South-east Mongolia,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,576,595,South-east Mongolia,South-east Mongolia,True,0.0,True
+8992612,locality,legacy,597,606,Turkestan,Turkestan,True,0.0,True
+8992612,locality,modern_dots-mocr,597,606,Turkestan,Turkestan,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,597,606,Turkestan,Turkestan,True,0.0,True
+8992612,locality,legacy,611,617,Persia,Persia,True,0.0,True
+8992612,locality,modern_dots-mocr,611,617,Persia,Persia,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,611,617,Persia,Persia,True,0.0,True
+8992612,locality,legacy,639,644,China,China,True,0.0,True
+8992612,locality,modern_dots-mocr,639,644,China,China,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,639,644,China,China,True,0.0,True
+8992612,locality,legacy,646,662,North-west India,North-west India,True,0.0,True
+8992612,locality,modern_dots-mocr,646,662,North-west India,North-west India,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,646,662,North-west India,North-west India,True,0.0,True
+8992612,locality,legacy,664,675,Afghanistan,Afghanistan,True,0.0,True
+8992612,locality,modern_dots-mocr,664,675,Afghanistan,Afghanistan,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,664,675,Afghanistan,Afghanistan,True,0.0,True
+8992612,locality,legacy,677,683,Persia,Persia,True,0.0,True
+8992612,locality,modern_dots-mocr,677,683,Persia,Persia,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,677,683,Persia,Persia,True,0.0,True
+8992612,locality,legacy,685,695,Asia Minor,Asia Minor,True,0.0,True
+8992612,locality,modern_dots-mocr,685,695,Asia Minor,Asia Minor,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,685,695,Asia Minor,Asia Minor,True,0.0,True
+8992612,locality,legacy,697,706,Palestine,Palestine,True,0.0,True
+8992612,locality,modern_dots-mocr,697,706,Palestine,Palestine,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,697,706,Palestine,Palestine,True,0.0,True
+8992612,locality,legacy,711,716,Egypt,Egypt,True,0.0,True
+8992612,locality,modern_dots-mocr,711,716,Egypt,Egypt,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,711,716,Egypt,Egypt,True,0.0,True
+8992612,locality,legacy,742,749,Madeira,Madeira,True,0.0,True
+8992612,locality,modern_dots-mocr,742,749,Madeira,Madeira,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,742,749,Madeira,Madeira,True,0.0,True
+8992612,locality,legacy,786,795,Greenland,Greenland,True,0.0,True
+8992612,locality,modern_dots-mocr,786,795,Greenland,Greenland,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,786,795,Greenland,Greenland,True,0.0,True
+8992612,locality,legacy,834,847,United States,United States,True,0.0,True
+8992612,locality,modern_dots-mocr,834,847,United States,United States,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,834,847,United States,United States,True,0.0,True
+8992612,locality,legacy,850,861,New Zealand,New Zealand,True,0.0,True
+8992612,locality,modern_dots-mocr,850,861,New Zealand,New Zealand,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,850,861,New Zealand,New Zealand,True,0.0,True
+8992612,locality,legacy,866,875,Australia,Australia,True,0.0,True
+8992612,locality,modern_dots-mocr,866,875,Australia,Australia,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,866,875,Australia,Australia,True,0.0,True
+8992612,locality,legacy,889,902,Great Britain,Great Britain,True,0.0,True
+8992612,locality,modern_dots-mocr,889,902,Great Britain,Great Britain,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,889,902,Great Britain,Great Britain,True,0.0,True
+8992612,locality,legacy,907,914,Ireland,Ireland,True,0.0,True
+8992612,locality,modern_dots-mocr,907,914,Ireland,Ireland,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,907,914,Ireland,Ireland,True,0.0,True
+8992612,vernacular,legacy,920,928,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,vernacular,modern_dots-mocr,920,928,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,vernacular,modern_dots-mocr_plain,920,928,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,vernacular,legacy,1041,1049,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,vernacular,modern_dots-mocr,1041,1049,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,vernacular,modern_dots-mocr_plain,1041,1049,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,taxon,legacy,1111,1122,A. dulcivox,A. dulcivox,True,0.0,True
+8992612,taxon,modern_dots-mocr,1111,1122,A. dulcivox,A. dulcivox,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1111,1122,A. dulcivox,A. dulcivox,True,0.0,True
+8992612,taxon,legacy,1124,1135,A. japonica,A. japonica,True,0.0,True
+8992612,taxon,modern_dots-mocr,1124,1135,A. japonica,A. japonica,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1124,1135,A. japonica,A. japonica,True,0.0,True
+8992612,taxon,legacy,1137,1150,A. cantarella,A. caiitarclla,True,0.2308,False
+8992612,taxon,modern_dots-mocr,1137,1150,A. cantarella,A. cantarella,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1137,1150,A. cantarella,A. cantarella,True,0.0,True
+8992612,taxon,legacy,1152,1161,A. liopus,A. liopus,True,0.0,True
+8992612,taxon,modern_dots-mocr,1152,1161,A. liopus,A. liopus,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1152,1161,A. liopus,A. liopus,True,0.0,True
+8992612,taxon,legacy,1163,1178,"A. blak-
+istoni","A. blak- 
+
+ istoni",True,0.0,True
+8992612,taxon,modern_dots-mocr,1163,1178,"A. blak-
+istoni",A. blak- istoni,True,0.1538,False
+8992612,taxon,modern_dots-mocr_plain,1163,1178,"A. blak-
+istoni",A. blak- istoni,True,0.1538,False
+8992612,taxon,legacy,1180,1190,A. gulgula,A. giilgiila,True,0.4,False
+8992612,taxon,modern_dots-mocr,1180,1190,A. gulgula,A. gulgula,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1180,1190,A. gulgula,A. gulgula,True,0.0,True
+8992612,taxon,legacy,1192,1204,A. australis,A. australis,True,0.0,True
+8992612,taxon,modern_dots-mocr,1192,1204,A. australis,A. australis,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1192,1204,A. australis,A. australis,True,0.0,True
+8992612,taxon,legacy,1206,1216,A. cœlivox,A. axlivox,True,0.2,False
+8992612,taxon,modern_dots-mocr,1206,1216,A. cœlivox,A. cœlivox,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1206,1216,A. cœlivox,A. cœlivox,True,0.0,True
+8992612,taxon,legacy,1218,1229,A. wattersi,A. ivai/crsi,True,0.4545,False
+8992612,taxon,modern_dots-mocr,1218,1229,A. wattersi,A. wattersi,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1218,1229,A. wattersi,A. wattersi,True,0.0,True
+8992612,taxon,legacy,1235,1242,A. sala,A. sala,True,0.0,True
+8992612,taxon,modern_dots-mocr,1235,1242,A. sala,A. sala,True,0.0,True
+8992612,taxon,modern_dots-mocr_plain,1235,1242,A. sala,A. sala,True,0.0,True
+8992612,vernacular,legacy,1365,1373,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,vernacular,modern_dots-mocr,1365,1373,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,vernacular,modern_dots-mocr_plain,1365,1373,Sky-Lark,Sky-Lark,True,0.0,True
+8992612,locality,legacy,1634,1642,Bermudas,Bermudas,True,0.0,True
+8992612,locality,modern_dots-mocr,1634,1642,Bermudas,Bermudas,True,0.0,True
+8992612,locality,modern_dots-mocr_plain,1634,1642,Bermudas,Bermudas,True,0.0,True
+8992612,date,legacy,1647,1651,1850,1S50,True,0.25,False
+8992612,date,modern_dots-mocr,1647,1651,1850,1850,True,0.0,True
+8992612,date,modern_dots-mocr_plain,1647,1651,1850,1850,True,0.0,True
+8967047,institution,legacy,38,49,Mus. Taylor,"Mus, Taylor",True,0.0909,False
+8967047,institution,modern_dots-mocr,38,49,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,institution,modern_dots-mocr_plain,38,49,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,taxon,legacy,53,71,BULIMUS BIVITTATUS,^ULiMUS BiviTTATUs,True,0.0556,False
+8967047,taxon,modern_dots-mocr,53,71,BULIMUS BIVITTATUS,BULIMUS BIVITTATUS,True,0.0,True
+8967047,taxon,modern_dots-mocr_plain,53,71,BULIMUS BIVITTATUS,BULIMUS BIVITTATUS,True,0.0,True
+8967047,vernacular,legacy,322,342,TWO-FILLETED BULIMUS,two-filleted Bulijids,True,0.15,False
+8967047,vernacular,modern_dots-mocr,322,342,TWO-FILLETED BULIMUS,TWO-FILLETED BULIMUS,True,0.0,True
+8967047,vernacular,modern_dots-mocr_plain,322,342,TWO-FILLETED BULIMUS,TWO-FILLETED BULIMUS,True,0.0,True
+8967047,person,legacy,604,611,SOWERBY,SowERBY,True,0.0,True
+8967047,person,modern_dots-mocr,604,611,SOWERBY,SOWERBY,True,0.0,True
+8967047,person,modern_dots-mocr_plain,604,611,SOWERBY,SOWERBY,True,0.0,True
+8967047,locality,legacy,655,661,Brazil,Brazil,True,0.0,True
+8967047,locality,modern_dots-mocr,655,661,Brazil,Brazil,True,0.0,True
+8967047,locality,modern_dots-mocr_plain,655,661,Brazil,Brazil,True,0.0,True
+8967047,taxon,legacy,732,748,B. auris-leporis,B. auris-h'poris,True,0.125,False
+8967047,taxon,modern_dots-mocr,732,748,B. auris-leporis,B. auris-leporis,True,0.0,True
+8967047,taxon,modern_dots-mocr_plain,732,748,B. auris-leporis,B. auris-leporis,True,0.0,True
+8967047,institution,legacy,765,776,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,institution,modern_dots-mocr,765,776,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,institution,modern_dots-mocr_plain,765,776,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,taxon,legacy,780,797,BULIMUS MULIEBRIS,BuLIMVS MULIEBUIS,True,0.1176,False
+8967047,taxon,modern_dots-mocr,780,797,BULIMUS MULIEBRIS,BULIMUS MULIEBRIS,True,0.0,True
+8967047,taxon,modern_dots-mocr_plain,780,797,BULIMUS MULIEBRIS,BULIMUS MULIEBRIS,True,0.0,True
+8967047,vernacular,legacy,1053,1071,EFFEMINATE BULIMUS,effeminate Bulimus,True,0.0,True
+8967047,vernacular,modern_dots-mocr,1053,1071,EFFEMINATE BULIMUS,EFFEMINATE BULIMUS,True,0.0,True
+8967047,vernacular,modern_dots-mocr_plain,1053,1071,EFFEMINATE BULIMUS,EFFEMINATE BULIMUS,True,0.0,True
+8967047,locality,legacy,1346,1357,New Granada,New Granada,True,0.0,True
+8967047,locality,modern_dots-mocr,1346,1357,New Granada,New Granada,True,0.0,True
+8967047,locality,modern_dots-mocr_plain,1346,1357,New Granada,New Granada,True,0.0,True
+8967047,institution,legacy,1434,1445,Mus. Cuming,Mus. Cuuiiug,True,0.2727,False
+8967047,institution,modern_dots-mocr,1434,1445,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967047,institution,modern_dots-mocr_plain,1434,1445,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967047,taxon,legacy,1449,1467,BULIMUS BOLIVIANUS,BuLiJlus Boliviands,True,0.1667,False
+8967047,taxon,modern_dots-mocr,1449,1467,BULIMUS BOLIVIANUS,BULIMUS BOLIVIANUS,True,0.0,True
+8967047,taxon,modern_dots-mocr_plain,1449,1467,BULIMUS BOLIVIANUS,BULIMUS BOLIVIANUS,True,0.0,True
+8967047,vernacular,legacy,1810,1826,BOLIVIAN BULIMUS,Bolivian Bulimus,True,0.0,True
+8967047,vernacular,modern_dots-mocr,1810,1826,BOLIVIAN BULIMUS,BOLIVIAN BULIMUS,True,0.0,True
+8967047,vernacular,modern_dots-mocr_plain,1810,1826,BOLIVIAN BULIMUS,BOLIVIAN BULIMUS,True,0.0,True
+8967047,person,legacy,2174,2182,PFEIFFER,Pfeiffer,True,0.0,True
+8967047,person,modern_dots-mocr,2174,2182,PFEIFFER,PFEIFFER,True,0.0,True
+8967047,person,modern_dots-mocr_plain,2174,2182,PFEIFFER,PFEIFFER,True,0.0,True
+8967047,locality,legacy,2225,2249,"Merida, Andes of Bolivia","Merida, Andes of Bolivia",True,0.0,True
+8967047,locality,modern_dots-mocr,2225,2249,"Merida, Andes of Bolivia","Merida, Andes of Bolivia",True,0.0,True
+8967047,locality,modern_dots-mocr_plain,2225,2249,"Merida, Andes of Bolivia","Merida, Andes of Bolivia",True,0.0,True
+8967047,person,legacy,2332,2339,Pfeiﬀer,Pfeiffer,True,0.0,True
+8967047,person,modern_dots-mocr,2332,2339,Pfeiﬀer,Pfeiffer,True,0.0,True
+8967047,person,modern_dots-mocr_plain,2332,2339,Pfeiﬀer,Pfeiffer,True,0.0,True
+8967047,taxon,legacy,2409,2423,"B. annu-
+latus","B. annu- 
+
+ latus",True,0.0,True
+8967047,taxon,modern_dots-mocr,2409,2423,"B. annu-
+latus",B. annulatus,True,0.0,True
+8967047,taxon,modern_dots-mocr_plain,2409,2423,"B. annu-
+latus",B. annulatus,True,0.0,True
+8967047,institution,legacy,2549,2560,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,institution,modern_dots-mocr,2549,2560,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,institution,modern_dots-mocr_plain,2549,2560,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,taxon,legacy,2564,2581,BULIMUS PATRICIUS,iuLTMrs PATRTOius,True,0.2941,False
+8967047,taxon,modern_dots-mocr,2564,2581,BULIMUS PATRICIUS,BULIMUS PATRICIUS,True,0.0,True
+8967047,taxon,modern_dots-mocr_plain,2564,2581,BULIMUS PATRICIUS,BULIMUS PATRICIUS,True,0.0,True
+8967047,vernacular,legacy,2856,2873,PATRICIAN BULIMUS,patrician Buluius,True,0.1176,False
+8967047,vernacular,modern_dots-mocr,2856,2873,PATRICIAN BULIMUS,PATRICIAN BULIMUS,True,0.0,True
+8967047,vernacular,modern_dots-mocr_plain,2856,2873,PATRICIAN BULIMUS,PATRICIAN BULIMUS,True,0.0,True
+8967047,locality,legacy,3200,3211,New Granada,New Granada,True,0.0,True
+8967047,locality,modern_dots-mocr,3200,3211,New Granada,New Granada,True,0.0,True
+8967047,locality,modern_dots-mocr_plain,3200,3211,New Granada,New Granada,True,0.0,True
+8967047,institution,legacy,3301,3312,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,institution,modern_dots-mocr,3301,3312,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,institution,modern_dots-mocr_plain,3301,3312,Mus. Taylor,Mus. Taylor,True,0.0,True
+8967047,taxon,legacy,3316,3333,BULIMUS SPECTATUS,Bulimus speotatus,True,0.0588,False
+8967047,taxon,modern_dots-mocr,3316,3333,BULIMUS SPECTATUS,BULIMUS SPECTATUS,True,0.0,True
+8967047,taxon,modern_dots-mocr_plain,3316,3333,BULIMUS SPECTATUS,BULIMUS SPECTATUS,True,0.0,True
+8967047,vernacular,legacy,3649,3663,CHOICE BULIMUS,choice Bulimus,True,0.0,True
+8967047,vernacular,modern_dots-mocr,3649,3663,CHOICE BULIMUS,CHOICE BULIMUS,True,0.0,True
+8967047,vernacular,modern_dots-mocr_plain,3649,3663,CHOICE BULIMUS,CHOICE BULIMUS,True,0.0,True
+8967060,vernacular,legacy,140,158,VERY SMALL BULIMUS,very small Bdlimus,True,0.0556,False
+8967060,vernacular,modern_dots-mocr,140,158,VERY SMALL BULIMUS,VERY SMALL BULIMUS,True,0.0,True
+8967060,vernacular,modern_dots-mocr_plain,140,158,VERY SMALL BULIMUS,VERY SMALL BULIMUS,True,0.0,True
+8967060,person,legacy,381,386,ADAMS,Adams,True,0.0,True
+8967060,person,modern_dots-mocr,381,386,ADAMS,ADAMS,True,0.0,True
+8967060,person,modern_dots-mocr_plain,381,386,ADAMS,ADAMS,True,0.0,True
+8967060,locality,legacy,398,405,Jamaica,Jamaica,True,0.0,True
+8967060,locality,modern_dots-mocr,398,405,Jamaica,Jamaica,True,0.0,True
+8967060,locality,modern_dots-mocr_plain,398,405,Jamaica,Jamaica,True,0.0,True
+8967060,taxon,legacy,507,517,B. minimus,B. minimus,True,0.0,True
+8967060,taxon,modern_dots-mocr,507,517,B. minimus,B. minimus,True,0.0,True
+8967060,taxon,modern_dots-mocr_plain,507,517,B. minimus,B. minimus,True,0.0,True
+8967060,institution,legacy,639,649,Mus. Adams,Mus. Adams,True,0.0,True
+8967060,institution,modern_dots-mocr,639,649,Mus. Adams,Mus. Adams,True,0.0,True
+8967060,institution,modern_dots-mocr_plain,639,649,Mus. Adams,Mus. Adams,True,0.0,True
+8967060,taxon,legacy,653,672,BULIMUS PAUPERCULUS,BuLiMUs PAUPEECCLUs,True,0.1053,False
+8967060,taxon,modern_dots-mocr,653,672,BULIMUS PAUPERCULUS,BULIMUS PAUPERCULUS,True,0.0,True
+8967060,taxon,modern_dots-mocr_plain,653,672,BULIMUS PAUPERCULUS,BULIMUS PAUPERCULUS,True,0.0,True
+8967060,vernacular,legacy,846,866,MEAN-LOOKING BULIMUS,MEAN-LOOKING Bdlimus,True,0.05,False
+8967060,vernacular,modern_dots-mocr,846,866,MEAN-LOOKING BULIMUS,MEAN-LOOKING BULIMUS,True,0.0,True
+8967060,vernacular,modern_dots-mocr_plain,846,866,MEAN-LOOKING BULIMUS,MEAN-LOOKING BULIMUS,True,0.0,True
+8967060,person,legacy,1053,1058,ADAMS,Abams,True,0.2,False
+8967060,person,modern_dots-mocr,1053,1058,ADAMS,ADAMS,True,0.0,True
+8967060,person,modern_dots-mocr_plain,1053,1058,ADAMS,ADAMS,True,0.0,True
+8967060,locality,legacy,1070,1077,Jamaica,Jamaica,True,0.0,True
+8967060,locality,modern_dots-mocr,1070,1077,Jamaica,Jamaica,True,0.0,True
+8967060,locality,modern_dots-mocr_plain,1070,1077,Jamaica,Jamaica,True,0.0,True
+8967060,taxon,legacy,1163,1169,Bulimi,Bulimi,True,0.0,True
+8967060,taxon,modern_dots-mocr,1163,1169,Bulimi,Bulimi,True,0.0,True
+8967060,taxon,modern_dots-mocr_plain,1163,1169,Bulimi,Bulimi,True,0.0,True
+8967060,taxon,legacy,1174,1182,Achatinœ,Achalina,True,0.25,False
+8967060,taxon,modern_dots-mocr,1174,1182,Achatinœ,Achatinæ*,True,0.125,False
+8967060,taxon,modern_dots-mocr_plain,1174,1182,Achatinœ,Achatinæ,True,0.125,False
+8967060,locality,legacy,1188,1197,"Ja‐
+maica","Ja- 
+
+ maica",True,0.0,True
+8967060,locality,modern_dots-mocr,1188,1197,"Ja‐
+maica",Jamaica,True,0.0,True
+8967060,locality,modern_dots-mocr_plain,1188,1197,"Ja‐
+maica",Jamaica,True,0.0,True
+8967060,institution,legacy,1411,1422,Mus. Benson,Mus. Benson,True,0.0,True
+8967060,institution,modern_dots-mocr,1411,1422,Mus. Benson,Mus. Benson,True,0.0,True
+8967060,institution,modern_dots-mocr_plain,1411,1422,Mus. Benson,Mus. Benson,True,0.0,True
+8967060,taxon,legacy,1426,1441,BULIMUS TUTULUS,BULIMUS TUTULUS,True,0.0,True
+8967060,taxon,modern_dots-mocr,1426,1441,BULIMUS TUTULUS,BULIMUS TUTULUS,True,0.0,True
+8967060,taxon,modern_dots-mocr_plain,1426,1441,BULIMUS TUTULUS,BULIMUS TUTULUS,True,0.0,True
+8967060,vernacular,legacy,1708,1727,LITTLE TUFT BULIMUS,LITTLE TUFT BuLiMUS,True,0.0,True
+8967060,vernacular,modern_dots-mocr,1708,1727,LITTLE TUFT BULIMUS,LITTLE TUFT BULIMUS,True,0.0,True
+8967060,vernacular,modern_dots-mocr_plain,1708,1727,LITTLE TUFT BULIMUS,LITTLE TUFT BULIMUS,True,0.0,True
+8967060,person,legacy,2013,2019,BENSON,Benson,True,0.0,True
+8967060,person,modern_dots-mocr,2013,2019,BENSON,BENSON,True,0.0,True
+8967060,person,modern_dots-mocr_plain,2013,2019,BENSON,BENSON,True,0.0,True
+8967060,locality,legacy,2031,2061,"Humeerpore, Bundelkhund, India","Humeerpore, Bmidelkhund, ludia",True,0.1333,False
+8967060,locality,modern_dots-mocr,2031,2061,"Humeerpore, Bundelkhund, India","Humeerpore, Bundelkhund, India",True,0.0,True
+8967060,locality,modern_dots-mocr_plain,2031,2061,"Humeerpore, Bundelkhund, India","Humeerpore, Bundelkhund, India",True,0.0,True
+8967060,person,legacy,2063,2069,Benson,Benson,True,0.0,True
+8967060,person,modern_dots-mocr,2063,2069,Benson,Benson,True,0.0,True
+8967060,person,modern_dots-mocr_plain,2063,2069,Benson,Benson,True,0.0,True
+8967147,institution,legacy,36,47,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,institution,modern_dots-mocr,36,47,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,institution,modern_dots-mocr_plain,36,47,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,taxon,legacy,51,71,ACHATINA PHILIPPIANA,AcHATiNA Philippiana,True,0.0,True
+8967147,taxon,modern_dots-mocr,51,71,ACHATINA PHILIPPIANA,ACHATINA PHILIPPIANA,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,51,71,ACHATINA PHILIPPIANA,ACHATINA PHILIPPIANA,True,0.0,True
+8967147,vernacular,legacy,402,421,PHILIPPI’S ACHATINA,Philippi's Achatina,True,0.0,True
+8967147,vernacular,modern_dots-mocr,402,421,PHILIPPI’S ACHATINA,PHILIPPI'S ACHATINA,True,0.0,True
+8967147,vernacular,modern_dots-mocr_plain,402,421,PHILIPPI’S ACHATINA,PHILIPPI'S ACHATINA,True,0.0,True
+8967147,person,legacy,801,809,PFEIFFER,Pfeiffer,True,0.0,True
+8967147,person,modern_dots-mocr,801,809,PFEIFFER,PFEIFFER,True,0.0,True
+8967147,person,modern_dots-mocr_plain,801,809,PFEIFFER,PFEIFFER,True,0.0,True
+8967147,taxon,legacy,812,820,Glandina,OlamUna,True,0.5,False
+8967147,taxon,modern_dots-mocr,812,820,Glandina,Glandina,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,812,820,Glandina,Glandina,True,0.0,True
+8967147,locality,legacy,855,862,Jamaica,Jamaica,True,0.0,True
+8967147,locality,modern_dots-mocr,855,862,Jamaica,Jamaica,True,0.0,True
+8967147,locality,modern_dots-mocr_plain,855,862,Jamaica,Jamaica,True,0.0,True
+8967147,person,legacy,864,869,Gosse,Gosse,True,0.0,True
+8967147,person,modern_dots-mocr,864,869,Gosse,Gosse,True,0.0,True
+8967147,person,modern_dots-mocr_plain,864,869,Gosse,Gosse,True,0.0,True
+8967147,institution,legacy,1062,1075,Mus. Dennison,Mus. Dennison,True,0.0,True
+8967147,institution,modern_dots-mocr,1062,1075,Mus. Dennison,Mus. Dennison,True,0.0,True
+8967147,institution,modern_dots-mocr_plain,1062,1075,Mus. Dennison,Mus. Dennison,True,0.0,True
+8967147,taxon,legacy,1079,1098,ACHATINA MONILIFERA,Achatina monilifera,True,0.0,True
+8967147,taxon,modern_dots-mocr,1079,1098,ACHATINA MONILIFERA,ACHATINA MONILIFERA,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,1079,1098,ACHATINA MONILIFERA,ACHATINA MONILIFERA,True,0.0,True
+8967147,vernacular,legacy,1385,1408,NECKLACE‐BOUND ACHATINA,necklace-bound Achatina,True,0.0,True
+8967147,vernacular,modern_dots-mocr,1385,1408,NECKLACE‐BOUND ACHATINA,NECKLACE-BOUND ACHATINA,True,0.0,True
+8967147,vernacular,modern_dots-mocr_plain,1385,1408,NECKLACE‐BOUND ACHATINA,NECKLACE-BOUND ACHATINA,True,0.0,True
+8967147,person,legacy,1703,1711,PFEIFFER,Pfeiffer,True,0.0,True
+8967147,person,modern_dots-mocr,1703,1711,PFEIFFER,PFEIFFER,True,0.0,True
+8967147,person,modern_dots-mocr_plain,1703,1711,PFEIFFER,PFEIFFER,True,0.0,True
+8967147,taxon,legacy,1714,1722,Glandina,Olandina,True,0.125,False
+8967147,taxon,modern_dots-mocr,1714,1722,Glandina,Glandina,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,1714,1722,Glandina,Glandina,True,0.0,True
+8967147,locality,legacy,1761,1794,"Coban, Vera Cruz, Central America","Coban, Vera Cruz, Central America",True,0.0,True
+8967147,locality,modern_dots-mocr,1761,1794,"Coban, Vera Cruz, Central America","Coban, Vera Cruz, Central America",True,0.0,True
+8967147,locality,modern_dots-mocr_plain,1761,1794,"Coban, Vera Cruz, Central America","Coban, Vera Cruz, Central America",True,0.0,True
+8967147,person,legacy,1796,1802,Lattre,Lattre,True,0.0,True
+8967147,person,modern_dots-mocr,1796,1802,Lattre,Lattre,True,0.0,True
+8967147,person,modern_dots-mocr_plain,1796,1802,Lattre,Lattre,True,0.0,True
+8967147,institution,legacy,1956,1967,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,institution,modern_dots-mocr,1956,1967,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,institution,modern_dots-mocr_plain,1956,1967,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,taxon,legacy,1971,1987,ACHATINA OLEACEA,Achatina oleacea,True,0.0,True
+8967147,taxon,modern_dots-mocr,1971,1987,ACHATINA OLEACEA,ACHATINA OLEACEA,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,1971,1987,ACHATINA OLEACEA,ACHATINA OLEACEA,True,0.0,True
+8967147,vernacular,legacy,2197,2218,OLIVE-SHAPED ACHATINA,olive-shaped Achatina,True,0.0,True
+8967147,vernacular,modern_dots-mocr,2197,2218,OLIVE-SHAPED ACHATINA,OLIVE-SHAPED ACHATINA,True,0.0,True
+8967147,vernacular,modern_dots-mocr_plain,2197,2218,OLIVE-SHAPED ACHATINA,OLIVE-SHAPED ACHATINA,True,0.0,True
+8967147,taxon,legacy,2433,2459,Helix (Cochlicopa) oleacea,Helix (Cochlicopa) oleacea,True,0.0,True
+8967147,taxon,modern_dots-mocr,2433,2459,Helix (Cochlicopa) oleacea,Helix (Cochlicopa) oleacea,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,2433,2459,Helix (Cochlicopa) oleacea,Helix (Cochlicopa) oleacea,True,0.0,True
+8967147,person,legacy,2461,2469,Férussac,Femssac,True,0.375,False
+8967147,person,modern_dots-mocr,2461,2469,Férussac,Férussac,True,0.0,True
+8967147,person,modern_dots-mocr_plain,2461,2469,Férussac,Férussac,True,0.0,True
+8967147,taxon,legacy,2491,2507,Glandina oleacea,Glandina oleacea,True,0.0,True
+8967147,taxon,modern_dots-mocr,2491,2507,Glandina oleacea,Glandina oleacea,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,2491,2507,Glandina oleacea,Glandina oleacea,True,0.0,True
+8967147,person,legacy,2509,2513,Beck,Beck,True,0.0,True
+8967147,person,modern_dots-mocr,2509,2513,Beck,Beck,True,0.0,True
+8967147,person,modern_dots-mocr_plain,2509,2513,Beck,Beck,True,0.0,True
+8967147,locality,legacy,2521,2525,Cuba,Cuba,True,0.0,True
+8967147,locality,modern_dots-mocr,2521,2525,Cuba,Cuba,True,0.0,True
+8967147,locality,modern_dots-mocr_plain,2521,2525,Cuba,Cuba,True,0.0,True
+8967147,institution,legacy,2642,2653,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,institution,modern_dots-mocr,2642,2653,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,institution,modern_dots-mocr_plain,2642,2653,Mus. Cuming,Mus. Cuming,True,0.0,True
+8967147,taxon,legacy,2657,2677,ACHATINA LEUCOZONIAS,Achatina leicozonias,True,0.05,False
+8967147,taxon,modern_dots-mocr,2657,2677,ACHATINA LEUCOZONIAS,ACHATINA LEUCOZONIAS,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,2657,2677,ACHATINA LEUCOZONIAS,ACHATINA LEUCOZONIAS,True,0.0,True
+8967147,vernacular,legacy,2990,3010,WHITE‐ZONED ACHATINA,white-zoned Achatina,True,0.0,True
+8967147,vernacular,modern_dots-mocr,2990,3010,WHITE‐ZONED ACHATINA,WHITE-ZONED ACHATINA,True,0.0,True
+8967147,vernacular,modern_dots-mocr_plain,2990,3010,WHITE‐ZONED ACHATINA,WHITE-ZONED ACHATINA,True,0.0,True
+8967147,person,legacy,3317,3324,SOWERBY,SowERBY,True,0.0,True
+8967147,person,modern_dots-mocr,3317,3324,SOWERBY,SOWERBY,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3317,3324,SOWERBY,SOWERBY,True,0.0,True
+8967147,taxon,legacy,3351,3369,Voluta leucozonias,Valuta leucozonias,True,0.0556,False
+8967147,taxon,modern_dots-mocr,3351,3369,Voluta leucozonias,Voluta leucozonias,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,3351,3369,Voluta leucozonias,Voluta leucozonias,True,0.0,True
+8967147,person,legacy,3371,3376,Walch,Walch,True,0.0,True
+8967147,person,modern_dots-mocr,3371,3376,Walch,Walch,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3371,3376,Walch,Walch,True,0.0,True
+8967147,taxon,legacy,3424,3444,Achatina albolineata,Achatina albolineata,True,0.0,True
+8967147,taxon,modern_dots-mocr,3424,3444,Achatina albolineata,Achatina albolineata,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,3424,3444,Achatina albolineata,Achatina albolineata,True,0.0,True
+8967147,person,legacy,3446,3453,Lamarck,Lamarck,True,0.0,True
+8967147,person,modern_dots-mocr,3446,3453,Lamarck,Lamarck,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3446,3453,Lamarck,Lamarck,True,0.0,True
+8967147,taxon,legacy,3455,3486,"Helix (Cochlicopa,) leucozonias","Helix {Cochlicopa,) leucozonias",True,0.0323,False
+8967147,taxon,modern_dots-mocr,3455,3486,"Helix (Cochlicopa,) leucozonias","Helix (Cochlicopa,)* leucozonias",True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,3455,3486,"Helix (Cochlicopa,) leucozonias","Helix (Cochlicopa,) leucozonias",True,0.0,True
+8967147,person,legacy,3488,3496,Férussac,Ferussac,True,0.125,False
+8967147,person,modern_dots-mocr,3488,3496,Férussac,Férussac,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3488,3496,Férussac,Férussac,True,0.0,True
+8967147,taxon,legacy,3498,3520,Polyphemus leucozonias,Polyphemus leucozonias,True,0.0,True
+8967147,taxon,modern_dots-mocr,3498,3520,Polyphemus leucozonias,Polyphemus leucozonias,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,3498,3520,Polyphemus leucozonias,Polyphemus leucozonias,True,0.0,True
+8967147,person,legacy,3522,3525,Jan,Jan,True,0.0,True
+8967147,person,modern_dots-mocr,3522,3525,Jan,Jan,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3522,3525,Jan,Jan,True,0.0,True
+8967147,taxon,legacy,3527,3547,Glandina leucozonias,Glmidina leucozonias,True,0.1,False
+8967147,taxon,modern_dots-mocr,3527,3547,Glandina leucozonias,Glandina leucozonias,True,0.0,True
+8967147,taxon,modern_dots-mocr_plain,3527,3547,Glandina leucozonias,Glandina leucozonias,True,0.0,True
+8967147,person,legacy,3549,3553,Beck,Beck,True,0.0,True
+8967147,person,modern_dots-mocr,3549,3553,Beck,Beck,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3549,3553,Beck,Beck,True,0.0,True
+8967147,locality,legacy,3561,3571,Martinique,Martinique,True,0.0,True
+8967147,locality,modern_dots-mocr,3561,3571,Martinique,Martinique,True,0.0,True
+8967147,locality,modern_dots-mocr_plain,3561,3571,Martinique,Martinique,True,0.0,True
+8967147,person,legacy,3952,3957,Walch,Walch,True,0.0,True
+8967147,person,modern_dots-mocr,3952,3957,Walch,Walch,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3952,3957,Walch,Walch,True,0.0,True
+8967147,person,legacy,3959,3965,Gmelin,Gmelin,True,0.0,True
+8967147,person,modern_dots-mocr,3959,3965,Gmelin,Gmelin,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3959,3965,Gmelin,Gmelin,True,0.0,True
+8967147,person,legacy,3971,3978,Dillwyn,Dillwyn,True,0.0,True
+8967147,person,modern_dots-mocr,3971,3978,Dillwyn,Dillwyn,True,0.0,True
+8967147,person,modern_dots-mocr_plain,3971,3978,Dillwyn,Dillwyn,True,0.0,True

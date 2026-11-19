@@ -1,0 +1,75 @@
+{
+  "written_at": "2026-11-19T02:33:20+00:00",
+  "split": "dev",
+  "code": {
+    "commit": "6d0fb251a6b26ca07b1bbb864198673646724d45",
+    "uncommitted_changes": true
+  },
+  "gold": {
+    "file": "gold/gold_mentions_gloria.csv",
+    "sha256": "5a3e85b6dd328734bd1b0dd79669d155c6fb746c2e719948d4f9247e4f102670",
+    "rows": 186,
+    "guide_versions": [
+      "v0.5",
+      "v0.6"
+    ]
+  },
+  "issues": null,
+  "runs": {
+    "20261119-0221_gemini-4-carbon_dev_p4_r1": {
+      "role": "llm",
+      "model": "gemini-4-carbon",
+      "prompt_version": "p4-guide-v0.6",
+      "effort": null,
+      "mentions_sha256": "fa4099219ef1a8d98bda91e62ee34f0fc2e4a868866eed12e20654c7807edf16"
+    },
+    "20261118-2102_rules-gnfinder-v1.4.0_all": {
+      "role": "rule",
+      "model": "rules + gnfinder v1.4.0",
+      "prompt_version": null,
+      "effort": null,
+      "mentions_sha256": "d7fe73560dc0fb9681e2e249d8ac17a96256a57b1a37523eaff40bc317f6cec9"
+    }
+  },
+  "matching": {
+    "levels": [
+      "exact",
+      "lenient",
+      "value"
+    ],
+    "assignment": "optimal one-to-one per field (linear_sum_assignment)",
+    "primary_fields": [
+      "taxon",
+      "person",
+      "locality",
+      "institution",
+      "date"
+    ],
+    "separate_fields": [
+      "vernacular"
+    ],
+    "primary_level": "value",
+    "locate_fuzzy_threshold": 85.0,
+    "ambiguous_gold": "optional: no credit, no penalty",
+    "gold_rows_optional_after_guide_version": null,
+    "issue_regions": "predictions touching them are set aside"
+  },
+  "bootstrap": {
+    "resamples": 1000,
+    "seed": 20261118,
+    "unit": "page",
+    "interval": "percentile 95%",
+    "paired_for_differences": true
+  },
+  "rq3_unsupported": {
+    "G0": [
+      "fuzzy",
+      "not_found"
+    ],
+    "G1": [
+      "invalid_evidence",
+      "silent_correction"
+    ]
+  },
+  "rq4_flag": "second model extracts the same span (lenient) AND status in exact/cross_line AND type_check"
+}
