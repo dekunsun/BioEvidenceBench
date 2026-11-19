@@ -239,6 +239,14 @@ described that way.
   it. (2) Three dev and seven test pages of one book: most intervals will be wide. (3) The
   linker gets no class hint and no fuzzy threshold of ours; GBIF's own matching decides.
 
+**Entity-resolution hypothesis confirmed (Gloria, 2026-11-19: "假设可以，就按这条写进预注册").**
+The hypothesis, rule and falsifier in the entity-resolution row of section 3 are approved as
+written: with Opus G1 and the `expanded` linker, on the expert and on the modern OCR text, the
+share of gold-resolved Butler names lost at linking minus the share lost before it is
+`greater_than 0` (paired page bootstrap). It was written after looking at GBIF's answers for
+names on the dev pages, which are not blind; it is tested on the test pages only. Every other
+linking number is descriptive.
+
 **Scope decision (Gloria, 2026-11-18): "学名关联评分纳入，其余三项放 V2".** Taxon-link scoring
 is in the frozen plan (above). Moved to V2 and **not** part of this pre-registration: the
 controlled-perturbation experiment, the review-sheet CSV export, and the Level 3 image-region
