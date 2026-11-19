@@ -11,7 +11,7 @@ from prompts import SCHEMA_G1, SYSTEM  # noqa: E402
 REQ = {"custom_id": "123__expert__G1", "page_id": 123, "split": "dev",
        "version": "expert", "condition": "G1"}
 RECORD_KEYS = {"custom_id", "page_id", "split", "version", "condition", "model", "stop_reason",
-               "usage", "cost_usd", "parsed", "raw", "error", "received_at"}
+               "usage", "cost_usd", "parsed", "raw", "error", "received_at", "schema_deviation"}
 
 
 class FakeResponse:
@@ -202,3 +202,24 @@ def test_finalize_writes_cost_with_versions_and_keeps_seal(tmp_path, monkeypatch
     assert list(m.value) == ["Cuba"] and list(m.page_id) == [123]        # dev located, test not
     assert (run / "SEALED.md").exists() and (run / "sealed" / "test_outputs.jsonl.gz").exists()
     assert "SEALEDNAME" not in capsys.readouterr().out
+
+
+def test_bare_array_is_wrapped_and_flagged_other_shapes_are_parse_errors():
+    """The Batch API did not enforce the schema (2026-11-19): answers are checked in code."""
+    ok = gb.record_from_response(REQ, fake('[{"field": "locality", "line": 1, "quote": "Cuba"}]'),
+                                 "gemini-4-carbon", batch=True)
+    assert ok["parsed"] == {"mentions": [{"field": "locality", "line": 1, "quote": "Cuba"}]}
+    assert ok["schema_deviation"] == "bare_array"
+    assert ok["raw"]["candidates"][0]["content"]["parts"][1]["text"].startswith("[")   # raw untouched
+    assert gb.record_from_response(REQ, fake('{"mentions": []}'), "gemini-4-carbon", True)["schema_deviation"] is None
+    bad = ['[{"field": "place", "line": 1, "quote": "Cuba"}]',            # field not in the enum
+           '[{"field": "locality", "value": "Cuba"}]',                    # G0 keys in a G1 request
+           '[{"field": "locality", "line": "1", "quote": "Cuba"}]',       # line is not an integer
+           '{"mentions": [], "note": "x"}', '{"items": []}', '"Cuba"', '[["locality", 1, "Cuba"]]']
+    for text in bad:
+        rec = gb.record_from_response(REQ, fake(text), "gemini-4-carbon", batch=True)
+        assert rec["parsed"] is None and rec["schema_deviation"].startswith("invalid"), text
+        assert rec["error"] is None                                      # counted as parse_error
+    g0 = gb.record_from_response({**REQ, "condition": "G0"}, fake('[{"field": "date", "value": "1849"}]'),
+                                 "gemini-4-carbon", batch=True)
+    assert g0["parsed"] == {"mentions": [{"field": "date", "value": "1849"}]}

@@ -21,12 +21,25 @@ Output is billed for candidates + thoughts. The record keeps these native
 counts and also fills the Anthropic-style keys that finalize() sums:
   input_tokens = prompt - cached, cache_read_input_tokens = cached,
   output_tokens = candidates + thoughts, cache_creation_input_tokens = 0.
+
+SCHEMA NOT ENFORCED IN BATCH MODE (seen 2026-11-19, run ..._gemini-4-carbon_dev_p4_r1).
+The SDK does put responseJsonSchema into each inline batch request, but the
+Batch API answered 44 of 48 requests with a bare JSON array of mentions instead
+of {"mentions": [...]}, and its prompt token counts were lower than the sync
+counts for the same page by about the size of the schema. So in batch mode the
+output shape came from the prompt text alone. check_shape() therefore validates
+every answer against our schema in code: a bare array of valid mention objects
+is wrapped as {"mentions": [...]} and the record says schema_deviation =
+"bare_array"; anything else that does not fit becomes parsed = None (a parse
+error). The raw response is always kept unchanged.
 """
 from __future__ import annotations
 
 import copy
 import json
 from datetime import datetime, timezone
+
+from prompts import CONDITIONS
 
 API_BASE = "https://generativelanguage.googleapis.com/"   # SDK default (Gemini Developer API)
 API_VERSION = "v1beta"                                     # SDK default
@@ -133,6 +146,27 @@ def cost_of(usage: dict, model: str, batch: bool) -> float:
     return c * (0.5 if batch else 1.0)
 
 
+def check_shape(obj, schema: dict) -> tuple[dict | None, str | None]:
+    """Validate a decoded answer against our schema (the few keywords it uses).
+    Returns (parsed, deviation): parsed is a {"mentions": [...]} dict or None;
+    deviation is None, "bare_array" (wrapped, values untouched) or "invalid: <why>"."""
+    deviation = None
+    if isinstance(obj, list):
+        obj, deviation = {"mentions": obj}, "bare_array"
+    if not isinstance(obj, dict) or set(obj) != {"mentions"} or not isinstance(obj["mentions"], list):
+        return None, "invalid: not an object with exactly the key 'mentions' holding an array"
+    item = schema["properties"]["mentions"]["items"]
+    types = {"string": str, "integer": int}
+    for i, m in enumerate(obj["mentions"]):
+        if not isinstance(m, dict) or set(m) != set(item["required"]):
+            return None, f"invalid: mention {i} does not have exactly the keys {item['required']}"
+        for k, spec in item["properties"].items():
+            ok = isinstance(m[k], types[spec["type"]]) and not isinstance(m[k], bool)
+            if not ok or ("enum" in spec and m[k] not in spec["enum"]):
+                return None, f"invalid: mention {i}, key {k!r}"
+    return obj, deviation
+
+
 def _answer_text(d: dict) -> str:
     """Concatenate the non-thought text parts of the first candidate."""
     cands = d.get("candidates") or []
@@ -155,10 +189,13 @@ def record_from_response(req: dict, resp, model: str, batch: bool) -> dict:
     if finish is None and d.get("prompt_feedback"):
         finish = "PROMPT_BLOCKED:" + str((d["prompt_feedback"] or {}).get("block_reason"))
     text = _answer_text(d)
+    parsed, deviation = None, None
     try:
-        parsed = json.loads(text) if text else None
+        decoded = json.loads(text) if text else None
     except json.JSONDecodeError:
-        parsed = None
+        decoded = None
+    if decoded is not None:
+        parsed, deviation = check_shape(decoded, CONDITIONS[req["condition"]][1])
     usage = usage_from(d.get("usage_metadata"))
     # No usable answer and not a normal stop or a truncation: the API withheld the answer
     # (SAFETY, RECITATION, blocked prompt ...). Logged as an error so that
@@ -170,14 +207,15 @@ def record_from_response(req: dict, resp, model: str, batch: bool) -> dict:
             "version": req["version"], "condition": req["condition"],
             "model": d.get("model_version") or model,
             "stop_reason": finish, "usage": usage, "cost_usd": cost_of(usage, model, batch),
-            "parsed": parsed, "raw": d, "error": error, "received_at": now()}
+            "parsed": parsed, "raw": d, "error": error, "received_at": now(),
+            "schema_deviation": deviation}
 
 
 def error_record(req: dict, model: str, err: str) -> dict:
     return {"custom_id": req["custom_id"], "page_id": req["page_id"], "split": req["split"],
             "version": req["version"], "condition": req["condition"], "model": model,
             "stop_reason": None, "usage": {}, "cost_usd": 0.0, "parsed": None, "raw": None,
-            "error": err[:300], "received_at": now()}
+            "error": err[:300], "received_at": now(), "schema_deviation": None}
 
 
 def make_client(api_key: str):

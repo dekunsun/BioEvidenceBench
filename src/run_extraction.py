@@ -90,12 +90,12 @@ def anthropic_params(model, max_tokens, effort, schema, user_text) -> dict:
     }
 
 
-META_KEYS = ("page_id", "split", "model", "stop_reason", "usage", "cost_usd", "error")
+META_KEYS = ("page_id", "split", "model", "stop_reason", "usage", "cost_usd", "error", "schema_deviation")
 
 
 def meta_of(rec: dict) -> dict:
     """The small part of a record that finalize() needs (never the model's answer)."""
-    return {k: rec[k] for k in META_KEYS}
+    return {k: rec.get(k) for k in META_KEYS}
 
 
 def select_pages(which: str) -> pd.DataFrame:
@@ -203,6 +203,9 @@ def finalize(run_dir: Path, records_meta: list[dict], model: str, batch: bool,
                                  "cache_read_input_tokens")},
             "stop_reasons": by.stop_reason.fillna("error").value_counts().to_dict(),
             "errors": int(by.error.notna().sum())}
+    if "schema_deviation" in by and by.schema_deviation.notna().any():
+        # answers whose JSON shape did not follow the schema as sent (see gemini_backend.check_shape)
+        cost["schema_deviations"] = by.schema_deviation.dropna().value_counts().to_dict()
     if "model" in by:   # version string(s) the API reported in its responses
         cost["model_versions_returned"] = by.model.fillna("none").value_counts().to_dict()
     cost.update(extra_cost or {})
@@ -228,7 +231,7 @@ def finalize(run_dir: Path, records_meta: list[dict], model: str, batch: bool,
     with open(run_dir / "dev_outputs.jsonl", encoding="utf-8") as f:
         for line in f:
             rec = json.loads(line)
-            if not rec.get("parsed"):
+            if not isinstance(rec.get("parsed"), dict):
                 continue
             src = (ROOT / pd.read_csv(run_dir / "inputs.csv").set_index("custom_id").loc[rec["custom_id"], "source"]
                    ).read_text(encoding="utf-8")
@@ -258,10 +261,15 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--collect", metavar="RUN_ID", help="fetch results of a submitted batch")
+    ap.add_argument("--reparse", metavar="RUN_ID",
+                    help="Gemini runs: rebuild the open DEV records from their stored raw responses "
+                         "(no API call; sealed test outputs are not touched)")
     a = ap.parse_args()
 
     if a.collect:
         return collect(a.collect)
+    if a.reparse:
+        return reparse(a.reparse)
 
     gem = a.provider == "gemini"
     a.model = a.model or ("gemini-4-carbon" if gem else "claude-opus-5-5")
@@ -416,6 +424,35 @@ def collect(run_id: str) -> None:
         meta.append(meta_of(rec))
     sink.close()
     finalize(run_dir, meta, cfg["model"], batch=True, extra_cost=gb.cost_notes(cfg["model"]) if gem else None)
+
+
+def reparse(run_id: str) -> None:
+    """Re-derive parsed / usage / cost of the DEV records of a Gemini run from the raw
+    responses already on disk, e.g. after gemini_backend.check_shape changed. No API call.
+    Raw responses and received_at are kept. Refuses runs that have sealed test outputs:
+    those are re-derived only through unseal.py, after the gold set is final."""
+    run_dir = RESULTS / run_id
+    cfg = json.loads((run_dir / "config.json").read_text())
+    if cfg.get("provider") != "gemini":
+        sys.exit("--reparse is for Gemini runs only.")
+    if (run_dir / "sealed").exists():
+        sys.exit("This run has sealed test outputs; not reparsed.")
+    path = run_dir / "dev_outputs.jsonl"
+    old = [json.loads(line) for line in open(path, encoding="utf-8")]
+    batch = cfg["mode"] == "batch"
+    new = []
+    for o in old:
+        if o.get("raw") is None:            # an API error has nothing to reparse
+            new.append({**o, "schema_deviation": None})
+            continue
+        rec = gb.record_from_response(o, o["raw"], cfg["model"], batch=batch)
+        rec["received_at"] = o["received_at"]
+        new.append(rec)
+    with open(path, "w", encoding="utf-8") as f:
+        for rec in new:
+            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    finalize(run_dir, [meta_of(r) for r in new], cfg["model"], batch=batch,
+             extra_cost={**gb.cost_notes(cfg["model"]), "reparsed_at": now()})
 
 
 if __name__ == "__main__":
