@@ -27,7 +27,7 @@ from pathlib import Path
 import pandas as pd
 
 from common import DATA, ROOT
-from score import score_run_detail
+from score import char_map, map_span, norm_value, page_text, score_run_detail
 
 RUN = "20261119-2052_claude-opus-5-5_test_batch"
 GOLD = ROOT / "gold" / "gold_mentions_gloria_test.csv"
@@ -52,6 +52,25 @@ def result(r) -> str:
     return "漏掉"
 
 
+def in_input(version: str, page_id: int, start: int, end: int, gold: str) -> str:
+    """FACT, not a tag: what the text the model was given holds at the gold mention's place.
+    The expert span is carried to the OCR text by the scorer's own character alignment
+    (score.char_map, as for entity-span CER)."""
+    expert, ocr = page_text("expert", page_id), page_text(version, page_id)
+    cmap = char_map(expert, ocr)
+    aligned = sum(cmap[i] >= 0 for i in range(start, min(end, len(cmap))))
+    span = map_span(cmap, start, end)
+    if span is None or aligned < 0.5 * (end - start):
+        return "没有（这段文字不在输入里）"
+    sub = ocr[span[0]:span[1]]
+    if norm_value(sub) == norm_value(gold):
+        return "有且一字不差"
+    # show the aligned text with a little of what surrounds it: where a whole block is missing,
+    # the alignment can land on a neighbouring word, and the surroundings make that visible
+    left, right = ocr[max(0, span[0] - 15):span[0]], ocr[span[1]:span[1] + 15]
+    return f"有但字不同：…{left}【{sub[:40]}】{right}…".replace("\n", " ")
+
+
 def gold_sheet(go: pd.DataFrame) -> pd.DataFrame:
     go = go[go.condition == "G1"]
     key = ["page_id", "book", "field", "start", "end", "text"]
@@ -72,14 +91,25 @@ def gold_sheet(go: pd.DataFrame) -> pd.DataFrame:
         return "D 专家转录错，部分版本对"
     wide["分组"] = wide.apply(group, axis=1)
     wide["旧OCR上是"] = wide.legacy.map(lambda s: "读错" if s.startswith("读错") else ("漏掉" if s == "漏掉" else "对"))
+    for v in VERSIONS[1:]:
+        wide[f"{VLABEL[v]}输入里"] = [
+            in_input(v, p, s, e, t) if r != "对" else ""
+            for p, s, e, t, r in zip(wide.page_id, wide.start, wide.end, wide.text, wide[v])]
     wide["上下文（专家转录，【】是金标准）"] = [context(p, s, e) for p, s, e in zip(wide.page_id, wide.start, wide.end)]
     wide = wide.rename(columns={v: VLABEL[v] for v in VERSIONS} | {"text": "金标准文字", "field": "字段"})
     wide = wide.sort_values(["分组", "旧OCR上是", "book", "page_id", "start"])
     cols = ["分组", "旧OCR上是", "book", "page_id", "字段", "金标准文字", "上下文（专家转录，【】是金标准）"] \
-        + [VLABEL[v] for v in VERSIONS] + ["start", "end"]
+        + [VLABEL[v] for v in VERSIONS] + [f"{VLABEL[v]}输入里" for v in VERSIONS[1:]] + ["start", "end"]
     out = wide[cols].reset_index(drop=True)
     for t in TAGS:
         out[t] = ""
+    # Group A (wrong ONLY on legacy OCR) is OCR-sensitive by the definition itself (the result
+    # changes when only the OCR input changes). Preset there on Gloria's decision (2026-11-20),
+    # marked as a preset, for her to spot-check. Nothing else is preset. See DEVIATIONS.md.
+    is_a = out["分组"].str.startswith("A ")
+    out.loc[is_a, "OCR相关"] = "是"
+    out["预设"] = ""
+    out.loc[is_a, "预设"] = "规则预设：只在旧OCR上错 → OCR相关（待抽查）"
     out["备注"] = ""
     return out
 
@@ -133,7 +163,8 @@ def write_xlsx(sheets: dict[str, pd.DataFrame], path: Path, notes: list[str]) ->
             for i, c in enumerate(df.columns, 1):
                 letter = ws.cell(1, i).column_letter
                 ws.cell(1, i).font = Font(bold=True)
-                width = 60 if c.startswith("上下文") else 26 if c in VLABEL.values() or c in ("模型输出", "和你裁定的行的关系") \
+                width = 60 if c.startswith("上下文") else 30 if c.endswith("输入里") or c == "预设" \
+                    else 26 if c in VLABEL.values() or c in ("模型输出", "和你裁定的行的关系") \
                     else 30 if c == "备注" else 18 if c in ("分组", "金标准文字", "出现在哪些版本") else 11
                 ws.column_dimensions[letter].width = width
                 if c in TAGS or c == "备注":
@@ -165,7 +196,10 @@ def main() -> None:
         f"   分组（只按事实分，不是归因）：{counts(g)}。",
         "表“多余输出”：模型输出了、但金标准里没有对应提及的内容；落在同一位置的输出跨版本合并。最后一列说明它是否落在你裁定为 excluded 等的行上。",
         f"   分组：{counts(e)}。",
-        "要填的是黄色表头的列：OCR相关、抽取或推理、模糊或混合（下拉选“是”，可以多选），备注可选。归因列全部留空，没有预填。",
+        "要填的是黄色表头的列：OCR相关、抽取或推理、模糊或混合（下拉选“是”，三列可以同时选），备注可选。每行至少一个“是”；判断不了就选“模糊或混合”并写备注。",
+        "唯一的预设：分组 A（只在旧OCR上错）的“OCR相关”按定义预填为“是”，“预设”列写明。请抽查约 10 行，发现另有原因就补选或改掉。其余各行的归因列全部留空。",
+        "“…输入里”三列是事实，不是归因：模型拿到的那个版本的文字里，金标准这个位置有什么（用评分时的字符对齐找到）。"
+        "“没有” = 这段文字不在输入里（如整块丢失）；“有但字不同” = 后面是输入里的实际文字；“有且一字不差” = 输入是对的，模型仍然没抽对。只在该版本出错时才填。",
         "定义（CLAUDE.md / 预注册）：OCR相关 = 换了 OCR 输入结果就变了（只说明敏感，不证明是哪个字错）；抽取或推理 = 在专家转录上仍然错；"
         "模糊或混合 = 历史分类、标注本身有争议、版式加 OCR、阅读顺序缺失等。",
         "建议：先按分组和“旧OCR上是”筛选，同类的可以整段一起填。分组 A 里“读错”的行大多是同一类情况，可以成批处理，但请至少抽看几行确认。",
