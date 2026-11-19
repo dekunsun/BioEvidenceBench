@@ -1,0 +1,188 @@
+﻿page_id,start,end,field,text,qualifier,notes,adjudication,guide_version
+8992582,46,53,vernacular,Jackdaw,,,,v0.5
+8992582,477,484,vernacular,Jackdaw,,,,v0.5
+8992582,520,529,locality,Continent,,Contextual broad geographic region: European mainland,,v0.5
+8992582,533,540,locality,England,,,,v0.5
+8992582,608,622,locality,cliﬀs of Dover,,,,v0.5
+8992582,747,754,vernacular,Jackdaw,,,,v0.5
+8992582,812,819,vernacular,Jackdaw,,,,v0.5
+8992582,946,953,person,Lilford,,title: Lord,,v0.5
+8992582,1057,1064,vernacular,Jackdaw,,,,v0.5
+8992582,1291,1298,locality,Lilford,,,,v0.5
+8992582,1484,1492,vernacular,Barn Owl,,,,v0.5
+8992582,1577,1581,vernacular,Daws,,,,v0.5
+8992582,1619,1627,vernacular,chickens,,,,v0.5
+8992582,1629,1638,vernacular,pheasants,,,,v0.5
+8992582,1644,1654,vernacular,partridges,,,,v0.5
+8992582,1786,1790,vernacular,Owls,,,,v0.5
+8992582,2021,2029,vernacular,Barn Owl,,,,v0.5
+8992582,2119,2127,vernacular,Jackdaws,,,,v0.5
+8992582,2259,2266,vernacular,Jackdaw,,,,v0.5
+8992582,2328,2341,vernacular,House-Sparrow,,,,v0.5
+8992582,2428,2431,vernacular,Daw,,,,v0.5
+8992582,2561,2568,person,Seebohm,,,,v0.5
+8992582,2630,2635,vernacular,Gulls,,,,v0.5
+8992582,2649,2656,vernacular,Jackdaw,,,,v0.5
+8992582,2697,2701,vernacular,Rook,,,,v0.5
+8992582,2835,2842,vernacular,Jackdaw,,,,v0.5
+8992601,269,278,person,Stevenson,,title: Mr.,,v0.5
+8992601,310,318,person,St. John,,,,v0.5
+8992601,484,490,vernacular,grouse,,,,v0.5
+8992601,492,502,vernacular,partridges,,,,v0.5
+8992601,504,509,vernacular,hares,,,,v0.5
+8992601,698,707,vernacular,wild duck,,,,v0.5
+8992601,709,717,vernacular,pheasant,,,,v0.5
+8992601,756,767,vernacular,Hooded Crow,,,,v0.5
+8992601,921,928,vernacular,Peewits,,,,v0.5
+8992601,930,935,vernacular,Gulls,,,,v0.5
+8992601,937,946,vernacular,Redshanks,,,,v0.5
+8992601,980,984,vernacular,Crow,,,,v0.5
+8992601,1031,1036,vernacular,hoody,,,,v0.5
+8992601,1065,1070,vernacular,ducks,,,,v0.5
+8992601,1168,1173,vernacular,eagle,,,,v0.5
+8992601,1175,1191,vernacular,peregrine falcon,,,,v0.5
+8992601,1196,1202,vernacular,osprey,,,,v0.5
+8992601,1351,1358,vernacular,Hoodies,,,,v0.5
+8992601,1405,1417,person,T. H. Nelson,,title: Messrs.,,v0.5
+8992601,1423,1433,person,F. Pilling,,,,v0.5
+8992601,1448,1455,vernacular,Hoodies,,,,v0.5
+8992601,1557,1564,person,Seebohm,,,,v0.5
+8992601,1599,1604,person,Gätke,,,,v0.5
+8992601,2107,2117,locality,Heligoland,,,,v0.5
+8992601,2521,2526,locality,Weser,,,,v0.5
+8992601,2547,2558,locality,Bremerhaven,,,,v0.5
+8992601,2751,2756,person,Gätke,,title: Herr,,v0.5
+8992612,35,43,taxon,Alaudidæ,,,,v0.5
+8992612,58,67,locality,Old World,,,,v0.5
+8992612,106,119,locality,North America,,,,v0.5
+8992612,132,138,person,Jerdon,,,,v0.5
+8992612,189,197,locality,Malayana,,,,v0.5
+8992612,202,211,locality,Australia,,,,v0.5
+8992612,222,230,taxon,ALAUDIDÆ,,,,v0.5
+8992612,237,245,vernacular,SKY-LARK,,account heading,,v0.5
+8992612,248,263,taxon,Alauda arvensis,,,,v0.5
+8992612,265,270,person,LINN.,,abbreviation dot kept,,v0.5
+8992612,327,333,locality,Europe,,,,v0.5
+8992612,346,357,locality,Scandinavia,,,,v0.5
+8992612,394,406,locality,North Africa,,,,v0.5
+8992612,447,476,locality,slopes of the Atlas Mountains,,part-of-place,,v0.5
+8992612,498,504,locality,Russia,,,,v0.5
+8992612,509,516,locality,Siberia,,,,v0.5
+8992612,544,549,locality,Japan,,,,v0.5
+8992612,555,574,locality,"valley of the
+Amoor",,part-of-place; newline kept,,v0.5
+8992612,576,595,locality,South-east Mongolia,,part-of-place,,v0.5
+8992612,597,606,locality,Turkestan,,,,v0.5
+8992612,611,617,locality,Persia,,,,v0.5
+8992612,639,644,locality,China,,,,v0.5
+8992612,646,662,locality,North-west India,,,,v0.5
+8992612,664,675,locality,Afghanistan,,,,v0.5
+8992612,677,683,locality,Persia,,,,v0.5
+8992612,685,695,locality,Asia Minor,,,,v0.5
+8992612,697,706,locality,Palestine,,,,v0.5
+8992612,711,716,locality,Egypt,,,,v0.5
+8992612,742,749,locality,Madeira,,,,v0.5
+8992612,786,795,locality,Greenland,,UNCERTAIN-IN-SOURCE: reputed occurrence,,v0.5
+8992612,834,847,locality,United States,,,,v0.5
+8992612,850,861,locality,New Zealand,,,,v0.5
+8992612,866,875,locality,Australia,,,,v0.5
+8992612,889,902,locality,Great Britain,,,,v0.5
+8992612,907,914,locality,Ireland,,,,v0.5
+8992612,920,928,vernacular,Sky-Lark,,,,v0.5
+8992612,1041,1049,vernacular,Sky-Lark,,,,v0.5
+8992612,1111,1122,taxon,A. dulcivox,,,,v0.5
+8992612,1124,1135,taxon,A. japonica,,,,v0.5
+8992612,1137,1150,taxon,A. cantarella,,,,v0.5
+8992612,1152,1161,taxon,A. liopus,,,,v0.5
+8992612,1163,1178,taxon,"A. blak-
+istoni",,hyphenated linebreak,,v0.5
+8992612,1180,1190,taxon,A. gulgula,,,,v0.5
+8992612,1192,1204,taxon,A. australis,,,,v0.5
+8992612,1206,1216,taxon,A. cœlivox,,,,v0.5
+8992612,1218,1229,taxon,A. wattersi,,,,v0.5
+8992612,1235,1242,taxon,A. sala,,,,v0.5
+8992612,1365,1373,vernacular,Sky-Lark,,,,v0.5
+8992612,1634,1642,locality,Bermudas,,,,v0.5
+8992612,1647,1651,date,1850,,shot in 1850,,v0.5
+8967047,38,49,institution,Mus. Taylor,,dot dropped,,v0.5
+8967047,53,71,taxon,BULIMUS BIVITTATUS,,dot dropped,,v0.5
+8967047,322,342,vernacular,TWO-FILLETED BULIMUS,,dot dropped; no article,,v0.5
+8967047,604,611,person,SOWERBY,,author,,v0.5
+8967047,655,661,locality,Brazil,,dot dropped,,v0.5
+8967047,732,748,taxon,B. auris-leporis,,,,v0.5
+8967047,765,776,institution,Mus. Taylor,,dot dropped,,v0.5
+8967047,780,797,taxon,BULIMUS MULIEBRIS,,dot dropped,,v0.5
+8967047,1053,1071,vernacular,EFFEMINATE BULIMUS,,dot dropped; no article,,v0.5
+8967047,1346,1357,locality,New Granada,,dot dropped,,v0.5
+8967047,1434,1445,institution,Mus. Cuming,,dot dropped,,v0.5
+8967047,1449,1467,taxon,BULIMUS BOLIVIANUS,,dot dropped,,v0.5
+8967047,1810,1826,vernacular,BOLIVIAN BULIMUS,,dot dropped; no article,,v0.5
+8967047,2174,2182,person,PFEIFFER,,author,,v0.5
+8967047,2225,2249,locality,"Merida, Andes of Bolivia",Near,Original composite locality as printed; modern geography not verified,,v0.5
+8967047,2332,2339,person,Pfeiﬀer,,title: Dr.,,v0.5
+8967047,2409,2423,taxon,"B. annu-
+latus",,hyphenated linebreak,,v0.5
+8967047,2549,2560,institution,Mus. Taylor,,dot dropped,,v0.5
+8967047,2564,2581,taxon,BULIMUS PATRICIUS,,dot dropped,,v0.5
+8967047,2856,2873,vernacular,PATRICIAN BULIMUS,,dot dropped; no article,,v0.5
+8967047,3200,3211,locality,New Granada,,UNCERTAIN-IN-SOURCE: probable locality; author disclaims authority,,v0.5
+8967047,3301,3312,institution,Mus. Taylor,,dot dropped,,v0.5
+8967047,3316,3333,taxon,BULIMUS SPECTATUS,,dot dropped,,v0.5
+8967047,3649,3663,vernacular,CHOICE BULIMUS,,dot dropped; no article,,v0.5
+8967060,140,158,vernacular,VERY SMALL BULIMUS,,dot dropped; no article,,v0.5
+8967060,381,386,person,ADAMS,,manuscript author (rule 2.4),,v0.5
+8967060,398,405,locality,Jamaica,,dot dropped,,v0.5
+8967060,507,517,taxon,B. minimus,,,,v0.5
+8967060,639,649,institution,Mus. Adams,,collection (rule 2.4/2.5),,v0.5
+8967060,653,672,taxon,BULIMUS PAUPERCULUS,,dot dropped,,v0.5
+8967060,846,866,vernacular,MEAN-LOOKING BULIMUS,,dot dropped; no article,,v0.5
+8967060,1053,1058,person,ADAMS,,author,,v0.5
+8967060,1070,1077,locality,Jamaica,,dot dropped,,v0.5
+8967060,1188,1197,locality,"Ja‐
+maica",,hyphenated linebreak (rule 2.0.3),,v0.5
+8967060,1411,1422,institution,Mus. Benson,,dot dropped,,v0.5
+8967060,1426,1441,taxon,BULIMUS TUTULUS,,dot dropped,,v0.5
+8967060,1708,1727,vernacular,LITTLE TUFT BULIMUS,,dot dropped; no article,,v0.5
+8967060,2013,2019,person,BENSON,,author,,v0.5
+8967060,2031,2061,locality,"Humeerpore, Bundelkhund, India",,Single hierarchical locality; wording as printed,,v0.5
+8967060,2063,2069,person,Benson,,collector,,v0.5
+8967147,36,47,institution,Mus. Cuming,,dot dropped,,v0.5
+8967147,51,71,taxon,ACHATINA PHILIPPIANA,,dot dropped,,v0.5
+8967147,402,421,vernacular,PHILIPPI’S ACHATINA,,dot dropped,,v0.5
+8967147,801,809,person,PFEIFFER,,,,v0.5
+8967147,812,820,taxon,Glandina,,genus in citation parentheses,,v0.5
+8967147,855,862,locality,Jamaica,,,,v0.5
+8967147,864,869,person,Gosse,,collector,,v0.5
+8967147,1062,1075,institution,Mus. Dennison,,dot dropped,,v0.5
+8967147,1079,1098,taxon,ACHATINA MONILIFERA,,dot dropped,,v0.5
+8967147,1385,1408,vernacular,NECKLACE‐BOUND ACHATINA,,dot dropped; no article,,v0.5
+8967147,1703,1711,person,PFEIFFER,,,,v0.5
+8967147,1714,1722,taxon,Glandina,,genus in citation parentheses,,v0.5
+8967147,1761,1794,locality,"Coban, Vera Cruz, Central America",,Provisional single historical composite locality phrase; review historical hierarchy if needed,,v0.5
+8967147,1796,1802,person,Lattre,,collector,,v0.5
+8967147,1956,1967,institution,Mus. Cuming,,dot dropped,,v0.5
+8967147,1971,1987,taxon,ACHATINA OLEACEA,,dot dropped,,v0.5
+8967147,2197,2218,vernacular,OLIVE-SHAPED ACHATINA,,dot dropped; no article,,v0.5
+8967147,2433,2459,taxon,Helix (Cochlicopa) oleacea,,,,v0.5
+8967147,2461,2469,person,Férussac,,,,v0.5
+8967147,2491,2507,taxon,Glandina oleacea,,,,v0.5
+8967147,2509,2513,person,Beck,,dot dropped,,v0.5
+8967147,2521,2525,locality,Cuba,,dot dropped,,v0.5
+8967147,2642,2653,institution,Mus. Cuming,,dot dropped,,v0.5
+8967147,2657,2677,taxon,ACHATINA LEUCOZONIAS,,dot dropped,,v0.5
+8967147,2990,3010,vernacular,WHITE‐ZONED ACHATINA,,dot dropped; no article,,v0.5
+8967147,3317,3324,person,SOWERBY,,,,v0.5
+8967147,3351,3369,taxon,Voluta leucozonias,,,,v0.5
+8967147,3371,3376,person,Walch,,,,v0.5
+8967147,3424,3444,taxon,Achatina albolineata,,,,v0.5
+8967147,3446,3453,person,Lamarck,,dot dropped (rule 2.0.2),,v0.5
+8967147,3455,3486,taxon,"Helix (Cochlicopa,) leucozonias",,spelling as printed,,v0.5
+8967147,3488,3496,person,Férussac,,dot dropped,,v0.5
+8967147,3498,3520,taxon,Polyphemus leucozonias,,,,v0.5
+8967147,3522,3525,person,Jan,,dot dropped,,v0.5
+8967147,3527,3547,taxon,Glandina leucozonias,,,,v0.5
+8967147,3549,3553,person,Beck,,dot dropped,,v0.5
+8967147,3561,3571,locality,Martinique,,dot dropped,,v0.5
+8967147,3952,3957,person,Walch,,,,v0.5
+8967147,3959,3965,person,Gmelin,,,,v0.5
+8967147,3971,3978,person,Dillwyn,,,,v0.5

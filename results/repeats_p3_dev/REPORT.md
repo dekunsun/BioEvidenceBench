@@ -21,7 +21,26 @@ of mentions found by every repeat among those found by any repeat.
 
 By field: `consistency.csv`.
 
-## F1 per repeat
+## F1 per repeat (dev gold)
 
-Not computed: there are no dev gold labels yet. Re-run with `--gold` once the 6 dev
-pages are labelled.
+Mean and sample standard deviation over the repeats, primary fields together.
+Per repeat and per field: `f1_by_repeat.csv`, `f1_summary.csv`.
+
+| book   | version                | condition   |   gold |   value_F1_mean |   value_F1_sd |   value_F1_min |   value_F1_max |   lenient_F1_mean |   lenient_F1_sd |
+|:-------|:-----------------------|:------------|-------:|----------------:|--------------:|---------------:|---------------:|------------------:|----------------:|
+| Butler | expert                 | G0          |     62 |           0.965 |         0.005 |          0.959 |          0.968 |             0.965 |           0.005 |
+| Butler | expert                 | G1          |     62 |           0.976 |         0     |          0.976 |          0.976 |             0.976 |           0     |
+| Butler | legacy                 | G0          |     62 |           0.742 |         0     |          0.742 |          0.742 |             0.968 |           0     |
+| Butler | legacy                 | G1          |     62 |           0.771 |         0.006 |          0.764 |          0.774 |             0.981 |           0.005 |
+| Butler | modern_dots-mocr       | G0          |     62 |           0.941 |         0.003 |          0.937 |          0.943 |             0.957 |           0.004 |
+| Butler | modern_dots-mocr       | G1          |     62 |           0.949 |         0.005 |          0.943 |          0.952 |             0.965 |           0.005 |
+| Butler | modern_dots-mocr_plain | G0          |     62 |           0.946 |         0.005 |          0.943 |          0.952 |             0.962 |           0.005 |
+| Butler | modern_dots-mocr_plain | G1          |     62 |           0.946 |         0.005 |          0.943 |          0.952 |             0.962 |           0.005 |
+| Reeve  | expert                 | G0          |     68 |           0.95  |         0     |          0.95  |          0.95  |             0.964 |           0     |
+| Reeve  | expert                 | G1          |     68 |           0.979 |         0.013 |          0.964 |          0.986 |             0.983 |           0.005 |
+| Reeve  | legacy                 | G0          |     68 |           0.696 |         0     |          0.696 |          0.696 |             0.971 |           0     |
+| Reeve  | legacy                 | G1          |     68 |           0.71  |         0     |          0.71  |          0.71  |             0.986 |           0     |
+| Reeve  | modern_dots-mocr       | G0          |     68 |           0.957 |         0     |          0.957 |          0.957 |             0.971 |           0     |
+| Reeve  | modern_dots-mocr       | G1          |     68 |           0.986 |         0     |          0.986 |          0.986 |             0.986 |           0     |
+| Reeve  | modern_dots-mocr_plain | G0          |     68 |           0.971 |         0     |          0.971 |          0.971 |             0.971 |           0     |
+| Reeve  | modern_dots-mocr_plain | G1          |     68 |           0.986 |         0     |          0.986 |          0.986 |             0.986 |           0     |
