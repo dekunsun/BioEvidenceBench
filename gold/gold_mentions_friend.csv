@@ -1,0 +1,176 @@
+page_id,start,end,field,text,scan_text,qualifier,notes,adjudication,guide_version
+8992379,,,locality,Berwickshire,,,,,v0.10
+8992379,,,locality,Yorkshire,,,,,v0.10
+8992379,,,locality,Scarborough,,,,,v0.10
+8992379,,,date,"October 23rd, 1889",,,,,v0.10
+8992379,,,date,1887,,,,,v0.10
+8992379,,,locality,Wells,,,,,v0.10
+8992379,,,date,1900,,,,,v0.10
+8992379,,,date,1904,,,,,v0.10
+8992379,,,date,1905,,,,,v0.10
+8992379,,,date,1906,,,,,v0.10
+8992379,,,locality,Norfolk,,,,,v0.10
+8992379,,,locality,Yorkshire,,,,,v0.10
+8992379,,,date,1907,,,,,v0.10
+8992379,,,locality,Cheshire,,,,,v0.10
+8992379,,,date,June 1903,,,,,v0.10
+8992379,,,locality,Shetlands,,,,,v0.10
+8992379,,,date,1906,,,,,v0.10
+8992379,,,vernacular,Flycatcher,,,,,v0.10
+8992379,,,vernacular,Robin,,,,,v0.10
+8992379,,,person,Seebohm,,,,,v0.10
+8992379,,,vernacular,Robins,,,,,v0.10
+8992379,,,vernacular,Flycatchers,,,,,v0.10
+8992379,,,vernacular,Red-breasted Flycatcher,,,,,v0.10
+8992379,,,taxon,M. minuta,,,,,v0.10
+8992379,,,taxon,M. leucura,,,,,v0.10
+8992379,,,taxon,M. parva,,,,,v0.10
+8992379,,,taxon,M. hyperythra,,,,,v0.10
+8992379,,,taxon,Munia atricapilla,,,,,v0.10
+8992379,,,date,1887,,,,,v0.10
+8992379,,,date,1896,,,spring of 1896,,v0.10
+8992379,,,taxon,Quelea quelea,,,,,v0.10
+8992379,,,taxon,Q. russi,,,,,v0.10
+8992379,,,vernacular,Cardinal,,,,,v0.10
+8992379,,,taxon,Paroaria cervicalis,,,,,v0.10
+8992379,,,taxon,P. capitata,,,,,v0.10
+8992643,,,vernacular,PALLAS' WILLOW-WARBLER,,,,,v0.10
+8992643,,,taxon,Phylloscopus proregulus,,,,,v0.10
+8992643,,,locality,Norfolk,,,,,v0.10
+8992643,,,date,"October, 1896",,,,,v0.10
+8992643,,,vernacular,Chiﬀchaﬀs,,,,,v0.10
+8992643,,,locality,Shetlands,,,,,v0.10
+8992643,,,date,"between April 15th and 24th, 1904",,,,,v0.10
+8992643,,,date,May of the same year,,,May 1904 implied,,v0.10
+8992643,,,person,John S. Tulloch,,,title Mr. excluded,,v0.10
+8992643,,,locality,Lerwick,,,,,v0.10
+8992643,,,date,May 27th,,,NO-YEAR,,v0.10
+8992643,,,vernacular,cat,,,,,v0.10
+8992643,,,vernacular,SIBERIAN CHIFFCHAFF,,,,,v0.10
+8992643,,,taxon,Phylloscopus tristis,,,,,v0.10
+8992643,,,person,BLYTH,,,,,v0.10
+8992643,,,locality,Orkneys,,off,,,v0.10
+8992643,,,date,1902,,,,,v0.10
+8992643,,,vernacular,GREENISH WILLOW-WARBLER,,,,,v0.10
+8992643,,,taxon,Phylloscopus viridanus,,,,,v0.10
+8992643,,,person,BLYTH,,,,,v0.10
+8992643,,,locality,Lincolnshire,,,,,v0.10
+8992643,,,date,"September 5th, 1896",,,,,v0.10
+8992643,,,locality,Sule Skerry Lighthouse (Sutherlandshire),,,,,v0.10
+8992643,,,date,"September 5th, 1902",,,,,v0.10
+8966802,,,vernacular,SLIGHTLY WRINKLED BULIMUS,,,,,v0.10
+8966802,,,taxon,Pupa,,,UNCLEAR: descriptive shell comparison vs genus reference,,v0.10
+8966802,,,person,SOWERBY,,,,,v0.10
+8966802,,,locality,Gallapagos Islands,,,,,v0.10
+8966802,,,person,Cuming,,,,,v0.10
+8966802,,,institution,Mus. Cuming,,,,,v0.10
+8966802,,,taxon,BULIMUS TURRITUS,,,,,v0.10
+8966802,,,vernacular,TURRETED BULIMUS,,,,,v0.10
+8966802,,,person,BRODERIP,,,,,v0.10
+8966802,,,locality,"Truxillo, Peru (on the mountains)",,,,,v0.10
+8966802,,,person,Cuming,,,,,v0.10
+8966802,,,institution,Mus. Cuming,,,,,v0.10
+8966802,,,taxon,BULIMUS SCULPTURATUS,,,,,v0.10
+8966802,,,vernacular,SCULPTURED BULIMUS,,,,,v0.10
+8966802,,,person,PFEIFFER,,,,,v0.10
+8966802,,,locality,Gallapagos Islands (on bushes),,,,,v0.10
+8966802,,,person,Darwin,,,,,v0.10
+8966802,,,taxon,B. rugiferus,,,,,v0.10
+8966802,,,taxon,Darwinii,,,epithet only; genus implied,,v0.10
+8966802,,,institution,Mus. Cuming,,,,,v0.10
+8966802,,,taxon,BULIMUS CALVUS,,,,,v0.10
+8966802,,,vernacular,BALD BULIMUS,,,,,v0.10
+8966802,,,person,SOWERBY,,,,,v0.10
+8966802,,,locality,"James' Island, Gallapagos (on dried tufts of grass)",,,,,v0.10
+8966802,,,person,Cuming,,,,,v0.10
+8966802,,,taxon,Achatinella,,,UNCLEAR: descriptive shell comparison vs genus reference,,v0.10
+8966802,,,institution,Mus. Cuming,,,,,v0.10
+8966802,,,taxon,BULIMUS PUSTULOSUS,,,,,v0.10
+8966802,,,vernacular,PUSTULOSE BULIMUS,,,,,v0.10
+8966802,,,person,BRODERIP,,,,,v0.10
+8966802,,,locality,"Huasco, Chili (under stones on elevated ground)",,,,,v0.10
+8966802,,,person,Cuming,,,,,v0.10
+8967281,,,taxon,TURRITELLA,,,,,v0.10
+8967281,,,person,Lamarck,,,,,v0.10
+8967281,,,taxon,Turritella,,,,,v0.10
+8967281,,,taxon,Cerithium,,,,,v0.10
+8967281,,,taxon,Turritella,,,,,v0.10
+8967281,,,taxon,Turritella,,,,,v0.10
+8967281,,,person,Lamarck,,,,,v0.10
+8967281,,,locality,Paris,,,UNCLEAR: publication place in narrative prose?,,v0.10
+8967281,,,person,Kiener,,,,,v0.10
+8967281,,,person,Cuming,,,,,v0.10
+8967281,,,person,Metcalfe,,,,,v0.10
+8967281,,,person,Hanley,,,,,v0.10
+8967281,,,person,Edward Belcher,,,,,v0.10
+8967281,,,institution,British Museum,,,,,v0.10
+8967281,,,institution,Banksian Collection,,,,,v0.10
+8967281,,,institution,Linnæan Society,,,,,v0.10
+8967281,,,person,Linnæan,,,UNCLEAR: adjective from person name,,v0.10
+8967281,,,person,Lamarck,,,,,v0.10
+8967281,,,person,Deshayes,,,,,v0.10
+8967281,,,person,Kiener,,,,,v0.10
+8967281,,,institution,Linnæan Society of London,,,,,v0.10
+8967281,,,taxon,Turbo acutangulus,,,,,v0.10
+8967281,,,person,Linnæus,,,,,v0.10
+8967281,,,taxon,T. duplicatus,,,,,v0.10
+8967281,,,person,Deshayes,,,,,v0.10
+8967281,,,taxon,"Turbo variega-
+tus",,,broken across lines,,v0.10
+8967281,,,taxon,Turbo imbricatus,,,,,v0.10
+8967281,,,taxon,Turbo ungulinus,,,,,v0.10
+8967281,,,person,Linnæus,,,,,v0.10
+8967281,,,person,Lamarck,,,,,v0.10
+8967281,,,taxon,Turritella fuscata,,,,,v0.10
+8967281,,,taxon,Turbo terebra,,,,,v0.10
+8967281,,,person,Linn.,,,,,v0.10
+8967281,,,person,Montagu,,,,,v0.10
+8967281,,,taxon,T. cornea,,,,,v0.10
+8967281,,,person,Lamarck,,,,,v0.10
+8967281,,,taxon,Turritella brevialis,,,,,v0.10
+8967281,,,person,Lamarck,,,,,v0.10
+8967281,,,vernacular,LeMesal,,,UNCLEAR: pre-Linnaean vernacular or taxon?,,v0.10
+8967281,,,person,Adanson,,,,,v0.10
+8967281,,,person,Gray,,,,,v0.10
+8967281,,,taxon,MESALIA,,,,,v0.10
+8967281,,,taxon,Turritella lactea,,,,,v0.10
+8967281,,,person,Möller,,,,,v0.10
+8967281,,,institution,Cumingian collection,,,UNCLEAR: private collection named after person,,v0.10
+8967281,,,person,Gray,,,,,v0.10
+8967281,,,taxon,EGLISIA,,,,,v0.10
+8967281,,,taxon,Turritella spirata,,,,,v0.10
+8967281,,,person,Cuming,,,,,v0.10
+8967281,,,locality,Philippine Islands,,,,,v0.10
+8967281,,,taxon,Turritellœ,,,plural form,,v0.10
+8967281,,,taxon,T. cornea,,,,,v0.10
+8967281,,,locality,Shetland Islands,,oﬀ,,,v0.10
+8967281,,,person,M’Andrew,,,,,v0.10
+8967281,,,locality,Mediterranean,,,,,v0.10
+8967281,,,locality,Eastern Seas,,,,,v0.10
+8967281,,,locality,Central America,,shores of,,,v0.10
+8967281,,,locality,New Zealand,,,,,v0.10
+8967281,,,locality,Australia,,,,,v0.10
+8967281,,,locality,Van Dieman’s Land,,,,,v0.10
+8967281,,,institution,Mus. Cuming,,,,,v0.10
+8967281,,,taxon,TURRITELLA UNGULINA,,,,,v0.10
+8967281,,,vernacular,NAIL‐BRUISED TURRITELLA,,,,,v0.10
+8967281,,,taxon,Turbo ungulinus,,,,,v0.10
+8967281,,,person,Linnæus,,,,,v0.10
+8967281,,,taxon,Turritella fuscata,,,,,v0.10
+8967281,,,person,Lamarck,,,,,v0.10
+8967281,,,locality,"Senegal, Mouth of the Gambia, West Africa",,,hierarchy assumed,,v0.10
+8967281,,,person,Linnæus,,,,,v0.10
+8967281,,,taxon,Turbo ungulinus,,,,,v0.10
+8967281,,,institution,Linnæan Society of London,,,,,v0.10
+8967281,,,person,Hanley,,,,,v0.10
+8967281,,,person,Lamarck,,,,,v0.10
+8967281,,,taxon,T. fuscata,,,,,v0.10
+8967281,,,locality,Seas of Europe,,,,,v0.10
+8967281,,,person,Pulteney,,,,,v0.10
+8967281,,,person,Deshayes,,,,,v0.10
+8967281,,,person,Linnæan,,,UNCLEAR: adjective from person name,,v0.10
+8967281,,,taxon,Turritella,,,,,v0.10
+8967281,,,locality,Mediterranean,,north of,,,v0.10
+8967290,,,taxon,T. lentiginosa,,,,,v0.10
+8967290,,,taxon,T. goniostoma,,,,,v0.10
+8967290,,,taxon,T. lentiginosa,,,,,v0.10

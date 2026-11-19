@@ -24,8 +24,9 @@ Only same-field pairs agree. What is left is listed as a disagreement:
 Agreement per field = 2 * matched / (n_a + n_b) (the F1 of one labeller against the other; it
 is symmetric). Reported per book, per field, and for ALL_PRIMARY (every field but vernacular,
 as in scoring). Rows with field `none` or adjudication `excluded` are not mentions. Rows without
-offsets get them when the text occurs exactly once on the page; otherwise they are listed as
-`unplaced` and left out until offsets are filled in (src/check_gold.py shows the positions).
+offsets are placed by `load_labels`; a row whose text is not on the page is listed as
+`unplaced`. See `load_labels` for how rows without offsets are placed (never by looking at the
+other labeller), and `value_agreement` for the offset-free comparison reported beside it.
 
 Read-only: never writes a gold file. Output in results/agreement_<name>/.
 """
@@ -33,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -45,8 +47,23 @@ FIELDS = PRIMARY + ["vernacular"]
 KEEP = ["page_id", "start", "end", "field", "text", "notes", "adjudication"]
 
 
+def occurrences(src: str, text: str) -> list[tuple[int, int]]:
+    """Where `text` occurs on the page; a space in the label matches any run of whitespace
+    (labellers type a line break as a space)."""
+    if not text.strip():
+        return []
+    pat = r"\s+".join(re.escape(w) for w in text.split())
+    return [(m.start(), m.end()) for m in re.finditer(pat, src)]
+
+
 def load_labels(paths: list[Path], pages: set[int] | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """(placed mentions, unplaced rows). Offsets are filled only where the text is unique."""
+    """(placed mentions, unplaced rows).
+
+    Offsets typed by the labeller are kept. A row without offsets is placed without looking
+    at the other labeller: if its text occurs once on the page, there; otherwise at the first
+    free occurrence after the previous row of the same file and page (labellers list
+    mentions in reading order), else at the first free occurrence anywhere. Column `placed_by`
+    says which (given / unique / reading_order / any_free)."""
     d = pd.concat([pd.read_csv(p, dtype=str, keep_default_na=False).assign(source=p.name) for p in paths],
                   ignore_index=True)
     for c in KEEP:
@@ -56,17 +73,50 @@ def load_labels(paths: list[Path], pages: set[int] | None = None) -> tuple[pd.Da
     if pages is not None:
         d = d[d.page_id.isin(pages)]
     d = d[(d.field.str.strip() != "none") & (d.adjudication.str.strip() != "excluded")].copy()
-    starts, ends = [], []
+    starts, ends, how = [], [], []
+    cursor, taken = {}, {}
     for r in d.itertuples():
+        key = (r.source, r.page_id)
+        used = taken.setdefault(key, set())
         if str(r.start).strip() and str(r.end).strip():
-            starts.append(int(float(r.start))); ends.append(int(float(r.end)))
-            continue
-        src = (DATA / "sample" / "expert" / f"{r.page_id}.txt").read_text(encoding="utf-8")
-        hits = [i for i in range(len(src)) if r.text and src.startswith(r.text, i)]
-        starts.append(hits[0] if len(hits) == 1 else -1)
-        ends.append(hits[0] + len(r.text) if len(hits) == 1 else -1)
-    d["start"], d["end"] = starts, ends
+            a, b, h = int(float(r.start)), int(float(r.end)), "given"
+        else:
+            src = (DATA / "sample" / "expert" / f"{r.page_id}.txt").read_text(encoding="utf-8")
+            free = [o for o in occurrences(src, r.text) if o not in used]
+            after = [o for o in free if o[0] >= cursor.get(key, 0)]
+            if len(occurrences(src, r.text)) == 1 and free:
+                (a, b), h = free[0], "unique"
+            elif after:
+                (a, b), h = after[0], "reading_order"
+            elif free:
+                (a, b), h = free[0], "any_free"
+            else:
+                a, b, h = -1, -1, "unplaced"
+        if a >= 0:
+            used.add((a, b))
+            cursor[key] = a
+        starts.append(a); ends.append(b); how.append(h)
+    d["start"], d["end"], d["placed_by"] = starts, ends, how
     return d[d.start >= 0].reset_index(drop=True), d[d.start < 0].reset_index(drop=True)
+
+
+def value_agreement(a: pd.DataFrame, b: pd.DataFrame, book_of: dict[int, str]) -> pd.DataFrame:
+    """Agreement that needs no offsets: per page and field, the multiset of label texts
+    (whitespace collapsed); matched = sum of the smaller count of each text."""
+    def counts(d):
+        t = d.assign(v=d.text.str.split().str.join(" "), book=d.page_id.map(book_of))
+        return t.groupby(["book", "page_id", "field", "v"]).size()
+    ca, cb = counts(a), counts(b)
+    j = pd.concat([ca.rename("a"), cb.rename("b")], axis=1).fillna(0).reset_index()
+    j["m"] = j[["a", "b"]].min(axis=1)
+    out = []
+    for book, d in list(j.groupby("book")) + [("ALL_BOOKS", j)]:
+        for field in FIELDS + ["ALL_PRIMARY"]:
+            x = d[d.field.isin(PRIMARY if field == "ALL_PRIMARY" else [field])]
+            n_a, n_b, m = int(x.a.sum()), int(x.b.sum()), int(x.m.sum())
+            out.append({"book": book, "field": field, "n_a": n_a, "n_b": n_b, "value_matched": m,
+                        "agreement_value": round(2 * m / (n_a + n_b), 3) if n_a + n_b else None})
+    return pd.DataFrame(out)
 
 
 def _ov(a, b) -> int:
@@ -146,7 +196,9 @@ def main() -> None:
     split = pd.read_csv(DATA / "sample_split.csv")
     book_of = dict(zip(split.PageID.astype(int), split.book))
     pairs = compare(a_lab, b_lab)
-    summary = summarise(pairs, book_of)
+    summary = summarise(pairs, book_of).merge(
+        value_agreement(pd.concat([a_lab, a_unplaced]), pd.concat([b_lab, b_unplaced]), book_of)
+        [["book", "field", "value_matched", "agreement_value"]], on=["book", "field"], how="left")
 
     out = ROOT / "results" / f"agreement_{a_args.name}"
     out.mkdir(parents=True, exist_ok=True)
@@ -168,7 +220,13 @@ def main() -> None:
              show.to_markdown(index=False), "",
              f"Disagreements to look at: {len(dis)} (`disagreements.csv`; kinds: "
              + ", ".join(f"{k} {v}" for k, v in dis.kind.value_counts().items()) + ").",
-             f"Rows left out for lack of unique offsets: {len(unplaced)} (`unplaced.csv`).", ""]
+             f"Rows left out of the span comparison (text not found on the page): {len(unplaced)} "
+             "(`unplaced.csv`; they still count in `agreement_value`).",
+             "How rows without offsets were placed (never by looking at the other labeller): "
+             + "; ".join(f"{lab} " + ", ".join(f"{k} {v}" for k, v in d.placed_by.value_counts().items())
+                         for lab, d in (("A", a_lab), ("B", b_lab))) + ".",
+             "`agreement_value` compares the label texts per page and field and needs no offsets.", ""]
+    pd.concat([a_lab.assign(labeller="a"), b_lab.assign(labeller="b")]).to_csv(out / "placed_rows.csv", index=False)
     (out / "REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))
 

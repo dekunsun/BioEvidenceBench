@@ -1,0 +1,19 @@
+{
+  "written_at": "2026-11-19T20:41:40+00:00",
+  "pages": [
+    8966802,
+    8967281,
+    8967290,
+    8992379,
+    8992643
+  ],
+  "a": {
+    "gold/gold_mentions_gloria_test.csv": "c24a9bac66ee7508725640d429dd96fd2647593701de267541103b2d22bd00cd"
+  },
+  "b": {
+    "gold/gold_mentions_friend.csv": "ae5aa995d2e1e9d1d81387c92fc2fce470d7526fed715059a3f96cdf52d4b476"
+  },
+  "unit": "mention (page, start, end, field) in the expert transcription",
+  "agreement": "2 * matched / (n_a + n_b); exact = same span and field, overlap = same field, spans overlap",
+  "left_out": "field none, adjudication excluded, rows without unique offsets (unplaced.csv)"
+}

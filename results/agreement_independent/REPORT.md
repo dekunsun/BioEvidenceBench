@@ -1,0 +1,30 @@
+# Agreement: independent
+
+A = Gloria, B = second labeller. Agreement = 2 × matched / (n_A + n_B).
+
+| book      | field       |   pages |   n_a |   n_b |   exact |   overlap |   agreement_exact |   agreement_overlap |   field_differs |   only_a |   only_b |   value_matched |   agreement_value |
+|:----------|:------------|--------:|------:|------:|--------:|----------:|------------------:|--------------------:|----------------:|---------:|---------:|----------------:|------------------:|
+| Butler    | taxon       |       2 |    18 |    12 |      12 |        12 |             0.8   |               0.8   |               0 |        6 |        0 |              12 |             0.8   |
+| Butler    | person      |       2 |     4 |     4 |       4 |         4 |             1     |               1     |               0 |        0 |        0 |               4 |             1     |
+| Butler    | locality    |       2 |    13 |    14 |      13 |        13 |             0.963 |               0.963 |               0 |        0 |        1 |              13 |             0.963 |
+| Butler    | date        |       2 |    18 |    18 |      16 |        18 |             0.889 |               1     |               0 |        0 |        0 |              16 |             0.889 |
+| Butler    | vernacular  |       2 |    12 |    11 |      11 |        11 |             0.957 |               0.957 |               0 |        1 |        0 |              11 |             0.957 |
+| Butler    | ALL_PRIMARY |       2 |    53 |    48 |      45 |        47 |             0.891 |               0.931 |               0 |        6 |        1 |              45 |             0.891 |
+| Reeve     | taxon       |       3 |    36 |    37 |      34 |        34 |             0.932 |               0.932 |               1 |        1 |        3 |              35 |             0.959 |
+| Reeve     | person      |       3 |    41 |    43 |      41 |        41 |             0.976 |               0.976 |               0 |        0 |        2 |              41 |             0.976 |
+| Reeve     | locality    |       3 |    17 |    17 |      10 |        16 |             0.588 |               0.941 |               0 |        1 |        1 |              10 |             0.588 |
+| Reeve     | institution |       3 |    11 |    11 |      11 |        11 |             1     |               1     |               0 |        0 |        0 |              11 |             1     |
+| Reeve     | vernacular  |       3 |     7 |     7 |       6 |         6 |             0.857 |               0.857 |               1 |        1 |        0 |               6 |             0.857 |
+| Reeve     | ALL_PRIMARY |       3 |   105 |   108 |      96 |       102 |             0.901 |               0.958 |               1 |        2 |        6 |              97 |             0.911 |
+| ALL_BOOKS | taxon       |       5 |    54 |    49 |      46 |        46 |             0.893 |               0.893 |               1 |        7 |        3 |              47 |             0.913 |
+| ALL_BOOKS | person      |       5 |    45 |    47 |      45 |        45 |             0.978 |               0.978 |               0 |        0 |        2 |              45 |             0.978 |
+| ALL_BOOKS | locality    |       5 |    30 |    31 |      23 |        29 |             0.754 |               0.951 |               0 |        1 |        2 |              23 |             0.754 |
+| ALL_BOOKS | institution |       5 |    11 |    11 |      11 |        11 |             1     |               1     |               0 |        0 |        0 |              11 |             1     |
+| ALL_BOOKS | date        |       5 |    18 |    18 |      16 |        18 |             0.889 |               1     |               0 |        0 |        0 |              16 |             0.889 |
+| ALL_BOOKS | vernacular  |       5 |    19 |    18 |      17 |        17 |             0.919 |               0.919 |               1 |        2 |        0 |              17 |             0.919 |
+| ALL_BOOKS | ALL_PRIMARY |       5 |   158 |   156 |     141 |       149 |             0.898 |               0.949 |               1 |        8 |        7 |             142 |             0.904 |
+
+Disagreements to look at: 26 (`disagreements.csv`; kinds: only_a 10, boundary 8, only_b 7, field_differs 1).
+Rows left out of the span comparison (text not found on the page): 0 (`unplaced.csv`; they still count in `agreement_value`).
+How rows without offsets were placed (never by looking at the other labeller): A given 177; B unique 104, reading_order 70.
+`agreement_value` compares the label texts per page and field and needs no offsets.

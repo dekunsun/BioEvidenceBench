@@ -24,3 +24,9 @@ any discussion, so that nothing has to be reconstructed.
 | File | Received | Notes |
 |---|---|---|
 | `2026-11-20_test_links_butler_names_gloria.tsv` | 2026-11-20 | the 29 names, pasted in chat as five tab-separated columns without a header; the header line was added on archiving, nothing else changed. No `notes` were given. Copied unchanged into `gold/gold_links_gloria_names.xlsx`/`.csv`, then `src/expand_links.py` |
+
+## Second labeller (agreement check)
+
+| File | Received | Notes |
+|---|---|---|
+| `2026-11-20_test_friend.tsv` | 2026-11-20 | 174 rows on the 5 agreement pages, pasted in chat by Gloria as the second labeller's file (tab-separated, header included); archived unchanged. Offsets were left empty, as the pack allows. Converted to CSV unchanged as `gold/gold_mentions_friend.csv` (input of `src/agreement.py`) |

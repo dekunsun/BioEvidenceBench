@@ -51,5 +51,29 @@ def test_load_labels_drops_none_and_excluded_and_fills_unique_offsets(tmp_path):
                   {"page_id": 8992582, "start": "0", "end": "3", "field": "taxon", "text": "xyz",
                    "adjudication": "excluded"}]).to_csv(p, index=False)
     placed, unplaced = ag.load_labels([p])
-    assert placed.text.tolist() == [word] and src[placed.start[0]:placed.end[0]] == word
-    assert unplaced.text.tolist() == [twice]
+    assert placed.text.tolist() == [word, twice] and src[placed.start[0]:placed.end[0]] == word
+    assert placed.placed_by.tolist() == ["unique", "reading_order"]
+    assert unplaced.empty
+
+
+def test_reading_order_placement_and_line_breaks(tmp_path, monkeypatch):
+    page = tmp_path / "sample" / "expert"
+    page.mkdir(parents=True)
+    (page / "1.txt").write_text("Lamarck said; then Kiener; then Lamarck\nagain; Munia\natricapilla", encoding="utf-8")
+    monkeypatch.setattr(ag, "DATA", tmp_path)
+    p = tmp_path / "b.csv"
+    pd.DataFrame([{"page_id": 1, "start": "", "end": "", "field": "person", "text": t}
+                  for t in ["Kiener", "Lamarck", "Munia atricapilla", "Nobody"]]).to_csv(p, index=False)
+    placed, unplaced = ag.load_labels([p])
+    got = dict(zip(placed.text, zip(placed.start, placed.placed_by)))
+    assert got["Lamarck"] == (32, "reading_order")       # the occurrence after Kiener, not the first
+    assert got["Munia atricapilla"][1] == "unique"       # a typed space matches a line break
+    assert unplaced.text.tolist() == ["Nobody"]
+
+
+def test_value_agreement_needs_no_offsets():
+    a = pd.DataFrame([m(0, 5, "person", "Lamarck"), m(9, 14, "person", "Lamarck"), m(20, 25, "taxon", "Bulimus")])
+    b = pd.DataFrame([m(-1, -1, "person", "Lamarck"), m(-1, -1, "taxon", "Bulimus  ")])
+    v = ag.value_agreement(a, b, {1: "Reeve"}).set_index(["book", "field"])
+    assert v.loc[("Reeve", "ALL_PRIMARY")].value_matched == 2
+    assert v.loc[("Reeve", "ALL_PRIMARY")].agreement_value == round(4 / 5, 3)

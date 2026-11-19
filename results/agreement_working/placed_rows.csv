@@ -1,0 +1,360 @@
+page_id,start,end,field,text,scan_text,qualifier,notes,adjudication,guide_version,later_rule,source,placed_by,labeller
+8992379,33,45,locality,Berwickshire,,,County mentioned as a specimen locality,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,55,64,locality,Yorkshire,,,First occurrence,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,93,104,locality,Scarborough,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,106,124,date,"October
+23rd, 1889",,,Observation date; newline retained,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,176,180,date,1887,,,Date of the Irish example referred to in the text,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,214,219,locality,Wells,,,"Historical place name, as printed",,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,223,227,date,1900,,,Specimen shot at Wells,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,256,260,date,1904,,,Specimen recorded in 1904,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,274,278,date,1905,,,Third specimen recorded in 1905,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,290,294,date,1906,,,Three specimens from Norfolk,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,305,312,locality,Norfolk,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,333,342,locality,Yorkshire,,,Second occurrence,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,346,350,date,1907,,,Three seen in Yorkshire,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,355,363,locality,Cheshire,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,380,389,date,June 1903,,,One individual seen in Cheshire,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,398,407,locality,Shetlands,,,Article omitted from span,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,444,448,date,1906,,,Several seen and three shot in the Shetlands,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,493,503,vernacular,Flycatcher,,,"In ""this little Flycatcher""; distinct from running head",,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,859,864,vernacular,Robin,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,870,877,person,Seebohm,,,Cited observer or author,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,943,949,vernacular,Robins,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,958,969,vernacular,Flycatchers,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,1082,1105,vernacular,Red-breasted Flycatcher,,,"Name within quotation, not the running head",,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,1839,1848,taxon,M. minuta,,,Historical plumage-associated name; do not modernize,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,1906,1916,taxon,M. leucura,,,Historical plumage-associated name; do not modernize,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,1979,1987,taxon,M. parva,,,Historical plumage-associated name; do not modernize,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2054,2067,taxon,M. hyperythra,,,Historical plumage-associated name; do not modernize,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2314,2331,taxon,"Munia
+atricapilla",,,Binomial wrapped over one line break; keep newline,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2369,2373,date,1887,,,Specific specimen received by narrator,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2494,2508,date,spring of 1896,,,Specific observed plumage change in a particular specimen; season and year included,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2541,2554,taxon,Quelea quelea,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2587,2595,taxon,Q. russi,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2671,2679,vernacular,Cardinal,,,"Common-name mention, separate from Latin binomial",,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2681,2700,taxon,Paroaria cervicalis,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992379,2735,2746,taxon,P. capitata,,,,,v0.7,,gold_mentions_gloria_test.csv,given,a
+8992643,22,29,taxon,TURDIDÆ,,,Family heading for a species account; not a running head.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,42,50,taxon,SYLVIINÆ,,,Subfamily heading for a species account; not a running head.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,53,75,vernacular,PALLAS' WILLOW-WARBLER,,,Species-account heading; PALLAS is not separately annotated as person.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,78,101,taxon,Phylloscopus proregulus,,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,152,159,locality,Norfolk,,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,164,177,date,"October, 1896",,,Dated specimen occurrence.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,192,201,vernacular,Chiﬀchaﬀs,,,Transcription uses Unicode ligature ﬀ; copy exactly.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,214,223,locality,Shetlands,,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,232,257,date,"April 15th and 24th,
+1904",,,One observed visit interval; includes literal line break.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,262,282,date,May of the same year,,,NO-YEAR; year 1904 established by preceding clause; relative-year date span.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,303,318,person,John S. Tulloch,,,Observer; title Mr. excluded.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,322,329,locality,Lerwick,,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,338,346,date,May 27th,,,NO-YEAR; year 1904 inferred from earlier clause; dated killing.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,374,377,vernacular,cat,,,"Standalone common name of an organism, in context as predator (v0.7).",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,387,394,taxon,TURDIDÆ,,,Family heading for a species account; not a running head.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,407,415,taxon,SYLVIINÆ,,,Subfamily heading for a species account; not a running head.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,422,441,vernacular,SIBERIAN CHIFFCHAFF,,,Species-account heading; initial THE excluded.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,444,464,taxon,Phylloscopus tristis,,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,466,471,person,BLYTH,,,"Naming authority; following full stop is sentence punctuation, excluded.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,521,528,locality,Orkneys,,oﬀ,Off the Orkneys; source spells off with Unicode ﬀ ligature.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,532,536,date,1902,,,Year of a particular obtained specimen.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,546,553,taxon,TURDIDÆ,,,Family heading for a species account; not a running head.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,566,574,taxon,SYLVIINÆ,,,Subfamily heading for a species account; not a running head.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,581,604,vernacular,GREENISH WILLOW-WARBLER,,,Species-account heading; initial THE excluded.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,607,629,taxon,Phylloscopus viridanus,,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,631,636,person,BLYTH,,,Naming authority; following full stop omitted.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,665,677,locality,Lincolnshire,,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,682,701,date,"September 5th, 1896",,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,719,759,locality,Sule Skerry Lighthouse (Sutherlandshire),,,"ADJUDICATED: One composite locality (named lighthouse with parenthetical regional qualifier), per user decision. Preserve the full printed span; not an institution.",adjudicated,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992643,764,783,date,"September 5th, 1902",,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,24,49,vernacular,SLIGHTLY WRINKLED BULIMUS,,,Full descriptive vernacular account heading; the leading THE is outside the mention.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,347,354,person,SOWERBY,,,"Cited author, not part of the publication title.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,388,406,locality,Gallapagos Islands,,,Named geographic locality in Hab. text.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,408,414,person,Cuming,,,Collector credited on the Hab. line; separate from Mus. Cuming collection labels.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,503,514,institution,Mus. Cuming,,,"Named private collection, retained Mus. abbreviation; exclude trailing full stop.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,518,534,taxon,BULIMUS TURRITUS,,,Scientific name in a species account or a comparative species mention.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,741,757,vernacular,TURRETED BULIMUS,,,Vernacular species-account heading; the leading THE is excluded.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,969,977,person,BRODERIP,,,"Cited author, not part of the publication title.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1016,1030,locality,"Truxillo, Peru",,,One narrow-to-wide hierarchical locality; on the mountains is a separate unlabelled habitat qualifier.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1051,1057,person,Cuming,,,Collector credited on the Hab. line; separate from Mus. Cuming collection labels.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1180,1191,institution,Mus. Cuming,,,"Named private collection, retained Mus. abbreviation; exclude trailing full stop.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1195,1215,taxon,BULIMUS SCULPTURATUS,,,Scientific name in a species account or a comparative species mention.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1443,1461,vernacular,SCULPTURED BULIMUS,,,Vernacular species-account heading; the leading THE is excluded.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1710,1718,person,PFEIFFER,,,"Cited author; the date is a publication year, not occurrence date.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1756,1774,locality,Gallapagos Islands,,,Named geographic locality in Hab. text.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1788,1794,person,Darwin,,,Collector credited in the habitat line.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1870,1882,taxon,B. rugiferus,,,Scientific name in a species account or a comparative species mention.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,1887,1895,taxon,Darwinii,,,"Epithet only; genus B. (Bulimus) shared with the preceding B. rugiferus (guide v0.10, 2.1). Was UNCLEAR.",adjudicated,v0.9,v0.10,gold_mentions_gloria_test.csv,given,a
+8966802,2043,2054,institution,Mus. Cuming,,,"Named private collection, retained Mus. abbreviation; exclude trailing full stop.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,2058,2072,taxon,BULIMUS CALVUS,,,Scientific name in a species account or a comparative species mention.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,2276,2288,vernacular,BALD BULIMUS,,,Vernacular species-account heading; the leading THE is excluded.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,2486,2493,person,SOWERBY,,,"Cited author, not part of the publication title.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,2531,2556,locality,"James' Island, Gallapagos",,,"Single hierarchical locality, with Island retained as part of the proper place name.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,2576,2581,vernacular,grass,,,Standalone biological-group name in dried tufts of grass; v0.7 includes materials.,,v0.9,v0.7,gold_mentions_gloria_test.csv,given,a
+8966802,2584,2590,person,Cuming,,,Collector credited on the Hab. line; separate from Mus. Cuming collection labels.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,2682,2693,institution,Mus. Cuming,,,"Named private collection, retained Mus. abbreviation; exclude trailing full stop.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,2697,2715,taxon,BULIMUS PUSTULOSUS,,,Scientific name in a species account or a comparative species mention.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,2956,2973,vernacular,PUSTULOSE BULIMUS,,,Vernacular species-account heading; the leading THE is excluded.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,3214,3222,person,BRODERIP,,,"Cited author, not part of the publication title.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,3261,3274,locality,"Huasco, Chili",,,One narrow-to-wide hierarchical locality.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8966802,3310,3316,person,Cuming,,,Collector credited on the Hab. line; separate from Mus. Cuming collection labels.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,29,39,taxon,TURRITELLA,,,Uninomial genus mention used as a taxon name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,41,48,person,Lamarck,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,683,693,taxon,Turritella,,,Uninomial genus mention used as a taxon name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,1159,1168,taxon,Cerithium,,,Uninomial genus mention used as a taxon name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,1277,1287,taxon,Turritella,,,Uninomial genus mention used as a taxon name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,1741,1751,taxon,Turritella,,,Uninomial genus mention used as a taxon name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,1836,1843,person,Lamarck,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,1893,1899,person,Kiener,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,1974,1980,person,Cuming,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,1986,1994,person,Metcalfe,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2000,2006,person,Hanley,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2013,2027,person,Edward Belcher,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2033,2047,institution,British Museum,,,,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2057,2076,institution,Banksian Collection,,,Named historical specimen collection.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2098,2113,institution,"Linnæan
+Society",,,Named scientific society across an ordinary line wrap (not including generic museum of).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2276,2283,person,Lamarck,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2285,2293,person,Deshayes,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2298,2304,person,Kiener,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2402,2427,institution,Linnæan Society of London,,,Named scientific society; geographic name within organisation omitted from locality set.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2433,2450,taxon,Turbo acutangulus,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2454,2461,person,Linnæus,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2499,2512,taxon,T. duplicatus,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2553,2561,person,Deshayes,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2586,2604,taxon,"Turbo variega-
+tus",,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2726,2742,taxon,Turbo imbricatus,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2812,2827,taxon,Turbo ungulinus,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2831,2838,person,Linnæus,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2867,2874,person,Lamarck,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2877,2895,taxon,"Turritella
+fuscata",,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2917,2930,taxon,Turbo terebra,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2932,2937,person,Linn.,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,2981,2988,person,Montagu,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3014,3023,taxon,T. cornea,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3027,3034,person,Lamarck,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3041,3061,taxon,Turritella brevialis,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3065,3072,person,Lamarck,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3074,3081,vernacular,LeMesal,,,Adanson's French common name for the species (not a Latin name): vernacular under the existing rule 2.2. Was UNCLEAR as taxon.,adjudicated,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3085,3092,person,Adanson,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3146,3150,person,Gray,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3167,3174,taxon,MESALIA,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3206,3223,taxon,Turritella lactea,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3227,3233,person,Möller,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3278,3298,institution,Cumingian collection,,,"Cuming's private collection, the same institution as Mus. Cuming in adjective form (existing rule 2.5). Was UNCLEAR.",adjudicated,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3342,3346,person,Gray,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3384,3391,taxon,EGLISIA,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3408,3426,taxon,Turritella spirata,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3507,3513,person,Cuming,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3528,3546,locality,Philippine Islands,,,"Named region, island group or geographic part-of-place expression.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3553,3563,taxon,Turritellœ,,,Plural Latin genus form in prose.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3663,3672,taxon,T. cornea,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3706,3722,locality,Shetland Islands,,,"Named region, island group or geographic part-of-place expression.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3730,3738,person,M’Andrew,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3910,3923,locality,Mediterranean,,,Named geographic region; second occurrence has north-of relative context.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3957,3969,locality,Eastern Seas,,,"Named region, island group or geographic part-of-place expression.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,3978,4003,locality,shores of Central America,,,"Named region, island group or geographic part-of-place expression.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4036,4047,locality,New Zealand,,,"Named region, island group or geographic part-of-place expression.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4049,4058,locality,Australia,,,"Named region, island group or geographic part-of-place expression.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4064,4081,locality,Van Dieman’s Land,,,"Named region, island group or geographic part-of-place expression.",,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4096,4107,institution,Mus. Cuming,,,Named private specimen collection in species account.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4111,4130,taxon,TURRITELLA UNGULINA,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4353,4376,vernacular,NAIL‐BRUISED TURRITELLA,,,Species-account common name; leading THE excluded.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4583,4598,taxon,Turbo ungulinus,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4600,4607,person,Linnæus,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4643,4661,taxon,Turritella fuscata,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4663,4670,person,Lamarck,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4678,4685,locality,Senegal,,,"Separate place from the following Mouth of the Gambia (the comma cannot be read as ""in""; guide 2.3). Was UNCLEAR.",adjudicated,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4687,4719,locality,"Mouth of the Gambia, West Africa",,,"One span: Mouth of the Gambia in West Africa (narrow to wide, guide 2.3). Was UNCLEAR.",adjudicated,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4757,4764,person,Linnæus,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4785,4800,taxon,Turbo ungulinus,,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4839,4864,institution,Linnæan Society of London,,,Named scientific society; geographic name within organisation omitted from locality set.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4881,4887,person,Hanley,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4918,4925,person,Lamarck,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4928,4938,taxon,"T.
+fuscata",,,Scientific name or abbreviated scientific name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,4954,4968,locality,Seas of Europe,,,UNCERTAIN-IN-SOURCE: historical source calls this old locality erroneous; annotate the literal named region.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,5020,5028,person,Pulteney,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,5046,5054,person,Deshayes,,,Named person or scientific/bibliographic authority (honorific and possessive ending excluded).,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,5098,5108,taxon,Turritella,,,Uninomial genus mention used as a taxon name.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967281,5131,5144,locality,Mediterranean,,,Named geographic region; second occurrence has north-of relative context.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967290,377,391,taxon,T. lentiginosa,,,Scientific species name used in comparison and diagnostic discussion.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967290,534,547,taxon,T. goniostoma,,,Scientific species name in the comparative description.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8967290,747,761,taxon,T. lentiginosa,,,Scientific species name used in comparison and diagnostic discussion.,,v0.9,,gold_mentions_gloria_test.csv,given,a
+8992379,33,45,locality,Berwickshire,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,55,64,locality,Yorkshire,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,93,104,locality,Scarborough,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,106,124,date,"October 23rd, 1889",,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,176,180,date,1887,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,214,219,locality,Wells,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,223,227,date,1900,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,256,260,date,1904,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,274,278,date,1905,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,290,294,date,1906,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,305,312,locality,Norfolk,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,333,342,locality,Yorkshire,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,346,350,date,1907,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,355,363,locality,Cheshire,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,380,389,date,June 1903,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,398,407,locality,Shetlands,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,444,448,date,1906,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,493,503,vernacular,Flycatcher,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,859,864,vernacular,Robin,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,870,877,person,Seebohm,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,943,949,vernacular,Robins,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,958,969,vernacular,Flycatchers,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,1082,1105,vernacular,Red-breasted Flycatcher,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,1839,1848,taxon,M. minuta,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,1906,1916,taxon,M. leucura,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,1979,1987,taxon,M. parva,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,2054,2067,taxon,M. hyperythra,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,2314,2331,taxon,Munia atricapilla,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,2369,2373,date,1887,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992379,2504,2508,date,1896,,,spring of 1896,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,2541,2554,taxon,Quelea quelea,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,2587,2595,taxon,Q. russi,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,2671,2679,vernacular,Cardinal,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,2681,2700,taxon,Paroaria cervicalis,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992379,2735,2746,taxon,P. capitata,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,53,75,vernacular,PALLAS' WILLOW-WARBLER,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,78,101,taxon,Phylloscopus proregulus,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,152,159,locality,Norfolk,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,164,177,date,"October, 1896",,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,192,201,vernacular,Chiﬀchaﬀs,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,214,223,locality,Shetlands,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,224,257,date,"between April 15th and 24th, 1904",,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,262,282,date,May of the same year,,,May 1904 implied,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,303,318,person,John S. Tulloch,,,title Mr. excluded,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,322,329,locality,Lerwick,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,338,346,date,May 27th,,,NO-YEAR,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,374,377,vernacular,cat,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,422,441,vernacular,SIBERIAN CHIFFCHAFF,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,444,464,taxon,Phylloscopus tristis,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,466,471,person,BLYTH,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992643,521,528,locality,Orkneys,,off,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,532,536,date,1902,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992643,581,604,vernacular,GREENISH WILLOW-WARBLER,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,607,629,taxon,Phylloscopus viridanus,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,631,636,person,BLYTH,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8992643,665,677,locality,Lincolnshire,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,682,701,date,"September 5th, 1896",,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,719,759,locality,Sule Skerry Lighthouse (Sutherlandshire),,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8992643,764,783,date,"September 5th, 1902",,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,24,49,vernacular,SLIGHTLY WRINKLED BULIMUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,91,95,taxon,Pupa,,,UNCLEAR: descriptive shell comparison vs genus reference,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,347,354,person,SOWERBY,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,388,406,locality,Gallapagos Islands,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,408,414,person,Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,503,514,institution,Mus. Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,518,534,taxon,BULIMUS TURRITUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,741,757,vernacular,TURRETED BULIMUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,969,977,person,BRODERIP,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,1016,1049,locality,"Truxillo, Peru (on the mountains)",,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,1051,1057,person,Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,1180,1191,institution,Mus. Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,1195,1215,taxon,BULIMUS SCULPTURATUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,1443,1461,vernacular,SCULPTURED BULIMUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,1710,1718,person,PFEIFFER,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,1756,1786,locality,Gallapagos Islands (on bushes),,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,1788,1794,person,Darwin,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,1870,1882,taxon,B. rugiferus,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,1887,1895,taxon,Darwinii,,,epithet only; genus implied,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,2043,2054,institution,Mus. Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,2058,2072,taxon,BULIMUS CALVUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,2276,2288,vernacular,BALD BULIMUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,2486,2493,person,SOWERBY,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,2531,2582,locality,"James' Island, Gallapagos (on dried tufts of grass)",,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,2584,2590,person,Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,2638,2649,taxon,Achatinella,,,UNCLEAR: descriptive shell comparison vs genus reference,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,2682,2693,institution,Mus. Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,2697,2715,taxon,BULIMUS PUSTULOSUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,2956,2973,vernacular,PUSTULOSE BULIMUS,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,3214,3222,person,BRODERIP,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8966802,3261,3308,locality,"Huasco, Chili (under stones on elevated ground)",,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8966802,3310,3316,person,Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,0,10,taxon,TURRITELLA,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,41,48,person,Lamarck,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,683,693,taxon,Turritella,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,1159,1168,taxon,Cerithium,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,1277,1287,taxon,Turritella,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,1741,1751,taxon,Turritella,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,1836,1843,person,Lamarck,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,1881,1886,locality,Paris,,,UNCLEAR: publication place in narrative prose?,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,1893,1899,person,Kiener,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,1974,1980,person,Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,1986,1994,person,Metcalfe,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2000,2006,person,Hanley,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2013,2027,person,Edward Belcher,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2033,2047,institution,British Museum,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2057,2076,institution,Banksian Collection,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2098,2113,institution,Linnæan Society,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2098,2105,person,Linnæan,,,UNCLEAR: adjective from person name,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2276,2283,person,Lamarck,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2285,2293,person,Deshayes,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2298,2304,person,Kiener,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2402,2427,institution,Linnæan Society of London,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2433,2450,taxon,Turbo acutangulus,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2454,2461,person,Linnæus,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2499,2512,taxon,T. duplicatus,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2553,2561,person,Deshayes,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2586,2604,taxon,"Turbo variega-
+tus",,,broken across lines,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2726,2742,taxon,Turbo imbricatus,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2812,2827,taxon,Turbo ungulinus,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2831,2838,person,Linnæus,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2867,2874,person,Lamarck,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2877,2895,taxon,Turritella fuscata,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,2917,2930,taxon,Turbo terebra,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2932,2937,person,Linn.,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,2981,2988,person,Montagu,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3014,3023,taxon,T. cornea,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,3027,3034,person,Lamarck,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,3041,3061,taxon,Turritella brevialis,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3065,3072,person,Lamarck,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,3074,3081,vernacular,LeMesal,,,UNCLEAR: pre-Linnaean vernacular or taxon?,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3085,3092,person,Adanson,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3146,3150,person,Gray,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,3167,3174,taxon,MESALIA,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3206,3223,taxon,Turritella lactea,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3227,3233,person,Möller,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3278,3298,institution,Cumingian collection,,,UNCLEAR: private collection named after person,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3342,3346,person,Gray,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,3384,3391,taxon,EGLISIA,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3408,3426,taxon,Turritella spirata,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3507,3513,person,Cuming,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,3528,3546,locality,Philippine Islands,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3553,3563,taxon,Turritellœ,,,plural form,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3663,3672,taxon,T. cornea,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,3706,3722,locality,Shetland Islands,,oﬀ,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3730,3738,person,M’Andrew,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3910,3923,locality,Mediterranean,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,3957,3969,locality,Eastern Seas,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,3988,4003,locality,Central America,,shores of,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4036,4047,locality,New Zealand,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4049,4058,locality,Australia,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4064,4081,locality,Van Dieman’s Land,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4096,4107,institution,Mus. Cuming,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4111,4130,taxon,TURRITELLA UNGULINA,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4353,4376,vernacular,NAIL‐BRUISED TURRITELLA,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4583,4598,taxon,Turbo ungulinus,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4600,4607,person,Linnæus,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4643,4661,taxon,Turritella fuscata,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4663,4670,person,Lamarck,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4678,4719,locality,"Senegal, Mouth of the Gambia, West Africa",,,hierarchy assumed,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4757,4764,person,Linnæus,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4785,4800,taxon,Turbo ungulinus,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4839,4864,institution,Linnæan Society of London,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4881,4887,person,Hanley,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4918,4925,person,Lamarck,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,4928,4938,taxon,T. fuscata,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,4954,4968,locality,Seas of Europe,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,5020,5028,person,Pulteney,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967281,5046,5054,person,Deshayes,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,5070,5077,person,Linnæan,,,UNCLEAR: adjective from person name,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,5098,5108,taxon,Turritella,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967281,5131,5144,locality,Mediterranean,,north of,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967290,377,391,taxon,T. lentiginosa,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b
+8967290,534,547,taxon,T. goniostoma,,,,,v0.10,,gold_mentions_friend.csv,unique,b
+8967290,747,761,taxon,T. lentiginosa,,,,,v0.10,,gold_mentions_friend.csv,reading_order,b

@@ -1,0 +1,23 @@
+{
+  "written_at": "2026-11-19T20:41:39+00:00",
+  "pages": [
+    8966802,
+    8967281,
+    8967290,
+    8992379,
+    8992643
+  ],
+  "a": {
+    "gold/received/2026-11-19_test_8992379_gloria.csv": "cd2f732469a6a7461843e97998872f450220ffde063b9d626e4bfe539c8616f1",
+    "gold/received/2026-11-19_test_8992643_gloria_independent.csv": "9bbd9603b57ebb05d081557fcac5a43559bd3472250ce743c79e8513c3aa4121",
+    "gold/received/2026-11-19_test_8966802_gloria.csv": "8bf1697ddf4c2d0c6242477634daf69d6fd52836fc7656973b30322f0d6a9e3a",
+    "gold/received/2026-11-20_test_8967281_gloria.csv": "538b72f3cc6994485d368c5fd3e6901cbec3875556b81258b99093942aa82f92",
+    "gold/received/2026-11-20_test_8967290_gloria.csv": "6fa7fb116b1fcc5cb323cfa961fb32c1856b184c94a0fba87bdc4618e3ef31ec"
+  },
+  "b": {
+    "gold/gold_mentions_friend.csv": "ae5aa995d2e1e9d1d81387c92fc2fce470d7526fed715059a3f96cdf52d4b476"
+  },
+  "unit": "mention (page, start, end, field) in the expert transcription",
+  "agreement": "2 * matched / (n_a + n_b); exact = same span and field, overlap = same field, spans overlap",
+  "left_out": "field none, adjudication excluded, rows without unique offsets (unplaced.csv)"
+}
