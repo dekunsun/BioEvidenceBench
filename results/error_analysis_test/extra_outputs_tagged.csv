@@ -1,5 +1,5 @@
 分组,page_id,book,字段,模型输出,出现在哪些版本,上下文（专家转录）,start,end,和你裁定的行的关系,OCR相关,抽取或推理,模糊或混合,备注
-E 四个版本都输出了,8992643,Butler,locality,Sule Skerry,专家转录、现代OCR、现代OCR去格式、旧OCR,"ire, on September 5th, 1896; a second struck 【Sule Skerry】 Lighthouse (Sutherlandshire), on September 5",719,730,locality 'Sule Skerry Lighthouse (Sutherlandshire)' 你裁定为 adjudicated,True,True,False,
+E 四个版本都输出了,8992643,Butler,locality,Sule Skerry,专家转录、现代OCR、现代OCR去格式、旧OCR,"ire, on September 5th, 1896; a second struck 【Sule Skerry】 Lighthouse (Sutherlandshire), on September 5",719,730,locality 'Sule Skerry Lighthouse (Sutherlandshire)' 你裁定为 adjudicated,False,True,True,
 E 四个版本都输出了,8966802,Reeve,taxon,Pupa,专家转录、现代OCR、现代OCR去格式、旧OCR,"MUS. Shell cylindrically elongated, somewhat 【Pupa】-shaped, umbilicated, apex subpapillary, whor",91,95,,False,True,True,
 E 四个版本都输出了,8966802,Reeve,taxon,Achatinella / Jc/ia/iiiella,专家转录、现代OCR、现代OCR去格式、旧OCR,A smooth pale brown shell having somewhat an 【Achatinella】-like appearance.  Species 127. (Mus. Cuming.,2638,2649,,True,True,True,
 F 只在部分版本输出,8992647,Butler,date,May,现代OCR,"nce, and a second at Sheringham, Norfolk (in 【May】 ?) 1842.  I cannot say I have much faith in ",508,511,,True,False,True,
