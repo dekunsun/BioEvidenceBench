@@ -292,8 +292,22 @@ controlled-perturbation experiment, the review-sheet CSV export, and the Level 3
 demo. E1 therefore rests on natural OCR only (legacy, modern, expert, plus the Markdown
 ablation) with entity-span CER and entity preservation; no claim about synthetic noise is made.
 
-**Still to run before the freeze commit**: the second LLM (Gemini 4 Carbon, code on branch
-`gemini-provider`), needed for RQ4. Everything else in this document is built.
+**Failed requests (proposed 2026-11-19 after the Gemini dev run; Gloria to confirm).** A request
+can fail without the model being wrong about the page: an API error, an answer that does not
+parse, a truncated answer. On dev, Google's batch mode ignored the JSON schema and 3 of 48
+answers were lost. Rules for the test run:
+- Gemini runs in **sync mode with the schema enforced** (40 of 40 answers valid in the pilot);
+  Opus runs in batch mode, where the schema is enforced.
+- A failed request is sent **once more** with identical settings; the second answer is final.
+- A request that fails twice counts as "no predictions" in the main scores (the conservative
+  reading), the failure rate is reported per model next to every score, and F1 on answered
+  requests only is given beside it.
+- RQ4: a page and text version for which the second model has no answer is left out of the
+  flagged-vs-unflagged comparison and counted, so a missing answer is not read as disagreement.
+
+**Still to build before the freeze commit**: the one-retry step in `run_extraction.py` and the
+RQ4 guard above. **Still to run**: the schema-enforced Gemini 4 Carbon dev run (approved, in
+progress). Everything else in this document is built.
 
 ## Deviations log
 
