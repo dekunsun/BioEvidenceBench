@@ -371,7 +371,9 @@ evaluation; if it is, the report says so. (The six dev pages were made this way:
 Gloria first, then compared with an AI assistant.)
 
 **Rules found while labelling test pages.** A new rule goes into the guide (new version) and the
-rows it decides get that `guide_version`. It is **not** added to the prompt: the prompt is tuned
+rows it decides are marked with that version in the column `later_rule` (filled in at
+adjudication; the labeller leaves it empty). `guide_version` only says which guide was in force
+when the row was labelled. It is **not** added to the prompt: the prompt is tuned
 on dev pages only, and a rule that exists because of a test page would leak the test set into it.
 Scores are reported twice, with all gold rows and with the rows decided under a later guide
 version than the prompt's treated as optional. That covers both directions: a row labelled under
@@ -655,7 +657,7 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 
 **测试页的工作顺序。** Gloria 先独自标完一页并保存文件（提交一次），之后才看别人对这一页的标签，不管是人还是 AI 助手。之后的对比只是第二意见：它可以提出问题，由它引起的每一处改动都在 `gold/gold_changes_<标注人>.csv` 里记一行。这个助手不应该是被评测的模型；如果是，报告里要写明。（6 页开发集就是这样做的：Gloria 先标，再和 AI 助手对比。）
 
-**标测试页时发现的规则。** 新规则写进规范（出新版本），由它决定的行填这个 `guide_version`。它**不**加进提示词：提示词只在开发集上调，因为某一页测试页才有的规则会把测试集的信息泄漏进提示词。分数报告两遍：一遍用全部 gold 行，一遍把规范版本晚于提示词的那些行当作可选。两个方向都包括：按后来的规则标上的行，以及被后来的规则排除的 `excluded` 行。
+**标测试页时发现的规则。** 新规则写进规范（出新版本），由它决定的行在 `later_rule` 列里记下这个版本号（裁定时填写，标注人留空）。`guide_version` 只表示标这一行时用的是哪一版规范。它**不**加进提示词：提示词只在开发集上调，因为某一页测试页才有的规则会把测试集的信息泄漏进提示词。分数报告两遍：一遍用全部 gold 行，一遍把规范版本晚于提示词的那些行当作可选。两个方向都包括：按后来的规则标上的行，以及被后来的规则排除的 `excluded` 行。
 
 **一致性检查。** 第二位标注人按这份规范独立标注 5 页测试页，不看 Gloria 的标签。我们按字段报告片段级的一致性（完全一致和重叠两种口径），并逐条讨论每一处分歧。分歧通过裁定解决：改正 gold 的那一行，或者标成 `ambiguous`，或者给规范补一条更清楚的规则。
 

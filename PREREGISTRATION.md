@@ -277,10 +277,10 @@ for both books: the prompt and the guide were written from these six pages, so t
 nothing left to tune on and says nothing about performance elsewhere. Only the test pages do.
 
 **Guide rules found on test pages (from 2026-11-19).** Labelling a test page can show a gap in the
-guide. The rule is added to the guide (v0.7 onwards) and the gold rows it decides carry that
-`guide_version`, but the prompt stays `p4-guide-v0.6`: it was tuned on dev pages only, and no rule
+guide. The rule is added to the guide (v0.7 onwards) and the gold rows it decides are marked with that
+version in the column `later_rule`, but the prompt stays `p4-guide-v0.6`: it was tuned on dev pages only, and no rule
 that exists because of a test page is passed to a model. Every score is therefore reported twice:
-with all gold rows, and with the rows whose `guide_version` is later than v0.6 treated as optional
+with all gold rows, and with the rows whose `later_rule` is later than v0.6 treated as optional
 (no credit, no penalty; this includes `excluded` rows, which record a decision that something is *not* a mention), so that "the model was never told this rule" can be told apart from "the
 model got it wrong". So far the later rules have decided `vernacular` rows only (v0.7: broad group names, material words, compounds; v0.8: nothing inside the title of a cited work is a mention), which is outside the
 primary F1. Test labels are archived as received in `gold/received/` before any comparison or

@@ -126,9 +126,9 @@ def test_norm_value_folds_typographic_hyphen_and_apostrophe_but_not_letters():
 def test_gold_rows_from_a_later_guide_version_can_be_made_optional(tmp_path):
     from score import load_gold
     p = tmp_path / "g.csv"
-    p.write_text("page_id,start,end,field,text,qualifier,notes,adjudication,guide_version\n"
-                 "1,0,4,vernacular,moss,,,adjudicated,v0.7\n"
-                 "1,9,13,locality,Kent,,,,v0.6\n")
+    p.write_text("page_id,start,end,field,text,qualifier,notes,adjudication,guide_version,later_rule\n"
+                 "1,0,4,vernacular,moss,,,adjudicated,v0.8,v0.7\n"
+                 "1,9,13,locality,Kent,,,,v0.8,\n")
     assert list(load_gold(p).adjudication) == ["adjudicated", ""]
     assert list(load_gold(p, optional_after="v0.6").adjudication) == ["ambiguous", ""]
     assert list(load_gold(p, optional_after="v0.7").adjudication) == ["adjudicated", ""]
@@ -137,9 +137,9 @@ def test_gold_rows_from_a_later_guide_version_can_be_made_optional(tmp_path):
 def test_excluded_rows_are_not_gold_but_optional_in_the_sensitivity_report(tmp_path):
     from score import load_gold
     p = tmp_path / "g.csv"
-    p.write_text("page_id,start,end,field,text,qualifier,notes,adjudication,guide_version\n"
-                 "1,0,7,vernacular,Finches,,in a cited title,excluded,v0.8\n"
-                 "1,9,13,locality,Kent,,,,v0.6\n")
+    p.write_text("page_id,start,end,field,text,qualifier,notes,adjudication,guide_version,later_rule\n"
+                 "1,0,7,vernacular,Finches,,in a cited title,excluded,v0.8,v0.8\n"
+                 "1,9,13,locality,Kent,,,,v0.8,\n")
     assert list(load_gold(p).text) == ["Kent"]
     g = load_gold(p, optional_after="v0.6")
     assert list(g.text) == ["Finches", "Kent"] and list(g.adjudication) == ["ambiguous", ""]

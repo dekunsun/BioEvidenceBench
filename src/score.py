@@ -215,9 +215,12 @@ def _version(v: str) -> tuple:
 
 def load_gold(path, optional_after: str | None = None) -> pd.DataFrame:
     """optional_after: a guide version such as 'v0.6' (the one the prompt was written
-    from). Gold rows decided under a later guide version are then treated like
+    from). Gold rows whose `later_rule` column names a later guide version, i.e. rows
+    decided by a rule that was added after the prompt was fixed, are then treated like
     `ambiguous` rows: no credit, no penalty. Used for the second, sensitivity report:
-    a model was never told a rule that was found while labelling test pages."""
+    a model was never told a rule that was found while labelling test pages.
+    (`guide_version` is not used for this: it only says which guide was in force when
+    the row was labelled, and is the latest version on every test-page row.)"""
     g = pd.read_csv(path, dtype=str, keep_default_na=False)
     g["page_id"] = g.page_id.astype(int)
     g = g[g.field != "none"].copy()
@@ -232,8 +235,8 @@ def load_gold(path, optional_after: str | None = None) -> pd.DataFrame:
     # `excluded` rows record a decision NOT to label something (kept so the decision is
     # visible). Normally they are not gold. In the sensitivity report, an exclusion decided
     # under a later guide version is optional too: a model that outputs it was never told.
-    later = (g.guide_version.map(_version) > _version(optional_after)
-             if optional_after and "guide_version" in g else pd.Series(False, index=g.index))
+    later = (g.later_rule.map(_version) > _version(optional_after)
+             if optional_after and "later_rule" in g else pd.Series(False, index=g.index))
     g.loc[later, "adjudication"] = "ambiguous"
     return g[g.adjudication != "excluded"].copy()
 
