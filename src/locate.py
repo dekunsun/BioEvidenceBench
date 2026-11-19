@@ -30,6 +30,14 @@ Line-number labels such as "L074|" that a model copies from our numbered
 input are removed from its text before locating (they cannot be source text);
 `had_line_label` records that it happened.
 
+Which occurrence, in G0? A G0 value comes without a position, so a string printed
+several times has to be assigned to one of its occurrences. `locate_all` places longer
+values first and gives each value the first occurrence that is a whole word and is not
+already taken by another mention. So "Jackdaw" is not placed inside "Jackdaws", "Crow"
+not inside an already placed "Hooded Crow", and a person "Lilford" and a place
+"Lilford" get different occurrences. What remains ambiguous by nature (a heading and a
+running head with the same text) stays ambiguous: that is a cost of having no evidence.
+
 `start`/`end` are character offsets into the page text the model saw (the
 file under data/text/<version>/), Python slice convention.
 """
@@ -161,15 +169,32 @@ def locate_g1(text: str, line: int, quote: str, nth: int = 0) -> dict:
     return {"status": "invalid_evidence", "start": None, "end": None, "score": round(score, 1)}
 
 
-def locate_g0(text: str, value: str, nth: int = 0) -> dict:
+def _whole_word(text: str, i: int, n: int) -> bool:
+    before = text[i - 1] if i > 0 else " "
+    after = text[i + n] if i + n < len(text) else " "
+    return not (before.isalnum() or after.isalnum())
+
+
+def locate_g0(text: str, value: str, nth: int = 0, taken: list | None = None) -> dict:
     """nth: this is the nth time the model reported this exact value on the
     page, so repeated mentions map to successive occurrences. When the value is
     reported more often than it is printed exactly, a further occurrence broken
     by layout (such as "Ja-" / "maica" for "Jamaica") is used before falling
-    back to the last exact one."""
+    back to the last exact one.
+
+    taken: spans already given to other mentions, as (start, end). When given,
+    the value goes to its first exact occurrence that is a whole word (if it has
+    any) and overlaps none of them; only when there is no such occurrence do the
+    rules above apply."""
     if not value:
         return {"status": "not_found", "start": None, "end": None, "score": 0.0}
     hits = _find_all(text, value)
+    if taken is not None and hits:
+        n = len(value)
+        whole = [h for h in hits if _whole_word(text, h, n)]
+        free = [h for h in (whole or hits) if not any(h < b and a < h + n for a, b in taken)]
+        if free:
+            return {"status": "exact", "start": free[0], "end": free[0] + n, "score": 100.0}
     if hits and nth >= len(hits):
         extra = _flat_find(text, value, skip=set(hits))
         if extra:
@@ -190,11 +215,28 @@ def locate_g0(text: str, value: str, nth: int = 0) -> dict:
 
 
 def locate_all(text: str, condition: str, mentions: list[dict]) -> list[dict]:
-    out, seen = [], {}
+    cleaned = []
     for m in mentions:
         model_text = m.get("quote" if condition == "G1" else "value", "") or ""
         clean, had_label = strip_line_labels(model_text)
-        clean = clean.strip() if had_label else clean
+        cleaned.append((model_text, clean.strip() if had_label else clean, had_label))
+
+    located: list[dict | None] = [None] * len(mentions)
+    seen: dict = {}
+    if condition == "G0":
+        # Longer values first, then the model's own order; each takes a free occurrence.
+        taken: list[tuple[int, int]] = []
+        for i in sorted(range(len(mentions)), key=lambda k: (-len(cleaned[k][1]), k)):
+            key = (mentions[i].get("field"), cleaned[i][1])
+            r = locate_g0(text, cleaned[i][1], seen.get(key, 0), taken)
+            seen[key] = seen.get(key, 0) + 1
+            if r["start"] is not None:
+                taken.append((r["start"], r["end"]))
+            located[i] = r
+
+    out = []
+    for i, m in enumerate(mentions):
+        model_text, clean, had_label = cleaned[i]
         if condition == "RULE":
             # rule baseline: spans come with exact offsets, nothing to locate
             r = {"status": "exact", "start": m["start"], "end": m["end"], "score": 100.0}
@@ -204,9 +246,7 @@ def locate_all(text: str, condition: str, mentions: list[dict]) -> list[dict]:
             r = locate_g1(text, int(m.get("line", 0)), clean, seen.get(key, 0))
             seen[key] = seen.get(key, 0) + 1
         else:
-            key = (m.get("field"), clean)
-            r = locate_g0(text, clean, seen.get(key, 0))
-            seen[key] = seen.get(key, 0) + 1
+            r = located[i]
         value = text[r["start"]:r["end"]] if r["start"] is not None else None
         out.append({"field": m.get("field"), "line": m.get("line"), "model_text": model_text,
                     "had_line_label": had_label, "value": value, **r})

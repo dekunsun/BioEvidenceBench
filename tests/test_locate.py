@@ -102,3 +102,31 @@ def test_g0_extra_repeat_uses_a_line_broken_occurrence():
     out = locate_all(page, "G0", [{"field": "locality", "value": "Jamaica"}] * 2)
     assert out[0]["status"] == "exact" and out[0]["start"] == 5
     assert out[1]["status"] == "layout_variant" and out[1]["value"] == "Ja-\nmaica"
+
+
+def test_g0_value_is_not_placed_inside_a_longer_word():
+    text = "The Jackdaws left.\nA Jackdaw stayed; the Daw called."
+    out = locate_all(text, "G0", [{"field": "vernacular", "value": "Jackdaw"},
+                                  {"field": "vernacular", "value": "Jackdaws"},
+                                  {"field": "vernacular", "value": "Daw"}])
+    assert [text[o["start"]:o["end"]] for o in out] == ["Jackdaw", "Jackdaws", "Daw"]
+    assert out[0]["start"] == text.index("Jackdaw stayed")       # not inside "Jackdaws"
+    assert out[2]["start"] == text.index("Daw called")           # not inside "Jackdaw"
+
+
+def test_g0_short_value_avoids_a_span_taken_by_a_longer_mention():
+    text = "The Hooded Crow breeds here. Mus. Benson has one.\nThe Crow was shot by Benson."
+    out = locate_all(text, "G0", [{"field": "vernacular", "value": "Hooded Crow"},
+                                  {"field": "institution", "value": "Mus. Benson"},
+                                  {"field": "vernacular", "value": "Crow"},
+                                  {"field": "person", "value": "Benson"}])
+    assert out[2]["start"] == text.index("Crow was")
+    assert out[3]["start"] == text.index("Benson.")
+
+
+def test_g0_same_string_in_two_fields_gets_two_occurrences():
+    text = "Lord Lilford wrote of the park of Lilford."
+    out = locate_all(text, "G0", [{"field": "person", "value": "Lilford"},
+                                  {"field": "locality", "value": "Lilford"}])
+    assert out[0]["start"] != out[1]["start"]
+    assert out[0]["start"] == text.index("Lilford wrote")

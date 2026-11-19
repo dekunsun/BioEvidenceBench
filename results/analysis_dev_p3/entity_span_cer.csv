@@ -131,6 +131,9 @@ page_id,field,version,gold_start,gold_end,gold_text,ocr_text,aligned,span_cer,pr
 8992601,vernacular,legacy,1351,1358,Hoodies,Hoodies,True,0.0,True
 8992601,vernacular,modern_dots-mocr,1351,1358,Hoodies,Hoodies,True,0.0,True
 8992601,vernacular,modern_dots-mocr_plain,1351,1358,Hoodies,Hoodies,True,0.0,True
+8992601,date,legacy,1368,1395,12th to the 30th of October,12th to the 30th of October,True,0.0,True
+8992601,date,modern_dots-mocr,1368,1395,12th to the 30th of October,12th to the 30th of October,True,0.0,True
+8992601,date,modern_dots-mocr_plain,1368,1395,12th to the 30th of October,12th to the 30th of October,True,0.0,True
 8992601,person,legacy,1405,1417,T. H. Nelson,T. H. Nelson,True,0.0,True
 8992601,person,modern_dots-mocr,1405,1417,T. H. Nelson,T. H. Nelson,True,0.0,True
 8992601,person,modern_dots-mocr_plain,1405,1417,T. H. Nelson,T. H. Nelson,True,0.0,True
@@ -422,6 +425,12 @@ latus",B. annulatus,True,0.0,True
 8967060,locality,legacy,1070,1077,Jamaica,Jamaica,True,0.0,True
 8967060,locality,modern_dots-mocr,1070,1077,Jamaica,Jamaica,True,0.0,True
 8967060,locality,modern_dots-mocr_plain,1070,1077,Jamaica,Jamaica,True,0.0,True
+8967060,taxon,legacy,1163,1169,Bulimi,Bulimi,True,0.0,True
+8967060,taxon,modern_dots-mocr,1163,1169,Bulimi,Bulimi,True,0.0,True
+8967060,taxon,modern_dots-mocr_plain,1163,1169,Bulimi,Bulimi,True,0.0,True
+8967060,taxon,legacy,1174,1182,Achatinœ,Achalina,True,0.25,False
+8967060,taxon,modern_dots-mocr,1174,1182,Achatinœ,Achatinæ*,True,0.125,False
+8967060,taxon,modern_dots-mocr_plain,1174,1182,Achatinœ,Achatinæ,True,0.125,False
 8967060,locality,legacy,1188,1197,"Ja‐
 maica","Ja- 
 

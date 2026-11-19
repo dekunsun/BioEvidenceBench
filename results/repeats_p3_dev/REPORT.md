@@ -28,19 +28,19 @@ Per repeat and per field: `f1_by_repeat.csv`, `f1_summary.csv`.
 
 | book   | version                | condition   |   gold |   value_F1_mean |   value_F1_sd |   value_F1_min |   value_F1_max |   lenient_F1_mean |   lenient_F1_sd |
 |:-------|:-----------------------|:------------|-------:|----------------:|--------------:|---------------:|---------------:|------------------:|----------------:|
-| Butler | expert                 | G0          |     62 |           0.965 |         0.005 |          0.959 |          0.968 |             0.965 |           0.005 |
-| Butler | expert                 | G1          |     62 |           0.976 |         0     |          0.976 |          0.976 |             0.976 |           0     |
-| Butler | legacy                 | G0          |     62 |           0.742 |         0     |          0.742 |          0.742 |             0.968 |           0     |
-| Butler | legacy                 | G1          |     62 |           0.771 |         0.006 |          0.764 |          0.774 |             0.981 |           0.005 |
-| Butler | modern_dots-mocr       | G0          |     62 |           0.941 |         0.003 |          0.937 |          0.943 |             0.957 |           0.004 |
-| Butler | modern_dots-mocr       | G1          |     62 |           0.949 |         0.005 |          0.943 |          0.952 |             0.965 |           0.005 |
-| Butler | modern_dots-mocr_plain | G0          |     62 |           0.946 |         0.005 |          0.943 |          0.952 |             0.962 |           0.005 |
-| Butler | modern_dots-mocr_plain | G1          |     62 |           0.946 |         0.005 |          0.943 |          0.952 |             0.962 |           0.005 |
-| Reeve  | expert                 | G0          |     68 |           0.95  |         0     |          0.95  |          0.95  |             0.964 |           0     |
-| Reeve  | expert                 | G1          |     68 |           0.979 |         0.013 |          0.964 |          0.986 |             0.983 |           0.005 |
-| Reeve  | legacy                 | G0          |     68 |           0.696 |         0     |          0.696 |          0.696 |             0.971 |           0     |
-| Reeve  | legacy                 | G1          |     68 |           0.71  |         0     |          0.71  |          0.71  |             0.986 |           0     |
-| Reeve  | modern_dots-mocr       | G0          |     68 |           0.957 |         0     |          0.957 |          0.957 |             0.971 |           0     |
-| Reeve  | modern_dots-mocr       | G1          |     68 |           0.986 |         0     |          0.986 |          0.986 |             0.986 |           0     |
-| Reeve  | modern_dots-mocr_plain | G0          |     68 |           0.971 |         0     |          0.971 |          0.971 |             0.971 |           0     |
-| Reeve  | modern_dots-mocr_plain | G1          |     68 |           0.986 |         0     |          0.986 |          0.986 |             0.986 |           0     |
+| Butler | expert                 | G0          |     63 |           0.989 |         0.005 |          0.984 |          0.992 |             0.989 |           0.005 |
+| Butler | expert                 | G1          |     63 |           0.984 |         0     |          0.984 |          0.984 |             0.984 |           0     |
+| Butler | legacy                 | G0          |     63 |           0.768 |         0     |          0.768 |          0.768 |             0.992 |           0     |
+| Butler | legacy                 | G1          |     63 |           0.781 |         0.006 |          0.774 |          0.784 |             0.989 |           0.005 |
+| Butler | modern_dots-mocr       | G0          |     63 |           0.966 |         0.004 |          0.961 |          0.968 |             0.981 |           0.005 |
+| Butler | modern_dots-mocr       | G1          |     63 |           0.957 |         0.005 |          0.952 |          0.96  |             0.973 |           0.005 |
+| Butler | modern_dots-mocr_plain | G0          |     63 |           0.971 |         0.005 |          0.968 |          0.976 |             0.987 |           0.005 |
+| Butler | modern_dots-mocr_plain | G1          |     63 |           0.955 |         0.005 |          0.952 |          0.96  |             0.971 |           0.005 |
+| Reeve  | expert                 | G0          |     70 |           0.979 |         0     |          0.979 |          0.979 |             0.993 |           0     |
+| Reeve  | expert                 | G1          |     70 |           0.993 |         0.012 |          0.979 |          1     |             0.998 |           0.004 |
+| Reeve  | legacy                 | G0          |     70 |           0.714 |         0     |          0.714 |          0.714 |             1     |           0     |
+| Reeve  | legacy                 | G1          |     70 |           0.714 |         0     |          0.714 |          0.714 |             1     |           0     |
+| Reeve  | modern_dots-mocr       | G0          |     70 |           0.971 |         0     |          0.971 |          0.971 |             1     |           0     |
+| Reeve  | modern_dots-mocr       | G1          |     70 |           0.986 |         0     |          0.986 |          0.986 |             1     |           0     |
+| Reeve  | modern_dots-mocr_plain | G0          |     70 |           0.986 |         0     |          0.986 |          0.986 |             1     |           0     |
+| Reeve  | modern_dots-mocr_plain | G1          |     70 |           0.986 |         0     |          0.986 |          0.986 |             1     |           0     |

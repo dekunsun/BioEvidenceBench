@@ -2,9 +2,9 @@
 
 > 中文版在本文件下方：[跳到中文版](#标注规范中文版)。两个版本内容相同；如有出入，以英文版为准，并请指出来改正。
 
-**Version v0.5, 2026-11-18.** Written before any labelling. Gloria settled the nine open decisions
-(v0.4) and asked for four further changes (v0.5); see the changelog. This version is the one the
-prompt (`p3`) and the gold set use. Later changes get a new version number and a changelog line; the gold CSV
+**Version v0.6, 2026-11-19.** v0.5 was written before any labelling. v0.6 adds the rules Gloria
+decided after labelling the six dev pages (see the changelog); it changes no earlier rule. This
+version is the one the prompt (`p4`) and the gold set use. Later changes get a new version number and a changelog line; the gold CSV
 records the guide version of every row.
 
 ## Decision record (Gloria, 2026-11-18)
@@ -138,6 +138,11 @@ Label:
 - Uninomials used as names of a taxon at any rank: `Bulimus`, `Turdidae`, `Coleoptera`.
 - Abbreviated genus *with* an epithet: `A. modularis`, `Bul. castus`.
 - Names in any case or style: `BULIMUS CASTUS` (small capitals) counts.
+- The Latin plural of a genus name, used for the members of that genus: `these small Bulimi and
+  Achatinæ` gives two `taxon` mentions, `Bulimi` and `Achatinæ`, with `plural form` in notes.
+  (The same way `the Buntings` is a `vernacular`.)
+- A genus name given in brackets inside a citation, saying under which genus the species was
+  described: `PFEIFFER, (Glandina,) Pro. Zool. Soc.` gives taxon `Glandina`.
 
 Do not label:
 - The authority after a name as part of the taxon: in `Accentor modularis (Linn.)` the taxon
@@ -166,9 +171,13 @@ Label:
   (span `Buntings`), `Lesser Redpoll`.
 - Every mention, as for other entity fields.
 - The name without a leading article: `THE CHASTE BULIMUS` gives `CHASTE BULIMUS`.
+- Capital or lower-case makes no difference: `pheasants`, `partridges`, `grouse`, `Owls` are
+  labelled like `Jackdaw`. Any kind of organism counts, not only the group the book is about
+  (`hares`, `chickens`).
 
 Do not label:
 - Generic words that name no particular kind: `bird`, `shell`, `species`, `the male`, `the young`.
+- Words for an age, a sex or a stage rather than a kind: `lambs`, `chicks`, `nestlings`, `the hen`.
 - Running heads and other page furniture (rule 2.0.4, the same rule as for `taxon`). A heading
   that opens a species account *is* labelled.
 - Adjective uses inside another name (`Sparrow-Hawk` is one name, not `Sparrow` plus `Hawk`).
@@ -182,6 +191,19 @@ Label:
 - A place with its narrowing parts as one span: `Isle of Luzon, Philippine Islands`.
 - Distribution statements in prose: in `it breeds in Scotland` the span is `Scotland`.
 - Several different places as separate mentions: `Cornwall and Devon` gives two.
+- Named regions used as proper names: `the Continent` (span `Continent`), `Old World`.
+- A place that shares its name with a person is labelled by its role at that spot: `Lord Lilford`
+  is a `person`; `the park and pleasure-grounds of Lilford` is a `locality`.
+
+**One place or several?** Decide from the wording, not from geography you look up.
+- Names separated by commas, each later name being the wider region that holds the earlier one,
+  are **one span**: `Merida, Andes of Bolivia`; `Humeerpore, Bundelkhund, India`;
+  `Coban, Vera Cruz, Central America`. Test: the comma can be read as "in".
+- Names joined by `and` or `or`, separated by a semicolon, or listed side by side as places of the
+  same kind (`China, North-west India, Afghanistan, Persia`) are **separate mentions**.
+- If you do not know the places: in a `Hab.` line, assume the order runs from narrow to wide (that
+  is how Reeve writes localities), label one span and write `hierarchy assumed` in notes. Old or
+  doubtful geography is not corrected and not checked (`Coban, Vera Cruz` stays as printed).
 
 **Part of the place, or relative to it?** Words that name a piece of the place itself stay in the
 span. Words that place something relative to the place stay out and go in `qualifier`.
@@ -204,12 +226,20 @@ span. Words that place something relative to the place stay out and go in `quali
 Plain prepositions (`in`, `at`, `from`, `throughout`) are left out of the span and are not
 recorded. If the table does not settle a case, use the shorter span and write `UNCLEAR: boundary`.
 
+Only a word for a natural feature or a compass part, joined directly to the name, counts as part
+of the place: `valley of`, `coast of`, `cliffs of` (`cliffs of Dover`), `slopes of`, `mouth of`,
+`banks of`, `interior of`, `North-west`. Buildings and grounds do not: `the park and
+pleasure-grounds of Lilford` gives `Lilford`.
+
 Do not label:
 - Habitat types with no place name: `woods`, `marshes`, `on rocks`.
 - Places inside bibliographic citations (place of publication).
 - Places that are part of an institution's name: `Zoological Society of London` is one
   `institution`, not a locality.
-- Adjectives like `British` in `British birds`, and places in titles or running heads.
+- Adjectives like `British` in `British birds`, and places in titles or running heads. Titles
+  include the titles of cited works: `"Birds of Northamptonshire"`, `"Natural History and Sport
+  in Moray"` and `"Notes from Redcar"` give no locality.
+- Common nouns that point back to a place: `the island`, `this county`.
 
 ### 2.4 `person`: a named person
 
@@ -256,14 +286,18 @@ found, an arrival recorded.
 | `shot on 3rd May, 1890` | `3rd May, 1890` | a particular event |
 | `obtained in 1850` | `1850` | a particular event |
 | `one was collected in April` | `April`, notes `NO-YEAR` | a particular event, year not given |
+| `the immigration of Hoodies from the 12th to the 30th of October` | `12th to the 30th of October`, notes `NO-YEAR` | a dated, recorded movement: the day numbers make it an event |
 | `arrives in April` | no | general phenology, not one event |
+| `noticed in largest numbers in October and November` | no | what generally happens |
 | `breeds in spring` | no | general phenology |
 | `PFEIFFER, Pro. Zool. Soc., 1846, p. 112` | no date (`PFEIFFER` is a `person`) | publication year |
 | `published in April 1890` | no | publication date |
 
 Label:
 - The whole date expression as printed, with ordinal suffixes and commas inside it; ranges such
-  as `1880–85` are one span.
+  as `1880–85` or `12th to the 30th of October` are one span.
+- Rule of thumb: a day number or a year tied to something observed marks an event. A bare month
+  or season that says what generally happens does not.
 
 Do not label:
 - Publication dates and years in citations, general phenology, ages, durations, page numbers.
@@ -312,6 +346,18 @@ species name is never added to the species-level success rate.
   such rows is reported. (Non-contiguous text is not an `ambiguous` row; it goes in the
   annotation issues file.)
 
+**Two kinds of doubt, kept apart.** `UNCLEAR` means *we*, the labellers, are not sure how to label
+or where the span ends; such a row waits for adjudication. `UNCERTAIN-IN-SOURCE` means the label
+is sure but the *author* hedges a fact (`is reputed to have occurred on Greenland`; `probably
+from New Granada, but I have no authority`); such a row is scored like any other.
+
+**Order of work on a test page.** Gloria labels the page alone first and saves that file (a
+commit) before she looks at anyone else's labels for it, a person's or an AI assistant's. A
+comparison afterwards is a second opinion: it may raise questions, and every change it leads to
+is one row in `gold/gold_changes_<labeller>.csv`. The assistant should not be a model under
+evaluation; if it is, the report says so. (The six dev pages were made this way: labelled by
+Gloria first, then compared with an AI assistant.)
+
 **Agreement check.** A second labeller labels 5 test pages independently with this guide, without
 seeing Gloria's labels. We report span-level agreement per field (exact and overlap) and discuss
 every disagreement. A disagreement is settled by adjudication: the gold row is corrected, or
@@ -338,13 +384,14 @@ corrected gold. Scoring rules are never changed to improve a score.
 | v0.2 | 2026-11-18 | Entity types aligned with the NHM BHL prototype: `collector` replaced by `person` (every named person); new `institution`; `locality` covers every named place, not only occurrence statements. `date` unchanged. |
 | v0.3 | 2026-11-18 | Default answers for the span-edge questions found in the Opus p2 dev run: 2.0 on span edges; all titles treated like honorifics; part-of-place words stay in the locality span; `Mus. Adams` / `ADAMS, MS.` worked example. |
 | v0.4 | 2026-11-18 | Gloria's decisions on all nine questions. New field `vernacular`, scored separately (decision 1). New `qualifier` column for relative words (2). More in/out examples for place boundaries (7). Non-contiguous exception for names broken across lines (9). Fixed the `PFEIFFER … 1846` example and stated the mixed design: entity fields are general NER, `date` is event-bound; a month without a year counts when it belongs to a particular event. NHM statement reworded: types inspired by NHM, scores not comparable. Taxon linking split into resolution status, match method, matched rank and taxonomic status. New `adjudication` column and rules for unclear rows; dev and test discipline separated; freeze list before unsealing. No pages labelled yet. |
+| v0.6 | 2026-11-19 | Rules decided by Gloria after labelling the six dev pages; no earlier rule changes. `taxon`: Latin plurals of genus names (`Bulimi`, `Achatinæ`) and a genus in citation brackets (`(Glandina,)`) are labelled. `vernacular`: case makes no difference; age, sex and stage words are out. `locality`: one span for comma-separated names running from narrow to wide, separate mentions for lists (decided from the wording, not from looked-up geography); named regions (`Continent`, `Old World`); only natural-feature words are part of a place; places in titles of cited works and common nouns (`the island`) are out. `date`: a day number tied to a recorded movement is an event (`12th to the 30th of October`, `NO-YEAR`). Section 4: `UNCLEAR` vs `UNCERTAIN-IN-SOURCE`; a test page is labelled alone and saved before any comparison. Dev gold: three rows added on Gloria's decision (`gold/gold_changes_gloria.csv`). |
 | v0.5 | 2026-11-18 | Four changes asked for by Gloria. One heading rule for all fields (2.0.4): account headings and real captions are labelled, running heads and bare plate labels are not; `taxon` and `vernacular` now agree. Non-contiguous text makes no gold row; it is recorded in the annotation issues file and the scorer ignores those regions. Linking: new `printed_rank` and status `partial`; a genus-only match for a species name is never counted as species-level correct. Gold set (double labelling, adjudication, freeze) is finished before unsealing; later corrections go through independent review and `gold/gold_changes.csv`. No pages labelled yet. |
 
 ---
 
 # 标注规范（中文版）
 
-**版本 v0.5，2026-11-18。** 写于任何标注开始之前。Gloria 已经对九个待定问题做了决定（v0.4），之后又提出四处修改（v0.5），见变更记录。提示词（`p3`）和 gold set 都以这一版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
+**版本 v0.6，2026-11-19。** v0.5 写于任何标注开始之前。v0.6 加入 Gloria 标完 6 页开发集后决定的规则（见变更记录），没有改动之前的任何规则。提示词（`p4`）和 gold set 都以这一版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
 
 ## 决定记录（Gloria，2026-11-18）
 
@@ -428,6 +475,8 @@ corrected gold. Scoring rules are never changed to improve a score.
 - 用作任一等级分类单元名称的单名：`Bulimus`、`Turdidae`、`Coleoptera`。
 - 缩写属名*加*种加词：`A. modularis`、`Bul. castus`。
 - 任何大小写或字体都算：`BULIMUS CASTUS`（小型大写）也算。
+- 属名的拉丁复数形式，用来指这个属的成员：`these small Bulimi and Achatinæ` 标成两个 `taxon`，`Bulimi` 和 `Achatinæ`，备注写 `plural form`。（道理和 `the Buntings` 标成 `vernacular` 一样。）
+- 文献引用里括号中的属名，说明这个种当初归在哪个属下：`PFEIFFER, (Glandina,) Pro. Zool. Soc.` 标出 taxon `Glandina`。
 
 不标：
 - 名字后面的命名人不算在学名里：`Accentor modularis (Linn.)` 中，学名片段是 `Accentor modularis`；`Linn.` 另外标成一个 `person`（2.4）。
@@ -450,9 +499,11 @@ corrected gold. Scoring rules are never changed to improve a score.
 - 任一等级上、用作名称的类群名：`Sky-Lark`、`Hedge-Sparrow`、`the Buntings`（片段是 `Buntings`）、`Lesser Redpoll`。
 - 每一次出现都标，和其他实体字段一样。
 - 不带开头的冠词：`THE CHASTE BULIMUS` 标成 `CHASTE BULIMUS`。
+- 大写小写都一样：`pheasants`、`partridges`、`grouse`、`Owls` 和 `Jackdaw` 一样要标。任何生物的种类名都算，不限于这本书讲的类群（`hares`、`chickens`）。
 
 不标：
 - 不指特定类群的泛称：`bird`、`shell`、`species`、`the male`、`the young`。
+- 表示年龄、性别或发育阶段而不是种类的词：`lambs`、`chicks`、`nestlings`、`the hen`。
 - 页眉等版面元素（规则 2.0.4，和 `taxon` 是同一条规则）。物种条目开头的标题*要*标。
 - 另一个名字内部的修饰成分（`Sparrow-Hawk` 是一个名字，不是 `Sparrow` 加 `Hawk`）。
 
@@ -463,6 +514,13 @@ corrected gold. Scoring rules are never changed to improve a score.
 - 地点连同缩小范围的部分算一个片段：`Isle of Luzon, Philippine Islands`。
 - 正文中的分布描述：`it breeds in Scotland` 中，片段是 `Scotland`。
 - 几个不同的地点分别标：`Cornwall and Devon` 是两个。
+- 当专名用的区域名：`the Continent`（片段是 `Continent`）、`Old World`。
+- 和人同名的地点，按它在这个位置的角色标：`Lord Lilford` 是 `person`；`the park and pleasure-grounds of Lilford` 是 `locality`。
+
+**一个地点还是几个？** 根据原文的写法判断，不靠去查地理知识。
+- 用逗号隔开、后一个是包含前一个的更大区域的地名，算**一个片段**：`Merida, Andes of Bolivia`；`Humeerpore, Bundelkhund, India`；`Coban, Vera Cruz, Central America`。检验方法：逗号可以读成"位于"。
+- 用 `and` 或 `or` 连接、用分号隔开，或者作为同类地点并列列举的（`China, North-west India, Afghanistan, Persia`），算**多个提及**。
+- 不认识这些地名时：在 `Hab.` 行里，默认顺序是由小到大（Reeve 就是这样写产地的），标成一个片段，备注写 `hierarchy assumed`。过时或可疑的地理关系不改也不查（`Coban, Vera Cruz` 照原样）。
 
 **是地点的一部分，还是相对于地点的位置？** 表示地点本身某一部分的词留在片段里。表示相对于这个地点的位置的词不算进片段，填进 `qualifier` 列。
 
@@ -483,11 +541,14 @@ corrected gold. Scoring rules are never changed to improve a score.
 
 普通介词（`in`、`at`、`from`、`throughout`）不算进片段，也不用记录。表里的例子判断不了时，用较短的片段，并写 `UNCLEAR: boundary`。
 
+只有直接连着地名的自然地貌词或方位词才算地点的一部分：`valley of`、`coast of`、`cliffs of`（`cliffs of Dover`）、`slopes of`、`mouth of`、`banks of`、`interior of`、`North-west`。建筑和庭园不算：`the park and pleasure-grounds of Lilford` 只标 `Lilford`。
+
 不标：
 - 没有地名的生境类型：`woods`、`marshes`、`on rocks`。
 - 文献引用里的地点（出版地）。
 - 属于机构名称一部分的地点：`Zoological Society of London` 是一个 `institution`，不是地点。
-- 形容词，比如 `British birds` 里的 `British`；标题或页眉里的地点。
+- 形容词，比如 `British birds` 里的 `British`；标题或页眉里的地点。标题包括被引用著作的标题：`"Birds of Northamptonshire"`、`"Natural History and Sport in Moray"`、`"Notes from Redcar"` 里的地名都不标。
+- 回指某个地点的普通名词：`the island`、`this county`。
 
 ### 2.4 `person`：有名字的人
 
@@ -520,13 +581,16 @@ corrected gold. Scoring rules are never changed to improve a score.
 | `shot on 3rd May, 1890` | 标 `3rd May, 1890` | 一次具体事件 |
 | `obtained in 1850` | 标 `1850` | 一次具体事件 |
 | `one was collected in April` | 标 `April`，备注 `NO-YEAR` | 一次具体事件，没写年份 |
+| `the immigration of Hoodies from the 12th to the 30th of October` | 标 `12th to the 30th of October`，备注 `NO-YEAR` | 一次有日期记录的迁入：带具体的日，就是事件 |
 | `arrives in April` | 不标 | 一般物候规律，不是一次事件 |
+| `noticed in largest numbers in October and November` | 不标 | 一般情况 |
 | `breeds in spring` | 不标 | 一般物候规律 |
 | `PFEIFFER, Pro. Zool. Soc., 1846, p. 112` | 不标日期（`PFEIFFER` 标成 `person`） | 出版年份 |
 | `published in April 1890` | 不标 | 出版日期 |
 
 要标：
-- 按印刷的完整日期表达式标，包括序数后缀和中间的逗号；`1880–85` 这样的范围算一个片段。
+- 按印刷的完整日期表达式标，包括序数后缀和中间的逗号；`1880–85` 或 `12th to the 30th of October` 这样的范围算一个片段。
+- 经验法则：和某次观察连在一起的具体的日或年份，表示一次事件。只说一般规律的月份或季节不算。
 
 不标：
 - 出版日期和引用里的年份、一般物候、年龄、时长、页码。
@@ -562,6 +626,10 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 - `adjudicated`：已经做了决定（如果是缺规则，就把规则补进规范，出一个新版本）。和其他行一样评分。
 - `ambiguous`：合理的标注人可能有不同标法。不纳入严格评分：模型的预测和它匹配上，不加分也不扣分；漏掉它也不算错。这类行的数量会单独报告。（文字不连续的情况不是 `ambiguous` 行，它记在标注问题表里。）
 
+**两种不确定要分开。** `UNCLEAR` 是*我们*标注人不确定该怎么标、片段到哪里结束；这样的行要等裁定。`UNCERTAIN-IN-SOURCE` 是标注本身没问题，但*作者*对事实有保留（`is reputed to have occurred on Greenland`；`probably from New Granada, but I have no authority`）；这样的行照常评分。
+
+**测试页的工作顺序。** Gloria 先独自标完一页并保存文件（提交一次），之后才看别人对这一页的标签，不管是人还是 AI 助手。之后的对比只是第二意见：它可以提出问题，由它引起的每一处改动都在 `gold/gold_changes_<标注人>.csv` 里记一行。这个助手不应该是被评测的模型；如果是，报告里要写明。（6 页开发集就是这样做的：Gloria 先标，再和 AI 助手对比。）
+
 **一致性检查。** 第二位标注人按这份规范独立标注 5 页测试页，不看 Gloria 的标签。我们按字段报告片段级的一致性（完全一致和重叠两种口径），并逐条讨论每一处分歧。分歧通过裁定解决：改正 gold 的那一行，或者标成 `ambiguous`，或者给规范补一条更清楚的规则。
 
 **gold set 要在解封之前全部完成。** 顺序是固定的：（1）Gloria 标注；（2）第二位标注人标 5 页测试页；（3）所有分歧和所有 `UNCLEAR` 行都裁定完；（4）冻结 gold 文件（把它们的 SHA-256 写进 `PREREGISTRATION.md`）；（5）这之后才解封测试输出。和 gold set 一起冻结的还有：`guide_version`、`prompt_version`、输出格式（schema）、评分代码（提交号），以及每个模型的配置。
@@ -576,4 +644,5 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 | v0.2 | 2026-11-18 | 实体类型对齐 NHM 的 BHL 原型：`collector` 改为 `person`（所有有名字的人）；新增 `institution`；`locality` 覆盖所有有名字的地点，不只是发生记录。`date` 不变。 |
 | v0.3 | 2026-11-18 | 为 Opus p2 开发集结果里发现的片段边界问题写默认答案：2.0 片段边界；所有头衔按敬称处理；表示地点一部分的词留在地点片段里；增加 `Mus. Adams` / `ADAMS, MS.` 示例。 |
 | v0.4 | 2026-11-18 | Gloria 对九个问题的决定。新增字段 `vernacular`，单独评分（决定 1）。新增 `qualifier` 列记录相对位置词（2）。地点边界增加更多正反例（7）。跨行名字增加"文字不连续"的例外（9）。修正 `PFEIFFER … 1846` 的例子，并写明混合设计：实体字段是一般的命名实体识别，`date` 和事件绑定；属于一次具体事件、没有年份的月份也算。NHM 的说法改为：类型参考 NHM，分数不可比。学名关联拆成解析状态、匹配方式、匹配等级和分类学状态。新增 `adjudication` 列和不清楚行的处理规则；开发页和测试页的纪律分开；解封前的冻结清单。尚未标注任何页面。 |
+| v0.6 | 2026-11-19 | Gloria 标完 6 页开发集后决定的规则；之前的规则不变。`taxon`：属名的拉丁复数（`Bulimi`、`Achatinæ`）和引用括号里的属名（`(Glandina,)`）要标。`vernacular`：不分大小写；年龄、性别、发育阶段词不标。`locality`：逗号隔开、由小到大的地名算一个片段，并列列举的算多个（按原文写法判断，不查地理）；当专名用的区域名（`Continent`、`Old World`）要标；只有自然地貌词算地点的一部分；被引用著作标题里的地名和普通名词（`the island`）不标。`date`：和一次有记录的迁移连在一起的具体的日算事件（`12th to the 30th of October`，`NO-YEAR`）。第 4 节：区分 `UNCLEAR` 和 `UNCERTAIN-IN-SOURCE`；测试页先独自标完并保存，再做任何对比。开发集 gold：按 Gloria 的决定加了三行（`gold/gold_changes_gloria.csv`）。 |
 | v0.5 | 2026-11-18 | Gloria 提出的四处修改。所有字段用同一条标题规则（2.0.4）：条目标题和真正的图注要标，页眉和光秃秃的图版编号不标；`taxon` 和 `vernacular` 现在一致。文字不连续的情况不写 gold 行，记到标注问题表里，评分时忽略这些区域。学名关联新增 `printed_rank` 和状态 `partial`；物种名只匹配到属，绝不算物种级正确。gold set（双人标注、裁定、冻结）要在解封之前完成；之后的更正要经过独立审核并记入 `gold/gold_changes.csv`。尚未标注任何页面。 |

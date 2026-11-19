@@ -1,16 +1,17 @@
 {
-  "written_at": "2026-11-19T00:55:38+00:00",
+  "written_at": "2026-11-19T01:06:46+00:00",
   "split": "dev",
   "code": {
-    "commit": "87ced05aae750353f856057758d373b94de1b087",
+    "commit": "8faca5c7a1ef1c8555f04c1e2a14a3f8cbb03eee",
     "uncommitted_changes": true
   },
   "gold": {
     "file": "gold/gold_mentions_gloria.csv",
-    "sha256": "f8c4d7694d8b9031edfc9887903b2fc124a7453af551ed7ac8884ea3443bc288",
-    "rows": 183,
+    "sha256": "5a3e85b6dd328734bd1b0dd79669d155c6fb746c2e719948d4f9247e4f102670",
+    "rows": 186,
     "guide_versions": [
-      "v0.5"
+      "v0.5",
+      "v0.6"
     ]
   },
   "issues": null,
@@ -20,7 +21,7 @@
       "model": "claude-opus-5-5",
       "prompt_version": "p3-guide-v0.5",
       "effort": "medium",
-      "mentions_sha256": "973ce2a27fbb4f0034e558fe97576a2f2640d2991661fdb4402e9ce859ea3a55"
+      "mentions_sha256": "e5fdb783966067e31942bbdd06445a944c42f827e9f098435b41f48930de1664"
     },
     "20261118-2102_rules-gnfinder-v1.4.0_all": {
       "role": "rule",

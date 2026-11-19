@@ -1,0 +1,4 @@
+date,page_id,old_row,new_row,reason,reviewer,model_output_seen
+2026-11-19,8992601,,"8992601,1368,1395,date,12th to the 30th of October","Dev adjudication: a date with a day number tied to a recorded movement is an event date (guide v0.6, 2.6)",Gloria (decision); row typed in by Claude Code on her instruction,yes (dev pages are not blind)
+2026-11-19,8967060,,"8967060,1163,1169,taxon,Bulimi","Dev adjudication: Latin plural of a genus name is a taxon mention (guide v0.6, 2.1)",Gloria (decision); row typed in by Claude Code on her instruction,yes (dev pages are not blind)
+2026-11-19,8967060,,"8967060,1174,1182,taxon,Achatinœ","Dev adjudication: Latin plural of a genus name is a taxon mention (guide v0.6, 2.1)",Gloria (decision); row typed in by Claude Code on her instruction,yes (dev pages are not blind)

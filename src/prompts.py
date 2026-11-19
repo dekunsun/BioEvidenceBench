@@ -9,12 +9,12 @@ Design rules (CLAUDE.md sections 4 and 4a):
     numbered line and slices the value out of the source text.
   * The prompt does not say which text version (OCR or transcription) it is
     reading, so the three versions are treated identically.
-  * Field definitions follow ANNOTATION_GUIDE.md v0.1 defaults. If the guide
+  * Field definitions follow ANNOTATION_GUIDE.md (v0.6 for prompt p4). If the guide
     changes, bump PROMPT_VERSION and re-run.
 """
 from __future__ import annotations
 
-PROMPT_VERSION = "p3-guide-v0.5"
+PROMPT_VERSION = "p4-guide-v0.6"
 FIELDS = ["taxon", "vernacular", "person", "locality", "institution", "date"]
 
 SYSTEM = """You extract biodiversity occurrence information from one page of a historical natural-history book (19th or early 20th century). The page is given as numbered lines. The text may be a transcription or raw OCR and may contain recognition errors, odd spacing, broken words and stray characters. Never correct, normalise, expand or modernise anything: report what is written on the page.
@@ -29,24 +29,27 @@ Edges of a mention, for every field:
 
 taxon: a scientific (Latin) name of an organism.
 - Include binomials and trinomials ("Accentor modularis"), names of a single word at any rank used as the name of a taxon ("Bulimus", "Turdidae"), and an abbreviated genus followed by an epithet ("A. modularis"). Names in capitals or small capitals count ("BULIMUS CASTUS").
+- Include the Latin plural of a genus name used for the members of the genus ("these small Bulimi" gives "Bulimi"), and a genus name given in brackets inside a citation ("PFEIFFER, (Glandina,) Pro. Zool. Soc." gives "Glandina").
 - The authority after a name is not part of the taxon: for "Accentor modularis (Linn.)" the taxon is "Accentor modularis" and "Linn." is a separate person mention.
 - Exclude a bare abbreviated genus that only opens a Latin description ("Bul. testa ...").
 - Vernacular names are never taxon; they are the separate field vernacular.
 
 vernacular: a common-language name that identifies a particular kind of organism (a species or a named group).
 - Examples: "Hedge-Sparrow", "Sky-Lark", "Lesser Redpoll"; "the Buntings" gives "Buntings"; "THE CHASTE BULIMUS" gives "CHASTE BULIMUS" (no leading article).
-- Exclude generic words that name no particular kind ("bird", "shell", "species", "the male", "the young").
+- Capital or lower-case makes no difference, and any kind of organism counts: "pheasants", "grouse", "Owls", "hares".
+- Exclude generic words that name no particular kind ("bird", "shell", "species", "the male", "the young") and words for an age, a sex or a stage rather than a kind ("lambs", "chicks", "the hen").
 
 locality: a named real geographic place, in whatever role it appears.
 - Include habitat, distribution, collection and observation statements and any other mention of a place. In "Hab. Central America?" the mention is "Central America".
-- A place with its narrowing parts is one mention: "Isle of Luzon, Philippine Islands". Different places are separate mentions: "Cornwall and Devon" is two.
-- Words that name a part of the place stay in the mention: "valley of the Amoor", "north coast of Norfolk", "South-east Mongolia", "mouth of the Thames", "interior of Brazil".
+- One place or several: place names separated by commas, each later one being the wider region that holds the earlier one, are ONE mention ("Isle of Luzon, Philippine Islands"; "Humeerpore, Bundelkhund, India"); in a "Hab." line assume this order and never check or correct the geography. Names joined by "and" or "or", separated by a semicolon, or listed side by side as places of the same kind are separate mentions ("Cornwall and Devon" is two; "China, Persia, Egypt" is three).
+- Named regions used as proper names count: "the Continent" gives "Continent"; "Old World".
+- Words for a natural feature or a compass part, joined directly to the name, stay in the mention: "valley of the Amoor", "north coast of Norfolk", "South-east Mongolia", "mouth of the Thames", "interior of Brazil", "cliffs of Dover". Buildings and grounds do not: "the park and gardens of Holkham" gives "Holkham".
 - Words that place something relative to the place, and plain prepositions, stay out: "near Dover" gives "Dover"; "ten miles north of York" gives "York"; "off the coast of Peru" gives "coast of Peru"; "throughout Europe" gives "Europe".
-- Exclude habitat types without a place name ("woods", "on rocks"), places of publication inside bibliographic citations, places that are part of an institution's name, adjectives such as "British", and places in titles or running heads.
+- Exclude habitat types without a place name ("woods", "on rocks"), places of publication inside bibliographic citations, places that are part of an institution's name, adjectives such as "British", places in titles or running heads, places in the title of a cited work ("his 'Birds of Norfolk'" gives no locality), and common nouns that point back to a place ("the island").
 
 date: the date of a particular event (a specimen collected, shot, captured or seen, a nest found, an arrival recorded).
-- Include the whole date expression as printed: "3rd May, 1890", "May 1890", "1890", "1880-85". A month without a year counts when it belongs to a particular event: "one was collected in April" gives "April".
-- Exclude publication dates and years in citations ("Pro. Zool. Soc., 1846", "published in April 1890"), general behaviour that is not one event ("arrives in April", "breeds in spring"), ages, durations and page numbers.
+- Include the whole date expression as printed: "3rd May, 1890", "May 1890", "1890", "1880-85". A month without a year counts when it belongs to a particular event: "one was collected in April" gives "April". A day number tied to something observed marks an event: "the immigration from the 12th to the 30th of October" gives "12th to the 30th of October".
+- Exclude publication dates and years in citations ("Pro. Zool. Soc., 1846", "published in April 1890"), general behaviour that is not one event ("arrives in April", "breeds in spring", "most numerous in October and November"), ages, durations and page numbers.
 
 person: any named person, in whatever role: collector or observer, cited author, naming authority (abbreviated or not).
 - Examples: "shot by Mr. J. Smith" gives "J. Smith"; "PFEIFFER, Pro. Zool. Soc." gives "PFEIFFER"; "Giusti's (1997)" gives "Giusti"; "(Linn.)" gives "Linn.".

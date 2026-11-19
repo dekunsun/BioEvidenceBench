@@ -103,9 +103,9 @@ between 2025 and 2026, and ADEPT's asset script stopped matching them).
 
 | Item | Value |
 |---|---|
-| `guide_version` | v0.5 (or later, if labelling adds rules) |
+| `guide_version` | v0.6 (or later, if labelling adds rules) |
 | Gold files | SHA-256 of `gold_mentions_*.csv`, `annotation_issues_*.csv`, `gold_links_*.csv` at the freeze |
-| `prompt_version` | `p3-guide-v0.5` |
+| `prompt_version` | `p4-guide-v0.6` |
 | Output schema | `SCHEMA_G0`, `SCHEMA_G1` in `src/prompts.py` at the freeze commit |
 | Scorer | `src/score.py` and `src/locate.py` at the freeze commit |
 | Linker | `src/link_taxa.py` at the freeze commit: GBIF `species/match` v1, name only (no rank or class hint), `clean_name` and `expand_abbreviation` as coded |
@@ -113,7 +113,7 @@ between 2025 and 2026, and ADEPT's asset script stopped matching them).
 
 **Fields.** The primary number is `ALL_PRIMARY` (taxon, person, locality, institution, date).
 `vernacular` is scored and reported in its own rows and never enters `ALL_PRIMARY` or the taxon F1.
-Section 1's Opus run is the `p3` run (the `p2` run is superseded).
+Section 1's Opus run is the `p4` run (the `p2` run is superseded; `p3` was run on dev pages only).
 
 **Ambiguous gold rows** (`adjudication = ambiguous`) are optional: no credit, no penalty, not a
 false negative. Their count is reported per book and field. All `UNCLEAR` rows must be adjudicated
@@ -135,7 +135,7 @@ counts and never added to species-level success. (c) The gold set is complete be
 double labelling of 5 test pages, adjudication of every disagreement and `UNCLEAR` row, then the
 gold files' SHA-256 are written here. Corrections after unsealing go through independent review
 without model answers, are logged in `gold/gold_changes.csv`, and scores are reported for both
-the frozen and the corrected gold. (d) The prompt is `p3-guide-v0.5`.
+the frozen and the corrected gold. (d) The prompt was `p3-guide-v0.5`; it is `p4-guide-v0.6` after the dev labelling (below).
 
 **Order of work (Gloria, 2026-11-18).** Dev results and this plan are reported first; the
 configuration is frozen; only then are the test pages run with the frozen prompt and unsealed.
@@ -246,6 +246,25 @@ share of gold-resolved Butler names lost at linking minus the share lost before 
 `greater_than 0` (paired page bootstrap). It was written after looking at GBIF's answers for
 names on the dev pages, which are not blind; it is tested on the test pages only. Every other
 linking number is descriptive.
+
+**After the dev labelling (2026-11-19).** Gloria labelled the six dev pages (alone first, then
+compared with an AI assistant) and decided the open cases; guide v0.6 and prompt `p4-guide-v0.6`
+state them (Latin plurals of genus names, lower-case vernacular names, one span for a place
+hierarchy, named regions, dated movements as events). The dev gold got three rows on her decision
+(`gold/gold_changes_gloria.csv`). Two things learnt on dev are fixed in advance for the test set:
+- *G0 alignment* (`locate.locate_all`): a G0 value has no position, so longer values are placed
+  first and each value takes its first whole-word occurrence not already taken by another
+  mention. Before this, `Jackdaw` could land inside `Jackdaws` and a person and a place both
+  called `Lilford` on the same occurrence, which cost G0 one false positive plus one false
+  negative each time with no extraction error. What stays ambiguous by nature (the same text in
+  a heading and in a running head) is left so; it is a cost of having no evidence and is reported
+  as such under RQ3.
+- *Span boundaries.* On dev the same model, with the same prompt, wrote
+  `Merida, Andes of Bolivia` as one mention in two of six runs and as two in four. At value level
+  that one difference is one false negative plus two false positives. Value level stays the
+  primary metric, and lenient level is always printed beside it, so that boundary conventions can
+  be told apart from misses.
+Dev scores with the p3 runs are in `results/analysis_dev_p3/` (tuning only, not blind).
 
 **Scope decision (Gloria, 2026-11-18): "学名关联评分纳入，其余三项放 V2".** Taxon-link scoring
 is in the frozen plan (above). Moved to V2 and **not** part of this pre-registration: the
