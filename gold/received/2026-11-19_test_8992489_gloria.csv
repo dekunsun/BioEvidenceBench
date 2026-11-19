@@ -1,0 +1,34 @@
+page_id,start,end,field,text,qualifier,notes,adjudication,guide_version
+8992489,27,38,taxon,FRINGILLIDÆ,,family name; actual scientific-content heading,,v0.8
+8992489,51,62,taxon,FRINGILLINÆ,,subfamily name; actual scientific-content heading,,v0.8
+8992489,69,78,vernacular,BRAMBLING,,actual species-account heading; first BRAMBLING is a running head and excluded,,v0.8
+8992489,81,105,taxon,Fringilla nontifringilla,,TRANSCRIPTION-DISCREPANCY: scan prints Fringilla montifringilla; expert transcription prints nontifringilla. Span follows current expert transcription pending versioned source correction.,,v0.8
+8992489,107,112,person,LINN.,,abbreviated authority; final period retained,,v0.8
+8992489,150,165,person,Howard Saunders,,quoted author,,v0.8
+8992489,180,186,locality,Faroes,,,,v0.8
+8992489,191,200,vernacular,Brambling,,,,v0.8
+8992489,285,289,vernacular,pine,,standalone common group in habitat description; v0.7 inclusion,,v0.8
+8992489,294,299,vernacular,birch,,standalone common group in habitat description; v0.7 inclusion,,v0.8
+8992489,314,320,locality,Norway,,,,v0.8
+8992489,328,346,locality,valley of the Amur,,named geographic part; include valley of the,,v0.8
+8992489,380,385,locality,Japan,,,,v0.8
+8992489,387,392,locality,China,,,,v0.8
+8992489,394,408,locality,"Northern
+India",,line-wrapped regional name; newline included literally,,v0.8
+8992489,410,420,locality,Asia Minor,,,,v0.8
+8992489,439,445,locality,Europe,,,,v0.8
+8992489,542,555,locality,Mediterranean,,UNCLEAR: whether full span should be African side of the Mediterranean (part-of-place) rather than Mediterranean only; v0.8 fallback shorter span,,v0.8
+8992489,587,594,locality,Belgium,,,,v0.8
+8992489,596,603,locality,Holland,,,,v0.8
+8992489,605,612,locality,Germany,,,,v0.8
+8992489,618,628,locality,Heligoland,,,,v0.8
+8992489,683,691,locality,Pyrenees,,UNCERTAIN-IN-SOURCE: nesting statements described as unconfirmed,,v0.8
+8992489,697,701,locality,Alps,,UNCERTAIN-IN-SOURCE: nesting statements described as unconfirmed,,v0.8
+8992489,710,718,locality,Ardennes,,UNCERTAIN-IN-SOURCE: nesting statements described as unconfirmed,,v0.8
+8992489,783,796,locality,Great Britain,,,,v0.8
+8992489,801,810,vernacular,Brambling,,,,v0.8
+8992489,1053,1061,locality,Scotland,,,,v0.8
+8992489,1070,1077,locality,England,,,,v0.8
+8992489,1089,1097,locality,Cornwall,,,,v0.8
+8992489,1103,1118,locality,west of England,,part-of-place region; contrast with relative north of York,,v0.8
+8992489,1128,1144,locality,south of Ireland,,part-of-place region; contrast with relative north of York,,v0.8
