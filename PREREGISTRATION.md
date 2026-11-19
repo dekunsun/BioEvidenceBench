@@ -305,9 +305,13 @@ answers were lost. Rules for the test run:
 - RQ4: a page and text version for which the second model has no answer is left out of the
   flagged-vs-unflagged comparison and counted, so a missing answer is not read as disagreement.
 
-**Still to build before the freeze commit**: the one-retry step in `run_extraction.py` and the
-RQ4 guard above. **Still to run**: the schema-enforced Gemini 4 Carbon dev run (approved, in
-progress). Everything else in this document is built.
+- RQ4 verdicts need something to compare: with fewer than 10 unflagged predictions in a book and
+  text version the flagged-vs-unflagged difference is reported as "too few to compare", not as
+  support. (On dev two "supports" verdicts rested on a single unflagged mention each.)
+
+**Still to build before the freeze commit**: the one-retry step in `run_extraction.py`, the RQ4
+guard for missing answers, and the minimum-count rule for RQ4 verdicts. **Still to run**: nothing on dev (the schema-enforced Gemini 4 Carbon dev run is complete, 48 of
+48 answers, `results/20261119-0236_gemini-4-carbon_dev_p4_sync_r1`). Everything else in this document is built.
 
 ## Deviations log
 
