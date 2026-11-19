@@ -260,6 +260,12 @@ def main() -> None:
     ap.add_argument("--run-id")
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--resume", metavar="RUN_ID",
+                    help="sync, DEV-only runs: continue a run that crashed part-way. Requests already in "
+                         "dev_outputs.jsonl are kept and not sent again; their cost counts toward --max-usd")
+    ap.add_argument("--unrecorded-usd", type=float, default=0.0,
+                    help="with --resume: allowance for requests of the crashed attempt that may have been "
+                         "billed but were never written to disk; counts toward --max-usd")
     ap.add_argument("--collect", metavar="RUN_ID", help="fetch results of a submitted batch")
     ap.add_argument("--reparse", metavar="RUN_ID",
                     help="Gemini runs: rebuild the open DEV records from their stored raw responses "
@@ -270,6 +276,17 @@ def main() -> None:
         return collect(a.collect)
     if a.reparse:
         return reparse(a.reparse)
+
+    old_cfg = None
+    if a.resume:
+        # Same settings as the crashed attempt, read from its config.json (not from the command line).
+        old_cfg = json.loads((RESULTS / a.resume / "config.json").read_text())
+        if old_cfg["mode"] != "sync":
+            sys.exit("--resume is for sync runs; use --collect for batches.")
+        a.provider, a.model, a.max_tokens = old_cfg["provider"], old_cfg["model"], old_cfg["max_tokens"]
+        a.pages, a.mode, a.run_id = old_cfg["pages"], "sync", a.resume
+        a.versions, a.conditions = ",".join(old_cfg["versions"]), ",".join(old_cfg["conditions"])
+        a.effort = old_cfg.get("effort", a.effort)
 
     gem = a.provider == "gemini"
     a.model = a.model or ("gemini-4-carbon" if gem else "claude-opus-5-5")
@@ -282,7 +299,7 @@ def main() -> None:
                           a.model, a.effort, a.max_tokens, a.provider)
     run_id = a.run_id or f"{datetime.now(timezone.utc):%Y%m%d-%H%M}_{a.model}_{a.pages.replace(',', '-')[:20]}_{a.mode}"
     run_dir = RESULTS / run_id
-    if run_dir.exists():
+    if run_dir.exists() and not a.resume:
         sys.exit(f"{run_dir} exists; choose another --run-id")
     cfg = {"run_id": run_id, "created_at": now(), "provider": a.provider, "model": a.model,
            "max_tokens": a.max_tokens, "mode": a.mode, "prompt_version": PROMPT_VERSION,
@@ -329,8 +346,30 @@ def main() -> None:
         if not key:
             sys.exit("Set EVAL_ANTHROPIC_API_KEY (environment settings), then start a new session.")
         client = anthropic.Anthropic(api_key=key, max_retries=4)
-    run_dir.mkdir(parents=True)
-    write_run_files(run_dir, cfg, reqs)
+    prior = []   # records of an earlier, crashed attempt of this run (--resume)
+    if a.resume:
+        # Refuse unless prompt, model settings and every input text are exactly those of the first attempt.
+        if any(r["split"] != "dev" for r in reqs):
+            sys.exit("--resume handles DEV-only runs (sealed test outputs are never read back).")
+        if old_cfg["system_sha256"] != cfg["system_sha256"] or old_cfg["prompt_version"] != PROMPT_VERSION:
+            sys.exit("Prompt changed since the first attempt; not resumed.")
+        if gem and old_cfg.get("generation_config") != cfg.get("generation_config"):
+            sys.exit("Generation settings changed since the first attempt; not resumed.")
+        old_in = pd.read_csv(run_dir / "inputs.csv").set_index("custom_id").input_sha256.to_dict()
+        if old_in != {r["custom_id"]: r["input_sha256"] for r in reqs}:
+            sys.exit("Requests or input hashes differ from the first attempt; not resumed.")
+        prior = [json.loads(line) for line in open(run_dir / "dev_outputs.jsonl", encoding="utf-8")]
+        done = {r["custom_id"] for r in prior}
+        reqs = [r for r in reqs if r["custom_id"] not in done]
+        old_cfg.setdefault("resumed", []).append(
+            {"at": now(), "already_done": len(done), "to_send": len(reqs), "max_usd": a.max_usd,
+             "unrecorded_usd_allowance": a.unrecorded_usd, "workers": a.workers,
+             "model_info_from_api": cfg.get("model_info_from_api")})
+        (run_dir / "config.json").write_text(json.dumps(old_cfg, indent=2), encoding="utf-8")
+        print(f"Resuming {run_id}: {len(done)} done, {len(reqs)} to send.")
+    else:
+        run_dir.mkdir(parents=True)
+        write_run_files(run_dir, cfg, reqs)
 
     if a.mode == "batch":
         if gem:
@@ -346,19 +385,36 @@ def main() -> None:
         return
 
     # Synchronous: stop starting new requests once the cap is reached.
-    sink, meta, spent = Sink(run_dir), [], [0.0]
+    sink, meta = Sink(run_dir), [meta_of(r) for r in prior]
+    spent = [sum(r["cost_usd"] for r in prior) + a.unrecorded_usd]
+    n_prior, n_new, dropped = len(prior), len(reqs), [0]
     api_errors = gb.api_errors() if gem else (anthropic.APIError,)
+
+    def call(r):
+        if gem:
+            return gb.record_from_response(r, gb.generate(client, a.model, r["params"]), a.model, batch=False)
+        return record_from_message(r, client.messages.create(**r["params"]), a.model, batch=False)
 
     def one(r):
         if spent[0] >= a.max_usd:
             return None
-        try:
-            if gem:
-                rec = gb.record_from_response(r, gb.generate(client, a.model, r["params"]), a.model, batch=False)
-            else:
-                rec = record_from_message(r, client.messages.create(**r["params"]), a.model, batch=False)
-        except api_errors as e:
-            rec = gb.error_record(r, a.model, f"{type(e).__name__}: {e}")   # same shape for both providers
+        rec = None
+        for attempt in range(3):
+            try:
+                rec = call(r)
+                break
+            except api_errors as e:   # the API answered with an error: recorded, not retried here
+                rec = gb.error_record(r, a.model, f"{type(e).__name__}: {e}")   # same shape for both providers
+                break
+            except Exception as e:    # connection dropped (e.g. httpx ReadError): the answer is lost
+                # The provider may still bill a request whose answer never arrived, so count
+                # this run's mean cost per answered request toward the cap before trying again.
+                dropped[0] += 1
+                done = [m["cost_usd"] for m in meta if m["cost_usd"]]
+                spent[0] += sum(done) / len(done) if done else 0.0
+                rec = gb.error_record(r, a.model, f"connection dropped 3 times; last: {type(e).__name__}: {e}")
+                if spent[0] >= a.max_usd:
+                    break
         spent[0] += rec["cost_usd"]
         return rec
 
@@ -370,8 +426,16 @@ def main() -> None:
             meta.append(meta_of(rec))
     sink.close()
     if spent[0] >= a.max_usd:
-        print(f"STOPPED at the cost cap (${spent[0]:.2f} >= ${a.max_usd:.2f}); {len(meta)}/{len(reqs)} done.")
-    finalize(run_dir, meta, a.model, batch=False, extra_cost=gb.cost_notes(a.model) if gem else None)
+        print(f"STOPPED at the cost cap (${spent[0]:.2f} >= ${a.max_usd:.2f}); "
+              f"{len(meta) - n_prior}/{n_new} done.")
+    extra = dict(gb.cost_notes(a.model)) if gem else {}
+    if a.resume or dropped[0]:
+        # usd_total covers answers on disk only; this says what else may have been billed.
+        extra["not_in_usd_total"] = {
+            "unrecorded_usd_allowance_first_attempt": a.unrecorded_usd,
+            "connections_dropped_and_retried": dropped[0],
+            "usd_counted_toward_cap": round(spent[0], 4)}
+    finalize(run_dir, meta, a.model, batch=False, extra_cost=extra or None)
 
 
 def collect(run_id: str) -> None:
