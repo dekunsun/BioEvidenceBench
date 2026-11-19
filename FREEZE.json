@@ -1,0 +1,84 @@
+{
+  "frozen_at": "2026-11-19T20:52:16+00:00",
+  "code_commit": "07457a5c0f263667e22d6269e33664cb4c187502",
+  "prompt_version": "p4-guide-v0.6",
+  "model_settings_from_dev_runs": {
+    "20261119-0113_claude-opus-5-5_dev_p4_r1": {
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "max_tokens": 16000,
+      "mode": "batch",
+      "prompt_version": "p4-guide-v0.6",
+      "system_sha256": "ad7f90379c0277d1c0199ee7b3c5ebc6dc71e6b590fa730f7c088e54e0f237c0",
+      "versions": [
+        "expert",
+        "legacy",
+        "modern_dots-mocr",
+        "modern_dots-mocr_plain"
+      ],
+      "conditions": [
+        "G0",
+        "G1"
+      ],
+      "anthropic_sdk": "2.10.0"
+    },
+    "20261119-0236_gemini-4-carbon_dev_p4_sync_r1": {
+      "provider": "gemini",
+      "model": "gemini-4-carbon",
+      "max_tokens": 32768,
+      "mode": "sync",
+      "prompt_version": "p4-guide-v0.6",
+      "system_sha256": "ad7f90379c0277d1c0199ee7b3c5ebc6dc71e6b590fa730f7c088e54e0f237c0",
+      "versions": [
+        "expert",
+        "legacy",
+        "modern_dots-mocr",
+        "modern_dots-mocr_plain"
+      ],
+      "conditions": [
+        "G0",
+        "G1"
+      ],
+      "generation_config": {
+        "response_mime_type": "application/json",
+        "response_json_schema": "prompts/schema_<G0|G1>.json, sent unchanged",
+        "max_output_tokens": 32768,
+        "thinking_config": null,
+        "thinking_note": "not sent: model default (docs: thinking_level medium)",
+        "temperature": null,
+        "temperature_note": "not sent: model default",
+        "top_p": null,
+        "top_k": null,
+        "seed": null
+      },
+      "api": "generateContent",
+      "api_version": "v1beta",
+      "google_genai_sdk": "3.6.1"
+    }
+  },
+  "sha256": {
+    "gold/gold_mentions_gloria.csv": "5a3e85b6dd328734bd1b0dd79669d155c6fb746c2e719948d4f9247e4f102670",
+    "gold/gold_mentions_gloria_test.csv": "c24a9bac66ee7508725640d429dd96fd2647593701de267541103b2d22bd00cd",
+    "gold/gold_links_gloria.csv": "052e317e35c6468272375383d7471bb9b5416929d46f00fa4030384111b1d736",
+    "gold/gold_links_gloria_names.csv": "c2b2af81344e71ad1c86ce4299db71b0428f2f16546007dea5a4682dcffe5a8b",
+    "gold/gold_changes_gloria.csv": "04d1d0114013d4902fc26801b5d6a7e54ee860f5cb3bd995d2ceba3bb9fb22d7",
+    "data/transcription_errata.csv": "eee1cc58aed137cac41440e8ac9bce4d131379fb0ff936638ab264d38b7d070b",
+    "data/sample_split.csv": "c60041392d794ff743eedbae486b88ecea33198b02420248d0913903495fe33a",
+    "data/sample/manifest.csv": "4fd2f42c2298a2d4fb70298695928c40bea77cdabf7797af4d687c7b9d6d6a9a",
+    "gold/gold_mentions_friend.csv": "ae5aa995d2e1e9d1d81387c92fc2fce470d7526fed715059a3f96cdf52d4b476",
+    "gold/agreement_adjudication_gloria.csv": "a30024c1655da465cd0b934cfe3d54301b2c3acc087a88aac5db4a2bba1184ee",
+    "ANNOTATION_GUIDE.md": "16450e824b397ec8fc976d28019ff209344df05287588675e9838d867ce7928b",
+    "PREREGISTRATION.md": "09c7fa5693081160e580b4fa8a437ed487dbd00e627bb5d2d6279bb21c38ce9e",
+    "src/prompts.py": "60c584d38bdd1bd09195eb977e340b944390f4725110003255bb4ae1a738cce8",
+    "src/score.py": "8a883deac63f32672447f05b94822d49f72fe675f1b31a608cf8271c087e7c8f",
+    "src/locate.py": "b6128e2a8708f446624c0136061b30060a2581f36285ca219d0a5b033d4f7ce0",
+    "src/analysis.py": "8f186aa1251fadf16f23aa1308db62ef7643d3453f7fa23e9844ecebf6ddfb4c",
+    "src/analyze.py": "33a403c76032776b59193e6fa5645e74e1182db5ee4394b958d2909b953a71f1",
+    "src/link_taxa.py": "90d9e453cbfb28203a182ef8e1e47f84dfd29630874b1dc9493815c43531f033",
+    "src/baseline_rules.py": "cb2663dc68a24f4a5f52dd50354b8f6e36608c83e80e834cbe23cad7d144226a",
+    "src/run_extraction.py": "a1d15bd6bcbf751597053b7732be3367a86fd8dda8d59fa21b16d939d6c3c174",
+    "src/gemini_backend.py": "c62d9a6aff9d0df6c8dc8e93454e6cb7c9d77b0ff1ea30d1444dc73b71cf2945",
+    "src/common.py": "12dd894fad34b282eb8de26097c2886caee1f3b591dd7fc010f54e32c6ee7d73"
+  },
+  "note": "Commit this file at once. src/freeze.py --verify lists anything changed since."
+}
