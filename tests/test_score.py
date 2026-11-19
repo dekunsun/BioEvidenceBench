@@ -121,3 +121,14 @@ def test_norm_value_folds_typographic_hyphen_and_apostrophe_but_not_letters():
     assert norm_value("WHITE‐ZONED ACHATINA") == norm_value("WHITE-ZONED ACHATINA")
     assert norm_value("PHILIPPI’S ACHATINA") == norm_value("PHILIPPI'S ACHATINA")
     assert norm_value("Achatinœ") != norm_value("Achatinæ")
+
+
+def test_gold_rows_from_a_later_guide_version_can_be_made_optional(tmp_path):
+    from score import load_gold
+    p = tmp_path / "g.csv"
+    p.write_text("page_id,start,end,field,text,qualifier,notes,adjudication,guide_version\n"
+                 "1,0,4,vernacular,moss,,,adjudicated,v0.7\n"
+                 "1,9,13,locality,Kent,,,,v0.6\n")
+    assert list(load_gold(p).adjudication) == ["adjudicated", ""]
+    assert list(load_gold(p, optional_after="v0.6").adjudication) == ["ambiguous", ""]
+    assert list(load_gold(p, optional_after="v0.7").adjudication) == ["adjudicated", ""]

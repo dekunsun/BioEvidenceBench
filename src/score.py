@@ -207,7 +207,17 @@ def bootstrap_f1(per_page: pd.DataFrame, level: str, rng: np.random.Generator) -
 
 
 # ---------------------------------------------------------------- main scoring
-def load_gold(path) -> pd.DataFrame:
+def _version(v: str) -> tuple:
+    """'v0.7' -> (0, 7); anything unreadable sorts first."""
+    nums = re.findall(r"\d+", v or "")
+    return tuple(int(n) for n in nums) if nums else (0,)
+
+
+def load_gold(path, optional_after: str | None = None) -> pd.DataFrame:
+    """optional_after: a guide version such as 'v0.6' (the one the prompt was written
+    from). Gold rows decided under a later guide version are then treated like
+    `ambiguous` rows: no credit, no penalty. Used for the second, sensitivity report:
+    a model was never told a rule that was found while labelling test pages."""
     g = pd.read_csv(path, dtype=str, keep_default_na=False)
     g["page_id"] = g.page_id.astype(int)
     g = g[g.field != "none"].copy()
@@ -219,6 +229,9 @@ def load_gold(path) -> pd.DataFrame:
     if "adjudication" not in g:
         g["adjudication"] = ""
     g["start"], g["end"] = g.start.astype(float).astype(int), g.end.astype(float).astype(int)
+    if optional_after and "guide_version" in g:
+        later = g.guide_version.map(_version) > _version(optional_after)
+        g.loc[later, "adjudication"] = "ambiguous"
     return g
 
 
@@ -241,13 +254,15 @@ def _to_int(x):
     return None if str(x).strip() == "" else int(float(x))
 
 
-def score_run(run_id: str, gold_path, split: str, issues_path=None) -> tuple[pd.DataFrame, pd.DataFrame]:
+def score_run(run_id: str, gold_path, split: str, issues_path=None,
+              optional_after: str | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Summary and per-page counts (see score_run_detail for the per-mention rows)."""
-    d = score_run_detail(run_id, gold_path, split, issues_path)
+    d = score_run_detail(run_id, gold_path, split, issues_path, optional_after)
     return d["summary"], d["by_page"]
 
 
-def score_run_detail(run_id: str, gold_path, split: str, issues_path=None) -> dict:
+def score_run_detail(run_id: str, gold_path, split: str, issues_path=None,
+                     optional_after: str | None = None) -> dict:
     """Score one run. Returns a dict of DataFrames:
       summary        one row per book x version x condition x field (+ ALL_PRIMARY)
       by_page        the same counts per page (input of every bootstrap)
@@ -260,7 +275,7 @@ def score_run_detail(run_id: str, gold_path, split: str, issues_path=None) -> di
     mentions["page_id"] = mentions.page_id.astype(int)
     cfg_path = run_dir / "config.json"
     cfg = json.loads(cfg_path.read_text()) if cfg_path.exists() else {}
-    gold = load_gold(gold_path)
+    gold = load_gold(gold_path, optional_after)
     issues = load_issues(issues_path)
     pages = pd.read_csv(DATA / "sample_split.csv").query("split == @split")[["PageID", "book"]]
     missing = set(pages.PageID) - set(pd.read_csv(gold_path).page_id.astype(int))
@@ -404,9 +419,11 @@ def main() -> None:
     ap.add_argument("--gold", required=True)
     ap.add_argument("--split", choices=["dev", "test"], default="dev")
     ap.add_argument("--issues", help="gold/annotation_issues_<labeller>.csv, if any")
+    ap.add_argument("--optional-after", metavar="GUIDE_VERSION",
+                    help="e.g. v0.6: gold rows decided under a later guide version become optional")
     a = ap.parse_args()
     for run_id in a.run:
-        summary, by_page = score_run(run_id, a.gold, a.split, a.issues)
+        summary, by_page = score_run(run_id, a.gold, a.split, a.issues, a.optional_after)
         summary.to_csv(RESULTS / run_id / f"scores_{a.split}.csv", index=False)
         by_page.to_csv(RESULTS / run_id / f"scores_{a.split}_by_page.csv", index=False)
         cols = ["book", "version", "condition", "field", "gold", "pred", "unaligned",

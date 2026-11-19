@@ -53,12 +53,15 @@ def main() -> None:
     ap.add_argument("--rule", help="run id of the rule baseline")
     ap.add_argument("--gold", required=True)
     ap.add_argument("--issues")
+    ap.add_argument("--optional-after", metavar="GUIDE_VERSION",
+                    help="sensitivity report: gold rows decided under a guide version later than this "
+                         "(e.g. v0.6, the prompt's) are optional. Use a different --name for it.")
     a = ap.parse_args()
 
     out = RESULTS / f"analysis_{a.name}"
     out.mkdir(exist_ok=True)
     runs = [r for r in (a.llm, a.llm2, a.rule) if r]
-    detail = {r: score_run_detail(r, a.gold, a.split, a.issues) for r in runs}
+    detail = {r: score_run_detail(r, a.gold, a.split, a.issues, a.optional_after) for r in runs}
     scores = pd.concat([d["summary"] for d in detail.values()], ignore_index=True)
     by_page = pd.concat([d["by_page"] for d in detail.values()], ignore_index=True)
     gold_out = pd.concat([d["gold_outcomes"] for d in detail.values()], ignore_index=True)
@@ -117,6 +120,7 @@ def main() -> None:
                      "primary_fields": PRIMARY_FIELDS, "separate_fields": SEPARATE_FIELDS,
                      "primary_level": "value", "locate_fuzzy_threshold": FUZZY_MIN,
                      "ambiguous_gold": "optional: no credit, no penalty",
+                     "gold_rows_optional_after_guide_version": a.optional_after,
                      "issue_regions": "predictions touching them are set aside"},
         "bootstrap": {"resamples": an.N_BOOT, "seed": an.SEED, "unit": "page", "interval": "percentile 95%",
                       "paired_for_differences": True},

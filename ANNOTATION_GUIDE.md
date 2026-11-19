@@ -2,9 +2,10 @@
 
 > 中文版在本文件下方：[跳到中文版](#标注规范中文版)。两个版本内容相同；如有出入，以英文版为准，并请指出来改正。
 
-**Version v0.6, 2026-11-19.** v0.5 was written before any labelling. v0.6 adds the rules Gloria
-decided after labelling the six dev pages (see the changelog); it changes no earlier rule. This
-version is the one the prompt (`p4`) and the gold set use. Later changes get a new version number and a changelog line; the gold CSV
+**Version v0.7, 2026-11-19.** v0.5 was written before any labelling. v0.6 adds the rules Gloria
+decided after labelling the six dev pages; v0.7 adds rules decided while labelling the test pages
+(see the changelog). Neither changes an earlier rule. The prompt (`p4`) was written from v0.6 and
+is **not** updated from rules found on test pages (section 4); the gold set uses the latest version. Later changes get a new version number and a changelog line; the gold CSV
 records the guide version of every row.
 
 ## Decision record (Gloria, 2026-11-18)
@@ -174,9 +175,15 @@ Label:
 - Capital or lower-case makes no difference: `pheasants`, `partridges`, `grouse`, `Owls` are
   labelled like `Jackdaw`. Any kind of organism counts, not only the group the book is about
   (`hares`, `chickens`).
+- Broad group names count as well: `insects`, `lizards`, `mice`. (v0.7)
+- A name that stands as its own word is labelled even when it refers to material or surroundings
+  rather than a living organism: `moss` in a nest, `a hawthorn hedge`. (v0.7)
 
 Do not label:
-- Generic words that name no particular kind: `bird`, `shell`, `species`, `the male`, `the young`.
+- Generic words that name no particular kind: `species`, `the male`, `the young`, and the book's
+  own subject word (`bird` in Butler, `shell` in Reeve).
+- A name that is only one part of a hyphenated compound for something else: `grass` in
+  `grass-stalks` (v0.7; the same idea as `Sparrow-Hawk` below).
 - Words for an age, a sex or a stage rather than a kind: `lambs`, `chicks`, `nestlings`, `the hen`.
 - Running heads and other page furniture (rule 2.0.4, the same rule as for `taxon`). A heading
   that opens a species account *is* labelled.
@@ -358,6 +365,12 @@ is one row in `gold/gold_changes_<labeller>.csv`. The assistant should not be a 
 evaluation; if it is, the report says so. (The six dev pages were made this way: labelled by
 Gloria first, then compared with an AI assistant.)
 
+**Rules found while labelling test pages.** A new rule goes into the guide (new version) and the
+rows it decides get that `guide_version`. It is **not** added to the prompt: the prompt is tuned
+on dev pages only, and a rule that exists because of a test page would leak the test set into it.
+Scores are reported twice, with all gold rows and with the rows decided under a later guide
+version than the prompt's treated as optional.
+
 **Agreement check.** A second labeller labels 5 test pages independently with this guide, without
 seeing Gloria's labels. We report span-level agreement per field (exact and overlap) and discuss
 every disagreement. A disagreement is settled by adjudication: the gold row is corrected, or
@@ -384,6 +397,7 @@ corrected gold. Scoring rules are never changed to improve a score.
 | v0.2 | 2026-11-18 | Entity types aligned with the NHM BHL prototype: `collector` replaced by `person` (every named person); new `institution`; `locality` covers every named place, not only occurrence statements. `date` unchanged. |
 | v0.3 | 2026-11-18 | Default answers for the span-edge questions found in the Opus p2 dev run: 2.0 on span edges; all titles treated like honorifics; part-of-place words stay in the locality span; `Mus. Adams` / `ADAMS, MS.` worked example. |
 | v0.4 | 2026-11-18 | Gloria's decisions on all nine questions. New field `vernacular`, scored separately (decision 1). New `qualifier` column for relative words (2). More in/out examples for place boundaries (7). Non-contiguous exception for names broken across lines (9). Fixed the `PFEIFFER … 1846` example and stated the mixed design: entity fields are general NER, `date` is event-bound; a month without a year counts when it belongs to a particular event. NHM statement reworded: types inspired by NHM, scores not comparable. Taxon linking split into resolution status, match method, matched rank and taxonomic status. New `adjudication` column and rules for unclear rows; dev and test discipline separated; freeze list before unsealing. No pages labelled yet. |
+| v0.7 | 2026-11-19 | Decided by Gloria on the first test page (8992328), `vernacular` only: broad group names are labelled (`insects`); only the book's own subject word is generic; a name standing as its own word is labelled even when it means material (`moss`); a name that is one part of a hyphenated compound is not (`grass` in `grass-stalks`). Section 4: rules found on test pages go into the guide but not into the prompt; scores are reported with and without the rows they decide. |
 | v0.6 | 2026-11-19 | Rules decided by Gloria after labelling the six dev pages; no earlier rule changes. `taxon`: Latin plurals of genus names (`Bulimi`, `Achatinæ`) and a genus in citation brackets (`(Glandina,)`) are labelled. `vernacular`: case makes no difference; age, sex and stage words are out. `locality`: one span for comma-separated names running from narrow to wide, separate mentions for lists (decided from the wording, not from looked-up geography); named regions (`Continent`, `Old World`); only natural-feature words are part of a place; places in titles of cited works and common nouns (`the island`) are out. `date`: a day number tied to a recorded movement is an event (`12th to the 30th of October`, `NO-YEAR`). Section 4: `UNCLEAR` vs `UNCERTAIN-IN-SOURCE`; a test page is labelled alone and saved before any comparison. Dev gold: three rows added on Gloria's decision (`gold/gold_changes_gloria.csv`). |
 | v0.5 | 2026-11-18 | Four changes asked for by Gloria. One heading rule for all fields (2.0.4): account headings and real captions are labelled, running heads and bare plate labels are not; `taxon` and `vernacular` now agree. Non-contiguous text makes no gold row; it is recorded in the annotation issues file and the scorer ignores those regions. Linking: new `printed_rank` and status `partial`; a genus-only match for a species name is never counted as species-level correct. Gold set (double labelling, adjudication, freeze) is finished before unsealing; later corrections go through independent review and `gold/gold_changes.csv`. No pages labelled yet. |
 
@@ -391,7 +405,7 @@ corrected gold. Scoring rules are never changed to improve a score.
 
 # 标注规范（中文版）
 
-**版本 v0.6，2026-11-19。** v0.5 写于任何标注开始之前。v0.6 加入 Gloria 标完 6 页开发集后决定的规则（见变更记录），没有改动之前的任何规则。提示词（`p4`）和 gold set 都以这一版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
+**版本 v0.7，2026-11-19。** v0.5 写于任何标注开始之前。v0.6 加入 Gloria 标完 6 页开发集后决定的规则；v0.7 加入标测试页过程中决定的规则（见变更记录）。两版都没有改动之前的规则。提示词（`p4`）按 v0.6 写成，**不会**根据测试页上发现的规则更新（第 4 节）；gold set 以最新版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
 
 ## 决定记录（Gloria，2026-11-18）
 
@@ -500,9 +514,12 @@ corrected gold. Scoring rules are never changed to improve a score.
 - 每一次出现都标，和其他实体字段一样。
 - 不带开头的冠词：`THE CHASTE BULIMUS` 标成 `CHASTE BULIMUS`。
 - 大写小写都一样：`pheasants`、`partridges`、`grouse`、`Owls` 和 `Jackdaw` 一样要标。任何生物的种类名都算，不限于这本书讲的类群（`hares`、`chickens`）。
+- 大的类群名也算：`insects`、`lizards`、`mice`。（v0.7）
+- 独立成词的名字，即使指的是材料或环境而不是活的生物，也要标：巢里的 `moss`、`a hawthorn hedge`。（v0.7）
 
 不标：
-- 不指特定类群的泛称：`bird`、`shell`、`species`、`the male`、`the young`。
+- 不指特定类群的泛称：`species`、`the male`、`the young`，以及这本书自己的主题词（Butler 里的 `bird`，Reeve 里的 `shell`）。
+- 只是连字符复合词一部分、而复合词指的是别的东西的名字：`grass-stalks` 里的 `grass`（v0.7；和下面 `Sparrow-Hawk` 是同一个道理）。
 - 表示年龄、性别或发育阶段而不是种类的词：`lambs`、`chicks`、`nestlings`、`the hen`。
 - 页眉等版面元素（规则 2.0.4，和 `taxon` 是同一条规则）。物种条目开头的标题*要*标。
 - 另一个名字内部的修饰成分（`Sparrow-Hawk` 是一个名字，不是 `Sparrow` 加 `Hawk`）。
@@ -630,6 +647,8 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 
 **测试页的工作顺序。** Gloria 先独自标完一页并保存文件（提交一次），之后才看别人对这一页的标签，不管是人还是 AI 助手。之后的对比只是第二意见：它可以提出问题，由它引起的每一处改动都在 `gold/gold_changes_<标注人>.csv` 里记一行。这个助手不应该是被评测的模型；如果是，报告里要写明。（6 页开发集就是这样做的：Gloria 先标，再和 AI 助手对比。）
 
+**标测试页时发现的规则。** 新规则写进规范（出新版本），由它决定的行填这个 `guide_version`。它**不**加进提示词：提示词只在开发集上调，因为某一页测试页才有的规则会把测试集的信息泄漏进提示词。分数报告两遍：一遍用全部 gold 行，一遍把规范版本晚于提示词的那些行当作可选。
+
 **一致性检查。** 第二位标注人按这份规范独立标注 5 页测试页，不看 Gloria 的标签。我们按字段报告片段级的一致性（完全一致和重叠两种口径），并逐条讨论每一处分歧。分歧通过裁定解决：改正 gold 的那一行，或者标成 `ambiguous`，或者给规范补一条更清楚的规则。
 
 **gold set 要在解封之前全部完成。** 顺序是固定的：（1）Gloria 标注；（2）第二位标注人标 5 页测试页；（3）所有分歧和所有 `UNCLEAR` 行都裁定完；（4）冻结 gold 文件（把它们的 SHA-256 写进 `PREREGISTRATION.md`）；（5）这之后才解封测试输出。和 gold set 一起冻结的还有：`guide_version`、`prompt_version`、输出格式（schema）、评分代码（提交号），以及每个模型的配置。
@@ -644,5 +663,6 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 | v0.2 | 2026-11-18 | 实体类型对齐 NHM 的 BHL 原型：`collector` 改为 `person`（所有有名字的人）；新增 `institution`；`locality` 覆盖所有有名字的地点，不只是发生记录。`date` 不变。 |
 | v0.3 | 2026-11-18 | 为 Opus p2 开发集结果里发现的片段边界问题写默认答案：2.0 片段边界；所有头衔按敬称处理；表示地点一部分的词留在地点片段里；增加 `Mus. Adams` / `ADAMS, MS.` 示例。 |
 | v0.4 | 2026-11-18 | Gloria 对九个问题的决定。新增字段 `vernacular`，单独评分（决定 1）。新增 `qualifier` 列记录相对位置词（2）。地点边界增加更多正反例（7）。跨行名字增加"文字不连续"的例外（9）。修正 `PFEIFFER … 1846` 的例子，并写明混合设计：实体字段是一般的命名实体识别，`date` 和事件绑定；属于一次具体事件、没有年份的月份也算。NHM 的说法改为：类型参考 NHM，分数不可比。学名关联拆成解析状态、匹配方式、匹配等级和分类学状态。新增 `adjudication` 列和不清楚行的处理规则；开发页和测试页的纪律分开；解封前的冻结清单。尚未标注任何页面。 |
+| v0.7 | 2026-11-19 | Gloria 在第一页测试页（8992328）上的决定，只涉及 `vernacular`：大的类群名要标（`insects`）；只有这本书自己的主题词算泛称；独立成词的名字即使指材料也标（`moss`）；只是连字符复合词一部分的不标（`grass-stalks` 里的 `grass`）。第 4 节：测试页上发现的规则写进规范但不进提示词；分数按是否包含这些行各报告一遍。 |
 | v0.6 | 2026-11-19 | Gloria 标完 6 页开发集后决定的规则；之前的规则不变。`taxon`：属名的拉丁复数（`Bulimi`、`Achatinæ`）和引用括号里的属名（`(Glandina,)`）要标。`vernacular`：不分大小写；年龄、性别、发育阶段词不标。`locality`：逗号隔开、由小到大的地名算一个片段，并列列举的算多个（按原文写法判断，不查地理）；当专名用的区域名（`Continent`、`Old World`）要标；只有自然地貌词算地点的一部分；被引用著作标题里的地名和普通名词（`the island`）不标。`date`：和一次有记录的迁移连在一起的具体的日算事件（`12th to the 30th of October`，`NO-YEAR`）。第 4 节：区分 `UNCLEAR` 和 `UNCERTAIN-IN-SOURCE`；测试页先独自标完并保存，再做任何对比。开发集 gold：按 Gloria 的决定加了三行（`gold/gold_changes_gloria.csv`）。 |
 | v0.5 | 2026-11-18 | Gloria 提出的四处修改。所有字段用同一条标题规则（2.0.4）：条目标题和真正的图注要标，页眉和光秃秃的图版编号不标；`taxon` 和 `vernacular` 现在一致。文字不连续的情况不写 gold 行，记到标注问题表里，评分时忽略这些区域。学名关联新增 `printed_rank` 和状态 `partial`；物种名只匹配到属，绝不算物种级正确。gold set（双人标注、裁定、冻结）要在解封之前完成；之后的更正要经过独立审核并记入 `gold/gold_changes.csv`。尚未标注任何页面。 |

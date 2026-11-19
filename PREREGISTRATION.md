@@ -103,7 +103,7 @@ between 2025 and 2026, and ADEPT's asset script stopped matching them).
 
 | Item | Value |
 |---|---|
-| `guide_version` | v0.6 (or later, if labelling adds rules) |
+| `guide_version` | gold: v0.7 or later (labelling may add rules); prompt: written from v0.6 and not changed by rules found on test pages |
 | Gold files | SHA-256 of `gold_mentions_*.csv`, `annotation_issues_*.csv`, `gold_links_*.csv` at the freeze |
 | `prompt_version` | `p4-guide-v0.6` |
 | Output schema | `SCHEMA_G0`, `SCHEMA_G1` in `src/prompts.py` at the freeze commit |
@@ -275,6 +275,16 @@ Dev scores are in `results/analysis_dev_p3/` and `results/analysis_dev_p4/` (tun
 blind). With p4, value F1 of the primary fields on the expert text is 1.000 in all three repeats
 for both books: the prompt and the guide were written from these six pages, so the dev set has
 nothing left to tune on and says nothing about performance elsewhere. Only the test pages do.
+
+**Guide rules found on test pages (from 2026-11-19).** Labelling a test page can show a gap in the
+guide. The rule is added to the guide (v0.7 onwards) and the gold rows it decides carry that
+`guide_version`, but the prompt stays `p4-guide-v0.6`: it was tuned on dev pages only, and no rule
+that exists because of a test page is passed to a model. Every score is therefore reported twice:
+with all gold rows, and with the rows whose `guide_version` is later than v0.6 treated as optional
+(no credit, no penalty), so that "the model was never told this rule" can be told apart from "the
+model got it wrong". So far the later rules concern `vernacular` only, which is outside the
+primary F1. Test labels are archived as received in `gold/received/` before any comparison or
+adjudication; test-page gold is kept in `gold/gold_mentions_gloria_test.csv`.
 
 **Scope decision (Gloria, 2026-11-18): "学名关联评分纳入，其余三项放 V2".** Taxon-link scoring
 is in the frozen plan (above). Moved to V2 and **not** part of this pre-registration: the
