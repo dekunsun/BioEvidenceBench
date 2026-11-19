@@ -1,0 +1,1509 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score
+8992601,expert,G1,0,person,9.0,Stevenson,False,Stevenson,exact,269,278,100.0
+8992601,expert,G1,1,person,9.0,St. John,False,St. John,exact,310,318,100.0
+8992601,expert,G1,2,vernacular,11.0,grouse,False,grouse,exact,484,490,100.0
+8992601,expert,G1,3,vernacular,12.0,partridges,False,partridges,exact,492,502,100.0
+8992601,expert,G1,4,vernacular,12.0,hares,False,hares,exact,504,509,100.0
+8992601,expert,G1,5,vernacular,14.0,wild duck,False,wild duck,exact,698,707,100.0
+8992601,expert,G1,6,vernacular,14.0,pheasant,False,pheasant,exact,709,717,100.0
+8992601,expert,G1,7,vernacular,15.0,Hooded Crow,False,Hooded Crow,exact,756,767,100.0
+8992601,expert,G1,8,vernacular,17.0,Peewits,False,Peewits,exact,921,928,100.0
+8992601,expert,G1,9,vernacular,17.0,Gulls,False,Gulls,exact,930,935,100.0
+8992601,expert,G1,10,vernacular,17.0,Redshanks,False,Redshanks,exact,937,946,100.0
+8992601,expert,G1,11,vernacular,18.0,Crow,False,Crow,exact,980,984,100.0
+8992601,expert,G1,12,vernacular,18.0,hoody,False,hoody,exact,1031,1036,100.0
+8992601,expert,G1,13,vernacular,19.0,ducks,False,ducks,exact,1065,1070,100.0
+8992601,expert,G1,14,vernacular,20.0,eagle,False,eagle,exact,1168,1173,100.0
+8992601,expert,G1,15,vernacular,20.0,peregrine falcon,False,peregrine falcon,exact,1175,1191,100.0
+8992601,expert,G1,16,vernacular,21.0,osprey,False,osprey,exact,1196,1202,100.0
+8992601,expert,G1,17,vernacular,24.0,Hoodies,False,Hoodies,exact,1351,1358,100.0
+8992601,expert,G1,18,date,24.0,12th to the 30th of October,False,12th to the 30th of October,exact,1368,1395,100.0
+8992601,expert,G1,19,person,24.0,T. H. Nelson,False,T. H. Nelson,exact,1405,1417,100.0
+8992601,expert,G1,20,person,25.0,F. Pilling,False,F. Pilling,exact,1423,1433,100.0
+8992601,expert,G1,21,vernacular,25.0,Hoodies,False,Hoodies,exact,1448,1455,100.0
+8992601,expert,G1,22,person,26.0,Seebohm,False,Seebohm,exact,1557,1564,100.0
+8992601,expert,G1,23,person,27.0,Gätke,False,Gätke,exact,1599,1604,100.0
+8992601,expert,G1,24,locality,33.0,Heligoland,False,Heligoland,exact,2107,2117,100.0
+8992601,expert,G1,25,locality,39.0,Weser,False,Weser,exact,2521,2526,100.0
+8992601,expert,G1,26,locality,39.0,Bremerhaven,False,Bremerhaven,exact,2547,2558,100.0
+8992601,expert,G1,27,person,43.0,Gätke,False,Gätke,exact,2751,2756,100.0
+8992612,legacy,G0,0,taxon,,Aluudida,False,Aluudida,exact,38,46,100.0
+8992612,legacy,G0,1,locality,,Old World,False,Old World,exact,61,70,100.0
+8992612,legacy,G0,2,locality,,North America,False,North America,exact,113,126,100.0
+8992612,legacy,G0,3,person,,Jerdon,False,Jerdon,exact,139,145,100.0
+8992612,legacy,G0,4,locality,,j\Iala3-ana,False,j\Iala3-ana,exact,199,210,100.0
+8992612,legacy,G0,5,locality,,Australia,False,Australia,exact,215,224,100.0
+8992612,legacy,G0,6,taxon,,ALAUDID.E,False,ALAUDID.E,exact,239,248,100.0
+8992612,legacy,G0,7,vernacular,,Sky-Lark,False,Sky-Lark,exact,258,266,100.0
+8992612,legacy,G0,8,taxon,,Alauda iDVCiisis,False,Alauda iDVCiisis,exact,272,288,100.0
+8992612,legacy,G0,9,person,,LiNN.,False,LiNN.,exact,290,295,100.0
+8992612,legacy,G0,10,locality,,Europe,False,Europe,exact,355,361,100.0
+8992612,legacy,G0,11,locality,,Scandinavia,False,Scandinavia,exact,377,388,100.0
+8992612,legacy,G0,12,locality,,North Africa,False,North Africa,exact,425,437,100.0
+8992612,legacy,G0,13,locality,,slopes of the Atlas Mountains,False,slopes of the Atlas Mountains,exact,481,510,100.0
+8992612,legacy,G0,14,locality,,Russia,False,Russia,exact,535,541,100.0
+8992612,legacy,G0,15,locality,,Siberia,False,Siberia,exact,546,553,100.0
+8992612,legacy,G0,16,locality,,Japan,False,Japan,exact,581,586,100.0
+8992612,legacy,G0,17,locality,,valley of the Amoor,False,"valley of the 
+
+ Amoor",layout_variant,592,614,100.0
+8992612,legacy,G0,18,locality,,South-east IMongolia,False,South-east IMongolia,exact,616,636,100.0
+8992612,legacy,G0,19,locality,,Turkestan,False,Turkestan,exact,638,647,100.0
+8992612,legacy,G0,20,locality,,Persia,False,Persia,exact,652,658,100.0
+8992612,legacy,G0,21,locality,,China,False,China,exact,680,685,100.0
+8992612,legacy,G0,22,locality,,North-west India,False,North-west India,exact,690,706,100.0
+8992612,legacy,G0,23,locality,,Afghanistan,False,Afghanistan,exact,708,719,100.0
+8992612,legacy,G0,24,locality,,Persia,False,Persia,exact,721,727,100.0
+8992612,legacy,G0,25,locality,,Asia Minor,False,Asia Minor,exact,729,739,100.0
+8992612,legacy,G0,26,locality,,Palestine,False,Palestine,exact,741,750,100.0
+8992612,legacy,G0,27,locality,,Egypt,False,Egypt,exact,755,760,100.0
+8992612,legacy,G0,28,locality,,Madeira,False,Madeira,exact,789,796,100.0
+8992612,legacy,G0,29,locality,,Greenland,False,Greenland,exact,833,842,100.0
+8992612,legacy,G0,30,locality,,United States,False,United States,exact,884,897,100.0
+8992612,legacy,G0,31,locality,,New Zealand,False,New Zealand,exact,900,911,100.0
+8992612,legacy,G0,32,locality,,Australia,False,Australia,exact,916,925,100.0
+8992612,legacy,G0,33,locality,,Great Britain,False,Great Britain,exact,942,955,100.0
+8992612,legacy,G0,34,locality,,Ireland,False,Ireland,exact,960,967,100.0
+8992612,legacy,G0,35,vernacular,,Sky-Lark,False,Sky-Lark,exact,973,981,100.0
+8992612,legacy,G0,36,vernacular,,Sky-Lark,False,Sky-Lark,exact,1101,1109,100.0
+8992612,legacy,G0,37,taxon,,A. dulcivox,False,A. dulcivox,exact,1174,1185,100.0
+8992612,legacy,G0,38,taxon,,A. japonica,False,A. japonica,exact,1187,1198,100.0
+8992612,legacy,G0,39,taxon,,A. caiitarclla,False,A. caiitarclla,exact,1200,1214,100.0
+8992612,legacy,G0,40,taxon,,A. liopus,False,A. liopus,exact,1216,1225,100.0
+8992612,legacy,G0,41,taxon,,A. blakistoni,False,"A. blak- 
+
+ istoni",layout_variant,1227,1245,100.0
+8992612,legacy,G0,42,taxon,,A. giilgiila,False,A. giilgiila,exact,1247,1259,100.0
+8992612,legacy,G0,43,taxon,,A. australis,False,A. australis,exact,1261,1273,100.0
+8992612,legacy,G0,44,taxon,,A. axlivox,False,A. axlivox,exact,1275,1285,100.0
+8992612,legacy,G0,45,taxon,,A. ivai/crsi,False,A. ivai/crsi,exact,1287,1299,100.0
+8992612,legacy,G0,46,taxon,,A. sala,False,A. sala,exact,1306,1313,100.0
+8992612,legacy,G0,47,vernacular,,Sky-Lark,False,Sky-Lark,exact,1446,1454,100.0
+8992612,legacy,G0,48,locality,,Bermudas,False,Bermudas,exact,1727,1735,100.0
+8992612,legacy,G0,49,date,,1S50,False,1S50,exact,1740,1744,100.0
+8967147,expert,G0,0,institution,,Mus. Cuming,False,Mus. Cuming,exact,36,47,100.0
+8967147,expert,G0,1,taxon,,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,51,71,100.0
+8967147,expert,G0,2,vernacular,,PHILIPPI’S ACHATINA,False,PHILIPPI’S ACHATINA,exact,402,421,100.0
+8967147,expert,G0,3,person,,PFEIFFER,False,PFEIFFER,exact,801,809,100.0
+8967147,expert,G0,4,taxon,,Glandina,False,Glandina,exact,812,820,100.0
+8967147,expert,G0,5,locality,,Jamaica,False,Jamaica,exact,855,862,100.0
+8967147,expert,G0,6,person,,Gosse,False,Gosse,exact,864,869,100.0
+8967147,expert,G0,7,institution,,Mus. Dennison,False,Mus. Dennison,exact,1062,1075,100.0
+8967147,expert,G0,8,taxon,,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1079,1098,100.0
+8967147,expert,G0,9,vernacular,,NECKLACE‐BOUND ACHATINA,False,NECKLACE‐BOUND ACHATINA,exact,1385,1408,100.0
+8967147,expert,G0,10,person,,PFEIFFER,False,PFEIFFER,exact,1703,1711,100.0
+8967147,expert,G0,11,taxon,,Glandina,False,Glandina,exact,1714,1722,100.0
+8967147,expert,G0,12,locality,,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1761,1794,100.0
+8967147,expert,G0,13,person,,Lattre,False,Lattre,exact,1796,1802,100.0
+8967147,expert,G0,14,institution,,Mus. Cuming,False,Mus. Cuming,exact,1956,1967,100.0
+8967147,expert,G0,15,taxon,,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,1971,1987,100.0
+8967147,expert,G0,16,vernacular,,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2197,2218,100.0
+8967147,expert,G0,17,taxon,,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2433,2459,100.0
+8967147,expert,G0,18,person,,Férussac,False,Férussac,exact,2461,2469,100.0
+8967147,expert,G0,19,taxon,,Glandina oleacea,False,Glandina oleacea,exact,2491,2507,100.0
+8967147,expert,G0,20,person,,Beck,False,Beck,exact,2509,2513,100.0
+8967147,expert,G0,21,locality,,Cuba,False,Cuba,exact,2521,2525,100.0
+8967147,expert,G0,22,institution,,Mus. Cuming,False,Mus. Cuming,exact,2642,2653,100.0
+8967147,expert,G0,23,taxon,,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2657,2677,100.0
+8967147,expert,G0,24,vernacular,,WHITE‐ZONED ACHATINA,False,WHITE‐ZONED ACHATINA,exact,2990,3010,100.0
+8967147,expert,G0,25,person,,SOWERBY,False,SOWERBY,exact,3317,3324,100.0
+8967147,expert,G0,26,taxon,,Voluta leucozonias,False,Voluta leucozonias,exact,3351,3369,100.0
+8967147,expert,G0,27,person,,Walch,False,Walch,exact,3371,3376,100.0
+8967147,expert,G0,28,taxon,,Achatina albolineata,False,Achatina albolineata,exact,3424,3444,100.0
+8967147,expert,G0,29,person,,Lamarck,False,Lamarck,exact,3446,3453,100.0
+8967147,expert,G0,30,taxon,,"Helix (Cochlicopa,) leucozonias",False,"Helix (Cochlicopa,) leucozonias",exact,3455,3486,100.0
+8967147,expert,G0,31,person,,Férussac,False,Férussac,exact,3488,3496,100.0
+8967147,expert,G0,32,taxon,,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3498,3520,100.0
+8967147,expert,G0,33,person,,Jan,False,Jan,exact,3522,3525,100.0
+8967147,expert,G0,34,taxon,,Glandina leucozonias,False,Glandina leucozonias,exact,3527,3547,100.0
+8967147,expert,G0,35,person,,Beck,False,Beck,exact,3549,3553,100.0
+8967147,expert,G0,36,locality,,Martinique,False,Martinique,exact,3561,3571,100.0
+8967147,expert,G0,37,person,,Walch,False,Walch,exact,3952,3957,100.0
+8967147,expert,G0,38,person,,Gmelin,False,Gmelin,exact,3959,3965,100.0
+8967147,expert,G0,39,person,,Dillwyn,False,Dillwyn,exact,3971,3978,100.0
+8967047,modern_dots-mocr,G1,0,institution,5.0,Mus. Taylor,False,Mus. Taylor,exact,43,54,100.0
+8967047,modern_dots-mocr,G1,1,taxon,7.0,BULIMUS BIVITTATUS,False,BULIMUS BIVITTATUS,exact,60,78,100.0
+8967047,modern_dots-mocr,G1,2,vernacular,9.0,TWO-FILLETED BULIMUS,False,TWO-FILLETED BULIMUS,exact,338,358,100.0
+8967047,modern_dots-mocr,G1,3,person,11.0,SOWERBY,False,SOWERBY,exact,624,631,100.0
+8967047,modern_dots-mocr,G1,4,locality,13.0,Brazil,False,Brazil,exact,675,681,100.0
+8967047,modern_dots-mocr,G1,5,taxon,15.0,B. auris-leporis,False,B. auris-leporis,exact,754,770,100.0
+8967047,modern_dots-mocr,G1,6,institution,17.0,Mus. Taylor,False,Mus. Taylor,exact,791,802,100.0
+8967047,modern_dots-mocr,G1,7,taxon,19.0,BULIMUS MULIEBRIS,False,BULIMUS MULIEBRIS,exact,808,825,100.0
+8967047,modern_dots-mocr,G1,8,vernacular,21.0,EFFEMINATE BULIMUS,False,EFFEMINATE BULIMUS,exact,1085,1103,100.0
+8967047,modern_dots-mocr,G1,9,locality,23.0,New Granada,False,New Granada,exact,1378,1389,100.0
+8967047,modern_dots-mocr,G1,10,institution,27.0,Mus. Cuming,False,Mus. Cuming,exact,1470,1481,100.0
+8967047,modern_dots-mocr,G1,11,taxon,29.0,BULIMUS BOLIVIANUS,False,BULIMUS BOLIVIANUS,exact,1487,1505,100.0
+8967047,modern_dots-mocr,G1,12,vernacular,31.0,BOLIVIAN BULIMUS,False,BOLIVIAN BULIMUS,exact,1855,1871,100.0
+8967047,modern_dots-mocr,G1,13,person,35.0,PFEIFFER,False,PFEIFFER,exact,2217,2225,100.0
+8967047,modern_dots-mocr,G1,14,locality,37.0,"Merida, Andes of Bolivia",False,"Merida, Andes of Bolivia",exact,2268,2292,100.0
+8967047,modern_dots-mocr,G1,15,person,39.0,Pfeiffer,False,Pfeiffer,exact,2375,2383,100.0
+8967047,modern_dots-mocr,G1,16,taxon,39.0,B. annulatus,False,B. annulatus,exact,2454,2466,100.0
+8967047,modern_dots-mocr,G1,17,institution,41.0,Mus. Taylor,False,Mus. Taylor,exact,2597,2608,100.0
+8967047,modern_dots-mocr,G1,18,taxon,43.0,BULIMUS PATRICIUS,False,BULIMUS PATRICIUS,exact,2614,2631,100.0
+8967047,modern_dots-mocr,G1,19,vernacular,45.0,PATRICIAN BULIMUS,False,PATRICIAN BULIMUS,exact,2910,2927,100.0
+8967047,modern_dots-mocr,G1,20,locality,49.0,New Granada,False,New Granada,exact,3257,3268,100.0
+8967047,modern_dots-mocr,G1,21,institution,51.0,Mus. Taylor,False,Mus. Taylor,exact,3361,3372,100.0
+8967047,modern_dots-mocr,G1,22,taxon,53.0,BULIMUS SPECTATUS,False,BULIMUS SPECTATUS,exact,3378,3395,100.0
+8967047,modern_dots-mocr,G1,23,vernacular,55.0,CHOICE BULIMUS,False,CHOICE BULIMUS,exact,3714,3728,100.0
+8992612,modern_dots-mocr,G0,0,taxon,,Alaudidæ,False,Alaudidæ,exact,17,25,100.0
+8992612,modern_dots-mocr,G0,1,locality,,Old World,False,Old World,exact,41,50,100.0
+8992612,modern_dots-mocr,G0,2,locality,,North America,False,North America,exact,89,102,100.0
+8992612,modern_dots-mocr,G0,3,person,,Jerdon,False,Jerdon,exact,115,121,100.0
+8992612,modern_dots-mocr,G0,4,locality,,Malayana,False,Malayana,exact,172,180,100.0
+8992612,modern_dots-mocr,G0,5,locality,,Australia,False,Australia,exact,185,194,100.0
+8992612,modern_dots-mocr,G0,6,taxon,,ALAUDIDÆ,False,ALAUDIDÆ,exact,206,214,100.0
+8992612,modern_dots-mocr,G0,7,vernacular,,SKY-LARK,False,SKY-LARK,exact,225,233,100.0
+8992612,modern_dots-mocr,G0,8,taxon,,Alauda arvensis,False,Alauda arvensis,exact,237,252,100.0
+8992612,modern_dots-mocr,G0,9,person,,LINN.,False,LINN.,exact,254,259,100.0
+8992612,modern_dots-mocr,G0,10,locality,,Europe,False,Europe,exact,317,323,100.0
+8992612,modern_dots-mocr,G0,11,locality,,Scandinavia,False,Scandinavia,exact,336,347,100.0
+8992612,modern_dots-mocr,G0,12,locality,,North Africa,False,North Africa,exact,384,396,100.0
+8992612,modern_dots-mocr,G0,13,locality,,slopes of the Atlas Mountains,False,slopes of the Atlas Mountains,exact,437,466,100.0
+8992612,modern_dots-mocr,G0,14,locality,,Russia,False,Russia,exact,488,494,100.0
+8992612,modern_dots-mocr,G0,15,locality,,Siberia,False,Siberia,exact,499,506,100.0
+8992612,modern_dots-mocr,G0,16,locality,,Japan,False,Japan,exact,534,539,100.0
+8992612,modern_dots-mocr,G0,17,locality,,valley of the Amoor,False,valley of the Amoor,exact,545,564,100.0
+8992612,modern_dots-mocr,G0,18,locality,,South-east Mongolia,False,South-east Mongolia,exact,566,585,100.0
+8992612,modern_dots-mocr,G0,19,locality,,Turkestan,False,Turkestan,exact,587,596,100.0
+8992612,modern_dots-mocr,G0,20,locality,,Persia,False,Persia,exact,601,607,100.0
+8992612,modern_dots-mocr,G0,21,locality,,China,False,China,exact,629,634,100.0
+8992612,modern_dots-mocr,G0,22,locality,,North-west India,False,North-west India,exact,636,652,100.0
+8992612,modern_dots-mocr,G0,23,locality,,Afghanistan,False,Afghanistan,exact,654,665,100.0
+8992612,modern_dots-mocr,G0,24,locality,,Persia,False,Persia,exact,667,673,100.0
+8992612,modern_dots-mocr,G0,25,locality,,Asia Minor,False,Asia Minor,exact,675,685,100.0
+8992612,modern_dots-mocr,G0,26,locality,,Palestine,False,Palestine,exact,687,696,100.0
+8992612,modern_dots-mocr,G0,27,locality,,Egypt,False,Egypt,exact,701,706,100.0
+8992612,modern_dots-mocr,G0,28,locality,,Madeira,False,Madeira,exact,732,739,100.0
+8992612,modern_dots-mocr,G0,29,locality,,Greenland,False,Greenland,exact,776,785,100.0
+8992612,modern_dots-mocr,G0,30,locality,,United States,False,United States,exact,824,837,100.0
+8992612,modern_dots-mocr,G0,31,locality,,New Zealand,False,New Zealand,exact,840,851,100.0
+8992612,modern_dots-mocr,G0,32,locality,,Australia,False,Australia,exact,856,865,100.0
+8992612,modern_dots-mocr,G0,33,locality,,Great Britain,False,Great Britain,exact,879,892,100.0
+8992612,modern_dots-mocr,G0,34,locality,,Ireland,False,Ireland,exact,897,904,100.0
+8992612,modern_dots-mocr,G0,35,vernacular,,Sky-Lark,False,Sky-Lark,exact,910,918,100.0
+8992612,modern_dots-mocr,G0,36,vernacular,,Sky-Lark,False,Sky-Lark,exact,1031,1039,100.0
+8992612,modern_dots-mocr,G0,37,taxon,,A. dulcivox,False,A. dulcivox,exact,1102,1113,100.0
+8992612,modern_dots-mocr,G0,38,taxon,,A. japonica,False,A. japonica,exact,1117,1128,100.0
+8992612,modern_dots-mocr,G0,39,taxon,,A. cantarella,False,A. cantarella,exact,1132,1145,100.0
+8992612,modern_dots-mocr,G0,40,taxon,,A. liopus,False,A. liopus,exact,1149,1158,100.0
+8992612,modern_dots-mocr,G0,41,taxon,,A. blak- istoni,False,A. blak- istoni,exact,1162,1177,100.0
+8992612,modern_dots-mocr,G0,42,taxon,,A. gulgula,False,A. gulgula,exact,1181,1191,100.0
+8992612,modern_dots-mocr,G0,43,taxon,,A. australis,False,A. australis,exact,1195,1207,100.0
+8992612,modern_dots-mocr,G0,44,taxon,,A. cœlivox,False,A. cœlivox,exact,1211,1221,100.0
+8992612,modern_dots-mocr,G0,45,taxon,,A. wattersi,False,A. wattersi,exact,1225,1236,100.0
+8992612,modern_dots-mocr,G0,46,taxon,,A. sala,False,A. sala,exact,1244,1251,100.0
+8992612,modern_dots-mocr,G0,47,vernacular,,Sky-Lark,False,Sky-Lark,exact,1375,1383,100.0
+8992612,modern_dots-mocr,G0,48,locality,,Bermudas,False,Bermudas,exact,1642,1650,100.0
+8992612,modern_dots-mocr,G0,49,date,,1850,False,1850,exact,1655,1659,100.0
+8992612,expert,G1,0,taxon,5.0,Alaudidæ,False,Alaudidæ,exact,35,43,100.0
+8992612,expert,G1,1,locality,5.0,Old World,False,Old World,exact,58,67,100.0
+8992612,expert,G1,2,locality,6.0,North America,False,North America,exact,106,119,100.0
+8992612,expert,G1,3,person,6.0,Jerdon,False,Jerdon,exact,132,138,100.0
+8992612,expert,G1,4,locality,7.0,Malayana,False,Malayana,exact,189,197,100.0
+8992612,expert,G1,5,locality,7.0,Australia,False,Australia,exact,202,211,100.0
+8992612,expert,G1,6,taxon,9.0,ALAUDIDÆ,False,ALAUDIDÆ,exact,222,230,100.0
+8992612,expert,G1,7,vernacular,11.0,SKY-LARK,False,SKY-LARK,exact,237,245,100.0
+8992612,expert,G1,8,taxon,13.0,Alauda arvensis,False,Alauda arvensis,exact,248,263,100.0
+8992612,expert,G1,9,person,13.0,LINN.,False,LINN.,exact,265,270,100.0
+8992612,expert,G1,10,locality,15.0,Europe,False,Europe,exact,327,333,100.0
+8992612,expert,G1,11,locality,16.0,Scandinavia,False,Scandinavia,exact,346,357,100.0
+8992612,expert,G1,12,locality,16.0,North Africa,False,North Africa,exact,394,406,100.0
+8992612,expert,G1,13,locality,17.0,slopes of the Atlas Mountains,False,slopes of the Atlas Mountains,exact,447,476,100.0
+8992612,expert,G1,14,locality,18.0,Russia,False,Russia,exact,498,504,100.0
+8992612,expert,G1,15,locality,18.0,Siberia,False,Siberia,exact,509,516,100.0
+8992612,expert,G1,16,locality,18.0,Japan,False,Japan,exact,544,549,100.0
+8992612,expert,G1,17,locality,18.0,valley of the Amoor,False,"valley of the
+Amoor",cross_line,555,574,100.0
+8992612,expert,G1,18,locality,19.0,South-east Mongolia,False,South-east Mongolia,exact,576,595,100.0
+8992612,expert,G1,19,locality,19.0,Turkestan,False,Turkestan,exact,597,606,100.0
+8992612,expert,G1,20,locality,19.0,Persia,False,Persia,exact,611,617,100.0
+8992612,expert,G1,21,locality,19.0,China,False,China,exact,639,644,100.0
+8992612,expert,G1,22,locality,20.0,North-west India,False,North-west India,exact,646,662,100.0
+8992612,expert,G1,23,locality,20.0,Afghanistan,False,Afghanistan,exact,664,675,100.0
+8992612,expert,G1,24,locality,20.0,Persia,False,Persia,exact,677,683,100.0
+8992612,expert,G1,25,locality,20.0,Asia Minor,False,Asia Minor,exact,685,695,100.0
+8992612,expert,G1,26,locality,20.0,Palestine,False,Palestine,exact,697,706,100.0
+8992612,expert,G1,27,locality,20.0,Egypt,False,Egypt,exact,711,716,100.0
+8992612,expert,G1,28,locality,21.0,Madeira,False,Madeira,exact,742,749,100.0
+8992612,expert,G1,29,locality,21.0,Greenland,False,Greenland,exact,786,795,100.0
+8992612,expert,G1,30,locality,22.0,United States,False,United States,exact,834,847,100.0
+8992612,expert,G1,31,locality,22.0,New Zealand,False,New Zealand,exact,850,861,100.0
+8992612,expert,G1,32,locality,22.0,Australia,False,Australia,exact,866,875,100.0
+8992612,expert,G1,33,locality,24.0,Great Britain,False,Great Britain,exact,889,902,100.0
+8992612,expert,G1,34,locality,24.0,Ireland,False,Ireland,exact,907,914,100.0
+8992612,expert,G1,35,vernacular,24.0,Sky-Lark,False,Sky-Lark,exact,920,928,100.0
+8992612,expert,G1,36,vernacular,27.0,Sky-Lark,False,Sky-Lark,exact,1041,1049,100.0
+8992612,expert,G1,37,taxon,28.0,A. dulcivox,False,A. dulcivox,exact,1111,1122,100.0
+8992612,expert,G1,38,taxon,28.0,A. japonica,False,A. japonica,exact,1124,1135,100.0
+8992612,expert,G1,39,taxon,28.0,A. cantarella,False,A. cantarella,exact,1137,1150,100.0
+8992612,expert,G1,40,taxon,28.0,A. liopus,False,A. liopus,exact,1152,1161,100.0
+8992612,expert,G1,41,taxon,28.0,A. blak- istoni,False,"A. blak-
+istoni",cross_line,1163,1178,100.0
+8992612,expert,G1,42,taxon,29.0,A. gulgula,False,A. gulgula,exact,1180,1190,100.0
+8992612,expert,G1,43,taxon,29.0,A. australis,False,A. australis,exact,1192,1204,100.0
+8992612,expert,G1,44,taxon,29.0,A. cœlivox,False,A. cœlivox,exact,1206,1216,100.0
+8992612,expert,G1,45,taxon,29.0,A. wattersi,False,A. wattersi,exact,1218,1229,100.0
+8992612,expert,G1,46,taxon,29.0,A. sala,False,A. sala,exact,1235,1242,100.0
+8992612,expert,G1,47,vernacular,33.0,Sky-Lark,False,Sky-Lark,exact,1365,1373,100.0
+8992612,expert,G1,48,locality,37.0,Bermudas,False,Bermudas,exact,1634,1642,100.0
+8992612,expert,G1,49,date,37.0,1850,False,1850,exact,1647,1651,100.0
+8967060,modern_dots-mocr_plain,G1,0,vernacular,3.0,VERY SMALL BULIMUS,False,VERY SMALL BULIMUS,exact,115,133,100.0
+8967060,modern_dots-mocr_plain,G1,1,person,5.0,ADAMS,False,ADAMS,exact,353,358,100.0
+8967060,modern_dots-mocr_plain,G1,2,locality,7.0,Jamaica,False,Jamaica,exact,370,377,100.0
+8967060,modern_dots-mocr_plain,G1,3,taxon,9.0,B. minimus,False,B. minimus,exact,480,490,100.0
+8967060,modern_dots-mocr_plain,G1,4,institution,11.0,Mus. Adams,False,Mus. Adams,exact,612,622,100.0
+8967060,modern_dots-mocr_plain,G1,5,taxon,13.0,BULIMUS PAUPERCULUS,False,BULIMUS PAUPERCULUS,exact,626,645,100.0
+8967060,modern_dots-mocr_plain,G1,6,vernacular,15.0,MEAN-LOOKING BULIMUS,False,MEAN-LOOKING BULIMUS,exact,819,839,100.0
+8967060,modern_dots-mocr_plain,G1,7,person,17.0,ADAMS,False,ADAMS,exact,1024,1029,100.0
+8967060,modern_dots-mocr_plain,G1,8,locality,19.0,Jamaica,False,Jamaica,exact,1041,1048,100.0
+8967060,modern_dots-mocr_plain,G1,9,taxon,21.0,Bulimi,False,Bulimi,exact,1134,1140,100.0
+8967060,modern_dots-mocr_plain,G1,10,taxon,21.0,Achatinæ,False,Achatinæ,exact,1145,1153,100.0
+8967060,modern_dots-mocr_plain,G1,11,locality,21.0,Jamaica,False,Jamaica,exact,1159,1166,100.0
+8967060,modern_dots-mocr_plain,G1,12,institution,23.0,Mus. Benson,False,Mus. Benson,exact,1382,1393,100.0
+8967060,modern_dots-mocr_plain,G1,13,taxon,25.0,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1397,1412,100.0
+8967060,modern_dots-mocr_plain,G1,14,vernacular,27.0,LITTLE TUFT BULIMUS,False,LITTLE TUFT BULIMUS,exact,1679,1698,100.0
+8967060,modern_dots-mocr_plain,G1,15,person,29.0,BENSON,False,BENSON,exact,1985,1991,100.0
+8967060,modern_dots-mocr_plain,G1,16,locality,31.0,"Humeerpore, Bundelkhund, India",False,"Humeerpore, Bundelkhund, India",exact,2003,2033,100.0
+8967060,modern_dots-mocr_plain,G1,17,person,31.0,Benson,False,Benson,exact,2035,2041,100.0
+8992612,modern_dots-mocr_plain,G1,0,taxon,1.0,Alaudidæ,False,Alaudidæ,exact,16,24,100.0
+8992612,modern_dots-mocr_plain,G1,1,locality,1.0,Old World,False,Old World,exact,39,48,100.0
+8992612,modern_dots-mocr_plain,G1,2,locality,1.0,North America,False,North America,exact,87,100,100.0
+8992612,modern_dots-mocr_plain,G1,3,person,1.0,Jerdon,False,Jerdon,exact,113,119,100.0
+8992612,modern_dots-mocr_plain,G1,4,locality,1.0,Malayana,False,Malayana,exact,170,178,100.0
+8992612,modern_dots-mocr_plain,G1,5,locality,1.0,Australia,False,Australia,exact,183,192,100.0
+8992612,modern_dots-mocr_plain,G1,6,taxon,3.0,ALAUDIDÆ,False,ALAUDIDÆ,exact,203,211,100.0
+8992612,modern_dots-mocr_plain,G1,7,vernacular,5.0,SKY-LARK,False,SKY-LARK,exact,218,226,100.0
+8992612,modern_dots-mocr_plain,G1,8,taxon,7.0,Alauda arvensis,False,Alauda arvensis,exact,229,244,100.0
+8992612,modern_dots-mocr_plain,G1,9,person,7.0,LINN.,False,LINN.,exact,246,251,100.0
+8992612,modern_dots-mocr_plain,G1,10,locality,9.0,Europe,False,Europe,exact,308,314,100.0
+8992612,modern_dots-mocr_plain,G1,11,locality,9.0,Scandinavia,False,Scandinavia,exact,327,338,100.0
+8992612,modern_dots-mocr_plain,G1,12,locality,9.0,North Africa,False,North Africa,exact,375,387,100.0
+8992612,modern_dots-mocr_plain,G1,13,locality,9.0,slopes of the Atlas Mountains,False,slopes of the Atlas Mountains,exact,428,457,100.0
+8992612,modern_dots-mocr_plain,G1,14,locality,9.0,Russia,False,Russia,exact,479,485,100.0
+8992612,modern_dots-mocr_plain,G1,15,locality,9.0,Siberia,False,Siberia,exact,490,497,100.0
+8992612,modern_dots-mocr_plain,G1,16,locality,9.0,Japan,False,Japan,exact,525,530,100.0
+8992612,modern_dots-mocr_plain,G1,17,locality,9.0,valley of the Amoor,False,valley of the Amoor,exact,536,555,100.0
+8992612,modern_dots-mocr_plain,G1,18,locality,9.0,South-east Mongolia,False,South-east Mongolia,exact,557,576,100.0
+8992612,modern_dots-mocr_plain,G1,19,locality,9.0,Turkestan,False,Turkestan,exact,578,587,100.0
+8992612,modern_dots-mocr_plain,G1,20,locality,9.0,Persia,False,Persia,exact,592,598,100.0
+8992612,modern_dots-mocr_plain,G1,21,locality,9.0,China,False,China,exact,620,625,100.0
+8992612,modern_dots-mocr_plain,G1,22,locality,9.0,North-west India,False,North-west India,exact,627,643,100.0
+8992612,modern_dots-mocr_plain,G1,23,locality,9.0,Afghanistan,False,Afghanistan,exact,645,656,100.0
+8992612,modern_dots-mocr_plain,G1,24,locality,9.0,Persia,False,Persia,exact,658,664,100.0
+8992612,modern_dots-mocr_plain,G1,25,locality,9.0,Asia Minor,False,Asia Minor,exact,666,676,100.0
+8992612,modern_dots-mocr_plain,G1,26,locality,9.0,Palestine,False,Palestine,exact,678,687,100.0
+8992612,modern_dots-mocr_plain,G1,27,locality,9.0,Egypt,False,Egypt,exact,692,697,100.0
+8992612,modern_dots-mocr_plain,G1,28,locality,9.0,Madeira,False,Madeira,exact,723,730,100.0
+8992612,modern_dots-mocr_plain,G1,29,locality,9.0,Greenland,False,Greenland,exact,767,776,100.0
+8992612,modern_dots-mocr_plain,G1,30,locality,9.0,United States,False,United States,exact,815,828,100.0
+8992612,modern_dots-mocr_plain,G1,31,locality,9.0,New Zealand,False,New Zealand,exact,831,842,100.0
+8992612,modern_dots-mocr_plain,G1,32,locality,9.0,Australia,False,Australia,exact,847,856,100.0
+8992612,modern_dots-mocr_plain,G1,33,locality,11.0,Great Britain,False,Great Britain,exact,870,883,100.0
+8992612,modern_dots-mocr_plain,G1,34,locality,11.0,Ireland,False,Ireland,exact,888,895,100.0
+8992612,modern_dots-mocr_plain,G1,35,vernacular,11.0,Sky-Lark,False,Sky-Lark,exact,901,909,100.0
+8992612,modern_dots-mocr_plain,G1,36,vernacular,13.0,Sky-Lark,False,Sky-Lark,exact,1022,1030,100.0
+8992612,modern_dots-mocr_plain,G1,37,taxon,13.0,A. dulcivox,False,A. dulcivox,exact,1092,1103,100.0
+8992612,modern_dots-mocr_plain,G1,38,taxon,13.0,A. japonica,False,A. japonica,exact,1105,1116,100.0
+8992612,modern_dots-mocr_plain,G1,39,taxon,13.0,A. cantarella,False,A. cantarella,exact,1118,1131,100.0
+8992612,modern_dots-mocr_plain,G1,40,taxon,13.0,A. liopus,False,A. liopus,exact,1133,1142,100.0
+8992612,modern_dots-mocr_plain,G1,41,taxon,13.0,A. blak- istoni,False,A. blak- istoni,exact,1144,1159,100.0
+8992612,modern_dots-mocr_plain,G1,42,taxon,13.0,A. gulgula,False,A. gulgula,exact,1161,1171,100.0
+8992612,modern_dots-mocr_plain,G1,43,taxon,13.0,A. australis,False,A. australis,exact,1173,1185,100.0
+8992612,modern_dots-mocr_plain,G1,44,taxon,13.0,A. cœlivox,False,A. cœlivox,exact,1187,1197,100.0
+8992612,modern_dots-mocr_plain,G1,45,taxon,13.0,A. wattersi,False,A. wattersi,exact,1199,1210,100.0
+8992612,modern_dots-mocr_plain,G1,46,taxon,13.0,A. sala,False,A. sala,exact,1216,1223,100.0
+8992612,modern_dots-mocr_plain,G1,47,vernacular,15.0,Sky-Lark,False,Sky-Lark,exact,1346,1354,100.0
+8992612,modern_dots-mocr_plain,G1,48,locality,17.0,Bermudas,False,Bermudas,exact,1613,1621,100.0
+8992612,modern_dots-mocr_plain,G1,49,date,17.0,1850,False,1850,exact,1626,1630,100.0
+8967147,expert,G1,0,institution,5.0,Mus. Cuming,False,Mus. Cuming,exact,36,47,100.0
+8967147,expert,G1,1,taxon,7.0,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,51,71,100.0
+8967147,expert,G1,2,vernacular,15.0,PHILIPPI’S ACHATINA,False,PHILIPPI’S ACHATINA,exact,402,421,100.0
+8967147,expert,G1,3,person,24.0,PFEIFFER,False,PFEIFFER,exact,801,809,100.0
+8967147,expert,G1,4,taxon,24.0,Glandina,False,Glandina,exact,812,820,100.0
+8967147,expert,G1,5,locality,26.0,Jamaica,False,Jamaica,exact,855,862,100.0
+8967147,expert,G1,6,person,26.0,Gosse,False,Gosse,exact,864,869,100.0
+8967147,expert,G1,7,institution,32.0,Mus. Dennison,False,Mus. Dennison,exact,1062,1075,100.0
+8967147,expert,G1,8,taxon,34.0,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1079,1098,100.0
+8967147,expert,G1,9,vernacular,41.0,NECKLACE‐BOUND ACHATINA,False,NECKLACE‐BOUND ACHATINA,exact,1385,1408,100.0
+8967147,expert,G1,10,person,49.0,PFEIFFER,False,PFEIFFER,exact,1703,1711,100.0
+8967147,expert,G1,11,taxon,49.0,Glandina,False,Glandina,exact,1714,1722,100.0
+8967147,expert,G1,12,locality,51.0,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1761,1794,100.0
+8967147,expert,G1,13,person,51.0,Lattre,False,Lattre,exact,1796,1802,100.0
+8967147,expert,G1,14,institution,57.0,Mus. Cuming,False,Mus. Cuming,exact,1956,1967,100.0
+8967147,expert,G1,15,taxon,59.0,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,1971,1987,100.0
+8967147,expert,G1,16,vernacular,65.0,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2197,2218,100.0
+8967147,expert,G1,17,taxon,71.0,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2433,2459,100.0
+8967147,expert,G1,18,person,71.0,Férussac,False,Férussac,exact,2461,2469,100.0
+8967147,expert,G1,19,taxon,73.0,Glandina oleacea,False,Glandina oleacea,exact,2491,2507,100.0
+8967147,expert,G1,20,person,73.0,Beck,False,Beck,exact,2509,2513,100.0
+8967147,expert,G1,21,locality,75.0,Cuba,False,Cuba,exact,2521,2525,100.0
+8967147,expert,G1,22,institution,80.0,Mus. Cuming,False,Mus. Cuming,exact,2642,2653,100.0
+8967147,expert,G1,23,taxon,82.0,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2657,2677,100.0
+8967147,expert,G1,24,vernacular,89.0,WHITE‐ZONED ACHATINA,False,WHITE‐ZONED ACHATINA,exact,2990,3010,100.0
+8967147,expert,G1,25,person,97.0,SOWERBY,False,SOWERBY,exact,3317,3324,100.0
+8967147,expert,G1,26,taxon,99.0,Voluta leucozonias,False,Voluta leucozonias,exact,3351,3369,100.0
+8967147,expert,G1,27,person,99.0,Walch,False,Walch,exact,3371,3376,100.0
+8967147,expert,G1,28,taxon,102.0,Achatina albolineata,False,Achatina albolineata,exact,3424,3444,100.0
+8967147,expert,G1,29,person,102.0,Lamarck,False,Lamarck,exact,3446,3453,100.0
+8967147,expert,G1,30,taxon,103.0,"Helix (Cochlicopa,) leucozonias",False,"Helix (Cochlicopa,) leucozonias",exact,3455,3486,100.0
+8967147,expert,G1,31,person,103.0,Férussac,False,Férussac,exact,3488,3496,100.0
+8967147,expert,G1,32,taxon,104.0,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3498,3520,100.0
+8967147,expert,G1,33,person,104.0,Jan,False,Jan,exact,3522,3525,100.0
+8967147,expert,G1,34,taxon,105.0,Glandina leucozonias,False,Glandina leucozonias,exact,3527,3547,100.0
+8967147,expert,G1,35,person,105.0,Beck,False,Beck,exact,3549,3553,100.0
+8967147,expert,G1,36,locality,107.0,Martinique,False,Martinique,exact,3561,3571,100.0
+8967147,expert,G1,37,person,115.0,Walch,False,Walch,exact,3952,3957,100.0
+8967147,expert,G1,38,person,115.0,Gmelin,False,Gmelin,exact,3959,3965,100.0
+8967147,expert,G1,39,person,116.0,Dillwyn,False,Dillwyn,exact,3971,3978,100.0
+8967147,modern_dots-mocr_plain,G0,0,institution,,Mus. Cuming,False,Mus. Cuming,exact,36,47,100.0
+8967147,modern_dots-mocr_plain,G0,1,taxon,,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,51,71,100.0
+8967147,modern_dots-mocr_plain,G0,2,vernacular,,PHILIPPI'S ACHATINA,False,PHILIPPI'S ACHATINA,exact,398,417,100.0
+8967147,modern_dots-mocr_plain,G0,3,person,,PFEIFFER,False,PFEIFFER,exact,794,802,100.0
+8967147,modern_dots-mocr_plain,G0,4,taxon,,Glandina,False,Glandina,exact,805,813,100.0
+8967147,modern_dots-mocr_plain,G0,5,locality,,Jamaica,False,Jamaica,exact,847,854,100.0
+8967147,modern_dots-mocr_plain,G0,6,person,,Gosse,False,Gosse,exact,856,861,100.0
+8967147,modern_dots-mocr_plain,G0,7,institution,,Mus. Dennison,False,Mus. Dennison,exact,1055,1068,100.0
+8967147,modern_dots-mocr_plain,G0,8,taxon,,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1072,1091,100.0
+8967147,modern_dots-mocr_plain,G0,9,vernacular,,NECKLACE-BOUND ACHATINA,False,NECKLACE-BOUND ACHATINA,exact,1373,1396,100.0
+8967147,modern_dots-mocr_plain,G0,10,person,,PFEIFFER,False,PFEIFFER,exact,1692,1700,100.0
+8967147,modern_dots-mocr_plain,G0,11,taxon,,Glandina,False,Glandina,exact,1703,1711,100.0
+8967147,modern_dots-mocr_plain,G0,12,locality,,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1749,1782,100.0
+8967147,modern_dots-mocr_plain,G0,13,person,,Lattre,False,Lattre,exact,1784,1790,100.0
+8967147,modern_dots-mocr_plain,G0,14,institution,,Mus. Cuming,False,Mus. Cuming,exact,1944,1955,100.0
+8967147,modern_dots-mocr_plain,G0,15,taxon,,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,1959,1975,100.0
+8967147,modern_dots-mocr_plain,G0,16,vernacular,,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2182,2203,100.0
+8967147,modern_dots-mocr_plain,G0,17,taxon,,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2418,2444,100.0
+8967147,modern_dots-mocr_plain,G0,18,person,,Férussac,False,Férussac,exact,2446,2454,100.0
+8967147,modern_dots-mocr_plain,G0,19,taxon,,Glandina oleacea,False,Glandina oleacea,exact,2475,2491,100.0
+8967147,modern_dots-mocr_plain,G0,20,person,,Beck,False,Beck,exact,2493,2497,100.0
+8967147,modern_dots-mocr_plain,G0,21,locality,,Cuba,False,Cuba,exact,2505,2509,100.0
+8967147,modern_dots-mocr_plain,G0,22,institution,,Mus. Cuming,False,Mus. Cuming,exact,2626,2637,100.0
+8967147,modern_dots-mocr_plain,G0,23,taxon,,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2641,2661,100.0
+8967147,modern_dots-mocr_plain,G0,24,vernacular,,WHITE-ZONED ACHATINA,False,WHITE-ZONED ACHATINA,exact,2971,2991,100.0
+8967147,modern_dots-mocr_plain,G0,25,person,,SOWERBY,False,SOWERBY,exact,3299,3306,100.0
+8967147,modern_dots-mocr_plain,G0,26,taxon,,Voluta leucozonias,False,Voluta leucozonias,exact,3333,3351,100.0
+8967147,modern_dots-mocr_plain,G0,27,person,,Walch,False,Walch,exact,3353,3358,100.0
+8967147,modern_dots-mocr_plain,G0,28,taxon,,Achatina albolineata,False,Achatina albolineata,exact,3406,3426,100.0
+8967147,modern_dots-mocr_plain,G0,29,person,,Lamarck,False,Lamarck,exact,3428,3435,100.0
+8967147,modern_dots-mocr_plain,G0,30,taxon,,"Helix (Cochlicopa,) leucozonias",False,"Helix (Cochlicopa,) leucozonias",exact,3438,3469,100.0
+8967147,modern_dots-mocr_plain,G0,31,person,,Férussac,False,Férussac,exact,3471,3479,100.0
+8967147,modern_dots-mocr_plain,G0,32,taxon,,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3482,3504,100.0
+8967147,modern_dots-mocr_plain,G0,33,person,,Jan,False,Jan,exact,3506,3509,100.0
+8967147,modern_dots-mocr_plain,G0,34,taxon,,Glandina leucozonias,False,Glandina leucozonias,exact,3512,3532,100.0
+8967147,modern_dots-mocr_plain,G0,35,person,,Beck,False,Beck,exact,3534,3538,100.0
+8967147,modern_dots-mocr_plain,G0,36,locality,,Martinique,False,Martinique,exact,3546,3556,100.0
+8967147,modern_dots-mocr_plain,G0,37,person,,Walch,False,Walch,exact,3938,3943,100.0
+8967147,modern_dots-mocr_plain,G0,38,person,,Gmelin,False,Gmelin,exact,3945,3951,100.0
+8967147,modern_dots-mocr_plain,G0,39,person,,Dillwyn,False,Dillwyn,exact,3957,3964,100.0
+8967147,legacy,G0,0,institution,,Mus. Cuming,False,Mus. Cuming,exact,35,46,100.0
+8967147,legacy,G0,1,taxon,,AcHATiNA Philippiana,False,AcHATiNA Philippiana,exact,53,73,100.0
+8967147,legacy,G0,2,vernacular,,Philippi's Achatina,False,Philippi's Achatina,exact,423,442,100.0
+8967147,legacy,G0,3,person,,Pfeiffer,False,Pfeiffer,exact,850,858,100.0
+8967147,legacy,G0,4,taxon,,OlamUna,False,OlamUna,exact,861,868,100.0
+8967147,legacy,G0,5,locality,,Jamaica,False,Jamaica,exact,907,914,100.0
+8967147,legacy,G0,6,person,,Gosse,False,Gosse,exact,916,921,100.0
+8967147,legacy,G0,7,institution,,Mus. Dennison,False,Mus. Dennison,exact,1129,1142,100.0
+8967147,legacy,G0,8,taxon,,Achatina monilifera,False,Achatina monilifera,exact,1149,1168,100.0
+8967147,legacy,G0,9,vernacular,,necklace-bound Achatina,False,necklace-bound Achatina,exact,1474,1497,100.0
+8967147,legacy,G0,10,person,,Pfeiffer,False,Pfeiffer,exact,1816,1824,100.0
+8967147,legacy,G0,11,taxon,,Olandina,False,Olandina,exact,1827,1835,100.0
+8967147,legacy,G0,12,locality,,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1876,1909,100.0
+8967147,legacy,G0,13,person,,Lattre,False,Lattre,exact,1912,1918,100.0
+8967147,legacy,G0,14,institution,,Mus. Cuming,False,Mus. Cuming,exact,2085,2096,100.0
+8967147,legacy,G0,15,taxon,,Achatina oleacea,False,Achatina oleacea,exact,2102,2118,100.0
+8967147,legacy,G0,16,vernacular,,olive-shaped Achatina,False,olive-shaped Achatina,exact,2344,2365,100.0
+8967147,legacy,G0,17,taxon,,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2595,2621,100.0
+8967147,legacy,G0,18,person,,Femssac,False,Femssac,exact,2623,2630,100.0
+8967147,legacy,G0,19,taxon,,Glandina oleacea,False,Glandina oleacea,exact,2654,2670,100.0
+8967147,legacy,G0,20,person,,Beck,False,Beck,exact,2672,2676,100.0
+8967147,legacy,G0,21,locality,,Cuba,False,Cuba,exact,2687,2691,100.0
+8967147,legacy,G0,22,institution,,Mus. Cuming,False,Mus. Cuming,exact,2816,2827,100.0
+8967147,legacy,G0,23,taxon,,Achatina leicozonias,False,Achatina leicozonias,exact,2833,2853,100.0
+8967147,legacy,G0,24,vernacular,,white-zoned Achatina,False,white-zoned Achatina,exact,3159,3179,100.0
+8967147,legacy,G0,25,person,,SowERBY,False,SowERBY,exact,3511,3518,100.0
+8967147,legacy,G0,26,taxon,,Valuta leucozonias,False,Valuta leucozonias,exact,3548,3566,100.0
+8967147,legacy,G0,27,person,,Walch,False,Walch,exact,3568,3573,100.0
+8967147,legacy,G0,28,taxon,,Achatina albolineata,False,Achatina albolineata,exact,3627,3647,100.0
+8967147,legacy,G0,29,person,,Lamarck,False,Lamarck,exact,3649,3656,100.0
+8967147,legacy,G0,30,taxon,,"Helix {Cochlicopa,) leucozonias",False,"Helix {Cochlicopa,) leucozonias",exact,3661,3692,100.0
+8967147,legacy,G0,31,person,,Ferussac,False,Ferussac,exact,3694,3702,100.0
+8967147,legacy,G0,32,taxon,,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3707,3729,100.0
+8967147,legacy,G0,33,person,,Jan,False,Jan,exact,3731,3734,100.0
+8967147,legacy,G0,34,taxon,,Glmidina leucozonias,False,Glmidina leucozonias,exact,3739,3759,100.0
+8967147,legacy,G0,35,person,,Beck,False,Beck,exact,3761,3765,100.0
+8967147,legacy,G0,36,locality,,Martinique,False,Martinique,exact,3775,3785,100.0
+8967147,legacy,G0,37,person,,Walch,False,Walch,exact,4189,4194,100.0
+8967147,legacy,G0,38,person,,Gmelin,False,Gmelin,exact,4196,4202,100.0
+8967147,legacy,G0,39,person,,Dillwyn,False,Dillwyn,exact,4211,4218,100.0
+8967060,modern_dots-mocr,G0,0,vernacular,,VERY SMALL BULIMUS,False,VERY SMALL BULIMUS,exact,115,133,100.0
+8967060,modern_dots-mocr,G0,1,person,,ADAMS,False,ADAMS,exact,353,358,100.0
+8967060,modern_dots-mocr,G0,2,locality,,Jamaica,False,Jamaica,exact,370,377,100.0
+8967060,modern_dots-mocr,G0,3,taxon,,B. minimus,False,B. minimus,exact,481,491,100.0
+8967060,modern_dots-mocr,G0,4,institution,,Mus. Adams,False,Mus. Adams,exact,614,624,100.0
+8967060,modern_dots-mocr,G0,5,taxon,,BULIMUS PAUPERCULUS,False,BULIMUS PAUPERCULUS,exact,628,647,100.0
+8967060,modern_dots-mocr,G0,6,vernacular,,MEAN-LOOKING BULIMUS,False,MEAN-LOOKING BULIMUS,exact,823,843,100.0
+8967060,modern_dots-mocr,G0,7,person,,ADAMS,False,ADAMS,exact,1028,1033,100.0
+8967060,modern_dots-mocr,G0,8,locality,,Jamaica,False,Jamaica,exact,1045,1052,100.0
+8967060,modern_dots-mocr,G0,9,taxon,,Bulimi,False,Bulimi,exact,1139,1145,100.0
+8967060,modern_dots-mocr,G0,10,taxon,,Achatinæ,False,Achatinæ,exact,1152,1160,100.0
+8967060,modern_dots-mocr,G0,11,locality,,Jamaica,False,Jamaica,exact,1167,1174,100.0
+8967060,modern_dots-mocr,G0,12,institution,,Mus. Benson,False,Mus. Benson,exact,1390,1401,100.0
+8967060,modern_dots-mocr,G0,13,taxon,,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1405,1420,100.0
+8967060,modern_dots-mocr,G0,14,vernacular,,LITTLE TUFT BULIMUS,False,LITTLE TUFT BULIMUS,exact,1689,1708,100.0
+8967060,modern_dots-mocr,G0,15,person,,BENSON,False,BENSON,exact,1995,2001,100.0
+8967060,modern_dots-mocr,G0,16,locality,,"Humeerpore, Bundelkhund, India",False,"Humeerpore, Bundelkhund, India",exact,2013,2043,100.0
+8967060,modern_dots-mocr,G0,17,person,,Benson,False,Benson,exact,2045,2051,100.0
+8992612,legacy,G1,0,taxon,5.0,Aluudida,False,Aluudida,exact,38,46,100.0
+8992612,legacy,G1,1,locality,5.0,Old World,False,Old World,exact,61,70,100.0
+8992612,legacy,G1,2,locality,7.0,North America,False,North America,exact,113,126,100.0
+8992612,legacy,G1,3,person,7.0,Jerdon,False,Jerdon,exact,139,145,100.0
+8992612,legacy,G1,4,locality,9.0,j\Iala3-ana,False,j\Iala3-ana,exact,199,210,100.0
+8992612,legacy,G1,5,locality,9.0,Australia,False,Australia,exact,215,224,100.0
+8992612,legacy,G1,6,taxon,13.0,ALAUDID.E,False,ALAUDID.E,exact,239,248,100.0
+8992612,legacy,G1,7,vernacular,17.0,Sky-Lark,False,Sky-Lark,exact,258,266,100.0
+8992612,legacy,G1,8,taxon,21.0,Alauda iDVCiisis,False,Alauda iDVCiisis,exact,272,288,100.0
+8992612,legacy,G1,9,person,21.0,LiNN.,False,LiNN.,exact,290,295,100.0
+8992612,legacy,G1,10,locality,25.0,Europe,False,Europe,exact,355,361,100.0
+8992612,legacy,G1,11,locality,27.0,Scandinavia,False,Scandinavia,exact,377,388,100.0
+8992612,legacy,G1,12,locality,27.0,North Africa,False,North Africa,exact,425,437,100.0
+8992612,legacy,G1,13,locality,29.0,slopes of the Atlas Mountains,False,slopes of the Atlas Mountains,exact,481,510,100.0
+8992612,legacy,G1,14,locality,31.0,Russia,False,Russia,exact,535,541,100.0
+8992612,legacy,G1,15,locality,31.0,Siberia,False,Siberia,exact,546,553,100.0
+8992612,legacy,G1,16,locality,31.0,Japan,False,Japan,exact,581,586,100.0
+8992612,legacy,G1,17,locality,31.0,valley of the Amoor,False,"valley of the 
+
+ Amoor",cross_line,592,614,100.0
+8992612,legacy,G1,18,locality,33.0,South-east IMongolia,False,South-east IMongolia,exact,616,636,100.0
+8992612,legacy,G1,19,locality,33.0,Turkestan,False,Turkestan,exact,638,647,100.0
+8992612,legacy,G1,20,locality,33.0,Persia,False,Persia,exact,652,658,100.0
+8992612,legacy,G1,21,locality,33.0,China,False,China,exact,680,685,100.0
+8992612,legacy,G1,22,locality,35.0,North-west India,False,North-west India,exact,690,706,100.0
+8992612,legacy,G1,23,locality,35.0,Afghanistan,False,Afghanistan,exact,708,719,100.0
+8992612,legacy,G1,24,locality,35.0,Persia,False,Persia,exact,721,727,100.0
+8992612,legacy,G1,25,locality,35.0,Asia Minor,False,Asia Minor,exact,729,739,100.0
+8992612,legacy,G1,26,locality,35.0,Palestine,False,Palestine,exact,741,750,100.0
+8992612,legacy,G1,27,locality,35.0,Egypt,False,Egypt,exact,755,760,100.0
+8992612,legacy,G1,28,locality,37.0,Madeira,False,Madeira,exact,789,796,100.0
+8992612,legacy,G1,29,locality,37.0,Greenland,False,Greenland,exact,833,842,100.0
+8992612,legacy,G1,30,locality,39.0,United States,False,United States,exact,884,897,100.0
+8992612,legacy,G1,31,locality,39.0,New Zealand,False,New Zealand,exact,900,911,100.0
+8992612,legacy,G1,32,locality,39.0,Australia,False,Australia,exact,916,925,100.0
+8992612,legacy,G1,33,locality,43.0,Great Britain,False,Great Britain,exact,942,955,100.0
+8992612,legacy,G1,34,locality,43.0,Ireland,False,Ireland,exact,960,967,100.0
+8992612,legacy,G1,35,vernacular,43.0,Sky-Lark,False,Sky-Lark,exact,973,981,100.0
+8992612,legacy,G1,36,vernacular,49.0,Sky-Lark,False,Sky-Lark,exact,1101,1109,100.0
+8992612,legacy,G1,37,taxon,51.0,A. dulcivox,False,A. dulcivox,exact,1174,1185,100.0
+8992612,legacy,G1,38,taxon,51.0,A. japonica,False,A. japonica,exact,1187,1198,100.0
+8992612,legacy,G1,39,taxon,51.0,A. caiitarclla,False,A. caiitarclla,exact,1200,1214,100.0
+8992612,legacy,G1,40,taxon,51.0,A. liopus,False,A. liopus,exact,1216,1225,100.0
+8992612,legacy,G1,41,taxon,51.0,A. blak- istoni,False,"A. blak- 
+
+ istoni",cross_line,1227,1245,100.0
+8992612,legacy,G1,42,taxon,53.0,A. giilgiila,False,A. giilgiila,exact,1247,1259,100.0
+8992612,legacy,G1,43,taxon,53.0,A. australis,False,A. australis,exact,1261,1273,100.0
+8992612,legacy,G1,44,taxon,53.0,A. axlivox,False,A. axlivox,exact,1275,1285,100.0
+8992612,legacy,G1,45,taxon,53.0,A. ivai/crsi,False,A. ivai/crsi,exact,1287,1299,100.0
+8992612,legacy,G1,46,taxon,53.0,A. sala,False,A. sala,exact,1306,1313,100.0
+8992612,legacy,G1,47,vernacular,61.0,Sky-Lark,False,Sky-Lark,exact,1446,1454,100.0
+8992612,legacy,G1,48,locality,69.0,Bermudas,False,Bermudas,exact,1727,1735,100.0
+8992612,legacy,G1,49,date,69.0,1S50,False,1S50,exact,1740,1744,100.0
+8967047,legacy,G1,0,institution,9.0,"Mus, Taylor",False,"Mus, Taylor",exact,51,62,100.0
+8967047,legacy,G1,1,taxon,13.0,r^ULiMUS BiviTTATUs,False,r^ULiMUS BiviTTATUs,exact,69,88,100.0
+8967047,legacy,G1,2,vernacular,25.0,two-filleted Bulijids,False,two-filleted Bulijids,exact,360,381,100.0
+8967047,legacy,G1,3,person,39.0,SowERBY,False,SowERBY,exact,664,671,100.0
+8967047,legacy,G1,4,locality,43.0,Brazil,False,Brazil,exact,719,725,100.0
+8967047,legacy,G1,5,taxon,49.0,B. auris-h'poris,False,B. auris-h'poris,exact,805,821,100.0
+8967047,legacy,G1,6,institution,53.0,Mus. Taylor,False,Mus. Taylor,exact,842,853,100.0
+8967047,legacy,G1,7,taxon,57.0,BuLIMVS MULIEBUIS,False,BuLIMVS MULIEBUIS,exact,860,877,100.0
+8967047,legacy,G1,8,vernacular,69.0,effeminate Bulimus,False,effeminate Bulimus,exact,1163,1181,100.0
+8967047,legacy,G1,9,locality,83.0,New Granada,False,New Granada,exact,1479,1490,100.0
+8967047,legacy,G1,10,institution,91.0,Mus. Cuuiiug,False,Mus. Cuuiiug,exact,1574,1586,100.0
+8967047,legacy,G1,11,taxon,93.0,BuLiJlus Boliviands,False,BuLiJlus Boliviands,exact,1592,1611,100.0
+8967047,legacy,G1,12,vernacular,107.0,Bolivian Bulimus,False,Bolivian Bulimus,exact,1979,1995,100.0
+8967047,legacy,G1,13,person,125.0,Pfeiffer,False,Pfeiffer,exact,2367,2375,100.0
+8967047,legacy,G1,14,locality,127.0,"Merida, Andes of Bolivia",False,"Merida, Andes of Bolivia",exact,2420,2444,100.0
+8967047,legacy,G1,15,person,133.0,Pfeiffer,False,Pfeiffer,exact,2533,2541,100.0
+8967047,legacy,G1,16,taxon,135.0,B. annu- latus,False,"B. annu- 
+
+ latus",cross_line,2614,2631,100.0
+8967047,legacy,G1,17,institution,145.0,Mus. Taylor,False,Mus. Taylor,exact,2767,2778,100.0
+8967047,legacy,G1,18,taxon,149.0,liuLTMrs PATRTOius,False,liuLTMrs PATRTOius,exact,2785,2803,100.0
+8967047,legacy,G1,19,vernacular,163.0,patrician Buluius,False,patrician Buluius,exact,3112,3129,100.0
+8967047,legacy,G1,20,locality,181.0,New Granada,False,New Granada,exact,3482,3493,100.0
+8967047,legacy,G1,21,institution,187.0,Mus. Taylor,False,Mus. Taylor,exact,3590,3601,100.0
+8967047,legacy,G1,22,taxon,191.0,Bulimus speotatus,False,Bulimus speotatus,exact,3608,3625,100.0
+8967047,legacy,G1,23,vernacular,205.0,choice Bulimus,False,choice Bulimus,exact,3966,3980,100.0
+8992582,expert,G0,0,vernacular,,Jackdaw,False,Jackdaw,exact,46,53,100.0
+8992582,expert,G0,1,vernacular,,Jackdaw,False,Jackdaw,exact,477,484,100.0
+8992582,expert,G0,2,locality,,Continent,False,Continent,exact,520,529,100.0
+8992582,expert,G0,3,locality,,England,False,England,exact,533,540,100.0
+8992582,expert,G0,4,locality,,cliﬀs of Dover,False,cliﬀs of Dover,exact,608,622,100.0
+8992582,expert,G0,5,vernacular,,Jackdaw,False,Jackdaw,exact,747,754,100.0
+8992582,expert,G0,6,vernacular,,Jackdaw,False,Jackdaw,exact,812,819,100.0
+8992582,expert,G0,7,person,,Lilford,False,Lilford,exact,946,953,100.0
+8992582,expert,G0,8,vernacular,,Jackdaw,False,Jackdaw,exact,1057,1064,100.0
+8992582,expert,G0,9,locality,,Lilford,False,Lilford,exact,1291,1298,100.0
+8992582,expert,G0,10,vernacular,,Barn Owl,False,Barn Owl,exact,1484,1492,100.0
+8992582,expert,G0,11,vernacular,,Daws,False,Daws,exact,1577,1581,100.0
+8992582,expert,G0,12,vernacular,,pheasants,False,pheasants,exact,1629,1638,100.0
+8992582,expert,G0,13,vernacular,,partridges,False,partridges,exact,1644,1654,100.0
+8992582,expert,G0,14,vernacular,,Owls,False,Owls,exact,1786,1790,100.0
+8992582,expert,G0,15,vernacular,,Barn Owl,False,Barn Owl,exact,2021,2029,100.0
+8992582,expert,G0,16,vernacular,,Jackdaws,False,Jackdaws,exact,2119,2127,100.0
+8992582,expert,G0,17,vernacular,,Jackdaw,False,Jackdaw,exact,2259,2266,100.0
+8992582,expert,G0,18,vernacular,,House-Sparrow,False,House-Sparrow,exact,2328,2341,100.0
+8992582,expert,G0,19,vernacular,,Daw,False,Daw,exact,2428,2431,100.0
+8992582,expert,G0,20,person,,Seebohm,False,Seebohm,exact,2561,2568,100.0
+8992582,expert,G0,21,vernacular,,Gulls,False,Gulls,exact,2630,2635,100.0
+8992582,expert,G0,22,vernacular,,Jackdaw,False,Jackdaw,exact,2649,2656,100.0
+8992582,expert,G0,23,vernacular,,Rook,False,Rook,exact,2697,2701,100.0
+8992582,expert,G0,24,vernacular,,Jackdaw,False,Jackdaw,exact,2835,2842,100.0
+8967147,legacy,G1,0,institution,5.0,Mus. Cuming,False,Mus. Cuming,exact,35,46,100.0
+8967147,legacy,G1,1,taxon,9.0,AcHATiNA Philippiana,False,AcHATiNA Philippiana,exact,53,73,100.0
+8967147,legacy,G1,2,vernacular,25.0,Philippi's Achatina,False,Philippi's Achatina,exact,423,442,100.0
+8967147,legacy,G1,3,person,43.0,Pfeiffer,False,Pfeiffer,exact,850,858,100.0
+8967147,legacy,G1,4,taxon,43.0,OlamUna,False,OlamUna,exact,861,868,100.0
+8967147,legacy,G1,5,locality,47.0,Jamaica,False,Jamaica,exact,907,914,100.0
+8967147,legacy,G1,6,person,47.0,Gosse,False,Gosse,exact,916,921,100.0
+8967147,legacy,G1,7,institution,63.0,Mus. Dennison,False,Mus. Dennison,exact,1129,1142,100.0
+8967147,legacy,G1,8,taxon,67.0,Achatina monilifera,False,Achatina monilifera,exact,1149,1168,100.0
+8967147,legacy,G1,9,vernacular,81.0,necklace-bound Achatina,False,necklace-bound Achatina,exact,1474,1497,100.0
+8967147,legacy,G1,10,person,97.0,Pfeiffer,False,Pfeiffer,exact,1816,1824,100.0
+8967147,legacy,G1,11,taxon,97.0,Olandina,False,Olandina,exact,1827,1835,100.0
+8967147,legacy,G1,12,locality,101.0,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1876,1909,100.0
+8967147,legacy,G1,13,person,101.0,Lattre,False,Lattre,exact,1912,1918,100.0
+8967147,legacy,G1,14,institution,117.0,Mus. Cuming,False,Mus. Cuming,exact,2085,2096,100.0
+8967147,legacy,G1,15,taxon,119.0,Achatina oleacea,False,Achatina oleacea,exact,2102,2118,100.0
+8967147,legacy,G1,16,vernacular,131.0,olive-shaped Achatina,False,olive-shaped Achatina,exact,2344,2365,100.0
+8967147,legacy,G1,17,taxon,143.0,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2595,2621,100.0
+8967147,legacy,G1,18,person,143.0,Femssac,False,Femssac,exact,2623,2630,100.0
+8967147,legacy,G1,19,taxon,145.0,Glandina oleacea,False,Glandina oleacea,exact,2654,2670,100.0
+8967147,legacy,G1,20,person,145.0,Beck.,False,Beck.,exact,2672,2677,100.0
+8967147,legacy,G1,21,locality,149.0,Cuba,False,Cuba,exact,2687,2691,100.0
+8967147,legacy,G1,22,institution,161.0,Mus. Cuming,False,Mus. Cuming,exact,2816,2827,100.0
+8967147,legacy,G1,23,taxon,163.0,Achatina leicozonias,False,Achatina leicozonias,exact,2833,2853,100.0
+8967147,legacy,G1,24,vernacular,177.0,white-zoned Achatina,False,white-zoned Achatina,exact,3159,3179,100.0
+8967147,legacy,G1,25,person,191.0,SowERBY,False,SowERBY,exact,3511,3518,100.0
+8967147,legacy,G1,26,taxon,195.0,Valuta leucozonias,False,Valuta leucozonias,exact,3548,3566,100.0
+8967147,legacy,G1,27,person,195.0,Walch,False,Walch,exact,3568,3573,100.0
+8967147,legacy,G1,28,taxon,201.0,Achatina albolineata,False,Achatina albolineata,exact,3627,3647,100.0
+8967147,legacy,G1,29,person,201.0,Lamarck,False,Lamarck,exact,3649,3656,100.0
+8967147,legacy,G1,30,taxon,203.0,"Helix {Cochlicopa,) leucozonias",False,"Helix {Cochlicopa,) leucozonias",exact,3661,3692,100.0
+8967147,legacy,G1,31,person,203.0,Ferussac,False,Ferussac,exact,3694,3702,100.0
+8967147,legacy,G1,32,taxon,205.0,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3707,3729,100.0
+8967147,legacy,G1,33,person,205.0,Jan.,False,Jan.,exact,3731,3735,100.0
+8967147,legacy,G1,34,taxon,207.0,Glmidina leucozonias,False,Glmidina leucozonias,exact,3739,3759,100.0
+8967147,legacy,G1,35,person,207.0,Beck.,False,Beck.,exact,3761,3766,100.0
+8967147,legacy,G1,36,locality,209.0,Martinique,False,Martinique,exact,3775,3785,100.0
+8967147,legacy,G1,37,person,225.0,Walch,False,Walch,exact,4189,4194,100.0
+8967147,legacy,G1,38,person,225.0,Gmelin,False,Gmelin,exact,4196,4202,100.0
+8967147,legacy,G1,39,person,227.0,Dillwyn,False,Dillwyn,exact,4211,4218,100.0
+8967147,modern_dots-mocr_plain,G1,0,institution,5.0,Mus. Cuming,False,Mus. Cuming,exact,36,47,100.0
+8967147,modern_dots-mocr_plain,G1,1,taxon,7.0,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,51,71,100.0
+8967147,modern_dots-mocr_plain,G1,2,vernacular,9.0,PHILIPPI'S ACHATINA,False,PHILIPPI'S ACHATINA,exact,398,417,100.0
+8967147,modern_dots-mocr_plain,G1,3,person,11.0,PFEIFFER,False,PFEIFFER,exact,794,802,100.0
+8967147,modern_dots-mocr_plain,G1,4,taxon,11.0,Glandina,False,Glandina,exact,805,813,100.0
+8967147,modern_dots-mocr_plain,G1,5,locality,12.0,Jamaica,False,Jamaica,exact,847,854,100.0
+8967147,modern_dots-mocr_plain,G1,6,person,12.0,Gosse,False,Gosse,exact,856,861,100.0
+8967147,modern_dots-mocr_plain,G1,7,institution,16.0,Mus. Dennison,False,Mus. Dennison,exact,1055,1068,100.0
+8967147,modern_dots-mocr_plain,G1,8,taxon,18.0,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1072,1091,100.0
+8967147,modern_dots-mocr_plain,G1,9,vernacular,20.0,NECKLACE-BOUND ACHATINA,False,NECKLACE-BOUND ACHATINA,exact,1373,1396,100.0
+8967147,modern_dots-mocr_plain,G1,10,person,22.0,PFEIFFER,False,PFEIFFER,exact,1692,1700,100.0
+8967147,modern_dots-mocr_plain,G1,11,taxon,22.0,Glandina,False,Glandina,exact,1703,1711,100.0
+8967147,modern_dots-mocr_plain,G1,12,locality,23.0,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1749,1782,100.0
+8967147,modern_dots-mocr_plain,G1,13,person,23.0,Lattre,False,Lattre,exact,1784,1790,100.0
+8967147,modern_dots-mocr_plain,G1,14,institution,27.0,Mus. Cuming,False,Mus. Cuming,exact,1944,1955,100.0
+8967147,modern_dots-mocr_plain,G1,15,taxon,29.0,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,1959,1975,100.0
+8967147,modern_dots-mocr_plain,G1,16,vernacular,31.0,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2182,2203,100.0
+8967147,modern_dots-mocr_plain,G1,17,taxon,33.0,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2418,2444,100.0
+8967147,modern_dots-mocr_plain,G1,18,person,33.0,Férussac,False,Férussac,exact,2446,2454,100.0
+8967147,modern_dots-mocr_plain,G1,19,taxon,34.0,Glandina oleacea,False,Glandina oleacea,exact,2475,2491,100.0
+8967147,modern_dots-mocr_plain,G1,20,person,34.0,Beck,False,Beck,exact,2493,2497,100.0
+8967147,modern_dots-mocr_plain,G1,21,locality,36.0,Cuba,False,Cuba,exact,2505,2509,100.0
+8967147,modern_dots-mocr_plain,G1,22,institution,40.0,Mus. Cuming,False,Mus. Cuming,exact,2626,2637,100.0
+8967147,modern_dots-mocr_plain,G1,23,taxon,42.0,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2641,2661,100.0
+8967147,modern_dots-mocr_plain,G1,24,vernacular,44.0,WHITE-ZONED ACHATINA,False,WHITE-ZONED ACHATINA,exact,2971,2991,100.0
+8967147,modern_dots-mocr_plain,G1,25,person,46.0,SOWERBY,False,SOWERBY,exact,3299,3306,100.0
+8967147,modern_dots-mocr_plain,G1,26,taxon,48.0,Voluta leucozonias,False,Voluta leucozonias,exact,3333,3351,100.0
+8967147,modern_dots-mocr_plain,G1,27,person,48.0,Walch,False,Walch,exact,3353,3358,100.0
+8967147,modern_dots-mocr_plain,G1,28,taxon,50.0,Achatina albolineata,False,Achatina albolineata,exact,3406,3426,100.0
+8967147,modern_dots-mocr_plain,G1,29,person,50.0,Lamarck,False,Lamarck,exact,3428,3435,100.0
+8967147,modern_dots-mocr_plain,G1,30,taxon,52.0,"Helix (Cochlicopa,) leucozonias",False,"Helix (Cochlicopa,) leucozonias",exact,3438,3469,100.0
+8967147,modern_dots-mocr_plain,G1,31,person,52.0,Férussac,False,Férussac,exact,3471,3479,100.0
+8967147,modern_dots-mocr_plain,G1,32,taxon,54.0,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3482,3504,100.0
+8967147,modern_dots-mocr_plain,G1,33,person,54.0,Jan,False,Jan,exact,3506,3509,100.0
+8967147,modern_dots-mocr_plain,G1,34,taxon,56.0,Glandina leucozonias,False,Glandina leucozonias,exact,3512,3532,100.0
+8967147,modern_dots-mocr_plain,G1,35,person,56.0,Beck,False,Beck,exact,3534,3538,100.0
+8967147,modern_dots-mocr_plain,G1,36,locality,58.0,Martinique,False,Martinique,exact,3546,3556,100.0
+8967147,modern_dots-mocr_plain,G1,37,person,60.0,Walch,False,Walch,exact,3938,3943,100.0
+8967147,modern_dots-mocr_plain,G1,38,person,60.0,Gmelin,False,Gmelin,exact,3945,3951,100.0
+8967147,modern_dots-mocr_plain,G1,39,person,60.0,Dillwyn,False,Dillwyn,exact,3957,3964,100.0
+8992582,modern_dots-mocr,G0,0,vernacular,,Jackdaw,False,Jackdaw,exact,28,35,100.0
+8992582,modern_dots-mocr,G0,1,vernacular,,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr,G0,2,locality,,Continent,False,Continent,exact,505,514,100.0
+8992582,modern_dots-mocr,G0,3,locality,,England,False,England,exact,518,525,100.0
+8992582,modern_dots-mocr,G0,4,locality,,cliffs of Dover,False,cliffs of Dover,exact,594,609,100.0
+8992582,modern_dots-mocr,G0,5,vernacular,,Jackdaw,False,Jackdaw,exact,736,743,100.0
+8992582,modern_dots-mocr,G0,6,vernacular,,Jackdaw,False,Jackdaw,exact,801,808,100.0
+8992582,modern_dots-mocr,G0,7,person,,Lilford,False,Lilford,exact,935,942,100.0
+8992582,modern_dots-mocr,G0,8,vernacular,,Jackdaw,False,Jackdaw,exact,1047,1054,100.0
+8992582,modern_dots-mocr,G0,9,locality,,Lilford,False,Lilford,exact,1281,1288,100.0
+8992582,modern_dots-mocr,G0,10,vernacular,,Barn Owl,False,Barn Owl,exact,1474,1482,100.0
+8992582,modern_dots-mocr,G0,11,vernacular,,Daws,False,Daws,exact,1568,1572,100.0
+8992582,modern_dots-mocr,G0,12,vernacular,,pheasants,False,pheasants,exact,1621,1630,100.0
+8992582,modern_dots-mocr,G0,13,vernacular,,partridges,False,partridges,exact,1636,1646,100.0
+8992582,modern_dots-mocr,G0,14,vernacular,,Owls,False,Owls,exact,1778,1782,100.0
+8992582,modern_dots-mocr,G0,15,vernacular,,Barn Owl,False,Barn Owl,exact,2013,2021,100.0
+8992582,modern_dots-mocr,G0,16,vernacular,,Jackdaws,False,Jackdaws,exact,2111,2119,100.0
+8992582,modern_dots-mocr,G0,17,vernacular,,Jackdaw,False,Jackdaw,exact,2252,2259,100.0
+8992582,modern_dots-mocr,G0,18,vernacular,,House-Sparrow,False,House-Sparrow,exact,2321,2334,100.0
+8992582,modern_dots-mocr,G0,19,vernacular,,Daw,False,Daw,exact,2421,2424,100.0
+8992582,modern_dots-mocr,G0,20,person,,Seebohm,False,Seebohm,exact,2555,2562,100.0
+8992582,modern_dots-mocr,G0,21,vernacular,,Gulls,False,Gulls,exact,2624,2629,100.0
+8992582,modern_dots-mocr,G0,22,vernacular,,Jackdaw,False,Jackdaw,exact,2643,2650,100.0
+8992582,modern_dots-mocr,G0,23,vernacular,,Rook,False,Rook,exact,2691,2695,100.0
+8992582,modern_dots-mocr,G0,24,vernacular,,Jackdaw,False,Jackdaw,exact,2830,2837,100.0
+8967060,legacy,G1,0,vernacular,9.0,very small Bdlimus,False,very small Bdlimus,exact,153,171,100.0
+8967060,legacy,G1,1,person,19.0,Adams,False,Adams,exact,412,417,100.0
+8967060,legacy,G1,2,locality,21.0,Jamaica,False,Jamaica,exact,431,438,100.0
+8967060,legacy,G1,3,taxon,27.0,B. minimus,False,B. minimus,exact,547,557,100.0
+8967060,legacy,G1,4,institution,35.0,Mus. Adams,False,Mus. Adams,exact,689,699,100.0
+8967060,legacy,G1,5,taxon,39.0,BuLiMUs PAUPEECCLUs,False,BuLiMUs PAUPEECCLUs,exact,706,725,100.0
+8967060,legacy,G1,6,vernacular,51.0,MEAN-LOOKING Bdlimus,False,MEAN-LOOKING Bdlimus,exact,902,922,100.0
+8967060,legacy,G1,7,person,63.0,Abams,False,Abams,exact,1125,1130,100.0
+8967060,legacy,G1,8,locality,67.0,Jamaica,False,Jamaica,exact,1145,1152,100.0
+8967060,legacy,G1,9,taxon,73.0,Bulimi,False,Bulimi,exact,1244,1250,100.0
+8967060,legacy,G1,10,taxon,73.0,Achalina,False,Achalina,exact,1255,1263,100.0
+8967060,legacy,G1,11,locality,73.0,Ja- maica,False,"Ja- 
+
+ maica",cross_line,1269,1281,100.0
+8967060,legacy,G1,12,institution,85.0,Mus. Benson,False,Mus. Benson,exact,1511,1522,100.0
+8967060,legacy,G1,13,taxon,87.0,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1528,1543,100.0
+8967060,legacy,G1,14,vernacular,99.0,LITTLE TUFT BuLiMUS,False,LITTLE TUFT BuLiMUS,exact,1831,1850,100.0
+8967060,legacy,G1,15,person,111.0,Benson,False,Benson,exact,2154,2160,100.0
+8967060,legacy,G1,16,locality,113.0,"Humeerpore, Bmidelkhund, ludia",False,"Humeerpore, Bmidelkhund, ludia",exact,2174,2204,100.0
+8967060,legacy,G1,17,person,113.0,Benson,False,Benson,exact,2207,2213,100.0
+8967047,expert,G1,0,institution,5.0,Mus. Taylor,False,Mus. Taylor,exact,38,49,100.0
+8967047,expert,G1,1,taxon,7.0,BULIMUS BIVITTATUS,False,BULIMUS BIVITTATUS,exact,53,71,100.0
+8967047,expert,G1,2,vernacular,13.0,TWO-FILLETED BULIMUS,False,TWO-FILLETED BULIMUS,exact,322,342,100.0
+8967047,expert,G1,3,person,20.0,SOWERBY,False,SOWERBY,exact,604,611,100.0
+8967047,expert,G1,4,locality,22.0,Brazil,False,Brazil,exact,655,661,100.0
+8967047,expert,G1,5,taxon,25.0,B. auris-leporis,False,B. auris-leporis,exact,732,748,100.0
+8967047,expert,G1,6,institution,27.0,Mus. Taylor,False,Mus. Taylor,exact,765,776,100.0
+8967047,expert,G1,7,taxon,29.0,BULIMUS MULIEBRIS,False,BULIMUS MULIEBRIS,exact,780,797,100.0
+8967047,expert,G1,8,vernacular,35.0,EFFEMINATE BULIMUS,False,EFFEMINATE BULIMUS,exact,1053,1071,100.0
+8967047,expert,G1,9,locality,42.0,New Granada,False,New Granada,exact,1346,1357,100.0
+8967047,expert,G1,10,institution,46.0,Mus. Cuming,False,Mus. Cuming,exact,1434,1445,100.0
+8967047,expert,G1,11,taxon,48.0,BULIMUS BOLIVIANUS,False,BULIMUS BOLIVIANUS,exact,1449,1467,100.0
+8967047,expert,G1,12,vernacular,56.0,BOLIVIAN BULIMUS,False,BOLIVIAN BULIMUS,exact,1810,1826,100.0
+8967047,expert,G1,13,person,66.0,PFEIFFER,False,PFEIFFER,exact,2174,2182,100.0
+8967047,expert,G1,14,locality,68.0,"Merida, Andes of Bolivia",False,"Merida, Andes of Bolivia",exact,2225,2249,100.0
+8967047,expert,G1,15,person,71.0,Pfeiﬀer,False,Pfeiﬀer,exact,2332,2339,100.0
+8967047,expert,G1,16,taxon,72.0,B. annu- latus,False,"B. annu-
+latus",cross_line,2409,2423,100.0
+8967047,expert,G1,17,institution,77.0,Mus. Taylor,False,Mus. Taylor,exact,2549,2560,100.0
+8967047,expert,G1,18,taxon,79.0,BULIMUS PATRICIUS,False,BULIMUS PATRICIUS,exact,2564,2581,100.0
+8967047,expert,G1,19,vernacular,86.0,PATRICIAN BULIMUS,False,PATRICIAN BULIMUS,exact,2856,2873,100.0
+8967047,expert,G1,20,locality,95.0,New Granada,False,New Granada,exact,3200,3211,100.0
+8967047,expert,G1,21,institution,98.0,Mus. Taylor,False,Mus. Taylor,exact,3301,3312,100.0
+8967047,expert,G1,22,taxon,100.0,BULIMUS SPECTATUS,False,BULIMUS SPECTATUS,exact,3316,3333,100.0
+8967047,expert,G1,23,vernacular,107.0,CHOICE BULIMUS,False,CHOICE BULIMUS,exact,3649,3663,100.0
+8992582,legacy,G1,0,vernacular,5.0,Jackdaw,False,Jackdaw,exact,48,55,100.0
+8992582,legacy,G1,1,vernacular,19.0,Jackdaw,False,Jackdaw,exact,504,511,100.0
+8992582,legacy,G1,2,locality,21.0,Continent,False,Continent,exact,552,561,100.0
+8992582,legacy,G1,3,locality,21.0,England,False,England,exact,565,572,100.0
+8992582,legacy,G1,4,locality,23.0,cliffs of Dover,False,cliffs of Dover,exact,646,661,100.0
+8992582,legacy,G1,5,vernacular,25.0,Jackdaw,False,Jackdaw,exact,789,796,100.0
+8992582,legacy,G1,6,vernacular,27.0,Jackdaw,False,Jackdaw,exact,857,864,100.0
+8992582,legacy,G1,7,person,31.0,Lilford,False,Lilford,exact,998,1005,100.0
+8992582,legacy,G1,8,vernacular,33.0,Jackdaw,False,Jackdaw,exact,1114,1121,100.0
+8992582,legacy,G1,9,locality,39.0,Lilford,False,Lilford,exact,1360,1367,100.0
+8992582,legacy,G1,10,vernacular,45.0,Barn Owl,False,Barn Owl,exact,1562,1570,100.0
+8992582,legacy,G1,11,vernacular,47.0,Daws,False,Daws,exact,1659,1663,100.0
+8992582,legacy,G1,12,vernacular,49.0,pheasants,False,pheasants,exact,1715,1724,100.0
+8992582,legacy,G1,13,vernacular,49.0,partridges,False,partridges,exact,1730,1740,100.0
+8992582,legacy,G1,14,vernacular,53.0,Owls,False,Owls,exact,1879,1883,100.0
+8992582,legacy,G1,15,vernacular,57.0,Barn Owl,False,Barn Owl,exact,2121,2129,100.0
+8992582,legacy,G1,16,vernacular,61.0,Jackdaws,False,Jackdaws,exact,2225,2233,100.0
+8992582,legacy,G1,17,vernacular,63.0,Jackdaw,False,Jackdaw,exact,2369,2376,100.0
+8992582,legacy,G1,18,vernacular,65.0,House-Sparrow,False,House-Sparrow,exact,2441,2454,100.0
+8992582,legacy,G1,19,vernacular,69.0,Daw,False,Daw,exact,2547,2550,100.0
+8992582,legacy,G1,20,person,75.0,Seebohm,False,Seebohm,exact,2687,2694,100.0
+8992582,legacy,G1,21,vernacular,75.0,Gulls,False,Gulls,exact,2756,2761,100.0
+8992582,legacy,G1,22,vernacular,77.0,Jackdaw,False,Jackdaw,exact,2778,2785,100.0
+8992582,legacy,G1,23,vernacular,77.0,Rook,False,Rook,exact,2828,2832,100.0
+8992582,legacy,G1,24,vernacular,85.0,Jackdaw,False,Jackdaw,exact,2976,2983,100.0
+8992582,legacy,G0,0,vernacular,,Jackdaw,False,Jackdaw,exact,4,11,100.0
+8992582,legacy,G0,1,vernacular,,Jackdaw,False,Jackdaw,exact,48,55,100.0
+8992582,legacy,G0,2,locality,,Continent,False,Continent,exact,552,561,100.0
+8992582,legacy,G0,3,locality,,England,False,England,exact,565,572,100.0
+8992582,legacy,G0,4,locality,,cliffs of Dover,False,cliffs of Dover,exact,646,661,100.0
+8992582,legacy,G0,5,vernacular,,Jackdaw,False,Jackdaw,exact,504,511,100.0
+8992582,legacy,G0,6,vernacular,,Jackdaw,False,Jackdaw,exact,789,796,100.0
+8992582,legacy,G0,7,person,,Lilford,False,Lilford,exact,998,1005,100.0
+8992582,legacy,G0,8,vernacular,,Jackdaw,False,Jackdaw,exact,857,864,100.0
+8992582,legacy,G0,9,locality,,Lilford,False,Lilford,exact,1360,1367,100.0
+8992582,legacy,G0,10,vernacular,,Barn Owl,False,Barn Owl,exact,1562,1570,100.0
+8992582,legacy,G0,11,vernacular,,Daws,False,Daws,exact,1659,1663,100.0
+8992582,legacy,G0,12,vernacular,,chickens,False,chickens,exact,1705,1713,100.0
+8992582,legacy,G0,13,vernacular,,pheasants,False,pheasants,exact,1715,1724,100.0
+8992582,legacy,G0,14,vernacular,,partridges,False,partridges,exact,1730,1740,100.0
+8992582,legacy,G0,15,vernacular,,Owls,False,Owls,exact,1879,1883,100.0
+8992582,legacy,G0,16,vernacular,,Barn Owl,False,Barn Owl,exact,2121,2129,100.0
+8992582,legacy,G0,17,vernacular,,Jackdaws,False,Jackdaws,exact,2225,2233,100.0
+8992582,legacy,G0,18,vernacular,,Jackdaw,False,Jackdaw,exact,1114,1121,100.0
+8992582,legacy,G0,19,vernacular,,House-Sparrow,False,House-Sparrow,exact,2441,2454,100.0
+8992582,legacy,G0,20,vernacular,,Daw,False,Daw,exact,2547,2550,100.0
+8992582,legacy,G0,21,person,,Seebohm,False,Seebohm,exact,2687,2694,100.0
+8992582,legacy,G0,22,vernacular,,Gulls,False,Gulls,exact,2756,2761,100.0
+8992582,legacy,G0,23,vernacular,,Jackdaw,False,Jackdaw,exact,2369,2376,100.0
+8992582,legacy,G0,24,vernacular,,Rook,False,Rook,exact,2828,2832,100.0
+8992582,legacy,G0,25,vernacular,,Jackdaw,False,Jackdaw,exact,2778,2785,100.0
+8992601,legacy,G1,0,person,13.0,Stevenson,False,Stevenson,exact,284,293,100.0
+8992601,legacy,G1,1,person,13.0,vSt. John,False,vSt. John,exact,325,334,100.0
+8992601,legacy,G1,2,vernacular,17.0,grouse,False,grouse,exact,513,519,100.0
+8992601,legacy,G1,3,vernacular,19.0,partridges,False,partridges,exact,524,534,100.0
+8992601,legacy,G1,4,vernacular,19.0,hares,False,hares,exact,536,541,100.0
+8992601,legacy,G1,5,vernacular,23.0,wild duck,False,wild duck,exact,737,746,100.0
+8992601,legacy,G1,6,vernacular,23.0,pheasant,False,pheasant,exact,748,756,100.0
+8992601,legacy,G1,7,vernacular,25.0,Hooded Crow,False,Hooded Crow,exact,799,810,100.0
+8992601,legacy,G1,8,vernacular,29.0,Peewits,False,Peewits,exact,970,977,100.0
+8992601,legacy,G1,9,vernacular,29.0,Gulls,False,Gulls,exact,979,984,100.0
+8992601,legacy,G1,10,vernacular,29.0,Redshanks,False,Redshanks,exact,986,995,100.0
+8992601,legacy,G1,11,vernacular,31.0,Crow,False,Crow,exact,1033,1037,100.0
+8992601,legacy,G1,12,vernacular,31.0,hoody,False,hoody,exact,1085,1090,100.0
+8992601,legacy,G1,13,vernacular,33.0,ducks,False,ducks,exact,1123,1128,100.0
+8992601,legacy,G1,14,vernacular,35.0,eagle,False,eagle,exact,1230,1235,100.0
+8992601,legacy,G1,15,vernacular,35.0,peregrine falcon,False,peregrine falcon,exact,1237,1253,100.0
+8992601,legacy,G1,16,vernacular,37.0,osprc}',False,osprc}',exact,1261,1268,100.0
+8992601,legacy,G1,17,vernacular,43.0,Hoodies,False,Hoodies,exact,1424,1431,100.0
+8992601,legacy,G1,18,date,43.0,12th to the 30th of October,False,12th to the 30th of October,exact,1441,1468,100.0
+8992601,legacy,G1,19,person,43.0,T. H. Nelson,False,T. H. Nelson,exact,1478,1490,100.0
+8992601,legacy,G1,20,person,45.0,F. Pilling,False,F. Pilling,exact,1499,1509,100.0
+8992601,legacy,G1,21,vernacular,45.0,Hoodies,False,Hoodies,exact,1526,1533,100.0
+8992601,legacy,G1,22,person,47.0,Seebohm,False,Seebohm,exact,1638,1645,100.0
+8992601,legacy,G1,23,person,49.0,Gatke,False,Gatke,exact,1685,1690,100.0
+8992601,legacy,G1,24,locality,61.0,Heligoland,False,Heligoland,exact,2220,2230,100.0
+8992601,legacy,G1,25,locality,73.0,Weser,False,Weser,exact,2653,2658,100.0
+8992601,legacy,G1,26,locality,73.0,Bremerhaven,False,Bremerhaven,exact,2679,2690,100.0
+8992601,legacy,G1,27,person,81.0,Gatke,False,Gatke,exact,2892,2897,100.0
+8992582,modern_dots-mocr,G1,0,vernacular,1.0,Jackdaw,False,Jackdaw,exact,28,35,100.0
+8992582,modern_dots-mocr,G1,1,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr,G1,2,locality,8.0,Continent,False,Continent,exact,505,514,100.0
+8992582,modern_dots-mocr,G1,3,locality,8.0,England,False,England,exact,518,525,100.0
+8992582,modern_dots-mocr,G1,4,locality,8.0,cliffs of Dover,False,cliffs of Dover,exact,594,609,100.0
+8992582,modern_dots-mocr,G1,5,vernacular,8.0,Jackdaw,False,Jackdaw,exact,736,743,100.0
+8992582,modern_dots-mocr,G1,6,vernacular,8.0,Jackdaw,False,Jackdaw,exact,801,808,100.0
+8992582,modern_dots-mocr,G1,7,person,8.0,Lilford,False,Lilford,exact,935,942,100.0
+8992582,modern_dots-mocr,G1,8,vernacular,8.0,Jackdaw,False,Jackdaw,exact,1047,1054,100.0
+8992582,modern_dots-mocr,G1,9,locality,8.0,Lilford,False,Lilford,exact,935,942,100.0
+8992582,modern_dots-mocr,G1,10,vernacular,8.0,Barn Owl,False,Barn Owl,exact,1474,1482,100.0
+8992582,modern_dots-mocr,G1,11,vernacular,8.0,Daws,False,Daws,exact,1568,1572,100.0
+8992582,modern_dots-mocr,G1,12,vernacular,8.0,pheasants,False,pheasants,exact,1621,1630,100.0
+8992582,modern_dots-mocr,G1,13,vernacular,8.0,partridges,False,partridges,exact,1636,1646,100.0
+8992582,modern_dots-mocr,G1,14,vernacular,8.0,Owls,False,Owls,exact,1778,1782,100.0
+8992582,modern_dots-mocr,G1,15,vernacular,8.0,Barn Owl,False,Barn Owl,exact,2013,2021,100.0
+8992582,modern_dots-mocr,G1,16,vernacular,8.0,Jackdaws,False,Jackdaws,exact,2111,2119,100.0
+8992582,modern_dots-mocr,G1,17,vernacular,8.0,Jackdaw,False,Jackdaw,exact,2111,2118,100.0
+8992582,modern_dots-mocr,G1,18,vernacular,8.0,House-Sparrow,False,House-Sparrow,exact,2321,2334,100.0
+8992582,modern_dots-mocr,G1,19,vernacular,8.0,Daw,False,Daw,exact,1568,1571,100.0
+8992582,modern_dots-mocr,G1,20,person,10.0,Seebohm,False,Seebohm,exact,2555,2562,100.0
+8992582,modern_dots-mocr,G1,21,vernacular,10.0,Gulls,False,Gulls,exact,2624,2629,100.0
+8992582,modern_dots-mocr,G1,22,vernacular,10.0,Jackdaw,False,Jackdaw,exact,2643,2650,100.0
+8992582,modern_dots-mocr,G1,23,vernacular,10.0,Rook,False,Rook,exact,2691,2695,100.0
+8992582,modern_dots-mocr,G1,24,vernacular,12.0,Jackdaw,False,Jackdaw,exact,2830,2837,100.0
+8992601,modern_dots-mocr_plain,G0,0,person,,Stevenson,False,Stevenson,exact,247,256,100.0
+8992601,modern_dots-mocr_plain,G0,1,person,,St. John,False,St. John,exact,288,296,100.0
+8992601,modern_dots-mocr_plain,G0,2,vernacular,,grouse,False,grouse,exact,462,468,100.0
+8992601,modern_dots-mocr_plain,G0,3,vernacular,,partridges,False,partridges,exact,470,480,100.0
+8992601,modern_dots-mocr_plain,G0,4,vernacular,,hares,False,hares,exact,482,487,100.0
+8992601,modern_dots-mocr_plain,G0,5,vernacular,,wild duck,False,wild duck,exact,674,683,100.0
+8992601,modern_dots-mocr_plain,G0,6,vernacular,,pheasant,False,pheasant,exact,685,693,100.0
+8992601,modern_dots-mocr_plain,G0,7,vernacular,,Hooded Crow,False,Hooded Crow,exact,732,743,100.0
+8992601,modern_dots-mocr_plain,G0,8,vernacular,,Peewits,False,Peewits,exact,897,904,100.0
+8992601,modern_dots-mocr_plain,G0,9,vernacular,,Gulls,False,Gulls,exact,906,911,100.0
+8992601,modern_dots-mocr_plain,G0,10,vernacular,,Redshanks,False,Redshanks,exact,913,922,100.0
+8992601,modern_dots-mocr_plain,G0,11,vernacular,,Crow,False,Crow,exact,956,960,100.0
+8992601,modern_dots-mocr_plain,G0,12,vernacular,,hoody,False,hoody,exact,1007,1012,100.0
+8992601,modern_dots-mocr_plain,G0,13,vernacular,,ducks,False,ducks,exact,1041,1046,100.0
+8992601,modern_dots-mocr_plain,G0,14,vernacular,,eagle,False,eagle,exact,1144,1149,100.0
+8992601,modern_dots-mocr_plain,G0,15,vernacular,,peregrine falcon,False,peregrine falcon,exact,1151,1167,100.0
+8992601,modern_dots-mocr_plain,G0,16,vernacular,,osprey,False,osprey,exact,1172,1178,100.0
+8992601,modern_dots-mocr_plain,G0,17,vernacular,,Hoodies,False,Hoodies,exact,1326,1333,100.0
+8992601,modern_dots-mocr_plain,G0,18,date,,12th to the 30th of October,False,12th to the 30th of October,exact,1343,1370,100.0
+8992601,modern_dots-mocr_plain,G0,19,person,,T. H. Nelson,False,T. H. Nelson,exact,1380,1392,100.0
+8992601,modern_dots-mocr_plain,G0,20,person,,F. Pilling,False,F. Pilling,exact,1398,1408,100.0
+8992601,modern_dots-mocr_plain,G0,21,vernacular,,Hoodies,False,Hoodies,exact,1423,1430,100.0
+8992601,modern_dots-mocr_plain,G0,22,person,,Seebohm,False,Seebohm,exact,1532,1539,100.0
+8992601,modern_dots-mocr_plain,G0,23,person,,Gätke,False,Gätke,exact,1574,1579,100.0
+8992601,modern_dots-mocr_plain,G0,24,locality,,Heligoland,False,Heligoland,exact,2086,2096,100.0
+8992601,modern_dots-mocr_plain,G0,25,locality,,Weser,False,Weser,exact,2500,2505,100.0
+8992601,modern_dots-mocr_plain,G0,26,locality,,Bremerhaven,False,Bremerhaven,exact,2526,2537,100.0
+8992601,modern_dots-mocr_plain,G0,27,person,,Gätke,False,Gätke,exact,2730,2735,100.0
+8967047,expert,G0,0,institution,,Mus. Taylor,False,Mus. Taylor,exact,38,49,100.0
+8967047,expert,G0,1,taxon,,BULIMUS BIVITTATUS,False,BULIMUS BIVITTATUS,exact,53,71,100.0
+8967047,expert,G0,2,vernacular,,TWO-FILLETED BULIMUS,False,TWO-FILLETED BULIMUS,exact,322,342,100.0
+8967047,expert,G0,3,person,,SOWERBY,False,SOWERBY,exact,604,611,100.0
+8967047,expert,G0,4,locality,,Brazil,False,Brazil,exact,655,661,100.0
+8967047,expert,G0,5,taxon,,B. auris-leporis,False,B. auris-leporis,exact,732,748,100.0
+8967047,expert,G0,6,institution,,Mus. Taylor,False,Mus. Taylor,exact,765,776,100.0
+8967047,expert,G0,7,taxon,,BULIMUS MULIEBRIS,False,BULIMUS MULIEBRIS,exact,780,797,100.0
+8967047,expert,G0,8,vernacular,,EFFEMINATE BULIMUS,False,EFFEMINATE BULIMUS,exact,1053,1071,100.0
+8967047,expert,G0,9,locality,,New Granada,False,New Granada,exact,1346,1357,100.0
+8967047,expert,G0,10,institution,,Mus. Cuming,False,Mus. Cuming,exact,1434,1445,100.0
+8967047,expert,G0,11,taxon,,BULIMUS BOLIVIANUS,False,BULIMUS BOLIVIANUS,exact,1449,1467,100.0
+8967047,expert,G0,12,vernacular,,BOLIVIAN BULIMUS,False,BOLIVIAN BULIMUS,exact,1810,1826,100.0
+8967047,expert,G0,13,person,,PFEIFFER,False,PFEIFFER,exact,2174,2182,100.0
+8967047,expert,G0,14,locality,,"Merida, Andes of Bolivia",False,"Merida, Andes of Bolivia",exact,2225,2249,100.0
+8967047,expert,G0,15,person,,Pfeiﬀer,False,Pfeiﬀer,exact,2332,2339,100.0
+8967047,expert,G0,16,taxon,,B. annu-latus,False,"B. annu-
+latus",layout_variant,2409,2423,100.0
+8967047,expert,G0,17,institution,,Mus. Taylor,False,Mus. Taylor,exact,2549,2560,100.0
+8967047,expert,G0,18,taxon,,BULIMUS PATRICIUS,False,BULIMUS PATRICIUS,exact,2564,2581,100.0
+8967047,expert,G0,19,vernacular,,PATRICIAN BULIMUS,False,PATRICIAN BULIMUS,exact,2856,2873,100.0
+8967047,expert,G0,20,locality,,New Granada,False,New Granada,exact,3200,3211,100.0
+8967047,expert,G0,21,institution,,Mus. Taylor,False,Mus. Taylor,exact,3301,3312,100.0
+8967047,expert,G0,22,taxon,,BULIMUS SPECTATUS,False,BULIMUS SPECTATUS,exact,3316,3333,100.0
+8967047,expert,G0,23,vernacular,,CHOICE BULIMUS,False,CHOICE BULIMUS,exact,3649,3663,100.0
+8992601,modern_dots-mocr_plain,G1,0,person,3.0,Stevenson,False,Stevenson,exact,247,256,100.0
+8992601,modern_dots-mocr_plain,G1,1,person,3.0,St. John,False,St. John,exact,288,296,100.0
+8992601,modern_dots-mocr_plain,G1,2,vernacular,3.0,grouse,False,grouse,exact,462,468,100.0
+8992601,modern_dots-mocr_plain,G1,3,vernacular,3.0,partridges,False,partridges,exact,470,480,100.0
+8992601,modern_dots-mocr_plain,G1,4,vernacular,3.0,hares,False,hares,exact,482,487,100.0
+8992601,modern_dots-mocr_plain,G1,5,vernacular,3.0,wild duck,False,wild duck,exact,674,683,100.0
+8992601,modern_dots-mocr_plain,G1,6,vernacular,3.0,pheasant,False,pheasant,exact,685,693,100.0
+8992601,modern_dots-mocr_plain,G1,7,vernacular,3.0,Hooded Crow,False,Hooded Crow,exact,732,743,100.0
+8992601,modern_dots-mocr_plain,G1,8,vernacular,3.0,Peewits,False,Peewits,exact,897,904,100.0
+8992601,modern_dots-mocr_plain,G1,9,vernacular,3.0,Gulls,False,Gulls,exact,906,911,100.0
+8992601,modern_dots-mocr_plain,G1,10,vernacular,3.0,Redshanks,False,Redshanks,exact,913,922,100.0
+8992601,modern_dots-mocr_plain,G1,11,vernacular,3.0,Crow,False,Crow,exact,739,743,100.0
+8992601,modern_dots-mocr_plain,G1,12,vernacular,3.0,hoody,False,hoody,exact,1007,1012,100.0
+8992601,modern_dots-mocr_plain,G1,13,vernacular,3.0,ducks,False,ducks,exact,1041,1046,100.0
+8992601,modern_dots-mocr_plain,G1,14,vernacular,3.0,eagle,False,eagle,exact,1144,1149,100.0
+8992601,modern_dots-mocr_plain,G1,15,vernacular,3.0,peregrine falcon,False,peregrine falcon,exact,1151,1167,100.0
+8992601,modern_dots-mocr_plain,G1,16,vernacular,3.0,osprey,False,osprey,exact,1172,1178,100.0
+8992601,modern_dots-mocr_plain,G1,17,vernacular,5.0,Hoodies,False,Hoodies,exact,1326,1333,100.0
+8992601,modern_dots-mocr_plain,G1,18,date,5.0,12th to the 30th of October,False,12th to the 30th of October,exact,1343,1370,100.0
+8992601,modern_dots-mocr_plain,G1,19,person,5.0,T. H. Nelson,False,T. H. Nelson,exact,1380,1392,100.0
+8992601,modern_dots-mocr_plain,G1,20,person,5.0,F. Pilling,False,F. Pilling,exact,1398,1408,100.0
+8992601,modern_dots-mocr_plain,G1,21,vernacular,5.0,Hoodies,False,Hoodies,exact,1423,1430,100.0
+8992601,modern_dots-mocr_plain,G1,22,person,5.0,Seebohm,False,Seebohm,exact,1532,1539,100.0
+8992601,modern_dots-mocr_plain,G1,23,person,5.0,Gätke,False,Gätke,exact,1574,1579,100.0
+8992601,modern_dots-mocr_plain,G1,24,locality,5.0,Heligoland,False,Heligoland,exact,2086,2096,100.0
+8992601,modern_dots-mocr_plain,G1,25,locality,5.0,Weser,False,Weser,exact,2500,2505,100.0
+8992601,modern_dots-mocr_plain,G1,26,locality,5.0,Bremerhaven,False,Bremerhaven,exact,2526,2537,100.0
+8992601,modern_dots-mocr_plain,G1,27,person,7.0,Gätke,False,Gätke,exact,2730,2735,100.0
+8992612,modern_dots-mocr,G1,0,taxon,1.0,Alaudidæ,False,Alaudidæ,exact,17,25,100.0
+8992612,modern_dots-mocr,G1,1,locality,1.0,Old World,False,Old World,exact,41,50,100.0
+8992612,modern_dots-mocr,G1,2,locality,1.0,North America,False,North America,exact,89,102,100.0
+8992612,modern_dots-mocr,G1,3,person,1.0,Jerdon,False,Jerdon,exact,115,121,100.0
+8992612,modern_dots-mocr,G1,4,locality,1.0,Malayana,False,Malayana,exact,172,180,100.0
+8992612,modern_dots-mocr,G1,5,locality,1.0,Australia,False,Australia,exact,185,194,100.0
+8992612,modern_dots-mocr,G1,6,taxon,3.0,ALAUDIDÆ,False,ALAUDIDÆ,exact,206,214,100.0
+8992612,modern_dots-mocr,G1,7,vernacular,5.0,SKY-LARK,False,SKY-LARK,exact,225,233,100.0
+8992612,modern_dots-mocr,G1,8,taxon,7.0,Alauda arvensis,False,Alauda arvensis,exact,237,252,100.0
+8992612,modern_dots-mocr,G1,9,person,7.0,LINN.,False,LINN.,exact,254,259,100.0
+8992612,modern_dots-mocr,G1,10,locality,9.0,Europe,False,Europe,exact,317,323,100.0
+8992612,modern_dots-mocr,G1,11,locality,9.0,Scandinavia,False,Scandinavia,exact,336,347,100.0
+8992612,modern_dots-mocr,G1,12,locality,9.0,North Africa,False,North Africa,exact,384,396,100.0
+8992612,modern_dots-mocr,G1,13,locality,9.0,slopes of the Atlas Mountains,False,slopes of the Atlas Mountains,exact,437,466,100.0
+8992612,modern_dots-mocr,G1,14,locality,9.0,Russia,False,Russia,exact,488,494,100.0
+8992612,modern_dots-mocr,G1,15,locality,9.0,Siberia,False,Siberia,exact,499,506,100.0
+8992612,modern_dots-mocr,G1,16,locality,9.0,Japan,False,Japan,exact,534,539,100.0
+8992612,modern_dots-mocr,G1,17,locality,9.0,valley of the Amoor,False,valley of the Amoor,exact,545,564,100.0
+8992612,modern_dots-mocr,G1,18,locality,9.0,South-east Mongolia,False,South-east Mongolia,exact,566,585,100.0
+8992612,modern_dots-mocr,G1,19,locality,9.0,Turkestan,False,Turkestan,exact,587,596,100.0
+8992612,modern_dots-mocr,G1,20,locality,9.0,Persia,False,Persia,exact,601,607,100.0
+8992612,modern_dots-mocr,G1,21,locality,9.0,China,False,China,exact,629,634,100.0
+8992612,modern_dots-mocr,G1,22,locality,9.0,North-west India,False,North-west India,exact,636,652,100.0
+8992612,modern_dots-mocr,G1,23,locality,9.0,Afghanistan,False,Afghanistan,exact,654,665,100.0
+8992612,modern_dots-mocr,G1,24,locality,9.0,Persia,False,Persia,exact,667,673,100.0
+8992612,modern_dots-mocr,G1,25,locality,9.0,Asia Minor,False,Asia Minor,exact,675,685,100.0
+8992612,modern_dots-mocr,G1,26,locality,9.0,Palestine,False,Palestine,exact,687,696,100.0
+8992612,modern_dots-mocr,G1,27,locality,9.0,Egypt,False,Egypt,exact,701,706,100.0
+8992612,modern_dots-mocr,G1,28,locality,9.0,Madeira,False,Madeira,exact,732,739,100.0
+8992612,modern_dots-mocr,G1,29,locality,9.0,Greenland,False,Greenland,exact,776,785,100.0
+8992612,modern_dots-mocr,G1,30,locality,9.0,United States,False,United States,exact,824,837,100.0
+8992612,modern_dots-mocr,G1,31,locality,9.0,New Zealand,False,New Zealand,exact,840,851,100.0
+8992612,modern_dots-mocr,G1,32,locality,9.0,Australia,False,Australia,exact,856,865,100.0
+8992612,modern_dots-mocr,G1,33,locality,11.0,Great Britain,False,Great Britain,exact,879,892,100.0
+8992612,modern_dots-mocr,G1,34,locality,11.0,Ireland,False,Ireland,exact,897,904,100.0
+8992612,modern_dots-mocr,G1,35,vernacular,11.0,Sky-Lark,False,Sky-Lark,exact,910,918,100.0
+8992612,modern_dots-mocr,G1,36,vernacular,13.0,Sky-Lark,False,Sky-Lark,exact,1031,1039,100.0
+8992612,modern_dots-mocr,G1,37,taxon,13.0,A. dulcivox,False,A. dulcivox,exact,1102,1113,100.0
+8992612,modern_dots-mocr,G1,38,taxon,13.0,A. japonica,False,A. japonica,exact,1117,1128,100.0
+8992612,modern_dots-mocr,G1,39,taxon,13.0,A. cantarella,False,A. cantarella,exact,1132,1145,100.0
+8992612,modern_dots-mocr,G1,40,taxon,13.0,A. liopus,False,A. liopus,exact,1149,1158,100.0
+8992612,modern_dots-mocr,G1,41,taxon,13.0,A. blak- istoni,False,A. blak- istoni,exact,1162,1177,100.0
+8992612,modern_dots-mocr,G1,42,taxon,13.0,A. gulgula,False,A. gulgula,exact,1181,1191,100.0
+8992612,modern_dots-mocr,G1,43,taxon,13.0,A. australis,False,A. australis,exact,1195,1207,100.0
+8992612,modern_dots-mocr,G1,44,taxon,13.0,A. cœlivox,False,A. cœlivox,exact,1211,1221,100.0
+8992612,modern_dots-mocr,G1,45,taxon,13.0,A. wattersi,False,A. wattersi,exact,1225,1236,100.0
+8992612,modern_dots-mocr,G1,46,taxon,13.0,A. sala,False,A. sala,exact,1244,1251,100.0
+8992612,modern_dots-mocr,G1,47,vernacular,15.0,Sky-Lark,False,Sky-Lark,exact,1375,1383,100.0
+8992612,modern_dots-mocr,G1,48,locality,17.0,Bermudas,False,Bermudas,exact,1642,1650,100.0
+8992612,modern_dots-mocr,G1,49,date,17.0,1850,False,1850,exact,1655,1659,100.0
+8992601,modern_dots-mocr,G0,0,person,,Stevenson,False,Stevenson,exact,247,256,100.0
+8992601,modern_dots-mocr,G0,1,person,,St. John,False,St. John,exact,288,296,100.0
+8992601,modern_dots-mocr,G0,2,vernacular,,grouse,False,grouse,exact,462,468,100.0
+8992601,modern_dots-mocr,G0,3,vernacular,,partridges,False,partridges,exact,470,480,100.0
+8992601,modern_dots-mocr,G0,4,vernacular,,hares,False,hares,exact,482,487,100.0
+8992601,modern_dots-mocr,G0,5,vernacular,,wild duck,False,wild duck,exact,674,683,100.0
+8992601,modern_dots-mocr,G0,6,vernacular,,pheasant,False,pheasant,exact,685,693,100.0
+8992601,modern_dots-mocr,G0,7,vernacular,,Hooded Crow,False,Hooded Crow,exact,732,743,100.0
+8992601,modern_dots-mocr,G0,8,vernacular,,Peewits,False,Peewits,exact,897,904,100.0
+8992601,modern_dots-mocr,G0,9,vernacular,,Gulls,False,Gulls,exact,906,911,100.0
+8992601,modern_dots-mocr,G0,10,vernacular,,Redshanks,False,Redshanks,exact,913,922,100.0
+8992601,modern_dots-mocr,G0,11,vernacular,,Crow,False,Crow,exact,956,960,100.0
+8992601,modern_dots-mocr,G0,12,vernacular,,hoody,False,hoody,exact,1007,1012,100.0
+8992601,modern_dots-mocr,G0,13,vernacular,,ducks,False,ducks,exact,1041,1046,100.0
+8992601,modern_dots-mocr,G0,14,vernacular,,eagle,False,eagle,exact,1144,1149,100.0
+8992601,modern_dots-mocr,G0,15,vernacular,,peregrine falcon,False,peregrine falcon,exact,1151,1167,100.0
+8992601,modern_dots-mocr,G0,16,vernacular,,osprey,False,osprey,exact,1172,1178,100.0
+8992601,modern_dots-mocr,G0,17,vernacular,,Hoodies,False,Hoodies,exact,1326,1333,100.0
+8992601,modern_dots-mocr,G0,18,date,,12th to the 30th of October,False,12th to the 30th of October,exact,1343,1370,100.0
+8992601,modern_dots-mocr,G0,19,person,,T. H. Nelson,False,T. H. Nelson,exact,1380,1392,100.0
+8992601,modern_dots-mocr,G0,20,person,,F. Pilling,False,F. Pilling,exact,1398,1408,100.0
+8992601,modern_dots-mocr,G0,21,vernacular,,Hoodies,False,Hoodies,exact,1423,1430,100.0
+8992601,modern_dots-mocr,G0,22,person,,Seebohm,False,Seebohm,exact,1532,1539,100.0
+8992601,modern_dots-mocr,G0,23,person,,Gätke,False,Gätke,exact,1574,1579,100.0
+8992601,modern_dots-mocr,G0,24,locality,,Heligoland,False,Heligoland,exact,2086,2096,100.0
+8992601,modern_dots-mocr,G0,25,locality,,Weser,False,Weser,exact,2500,2505,100.0
+8992601,modern_dots-mocr,G0,26,locality,,Bremerhaven,False,Bremerhaven,exact,2526,2537,100.0
+8992601,modern_dots-mocr,G0,27,person,,Gätke,False,Gätke,exact,2730,2735,100.0
+8967060,expert,G0,0,vernacular,,VERY SMALL BULIMUS,False,VERY SMALL BULIMUS,exact,140,158,100.0
+8967060,expert,G0,1,person,,ADAMS,False,ADAMS,exact,381,386,100.0
+8967060,expert,G0,2,locality,,Jamaica,False,Jamaica,exact,398,405,100.0
+8967060,expert,G0,3,taxon,,B. minimus,False,B. minimus,exact,507,517,100.0
+8967060,expert,G0,4,institution,,Mus. Adams,False,Mus. Adams,exact,639,649,100.0
+8967060,expert,G0,5,taxon,,BULIMUS PAUPERCULUS,False,BULIMUS PAUPERCULUS,exact,653,672,100.0
+8967060,expert,G0,6,vernacular,,MEAN-LOOKING BULIMUS,False,MEAN-LOOKING BULIMUS,exact,846,866,100.0
+8967060,expert,G0,7,person,,ADAMS,False,ADAMS,exact,1053,1058,100.0
+8967060,expert,G0,8,locality,,Jamaica,False,Jamaica,exact,1070,1077,100.0
+8967060,expert,G0,9,taxon,,Bulimi,False,Bulimi,exact,1163,1169,100.0
+8967060,expert,G0,10,taxon,,Achatinœ,False,Achatinœ,exact,1174,1182,100.0
+8967060,expert,G0,11,locality,,"Ja‐
+maica",False,"Ja‐
+maica",exact,1188,1197,100.0
+8967060,expert,G0,12,institution,,Mus. Benson,False,Mus. Benson,exact,1411,1422,100.0
+8967060,expert,G0,13,taxon,,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1426,1441,100.0
+8967060,expert,G0,14,vernacular,,LITTLE TUFT BULIMUS,False,LITTLE TUFT BULIMUS,exact,1708,1727,100.0
+8967060,expert,G0,15,person,,BENSON,False,BENSON,exact,2013,2019,100.0
+8967060,expert,G0,16,locality,,"Humeerpore, Bundelkhund, India",False,"Humeerpore, Bundelkhund, India",exact,2031,2061,100.0
+8967060,expert,G0,17,person,,Benson,False,Benson,exact,2063,2069,100.0
+8967047,modern_dots-mocr_plain,G0,0,institution,,Mus. Taylor,False,Mus. Taylor,exact,38,49,100.0
+8967047,modern_dots-mocr_plain,G0,1,taxon,,BULIMUS BIVITTATUS,False,BULIMUS BIVITTATUS,exact,53,71,100.0
+8967047,modern_dots-mocr_plain,G0,2,vernacular,,TWO-FILLETED BULIMUS,False,TWO-FILLETED BULIMUS,exact,325,345,100.0
+8967047,modern_dots-mocr_plain,G0,3,person,,SOWERBY,False,SOWERBY,exact,609,616,100.0
+8967047,modern_dots-mocr_plain,G0,4,locality,,Brazil,False,Brazil,exact,660,666,100.0
+8967047,modern_dots-mocr_plain,G0,5,taxon,,B. auris-leporis,False,B. auris-leporis,exact,738,754,100.0
+8967047,modern_dots-mocr_plain,G0,6,institution,,Mus. Taylor,False,Mus. Taylor,exact,771,782,100.0
+8967047,modern_dots-mocr_plain,G0,7,taxon,,BULIMUS MULIEBRIS,False,BULIMUS MULIEBRIS,exact,786,803,100.0
+8967047,modern_dots-mocr_plain,G0,8,vernacular,,EFFEMINATE BULIMUS,False,EFFEMINATE BULIMUS,exact,1057,1075,100.0
+8967047,modern_dots-mocr_plain,G0,9,locality,,New Granada,False,New Granada,exact,1348,1359,100.0
+8967047,modern_dots-mocr_plain,G0,10,institution,,Mus. Cuming,False,Mus. Cuming,exact,1437,1448,100.0
+8967047,modern_dots-mocr_plain,G0,11,taxon,,BULIMUS BOLIVIANUS,False,BULIMUS BOLIVIANUS,exact,1452,1470,100.0
+8967047,modern_dots-mocr_plain,G0,12,vernacular,,BOLIVIAN BULIMUS,False,BOLIVIAN BULIMUS,exact,1814,1830,100.0
+8967047,modern_dots-mocr_plain,G0,13,person,,PFEIFFER,False,PFEIFFER,exact,2174,2182,100.0
+8967047,modern_dots-mocr_plain,G0,14,locality,,"Merida, Andes of Bolivia",False,"Merida, Andes of Bolivia",exact,2225,2249,100.0
+8967047,modern_dots-mocr_plain,G0,15,person,,Pfeiffer,False,Pfeiffer,exact,2332,2340,100.0
+8967047,modern_dots-mocr_plain,G0,16,taxon,,B. annulatus,False,B. annulatus,exact,2410,2422,100.0
+8967047,modern_dots-mocr_plain,G0,17,institution,,Mus. Taylor,False,Mus. Taylor,exact,2549,2560,100.0
+8967047,modern_dots-mocr_plain,G0,18,taxon,,BULIMUS PATRICIUS,False,BULIMUS PATRICIUS,exact,2564,2581,100.0
+8967047,modern_dots-mocr_plain,G0,19,vernacular,,PATRICIAN BULIMUS,False,PATRICIAN BULIMUS,exact,2854,2871,100.0
+8967047,modern_dots-mocr_plain,G0,20,locality,,New Granada,False,New Granada,exact,3199,3210,100.0
+8967047,modern_dots-mocr_plain,G0,21,institution,,Mus. Taylor,False,Mus. Taylor,exact,3300,3311,100.0
+8967047,modern_dots-mocr_plain,G0,22,taxon,,BULIMUS SPECTATUS,False,BULIMUS SPECTATUS,exact,3315,3332,100.0
+8967047,modern_dots-mocr_plain,G0,23,vernacular,,CHOICE BULIMUS,False,CHOICE BULIMUS,exact,3645,3659,100.0
+8992582,expert,G1,0,vernacular,5.0,Jackdaw,False,Jackdaw,exact,46,53,100.0
+8992582,expert,G1,1,vernacular,12.0,Jackdaw,False,Jackdaw,exact,477,484,100.0
+8992582,expert,G1,2,locality,13.0,Continent,False,Continent,exact,520,529,100.0
+8992582,expert,G1,3,locality,13.0,England,False,England,exact,533,540,100.0
+8992582,expert,G1,4,locality,14.0,cliﬀs of Dover,False,cliﬀs of Dover,exact,608,622,100.0
+8992582,expert,G1,5,vernacular,15.0,Jackdaw,False,Jackdaw,exact,747,754,100.0
+8992582,expert,G1,6,vernacular,16.0,Jackdaw,False,Jackdaw,exact,812,819,100.0
+8992582,expert,G1,7,person,18.0,Lilford,False,Lilford,exact,946,953,100.0
+8992582,expert,G1,8,vernacular,19.0,Jackdaw,False,Jackdaw,exact,1057,1064,100.0
+8992582,expert,G1,9,locality,22.0,Lilford,False,Lilford,exact,1291,1298,100.0
+8992582,expert,G1,10,vernacular,25.0,Barn Owl,False,Barn Owl,exact,1484,1492,100.0
+8992582,expert,G1,11,vernacular,26.0,Daws,False,Daws,exact,1577,1581,100.0
+8992582,expert,G1,12,vernacular,27.0,pheasants,False,pheasants,exact,1629,1638,100.0
+8992582,expert,G1,13,vernacular,27.0,partridges,False,partridges,exact,1644,1654,100.0
+8992582,expert,G1,14,vernacular,29.0,Owls,False,Owls,exact,1786,1790,100.0
+8992582,expert,G1,15,vernacular,31.0,Barn Owl,False,Barn Owl,exact,2021,2029,100.0
+8992582,expert,G1,16,vernacular,33.0,Jackdaws,False,Jackdaws,exact,2119,2127,100.0
+8992582,expert,G1,17,vernacular,34.0,Jackdaw,False,Jackdaw,exact,2259,2266,100.0
+8992582,expert,G1,18,vernacular,35.0,House-Sparrow,False,House-Sparrow,exact,2328,2341,100.0
+8992582,expert,G1,19,vernacular,37.0,Daw,False,Daw,exact,2428,2431,100.0
+8992582,expert,G1,20,person,40.0,Seebohm,False,Seebohm,exact,2561,2568,100.0
+8992582,expert,G1,21,vernacular,40.0,Gulls,False,Gulls,exact,2630,2635,100.0
+8992582,expert,G1,22,vernacular,41.0,Jackdaw,False,Jackdaw,exact,2649,2656,100.0
+8992582,expert,G1,23,vernacular,41.0,Rook,False,Rook,exact,2697,2701,100.0
+8992582,expert,G1,24,vernacular,45.0,Jackdaw,False,Jackdaw,exact,2835,2842,100.0
+8992601,legacy,G0,0,person,,Stevenson,False,Stevenson,exact,284,293,100.0
+8992601,legacy,G0,1,person,,vSt. John,False,vSt. John,exact,325,334,100.0
+8992601,legacy,G0,2,vernacular,,grouse,False,grouse,exact,513,519,100.0
+8992601,legacy,G0,3,vernacular,,partridges,False,partridges,exact,524,534,100.0
+8992601,legacy,G0,4,vernacular,,hares,False,hares,exact,536,541,100.0
+8992601,legacy,G0,5,vernacular,,wild duck,False,wild duck,exact,737,746,100.0
+8992601,legacy,G0,6,vernacular,,pheasant,False,pheasant,exact,748,756,100.0
+8992601,legacy,G0,7,vernacular,,Hooded Crow,False,Hooded Crow,exact,799,810,100.0
+8992601,legacy,G0,8,vernacular,,Peewits,False,Peewits,exact,970,977,100.0
+8992601,legacy,G0,9,vernacular,,Gulls,False,Gulls,exact,979,984,100.0
+8992601,legacy,G0,10,vernacular,,Redshanks,False,Redshanks,exact,986,995,100.0
+8992601,legacy,G0,11,vernacular,,Crow,False,Crow,exact,15,19,100.0
+8992601,legacy,G0,12,vernacular,,hoody,False,hoody,exact,1085,1090,100.0
+8992601,legacy,G0,13,vernacular,,ducks,False,ducks,exact,1123,1128,100.0
+8992601,legacy,G0,14,vernacular,,eagle,False,eagle,exact,1230,1235,100.0
+8992601,legacy,G0,15,vernacular,,peregrine falcon,False,peregrine falcon,exact,1237,1253,100.0
+8992601,legacy,G0,16,vernacular,,osprc}',False,osprc}',exact,1261,1268,100.0
+8992601,legacy,G0,17,vernacular,,Hoodies,False,Hoodies,exact,1424,1431,100.0
+8992601,legacy,G0,18,date,,12th to the 30th of October,False,12th to the 30th of October,exact,1441,1468,100.0
+8992601,legacy,G0,19,person,,T. H. Nelson,False,T. H. Nelson,exact,1478,1490,100.0
+8992601,legacy,G0,20,person,,F. Pilling,False,F. Pilling,exact,1499,1509,100.0
+8992601,legacy,G0,21,vernacular,,Hoodies,False,Hoodies,exact,1526,1533,100.0
+8992601,legacy,G0,22,person,,Seebohm,False,Seebohm,exact,1638,1645,100.0
+8992601,legacy,G0,23,person,,Gatke,False,Gatke,exact,1685,1690,100.0
+8992601,legacy,G0,24,locality,,Heligoland,False,Heligoland,exact,2220,2230,100.0
+8992601,legacy,G0,25,locality,,Weser,False,Weser,exact,2653,2658,100.0
+8992601,legacy,G0,26,locality,,Bremerhaven,False,Bremerhaven,exact,2679,2690,100.0
+8992601,legacy,G0,27,person,,Gatke,False,Gatke,exact,2892,2897,100.0
+8992582,modern_dots-mocr_plain,G1,0,vernacular,1.0,Jackdaw,False,Jackdaw,exact,28,35,100.0
+8992582,modern_dots-mocr_plain,G1,1,vernacular,8.0,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr_plain,G1,2,locality,8.0,Continent,False,Continent,exact,505,514,100.0
+8992582,modern_dots-mocr_plain,G1,3,locality,8.0,England,False,England,exact,518,525,100.0
+8992582,modern_dots-mocr_plain,G1,4,locality,8.0,cliffs of Dover,False,cliffs of Dover,exact,594,609,100.0
+8992582,modern_dots-mocr_plain,G1,5,vernacular,8.0,Jackdaw,False,Jackdaw,exact,734,741,100.0
+8992582,modern_dots-mocr_plain,G1,6,vernacular,8.0,Jackdaw,False,Jackdaw,exact,799,806,100.0
+8992582,modern_dots-mocr_plain,G1,7,person,8.0,Lilford,False,Lilford,exact,933,940,100.0
+8992582,modern_dots-mocr_plain,G1,8,vernacular,8.0,Jackdaw,False,Jackdaw,exact,1045,1052,100.0
+8992582,modern_dots-mocr_plain,G1,9,locality,8.0,Lilford,False,Lilford,exact,933,940,100.0
+8992582,modern_dots-mocr_plain,G1,10,vernacular,8.0,Barn Owl,False,Barn Owl,exact,1472,1480,100.0
+8992582,modern_dots-mocr_plain,G1,11,vernacular,8.0,Daws,False,Daws,exact,1566,1570,100.0
+8992582,modern_dots-mocr_plain,G1,12,vernacular,8.0,chickens,False,chickens,exact,1609,1617,100.0
+8992582,modern_dots-mocr_plain,G1,13,vernacular,8.0,pheasants,False,pheasants,exact,1619,1628,100.0
+8992582,modern_dots-mocr_plain,G1,14,vernacular,8.0,partridges,False,partridges,exact,1634,1644,100.0
+8992582,modern_dots-mocr_plain,G1,15,vernacular,8.0,green-peas,False,green-peas,exact,1676,1686,100.0
+8992582,modern_dots-mocr_plain,G1,16,vernacular,8.0,Owls,False,Owls,exact,1776,1780,100.0
+8992582,modern_dots-mocr_plain,G1,17,vernacular,8.0,Barn Owl,False,Barn Owl,exact,2011,2019,100.0
+8992582,modern_dots-mocr_plain,G1,18,vernacular,8.0,Jackdaws,False,Jackdaws,exact,2109,2117,100.0
+8992582,modern_dots-mocr_plain,G1,19,vernacular,8.0,Jackdaw,False,Jackdaw,exact,2109,2116,100.0
+8992582,modern_dots-mocr_plain,G1,20,vernacular,8.0,House-Sparrow,False,House-Sparrow,exact,2319,2332,100.0
+8992582,modern_dots-mocr_plain,G1,21,vernacular,8.0,Daw,False,Daw,exact,1566,1569,100.0
+8992582,modern_dots-mocr_plain,G1,22,person,10.0,Seebohm,False,Seebohm,exact,2553,2560,100.0
+8992582,modern_dots-mocr_plain,G1,23,vernacular,10.0,Gulls,False,Gulls,exact,2622,2627,100.0
+8992582,modern_dots-mocr_plain,G1,24,vernacular,10.0,Jackdaw,False,Jackdaw,exact,2641,2648,100.0
+8992582,modern_dots-mocr_plain,G1,25,vernacular,10.0,Rook,False,Rook,exact,2689,2693,100.0
+8992582,modern_dots-mocr_plain,G1,26,vernacular,12.0,Jackdaw,False,Jackdaw,exact,2828,2835,100.0
+8967060,modern_dots-mocr,G1,0,vernacular,3.0,VERY SMALL BULIMUS,False,VERY SMALL BULIMUS,exact,115,133,100.0
+8967060,modern_dots-mocr,G1,1,person,5.0,ADAMS,False,ADAMS,exact,353,358,100.0
+8967060,modern_dots-mocr,G1,2,locality,7.0,Jamaica,False,Jamaica,exact,370,377,100.0
+8967060,modern_dots-mocr,G1,3,taxon,9.0,B. minimus,False,B. minimus,exact,481,491,100.0
+8967060,modern_dots-mocr,G1,4,institution,11.0,Mus. Adams,False,Mus. Adams,exact,614,624,100.0
+8967060,modern_dots-mocr,G1,5,taxon,13.0,BULIMUS PAUPERCULUS,False,BULIMUS PAUPERCULUS,exact,628,647,100.0
+8967060,modern_dots-mocr,G1,6,vernacular,15.0,MEAN-LOOKING BULIMUS,False,MEAN-LOOKING BULIMUS,exact,823,843,100.0
+8967060,modern_dots-mocr,G1,7,person,17.0,ADAMS,False,ADAMS,exact,1028,1033,100.0
+8967060,modern_dots-mocr,G1,8,locality,19.0,Jamaica,False,Jamaica,exact,1045,1052,100.0
+8967060,modern_dots-mocr,G1,9,taxon,21.0,Bulimi,False,Bulimi,exact,1139,1145,100.0
+8967060,modern_dots-mocr,G1,10,taxon,21.0,Achatinæ,False,Achatinæ,exact,1152,1160,100.0
+8967060,modern_dots-mocr,G1,11,locality,21.0,Jamaica,False,Jamaica,exact,1167,1174,100.0
+8967060,modern_dots-mocr,G1,12,institution,23.0,Mus. Benson,False,Mus. Benson,exact,1390,1401,100.0
+8967060,modern_dots-mocr,G1,13,taxon,25.0,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1405,1420,100.0
+8967060,modern_dots-mocr,G1,14,vernacular,27.0,LITTLE TUFT BULIMUS,False,LITTLE TUFT BULIMUS,exact,1689,1708,100.0
+8967060,modern_dots-mocr,G1,15,person,29.0,BENSON,False,BENSON,exact,1995,2001,100.0
+8967060,modern_dots-mocr,G1,16,locality,31.0,"Humeerpore, Bundelkhund, India",False,"Humeerpore, Bundelkhund, India",exact,2013,2043,100.0
+8967060,modern_dots-mocr,G1,17,person,31.0,Benson,False,Benson,exact,2045,2051,100.0
+8992612,modern_dots-mocr_plain,G0,0,taxon,,Alaudidæ,False,Alaudidæ,exact,16,24,100.0
+8992612,modern_dots-mocr_plain,G0,1,locality,,Old World,False,Old World,exact,39,48,100.0
+8992612,modern_dots-mocr_plain,G0,2,locality,,North America,False,North America,exact,87,100,100.0
+8992612,modern_dots-mocr_plain,G0,3,person,,Jerdon,False,Jerdon,exact,113,119,100.0
+8992612,modern_dots-mocr_plain,G0,4,locality,,Malayana,False,Malayana,exact,170,178,100.0
+8992612,modern_dots-mocr_plain,G0,5,locality,,Australia,False,Australia,exact,183,192,100.0
+8992612,modern_dots-mocr_plain,G0,6,taxon,,ALAUDIDÆ,False,ALAUDIDÆ,exact,203,211,100.0
+8992612,modern_dots-mocr_plain,G0,7,vernacular,,SKY-LARK,False,SKY-LARK,exact,218,226,100.0
+8992612,modern_dots-mocr_plain,G0,8,taxon,,Alauda arvensis,False,Alauda arvensis,exact,229,244,100.0
+8992612,modern_dots-mocr_plain,G0,9,person,,LINN.,False,LINN.,exact,246,251,100.0
+8992612,modern_dots-mocr_plain,G0,10,locality,,Europe,False,Europe,exact,308,314,100.0
+8992612,modern_dots-mocr_plain,G0,11,locality,,Scandinavia,False,Scandinavia,exact,327,338,100.0
+8992612,modern_dots-mocr_plain,G0,12,locality,,North Africa,False,North Africa,exact,375,387,100.0
+8992612,modern_dots-mocr_plain,G0,13,locality,,slopes of the Atlas Mountains,False,slopes of the Atlas Mountains,exact,428,457,100.0
+8992612,modern_dots-mocr_plain,G0,14,locality,,Russia,False,Russia,exact,479,485,100.0
+8992612,modern_dots-mocr_plain,G0,15,locality,,Siberia,False,Siberia,exact,490,497,100.0
+8992612,modern_dots-mocr_plain,G0,16,locality,,Japan,False,Japan,exact,525,530,100.0
+8992612,modern_dots-mocr_plain,G0,17,locality,,valley of the Amoor,False,valley of the Amoor,exact,536,555,100.0
+8992612,modern_dots-mocr_plain,G0,18,locality,,South-east Mongolia,False,South-east Mongolia,exact,557,576,100.0
+8992612,modern_dots-mocr_plain,G0,19,locality,,Turkestan,False,Turkestan,exact,578,587,100.0
+8992612,modern_dots-mocr_plain,G0,20,locality,,Persia,False,Persia,exact,592,598,100.0
+8992612,modern_dots-mocr_plain,G0,21,locality,,China,False,China,exact,620,625,100.0
+8992612,modern_dots-mocr_plain,G0,22,locality,,North-west India,False,North-west India,exact,627,643,100.0
+8992612,modern_dots-mocr_plain,G0,23,locality,,Afghanistan,False,Afghanistan,exact,645,656,100.0
+8992612,modern_dots-mocr_plain,G0,24,locality,,Persia,False,Persia,exact,658,664,100.0
+8992612,modern_dots-mocr_plain,G0,25,locality,,Asia Minor,False,Asia Minor,exact,666,676,100.0
+8992612,modern_dots-mocr_plain,G0,26,locality,,Palestine,False,Palestine,exact,678,687,100.0
+8992612,modern_dots-mocr_plain,G0,27,locality,,Egypt,False,Egypt,exact,692,697,100.0
+8992612,modern_dots-mocr_plain,G0,28,locality,,Madeira,False,Madeira,exact,723,730,100.0
+8992612,modern_dots-mocr_plain,G0,29,locality,,Greenland,False,Greenland,exact,767,776,100.0
+8992612,modern_dots-mocr_plain,G0,30,locality,,United States,False,United States,exact,815,828,100.0
+8992612,modern_dots-mocr_plain,G0,31,locality,,New Zealand,False,New Zealand,exact,831,842,100.0
+8992612,modern_dots-mocr_plain,G0,32,locality,,Australia,False,Australia,exact,847,856,100.0
+8992612,modern_dots-mocr_plain,G0,33,locality,,Great Britain,False,Great Britain,exact,870,883,100.0
+8992612,modern_dots-mocr_plain,G0,34,locality,,Ireland,False,Ireland,exact,888,895,100.0
+8992612,modern_dots-mocr_plain,G0,35,vernacular,,Sky-Lark,False,Sky-Lark,exact,901,909,100.0
+8992612,modern_dots-mocr_plain,G0,36,vernacular,,Sky-Lark,False,Sky-Lark,exact,1022,1030,100.0
+8992612,modern_dots-mocr_plain,G0,37,taxon,,A. dulcivox,False,A. dulcivox,exact,1092,1103,100.0
+8992612,modern_dots-mocr_plain,G0,38,taxon,,A. japonica,False,A. japonica,exact,1105,1116,100.0
+8992612,modern_dots-mocr_plain,G0,39,taxon,,A. cantarella,False,A. cantarella,exact,1118,1131,100.0
+8992612,modern_dots-mocr_plain,G0,40,taxon,,A. liopus,False,A. liopus,exact,1133,1142,100.0
+8992612,modern_dots-mocr_plain,G0,41,taxon,,A. blak- istoni,False,A. blak- istoni,exact,1144,1159,100.0
+8992612,modern_dots-mocr_plain,G0,42,taxon,,A. gulgula,False,A. gulgula,exact,1161,1171,100.0
+8992612,modern_dots-mocr_plain,G0,43,taxon,,A. australis,False,A. australis,exact,1173,1185,100.0
+8992612,modern_dots-mocr_plain,G0,44,taxon,,A. cœlivox,False,A. cœlivox,exact,1187,1197,100.0
+8992612,modern_dots-mocr_plain,G0,45,taxon,,A. wattersi,False,A. wattersi,exact,1199,1210,100.0
+8992612,modern_dots-mocr_plain,G0,46,taxon,,A. sala,False,A. sala,exact,1216,1223,100.0
+8992612,modern_dots-mocr_plain,G0,47,vernacular,,Sky-Lark,False,Sky-Lark,exact,1346,1354,100.0
+8992612,modern_dots-mocr_plain,G0,48,locality,,Bermudas,False,Bermudas,exact,1613,1621,100.0
+8992612,modern_dots-mocr_plain,G0,49,date,,1850,False,1850,exact,1626,1630,100.0
+8992582,modern_dots-mocr_plain,G0,0,vernacular,,Jackdaw,False,Jackdaw,exact,28,35,100.0
+8992582,modern_dots-mocr_plain,G0,1,vernacular,,Jackdaw,False,Jackdaw,exact,461,468,100.0
+8992582,modern_dots-mocr_plain,G0,2,locality,,Continent,False,Continent,exact,505,514,100.0
+8992582,modern_dots-mocr_plain,G0,3,locality,,England,False,England,exact,518,525,100.0
+8992582,modern_dots-mocr_plain,G0,4,locality,,cliffs of Dover,False,cliffs of Dover,exact,594,609,100.0
+8992582,modern_dots-mocr_plain,G0,5,vernacular,,Jackdaw,False,Jackdaw,exact,734,741,100.0
+8992582,modern_dots-mocr_plain,G0,6,vernacular,,Jackdaw,False,Jackdaw,exact,799,806,100.0
+8992582,modern_dots-mocr_plain,G0,7,person,,Lilford,False,Lilford,exact,933,940,100.0
+8992582,modern_dots-mocr_plain,G0,8,vernacular,,Jackdaw,False,Jackdaw,exact,1045,1052,100.0
+8992582,modern_dots-mocr_plain,G0,9,locality,,Lilford,False,Lilford,exact,1279,1286,100.0
+8992582,modern_dots-mocr_plain,G0,10,vernacular,,Barn Owl,False,Barn Owl,exact,1472,1480,100.0
+8992582,modern_dots-mocr_plain,G0,11,vernacular,,Daws,False,Daws,exact,1566,1570,100.0
+8992582,modern_dots-mocr_plain,G0,12,vernacular,,pheasants,False,pheasants,exact,1619,1628,100.0
+8992582,modern_dots-mocr_plain,G0,13,vernacular,,partridges,False,partridges,exact,1634,1644,100.0
+8992582,modern_dots-mocr_plain,G0,14,vernacular,,Owls,False,Owls,exact,1776,1780,100.0
+8992582,modern_dots-mocr_plain,G0,15,vernacular,,Barn Owl,False,Barn Owl,exact,2011,2019,100.0
+8992582,modern_dots-mocr_plain,G0,16,vernacular,,Jackdaws,False,Jackdaws,exact,2109,2117,100.0
+8992582,modern_dots-mocr_plain,G0,17,vernacular,,Jackdaw,False,Jackdaw,exact,2250,2257,100.0
+8992582,modern_dots-mocr_plain,G0,18,vernacular,,House-Sparrow,False,House-Sparrow,exact,2319,2332,100.0
+8992582,modern_dots-mocr_plain,G0,19,vernacular,,Daw,False,Daw,exact,2419,2422,100.0
+8992582,modern_dots-mocr_plain,G0,20,person,,Seebohm,False,Seebohm,exact,2553,2560,100.0
+8992582,modern_dots-mocr_plain,G0,21,vernacular,,Gulls,False,Gulls,exact,2622,2627,100.0
+8992582,modern_dots-mocr_plain,G0,22,vernacular,,Jackdaw,False,Jackdaw,exact,2641,2648,100.0
+8992582,modern_dots-mocr_plain,G0,23,vernacular,,Rook,False,Rook,exact,2689,2693,100.0
+8992582,modern_dots-mocr_plain,G0,24,vernacular,,Jackdaw,False,Jackdaw,exact,2828,2835,100.0
+8992612,expert,G0,0,taxon,,Alaudidæ,False,Alaudidæ,exact,35,43,100.0
+8992612,expert,G0,1,locality,,Old World,False,Old World,exact,58,67,100.0
+8992612,expert,G0,2,locality,,North America,False,North America,exact,106,119,100.0
+8992612,expert,G0,3,person,,Jerdon,False,Jerdon,exact,132,138,100.0
+8992612,expert,G0,4,locality,,Malayana,False,Malayana,exact,189,197,100.0
+8992612,expert,G0,5,locality,,Australia,False,Australia,exact,202,211,100.0
+8992612,expert,G0,6,taxon,,ALAUDIDÆ,False,ALAUDIDÆ,exact,222,230,100.0
+8992612,expert,G0,7,vernacular,,SKY-LARK,False,SKY-LARK,exact,4,12,100.0
+8992612,expert,G0,8,taxon,,Alauda arvensis,False,Alauda arvensis,exact,248,263,100.0
+8992612,expert,G0,9,person,,LINN.,False,LINN.,exact,265,270,100.0
+8992612,expert,G0,10,locality,,Europe,False,Europe,exact,327,333,100.0
+8992612,expert,G0,11,locality,,Scandinavia,False,Scandinavia,exact,346,357,100.0
+8992612,expert,G0,12,locality,,North Africa,False,North Africa,exact,394,406,100.0
+8992612,expert,G0,13,locality,,slopes of the Atlas Mountains,False,slopes of the Atlas Mountains,exact,447,476,100.0
+8992612,expert,G0,14,locality,,Russia,False,Russia,exact,498,504,100.0
+8992612,expert,G0,15,locality,,Siberia,False,Siberia,exact,509,516,100.0
+8992612,expert,G0,16,locality,,Japan,False,Japan,exact,544,549,100.0
+8992612,expert,G0,17,locality,,valley of the Amoor,False,"valley of the
+Amoor",layout_variant,555,574,100.0
+8992612,expert,G0,18,locality,,South-east Mongolia,False,South-east Mongolia,exact,576,595,100.0
+8992612,expert,G0,19,locality,,Turkestan,False,Turkestan,exact,597,606,100.0
+8992612,expert,G0,20,locality,,Persia,False,Persia,exact,611,617,100.0
+8992612,expert,G0,21,locality,,China,False,China,exact,639,644,100.0
+8992612,expert,G0,22,locality,,North-west India,False,North-west India,exact,646,662,100.0
+8992612,expert,G0,23,locality,,Afghanistan,False,Afghanistan,exact,664,675,100.0
+8992612,expert,G0,24,locality,,Persia,False,Persia,exact,677,683,100.0
+8992612,expert,G0,25,locality,,Asia Minor,False,Asia Minor,exact,685,695,100.0
+8992612,expert,G0,26,locality,,Palestine,False,Palestine,exact,697,706,100.0
+8992612,expert,G0,27,locality,,Egypt,False,Egypt,exact,711,716,100.0
+8992612,expert,G0,28,locality,,Madeira,False,Madeira,exact,742,749,100.0
+8992612,expert,G0,29,locality,,Greenland,False,Greenland,exact,786,795,100.0
+8992612,expert,G0,30,locality,,United States,False,United States,exact,834,847,100.0
+8992612,expert,G0,31,locality,,New Zealand,False,New Zealand,exact,850,861,100.0
+8992612,expert,G0,32,locality,,Australia,False,Australia,exact,866,875,100.0
+8992612,expert,G0,33,locality,,Great Britain,False,Great Britain,exact,889,902,100.0
+8992612,expert,G0,34,locality,,Ireland,False,Ireland,exact,907,914,100.0
+8992612,expert,G0,35,vernacular,,Sky-Lark,False,Sky-Lark,exact,920,928,100.0
+8992612,expert,G0,36,vernacular,,Sky-Lark,False,Sky-Lark,exact,1041,1049,100.0
+8992612,expert,G0,37,taxon,,A. dulcivox,False,A. dulcivox,exact,1111,1122,100.0
+8992612,expert,G0,38,taxon,,A. japonica,False,A. japonica,exact,1124,1135,100.0
+8992612,expert,G0,39,taxon,,A. cantarella,False,A. cantarella,exact,1137,1150,100.0
+8992612,expert,G0,40,taxon,,A. liopus,False,A. liopus,exact,1152,1161,100.0
+8992612,expert,G0,41,taxon,,A. blakistoni,False,"A. blak-
+istoni",layout_variant,1163,1178,100.0
+8992612,expert,G0,42,taxon,,A. gulgula,False,A. gulgula,exact,1180,1190,100.0
+8992612,expert,G0,43,taxon,,A. australis,False,A. australis,exact,1192,1204,100.0
+8992612,expert,G0,44,taxon,,A. cœlivox,False,A. cœlivox,exact,1206,1216,100.0
+8992612,expert,G0,45,taxon,,A. wattersi,False,A. wattersi,exact,1218,1229,100.0
+8992612,expert,G0,46,taxon,,A. sala,False,A. sala,exact,1235,1242,100.0
+8992612,expert,G0,47,vernacular,,Sky-Lark,False,Sky-Lark,exact,1365,1373,100.0
+8992612,expert,G0,48,locality,,Bermudas,False,Bermudas,exact,1634,1642,100.0
+8992612,expert,G0,49,date,,1850,False,1850,exact,1647,1651,100.0
+8967060,modern_dots-mocr_plain,G0,0,vernacular,,VERY SMALL BULIMUS,False,VERY SMALL BULIMUS,exact,115,133,100.0
+8967060,modern_dots-mocr_plain,G0,1,person,,ADAMS,False,ADAMS,exact,353,358,100.0
+8967060,modern_dots-mocr_plain,G0,2,locality,,Jamaica,False,Jamaica,exact,370,377,100.0
+8967060,modern_dots-mocr_plain,G0,3,taxon,,B. minimus,False,B. minimus,exact,480,490,100.0
+8967060,modern_dots-mocr_plain,G0,4,institution,,Mus. Adams,False,Mus. Adams,exact,612,622,100.0
+8967060,modern_dots-mocr_plain,G0,5,taxon,,BULIMUS PAUPERCULUS,False,BULIMUS PAUPERCULUS,exact,626,645,100.0
+8967060,modern_dots-mocr_plain,G0,6,vernacular,,MEAN-LOOKING BULIMUS,False,MEAN-LOOKING BULIMUS,exact,819,839,100.0
+8967060,modern_dots-mocr_plain,G0,7,person,,ADAMS,False,ADAMS,exact,1024,1029,100.0
+8967060,modern_dots-mocr_plain,G0,8,locality,,Jamaica,False,Jamaica,exact,1041,1048,100.0
+8967060,modern_dots-mocr_plain,G0,9,taxon,,Bulimi,False,Bulimi,exact,1134,1140,100.0
+8967060,modern_dots-mocr_plain,G0,10,taxon,,Achatinæ,False,Achatinæ,exact,1145,1153,100.0
+8967060,modern_dots-mocr_plain,G0,11,locality,,Jamaica,False,Jamaica,exact,1159,1166,100.0
+8967060,modern_dots-mocr_plain,G0,12,institution,,Mus. Benson,False,Mus. Benson,exact,1382,1393,100.0
+8967060,modern_dots-mocr_plain,G0,13,taxon,,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1397,1412,100.0
+8967060,modern_dots-mocr_plain,G0,14,vernacular,,LITTLE TUFT BULIMUS,False,LITTLE TUFT BULIMUS,exact,1679,1698,100.0
+8967060,modern_dots-mocr_plain,G0,15,person,,BENSON,False,BENSON,exact,1985,1991,100.0
+8967060,modern_dots-mocr_plain,G0,16,locality,,"Humeerpore, Bundelkhund, India",False,"Humeerpore, Bundelkhund, India",exact,2003,2033,100.0
+8967060,modern_dots-mocr_plain,G0,17,person,,Benson,False,Benson,exact,2035,2041,100.0
+8967047,legacy,G0,0,institution,,"Mus, Taylor",False,"Mus, Taylor",exact,51,62,100.0
+8967047,legacy,G0,1,taxon,,r^ULiMUS BiviTTATUs,False,r^ULiMUS BiviTTATUs,exact,69,88,100.0
+8967047,legacy,G0,2,vernacular,,two-filleted Bulijids,False,two-filleted Bulijids,exact,360,381,100.0
+8967047,legacy,G0,3,person,,SowERBY,False,SowERBY,exact,664,671,100.0
+8967047,legacy,G0,4,locality,,Brazil,False,Brazil,exact,719,725,100.0
+8967047,legacy,G0,5,taxon,,B. auris-h'poris,False,B. auris-h'poris,exact,805,821,100.0
+8967047,legacy,G0,6,institution,,Mus. Taylor,False,Mus. Taylor,exact,842,853,100.0
+8967047,legacy,G0,7,taxon,,BuLIMVS MULIEBUIS,False,BuLIMVS MULIEBUIS,exact,860,877,100.0
+8967047,legacy,G0,8,vernacular,,effeminate Bulimus,False,effeminate Bulimus,exact,1163,1181,100.0
+8967047,legacy,G0,9,locality,,New Granada,False,New Granada,exact,1479,1490,100.0
+8967047,legacy,G0,10,institution,,Mus. Cuuiiug,False,Mus. Cuuiiug,exact,1574,1586,100.0
+8967047,legacy,G0,11,taxon,,BuLiJlus Boliviands,False,BuLiJlus Boliviands,exact,1592,1611,100.0
+8967047,legacy,G0,12,vernacular,,Bolivian Bulimus,False,Bolivian Bulimus,exact,1979,1995,100.0
+8967047,legacy,G0,13,person,,Pfeiffer,False,Pfeiffer,exact,2367,2375,100.0
+8967047,legacy,G0,14,locality,,"Merida, Andes of Bolivia",False,"Merida, Andes of Bolivia",exact,2420,2444,100.0
+8967047,legacy,G0,15,person,,Pfeiffer,False,Pfeiffer,exact,2533,2541,100.0
+8967047,legacy,G0,16,taxon,,B. annu- latus,False,"B. annu- 
+
+ latus",layout_variant,2614,2631,100.0
+8967047,legacy,G0,17,institution,,Mus. Taylor,False,Mus. Taylor,exact,2767,2778,100.0
+8967047,legacy,G0,18,taxon,,liuLTMrs PATRTOius,False,liuLTMrs PATRTOius,exact,2785,2803,100.0
+8967047,legacy,G0,19,vernacular,,patrician Buluius,False,patrician Buluius,exact,3112,3129,100.0
+8967047,legacy,G0,20,locality,,New Granada,False,New Granada,exact,3482,3493,100.0
+8967047,legacy,G0,21,institution,,Mus. Taylor,False,Mus. Taylor,exact,3590,3601,100.0
+8967047,legacy,G0,22,taxon,,Bulimus speotatus,False,Bulimus speotatus,exact,3608,3625,100.0
+8967047,legacy,G0,23,vernacular,,choice Bulimus,False,choice Bulimus,exact,3966,3980,100.0
+8967060,expert,G1,0,vernacular,6.0,VERY SMALL BULIMUS,False,VERY SMALL BULIMUS,exact,140,158,100.0
+8967060,expert,G1,1,person,12.0,ADAMS,False,ADAMS,exact,381,386,100.0
+8967060,expert,G1,2,locality,14.0,Jamaica,False,Jamaica,exact,398,405,100.0
+8967060,expert,G1,3,taxon,17.0,B. minimus,False,B. minimus,exact,507,517,100.0
+8967060,expert,G1,4,institution,21.0,Mus. Adams,False,Mus. Adams,exact,639,649,100.0
+8967060,expert,G1,5,taxon,23.0,BULIMUS PAUPERCULUS,False,BULIMUS PAUPERCULUS,exact,653,672,100.0
+8967060,expert,G1,6,vernacular,28.0,MEAN-LOOKING BULIMUS,False,MEAN-LOOKING BULIMUS,exact,846,866,100.0
+8967060,expert,G1,7,person,34.0,ADAMS,False,ADAMS,exact,1053,1058,100.0
+8967060,expert,G1,8,locality,36.0,Jamaica,False,Jamaica,exact,1070,1077,100.0
+8967060,expert,G1,9,taxon,39.0,Bulimi,False,Bulimi,exact,1163,1169,100.0
+8967060,expert,G1,10,taxon,39.0,Achatinœ,False,Achatinœ,exact,1174,1182,100.0
+8967060,expert,G1,11,locality,39.0,Ja‐ maica,False,"Ja‐
+maica",cross_line,1188,1197,100.0
+8967060,expert,G1,12,institution,45.0,Mus. Benson,False,Mus. Benson,exact,1411,1422,100.0
+8967060,expert,G1,13,taxon,47.0,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1426,1441,100.0
+8967060,expert,G1,14,vernacular,54.0,LITTLE TUFT BULIMUS,False,LITTLE TUFT BULIMUS,exact,1708,1727,100.0
+8967060,expert,G1,15,person,61.0,BENSON,False,BENSON,exact,2013,2019,100.0
+8967060,expert,G1,16,locality,63.0,"Humeerpore, Bundelkhund, India",False,"Humeerpore, Bundelkhund, India",exact,2031,2061,100.0
+8967060,expert,G1,17,person,63.0,Benson,False,Benson,exact,2063,2069,100.0
+8967060,legacy,G0,0,vernacular,,very small Bdlimus,False,very small Bdlimus,exact,153,171,100.0
+8967060,legacy,G0,1,person,,Adams,False,Adams,exact,412,417,100.0
+8967060,legacy,G0,2,locality,,Jamaica,False,Jamaica,exact,431,438,100.0
+8967060,legacy,G0,3,taxon,,B. minimus,False,B. minimus,exact,547,557,100.0
+8967060,legacy,G0,4,institution,,Mus. Adams,False,Mus. Adams,exact,689,699,100.0
+8967060,legacy,G0,5,taxon,,BuLiMUs PAUPEECCLUs,False,BuLiMUs PAUPEECCLUs,exact,706,725,100.0
+8967060,legacy,G0,6,vernacular,,MEAN-LOOKING Bdlimus,False,MEAN-LOOKING Bdlimus,exact,902,922,100.0
+8967060,legacy,G0,7,person,,Abams,False,Abams,exact,1125,1130,100.0
+8967060,legacy,G0,8,locality,,Jamaica,False,Jamaica,exact,1145,1152,100.0
+8967060,legacy,G0,9,taxon,,Bulimi,False,Bulimi,exact,1244,1250,100.0
+8967060,legacy,G0,10,taxon,,Achalina,False,Achalina,exact,1255,1263,100.0
+8967060,legacy,G0,11,locality,,Ja- maica,False,"Ja- 
+
+ maica",layout_variant,1269,1281,100.0
+8967060,legacy,G0,12,institution,,Mus. Benson,False,Mus. Benson,exact,1511,1522,100.0
+8967060,legacy,G0,13,taxon,,BULIMUS TUTULUS,False,BULIMUS TUTULUS,exact,1528,1543,100.0
+8967060,legacy,G0,14,vernacular,,LITTLE TUFT BuLiMUS,False,LITTLE TUFT BuLiMUS,exact,1831,1850,100.0
+8967060,legacy,G0,15,person,,Benson,False,Benson,exact,2154,2160,100.0
+8967060,legacy,G0,16,locality,,"Humeerpore, Bmidelkhund, ludia",False,"Humeerpore, Bmidelkhund, ludia",exact,2174,2204,100.0
+8967060,legacy,G0,17,person,,Benson,False,Benson,exact,2207,2213,100.0
+8967147,modern_dots-mocr,G0,0,institution,,Mus. Cuming,False,Mus. Cuming,exact,41,52,100.0
+8967147,modern_dots-mocr,G0,1,taxon,,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,58,78,100.0
+8967147,modern_dots-mocr,G0,2,vernacular,,PHILIPPI'S ACHATINA,False,PHILIPPI'S ACHATINA,exact,411,430,100.0
+8967147,modern_dots-mocr,G0,3,person,,PFEIFFER,False,PFEIFFER,exact,811,819,100.0
+8967147,modern_dots-mocr,G0,4,taxon,,Glandina,False,Glandina,exact,822,830,100.0
+8967147,modern_dots-mocr,G0,5,locality,,Jamaica,False,Jamaica,exact,868,875,100.0
+8967147,modern_dots-mocr,G0,6,person,,Gosse,False,Gosse,exact,877,882,100.0
+8967147,modern_dots-mocr,G0,7,institution,,Mus. Dennison,False,Mus. Dennison,exact,1079,1092,100.0
+8967147,modern_dots-mocr,G0,8,taxon,,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1098,1117,100.0
+8967147,modern_dots-mocr,G0,9,vernacular,,NECKLACE-BOUND ACHATINA,False,NECKLACE-BOUND ACHATINA,exact,1405,1428,100.0
+8967147,modern_dots-mocr,G0,10,person,,PFEIFFER,False,PFEIFFER,exact,1728,1736,100.0
+8967147,modern_dots-mocr,G0,11,taxon,,Glandina,False,Glandina,exact,1739,1747,100.0
+8967147,modern_dots-mocr,G0,12,locality,,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1789,1822,100.0
+8967147,modern_dots-mocr,G0,13,person,,Lattre,False,Lattre,exact,1824,1830,100.0
+8967147,modern_dots-mocr,G0,14,institution,,Mus. Cuming,False,Mus. Cuming,exact,1987,1998,100.0
+8967147,modern_dots-mocr,G0,15,taxon,,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,2004,2020,100.0
+8967147,modern_dots-mocr,G0,16,vernacular,,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2233,2254,100.0
+8967147,modern_dots-mocr,G0,17,taxon,,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2472,2498,100.0
+8967147,modern_dots-mocr,G0,18,person,,Férussac,False,Férussac,exact,2501,2509,100.0
+8967147,modern_dots-mocr,G0,19,taxon,,Glandina oleacea,False,Glandina oleacea,exact,2531,2547,100.0
+8967147,modern_dots-mocr,G0,20,person,,Beck,False,Beck,exact,2550,2554,100.0
+8967147,modern_dots-mocr,G0,21,locality,,Cuba,False,Cuba,exact,2564,2568,100.0
+8967147,modern_dots-mocr,G0,22,institution,,Mus. Cuming,False,Mus. Cuming,exact,2688,2699,100.0
+8967147,modern_dots-mocr,G0,23,taxon,,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2705,2725,100.0
+8967147,modern_dots-mocr,G0,24,vernacular,,WHITE-ZONED ACHATINA,False,WHITE-ZONED ACHATINA,exact,3041,3061,100.0
+8967147,modern_dots-mocr,G0,25,person,,SOWERBY,False,SOWERBY,exact,3373,3380,100.0
+8967147,modern_dots-mocr,G0,26,taxon,,Voluta leucozonias,False,Voluta leucozonias,exact,3410,3428,100.0
+8967147,modern_dots-mocr,G0,27,person,,Walch,False,Walch,exact,3431,3436,100.0
+8967147,modern_dots-mocr,G0,28,taxon,,Achatina albolineata,False,Achatina albolineata,exact,3485,3505,100.0
+8967147,modern_dots-mocr,G0,29,person,,Lamarck,False,Lamarck,exact,3508,3515,100.0
+8967147,modern_dots-mocr,G0,30,taxon,,"Helix (Cochlicopa,) leucozonias",False,"Helix (Cochlicopa,)* leucozonia",fuzzy,3519,3550,96.8
+8967147,modern_dots-mocr,G0,31,person,,Férussac,False,Férussac,exact,3553,3561,100.0
+8967147,modern_dots-mocr,G0,32,taxon,,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3565,3587,100.0
+8967147,modern_dots-mocr,G0,33,person,,Jan,False,Jan,exact,3590,3593,100.0
+8967147,modern_dots-mocr,G0,34,taxon,,Glandina leucozonias,False,Glandina leucozonias,exact,3597,3617,100.0
+8967147,modern_dots-mocr,G0,35,person,,Beck,False,Beck,exact,3620,3624,100.0
+8967147,modern_dots-mocr,G0,36,locality,,Martinique,False,Martinique,exact,3634,3644,100.0
+8967147,modern_dots-mocr,G0,37,person,,Walch,False,Walch,exact,4026,4031,100.0
+8967147,modern_dots-mocr,G0,38,person,,Gmelin,False,Gmelin,exact,4033,4039,100.0
+8967147,modern_dots-mocr,G0,39,person,,Dillwyn,False,Dillwyn,exact,4045,4052,100.0
+8992601,expert,G0,0,person,,Stevenson,False,Stevenson,exact,269,278,100.0
+8992601,expert,G0,1,person,,St. John,False,St. John,exact,310,318,100.0
+8992601,expert,G0,2,vernacular,,grouse,False,grouse,exact,484,490,100.0
+8992601,expert,G0,3,vernacular,,partridges,False,partridges,exact,492,502,100.0
+8992601,expert,G0,4,vernacular,,hares,False,hares,exact,504,509,100.0
+8992601,expert,G0,5,vernacular,,wild duck,False,wild duck,exact,698,707,100.0
+8992601,expert,G0,6,vernacular,,pheasant,False,pheasant,exact,709,717,100.0
+8992601,expert,G0,7,vernacular,,Hooded Crow,False,Hooded Crow,exact,756,767,100.0
+8992601,expert,G0,8,vernacular,,Peewits,False,Peewits,exact,921,928,100.0
+8992601,expert,G0,9,vernacular,,Gulls,False,Gulls,exact,930,935,100.0
+8992601,expert,G0,10,vernacular,,Redshanks,False,Redshanks,exact,937,946,100.0
+8992601,expert,G0,11,vernacular,,Crow,False,Crow,exact,980,984,100.0
+8992601,expert,G0,12,vernacular,,hoody,False,hoody,exact,1031,1036,100.0
+8992601,expert,G0,13,vernacular,,ducks,False,ducks,exact,1065,1070,100.0
+8992601,expert,G0,14,vernacular,,eagle,False,eagle,exact,1168,1173,100.0
+8992601,expert,G0,15,vernacular,,peregrine falcon,False,peregrine falcon,exact,1175,1191,100.0
+8992601,expert,G0,16,vernacular,,osprey,False,osprey,exact,1196,1202,100.0
+8992601,expert,G0,17,vernacular,,Hoodies,False,Hoodies,exact,1351,1358,100.0
+8992601,expert,G0,18,date,,12th to the 30th of October,False,12th to the 30th of October,exact,1368,1395,100.0
+8992601,expert,G0,19,person,,T. H. Nelson,False,T. H. Nelson,exact,1405,1417,100.0
+8992601,expert,G0,20,person,,F. Pilling,False,F. Pilling,exact,1423,1433,100.0
+8992601,expert,G0,21,vernacular,,Hoodies,False,Hoodies,exact,1448,1455,100.0
+8992601,expert,G0,22,person,,Seebohm,False,Seebohm,exact,1557,1564,100.0
+8992601,expert,G0,23,person,,Gätke,False,Gätke,exact,1599,1604,100.0
+8992601,expert,G0,24,locality,,Heligoland,False,Heligoland,exact,2107,2117,100.0
+8992601,expert,G0,25,locality,,Weser,False,Weser,exact,2521,2526,100.0
+8992601,expert,G0,26,locality,,Bremerhaven,False,Bremerhaven,exact,2547,2558,100.0
+8992601,expert,G0,27,person,,Gätke,False,Gätke,exact,2751,2756,100.0
+8967147,modern_dots-mocr,G1,0,institution,5.0,Mus. Cuming,False,Mus. Cuming,exact,41,52,100.0
+8967147,modern_dots-mocr,G1,1,taxon,7.0,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,58,78,100.0
+8967147,modern_dots-mocr,G1,2,vernacular,9.0,PHILIPPI'S ACHATINA,False,PHILIPPI'S ACHATINA,exact,411,430,100.0
+8967147,modern_dots-mocr,G1,3,person,11.0,PFEIFFER,False,PFEIFFER,exact,811,819,100.0
+8967147,modern_dots-mocr,G1,4,taxon,11.0,Glandina,False,Glandina,exact,822,830,100.0
+8967147,modern_dots-mocr,G1,5,locality,12.0,Jamaica,False,Jamaica,exact,868,875,100.0
+8967147,modern_dots-mocr,G1,6,person,12.0,Gosse,False,Gosse,exact,877,882,100.0
+8967147,modern_dots-mocr,G1,7,institution,16.0,Mus. Dennison,False,Mus. Dennison,exact,1079,1092,100.0
+8967147,modern_dots-mocr,G1,8,taxon,18.0,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1098,1117,100.0
+8967147,modern_dots-mocr,G1,9,vernacular,20.0,NECKLACE-BOUND ACHATINA,False,NECKLACE-BOUND ACHATINA,exact,1405,1428,100.0
+8967147,modern_dots-mocr,G1,10,person,22.0,PFEIFFER,False,PFEIFFER,exact,1728,1736,100.0
+8967147,modern_dots-mocr,G1,11,taxon,22.0,Glandina,False,Glandina,exact,1739,1747,100.0
+8967147,modern_dots-mocr,G1,12,locality,23.0,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1789,1822,100.0
+8967147,modern_dots-mocr,G1,13,person,23.0,Lattre,False,Lattre,exact,1824,1830,100.0
+8967147,modern_dots-mocr,G1,14,institution,27.0,Mus. Cuming,False,Mus. Cuming,exact,1987,1998,100.0
+8967147,modern_dots-mocr,G1,15,taxon,29.0,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,2004,2020,100.0
+8967147,modern_dots-mocr,G1,16,vernacular,31.0,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2233,2254,100.0
+8967147,modern_dots-mocr,G1,17,taxon,33.0,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2472,2498,100.0
+8967147,modern_dots-mocr,G1,18,person,33.0,Férussac,False,Férussac,exact,2501,2509,100.0
+8967147,modern_dots-mocr,G1,19,taxon,34.0,Glandina oleacea,False,Glandina oleacea,exact,2531,2547,100.0
+8967147,modern_dots-mocr,G1,20,person,34.0,Beck,False,Beck,exact,2550,2554,100.0
+8967147,modern_dots-mocr,G1,21,locality,36.0,Cuba,False,Cuba,exact,2564,2568,100.0
+8967147,modern_dots-mocr,G1,22,institution,40.0,Mus. Cuming,False,Mus. Cuming,exact,2688,2699,100.0
+8967147,modern_dots-mocr,G1,23,taxon,42.0,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2705,2725,100.0
+8967147,modern_dots-mocr,G1,24,vernacular,44.0,WHITE-ZONED ACHATINA,False,WHITE-ZONED ACHATINA,exact,3041,3061,100.0
+8967147,modern_dots-mocr,G1,25,person,46.0,SOWERBY,False,SOWERBY,exact,3373,3380,100.0
+8967147,modern_dots-mocr,G1,26,taxon,48.0,Voluta leucozonias,False,Voluta leucozonias,exact,3410,3428,100.0
+8967147,modern_dots-mocr,G1,27,person,48.0,Walch,False,Walch,exact,3431,3436,100.0
+8967147,modern_dots-mocr,G1,28,taxon,50.0,Achatina albolineata,False,Achatina albolineata,exact,3485,3505,100.0
+8967147,modern_dots-mocr,G1,29,person,50.0,Lamarck,False,Lamarck,exact,3508,3515,100.0
+8967147,modern_dots-mocr,G1,30,taxon,52.0,"Helix (Cochlicopa,)* leucozonias",False,"Helix (Cochlicopa,)* leucozonias",exact,3519,3551,100.0
+8967147,modern_dots-mocr,G1,31,person,52.0,Férussac,False,Férussac,exact,3553,3561,100.0
+8967147,modern_dots-mocr,G1,32,taxon,54.0,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3565,3587,100.0
+8967147,modern_dots-mocr,G1,33,person,54.0,Jan,False,Jan,exact,3590,3593,100.0
+8967147,modern_dots-mocr,G1,34,taxon,56.0,Glandina leucozonias,False,Glandina leucozonias,exact,3597,3617,100.0
+8967147,modern_dots-mocr,G1,35,person,56.0,Beck,False,Beck,exact,3620,3624,100.0
+8967147,modern_dots-mocr,G1,36,locality,58.0,Martinique,False,Martinique,exact,3634,3644,100.0
+8967147,modern_dots-mocr,G1,37,person,60.0,Walch,False,Walch,exact,4026,4031,100.0
+8967147,modern_dots-mocr,G1,38,person,60.0,Gmelin,False,Gmelin,exact,4033,4039,100.0
+8967147,modern_dots-mocr,G1,39,person,60.0,Dillwyn,False,Dillwyn,exact,4045,4052,100.0
+8967047,modern_dots-mocr_plain,G1,0,institution,5.0,Mus. Taylor,False,Mus. Taylor,exact,38,49,100.0
+8967047,modern_dots-mocr_plain,G1,1,taxon,7.0,BULIMUS BIVITTATUS,False,BULIMUS BIVITTATUS,exact,53,71,100.0
+8967047,modern_dots-mocr_plain,G1,2,vernacular,9.0,TWO-FILLETED BULIMUS,False,TWO-FILLETED BULIMUS,exact,325,345,100.0
+8967047,modern_dots-mocr_plain,G1,3,person,11.0,SOWERBY,False,SOWERBY,exact,609,616,100.0
+8967047,modern_dots-mocr_plain,G1,4,locality,13.0,Brazil,False,Brazil,exact,660,666,100.0
+8967047,modern_dots-mocr_plain,G1,5,taxon,15.0,B. auris-leporis,False,B. auris-leporis,exact,738,754,100.0
+8967047,modern_dots-mocr_plain,G1,6,institution,17.0,Mus. Taylor,False,Mus. Taylor,exact,771,782,100.0
+8967047,modern_dots-mocr_plain,G1,7,taxon,19.0,BULIMUS MULIEBRIS,False,BULIMUS MULIEBRIS,exact,786,803,100.0
+8967047,modern_dots-mocr_plain,G1,8,vernacular,21.0,EFFEMINATE BULIMUS,False,EFFEMINATE BULIMUS,exact,1057,1075,100.0
+8967047,modern_dots-mocr_plain,G1,9,locality,23.0,New Granada,False,New Granada,exact,1348,1359,100.0
+8967047,modern_dots-mocr_plain,G1,10,institution,27.0,Mus. Cuming,False,Mus. Cuming,exact,1437,1448,100.0
+8967047,modern_dots-mocr_plain,G1,11,taxon,29.0,BULIMUS BOLIVIANUS,False,BULIMUS BOLIVIANUS,exact,1452,1470,100.0
+8967047,modern_dots-mocr_plain,G1,12,vernacular,31.0,BOLIVIAN BULIMUS,False,BOLIVIAN BULIMUS,exact,1814,1830,100.0
+8967047,modern_dots-mocr_plain,G1,13,person,35.0,PFEIFFER,False,PFEIFFER,exact,2174,2182,100.0
+8967047,modern_dots-mocr_plain,G1,14,locality,37.0,"Merida, Andes of Bolivia",False,"Merida, Andes of Bolivia",exact,2225,2249,100.0
+8967047,modern_dots-mocr_plain,G1,15,person,39.0,Pfeiffer,False,Pfeiffer,exact,2332,2340,100.0
+8967047,modern_dots-mocr_plain,G1,16,taxon,39.0,B. annulatus,False,B. annulatus,exact,2410,2422,100.0
+8967047,modern_dots-mocr_plain,G1,17,institution,41.0,Mus. Taylor,False,Mus. Taylor,exact,2549,2560,100.0
+8967047,modern_dots-mocr_plain,G1,18,taxon,43.0,BULIMUS PATRICIUS,False,BULIMUS PATRICIUS,exact,2564,2581,100.0
+8967047,modern_dots-mocr_plain,G1,19,vernacular,45.0,PATRICIAN BULIMUS,False,PATRICIAN BULIMUS,exact,2854,2871,100.0
+8967047,modern_dots-mocr_plain,G1,20,locality,49.0,New Granada,False,New Granada,exact,3199,3210,100.0
+8967047,modern_dots-mocr_plain,G1,21,institution,51.0,Mus. Taylor,False,Mus. Taylor,exact,3300,3311,100.0
+8967047,modern_dots-mocr_plain,G1,22,taxon,53.0,BULIMUS SPECTATUS,False,BULIMUS SPECTATUS,exact,3315,3332,100.0
+8967047,modern_dots-mocr_plain,G1,23,vernacular,55.0,CHOICE BULIMUS,False,CHOICE BULIMUS,exact,3645,3659,100.0
+8992601,modern_dots-mocr,G1,0,person,3.0,Stevenson,False,Stevenson,exact,247,256,100.0
+8992601,modern_dots-mocr,G1,1,person,3.0,St. John,False,St. John,exact,288,296,100.0
+8992601,modern_dots-mocr,G1,2,vernacular,3.0,grouse,False,grouse,exact,462,468,100.0
+8992601,modern_dots-mocr,G1,3,vernacular,3.0,partridges,False,partridges,exact,470,480,100.0
+8992601,modern_dots-mocr,G1,4,vernacular,3.0,hares,False,hares,exact,482,487,100.0
+8992601,modern_dots-mocr,G1,5,vernacular,3.0,wild duck,False,wild duck,exact,674,683,100.0
+8992601,modern_dots-mocr,G1,6,vernacular,3.0,pheasant,False,pheasant,exact,685,693,100.0
+8992601,modern_dots-mocr,G1,7,vernacular,3.0,Hooded Crow,False,Hooded Crow,exact,732,743,100.0
+8992601,modern_dots-mocr,G1,8,vernacular,3.0,Peewits,False,Peewits,exact,897,904,100.0
+8992601,modern_dots-mocr,G1,9,vernacular,3.0,Gulls,False,Gulls,exact,906,911,100.0
+8992601,modern_dots-mocr,G1,10,vernacular,3.0,Redshanks,False,Redshanks,exact,913,922,100.0
+8992601,modern_dots-mocr,G1,11,vernacular,3.0,Crow,False,Crow,exact,739,743,100.0
+8992601,modern_dots-mocr,G1,12,vernacular,3.0,hoody,False,hoody,exact,1007,1012,100.0
+8992601,modern_dots-mocr,G1,13,vernacular,3.0,ducks,False,ducks,exact,1041,1046,100.0
+8992601,modern_dots-mocr,G1,14,vernacular,3.0,eagle,False,eagle,exact,1144,1149,100.0
+8992601,modern_dots-mocr,G1,15,vernacular,3.0,peregrine falcon,False,peregrine falcon,exact,1151,1167,100.0
+8992601,modern_dots-mocr,G1,16,vernacular,3.0,osprey,False,osprey,exact,1172,1178,100.0
+8992601,modern_dots-mocr,G1,17,vernacular,5.0,Hoodies,False,Hoodies,exact,1326,1333,100.0
+8992601,modern_dots-mocr,G1,18,date,5.0,12th to the 30th of October,False,12th to the 30th of October,exact,1343,1370,100.0
+8992601,modern_dots-mocr,G1,19,person,5.0,T. H. Nelson,False,T. H. Nelson,exact,1380,1392,100.0
+8992601,modern_dots-mocr,G1,20,person,5.0,F. Pilling,False,F. Pilling,exact,1398,1408,100.0
+8992601,modern_dots-mocr,G1,21,vernacular,5.0,Hoodies,False,Hoodies,exact,1423,1430,100.0
+8992601,modern_dots-mocr,G1,22,person,5.0,Seebohm,False,Seebohm,exact,1532,1539,100.0
+8992601,modern_dots-mocr,G1,23,person,5.0,Gätke,False,Gätke,exact,1574,1579,100.0
+8992601,modern_dots-mocr,G1,24,locality,5.0,Heligoland,False,Heligoland,exact,2086,2096,100.0
+8992601,modern_dots-mocr,G1,25,locality,5.0,Weser,False,Weser,exact,2500,2505,100.0
+8992601,modern_dots-mocr,G1,26,locality,5.0,Bremerhaven,False,Bremerhaven,exact,2526,2537,100.0
+8992601,modern_dots-mocr,G1,27,person,7.0,Gätke,False,Gätke,exact,2730,2735,100.0
+8967047,modern_dots-mocr,G0,0,institution,,Mus. Taylor,False,Mus. Taylor,exact,43,54,100.0
+8967047,modern_dots-mocr,G0,1,taxon,,BULIMUS BIVITTATUS,False,BULIMUS BIVITTATUS,exact,60,78,100.0
+8967047,modern_dots-mocr,G0,2,vernacular,,TWO-FILLETED BULIMUS,False,TWO-FILLETED BULIMUS,exact,338,358,100.0
+8967047,modern_dots-mocr,G0,3,person,,SOWERBY,False,SOWERBY,exact,624,631,100.0
+8967047,modern_dots-mocr,G0,4,locality,,Brazil,False,Brazil,exact,675,681,100.0
+8967047,modern_dots-mocr,G0,5,taxon,,B. auris-leporis,False,B. auris-leporis,exact,754,770,100.0
+8967047,modern_dots-mocr,G0,6,institution,,Mus. Taylor,False,Mus. Taylor,exact,791,802,100.0
+8967047,modern_dots-mocr,G0,7,taxon,,BULIMUS MULIEBRIS,False,BULIMUS MULIEBRIS,exact,808,825,100.0
+8967047,modern_dots-mocr,G0,8,vernacular,,EFFEMINATE BULIMUS,False,EFFEMINATE BULIMUS,exact,1085,1103,100.0
+8967047,modern_dots-mocr,G0,9,locality,,New Granada,False,New Granada,exact,1378,1389,100.0
+8967047,modern_dots-mocr,G0,10,institution,,Mus. Cuming,False,Mus. Cuming,exact,1470,1481,100.0
+8967047,modern_dots-mocr,G0,11,taxon,,BULIMUS BOLIVIANUS,False,BULIMUS BOLIVIANUS,exact,1487,1505,100.0
+8967047,modern_dots-mocr,G0,12,vernacular,,BOLIVIAN BULIMUS,False,BOLIVIAN BULIMUS,exact,1855,1871,100.0
+8967047,modern_dots-mocr,G0,13,person,,PFEIFFER,False,PFEIFFER,exact,2217,2225,100.0
+8967047,modern_dots-mocr,G0,14,locality,,"Merida, Andes of Bolivia",False,"Merida, Andes of Bolivia",exact,2268,2292,100.0
+8967047,modern_dots-mocr,G0,15,person,,Pfeiffer,False,Pfeiffer,exact,2375,2383,100.0
+8967047,modern_dots-mocr,G0,16,taxon,,B. annulatus,False,B. annulatus,exact,2454,2466,100.0
+8967047,modern_dots-mocr,G0,17,institution,,Mus. Taylor,False,Mus. Taylor,exact,2597,2608,100.0
+8967047,modern_dots-mocr,G0,18,taxon,,BULIMUS PATRICIUS,False,BULIMUS PATRICIUS,exact,2614,2631,100.0
+8967047,modern_dots-mocr,G0,19,vernacular,,PATRICIAN BULIMUS,False,PATRICIAN BULIMUS,exact,2910,2927,100.0
+8967047,modern_dots-mocr,G0,20,locality,,New Granada,False,New Granada,exact,3257,3268,100.0
+8967047,modern_dots-mocr,G0,21,institution,,Mus. Taylor,False,Mus. Taylor,exact,3361,3372,100.0
+8967047,modern_dots-mocr,G0,22,taxon,,BULIMUS SPECTATUS,False,BULIMUS SPECTATUS,exact,3378,3395,100.0
+8967047,modern_dots-mocr,G0,23,vernacular,,CHOICE BULIMUS,False,CHOICE BULIMUS,exact,3714,3728,100.0

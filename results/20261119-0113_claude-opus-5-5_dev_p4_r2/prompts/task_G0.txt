@@ -1,0 +1,5 @@
+Extract all mentions from the page below. For each mention give its field and its value, copied as written on the page. Never include the line labels (such as "L07|") in a value.
+
+<page>
+{numbered_text}
+</page>
