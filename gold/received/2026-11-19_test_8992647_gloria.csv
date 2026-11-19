@@ -1,0 +1,22 @@
+page_id,start,end,field,text,qualifier,notes,scan_text,adjudication,guide_version
+8992647,22,33,taxon,MOTACILLIDÆ,,Family-level taxon heading introducing a distinct species account.,,,v0.9
+8992647,40,60,vernacular,BLACK‐HEADED WAGTAIL,,Actual species-account heading; initial THE excluded.,,,v0.9
+8992647,63,86,taxon,Motacilla melanocephala,,,,,v0.9
+8992647,88,94,person,LICHT.,,Abbreviated taxonomic authority; terminal abbreviation period retained.,,,v0.9
+8992647,116,126,locality,Willingdon,near,Specific shooting locality; relative near in qualifier only.,,,v0.9
+8992647,131,145,date,"May 13th, 1906",,Specific shooting event.,,,v0.9
+8992647,168,175,taxon,M. ﬂava,,Abbreviated genus plus epithet; ligature ﬂ preserved from expert transcription.,,,v0.9
+8992647,211,222,taxon,MOTACILLIDÆ,,Family-level taxon heading introducing a distinct species account.,,,v0.9
+8992647,225,239,vernacular,SYKES’ WAGTAIL,,"Actual species-account heading, full eponymic common name; do not separately tag Sykes as person inside vernacular.",,,v0.9
+8992647,242,257,taxon,Motacilla beema,,,,,v0.9
+8992647,259,264,person,SYKES,,Taxonomic authority printed after the scientific name; terminal full stop excluded (full surname).,,,v0.9
+8992647,289,308,locality,"Rottingdean, Sussex",,One named place plus containing region; comma indicates geographic hierarchy.,,,v0.9
+8992647,313,329,date,"April 20th, I898",,TRANSCRIPTION-ERROR: expert file has capital I in I898; scanned page prints 1898. Span/offsets follow expert text.,"April 20th, 1898",,v0.9
+8992647,339,350,taxon,MOTACILLIDÆ,,Family-level taxon heading introducing a distinct species account.,,,v0.9
+8992647,357,376,vernacular,ASHY‐HEADED WAGTAIL,,Actual species-account heading; initial THE excluded.,,,v0.9
+8992647,379,403,taxon,Motacilla cinereocapilla,,,,,v0.9
+8992647,405,409,person,SAVI,,Taxonomic authority is the full surname Savi; terminal full stop excluded.,,,v0.9
+8992647,458,466,locality,Penzance,near,First specimen described as shot near this place; no specific occurrence date for first specimen (many years ago).,,,v0.9
+8992647,484,503,locality,"Sheringham, Norfolk",,"Second specimen site, narrow locality plus wider area.",,,v0.9
+8992647,508,519,date,May ?) 1842,,"UNCLEAR: date-span boundary. The historical phrase is ""(in May ?) 1842"" for a particular second specimen; month is explicitly uncertain (UNCERTAIN-IN-SOURCE). Provisional one-span choice preserves both uncertain month and year; alternative is year-only 1842 with May uncertainty retained in notes.",,,v0.9
+8992647,614,621,taxon,M. ﬂava,,Second abbreviated binomial mention; Unicode ligature ﬂ retained.,,,v0.9
