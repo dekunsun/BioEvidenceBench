@@ -1,0 +1,69 @@
+{
+  "run_id": "20261119-0221_gemini-4-carbon_dev_p4_r1",
+  "created_at": "2026-11-19T02:21:00+00:00",
+  "provider": "gemini",
+  "model": "gemini-4-carbon",
+  "max_tokens": 32768,
+  "mode": "batch",
+  "prompt_version": "p4-guide-v0.6",
+  "system_sha256": "ad7f90379c0277d1c0199ee7b3c5ebc6dc71e6b590fa730f7c088e54e0f237c0",
+  "pages": "dev",
+  "page_ids": [
+    8992582,
+    8992601,
+    8992612,
+    8967047,
+    8967060,
+    8967147
+  ],
+  "versions": [
+    "expert",
+    "legacy",
+    "modern_dots-mocr",
+    "modern_dots-mocr_plain"
+  ],
+  "conditions": [
+    "G0",
+    "G1"
+  ],
+  "max_usd": 1.07,
+  "n_requests": 48,
+  "dry_run": false,
+  "google_genai_sdk": "3.6.1",
+  "api_base_url": "https://generativelanguage.googleapis.com/",
+  "api_version": "v1beta",
+  "api": "generateContent (Batch API, inline requests)",
+  "generation_config": {
+    "response_mime_type": "application/json",
+    "response_json_schema": "prompts/schema_<G0|G1>.json, sent unchanged",
+    "max_output_tokens": 32768,
+    "thinking_config": null,
+    "thinking_note": "not sent: model default (docs: thinking_level medium)",
+    "temperature": null,
+    "temperature_note": "not sent: model default",
+    "top_p": null,
+    "top_k": null,
+    "seed": null
+  },
+  "schema_changes_for_gemini": [],
+  "prices_usd_per_mtok": {
+    "input": 2.0,
+    "output_incl_thinking": 10.0,
+    "cached_input": 0.1,
+    "batch_multiplier": 0.5,
+    "valid_until": "2026-11-30",
+    "source": "https://aistudio.google.com/docs/pricing (Paid Tier, Standard; read 2026-11-19)"
+  },
+  "estimate": {
+    "from": "20261119-0216_gemini-4-carbon_dev5_sync_p4",
+    "usd": 0.5558
+  },
+  "model_info_from_api": {
+    "name": "models/gemini-4-carbon",
+    "version": "3.0",
+    "display_name": "Gemini 4 Carbon",
+    "input_token_limit": 1048576,
+    "output_token_limit": 32768,
+    "retrieved_at": "2026-11-19T02:21:01+00:00"
+  }
+}

@@ -1,0 +1,5 @@
+Extract all mentions from the page below. For each mention give its field, the number of the line where it appears, and a quote: the mention copied character for character from that line, exactly as written there, including any errors, spacing and punctuation inside it. The quote is checked automatically against the line; a quote that is not an exact copy counts as unsupported. If a mention is broken across two lines, give the line where it starts and quote the whole mention, writing the line break as one space and keeping any hyphen that is printed there. Never include the line labels (such as "L07|") in a quote.
+
+<page>
+{numbered_text}
+</page>
