@@ -124,7 +124,14 @@ def _ok(level: str, pr: dict, gr: dict) -> bool:
         return same
     if level == "lenient":
         return overlap
-    return overlap and norm_value(pr["value"]) == norm_value(gr["text"])
+    # Value level: the predicted text must equal the gold text. Where the transcription
+    # itself is wrong against the scan, the labeller records the scan's reading in
+    # `scan_text`, and that reading is accepted as well: a model that reads the page
+    # correctly must not be marked wrong for disagreeing with a typo in the reference.
+    accepted = {norm_value(gr["text"])}
+    if str(gr.get("scan_text", "") or "").strip():
+        accepted.add(norm_value(gr["scan_text"]))
+    return overlap and norm_value(pr["value"]) in accepted
 
 
 def _placed(pr: dict) -> bool:
@@ -231,6 +238,8 @@ def load_gold(path, optional_after: str | None = None) -> pd.DataFrame:
                          "(ANNOTATION_GUIDE section 4). Resolve them before scoring.")
     if "adjudication" not in g:
         g["adjudication"] = ""
+    if "scan_text" not in g:
+        g["scan_text"] = ""
     g["start"], g["end"] = g.start.astype(float).astype(int), g.end.astype(float).astype(int)
     # `excluded` rows record a decision NOT to label something (kept so the decision is
     # visible). Normally they are not gold. In the sensitivity report, an exclusion decided
@@ -413,6 +422,8 @@ def entity_span_cer(gold_path, split: str) -> pd.DataFrame:
             span = map_span(char_map(expert, ocr), g.start, g.end)
             ocr_text = ocr[span[0]:span[1]] if span else ""
             a, b = norm_value(ocr_text), norm_value(g.text)
+            if str(g.scan_text).strip() and a == norm_value(g.scan_text):
+                b = a          # the OCR agrees with the scan against a typo in the transcription
             rows.append({"page_id": int(g.page_id), "field": g.field, "version": v,
                          "gold_start": g.start, "gold_end": g.end, "gold_text": g.text,
                          "ocr_text": ocr_text, "aligned": span is not None,

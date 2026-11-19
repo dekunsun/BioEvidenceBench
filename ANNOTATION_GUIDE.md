@@ -2,8 +2,8 @@
 
 > 中文版在本文件下方：[跳到中文版](#标注规范中文版)。两个版本内容相同；如有出入，以英文版为准，并请指出来改正。
 
-**Version v0.8, 2026-11-19.** v0.5 was written before any labelling. v0.6 adds the rules Gloria
-decided after labelling the six dev pages; v0.7 and v0.8 add rules decided while labelling the test pages
+**Version v0.9, 2026-11-19.** v0.5 was written before any labelling. v0.6 adds the rules Gloria
+decided after labelling the six dev pages; v0.7 to v0.9 add rules decided while labelling the test pages
 (see the changelog). None changes an earlier rule. The prompt (`p4`) was written from v0.6 and
 is **not** updated from rules found on test pages (section 4); the gold set uses the latest version. Later changes get a new version number and a changelog line; the gold CSV
 records the guide version of every row.
@@ -53,6 +53,7 @@ The unit is a **mention**: one span of characters in the expert text, plus a fie
 | `text` | the span, copied exactly |
 | `qualifier` | localities only: the relative words left out of the span (`near`, `ten miles north of`). Empty otherwise. Recorded, not scored in V1 |
 | `notes` | free text; `UNCLEAR: …` for doubtful cases; `UNCERTAIN-IN-SOURCE` when the print itself hedges (e.g. a `?`); `NO-YEAR` (2.6) |
+| `scan_text` | normally empty. Fill it only where the **transcription itself is wrong against the scan**: the text as the scan prints it. The row's `text` and offsets still follow the transcription file exactly (the checker requires that), and notes get `TRANSCRIPTION-ERROR`. Example: the file has `Fringilla nontifringilla`, the scan prints `Fringilla montifringilla`. At value level the scorer accepts either reading, and the linking step looks up the scan's reading |
 | `adjudication` | empty for a clear row. For a row that was `UNCLEAR`: `adjudicated` (decided; scored normally) or `ambiguous` (still open; left out of strict scoring). `excluded`: the row was considered and is **not** a mention under the rule named in notes; it is kept so the decision stays visible, and it is not gold. See section 4 |
 | `guide_version` | e.g. `v0.4` |
 
@@ -405,6 +406,7 @@ corrected gold. Scoring rules are never changed to improve a score.
 | v0.2 | 2026-11-18 | Entity types aligned with the NHM BHL prototype: `collector` replaced by `person` (every named person); new `institution`; `locality` covers every named place, not only occurrence statements. `date` unchanged. |
 | v0.3 | 2026-11-18 | Default answers for the span-edge questions found in the Opus p2 dev run: 2.0 on span edges; all titles treated like honorifics; part-of-place words stay in the locality span; `Mus. Adams` / `ADAMS, MS.` worked example. |
 | v0.4 | 2026-11-18 | Gloria's decisions on all nine questions. New field `vernacular`, scored separately (decision 1). New `qualifier` column for relative words (2). More in/out examples for place boundaries (7). Non-contiguous exception for names broken across lines (9). Fixed the `PFEIFFER … 1846` example and stated the mixed design: entity fields are general NER, `date` is event-bound; a month without a year counts when it belongs to a particular event. NHM statement reworded: types inspired by NHM, scores not comparable. Taxon linking split into resolution status, match method, matched rank and taxonomic status. New `adjudication` column and rules for unclear rows; dev and test discipline separated; freeze list before unsealing. No pages labelled yet. |
+| v0.9 | 2026-11-19 | Found by Gloria on test page 8992489: the expert transcription has a typo (`Fringilla nontifringilla` for the scan's `montifringilla`). New optional column `scan_text` for such cases; `text` and offsets keep following the transcription. Known cases are listed in `data/transcription_errata.csv`. No rule about what counts as a mention changes. |
 | v0.8 | 2026-11-19 | Decided by Gloria on test page 8992379: nothing inside the title of a cited work is a mention, in any field (2.0.5; v0.6 said this for places only). New `adjudication` value `excluded` for a row that was considered and is not a mention. |
 | v0.7 | 2026-11-19 | Decided by Gloria on the first test page (8992328), `vernacular` only: broad group names are labelled (`insects`); only the book's own subject word is generic; a name standing as its own word is labelled even when it means material (`moss`); a name that is one part of a hyphenated compound is not (`grass` in `grass-stalks`). Section 4: rules found on test pages go into the guide but not into the prompt; scores are reported with and without the rows they decide. |
 | v0.6 | 2026-11-19 | Rules decided by Gloria after labelling the six dev pages; no earlier rule changes. `taxon`: Latin plurals of genus names (`Bulimi`, `Achatinæ`) and a genus in citation brackets (`(Glandina,)`) are labelled. `vernacular`: case makes no difference; age, sex and stage words are out. `locality`: one span for comma-separated names running from narrow to wide, separate mentions for lists (decided from the wording, not from looked-up geography); named regions (`Continent`, `Old World`); only natural-feature words are part of a place; places in titles of cited works and common nouns (`the island`) are out. `date`: a day number tied to a recorded movement is an event (`12th to the 30th of October`, `NO-YEAR`). Section 4: `UNCLEAR` vs `UNCERTAIN-IN-SOURCE`; a test page is labelled alone and saved before any comparison. Dev gold: three rows added on Gloria's decision (`gold/gold_changes_gloria.csv`). |
@@ -414,7 +416,7 @@ corrected gold. Scoring rules are never changed to improve a score.
 
 # 标注规范（中文版）
 
-**版本 v0.8，2026-11-19。** v0.5 写于任何标注开始之前。v0.6 加入 Gloria 标完 6 页开发集后决定的规则；v0.7 和 v0.8 加入标测试页过程中决定的规则（见变更记录）。这几版都没有改动之前的规则。提示词（`p4`）按 v0.6 写成，**不会**根据测试页上发现的规则更新（第 4 节）；gold set 以最新版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
+**版本 v0.9，2026-11-19。** v0.5 写于任何标注开始之前。v0.6 加入 Gloria 标完 6 页开发集后决定的规则；v0.7 到 v0.9 加入标测试页过程中决定的规则（见变更记录）。这几版都没有改动之前的规则。提示词（`p4`）按 v0.6 写成，**不会**根据测试页上发现的规则更新（第 4 节）；gold set 以最新版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
 
 ## 决定记录（Gloria，2026-11-18）
 
@@ -452,6 +454,7 @@ corrected gold. Scoring rules are never changed to improve a score.
 | `text` | 片段，原样抄写 |
 | `qualifier` | 只用于地点：没有算进片段的相对位置词（`near`、`ten miles north of`）。其他情况留空。只记录，V1 不评分 |
 | `notes` | 自由文本；拿不准的写 `UNCLEAR: …`；原文本身有保留（比如带 `?`）时写 `UNCERTAIN-IN-SOURCE`；另有 `NO-YEAR`（2.6） |
+| `scan_text` | 一般留空。只有**转录文件本身和扫描图不一致**时才填：填扫描图上印的文字。这一行的 `text` 和位置仍然严格按转录文件来（检查脚本要求一致），备注里写 `TRANSCRIPTION-ERROR`。例子：文件里是 `Fringilla nontifringilla`，扫描图上印的是 `Fringilla montifringilla`。值级评分时两种读法都算对，学名关联时用扫描图的读法去查 |
 | `adjudication` | 清楚的行留空。曾经标过 `UNCLEAR` 的行填：`adjudicated`（已裁定，正常评分）或 `ambiguous`（仍有歧义，不纳入严格评分）。见第 4 节 `excluded`：这一行考虑过，但按备注里写的规则**不算**提及；保留它是为了让这个决定看得见，它不是 gold。 |
 | `guide_version` | 例如 `v0.4` |
 
@@ -673,6 +676,7 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 | v0.2 | 2026-11-18 | 实体类型对齐 NHM 的 BHL 原型：`collector` 改为 `person`（所有有名字的人）；新增 `institution`；`locality` 覆盖所有有名字的地点，不只是发生记录。`date` 不变。 |
 | v0.3 | 2026-11-18 | 为 Opus p2 开发集结果里发现的片段边界问题写默认答案：2.0 片段边界；所有头衔按敬称处理；表示地点一部分的词留在地点片段里；增加 `Mus. Adams` / `ADAMS, MS.` 示例。 |
 | v0.4 | 2026-11-18 | Gloria 对九个问题的决定。新增字段 `vernacular`，单独评分（决定 1）。新增 `qualifier` 列记录相对位置词（2）。地点边界增加更多正反例（7）。跨行名字增加"文字不连续"的例外（9）。修正 `PFEIFFER … 1846` 的例子，并写明混合设计：实体字段是一般的命名实体识别，`date` 和事件绑定；属于一次具体事件、没有年份的月份也算。NHM 的说法改为：类型参考 NHM，分数不可比。学名关联拆成解析状态、匹配方式、匹配等级和分类学状态。新增 `adjudication` 列和不清楚行的处理规则；开发页和测试页的纪律分开；解封前的冻结清单。尚未标注任何页面。 |
+| v0.9 | 2026-11-19 | Gloria 在测试页 8992489 上发现：专家转录有一处笔误（把扫描图上的 `montifringilla` 写成了 `Fringilla nontifringilla`）。新增可选列 `scan_text` 处理这种情况；`text` 和位置仍按转录文件。已知的笔误列在 `data/transcription_errata.csv`。"什么算提及"的规则没有变化。 |
 | v0.8 | 2026-11-19 | Gloria 在测试页 8992379 上的决定：被引用著作标题里的任何内容都不算提及，所有字段都一样（2.0.5；v0.6 只对地名这样规定）。`adjudication` 新增取值 `excluded`，表示这一行考虑过、但不算提及。 |
 | v0.7 | 2026-11-19 | Gloria 在第一页测试页（8992328）上的决定，只涉及 `vernacular`：大的类群名要标（`insects`）；只有这本书自己的主题词算泛称；独立成词的名字即使指材料也标（`moss`）；只是连字符复合词一部分的不标（`grass-stalks` 里的 `grass`）。第 4 节：测试页上发现的规则写进规范但不进提示词；分数按是否包含这些行各报告一遍。 |
 | v0.6 | 2026-11-19 | Gloria 标完 6 页开发集后决定的规则；之前的规则不变。`taxon`：属名的拉丁复数（`Bulimi`、`Achatinæ`）和引用括号里的属名（`(Glandina,)`）要标。`vernacular`：不分大小写；年龄、性别、发育阶段词不标。`locality`：逗号隔开、由小到大的地名算一个片段，并列列举的算多个（按原文写法判断，不查地理）；当专名用的区域名（`Continent`、`Old World`）要标；只有自然地貌词算地点的一部分；被引用著作标题里的地名和普通名词（`the island`）不标。`date`：和一次有记录的迁移连在一起的具体的日算事件（`12th to the 30th of October`，`NO-YEAR`）。第 4 节：区分 `UNCLEAR` 和 `UNCERTAIN-IN-SOURCE`；测试页先独自标完并保存，再做任何对比。开发集 gold：按 Gloria 的决定加了三行（`gold/gold_changes_gloria.csv`）。 |

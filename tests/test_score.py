@@ -169,3 +169,13 @@ def test_a_run_with_no_predictions_on_a_page_is_scored_not_crashed(tmp_path, mon
     d = score.score_run_detail("empty_run", gold, "dev")
     row = d["by_page"].query("page_id == @pid and field == 'locality'").iloc[0]
     assert row.n_pred == 0 and row.value_fn == 1 and row.value_tp == 0
+
+
+def test_scan_reading_is_accepted_where_the_transcription_has_a_typo():
+    from score import _ok
+    gold = {"start": 0, "end": 24, "text": "Fringilla nontifringilla", "scan_text": "Fringilla montifringilla"}
+    span = {"m_start": 0, "m_end": 24}
+    assert _ok("value", span | {"value": "Fringilla montifringilla"}, gold)      # reads the page right
+    assert _ok("value", span | {"value": "Fringilla nontifringilla"}, gold)      # copies the transcription
+    assert not _ok("value", span | {"value": "Fringilla montifringila"}, gold)   # a real misreading
+    assert not _ok("value", span | {"value": "Fringilla montifringilla"}, gold | {"scan_text": ""})

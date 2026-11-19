@@ -1,0 +1,2 @@
+page_id,book,start,end,transcription_text,scan_text,found_by,found_on,evidence,status
+8992489,Butler,81,105,Fringilla nontifringilla,Fringilla montifringilla,Gloria (while labelling the test page against the scan),2026-11-19,"scan read by Gloria; the modern OCR (dots.mocr) of the same page also reads montifringilla",confirmed against the scan by the labeller

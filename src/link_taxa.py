@@ -293,7 +293,9 @@ def gold_arm(links: pd.DataFrame, gold_mentions: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for r in links.to_dict("records"):
         earlier = taxa[(taxa.page_id == r["page_id"]) & (taxa.start < r["start"])].text.tolist()
-        rows.append(r | {"name": r["text"], "earlier": earlier, "extracted": True,
+        # where the transcription has a typo, look up the name as the scan prints it
+        name = str(r.get("scan_text", "") or "").strip() or r["text"]
+        rows.append(r | {"name": name, "earlier": earlier, "extracted": True,
                          "run": "gold_mentions", "version": "expert", "condition": "GOLD"})
     return pd.DataFrame(rows)
 
