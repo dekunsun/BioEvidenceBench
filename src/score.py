@@ -302,7 +302,9 @@ def score_run_detail(run_id: str, gold_path, split: str, issues_path=None,
             # nor wrong. No gold row exists there, so nothing is counted as missed either.
             in_issue = [sp is not None and any(sp[0] < b_ and a_ < sp[1] for a_, b_ in issues.get(pid, []))
                         for sp in spans]
-            pr["in_issue"] = in_issue
+            # dtype=bool matters: on a page with no predictions a plain empty list becomes a
+            # float column, and `pr[~pr.in_issue]` would then drop every column.
+            pr["in_issue"] = pd.Series(in_issue, index=pr.index, dtype=bool)
             set_aside = pr[pr.in_issue]
             pr = pr[~pr.in_issue]
             g_page = gold[gold.page_id == pid]

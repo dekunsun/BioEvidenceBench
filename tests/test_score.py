@@ -143,3 +143,29 @@ def test_excluded_rows_are_not_gold_but_optional_in_the_sensitivity_report(tmp_p
     assert list(load_gold(p).text) == ["Kent"]
     g = load_gold(p, optional_after="v0.6")
     assert list(g.text) == ["Finches", "Kent"] and list(g.adjudication) == ["ambiguous", ""]
+
+
+def test_a_run_with_no_predictions_on_a_page_is_scored_not_crashed(tmp_path, monkeypatch):
+    """An empty model answer on a page (and a page with no entities at all) must give
+    zero predictions and the right false negatives, not an exception."""
+    import pandas as pd
+    import score
+    pages = pd.read_csv(score.DATA / "sample_split.csv").query("split == 'dev'")
+    pid = int(pages.PageID.iloc[0])
+    text = score.page_text("expert", pid)
+    word = text.split()[0]
+    run = tmp_path / "empty_run"
+    run.mkdir()
+    # one prediction on another page only, so the first page has none in this arm
+    other = int(pages.PageID.iloc[1])
+    pd.DataFrame([{"page_id": other, "version": "expert", "condition": "G1", "i": 0, "field": "locality",
+                   "line": 1, "model_text": "x", "had_line_label": False, "value": "",
+                   "status": "invalid_evidence", "start": "", "end": "", "score": 0.0}]
+                 ).to_csv(run / "dev_mentions.csv", index=False)
+    gold = tmp_path / "gold.csv"
+    rows = [f"{pid},0,{len(word)},locality,{word},,,,v0.8"] + [f"{int(q)},,,none,,,,,v0.8" for q in pages.PageID.iloc[1:]]
+    gold.write_text("page_id,start,end,field,text,qualifier,notes,adjudication,guide_version\n" + "\n".join(rows) + "\n")
+    monkeypatch.setattr(score, "RESULTS", tmp_path)
+    d = score.score_run_detail("empty_run", gold, "dev")
+    row = d["by_page"].query("page_id == @pid and field == 'locality'").iloc[0]
+    assert row.n_pred == 0 and row.value_fn == 1 and row.value_tp == 0
