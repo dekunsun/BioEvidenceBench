@@ -5,6 +5,7 @@ page_id,start,end,field,text,qualifier,notes,adjudication,guide_version
 8992328,915,924,locality,Maidstone,"in the neigh‐
 bourhood of",Relative qualifier is line-hyphenated in expert transcription.,,v0.6
 8992328,1152,1161,vernacular,Greenﬁnch,,,,v0.6
+8992328,1208,1213,vernacular,grass,,"Not a mention: part of the compound grass-stalks (guide v0.7, 2.2). Was UNCLEAR.",excluded,v0.7
 8992328,1225,1229,vernacular,moss,,"UNCLEAR: is moss a named organism group here, or generic nesting material?",adjudicated,v0.7
 8992328,1311,1323,vernacular,Butcher-bird,,,,v0.6
 8992328,1409,1416,vernacular,Shrikes,,,,v0.6
@@ -61,4 +62,4 @@ atricapilla",,Binomial wrapped over one line break; keep newline,,v0.7
 8992379,2671,2679,vernacular,Cardinal,,"Common-name mention, separate from Latin binomial",,v0.7
 8992379,2681,2700,taxon,Paroaria cervicalis,,,,v0.7
 8992379,2735,2746,taxon,P. capitata,,,,v0.7
-8992379,2836,2843,vernacular,Finches,,"UNCLEAR: common group name inside title of cited book, not a direct statement about organisms",,v0.7
+8992379,2836,2843,vernacular,Finches,,"Not a mention: inside the title of a cited work (guide v0.8, 2.0.5). Was UNCLEAR.",excluded,v0.8

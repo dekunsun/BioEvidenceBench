@@ -229,10 +229,13 @@ def load_gold(path, optional_after: str | None = None) -> pd.DataFrame:
     if "adjudication" not in g:
         g["adjudication"] = ""
     g["start"], g["end"] = g.start.astype(float).astype(int), g.end.astype(float).astype(int)
-    if optional_after and "guide_version" in g:
-        later = g.guide_version.map(_version) > _version(optional_after)
-        g.loc[later, "adjudication"] = "ambiguous"
-    return g
+    # `excluded` rows record a decision NOT to label something (kept so the decision is
+    # visible). Normally they are not gold. In the sensitivity report, an exclusion decided
+    # under a later guide version is optional too: a model that outputs it was never told.
+    later = (g.guide_version.map(_version) > _version(optional_after)
+             if optional_after and "guide_version" in g else pd.Series(False, index=g.index))
+    g.loc[later, "adjudication"] = "ambiguous"
+    return g[g.adjudication != "excluded"].copy()
 
 
 def load_issues(path) -> dict:

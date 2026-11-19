@@ -23,7 +23,7 @@ import pandas as pd
 from common import DATA, TEXT
 
 FIELDS = {"taxon", "vernacular", "person", "locality", "institution", "date", "none"}
-ADJUDICATION = {"", "adjudicated", "ambiguous"}
+ADJUDICATION = {"", "adjudicated", "ambiguous", "excluded"}
 
 
 def check(path: Path) -> pd.DataFrame:
@@ -37,7 +37,7 @@ def check(path: Path) -> pd.DataFrame:
         if r["field"] not in FIELDS:
             status = f"bad field '{r['field']}'"
         elif str(r.get("adjudication", "")).strip() not in ADJUDICATION:
-            status = f"bad adjudication '{r['adjudication']}' (use adjudicated or ambiguous)"
+            status = f"bad adjudication '{r['adjudication']}' (use adjudicated, ambiguous or excluded)"
         elif "UNCLEAR" in str(r.get("notes", "")) and not str(r.get("adjudication", "")).strip():
             status = "ok (UNCLEAR: needs adjudication before scoring)"
         elif r["field"] == "none":
