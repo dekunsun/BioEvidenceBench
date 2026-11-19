@@ -174,5 +174,5 @@ India",,,line-wrapped regional name; newline included literally,,v0.8,,ok,,
 8992644,565,570,person,RADDE,,,"Naming authority after taxon; terminal period is punctuation after surname, not abbreviation.",,v0.9,,ok,,
 8992644,599,612,date,"October, 1898",,,Dated obtaining of a specimen.,,v0.9,,ok,,
 8992644,621,652,locality,"Lincolnshire side of the
-Humber",,,UNCLEAR: Location phrase describing the Lincolnshire bank/side of the Humber; provisionally one compound natural-feature locality under v0.9; may instead require separate named mentions of Lincolnshire and Humber.,,v0.9,,ok (UNCLEAR: needs adjudication before scoring),,
+Humber",,,"One place: the Lincolnshire bank of the Humber (existing part-of-place rule 2.3, same pattern as African side of the Mediterranean). Was UNCLEAR.",adjudicated,v0.9,,ok,,
 8992644,661,666,person,Haigh,,,"Observer/collector identified after title Mr., which is excluded.",,v0.9,,ok,,
