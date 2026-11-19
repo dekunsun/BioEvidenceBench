@@ -349,10 +349,14 @@ linked in V1: historical molluscan names need a specialist.
 
 **Short procedure (Gloria, 2026-11-20).** Fill one row per distinct printed name in
 `gold/gold_links_gloria_names.csv`; `python src/expand_links.py` copies each decision to every
-mention. Only four columns are required, because only they are scored: `printed_rank`,
-`resolution_status`, `accepted_usage_key` (empty for `unresolved`), `evidence_source`; the other
-columns are optional. For a species name: look the name up in Avibase first (independent of
-GBIF) to learn the current species, then take that species' key on GBIF. Spend **at most about
+mention. Only four columns are required: `printed_rank`, `resolution_status`, `accepted_name`
+(the accepted name you settled on, e.g. `Alauda arvensis`; the genus for `partial`; empty for
+`unresolved`) and `evidence_source`; the other columns are optional. No number is copied: the
+GBIF website now shows new taxon codes (gbif.org/taxon/BFFT), while the API the scorer uses keeps
+the numeric backbone keys, so `expand_links.py` looks the accepted name up in that API by exact,
+rank-checked match and fills `accepted_usage_key`; a name that is not an exact accepted match is
+left empty and listed for review (`gold/gold_links_gloria_key_lookup.csv`). For a species name:
+look the name up in Avibase first (independent of GBIF) to learn the current species. Spend **at most about
 three minutes per name**; if it is not settled by then, write `ambiguous` (candidates in notes)
 or `unresolved` (where you looked in notes). Both are legitimate answers and are counted apart.
 
@@ -663,7 +667,7 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 
 `resolution_status` 是 `unresolved` 时，两个 key 列留空。V1 不关联 Reeve 的名字：历史上的软体动物名称需要专家判断。
 
-**简化做法（Gloria，2026-11-20）。** 在 `gold/gold_links_gloria_names.csv` 里每个不同的名字填一行，`python src/expand_links.py` 会把你的决定复制到这个名字的每一次出现。只有四列必填，因为评分只用到它们：`printed_rank`、`resolution_status`、`accepted_usage_key`（`unresolved` 留空）、`evidence_source`；其余几列可以留空。种名的查法：先在 Avibase 查这个名字现在对应哪个物种（和 GBIF 无关的独立来源），再到 GBIF 找那个物种的编号。**每个名字最多花三分钟左右**；到时还定不了，就填 `ambiguous`（候选写进 notes）或 `unresolved`（查过哪里写进 notes）。这两种都是合法答案，会单独计数。
+**简化做法（Gloria，2026-11-20）。** 在 `gold/gold_links_gloria_names.csv` 里每个不同的名字填一行，`python src/expand_links.py` 会把你的决定复制到这个名字的每一次出现。只有四列必填：`printed_rank`、`resolution_status`、`accepted_name`（你认定的今天的有效名，例如 `Alauda arvensis`；`partial` 填属名；`unresolved` 留空）、`evidence_source`；其余几列可以留空。不用抄任何编号：GBIF 网站现在显示的是新的分类代码（gbif.org/taxon/BFFT），而评分用的接口仍是旧的数字编号，所以由 `expand_links.py` 用你填的名字在同一个接口里精确查找（同时核对等级），自动填 `accepted_usage_key`；不是精确有效匹配的名字不填，列出来请你再看（`gold/gold_links_gloria_key_lookup.csv`）。种名的查法：先在 Avibase 查这个名字现在对应哪个物种（和 GBIF 无关的独立来源）。**每个名字最多花三分钟左右**；到时还定不了，就填 `ambiguous`（候选写进 notes）或 `unresolved`（查过哪里写进 notes）。这两种都是合法答案，会单独计数。
 
 **关联结果怎么统计。** 只有 `resolved`（也就是在原文印的等级上确定）才算关联正确。对原文印成物种的名字，结果分四个数分别报告：物种级正确、`partial`（只到属或更高）、`ambiguous`、`unresolved`。物种名只匹配到属，绝不计入物种级的成功率。
 

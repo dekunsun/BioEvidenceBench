@@ -150,15 +150,26 @@ def test_loss_at_linking_versus_before_it(tmp_path):
     assert s.loc["expanded", "loss_diff_verdict"] in ("against", "inconclusive")
 
 
-def test_expand_links_copies_each_name_decision_to_every_mention(tmp_path):
+def test_expand_links_turns_accepted_names_into_keys_and_copies_to_every_mention(tmp_path):
+    import pandas as pd
     import expand_links as ex
-    names = tmp_path / "names.csv"
-    names.write_text("name,printed_rank,resolution_status,accepted_usage_key,evidence_source,notes\n"
-                     "TURDIDÆ,family,resolved,5290,GBIF,\nA. blakistoni,species,partial,2490696,GBIF,genus only\n")
+    table = {"Turdidae": {"matchType": "EXACT", "canonicalName": "Turdidae", "rank": "FAMILY",
+                          "status": "ACCEPTED", "usageKey": 5290},
+             "Alauda": {"matchType": "EXACT", "canonicalName": "Alauda", "rank": "GENUS",
+                        "status": "ACCEPTED", "usageKey": 2490696},
+             "Accentor modularis": {"matchType": "EXACT", "canonicalName": "Accentor modularis",
+                                    "rank": "SPECIES", "status": "SYNONYM", "usageKey": 7604351,
+                                    "acceptedUsageKey": 5231763}}
+    names = pd.DataFrame([
+        {"name": "TURDIDÆ", "printed_rank": "family", "resolution_status": "resolved", "accepted_name": "Turdidae"},
+        {"name": "A. blakistoni", "printed_rank": "species", "resolution_status": "partial", "accepted_name": "Alauda"},
+        {"name": "A. modularis", "printed_rank": "species", "resolution_status": "resolved",
+         "accepted_name": "Accentor modularis"},
+    ]).set_index("name")
     links = tmp_path / "links.csv"
-    links.write_text("page_id,start,end,text,printed_rank,resolution_status,match_method,matched_rank,"
-                     "taxonomic_status,matched_usage_key,accepted_usage_key,evidence_source,notes\n"
-                     "1,0,7,TURDIDÆ,,,,,,,,,\n2,0,7,TURDIDÆ,,,,,,,,,\n2,9,24,\"A. blak-\nistoni\",,,,,,,,,\n")
-    out = ex.expand(names, links)
-    assert out.resolution_status.tolist() == ["resolved", "resolved", "partial"]
-    assert out.accepted_usage_key.tolist() == ["5290", "5290", "2490696"]
+    links.write_text("page_id,start,end,text\n1,0,7,TURDIDÆ\n2,0,7,TURDIDÆ\n2,9,24,\"A. blak-\nistoni\"\n"
+                     "3,0,12,A. modularis\n")
+    out = ex.expand(names, links, tmp_path / "lookup.csv", fetch=lambda n: table[n])
+    assert out.accepted_usage_key.tolist() == ["5290", "5290", "2490696", ""]   # a synonym is not filled in
+    assert out.resolution_status.tolist() == ["resolved", "resolved", "partial", "resolved"]
+    assert "SYNONYM" in (tmp_path / "lookup.csv").read_text()
