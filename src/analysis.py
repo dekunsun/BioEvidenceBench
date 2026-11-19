@@ -257,7 +257,8 @@ def outcome_table(run_id: str, split: str) -> pd.DataFrame:
         else:
             st = "ok"
         rows.append({"run": run_id, "custom_id": r["custom_id"], "page_id": r["page_id"],
-                     "version": r["version"], "condition": r["condition"], "outcome": st})
+                     "version": r["version"], "condition": r["condition"], "outcome": st,
+                     "attempts": r.get("attempts", 1)})
     return pd.DataFrame(rows)
 
 
@@ -265,7 +266,11 @@ def outcome_table(run_id: str, split: str) -> pd.DataFrame:
 CLEAN = {"exact", "cross_line"}
 
 
-def flag_auto_accept(pred_a: pd.DataFrame, pred_b: pd.DataFrame) -> pd.DataFrame:
+MIN_UNFLAGGED = 10   # fewer unflagged predictions than this: no verdict (PREREGISTRATION section 9)
+
+
+def flag_auto_accept(pred_a: pd.DataFrame, pred_b: pd.DataFrame,
+                     b_answered: set | None = None) -> pd.DataFrame:
     """Mark model A's predictions as "proposed auto-accept" (never actually accepted in V1).
 
     A prediction is flagged when (1) model B extracted the same thing: same page, text version
@@ -277,6 +282,10 @@ def flag_auto_accept(pred_a: pd.DataFrame, pred_b: pd.DataFrame) -> pd.DataFrame
       tier 2  no agreement, clean and type ok
       tier 3  no agreement and not clean
     Reviewers would work from tier 3 upwards; tier 0 is what a later version might skip.
+
+    b_answered: (page_id, version) pairs for which model B gave a valid answer. A prediction
+    on a page model B did not answer gets b_answered = False: it is not "disagreement", and
+    rq4_summary / risk_coverage leave it out (and count it). None means B answered everywhere.
     """
     a = pred_a[~pred_a.outcome.str.startswith("set_aside")].copy().reset_index(drop=True)
     a["agree"] = False
@@ -295,7 +304,16 @@ def flag_auto_accept(pred_a: pd.DataFrame, pred_b: pd.DataFrame) -> pd.DataFrame
     a["type_ok"] = [type_check(f, v)[0] for f, v in zip(a.field, a.value.fillna(""))]
     a["flagged"] = a.agree & a.clean & a.type_ok
     a["tier"] = np.select([a.flagged, a.agree, a.clean & a.type_ok], [0, 1, 2], 3)
+    a["b_answered"] = True if b_answered is None else [
+        (int(p), v) in b_answered for p, v in zip(a.page_id, a.version)]
     return a
+
+
+def answered_pairs(outcomes: pd.DataFrame, run_id: str, condition: str = "G1") -> set:
+    """(page_id, version) pairs where a run gave a valid answer (ok or empty) for a condition."""
+    o = outcomes[(outcomes.run == run_id) & (outcomes.condition == condition)
+                 & outcomes.outcome.isin(["ok", "empty"])]
+    return {(int(p), v) for p, v in zip(o.page_id, o.version)}
 
 
 def rq4_summary(flags: pd.DataFrame, gold_a: pd.DataFrame, gold_b: pd.DataFrame) -> pd.DataFrame:
@@ -303,8 +321,14 @@ def rq4_summary(flags: pd.DataFrame, gold_a: pd.DataFrame, gold_b: pd.DataFrame)
     predictions (value level), their paired page-bootstrap difference, errors inside the flagged
     set (errors both models made together), and gold mentions both models missed."""
     f = flags[flags.field.isin(PRIMARY_FIELDS)]
+    if "b_answered" not in f:
+        f = f.assign(b_answered=True)
     rows = []
-    for (book, version), d in f.groupby(["book", "version"]):
+    for (book, version), d_all in f.groupby(["book", "version"]):
+        d = d_all[d_all.b_answered]
+        if d.empty:
+            continue
+        answered_pages = set(d.page_id)
         per = d.groupby("page_id").apply(lambda x: pd.Series({
             "f_tp": int((x.flagged & x.value_ok).sum()), "f_fp": int((x.flagged & ~x.value_ok).sum()),
             "u_tp": int((~x.flagged & x.value_ok).sum()), "u_fp": int((~x.flagged & ~x.value_ok).sum())}),
@@ -314,15 +338,21 @@ def rq4_summary(flags: pd.DataFrame, gold_a: pd.DataFrame, gold_b: pd.DataFrame)
         diff = paired_bootstrap(A[["page_id", "value_tp", "value_fp", "value_fn"]],
                                 B[["page_id", "value_tp", "value_fp", "value_fn"]], "value", "P")
         ga = gold_a[(gold_a.book == book) & (gold_a.version == version)
-                    & gold_a.field.isin(PRIMARY_FIELDS) & (gold_a.adjudication != "ambiguous")]
+                    & gold_a.field.isin(PRIMARY_FIELDS) & (gold_a.adjudication != "ambiguous")
+                    & gold_a.page_id.isin(answered_pages)]
         gb = gold_b[(gold_b.book == book) & (gold_b.version == version)
-                    & gold_b.field.isin(PRIMARY_FIELDS) & (gold_b.adjudication != "ambiguous")]
+                    & gold_b.field.isin(PRIMARY_FIELDS) & (gold_b.adjudication != "ambiguous")
+                    & gold_b.page_id.isin(answered_pages)]
+        n_unflagged = int((~d.flagged).sum())
         both = ga.merge(gb, on=["page_id", "field", "start", "end"], suffixes=("_a", "_b"))
         rows.append({"book": book, "version": version, "predictions": len(d),
                      "flagged": int(d.flagged.sum()), "flagged_share": round(d.flagged.mean(), 3),
                      "precision_flagged": diff["a"], "precision_unflagged": diff["b"],
                      "diff": diff["diff"], "diff_lo": diff["lo"], "diff_hi": diff["hi"],
-                     "verdict": verdict(diff["lo"], diff["hi"], "at_least", 0.10),
+                     "unflagged": n_unflagged,
+                     "verdict": (verdict(diff["lo"], diff["hi"], "at_least", 0.10)
+                                 if n_unflagged >= MIN_UNFLAGGED else "too few to compare"),
+                     "excluded_no_answer_from_b": int((~d_all.b_answered).sum()),
                      "errors_in_flagged_set": int((d.flagged & ~d.value_ok).sum()),
                      "gold": len(ga), "missed_by_model_a": int((~ga.lenient).sum()),
                      "missed_by_both": int((~both.lenient_a & ~both.lenient_b).sum())})
@@ -334,6 +364,8 @@ def risk_coverage(flags: pd.DataFrame) -> pd.DataFrame:
     of predictions accepted (coverage) and the share of accepted ones that are wrong (risk).
     The review workload at that point is 1 - coverage."""
     f = flags[flags.field.isin(PRIMARY_FIELDS)]
+    if "b_answered" in f:
+        f = f[f.b_answered]   # a page model B did not answer says nothing about agreement
     rows = []
     for (book, version), d in f.groupby(["book", "version"]):
         for tier in sorted(d.tier.unique()):

@@ -115,3 +115,25 @@ def test_evidence_counters_use_the_preregistered_definitions():
     t = an.evidence_counters(m, pd.DataFrame({"PageID": [1], "book": ["Reeve"]}))
     g0, g1 = t[t.condition == "G0"].iloc[0], t[t.condition == "G1"].iloc[0]
     assert g0.unsupported == 2 and g1.unsupported == 2 and g1.wrong_line == 1
+
+
+def test_rq4_leaves_out_pages_model_b_did_not_answer_and_needs_enough_unflagged():
+    a = _pred([(1, "Reeve", "expert", "taxon", 0, 14, "Bulimus castus", "exact", "tp_value", True),
+               (2, "Reeve", "expert", "taxon", 0, 14, "Bulimus obesus", "exact", "tp_value", True)])
+    b = _pred([(1, "Reeve", "expert", "taxon", 0, 14, "Bulimus castus", "exact", "tp_value", True)])
+    f = an.flag_auto_accept(a, b, b_answered={(1, "expert")})
+    assert f.b_answered.tolist() == [True, False]
+    gold = pd.DataFrame({"page_id": [1, 2], "book": ["Reeve"] * 2, "version": ["expert"] * 2,
+                         "field": ["taxon"] * 2, "start": [0, 0], "end": [14, 14],
+                         "adjudication": [""] * 2, "lenient": [True, True]})
+    s = an.rq4_summary(f, gold, gold).iloc[0]
+    assert s.predictions == 1 and s.excluded_no_answer_from_b == 1 and s.gold == 1
+    assert s.verdict == "too few to compare"          # 0 unflagged predictions, not "against"
+    cov = an.risk_coverage(f)
+    assert cov.accepted.max() == 1
+
+
+def test_answered_pairs_counts_ok_and_empty_only():
+    o = pd.DataFrame({"run": ["r"] * 3, "page_id": [1, 2, 3], "version": ["expert"] * 3,
+                      "condition": ["G1"] * 3, "outcome": ["ok", "empty", "parse_error"]})
+    assert an.answered_pairs(o, "r") == {(1, "expert"), (2, "expert")}

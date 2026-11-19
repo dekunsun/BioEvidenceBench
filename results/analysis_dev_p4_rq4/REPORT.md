@@ -1,7 +1,7 @@
 # Analysis report: dev_p4_rq4 (DEV pages)
 
 Gold: `gold/gold_mentions_gloria.csv` (5a3e85b6dd32…), guide ['v0.5', 'v0.6'].
-Code commit `67f1d533d3` **with uncommitted changes**.
+Code commit `c1dd0fe312` **with uncommitted changes**.
 Runs: `20261119-0113_claude-opus-5-5_dev_p4_r1` (llm, claude-opus-5-5, prompt p4-guide-v0.6); `20261119-0236_gemini-4-carbon_dev_p4_sync_r1` (llm2, gemini-4-carbon, prompt p4-guide-v0.6); `20261118-2102_rules-gnfinder-v1.4.0_all` (rule, rules + gnfinder v1.4.0, prompt None).
 
 **Dev pages are not blind. These numbers are for tuning, not results.**
@@ -148,16 +148,16 @@ RQ2 on the other text versions, descriptive comparisons and other fields: `compa
 
 ## Shadow evaluation (RQ4): flagged = proposed auto-accept, nothing is skipped
 
-| book   | version                |   predictions |   flagged |   flagged_share |   precision_flagged |   precision_unflagged |    diff |   diff_lo |   diff_hi | verdict   |   errors_in_flagged_set |   gold |   missed_by_model_a |   missed_by_both |
-|:-------|:-----------------------|--------------:|----------:|----------------:|--------------------:|----------------------:|--------:|----------:|----------:|:----------|------------------------:|-------:|--------------------:|-----------------:|
-| Butler | expert                 |            63 |        63 |           1     |               1     |                   nan | nan     |   nan     |   nan     | no data   |                       0 |     63 |                   0 |                0 |
-| Butler | legacy                 |            63 |        62 |           0.984 |               0.806 |                     0 |   0.806 |     0.776 |     0.842 | supports  |                      12 |     63 |                   0 |                0 |
-| Butler | modern_dots-mocr       |            63 |        63 |           1     |               0.984 |                   nan | nan     |   nan     |   nan     | no data   |                       1 |     63 |                   0 |                0 |
-| Butler | modern_dots-mocr_plain |            63 |        63 |           1     |               0.984 |                   nan | nan     |   nan     |   nan     | no data   |                       1 |     63 |                   0 |                0 |
-| Reeve  | expert                 |            70 |        70 |           1     |               1     |                   nan | nan     |   nan     |   nan     | no data   |                       0 |     70 |                   0 |                0 |
-| Reeve  | legacy                 |            70 |        70 |           1     |               0.714 |                   nan | nan     |   nan     |   nan     | no data   |                      20 |     70 |                   0 |                0 |
-| Reeve  | modern_dots-mocr       |            71 |        70 |           0.986 |               0.971 |                     0 |   0.971 |     0.955 |     0.986 | supports  |                       2 |     70 |                   0 |                0 |
-| Reeve  | modern_dots-mocr_plain |            70 |        70 |           1     |               0.986 |                   nan | nan     |   nan     |   nan     | no data   |                       1 |     70 |                   0 |                0 |
+| book   | version                |   predictions |   flagged |   flagged_share |   precision_flagged |   precision_unflagged |    diff |   diff_lo |   diff_hi |   unflagged | verdict            |   excluded_no_answer_from_b |   errors_in_flagged_set |   gold |   missed_by_model_a |   missed_by_both |
+|:-------|:-----------------------|--------------:|----------:|----------------:|--------------------:|----------------------:|--------:|----------:|----------:|------------:|:-------------------|----------------------------:|------------------------:|-------:|--------------------:|-----------------:|
+| Butler | expert                 |            63 |        63 |           1     |               1     |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       0 |     63 |                   0 |                0 |
+| Butler | legacy                 |            63 |        62 |           0.984 |               0.806 |                     0 |   0.806 |     0.776 |     0.842 |           1 | too few to compare |                           0 |                      12 |     63 |                   0 |                0 |
+| Butler | modern_dots-mocr       |            63 |        63 |           1     |               0.984 |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       1 |     63 |                   0 |                0 |
+| Butler | modern_dots-mocr_plain |            63 |        63 |           1     |               0.984 |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       1 |     63 |                   0 |                0 |
+| Reeve  | expert                 |            70 |        70 |           1     |               1     |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       0 |     70 |                   0 |                0 |
+| Reeve  | legacy                 |            70 |        70 |           1     |               0.714 |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                      20 |     70 |                   0 |                0 |
+| Reeve  | modern_dots-mocr       |            71 |        70 |           0.986 |               0.971 |                     0 |   0.971 |     0.955 |     0.986 |           1 | too few to compare |                           0 |                       2 |     70 |                   0 |                0 |
+| Reeve  | modern_dots-mocr_plain |            70 |        70 |           1     |               0.986 |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       1 |     70 |                   0 |                0 |
 
 ### Risk and coverage
 

@@ -96,7 +96,7 @@ def main() -> None:
     if a.llm2:
         pa = pred_out[(pred_out.run == a.llm) & (pred_out.condition == "G1")]
         pb = pred_out[(pred_out.run == a.llm2) & (pred_out.condition == "G1")]
-        flags = an.flag_auto_accept(pa, pb)
+        flags = an.flag_auto_accept(pa, pb, an.answered_pairs(outcomes, a.llm2, "G1"))
         ga = gold_out[(gold_out.run == a.llm) & (gold_out.condition == "G1")]
         gb = gold_out[(gold_out.run == a.llm2) & (gold_out.condition == "G1")]
         rq4, cov = an.rq4_summary(flags, ga, gb), an.risk_coverage(flags)
@@ -126,6 +126,10 @@ def main() -> None:
                       "paired_for_differences": True},
         "rq3_unsupported": {k: sorted(v) for k, v in an.UNSUPPORTED.items()},
         "rq4_flag": "second model extracts the same span (lenient) AND status in exact/cross_line AND type_check",
+        "rq4_rules": {"pages_without_a_valid_answer_from_model_b": "left out and counted",
+                      "min_unflagged_for_a_verdict": an.MIN_UNFLAGGED},
+        "failed_requests": "sent once more with identical settings; the second answer is final; "
+                           "outcomes.csv has attempts per request",
     }
     (out / "evaluation_settings.json").write_text(json.dumps(settings, indent=2), encoding="utf-8")
 

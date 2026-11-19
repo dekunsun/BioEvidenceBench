@@ -1,8 +1,8 @@
 {
-  "written_at": "2026-11-19T05:56:44+00:00",
+  "written_at": "2026-11-19T18:25:40+00:00",
   "split": "dev",
   "code": {
-    "commit": "67f1d533d30cbace314e0c5439a2922a8ba57a91",
+    "commit": "c1dd0fe312025b58c08e15c583ded2db96843335",
     "uncommitted_changes": true
   },
   "gold": {
@@ -78,5 +78,10 @@
       "silent_correction"
     ]
   },
-  "rq4_flag": "second model extracts the same span (lenient) AND status in exact/cross_line AND type_check"
+  "rq4_flag": "second model extracts the same span (lenient) AND status in exact/cross_line AND type_check",
+  "rq4_rules": {
+    "pages_without_a_valid_answer_from_model_b": "left out and counted",
+    "min_unflagged_for_a_verdict": 10
+  },
+  "failed_requests": "sent once more with identical settings; the second answer is final; outcomes.csv has attempts per request"
 }

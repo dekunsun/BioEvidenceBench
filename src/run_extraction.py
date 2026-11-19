@@ -90,7 +90,26 @@ def anthropic_params(model, max_tokens, effort, schema, user_text) -> dict:
     }
 
 
-META_KEYS = ("page_id", "split", "model", "stop_reason", "usage", "cost_usd", "error", "schema_deviation")
+META_KEYS = ("page_id", "split", "model", "stop_reason", "usage", "cost_usd", "error", "schema_deviation",
+             "attempts")
+
+
+def needs_retry(rec: dict) -> bool:
+    """A failed request (PREREGISTRATION section 9): an API error, a truncated answer, or an
+    answer that does not parse. A valid answer with no mentions is NOT a failure."""
+    return bool(rec.get("error")) or rec.get("stop_reason") in ("max_tokens", "MAX_TOKENS") \
+        or not isinstance(rec.get("parsed"), dict)
+
+
+def merge_retry(first: dict, second: dict) -> dict:
+    """The second attempt is final. The first one is kept inside it (raw answer included, so a
+    test-page record still goes only into the sealed file) and both are paid for."""
+    out = dict(second)
+    out["attempts"] = 2
+    out["first_attempt"] = {k: first.get(k) for k in ("error", "stop_reason", "usage", "cost_usd",
+                                                         "received_at", "schema_deviation", "raw")}
+    out["cost_usd"] = (first.get("cost_usd") or 0.0) + (second.get("cost_usd") or 0.0)
+    return out
 
 
 def meta_of(rec: dict) -> dict:
@@ -203,6 +222,8 @@ def finalize(run_dir: Path, records_meta: list[dict], model: str, batch: bool,
                                  "cache_read_input_tokens")},
             "stop_reasons": by.stop_reason.fillna("error").value_counts().to_dict(),
             "errors": int(by.error.notna().sum())}
+    if "attempts" in by:
+        cost["retried_once"] = int((by.attempts == 2).sum())   # failed first, sent once more
     if "schema_deviation" in by and by.schema_deviation.notna().any():
         # answers whose JSON shape did not follow the schema as sent (see gemini_backend.check_shape)
         cost["schema_deviations"] = by.schema_deviation.dropna().value_counts().to_dict()
@@ -267,13 +288,15 @@ def main() -> None:
                     help="with --resume: allowance for requests of the crashed attempt that may have been "
                          "billed but were never written to disk; counts toward --max-usd")
     ap.add_argument("--collect", metavar="RUN_ID", help="fetch results of a submitted batch")
+    ap.add_argument("--no-retry", action="store_true",
+                    help="with --collect: do not send failed requests once more (the default is one retry)")
     ap.add_argument("--reparse", metavar="RUN_ID",
                     help="Gemini runs: rebuild the open DEV records from their stored raw responses "
                          "(no API call; sealed test outputs are not touched)")
     a = ap.parse_args()
 
     if a.collect:
-        return collect(a.collect)
+        return collect(a.collect, retry=not a.no_retry)
     if a.reparse:
         return reparse(a.reparse)
 
@@ -395,15 +418,13 @@ def main() -> None:
             return gb.record_from_response(r, gb.generate(client, a.model, r["params"]), a.model, batch=False)
         return record_from_message(r, client.messages.create(**r["params"]), a.model, batch=False)
 
-    def one(r):
-        if spent[0] >= a.max_usd:
-            return None
+    def attempt(r):
         rec = None
-        for attempt in range(3):
+        for _ in range(3):
             try:
                 rec = call(r)
                 break
-            except api_errors as e:   # the API answered with an error: recorded, not retried here
+            except api_errors as e:   # the API answered with an error: recorded (one() retries once)
                 rec = gb.error_record(r, a.model, f"{type(e).__name__}: {e}")   # same shape for both providers
                 break
             except Exception as e:    # connection dropped (e.g. httpx ReadError): the answer is lost
@@ -416,6 +437,15 @@ def main() -> None:
                 if spent[0] >= a.max_usd:
                     break
         spent[0] += rec["cost_usd"]
+        return rec
+
+    def one(r):
+        if spent[0] >= a.max_usd:
+            return None
+        rec = attempt(r)
+        # A failed request is sent once more with identical settings; the second answer is final.
+        if needs_retry(rec) and spent[0] < a.max_usd:
+            rec = merge_retry(rec, attempt(r))
         return rec
 
     with ThreadPoolExecutor(a.workers) as pool:
@@ -438,7 +468,46 @@ def main() -> None:
     finalize(run_dir, meta, a.model, batch=False, extra_cost=extra or None)
 
 
-def collect(run_id: str) -> None:
+def retry_failed_sync(cfg: dict, recs: list[dict]) -> list[dict]:
+    """After a batch: send every failed request once more, synchronously, with the request
+    rebuilt from the same prompt and the same input text (hash checked); the second answer is
+    final. Billed at the sync price."""
+    failed = [i for i, r in enumerate(recs) if needs_retry(r)]
+    if not failed:
+        return recs
+    gem = cfg.get("provider") == "gemini"
+    if cfg["prompt_version"] != PROMPT_VERSION or cfg["system_sha256"] != sha256_text(SYSTEM):
+        print(f"{len(failed)} failed requests NOT retried: the prompt changed since this run was made.")
+        return recs
+    pages = pd.read_csv(DATA / "sample_split.csv").query("PageID in @cfg['page_ids']")
+    rebuilt = {r["custom_id"]: r for r in build_requests(
+        pages, cfg["versions"], cfg["conditions"], cfg["model"], cfg.get("effort", "medium"),
+        cfg["max_tokens"], cfg.get("provider", "anthropic"))}
+    if gem:
+        client = gb.make_client(os.environ["GEMINI_API_KEY"])
+    else:
+        import anthropic
+        client = anthropic.Anthropic(api_key=os.environ["EVAL_ANTHROPIC_API_KEY"], max_retries=4)
+    inputs = pd.read_csv(RESULTS / cfg["run_id"] / "inputs.csv").set_index("custom_id").input_sha256
+    for i in failed:
+        req = rebuilt[recs[i]["custom_id"]]
+        if req["input_sha256"] != inputs[req["custom_id"]]:
+            print(f"{req['custom_id']}: input text changed since the batch; not retried.")
+            continue
+        try:
+            second = (gb.record_from_response(req, gb.generate(client, cfg["model"], req["params"]),
+                                              cfg["model"], batch=False) if gem else
+                      record_from_message(req, client.messages.create(**req["params"]), cfg["model"],
+                                          batch=False))
+        except Exception as e:
+            second = gb.error_record(req, cfg["model"], f"retry failed: {type(e).__name__}: {e}")
+        recs[i] = merge_retry(recs[i], second)
+    print(f"Retried {len(failed)} failed requests once; still failed: "
+          f"{sum(needs_retry(recs[i]) for i in failed)}.")
+    return recs
+
+
+def collect(run_id: str, retry: bool = True) -> None:
     run_dir = RESULTS / run_id
     cfg = json.loads((run_dir / "config.json").read_text())
     batch_id = json.loads((run_dir / "batch.json").read_text())["batch_id"]
@@ -481,6 +550,8 @@ def collect(run_id: str) -> None:
                 recs.append(record_from_message(req, res.result.message, cfg["model"], batch=True))
             else:
                 recs.append(gb.error_record(req, cfg["model"], res.result.type))
+    if retry:
+        recs = retry_failed_sync(cfg, recs)
     # Records go straight to the sink (test pages into the sealed gzip); nothing is printed.
     sink, meta = Sink(run_dir), []
     for rec in recs:

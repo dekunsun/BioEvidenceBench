@@ -303,26 +303,31 @@ controlled-perturbation experiment, the review-sheet CSV export, and the Level 3
 demo. E1 therefore rests on natural OCR only (legacy, modern, expert, plus the Markdown
 ablation) with entity-span CER and entity preservation; no claim about synthetic noise is made.
 
-**Failed requests (proposed 2026-11-19 after the Gemini dev run; Gloria to confirm).** A request
-can fail without the model being wrong about the page: an API error, an answer that does not
-parse, a truncated answer. On dev, Google's batch mode ignored the JSON schema and 3 of 48
-answers were lost. Rules for the test run:
-- Gemini runs in **sync mode with the schema enforced** (40 of 40 answers valid in the pilot);
-  Opus runs in batch mode, where the schema is enforced.
-- A failed request is sent **once more** with identical settings; the second answer is final.
+**Failed requests and RQ4 guards (built 2026-11-20).** A request can fail without the model being
+wrong about the page: an API error, an answer that does not parse, a truncated answer. On dev,
+Google's batch mode ignored the JSON schema and 3 of 48 answers were lost. Rules for the test run:
+- Gemini runs in **sync mode with the schema enforced** (48 of 48 valid answers on dev); Opus
+  runs in batch mode, where the schema is enforced.
+- A failed request (`run_extraction.needs_retry`: an error, a truncated answer, or an answer that
+  does not parse; a valid answer with no mentions is *not* a failure) is sent **once more** with
+  identical settings, in sync mode, and the second answer is final. Both attempts are paid for and
+  the first is kept inside the record (`attempts`, `first_attempt`); for test pages both stay in
+  the sealed file. Batch runs do this when collected (`--collect`, unless `--no-retry`).
 - A request that fails twice counts as "no predictions" in the main scores (the conservative
-  reading), the failure rate is reported per model next to every score, and F1 on answered
-  requests only is given beside it.
-- RQ4: a page and text version for which the second model has no answer is left out of the
-  flagged-vs-unflagged comparison and counted, so a missing answer is not read as disagreement.
-
+  reading); `outcomes.csv` gives each request's final outcome and its number of attempts, the
+  failure rate is reported per model next to every score, and F1 on answered requests only is
+  given beside it.
+- RQ4: a page and text version for which the second model has no valid G1 answer is left out of
+  the flagged-vs-unflagged comparison and of the risk-coverage curve, and counted
+  (`excluded_no_answer_from_b`), so a missing answer is not read as disagreement.
 - RQ4 verdicts need something to compare: with fewer than 10 unflagged predictions in a book and
-  text version the flagged-vs-unflagged difference is reported as "too few to compare", not as
-  support. (On dev two "supports" verdicts rested on a single unflagged mention each.)
+  text version the verdict is "too few to compare" (`analysis.MIN_UNFLAGGED`). On dev every cell
+  now reads so (0 or 1 unflagged prediction each), where the earlier code had written "supports"
+  twice on a single unflagged mention.
 
-**Still to build before the freeze commit**: the one-retry step in `run_extraction.py`, the RQ4
-guard for missing answers, and the minimum-count rule for RQ4 verdicts. **Still to run**: nothing on dev (the schema-enforced Gemini 4 Carbon dev run is complete, 48 of
-48 answers, `results/20261119-0236_gemini-4-carbon_dev_p4_sync_r1`). Everything else in this document is built.
+**Still to run before the freeze commit**: nothing on dev. Everything in this document is built.
+What remains is the gold set (one test page, the second labeller's five pages, adjudication, and
+Butler's taxon links), then the freeze commit, then the test runs with Gloria's go-ahead.
 
 ## Deviations log
 

@@ -223,3 +223,15 @@ def test_bare_array_is_wrapped_and_flagged_other_shapes_are_parse_errors():
     g0 = gb.record_from_response({**REQ, "condition": "G0"}, fake('[{"field": "date", "value": "1849"}]'),
                                  "gemini-4-carbon", batch=True)
     assert g0["parsed"] == {"mentions": [{"field": "date", "value": "1849"}]}
+
+
+def test_failed_requests_are_retried_once_and_both_attempts_are_paid():
+    import run_extraction as rx
+    ok = {"custom_id": "x", "parsed": {"mentions": []}, "stop_reason": "end_turn", "error": None, "cost_usd": 0.02}
+    assert not rx.needs_retry(ok)                                   # empty answer is not a failure
+    assert rx.needs_retry(ok | {"parsed": None})                    # unparseable
+    assert rx.needs_retry(ok | {"stop_reason": "max_tokens"})       # truncated
+    assert rx.needs_retry(ok | {"error": "overloaded", "parsed": None})
+    m = rx.merge_retry(ok | {"parsed": None, "cost_usd": 0.01, "raw": {"x": 1}}, ok)
+    assert m["attempts"] == 2 and abs(m["cost_usd"] - 0.03) < 1e-9 and m["first_attempt"]["raw"] == {"x": 1}
+    assert m["parsed"] == {"mentions": []}
