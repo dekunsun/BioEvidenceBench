@@ -195,5 +195,5 @@ Humber",,,"One place: the Lincolnshire bank of the Humber (existing part-of-plac
 8992647,405,409,person,SAVI,,,Taxonomic authority is the full surname Savi; terminal full stop excluded.,,v0.9,
 8992647,458,466,locality,Penzance,,near,First specimen described as shot near this place; no specific occurrence date for first specimen (many years ago).,,v0.9,
 8992647,484,503,locality,"Sheringham, Norfolk",,,"Second specimen site, narrow locality plus wider area.",,v0.9,
-8992647,508,519,date,May ?) 1842,,,"UNCLEAR: date-span boundary. The historical phrase is ""(in May ?) 1842"" for a particular second specimen; month is explicitly uncertain (UNCERTAIN-IN-SOURCE). Provisional one-span choice preserves both uncertain month and year; alternative is year-only 1842 with May uncertainty retained in notes.",,v0.9,
+8992647,515,519,date,1842,,,"UNCERTAIN-IN-SOURCE: month printed as ""(in May ?)""; the span is the certain part only, as with ""Hab. Central America?"" (existing rule). Was UNCLEAR with the span ""May ?) 1842"".",adjudicated,v0.9,
 8992647,614,621,taxon,M. ﬂava,,,Second abbreviated binomial mention; Unicode ligature ﬂ retained.,,v0.9,
