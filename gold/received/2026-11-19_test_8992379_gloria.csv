@@ -1,0 +1,39 @@
+page_id,start,end,field,text,qualifier,notes,adjudication,guide_version
+8992379,33,45,locality,Berwickshire,,County mentioned as a specimen locality,,v0.7
+8992379,55,64,locality,Yorkshire,,First occurrence,,v0.7
+8992379,93,104,locality,Scarborough,,,,v0.7
+8992379,106,124,date,"October
+23rd, 1889",,Observation date; newline retained,,v0.7
+8992379,176,180,date,1887,,Date of the Irish example referred to in the text,,v0.7
+8992379,214,219,locality,Wells,,"Historical place name, as printed",,v0.7
+8992379,223,227,date,1900,,Specimen shot at Wells,,v0.7
+8992379,256,260,date,1904,,Specimen recorded in 1904,,v0.7
+8992379,274,278,date,1905,,Third specimen recorded in 1905,,v0.7
+8992379,290,294,date,1906,,Three specimens from Norfolk,,v0.7
+8992379,305,312,locality,Norfolk,,,,v0.7
+8992379,333,342,locality,Yorkshire,,Second occurrence,,v0.7
+8992379,346,350,date,1907,,Three seen in Yorkshire,,v0.7
+8992379,355,363,locality,Cheshire,,,,v0.7
+8992379,380,389,date,June 1903,,One individual seen in Cheshire,,v0.7
+8992379,398,407,locality,Shetlands,,Article omitted from span,,v0.7
+8992379,444,448,date,1906,,Several seen and three shot in the Shetlands,,v0.7
+8992379,493,503,vernacular,Flycatcher,,"In ""this little Flycatcher""; distinct from running head",,v0.7
+8992379,859,864,vernacular,Robin,,,,v0.7
+8992379,870,877,person,Seebohm,,Cited observer or author,,v0.7
+8992379,943,949,vernacular,Robins,,,,v0.7
+8992379,958,969,vernacular,Flycatchers,,,,v0.7
+8992379,1082,1105,vernacular,Red-breasted Flycatcher,,"Name within quotation, not the running head",,v0.7
+8992379,1839,1848,taxon,M. minuta,,Historical plumage-associated name; do not modernize,,v0.7
+8992379,1906,1916,taxon,M. leucura,,Historical plumage-associated name; do not modernize,,v0.7
+8992379,1979,1987,taxon,M. parva,,Historical plumage-associated name; do not modernize,,v0.7
+8992379,2054,2067,taxon,M. hyperythra,,Historical plumage-associated name; do not modernize,,v0.7
+8992379,2314,2331,taxon,"Munia
+atricapilla",,Binomial wrapped over one line break; keep newline,,v0.7
+8992379,2369,2373,date,1887,,Specific specimen received by narrator,,v0.7
+8992379,2494,2508,date,spring of 1896,,Specific observed plumage change in a particular specimen; season and year included,,v0.7
+8992379,2541,2554,taxon,Quelea quelea,,,,v0.7
+8992379,2587,2595,taxon,Q. russi,,,,v0.7
+8992379,2671,2679,vernacular,Cardinal,,"Common-name mention, separate from Latin binomial",,v0.7
+8992379,2681,2700,taxon,Paroaria cervicalis,,,,v0.7
+8992379,2735,2746,taxon,P. capitata,,,,v0.7
+8992379,2836,2843,vernacular,Finches,,"UNCLEAR: common group name inside title of cited book, not a direct statement about organisms",,v0.7
