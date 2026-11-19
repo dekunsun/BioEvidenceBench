@@ -6,10 +6,10 @@ It asks where the reliability of extracted scientific data is lost: in OCR, in e
 evidence verification, in entity resolution, or in human review. It also asks where the next
 unit of effort should go.
 
-**Status (2026-11-20): gold set labelled, not yet frozen; no test results.** All 22 sample pages
-are labelled (6 dev, 16 locked test) and Butler's taxon links are done. A second labeller has
-labelled 5 test pages; her disagreements with the gold are being adjudicated. Then the analysis
-plan is frozen (`src/freeze.py`), and only then are the test pages run and scored. Scores on the
+**Status (2026-11-20): frozen, run and scored on the test pages.** All 22 sample pages are
+labelled (6 dev, 16 locked test), a second labeller double-labelled 5 test pages, the plan and
+gold were frozen (`FREEZE.json`), and only then were the test pages run and unsealed. Error
+analysis and the memo are next. Scores on the
 dev pages are pipeline checks, not results: the guide and the prompt were written from them.
 Entity types are inspired by NHM's BHL prototype, but our scores are not comparable to NHM's
 reported results. V1 scope is in [`CLAUDE.md` section 4a](CLAUDE.md); the analysis plan is
@@ -79,20 +79,30 @@ name (Avibase first; `resolved` / `partial` / `ambiguous` / `unresolved`); `src/
 turns her names into GBIF backbone keys. The linker under test is a plain GBIF `species/match`
 lookup with no hints. Subfamily names are not scored (the backbone has no such rank).
 
-## Results
+## Results (test pages, 2026-11-20)
 
-*To be filled after the freeze and the test run. Nothing below is a result yet.*
+Frozen before any test page was run (`FREEZE.json`); 16 locked test pages (Butler 7, Reeve 9);
+Opus is the primary model, Gemini the second model for RQ4. Value F1 on `ALL_PRIMARY` with 95%
+page-bootstrap intervals; verdicts against the rules in `PREREGISTRATION.md` section 3. Full
+tables: `results/analysis_test_main/REPORT.md`, `results/linking_test/REPORT.md`.
 
 | | Result |
 |---|---|
-| Agreement (5 pages, as delivered) | ALL_PRIMARY exact 0.90, overlap 0.95 (Butler 0.89 / 0.93, Reeve 0.90 / 0.96); lowest field: locality exact 0.75, mostly span-edge differences. Descriptive, 5 pages. `results/agreement_independent/` |
-| RQ1 OCR | — |
-| RQ2 baseline | — |
-| RQ3 evidence | — |
-| RQ4 review prioritisation | — |
-| E4-lite linking | — |
-| Error analysis | — |
-| Cost | API spend so far about $9.8 (dev runs and earlier superseded runs) |
+| Agreement (5 pages, as delivered) | ALL_PRIMARY exact 0.90, overlap 0.95 (Butler 0.89 / 0.93, Reeve 0.90 / 0.96); lowest field: locality exact 0.75, mostly span edges. All 23 disagreements adjudicated "keep gold". `results/agreement_independent/` |
+| RQ1 OCR | Opus G1 value F1, legacy → modern → expert: **Reeve 0.64 → 0.98 → 0.98**, Butler 0.60 → 0.95 → 0.98. Pre-registered (Reeve): legacy → modern +0.34 [0.25, 0.46], *supports* (≥ 0.10); modern → expert +0.005 [−0.015, 0.03], *supports* (< 0.05). Butler is descriptive: +0.36 and +0.03 [0.01, 0.06]. Almost all legacy-OCR loss is misread text inside a correctly found span (lenient F1 0.93–0.97). Butler's legacy-OCR taxon F1 is 0.20 although its page CER is low. Removing Markdown changes little (−0.015 to 0) |
+| RQ2 baseline | On the expert text the LLM's recall is higher for taxon and person in both books and for Butler's localities (*supports*); Reeve's localities and institutions and Butler's dates are *inconclusive*. Taxon value F1: Butler 1.00 vs 0.64, Reeve 0.99 vs 0.54. The falsifier (rule ≥ LLM on taxa) did not occur. The gap is largest for person (+0.74 / +0.78 recall), not for institution |
+| RQ3 evidence | Requiring evidence cost no recall (G1 − G0 between −0.015 and +0.007, all *supports*). But neither condition produced any unsupported output (0 in G0 and G1, both models), so the expected reduction could not be observed |
+| RQ4 review prioritisation | Models agreed on 99–100% of predictions, leaving ≤ 2 unflagged per book and version: *too few to compare*. Errors inside the "proposed auto-accept" set: expert 3 (Butler) / 4 (Reeve), modern OCR 6 / 5, **legacy OCR 50 / 75**. Agreement is not correctness |
+| E4-lite linking (Butler) | Pre-registered (Opus G1, expanded linker): of 34 gold-resolved names, 14 are lost at linking and 0 before it on the expert text (difference 0.41 [0.25, 0.60], *supports*); 13 vs 1 on modern OCR (0.35 [0.10, 0.55], *supports*). Link recall of a plain GBIF lookup is 0.59 even on the gold text: 8 matched only at genus, 3 wrong taxon, 3 no record. On legacy OCR, 0.12 |
+| Sensitivity | Treating the 12 rows decided by guide rules added after the prompt as optional changes ALL_PRIMARY value F1 by at most 0.004 (`results/analysis_test_sensitivity_v0.6/`) |
+| Error analysis | — (Gloria tags `discrepancies.csv`) |
+| Cost | Test runs: Opus $1.50 (batch), Gemini $4.11 (sync). Total API spend about $15.4 |
+
+**Reading for the main question (for these two books, with this linker):** once modern OCR is
+used, extraction is within 0.03 of the expert transcription, and the largest remaining loss is at
+entity resolution: a plain GBIF name lookup loses about four in ten names that extraction got
+right. This is a pilot on 16 pages; it says where to look next, not a rule for BHL. The linker
+is deliberately naive, so a better linker could change the second half of that sentence.
 
 ## Limitations (known in advance)
 
