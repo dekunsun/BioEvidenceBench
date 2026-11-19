@@ -2,8 +2,8 @@
 
 > 中文版在本文件下方：[跳到中文版](#标注规范中文版)。两个版本内容相同；如有出入，以英文版为准，并请指出来改正。
 
-**Version v0.9, 2026-11-19.** v0.5 was written before any labelling. v0.6 adds the rules Gloria
-decided after labelling the six dev pages; v0.7 to v0.9 add rules decided while labelling the test pages
+**Version v0.10, 2026-11-20.** v0.5 was written before any labelling. v0.6 adds the rules Gloria
+decided after labelling the six dev pages; v0.7 to v0.10 add rules decided while labelling the test pages
 (see the changelog). None changes an earlier rule. The prompt (`p4`) was written from v0.6 and
 is **not** updated from rules found on test pages (section 4); the gold set uses the latest version. Later changes get a new version number and a changelog line; the gold CSV
 records the guide version of every row.
@@ -150,6 +150,10 @@ Label:
   (The same way `the Buntings` is a `vernacular`.)
 - A genus name given in brackets inside a citation, saying under which genus the species was
   described: `PFEIFFER, (Glandina,) Pro. Zool. Soc.` gives taxon `Glandina`.
+- A bare epithet that shares the genus of a name just before it in the same phrase (v0.10):
+  `the B. rugiferus and Darwinii` gives two `taxon` mentions, `B. rugiferus` and `Darwinii`; notes
+  `epithet only, genus implied`. An epithet standing alone with no such name before it is not
+  covered by this rule: label it and write `UNCLEAR`.
 
 Do not label:
 - The authority after a name as part of the taxon: in `Accentor modularis (Linn.)` the taxon
@@ -406,6 +410,7 @@ corrected gold. Scoring rules are never changed to improve a score.
 | v0.2 | 2026-11-18 | Entity types aligned with the NHM BHL prototype: `collector` replaced by `person` (every named person); new `institution`; `locality` covers every named place, not only occurrence statements. `date` unchanged. |
 | v0.3 | 2026-11-18 | Default answers for the span-edge questions found in the Opus p2 dev run: 2.0 on span edges; all titles treated like honorifics; part-of-place words stay in the locality span; `Mus. Adams` / `ADAMS, MS.` worked example. |
 | v0.4 | 2026-11-18 | Gloria's decisions on all nine questions. New field `vernacular`, scored separately (decision 1). New `qualifier` column for relative words (2). More in/out examples for place boundaries (7). Non-contiguous exception for names broken across lines (9). Fixed the `PFEIFFER … 1846` example and stated the mixed design: entity fields are general NER, `date` is event-bound; a month without a year counts when it belongs to a particular event. NHM statement reworded: types inspired by NHM, scores not comparable. Taxon linking split into resolution status, match method, matched rank and taxonomic status. New `adjudication` column and rules for unclear rows; dev and test discipline separated; freeze list before unsealing. No pages labelled yet. |
+| v0.10 | 2026-11-20 | Decided by Gloria on test page 8966802: a bare epithet sharing the genus of the name just before it (`B. rugiferus and Darwinii`) is a `taxon` mention (2.1). |
 | v0.9 | 2026-11-19 | Found by Gloria on test page 8992489: the expert transcription has a typo (`Fringilla nontifringilla` for the scan's `montifringilla`). New optional column `scan_text` for such cases; `text` and offsets keep following the transcription. Known cases are listed in `data/transcription_errata.csv`. No rule about what counts as a mention changes. |
 | v0.8 | 2026-11-19 | Decided by Gloria on test page 8992379: nothing inside the title of a cited work is a mention, in any field (2.0.5; v0.6 said this for places only). New `adjudication` value `excluded` for a row that was considered and is not a mention. |
 | v0.7 | 2026-11-19 | Decided by Gloria on the first test page (8992328), `vernacular` only: broad group names are labelled (`insects`); only the book's own subject word is generic; a name standing as its own word is labelled even when it means material (`moss`); a name that is one part of a hyphenated compound is not (`grass` in `grass-stalks`). Section 4: rules found on test pages go into the guide but not into the prompt; scores are reported with and without the rows they decide. |
@@ -416,7 +421,7 @@ corrected gold. Scoring rules are never changed to improve a score.
 
 # 标注规范（中文版）
 
-**版本 v0.9，2026-11-19。** v0.5 写于任何标注开始之前。v0.6 加入 Gloria 标完 6 页开发集后决定的规则；v0.7 到 v0.9 加入标测试页过程中决定的规则（见变更记录）。这几版都没有改动之前的规则。提示词（`p4`）按 v0.6 写成，**不会**根据测试页上发现的规则更新（第 4 节）；gold set 以最新版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
+**版本 v0.10，2026-11-20。** v0.5 写于任何标注开始之前。v0.6 加入 Gloria 标完 6 页开发集后决定的规则；v0.7 到 v0.10 加入标测试页过程中决定的规则（见变更记录）。这几版都没有改动之前的规则。提示词（`p4`）按 v0.6 写成，**不会**根据测试页上发现的规则更新（第 4 节）；gold set 以最新版为准。之后再改要换版本号，并在变更记录里加一行；gold CSV 的每一行都记录所用的规范版本。
 
 ## 决定记录（Gloria，2026-11-18）
 
@@ -504,6 +509,7 @@ corrected gold. Scoring rules are never changed to improve a score.
 - 任何大小写或字体都算：`BULIMUS CASTUS`（小型大写）也算。
 - 属名的拉丁复数形式，用来指这个属的成员：`these small Bulimi and Achatinæ` 标成两个 `taxon`，`Bulimi` 和 `Achatinæ`，备注写 `plural form`。（道理和 `the Buntings` 标成 `vernacular` 一样。）
 - 文献引用里括号中的属名，说明这个种当初归在哪个属下：`PFEIFFER, (Glandina,) Pro. Zool. Soc.` 标出 taxon `Glandina`。
+- 同一句里和前一个学名共用属名的单独种加词（v0.10）：`the B. rugiferus and Darwinii` 标成两个 `taxon`，`B. rugiferus` 和 `Darwinii`，备注写 `epithet only, genus implied`。前面没有这样的学名、孤零零的种加词不适用这条，先标上并写 `UNCLEAR`。
 
 不标：
 - 名字后面的命名人不算在学名里：`Accentor modularis (Linn.)` 中，学名片段是 `Accentor modularis`；`Linn.` 另外标成一个 `person`（2.4）。
@@ -676,6 +682,7 @@ V1 不另设物候标签：它会增加标注工作量，却不对应任何一�
 | v0.2 | 2026-11-18 | 实体类型对齐 NHM 的 BHL 原型：`collector` 改为 `person`（所有有名字的人）；新增 `institution`；`locality` 覆盖所有有名字的地点，不只是发生记录。`date` 不变。 |
 | v0.3 | 2026-11-18 | 为 Opus p2 开发集结果里发现的片段边界问题写默认答案：2.0 片段边界；所有头衔按敬称处理；表示地点一部分的词留在地点片段里；增加 `Mus. Adams` / `ADAMS, MS.` 示例。 |
 | v0.4 | 2026-11-18 | Gloria 对九个问题的决定。新增字段 `vernacular`，单独评分（决定 1）。新增 `qualifier` 列记录相对位置词（2）。地点边界增加更多正反例（7）。跨行名字增加"文字不连续"的例外（9）。修正 `PFEIFFER … 1846` 的例子，并写明混合设计：实体字段是一般的命名实体识别，`date` 和事件绑定；属于一次具体事件、没有年份的月份也算。NHM 的说法改为：类型参考 NHM，分数不可比。学名关联拆成解析状态、匹配方式、匹配等级和分类学状态。新增 `adjudication` 列和不清楚行的处理规则；开发页和测试页的纪律分开；解封前的冻结清单。尚未标注任何页面。 |
+| v0.10 | 2026-11-20 | Gloria 在测试页 8966802 上的决定：和前一个学名共用属名的单独种加词（`B. rugiferus and Darwinii`）算 `taxon` 提及（2.1）。 |
 | v0.9 | 2026-11-19 | Gloria 在测试页 8992489 上发现：专家转录有一处笔误（把扫描图上的 `montifringilla` 写成了 `Fringilla nontifringilla`）。新增可选列 `scan_text` 处理这种情况；`text` 和位置仍按转录文件。已知的笔误列在 `data/transcription_errata.csv`。"什么算提及"的规则没有变化。 |
 | v0.8 | 2026-11-19 | Gloria 在测试页 8992379 上的决定：被引用著作标题里的任何内容都不算提及，所有字段都一样（2.0.5；v0.6 只对地名这样规定）。`adjudication` 新增取值 `excluded`，表示这一行考虑过、但不算提及。 |
 | v0.7 | 2026-11-19 | Gloria 在第一页测试页（8992328）上的决定，只涉及 `vernacular`：大的类群名要标（`insects`）；只有这本书自己的主题词算泛称；独立成词的名字即使指材料也标（`moss`）；只是连字符复合词一部分的不标（`grass-stalks` 里的 `grass`）。第 4 节：测试页上发现的规则写进规范但不进提示词；分数按是否包含这些行各报告一遍。 |

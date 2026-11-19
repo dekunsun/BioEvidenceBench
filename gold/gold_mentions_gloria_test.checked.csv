@@ -214,7 +214,7 @@ Humber",,,"One place: the Lincolnshire bank of the Humber (existing part-of-plac
 8966802,1756,1774,locality,Gallapagos Islands,,,Named geographic locality in Hab. text.,,v0.9,,ok,,
 8966802,1788,1794,person,Darwin,,,Collector credited in the habitat line.,,v0.9,,ok,,
 8966802,1870,1882,taxon,B. rugiferus,,,Scientific name in a species account or a comparative species mention.,,v0.9,,ok,,
-8966802,1887,1895,taxon,Darwinii,,,UNCLEAR: Epithet-only coordinated shorthand in B. rugiferus and Darwinii; no printed genus before Darwinii. Decide whether a bare species epithet used as a taxon name is in scope.,,v0.9,,ok (UNCLEAR: needs adjudication before scoring),,
+8966802,1887,1895,taxon,Darwinii,,,"Epithet only; genus B. (Bulimus) shared with the preceding B. rugiferus (guide v0.10, 2.1). Was UNCLEAR.",adjudicated,v0.9,v0.10,ok,,
 8966802,2043,2054,institution,Mus. Cuming,,,"Named private collection, retained Mus. abbreviation; exclude trailing full stop.",,v0.9,,ok,,
 8966802,2058,2072,taxon,BULIMUS CALVUS,,,Scientific name in a species account or a comparative species mention.,,v0.9,,ok,,
 8966802,2276,2288,vernacular,BALD BULIMUS,,,Vernacular species-account heading; the leading THE is excluded.,,v0.9,,ok,,

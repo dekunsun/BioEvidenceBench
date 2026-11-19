@@ -103,7 +103,7 @@ between 2025 and 2026, and ADEPT's asset script stopped matching them).
 
 | Item | Value |
 |---|---|
-| `guide_version` | gold: v0.9 or later (labelling may add rules); prompt: written from v0.6 and not changed by rules found on test pages |
+| `guide_version` | gold: v0.10 or later (labelling may add rules); prompt: written from v0.6 and not changed by rules found on test pages |
 | Gold files | SHA-256 of `gold_mentions_*.csv`, `annotation_issues_*.csv`, `gold_links_*.csv` at the freeze |
 | `prompt_version` | `p4-guide-v0.6` |
 | Output schema | `SCHEMA_G0`, `SCHEMA_G1` in `src/prompts.py` at the freeze commit |
@@ -282,8 +282,8 @@ version in the column `later_rule`, but the prompt stays `p4-guide-v0.6`: it was
 that exists because of a test page is passed to a model. Every score is therefore reported twice:
 with all gold rows, and with the rows whose `later_rule` is later than v0.6 treated as optional
 (no credit, no penalty; this includes `excluded` rows, which record a decision that something is *not* a mention), so that "the model was never told this rule" can be told apart from "the
-model got it wrong". So far the later rules have decided `vernacular` rows only (v0.7: broad group names, material words, compounds; v0.8: nothing inside the title of a cited work is a mention), which is outside the
-primary F1. Test labels are archived as received in `gold/received/` before any comparison or
+model got it wrong". So far the later rules have decided `vernacular` rows (v0.7: broad group names, material words, compounds; v0.8: nothing inside the title of a cited work is a mention), which are outside the
+primary F1, and one `taxon` row (v0.10: a bare epithet sharing the preceding genus, `Darwinii`), which is inside it. Test labels are archived as received in `gold/received/` before any comparison or
 adjudication; test-page gold is kept in `gold/gold_mentions_gloria_test.csv`.
 
 **Errors in the reference transcription (2026-11-19).** The expert transcription is the reference
