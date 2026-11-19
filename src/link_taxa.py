@@ -68,6 +68,10 @@ GBIF_MATCH = "https://api.gbif.org/v1/species/match"
 BOOK = "Butler"              # Reeve's names are not linked in V1 (ANNOTATION_GUIDE section 3)
 N_BOOT, SEED = 1000, 20261118
 GOLD_STATUS = ("resolved", "partial", "ambiguous", "unresolved")
+# The GBIF backbone has no subfamily rank, so no record at that rank exists for the linker or the
+# gold to point to. Gold rows printed at such a rank are kept in the gold file but left out of
+# link scoring and counted separately (Gloria, 2026-11-20).
+NOT_IN_BACKBONE_RANKS = ("subfamily",)
 OUTCOMES = ("correct", "wrong_taxon", "partial_only", "no_link", "not_extracted",
             "overclaim", "correct_abstain", "ambiguous_gold")
 
@@ -204,13 +208,16 @@ def load_links(path) -> pd.DataFrame:
     if len(bad):
         raise SystemExit(f"{len(bad)} link rows have a resolution_status outside {GOLD_STATUS}: "
                          f"{sorted(set(bad.resolution_status))}")
+    no_rank = d[d.printed_rank.str.strip() == ""]
+    if len(no_rank):
+        raise SystemExit(f"{len(no_rank)} link rows have no printed_rank.")
+    out_of_scope = d.printed_rank.str.strip().str.lower().isin(NOT_IN_BACKBONE_RANKS)
+    left_out, d = d[out_of_scope], d[~out_of_scope].copy()
+    d.attrs["not_in_backbone"] = left_out
     no_key = d[(d.resolution_status == "resolved") & (d.accepted_usage_key.map(_key) == "")]
     if len(no_key):
         raise SystemExit(f"{len(no_key)} rows are `resolved` but have no accepted_usage_key "
                          f"(pages {sorted(set(no_key.page_id))}).")
-    no_rank = d[d.printed_rank.str.strip() == ""]
-    if len(no_rank):
-        raise SystemExit(f"{len(no_rank)} link rows have no printed_rank.")
     return d
 
 
@@ -341,12 +348,14 @@ def main() -> None:
     out.mkdir(exist_ok=True)
     split = pd.read_csv(DATA / "sample_split.csv").query("split == @a.split and book == @BOOK")
     links = load_links(a.links)
+    left_out = links.attrs["not_in_backbone"]
+    left_out = left_out[left_out.page_id.isin(set(split.PageID))]
     links = links[links.page_id.isin(set(split.PageID))]
     if links.empty:
         raise SystemExit(f"No link rows for the {a.split} pages of {BOOK}.")
     gold = load_gold(a.gold)
     n_taxa = int(((gold.field == "taxon") & gold.page_id.isin(set(split.PageID))).sum())
-    if n_taxa != len(links):
+    if n_taxa != len(links) + len(left_out):
         print(f"NOTE: {n_taxa} gold taxon mentions on these pages but {len(links)} link rows.")
 
     arms = [gold_arm(links, gold)]
@@ -378,7 +387,10 @@ def main() -> None:
               "preregistered_rows": "condition G1, linker expanded, version expert or modern_dots-mocr; "
                                     "rule: linking_minus_earlier_loss greater_than 0",
               "bootstrap": {"resamples": N_BOOT, "seed": SEED, "unit": "page"},
-              "distinct_names_looked_up": len(cache.rows)}
+              "distinct_names_looked_up": len(cache.rows),
+              "not_scored_rank_not_in_gbif_backbone": {"ranks": list(NOT_IN_BACKBONE_RANKS),
+                                                       "gold_rows": len(left_out),
+                                                       "names": sorted(set(left_out.text))}}
     (out / "config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
 
     show = ["run", "version", "condition", "linker", "gold_links", "gold_resolved", "correct", "wrong_taxon",
@@ -388,6 +400,8 @@ def main() -> None:
              "" if a.split == "test" else "**Dev pages are not blind. These numbers are for tuning, not results.**\n",
              "A link is `correct` only at the printed rank. `partial_only` (genus matched for a species",
              "name), `ambiguous_gold` and unresolved names are separate counts and never part of it.", "",
+             f"Not scored: {len(left_out)} gold taxon mentions printed at a rank the GBIF backbone does not "
+             f"have ({', '.join(NOT_IN_BACKBONE_RANKS)}: {', '.join(sorted(set(left_out.text))) or 'none'}).", "",
              summary[show].to_markdown(index=False), "",
              "## Where resolved names are lost: at linking, or before it (OCR and extraction)?", "",
              "Difference of the two shares with a paired page-bootstrap interval. The rule written in",

@@ -192,3 +192,12 @@ def test_expand_links_takes_the_single_accepted_bird_record_of_a_homonym():
                  "alternatives": [{"matchType": "EXACT", "canonicalName": "Fringilla", "rank": "SPECIES",
                                    "status": "ACCEPTED", "usageKey": 11969741, "class": "Aves"}]}
     assert ex.key_for("Fringilla", "genus", fetch=lambda n: fringilla) == ("2494421", "")
+
+
+def test_subfamily_rows_are_left_out_of_link_scoring(tmp_path):
+    p = tmp_path / "links.csv"
+    cols = "page_id,start,end,text,printed_rank,resolution_status,accepted_usage_key,evidence_source\n"
+    p.write_text(cols + "1,0,8,SYLVIINÆ,subfamily,resolved,,GBIF\n1,9,15,Passer,genus,resolved,2492321,GBIF\n")
+    d = lt.load_links(p)          # a resolved subfamily row without a key is not an error
+    assert d.text.tolist() == ["Passer"]
+    assert d.attrs["not_in_backbone"].text.tolist() == ["SYLVIINÆ"]

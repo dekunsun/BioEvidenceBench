@@ -21,6 +21,8 @@ from pathlib import Path
 import pandas as pd
 import requests
 
+from link_taxa import NOT_IN_BACKBONE_RANKS
+
 ROOT = Path(__file__).resolve().parents[1]
 GBIF_MATCH = "https://api.gbif.org/v1/species/match"
 DECISION_COLS = ["printed_rank", "resolution_status", "match_method", "matched_rank", "taxonomic_status",
@@ -75,6 +77,8 @@ def key_for(accepted_name: str, expected_rank: str, fetch=None) -> tuple[str, st
 def read_names(gold: Path) -> pd.DataFrame:
     x, c = gold / "gold_links_gloria_names.xlsx", gold / "gold_links_gloria_names.csv"
     d = pd.read_excel(x, sheet_name="names", dtype=str) if x.exists() else pd.read_csv(c, dtype=str)
+    # a key typed in on Gloria's explicit decision (logged in gold/gold_changes_gloria.csv)
+    d = d.rename(columns={"accepted_usage_key (set on Gloria's decision)": "accepted_usage_key"})
     return d.fillna("").apply(lambda col: col.str.strip()).set_index("name")
 
 
@@ -82,6 +86,8 @@ def expand(names: pd.DataFrame, links_path: Path, lookup_path: Path, fetch=None)
     log, problems = [], []
     for n, r in names.iterrows():
         status, acc = r.get("resolution_status", ""), r.get("accepted_name", "")
+        if r.get("printed_rank", "").lower() in NOT_IN_BACKBONE_RANKS:
+            continue          # no such rank in the GBIF backbone; left out of link scoring
         if status in ("resolved", "partial") and acc and not r.get("accepted_usage_key", ""):
             rank = r.get("printed_rank", "") if status == "resolved" else "genus"
             key, problem = key_for(acc, rank, fetch)

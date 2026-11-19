@@ -238,6 +238,15 @@ described that way.
   a source and agreement is optimistic; the split by `evidence_source` shows how much rests on
   it. (2) Three dev and seven test pages of one book: most intervals will be wide. (3) The
   linker gets no class hint and no fuzzy threshold of ours; GBIF's own matching decides.
+  (4) The GBIF backbone has no subfamily rank. Gold taxon mentions printed as a subfamily
+  (`Emberizinæ`, `FRINGILLINÆ`, `SYLVIINÆ`: 8 of Butler's 43 test mentions) are kept in the
+  gold file but left out of link scoring and counted in the report (Gloria, 2026-11-20).
+  (5) Gold keys come from Gloria's accepted names via `src/expand_links.py` (exact, accepted,
+  rank-checked match; for a homonym such as `Passer` only the single accepted bird record).
+  Where her accepted name is a synonym in the backbone (`Cercotrichas galactotes` →
+  `Erythropygia galactotes`, 5788860) the key of the backbone's accepted name was entered on
+  her decision (2026-11-20), consistent with the rule that a synonym counts when its accepted
+  taxon is the gold one. The linker itself is unchanged: name only, no hint.
 
 **Entity-resolution hypothesis confirmed (Gloria, 2026-11-19: "假设可以，就按这条写进预注册").**
 The hypothesis, rule and falsifier in the entity-resolution row of section 3 are approved as

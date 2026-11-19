@@ -1,29 +1,24 @@
 name,accepted_name,expected_rank,gbif_key,problem,looked_up_at
-Lanius collurio,Lanius collurio,species,7745240,,2026-11-19T19:37:55+00:00
-M. minuta,Ficedula parva,species,2492605,,2026-11-19T19:37:55+00:00
-M. leucura,Ficedula albicilla,species,5788886,,2026-11-19T19:37:56+00:00
-M. parva,Ficedula parva,species,2492605,,2026-11-19T19:37:57+00:00
-Munia atricapilla,Lonchura atricapilla,species,2493623,,2026-11-19T19:37:57+00:00
-Quelea quelea,Quelea quelea,species,2493987,,2026-11-19T19:37:58+00:00
-Q. russi,Quelea quelea,species,2493987,,2026-11-19T19:37:58+00:00
-Paroaria cervicalis,Paroaria gularis,species,2492082,,2026-11-19T19:37:59+00:00
-P. capitata,Paroaria capitata,species,2492087,,2026-11-19T19:38:00+00:00
-Fringilla,Fringilla,genus,2494421,,2026-11-19T19:38:01+00:00
-Passer,Passer,genus,2492321,,2026-11-19T19:38:01+00:00
-Emberizinœ,Emberizinae,subfamily,,no exact match (matchType NONE),2026-11-19T19:38:01+00:00
-FRINGILLIDÆ,Fringillidae,family,5242,,2026-11-19T19:38:02+00:00
-FRINGILLINÆ,Fringillinae,subfamily,,no exact match (matchType NONE),2026-11-19T19:38:02+00:00
-Fringilla nontifringilla,Fringilla montifringilla,species,2494441,,2026-11-19T19:38:03+00:00
-TURDIDÆ,Turdidae,family,5290,,2026-11-19T19:38:03+00:00
-SYLVIINÆ,Sylviinae,subfamily,,no exact match (matchType NONE),2026-11-19T19:38:04+00:00
-Phylloscopus proregulus,Phylloscopus proregulus,species,2493090,,2026-11-19T19:38:04+00:00
-Phylloscopus tristis,Phylloscopus tristis,species,7947730,,2026-11-19T19:38:05+00:00
-Phylloscopus viridanus,Phylloscopus trochiloides,species,2493084,,2026-11-19T19:38:05+00:00
-Aedon galactodes,Cercotrichas galactotes,species,,status SYNONYM in the GBIF backbone (accepted there: key 5788860),2026-11-19T19:38:05+00:00
-Aedon familiaris,Cercotrichas galactotes,species,,status SYNONYM in the GBIF backbone (accepted there: key 5788860),2026-11-19T19:38:06+00:00
-Lusciniola schwarzi,Phylloscopus schwarzi,species,2493063,,2026-11-19T19:38:06+00:00
-MOTACILLIDÆ,Motacillidae,family,5257,,2026-11-19T19:38:07+00:00
-Motacilla melanocephala,Motacilla flava,species,9701857,,2026-11-19T19:38:07+00:00
-M. ﬂava,Motacilla flava,species,9701857,,2026-11-19T19:38:08+00:00
-Motacilla beema,Motacilla flava,species,9701857,,2026-11-19T19:38:08+00:00
-Motacilla cinereocapilla,Motacilla flava,species,9701857,,2026-11-19T19:38:08+00:00
+Lanius collurio,Lanius collurio,species,7745240,,2026-11-19T19:45:17+00:00
+M. minuta,Ficedula parva,species,2492605,,2026-11-19T19:45:17+00:00
+M. leucura,Ficedula albicilla,species,5788886,,2026-11-19T19:45:18+00:00
+M. parva,Ficedula parva,species,2492605,,2026-11-19T19:45:19+00:00
+Munia atricapilla,Lonchura atricapilla,species,2493623,,2026-11-19T19:45:19+00:00
+Quelea quelea,Quelea quelea,species,2493987,,2026-11-19T19:45:20+00:00
+Q. russi,Quelea quelea,species,2493987,,2026-11-19T19:45:20+00:00
+Paroaria cervicalis,Paroaria gularis,species,2492082,,2026-11-19T19:45:21+00:00
+P. capitata,Paroaria capitata,species,2492087,,2026-11-19T19:45:22+00:00
+Fringilla,Fringilla,genus,2494421,,2026-11-19T19:45:22+00:00
+Passer,Passer,genus,2492321,,2026-11-19T19:45:23+00:00
+FRINGILLIDÆ,Fringillidae,family,5242,,2026-11-19T19:45:23+00:00
+Fringilla nontifringilla,Fringilla montifringilla,species,2494441,,2026-11-19T19:45:24+00:00
+TURDIDÆ,Turdidae,family,5290,,2026-11-19T19:45:24+00:00
+Phylloscopus proregulus,Phylloscopus proregulus,species,2493090,,2026-11-19T19:45:25+00:00
+Phylloscopus tristis,Phylloscopus tristis,species,7947730,,2026-11-19T19:45:25+00:00
+Phylloscopus viridanus,Phylloscopus trochiloides,species,2493084,,2026-11-19T19:45:26+00:00
+Lusciniola schwarzi,Phylloscopus schwarzi,species,2493063,,2026-11-19T19:45:26+00:00
+MOTACILLIDÆ,Motacillidae,family,5257,,2026-11-19T19:45:27+00:00
+Motacilla melanocephala,Motacilla flava,species,9701857,,2026-11-19T19:45:27+00:00
+M. ﬂava,Motacilla flava,species,9701857,,2026-11-19T19:45:28+00:00
+Motacilla beema,Motacilla flava,species,9701857,,2026-11-19T19:45:28+00:00
+Motacilla cinereocapilla,Motacilla flava,species,9701857,,2026-11-19T19:45:29+00:00
