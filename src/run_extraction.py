@@ -18,7 +18,10 @@ their content. `python src/unseal.py <run_id>` opens them only once the gold
 labels for every test page exist and pass `check_gold.py`. The SHA-256 in
 SEALED.md (committed to git) proves the file was not changed after the run.
 
-API KEY. Read from the environment variable EVAL_ANTHROPIC_API_KEY.
+PROVIDERS. --provider anthropic (default; key in EVAL_ANTHROPIC_API_KEY) or
+--provider gemini (Google Gen AI SDK, key in GEMINI_API_KEY; see gemini_backend.py).
+Both send the same system prompt, task texts, numbered page text and JSON schemas,
+and write records in the same format, so sealing, locate.py and the scorer are shared.
 
 Usage
   # 1. pilot: 5 dev pages, all versions and conditions, synchronous; prints cost per page
@@ -28,6 +31,8 @@ Usage
   python src/run_extraction.py --collect <run_id>        # fetch batch results when it has ended
   # anything, without calling the API:
   python src/run_extraction.py --pages all --dry-run
+  # Gemini: the same steps with --provider gemini (model defaults to gemini-4-carbon), e.g.
+  python src/run_extraction.py --provider gemini --pages dev5 --mode sync --max-usd 1
 """
 from __future__ import annotations
 
@@ -44,6 +49,7 @@ from pathlib import Path
 
 import pandas as pd
 
+import gemini_backend as gb
 from common import DATA, ROOT, TEXT, sha256_text
 from locate import locate_all
 from prompts import CONDITIONS, PROMPT_VERSION, SYSTEM, number_lines
@@ -71,6 +77,27 @@ def text_path(version: str, page_id: int) -> Path:
     return TEXT / version / f"{page_id}.txt"
 
 
+def anthropic_params(model, max_tokens, effort, schema, user_text) -> dict:
+    return {
+        "model": model,
+        "max_tokens": max_tokens,
+        # Thinking cannot be turned off on Opus 5.5; effort controls depth.
+        "output_config": {"effort": effort,
+                          "format": {"type": "json_schema", "schema": schema}},
+        # Identical system prompt on every call, so it can be cached.
+        "system": [{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
+        "messages": [{"role": "user", "content": user_text}],
+    }
+
+
+META_KEYS = ("page_id", "split", "model", "stop_reason", "usage", "cost_usd", "error")
+
+
+def meta_of(rec: dict) -> dict:
+    """The small part of a record that finalize() needs (never the model's answer)."""
+    return {k: rec[k] for k in META_KEYS}
+
+
 def select_pages(which: str) -> pd.DataFrame:
     s = pd.read_csv(DATA / "sample_split.csv")
     if which == "dev5":
@@ -83,7 +110,8 @@ def select_pages(which: str) -> pd.DataFrame:
     return s[s.PageID.isin(ids)]
 
 
-def build_requests(pages: pd.DataFrame, versions, conditions, model, effort, max_tokens):
+def build_requests(pages: pd.DataFrame, versions, conditions, model, effort, max_tokens,
+                   provider: str = "anthropic"):
     reqs = []
     for p in pages.itertuples():
         for v in versions:
@@ -93,16 +121,12 @@ def build_requests(pages: pd.DataFrame, versions, conditions, model, effort, max
             text = path.read_text(encoding="utf-8")
             for c in conditions:
                 template, schema = CONDITIONS[c]
-                params = {
-                    "model": model,
-                    "max_tokens": max_tokens,
-                    # Thinking cannot be turned off on Opus 5.5; effort controls depth.
-                    "output_config": {"effort": effort,
-                                      "format": {"type": "json_schema", "schema": schema}},
-                    # Identical system prompt on every call, so it can be cached.
-                    "system": [{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
-                    "messages": [{"role": "user", "content": template.format(numbered_text=number_lines(text))}],
-                }
+                # The same user text for both providers; only the request wrapper differs.
+                user_text = template.format(numbered_text=number_lines(text))
+                if provider == "gemini":
+                    params = gb.build_params(SYSTEM, user_text, schema, max_tokens)
+                else:
+                    params = anthropic_params(model, max_tokens, effort, schema, user_text)
                 reqs.append({"custom_id": f"{p.PageID}__{v}__{c}", "page_id": int(p.PageID),
                              "split": p.split, "book": p.book, "version": v, "condition": c,
                              "input_sha256": sha256_text(text), "source": str(path.relative_to(ROOT)),
@@ -165,7 +189,8 @@ class Sink:
         self.test.close()
 
 
-def finalize(run_dir: Path, records_meta: list[dict], model: str, batch: bool) -> None:
+def finalize(run_dir: Path, records_meta: list[dict], model: str, batch: bool,
+             extra_cost: dict | None = None) -> None:
     """Cost summary, SEALED.md, and located mentions for DEV pages only."""
     spent = sum(r["cost_usd"] for r in records_meta)
     pages = len({r["page_id"] for r in records_meta})
@@ -178,6 +203,9 @@ def finalize(run_dir: Path, records_meta: list[dict], model: str, batch: bool) -
                                  "cache_read_input_tokens")},
             "stop_reasons": by.stop_reason.fillna("error").value_counts().to_dict(),
             "errors": int(by.error.notna().sum())}
+    if "model" in by:   # version string(s) the API reported in its responses
+        cost["model_versions_returned"] = by.model.fillna("none").value_counts().to_dict()
+    cost.update(extra_cost or {})
     (run_dir / "cost.json").write_text(json.dumps(cost, indent=2), encoding="utf-8")
 
     sealed = run_dir / "sealed" / "test_outputs.jsonl.gz"
@@ -218,9 +246,11 @@ def main() -> None:
     ap.add_argument("--pages", default="dev5", help="dev5 | dev | test | all | comma-separated PageIDs")
     ap.add_argument("--versions", default=",".join(VERSIONS))
     ap.add_argument("--conditions", default="G0,G1")
-    ap.add_argument("--model", default="claude-opus-5-5")
-    ap.add_argument("--effort", default="medium")
-    ap.add_argument("--max-tokens", type=int, default=16000)
+    ap.add_argument("--provider", choices=["anthropic", "gemini"], default="anthropic")
+    ap.add_argument("--model", help="default: claude-opus-5-5 (anthropic) or gemini-4-carbon (gemini)")
+    ap.add_argument("--effort", default="medium", help="Anthropic only")
+    ap.add_argument("--max-tokens", type=int,
+                    help=f"default: 16000 (anthropic) or {gb.MAX_OUTPUT_TOKENS} (gemini; includes thinking)")
     ap.add_argument("--mode", choices=["sync", "batch"], default="sync")
     ap.add_argument("--max-usd", type=float, default=5.0, help="hard cost cap for this run")
     ap.add_argument("--estimate-from", help="pilot run_id whose measured cost per request sets the batch estimate")
@@ -233,68 +263,94 @@ def main() -> None:
     if a.collect:
         return collect(a.collect)
 
+    gem = a.provider == "gemini"
+    a.model = a.model or ("gemini-4-carbon" if gem else "claude-opus-5-5")
+    a.max_tokens = a.max_tokens or (gb.MAX_OUTPUT_TOKENS if gem else 16000)
+    if a.model not in (gb.PRICES if gem else PRICES):
+        sys.exit(f"No price for {a.model}; add it to PRICES ({'gemini_backend.py' if gem else 'run_extraction.py'}).")
+
     pages = select_pages(a.pages)
     reqs = build_requests(pages, a.versions.split(","), a.conditions.split(","),
-                          a.model, a.effort, a.max_tokens)
+                          a.model, a.effort, a.max_tokens, a.provider)
     run_id = a.run_id or f"{datetime.now(timezone.utc):%Y%m%d-%H%M}_{a.model}_{a.pages.replace(',', '-')[:20]}_{a.mode}"
     run_dir = RESULTS / run_id
     if run_dir.exists():
         sys.exit(f"{run_dir} exists; choose another --run-id")
-    import anthropic
-    cfg = {"run_id": run_id, "created_at": now(), "model": a.model, "effort": a.effort,
+    cfg = {"run_id": run_id, "created_at": now(), "provider": a.provider, "model": a.model,
            "max_tokens": a.max_tokens, "mode": a.mode, "prompt_version": PROMPT_VERSION,
            "system_sha256": sha256_text(SYSTEM), "pages": a.pages, "page_ids": pages.PageID.tolist(),
            "versions": a.versions.split(","), "conditions": a.conditions.split(","),
-           "prices_usd_per_mtok": PRICES.get(a.model), "anthropic_sdk": anthropic.__version__,
            "max_usd": a.max_usd, "n_requests": len(reqs), "dry_run": a.dry_run}
+    if gem:
+        cfg.update(gb.config_for_log(a.model, a.max_tokens, batch=a.mode == "batch"))
+    else:
+        import anthropic
+        cfg.update({"effort": a.effort, "prices_usd_per_mtok": PRICES.get(a.model),
+                    "anthropic_sdk": anthropic.__version__})
     print(f"{len(reqs)} requests ({len(pages)} pages x versions x conditions); run {run_id}")
 
     if a.dry_run:
         print(json.dumps({k: v for k, v in reqs[0].items() if k != "params"}, indent=2))
-        print(reqs[0]["params"]["messages"][0]["content"][:600])
+        msg = reqs[0]["params"]["contents"][0]["parts"][0]["text"] if gem else reqs[0]["params"]["messages"][0]["content"]
+        print(msg[:600])
         return
 
     if a.mode == "batch":
         if not a.estimate_from:
             sys.exit("Batch mode needs --estimate-from <pilot run_id> to check the cost cap.")
         pilot = json.loads((RESULTS / a.estimate_from / "cost.json").read_text())
+        if pilot.get("model") != a.model:
+            sys.exit(f"Pilot {a.estimate_from} used {pilot.get('model')}, not {a.model}.")
         per_req = pilot["usd_per_request"] * (0.5 if not pilot["batch"] else 1.0)
         est = per_req * len(reqs)
         print(f"Estimated batch cost: ${est:.2f} ({len(reqs)} x ${per_req:.4f}); cap ${a.max_usd:.2f}")
         if est > a.max_usd:
             sys.exit("Estimate exceeds the cap. Not submitted.")
+        cfg["estimate"] = {"from": a.estimate_from, "usd": round(est, 4)}
 
-    key = os.environ.get("EVAL_ANTHROPIC_API_KEY")
-    if not key:
-        sys.exit("Set EVAL_ANTHROPIC_API_KEY (environment settings), then start a new session.")
-    client = anthropic.Anthropic(api_key=key, max_retries=4)
+    if gem:
+        key = os.environ.get("GEMINI_API_KEY")
+        if not key:
+            sys.exit("Set GEMINI_API_KEY (environment settings), then start a new session.")
+        client = gb.make_client(key)
+        # What the API itself says about this model id (version string, token limits).
+        cfg["model_info_from_api"] = gb.model_info(client, a.model)
+    else:
+        import anthropic
+        key = os.environ.get("EVAL_ANTHROPIC_API_KEY")
+        if not key:
+            sys.exit("Set EVAL_ANTHROPIC_API_KEY (environment settings), then start a new session.")
+        client = anthropic.Anthropic(api_key=key, max_retries=4)
     run_dir.mkdir(parents=True)
     write_run_files(run_dir, cfg, reqs)
 
     if a.mode == "batch":
-        from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
-        from anthropic.types.messages.batch_create_params import Request
-        batch = client.messages.batches.create(requests=[
-            Request(custom_id=r["custom_id"], params=MessageCreateParamsNonStreaming(**r["params"]))
-            for r in reqs])
-        (run_dir / "batch.json").write_text(json.dumps({"batch_id": batch.id, "submitted_at": now()}, indent=2))
-        print(f"Submitted batch {batch.id}. Collect with: python src/run_extraction.py --collect {run_id}")
+        if gem:
+            batch_id = gb.submit_batch(client, a.model, reqs, display_name=run_id).name
+        else:
+            from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
+            from anthropic.types.messages.batch_create_params import Request
+            batch_id = client.messages.batches.create(requests=[
+                Request(custom_id=r["custom_id"], params=MessageCreateParamsNonStreaming(**r["params"]))
+                for r in reqs]).id
+        (run_dir / "batch.json").write_text(json.dumps({"batch_id": batch_id, "submitted_at": now()}, indent=2))
+        print(f"Submitted batch {batch_id}. Collect with: python src/run_extraction.py --collect {run_id}")
         return
 
     # Synchronous: stop starting new requests once the cap is reached.
     sink, meta, spent = Sink(run_dir), [], [0.0]
+    api_errors = gb.api_errors() if gem else (anthropic.APIError,)
 
     def one(r):
         if spent[0] >= a.max_usd:
             return None
         try:
-            msg = client.messages.create(**r["params"])
-            rec = record_from_message(r, msg, a.model, batch=False)
-        except anthropic.APIError as e:
-            rec = {"custom_id": r["custom_id"], "page_id": r["page_id"], "split": r["split"],
-                   "version": r["version"], "condition": r["condition"], "model": a.model,
-                   "stop_reason": None, "usage": {}, "cost_usd": 0.0, "parsed": None, "raw": None,
-                   "error": f"{type(e).__name__}: {str(e)[:300]}", "received_at": now()}
+            if gem:
+                rec = gb.record_from_response(r, gb.generate(client, a.model, r["params"]), a.model, batch=False)
+            else:
+                rec = record_from_message(r, client.messages.create(**r["params"]), a.model, batch=False)
+        except api_errors as e:
+            rec = gb.error_record(r, a.model, f"{type(e).__name__}: {e}")   # same shape for both providers
         spent[0] += rec["cost_usd"]
         return rec
 
@@ -303,38 +359,63 @@ def main() -> None:
             if rec is None:
                 continue
             sink.write(rec)
-            meta.append({k: rec[k] for k in ("page_id", "split", "stop_reason", "usage", "cost_usd", "error")})
+            meta.append(meta_of(rec))
     sink.close()
     if spent[0] >= a.max_usd:
         print(f"STOPPED at the cost cap (${spent[0]:.2f} >= ${a.max_usd:.2f}); {len(meta)}/{len(reqs)} done.")
-    finalize(run_dir, meta, a.model, batch=False)
+    finalize(run_dir, meta, a.model, batch=False, extra_cost=gb.cost_notes(a.model) if gem else None)
 
 
 def collect(run_id: str) -> None:
-    import anthropic
     run_dir = RESULTS / run_id
     cfg = json.loads((run_dir / "config.json").read_text())
     batch_id = json.loads((run_dir / "batch.json").read_text())["batch_id"]
-    client = anthropic.Anthropic(api_key=os.environ["EVAL_ANTHROPIC_API_KEY"])
-    b = client.messages.batches.retrieve(batch_id)
-    if b.processing_status != "ended":
-        print(f"Batch {batch_id}: {b.processing_status}; counts {b.request_counts}. Try again later.")
-        return
     reqs = pd.read_csv(run_dir / "inputs.csv").set_index("custom_id")
+    gem = cfg.get("provider") == "gemini"
+
+    def req_of(cid):
+        row = reqs.loc[cid]
+        return {"custom_id": cid, "page_id": int(row.page_id), "split": row.split,
+                "version": row.version, "condition": row.condition}
+
+    recs = []
+    if gem:
+        client = gb.make_client(os.environ["GEMINI_API_KEY"])
+        job = client.batches.get(name=batch_id)
+        state = gb.batch_state(job)
+        if state not in gb.TERMINAL:
+            print(f"Batch {batch_id}: {state}. Try again later.")
+            return
+        if state != "JOB_STATE_SUCCEEDED":
+            print(f"Batch {batch_id} ended as {state}: {job.error}. Nothing collected.")
+            return
+        seen = set()
+        for cid, resp, err in gb.iter_batch_results(job, list(reqs.index)):
+            seen.add(cid)
+            recs.append(gb.error_record(req_of(cid), cfg["model"], err) if err or resp is None
+                        else gb.record_from_response(req_of(cid), resp, cfg["model"], batch=True))
+        for cid in [c for c in reqs.index if c not in seen]:   # a request with no response at all
+            recs.append(gb.error_record(req_of(cid), cfg["model"], "no response in batch output"))
+    else:
+        import anthropic
+        client = anthropic.Anthropic(api_key=os.environ["EVAL_ANTHROPIC_API_KEY"])
+        b = client.messages.batches.retrieve(batch_id)
+        if b.processing_status != "ended":
+            print(f"Batch {batch_id}: {b.processing_status}; counts {b.request_counts}. Try again later.")
+            return
+        for res in client.messages.batches.results(batch_id):
+            req = req_of(res.custom_id)
+            if res.result.type == "succeeded":
+                recs.append(record_from_message(req, res.result.message, cfg["model"], batch=True))
+            else:
+                recs.append(gb.error_record(req, cfg["model"], res.result.type))
+    # Records go straight to the sink (test pages into the sealed gzip); nothing is printed.
     sink, meta = Sink(run_dir), []
-    for res in client.messages.batches.results(batch_id):
-        row = reqs.loc[res.custom_id]
-        req = {"custom_id": res.custom_id, "page_id": int(row.page_id), "split": row.split,
-               "version": row.version, "condition": row.condition}
-        if res.result.type == "succeeded":
-            rec = record_from_message(req, res.result.message, cfg["model"], batch=True)
-        else:
-            rec = {**req, "model": cfg["model"], "stop_reason": None, "usage": {}, "cost_usd": 0.0,
-                   "parsed": None, "raw": None, "error": res.result.type, "received_at": now()}
+    for rec in recs:
         sink.write(rec)
-        meta.append({k: rec[k] for k in ("page_id", "split", "stop_reason", "usage", "cost_usd", "error")})
+        meta.append(meta_of(rec))
     sink.close()
-    finalize(run_dir, meta, cfg["model"], batch=True)
+    finalize(run_dir, meta, cfg["model"], batch=True, extra_cost=gb.cost_notes(cfg["model"]) if gem else None)
 
 
 if __name__ == "__main__":
