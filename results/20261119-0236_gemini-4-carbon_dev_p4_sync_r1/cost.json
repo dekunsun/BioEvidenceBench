@@ -1,0 +1,36 @@
+{
+  "model": "gemini-4-carbon",
+  "batch": false,
+  "requests": 45,
+  "pages": 6,
+  "usd_total": 1.2101,
+  "usd_per_page_all_conditions": 0.2017,
+  "usd_per_request": 0.02689,
+  "tokens": {
+    "input_tokens": 140625,
+    "output_tokens": 92849,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 3983
+  },
+  "stop_reasons": {
+    "STOP": 45
+  },
+  "errors": 0,
+  "model_versions_returned": {
+    "gemini-4-carbon": 45
+  },
+  "prices_usd_per_mtok": {
+    "input": 2.0,
+    "output_incl_thinking": 10.0,
+    "cached_input": 0.1,
+    "batch_multiplier": 0.5,
+    "valid_until": "2026-11-30",
+    "source": "https://aistudio.google.com/docs/pricing (Paid Tier, Standard; read 2026-11-19)"
+  },
+  "token_note": "input_tokens = prompt - cached; output_tokens = candidates + thoughts (both billed as output); cache_read_input_tokens = implicitly cached prompt tokens; USD is computed here from these counts and prices, not read from a Google invoice",
+  "not_in_usd_total": {
+    "unrecorded_usd_allowance_first_attempt": 0.1,
+    "connections_dropped_and_retried": 2,
+    "usd_counted_toward_cap": 1.3601
+  }
+}
