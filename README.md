@@ -6,17 +6,102 @@ It asks where the reliability of extracted scientific data is lost: in OCR, in e
 evidence verification, in entity resolution, or in human review. It also asks where the next
 unit of effort should go.
 
-**Status: dev pages labelled, test pages not yet; no reportable results.** In place: data
-pipeline, CER analysis, a 22-page sample (6 dev, 16 locked test pages), annotation guide v0.6
-(English and Chinese), rule baseline, LLM extraction pipeline, scorer, the pre-registered analyses,
-taxon-link scoring, and a draft pre-registration. Gloria's labels for the 6 dev pages are in
-`gold/`; scores on them (`results/analysis_dev_p3/`) are for tuning only, because the guide and the
-prompt were written from these pages. Test pages wait for the test labels and the frozen
-configuration (earlier test-page outputs are superseded, sealed and unopened). Entity types are
-inspired by NHM's BHL prototype, but our scores are not comparable to NHM's reported results.
-V1 scope is in [`CLAUDE.md` section 4a](CLAUDE.md).
+**Status (2026-11-20): gold set labelled, not yet frozen; no test results.** All 22 sample pages
+are labelled (6 dev, 16 locked test) and Butler's taxon links are done. A second labeller has
+labelled 5 test pages; her disagreements with the gold are being adjudicated. Then the analysis
+plan is frozen (`src/freeze.py`), and only then are the test pages run and scored. Scores on the
+dev pages are pipeline checks, not results: the guide and the prompt were written from them.
+Entity types are inspired by NHM's BHL prototype, but our scores are not comparable to NHM's
+reported results. V1 scope is in [`CLAUDE.md` section 4a](CLAUDE.md); the analysis plan is
+[`PREREGISTRATION.md`](PREREGISTRATION.md).
 
-The project brief for contributors and Claude Code is in [`CLAUDE.md`](CLAUDE.md).
+## Question
+
+> When does improved OCR stop being the main bottleneck, and when do evidence verification and
+> entity resolution become the limiting factors for trustworthy scientific data extraction?
+
+"When" is something to measure; "there is no single threshold" is a valid answer. The answer is
+meant to guide resource allocation: better OCR, better LLM extraction, automated verification,
+or human review.
+
+| | Sub-question | Comparison |
+|---|---|---|
+| RQ1 | How much does OCR quality change extraction accuracy? | the same page as legacy BHL OCR, modern OCR (dots.mocr), expert transcription |
+| RQ2 | How much better is an LLM than a rule baseline? | gnfinder + regex vs Claude Opus 5.5 |
+| RQ3 | Does requiring evidence reduce unsupported output, at what recall cost? | G0 (values only) vs G1 (line + verbatim quote per value) |
+| RQ4 | Can model agreement plus checks prioritise human review? | shadow evaluation: Opus and Gemini 4 Carbon agree and checks pass → "proposed auto-accept"; nothing skips review |
+| E4-lite | Where are names lost: before linking or at linking? | Butler taxa, plain GBIF name lookup vs gold links |
+
+## Method
+
+**Books and pages.** The two English works in FineBooks' expert-transcribed set: Butler, *Birds
+of Great Britain and Ireland* vol. 2 (1907), and Reeve, *Conchologia iconica* vol. 5 (1849). 22
+pages, sampled by stratum (entity-rich, low-density, no target names, poor OCR) across the range
+of legacy-OCR character error rate (CER): 6 dev pages (3 per book) and 16 locked test pages
+(Butler 7, Reeve 9). Book and CER are confounded (Reeve's legacy OCR is much worse), so every
+result is reported per book and a pooled F1-vs-CER curve is descriptive only.
+
+**Text versions.** `expert` (IMPACT/BHL transcription, the reference), `legacy` (BHL's own OCR),
+`modern_dots-mocr` (FineBooks' public dots.mocr output, Markdown) and `modern_dots-mocr_plain`
+(the same text with Markdown marks deleted, a formatting ablation). Gold offsets are in the expert
+text; predictions on the other versions are mapped to it by character alignment.
+
+**Gold labels.** A mention is a character span plus one field: `taxon`, `person`, `locality`,
+`institution`, `date` (event dates only), and `vernacular` (scored separately, never in the primary
+number). The [annotation guide](ANNOTATION_GUIDE.md) is versioned (v0.10, English and Chinese).
+Gloria labelled every page herself before seeing any model output on it; each delivery is archived
+unchanged in `gold/received/` before any comparison; every later change is decided by her and
+logged in `gold/gold_changes_gloria.csv`. Rules decided on test pages went into the guide and
+the gold but never into the prompt (`p4-guide-v0.6`), so scores are also reported with those rows
+treated as optional. Known typos in the expert transcription are recorded in `scan_text` and
+`data/transcription_errata.csv`. Gold size: dev 186 mentions, test 421 (Butler 189, Reeve 232).
+
+**Agreement.** A second labeller labelled 5 test pages with a labeller copy of the guide (same
+rules; examples taken from her own pages replaced by invented ones), without AI assistants or
+access to the gold. Agreement = 2 × matched / (n₁ + n₂), per field, exact span and overlap.
+
+**Extraction.** The model never rewrites source text: lines are numbered, the model returns a
+value (G0) or a line plus a verbatim quote (G1), and code slices the value from the source. A quote
+that does not match the source is logged as a silent correction. Two LLMs from different
+providers (Claude Opus 5.5, batch; Gemini 4 Carbon, sync with the JSON schema enforced), one
+prompt, every text version, G0 and G1. Test outputs are sealed when they arrive and opened only
+after the freeze (`src/unseal.py` checks `src/freeze.py --verify`).
+
+**Scoring and statistics.** One-to-one matching per field at three levels: lenient (overlap),
+exact (same span) and value (overlap and same text after normalisation; the primary level,
+because a well-placed misread name is wrong data). 1,000 page-bootstrap resamples per book,
+paired for differences; verdicts against thresholds written in advance (PREREGISTRATION section
+3). No multiple-comparison correction: this is an exploratory pilot and every comparison is
+reported.
+
+**Entity resolution.** Gloria resolved each of Butler's 29 distinct printed names to a current
+name (Avibase first; `resolved` / `partial` / `ambiguous` / `unresolved`); `src/expand_links.py`
+turns her names into GBIF backbone keys. The linker under test is a plain GBIF `species/match`
+lookup with no hints. Subfamily names are not scored (the backbone has no such rank).
+
+## Results
+
+*To be filled after the freeze and the test run. Nothing below is a result yet.*
+
+| | Result |
+|---|---|
+| Agreement (5 pages, as delivered) | ALL_PRIMARY exact 0.90, overlap 0.95 (Butler 0.89 / 0.93, Reeve 0.90 / 0.96); lowest field: locality exact 0.75, mostly span-edge differences. Descriptive, 5 pages. `results/agreement_independent/` |
+| RQ1 OCR | — |
+| RQ2 baseline | — |
+| RQ3 evidence | — |
+| RQ4 review prioritisation | — |
+| E4-lite linking | — |
+| Error analysis | — |
+| Cost | API spend so far about $9.8 (dev runs and earlier superseded runs) |
+
+## Limitations (known in advance)
+
+- 16 test pages from two books: intervals will be wide, and nothing generalises to "BHL".
+- Book and OCR quality are confounded.
+- One labeller for the gold; a second labeller on 5 pages only.
+- Dev pages are not blind; only test pages are reported as results.
+- BHL, the IMPACT transcriptions and PCAS are public and may be in the models' pre-training data.
+- A GBIF match is a signal, not proof that the name is the taxon the text refers to.
 
 ## What is here so far
 
@@ -37,6 +122,10 @@ The project brief for contributors and Claude Code is in [`CLAUDE.md`](CLAUDE.md
 | Run-to-run noise across repeated dev runs | `src/repeat_report.py` | `results/repeats_<name>/` |
 | Pre-registered analyses: paired bootstrap, stage of loss, evidence counters, shadow evaluation | `src/analyze.py`, `src/analysis.py` | `results/analysis_<name>/` |
 | Taxon linking (Butler): GBIF name lookup scored against the gold links, with cached responses | `src/link_taxa.py` | `results/linking_<name>/` |
+| Gold links from Gloria's accepted names (exact, rank-checked GBIF key lookup) | `src/expand_links.py` | `gold/gold_links_gloria.csv` |
+| Second labeller's pack | `src/make_labeller_pack.py` | a folder to send |
+| Inter-annotator agreement | `src/agreement.py` | `results/agreement_<name>/` |
+| Freeze before unsealing | `src/freeze.py` | `FREEZE.json` |
 
 ## Reproduce
 
@@ -71,7 +160,7 @@ python src/run_extraction.py --pages dev5 --mode sync --max-usd 5
 python src/run_extraction.py --pages all --mode batch --estimate-from <pilot_run_id> --max-usd 15
 python src/run_extraction.py --collect <run_id>
 # 3. after the gold set is done
-python src/unseal.py <run_id> --labeller gloria
+python src/freeze.py --ready && python src/unseal.py <run_id> --labeller gloria_test
 ```
 
 **Second LLM: Gemini** (`--provider gemini`, key in `GEMINI_API_KEY`, Google Gen AI SDK
@@ -141,9 +230,9 @@ check to scripts running on cloud machines (seen 2026-11-18).
 ```
 CLAUDE.md      project brief (read automatically by Claude Code)
 data/          page lists, CER table, sample proposal, reports (texts are fetched, not committed)
-gold/          Gloria's gold labels (empty until labelling starts)
+gold/          gold labels, deliveries as received, change log, link tables
 src/           scripts
 results/       one folder per model run or analysis
-memo/          one-page Research-to-Product memo (later)
+memo/          one-page Research-to-Product memo (skeleton; filled from results)
 tests/         unit tests for the helpers
 ```
