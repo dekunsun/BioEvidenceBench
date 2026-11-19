@@ -1,0 +1,3 @@
+page_id,start,end,field,text,qualifier,notes,scan_text,adjudication,guide_version
+8967333,25,35,taxon,CASSIDARIA,,UNCLEAR: Genus named in the monograph title page; unclear whether a title page heading constitutes scientific account content or page furniture under 2.0.4.,,,v0.9
+8967333,312,324,person,Landsborough,,"Named attribution of the epigraph, outside a cited book title.",,,v0.9
