@@ -1,0 +1,225 @@
+rq,comparison,book,field,metric,pages,a,b,diff,lo,hi,rule,verdict,preregistered
+RQ1,modern OCR vs legacy OCR,Butler,ALL_PRIMARY,value F1,7,0.952,0.597,0.355,0.24,0.481,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Butler,taxon,value F1,7,0.952,0.2,0.752,0.533,0.917,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Butler,person,value F1,7,1.0,0.579,0.421,0.235,0.632,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Butler,locality,value F1,7,0.97,0.889,0.081,0.0,0.128,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Butler,institution,value F1,7,,,,,,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Butler,date,value F1,7,0.885,0.667,0.218,0.05,0.497,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Butler,vernacular,value F1,7,0.907,0.737,0.17,0.086,0.338,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Reeve,ALL_PRIMARY,value F1,9,0.977,0.638,0.338,0.248,0.459,at_least 0.1,supports,True
+RQ1,modern OCR vs legacy OCR,Reeve,taxon,value F1,9,0.96,0.514,0.446,0.274,0.657,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Reeve,person,value F1,9,1.0,0.682,0.318,0.248,0.441,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Reeve,locality,value F1,9,0.935,0.742,0.194,0.065,0.385,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Reeve,institution,value F1,9,1.0,0.739,0.261,0.0,0.382,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Reeve,date,value F1,9,,,,,,,descriptive,False
+RQ1,modern OCR vs legacy OCR,Reeve,vernacular,value F1,9,0.944,0.514,0.43,0.266,0.709,,descriptive,False
+RQ1,expert vs modern OCR,Butler,ALL_PRIMARY,value F1,7,0.982,0.952,0.029,0.009,0.057,,descriptive,False
+RQ1,expert vs modern OCR,Butler,taxon,value F1,7,1.0,0.952,0.048,0.0,0.157,,descriptive,False
+RQ1,expert vs modern OCR,Butler,person,value F1,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR,Butler,locality,value F1,7,0.97,0.97,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR,Butler,institution,value F1,7,,,,,,,descriptive,False
+RQ1,expert vs modern OCR,Butler,date,value F1,7,0.962,0.885,0.077,0.0,0.28,,descriptive,False
+RQ1,expert vs modern OCR,Butler,vernacular,value F1,7,0.896,0.907,-0.011,-0.064,0.083,,descriptive,False
+RQ1,expert vs modern OCR,Reeve,ALL_PRIMARY,value F1,9,0.981,0.977,0.005,-0.015,0.03,less_than 0.05,supports,True
+RQ1,expert vs modern OCR,Reeve,taxon,value F1,9,0.987,0.96,0.027,0.0,0.081,,descriptive,False
+RQ1,expert vs modern OCR,Reeve,person,value F1,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR,Reeve,locality,value F1,9,0.9,0.935,-0.035,-0.22,0.028,,descriptive,False
+RQ1,expert vs modern OCR,Reeve,institution,value F1,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR,Reeve,date,value F1,9,,,,,,,descriptive,False
+RQ1,expert vs modern OCR,Reeve,vernacular,value F1,9,0.944,0.944,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Butler,ALL_PRIMARY,value F1,7,0.982,0.967,0.015,0.0,0.04,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Butler,taxon,value F1,7,1.0,0.952,0.048,0.0,0.157,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Butler,person,value F1,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Butler,locality,value F1,7,0.97,0.97,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Butler,institution,value F1,7,,,,,,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Butler,date,value F1,7,0.962,0.962,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Butler,vernacular,value F1,7,0.896,0.884,0.012,-0.017,0.09,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Reeve,ALL_PRIMARY,value F1,9,0.981,0.977,0.005,-0.015,0.03,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Reeve,taxon,value F1,9,0.987,0.96,0.027,0.0,0.081,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Reeve,person,value F1,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Reeve,locality,value F1,9,0.9,0.935,-0.035,-0.22,0.028,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Reeve,institution,value F1,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Reeve,date,value F1,9,,,,,,,descriptive,False
+RQ1,expert vs modern OCR plain (formatting removed),Reeve,vernacular,value F1,9,0.944,0.914,0.03,0.0,0.139,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Butler,ALL_PRIMARY,value F1,7,0.952,0.967,-0.015,-0.039,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Butler,taxon,value F1,7,0.952,0.952,0.0,0.0,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Butler,person,value F1,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Butler,locality,value F1,7,0.97,0.97,0.0,0.0,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Butler,institution,value F1,7,,,,,,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Butler,date,value F1,7,0.885,0.962,-0.077,-0.28,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Butler,vernacular,value F1,7,0.907,0.884,0.023,0.0,0.053,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Reeve,ALL_PRIMARY,value F1,9,0.977,0.977,0.0,0.0,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Reeve,taxon,value F1,9,0.96,0.96,0.0,0.0,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Reeve,person,value F1,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Reeve,locality,value F1,9,0.935,0.935,0.0,0.0,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Reeve,institution,value F1,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Reeve,date,value F1,9,,,,,,,descriptive,False
+RQ1,modern OCR Markdown vs plain (formatting ablation),Reeve,vernacular,value F1,9,0.944,0.914,0.03,0.0,0.139,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Butler,ALL_PRIMARY,lenient R,7,1.0,0.993,0.007,0.0,0.023,greater_than -0.05,supports,True
+RQ3,"recall with evidence (G1) vs without (G0), expert",Butler,taxon,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Butler,person,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Butler,locality,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Butler,institution,lenient R,7,,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Butler,date,lenient R,7,1.0,0.962,0.038,0.0,0.154,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Butler,vernacular,lenient R,7,0.827,0.865,-0.038,-0.102,0.059,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Reeve,ALL_PRIMARY,lenient R,9,0.991,0.986,0.005,-0.013,0.021,greater_than -0.05,supports,True
+RQ3,"recall with evidence (G1) vs without (G0), expert",Reeve,taxon,lenient R,9,1.0,0.986,0.014,0.0,0.03,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Reeve,person,lenient R,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Reeve,locality,lenient R,9,0.935,0.968,-0.032,-0.136,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Reeve,institution,lenient R,9,1.0,0.957,0.043,0.0,0.107,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Reeve,date,lenient R,9,,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), expert",Reeve,vernacular,lenient R,9,0.895,0.842,0.053,0.0,0.222,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Butler,ALL_PRIMARY,lenient R,7,1.0,0.526,0.474,0.28,0.642,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Butler,taxon,lenient R,7,1.0,0.512,0.488,0.244,0.648,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Butler,person,lenient R,7,1.0,0.263,0.737,0.625,0.882,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Butler,locality,lenient R,7,1.0,0.449,0.551,0.25,0.704,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Butler,institution,lenient R,7,,,,,,greater_than 0.0,no data,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Butler,date,lenient R,7,1.0,0.885,0.115,0.0,0.312,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Butler,vernacular,lenient R,7,0.827,0.0,0.827,0.704,0.978,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Reeve,ALL_PRIMARY,lenient R,9,0.991,0.563,0.427,0.25,0.498,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Reeve,taxon,lenient R,9,1.0,0.892,0.108,0.025,0.148,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Reeve,person,lenient R,9,1.0,0.224,0.776,0.671,0.861,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Reeve,locality,lenient R,9,0.935,0.581,0.355,0.0,0.6,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Reeve,institution,lenient R,9,1.0,0.739,0.261,0.0,0.556,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Reeve,date,lenient R,9,,,,,,greater_than 0.0,no data,True
+RQ2,"LLM (G1) vs rule baseline, recall, expert",Reeve,vernacular,lenient R,9,0.895,0.0,0.895,0.778,1.0,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Butler,ALL_PRIMARY,value F1,7,0.982,0.607,0.374,0.255,0.51,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Butler,taxon,value F1,7,1.0,0.636,0.364,0.207,0.493,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Butler,person,value F1,7,1.0,0.333,0.667,0.481,0.9,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Butler,locality,value F1,7,0.97,0.528,0.442,0.231,0.6,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Butler,institution,value F1,7,,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Butler,date,value F1,7,0.962,0.808,0.154,0.066,0.263,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Butler,vernacular,value F1,7,0.896,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Reeve,ALL_PRIMARY,value F1,9,0.981,0.497,0.484,0.437,0.548,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Reeve,taxon,value F1,9,0.987,0.536,0.45,0.295,0.678,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Reeve,person,value F1,9,1.0,0.365,0.635,0.505,0.756,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Reeve,locality,value F1,9,0.9,0.436,0.464,0.105,0.737,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Reeve,institution,value F1,9,1.0,0.85,0.15,0.0,0.385,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Reeve,date,value F1,9,,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, expert",Reeve,vernacular,value F1,9,0.944,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Butler,ALL_PRIMARY,lenient R,7,0.949,0.964,-0.015,-0.045,0.0,greater_than -0.05,supports,True
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Butler,taxon,lenient R,7,0.86,0.884,-0.023,-0.2,0.056,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Butler,person,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Butler,locality,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Butler,institution,lenient R,7,,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Butler,date,lenient R,7,0.962,1.0,-0.038,-0.154,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Butler,vernacular,lenient R,7,0.827,0.827,0.0,-0.071,0.091,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Reeve,ALL_PRIMARY,lenient R,9,0.93,0.925,0.005,0.0,0.026,greater_than -0.05,supports,True
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Reeve,taxon,lenient R,9,0.905,0.905,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Reeve,person,lenient R,9,0.953,0.941,0.012,0.0,0.07,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Reeve,locality,lenient R,9,0.903,0.903,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Reeve,institution,lenient R,9,0.957,0.957,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Reeve,date,lenient R,9,,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), legacy",Reeve,vernacular,lenient R,9,0.789,0.789,0.0,0.0,0.0,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Butler,ALL_PRIMARY,lenient R,7,0.949,0.46,0.489,0.337,0.651,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Butler,taxon,lenient R,7,0.86,0.302,0.558,0.421,0.706,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Butler,person,lenient R,7,1.0,0.263,0.737,0.625,0.882,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Butler,locality,lenient R,7,1.0,0.429,0.571,0.25,0.741,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Butler,institution,lenient R,7,,,,,,greater_than 0.0,no data,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Butler,date,lenient R,7,0.962,0.923,0.038,-0.154,0.235,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Butler,vernacular,lenient R,7,0.827,0.0,0.827,0.704,0.978,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Reeve,ALL_PRIMARY,lenient R,9,0.93,0.399,0.531,0.422,0.606,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Reeve,taxon,lenient R,9,0.905,0.662,0.243,0.16,0.423,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Reeve,person,lenient R,9,0.953,0.071,0.882,0.78,0.963,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Reeve,locality,lenient R,9,0.903,0.387,0.516,0.294,0.643,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Reeve,institution,lenient R,9,0.957,0.783,0.174,0.0,0.258,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Reeve,date,lenient R,9,,,,,,greater_than 0.0,no data,True
+RQ2,"LLM (G1) vs rule baseline, recall, legacy",Reeve,vernacular,lenient R,9,0.789,0.0,0.789,0.631,0.917,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Butler,ALL_PRIMARY,value F1,7,0.597,0.439,0.158,0.066,0.308,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Butler,taxon,value F1,7,0.2,0.207,-0.007,-0.078,0.071,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Butler,person,value F1,7,0.579,0.167,0.412,0.235,0.589,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Butler,locality,value F1,7,0.889,0.486,0.403,0.212,0.584,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Butler,institution,value F1,7,,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Butler,date,value F1,7,0.667,0.755,-0.088,-0.327,0.062,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Butler,vernacular,value F1,7,0.737,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Reeve,ALL_PRIMARY,value F1,9,0.638,0.358,0.281,0.188,0.338,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Reeve,taxon,value F1,9,0.514,0.418,0.095,-0.009,0.141,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Reeve,person,value F1,9,0.682,0.132,0.55,0.489,0.63,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Reeve,locality,value F1,9,0.742,0.327,0.415,0.167,0.607,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Reeve,institution,value F1,9,0.739,0.714,0.025,-0.078,0.155,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Reeve,date,value F1,9,,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, legacy",Reeve,vernacular,value F1,9,0.514,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Butler,ALL_PRIMARY,lenient R,7,0.978,0.985,-0.007,-0.023,0.0,greater_than -0.05,supports,True
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Butler,taxon,lenient R,7,0.953,0.953,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Butler,person,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Butler,locality,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Butler,institution,lenient R,7,,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Butler,date,lenient R,7,0.962,1.0,-0.038,-0.154,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Butler,vernacular,lenient R,7,0.846,0.846,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Reeve,ALL_PRIMARY,lenient R,9,0.995,0.995,0.0,0.0,0.0,greater_than -0.05,supports,True
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Reeve,taxon,lenient R,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Reeve,person,lenient R,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Reeve,locality,lenient R,9,0.968,0.968,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Reeve,institution,lenient R,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Reeve,date,lenient R,9,,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr",Reeve,vernacular,lenient R,9,0.895,0.842,0.053,0.0,0.222,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Butler,ALL_PRIMARY,lenient R,7,0.978,0.547,0.431,0.257,0.585,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Butler,taxon,lenient R,7,0.953,0.558,0.395,0.138,0.588,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Butler,person,lenient R,7,1.0,0.263,0.737,0.625,0.882,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Butler,locality,lenient R,7,1.0,0.449,0.551,0.25,0.704,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Butler,institution,lenient R,7,,,,,,greater_than 0.0,no data,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Butler,date,lenient R,7,0.962,0.923,0.038,-0.154,0.235,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Butler,vernacular,lenient R,7,0.846,0.0,0.846,0.696,0.978,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Reeve,ALL_PRIMARY,lenient R,9,0.995,0.512,0.484,0.336,0.549,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Reeve,taxon,lenient R,9,1.0,0.878,0.122,0.044,0.174,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Reeve,person,lenient R,9,1.0,0.188,0.812,0.634,0.957,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Reeve,locality,lenient R,9,0.968,0.355,0.613,0.3,0.867,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Reeve,institution,lenient R,9,1.0,0.739,0.261,0.0,0.556,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Reeve,date,lenient R,9,,,,,,greater_than 0.0,no data,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr",Reeve,vernacular,lenient R,9,0.895,0.0,0.895,0.778,1.0,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Butler,ALL_PRIMARY,value F1,7,0.952,0.636,0.316,0.207,0.448,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Butler,taxon,value F1,7,0.952,0.706,0.246,0.041,0.427,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Butler,person,value F1,7,1.0,0.333,0.667,0.481,0.9,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Butler,locality,value F1,7,0.97,0.528,0.442,0.231,0.6,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Butler,institution,value F1,7,,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Butler,date,value F1,7,0.885,0.83,0.054,-0.243,0.2,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Butler,vernacular,value F1,7,0.907,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Reeve,ALL_PRIMARY,value F1,9,0.977,0.485,0.491,0.411,0.581,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Reeve,taxon,value F1,9,0.96,0.542,0.418,0.226,0.672,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Reeve,person,value F1,9,1.0,0.317,0.683,0.464,0.917,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Reeve,locality,value F1,9,0.935,0.383,0.553,0.286,0.823,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Reeve,institution,value F1,9,1.0,0.85,0.15,0.0,0.385,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Reeve,date,value F1,9,,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr",Reeve,vernacular,value F1,9,0.944,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Butler,ALL_PRIMARY,lenient R,7,0.985,0.985,0.0,0.0,0.0,greater_than -0.05,supports,True
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Butler,taxon,lenient R,7,0.953,0.953,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Butler,person,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Butler,locality,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Butler,institution,lenient R,7,,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Butler,date,lenient R,7,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Butler,vernacular,lenient R,7,0.808,0.865,-0.058,-0.108,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Reeve,ALL_PRIMARY,lenient R,9,0.995,0.995,0.0,0.0,0.0,greater_than -0.05,supports,True
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Reeve,taxon,lenient R,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Reeve,person,lenient R,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Reeve,locality,lenient R,9,0.968,0.968,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Reeve,institution,lenient R,9,1.0,1.0,0.0,0.0,0.0,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Reeve,date,lenient R,9,,,,,,,descriptive,False
+RQ3,"recall with evidence (G1) vs without (G0), modern_dots-mocr_plain",Reeve,vernacular,lenient R,9,0.842,0.895,-0.053,-0.222,0.0,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Butler,ALL_PRIMARY,lenient R,7,0.985,0.547,0.438,0.265,0.593,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Butler,taxon,lenient R,7,0.953,0.558,0.395,0.138,0.588,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Butler,person,lenient R,7,1.0,0.263,0.737,0.625,0.882,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Butler,locality,lenient R,7,1.0,0.449,0.551,0.25,0.704,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Butler,institution,lenient R,7,,,,,,greater_than 0.0,no data,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Butler,date,lenient R,7,1.0,0.923,0.077,0.0,0.235,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Butler,vernacular,lenient R,7,0.808,0.0,0.808,0.652,0.978,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Reeve,ALL_PRIMARY,lenient R,9,0.995,0.563,0.432,0.247,0.511,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Reeve,taxon,lenient R,9,1.0,0.878,0.122,0.044,0.174,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Reeve,person,lenient R,9,1.0,0.235,0.765,0.619,0.861,greater_than 0.0,supports,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Reeve,locality,lenient R,9,0.968,0.581,0.387,0.0,0.611,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Reeve,institution,lenient R,9,1.0,0.739,0.261,0.0,0.556,greater_than 0.0,inconclusive,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Reeve,date,lenient R,9,,,,,,greater_than 0.0,no data,True
+RQ2,"LLM (G1) vs rule baseline, recall, modern_dots-mocr_plain",Reeve,vernacular,lenient R,9,0.842,0.0,0.842,0.667,0.96,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Butler,ALL_PRIMARY,value F1,7,0.967,0.627,0.34,0.241,0.456,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Butler,taxon,value F1,7,0.952,0.676,0.276,0.111,0.427,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Butler,person,value F1,7,1.0,0.333,0.667,0.481,0.9,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Butler,locality,value F1,7,0.97,0.528,0.442,0.231,0.6,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Butler,institution,value F1,7,,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Butler,date,value F1,7,0.962,0.83,0.131,0.027,0.217,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Butler,vernacular,value F1,7,0.884,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Reeve,ALL_PRIMARY,value F1,9,0.977,0.501,0.475,0.417,0.538,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Reeve,taxon,value F1,9,0.96,0.531,0.429,0.25,0.672,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Reeve,person,value F1,9,1.0,0.381,0.619,0.448,0.756,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Reeve,locality,value F1,9,0.935,0.436,0.499,0.227,0.729,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Reeve,institution,value F1,9,1.0,0.85,0.15,0.0,0.385,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Reeve,date,value F1,9,,,,,,,descriptive,False
+RQ2,"LLM (G1) vs rule baseline, value F1, modern_dots-mocr_plain",Reeve,vernacular,value F1,9,0.914,,,,,,descriptive,False

@@ -1,0 +1,9 @@
+book,version,predictions,flagged,flagged_share,precision_flagged,precision_unflagged,diff,diff_lo,diff_hi,unflagged,verdict,excluded_no_answer_from_b,errors_in_flagged_set,gold,missed_by_model_a,missed_by_both
+Butler,expert,138,138,1.0,0.978,,,,,0,too few to compare,0,3,137,0,0
+Butler,legacy,131,130,0.992,0.615,0.0,0.615,0.456,0.716,1,too few to compare,0,50,137,7,0
+Butler,modern_dots-mocr,136,136,1.0,0.956,,,,,0,too few to compare,0,6,137,3,2
+Butler,modern_dots-mocr_plain,136,136,1.0,0.971,,,,,0,too few to compare,0,4,137,2,2
+Reeve,expert,213,212,0.995,0.981,1.0,-0.019,-0.036,-0.008,1,too few to compare,0,4,213,2,1
+Reeve,legacy,213,211,0.991,0.645,0.0,0.645,0.515,0.726,2,too few to compare,0,75,213,15,13
+Reeve,modern_dots-mocr,215,213,0.991,0.977,0.5,0.477,-0.034,0.981,2,too few to compare,0,5,213,1,1
+Reeve,modern_dots-mocr_plain,215,213,0.991,0.977,0.5,0.477,-0.034,0.981,2,too few to compare,0,5,213,1,1

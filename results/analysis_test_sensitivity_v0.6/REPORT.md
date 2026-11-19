@@ -1,0 +1,180 @@
+# Analysis report: test_sensitivity_v0.6 (TEST pages)
+
+Gold: `gold/gold_mentions_gloria_test.csv` (c24a9bac66ee…), guide ['v0.10', 'v0.6', 'v0.7', 'v0.8', 'v0.9'].
+Code commit `dba7ab497d` **with uncommitted changes**.
+Runs: `20261119-2052_claude-opus-5-5_test_batch` (llm, claude-opus-5-5, prompt p4-guide-v0.6); `20261119-2052_gemini-4-carbon_test_sync` (llm2, gemini-4-carbon, prompt p4-guide-v0.6); `20261118-2102_rules-gnfinder-v1.4.0_all` (rule, rules + gnfinder v1.4.0, prompt None).
+
+
+## Sample behind every number
+
+| book   | field       |   pages |   gold |   gold_ambiguous_excluded | too_few_to_compare   |
+|:-------|:------------|--------:|-------:|--------------------------:|:---------------------|
+| Butler | ALL_PRIMARY |       7 |    137 |                         0 | False                |
+| Butler | date        |       7 |     26 |                         0 | False                |
+| Butler | institution |       7 |      0 |                         0 | True                 |
+| Butler | locality    |       7 |     49 |                         0 | False                |
+| Butler | person      |       7 |     19 |                         0 | False                |
+| Butler | taxon       |       7 |     43 |                         0 | False                |
+| Butler | vernacular  |       7 |     46 |                         8 | False                |
+| Reeve  | ALL_PRIMARY |       9 |    211 |                         2 | False                |
+| Reeve  | date        |       9 |      0 |                         0 | True                 |
+| Reeve  | institution |       9 |     23 |                         0 | False                |
+| Reeve  | locality    |       9 |     31 |                         0 | False                |
+| Reeve  | person      |       9 |     85 |                         0 | False                |
+| Reeve  | taxon       |       9 |     72 |                         2 | False                |
+| Reeve  | vernacular  |       9 |     17 |                         2 | False                |
+
+## Scores, primary fields together (value level is the primary metric)
+
+| run                                      | book   | version                | condition   |   gold |   pred |   value_P |   value_R |   value_F1 |   value_F1_lo |   value_F1_hi |   lenient_F1 |   exact_F1 |   unaligned |
+|:-----------------------------------------|:-------|:-----------------------|:------------|-------:|-------:|----------:|----------:|-----------:|--------------:|--------------:|-------------:|-----------:|------------:|
+| 20261119-2052_claude-opus-5-5_test_batch | Butler | expert                 | G0          |    137 |    137 |     0.971 |     0.971 |      0.971 |         0.935 |         1     |        0.993 |      0.971 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Butler | expert                 | G1          |    137 |    138 |     0.978 |     0.985 |      0.982 |         0.947 |         1     |        0.996 |      0.982 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Butler | legacy                 | G0          |    137 |    134 |     0.612 |     0.599 |      0.605 |         0.459 |         0.748 |        0.974 |      0.9   |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Butler | legacy                 | G1          |    137 |    131 |     0.611 |     0.584 |      0.597 |         0.445 |         0.736 |        0.97  |      0.881 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Butler | modern_dots-mocr       | G0          |    137 |    136 |     0.971 |     0.964 |      0.967 |         0.929 |         0.994 |        0.989 |      0.96  |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Butler | modern_dots-mocr       | G1          |    137 |    136 |     0.956 |     0.949 |      0.952 |         0.923 |         0.979 |        0.982 |      0.945 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Butler | modern_dots-mocr_plain | G0          |    137 |    136 |     0.978 |     0.971 |      0.974 |         0.949 |         0.994 |        0.989 |      0.967 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Butler | modern_dots-mocr_plain | G1          |    137 |    136 |     0.971 |     0.964 |      0.967 |         0.929 |         0.994 |        0.989 |      0.96  |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Reeve  | expert                 | G0          |    211 |    214 |     0.976 |     0.981 |      0.979 |         0.961 |         1     |        0.983 |      0.979 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Reeve  | expert                 | G1          |    211 |    213 |     0.981 |     0.981 |      0.981 |         0.973 |         1     |        0.991 |      0.976 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Reeve  | legacy                 | G0          |    211 |    209 |     0.651 |     0.645 |      0.648 |         0.535 |         0.723 |        0.938 |      0.905 |           5 |
+| 20261119-2052_claude-opus-5-5_test_batch | Reeve  | legacy                 | G1          |    211 |    213 |     0.638 |     0.645 |      0.642 |         0.526 |         0.72  |        0.934 |      0.896 |           5 |
+| 20261119-2052_claude-opus-5-5_test_batch | Reeve  | modern_dots-mocr       | G0          |    211 |    214 |     0.976 |     0.981 |      0.979 |         0.955 |         1     |        0.993 |      0.988 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Reeve  | modern_dots-mocr       | G1          |    211 |    215 |     0.972 |     0.981 |      0.976 |         0.953 |         0.997 |        0.991 |      0.986 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Reeve  | modern_dots-mocr_plain | G0          |    211 |    215 |     0.972 |     0.981 |      0.976 |         0.955 |         1     |        0.991 |      0.986 |           0 |
+| 20261119-2052_claude-opus-5-5_test_batch | Reeve  | modern_dots-mocr_plain | G1          |    211 |    215 |     0.972 |     0.981 |      0.976 |         0.955 |         0.996 |        0.991 |      0.986 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Butler | expert                 | G0          |    137 |    139 |     0.971 |     0.985 |      0.978 |         0.944 |         1     |        0.993 |      0.978 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Butler | expert                 | G1          |    137 |    138 |     0.971 |     0.978 |      0.975 |         0.939 |         1     |        0.996 |      0.975 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Butler | legacy                 | G0          |    137 |    139 |     0.597 |     0.606 |      0.601 |         0.456 |         0.747 |        0.993 |      0.92  |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Butler | legacy                 | G1          |    137 |    138 |     0.601 |     0.606 |      0.604 |         0.452 |         0.749 |        0.996 |      0.924 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Butler | modern_dots-mocr       | G0          |    137 |    136 |     0.963 |     0.956 |      0.96  |         0.925 |         0.987 |        0.989 |      0.952 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Butler | modern_dots-mocr       | G1          |    137 |    137 |     0.964 |     0.964 |      0.964 |         0.93  |         0.991 |        0.985 |      0.956 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Butler | modern_dots-mocr_plain | G0          |    137 |    137 |     0.949 |     0.949 |      0.949 |         0.917 |         0.978 |        0.985 |      0.942 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Butler | modern_dots-mocr_plain | G1          |    137 |    138 |     0.957 |     0.964 |      0.96  |         0.927 |         0.983 |        0.982 |      0.953 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Reeve  | expert                 | G0          |    211 |    215 |     0.972 |     0.981 |      0.976 |         0.957 |         1     |        0.981 |      0.976 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Reeve  | expert                 | G1          |    211 |    214 |     0.986 |     0.991 |      0.988 |         0.977 |         1     |        0.993 |      0.988 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Reeve  | legacy                 | G0          |    211 |    215 |     0.636 |     0.645 |      0.64  |         0.516 |         0.721 |        0.936 |      0.899 |           5 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Reeve  | legacy                 | G1          |    211 |    214 |     0.638 |     0.645 |      0.642 |         0.524 |         0.723 |        0.939 |      0.901 |           5 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Reeve  | modern_dots-mocr       | G0          |    211 |    215 |     0.958 |     0.967 |      0.962 |         0.929 |         1     |        0.991 |      0.972 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Reeve  | modern_dots-mocr       | G1          |    211 |    214 |     0.976 |     0.981 |      0.979 |         0.956 |         0.997 |        0.993 |      0.988 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Reeve  | modern_dots-mocr_plain | G0          |    211 |    214 |     0.976 |     0.981 |      0.979 |         0.958 |         1     |        0.993 |      0.988 |           0 |
+| 20261119-2052_gemini-4-carbon_test_sync  | Reeve  | modern_dots-mocr_plain | G1          |    211 |    214 |     0.962 |     0.967 |      0.965 |         0.933 |         0.996 |        0.993 |      0.974 |           0 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | Butler | expert                 | RULE        |    137 |     77 |     0.844 |     0.474 |      0.607 |         0.476 |         0.729 |        0.673 |      0.551 |           0 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | Butler | legacy                 | RULE        |    137 |     68 |     0.662 |     0.328 |      0.439 |         0.318 |         0.576 |        0.615 |      0.468 |           0 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | Butler | modern_dots-mocr       | RULE        |    137 |     80 |     0.862 |     0.504 |      0.636 |         0.5   |         0.765 |        0.691 |      0.571 |           0 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | Butler | modern_dots-mocr_plain | RULE        |    137 |     80 |     0.85  |     0.496 |      0.627 |         0.496 |         0.739 |        0.691 |      0.562 |           0 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | Reeve  | expert                 | RULE        |    211 |    173 |     0.555 |     0.455 |      0.5   |         0.441 |         0.551 |        0.625 |      0.5   |           0 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | Reeve  | legacy                 | RULE        |    211 |    128 |     0.477 |     0.289 |      0.36  |         0.296 |         0.411 |        0.501 |      0.437 |           1 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | Reeve  | modern_dots-mocr       | RULE        |    211 |    158 |     0.57  |     0.427 |      0.488 |         0.408 |         0.555 |        0.591 |      0.488 |           0 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | Reeve  | modern_dots-mocr_plain | RULE        |    211 |    170 |     0.565 |     0.455 |      0.504 |         0.446 |         0.553 |        0.63  |      0.504 |           0 |
+
+Per field (including `vernacular`, scored apart): `scores.csv`.
+
+## Where gold mentions are lost (main LLM, with evidence)
+
+| book   | version                |   gold |   lost_at_ocr |   of_which_still_found |   lost_at_extraction |   lost_at_value |   kept |   kept_share |
+|:-------|:-----------------------|-------:|--------------:|-----------------------:|---------------------:|----------------:|-------:|-------------:|
+| Butler | expert                 |    137 |             0 |                      0 |                    0 |               2 |    135 |        0.985 |
+| Butler | legacy                 |    137 |            53 |                     47 |                    1 |               3 |     80 |        0.584 |
+| Butler | modern_dots-mocr       |    137 |             5 |                      3 |                    1 |               3 |    128 |        0.934 |
+| Butler | modern_dots-mocr_plain |    137 |             5 |                      3 |                    0 |               2 |    130 |        0.949 |
+| Reeve  | expert                 |    211 |             0 |                      0 |                    2 |               2 |    207 |        0.981 |
+| Reeve  | legacy                 |    211 |            72 |                     60 |                    1 |               2 |    136 |        0.645 |
+| Reeve  | modern_dots-mocr       |    211 |             2 |                      2 |                    1 |               1 |    207 |        0.981 |
+| Reeve  | modern_dots-mocr_plain |    211 |             2 |                      2 |                    1 |               1 |    207 |        0.981 |
+
+## Pre-registered comparisons (paired page bootstrap)
+
+Shown: RQ1, RQ3, and RQ2 on the expert text. A is the arm the hypothesis expects to be better;
+`verdict` compares the 95% interval of A - B with the rule written in advance.
+
+| rq   | comparison                                                        | book   | field       | metric    |   pages |       a |       b |    diff |      lo |      hi | rule               | verdict      |
+|:-----|:------------------------------------------------------------------|:-------|:------------|:----------|--------:|--------:|--------:|--------:|--------:|--------:|:-------------------|:-------------|
+| RQ1  | modern OCR vs legacy OCR                                          | Reeve  | ALL_PRIMARY | value F1  |       9 |   0.976 |   0.642 |   0.335 |   0.248 |   0.457 | at_least 0.1       | supports     |
+| RQ1  | expert vs modern OCR                                              | Reeve  | ALL_PRIMARY | value F1  |       9 |   0.981 |   0.976 |   0.005 |  -0.015 |   0.03  | less_than 0.05     | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), expert                 | Butler | ALL_PRIMARY | lenient R |       7 |   1     |   0.993 |   0.007 |   0     |   0.023 | greater_than -0.05 | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), expert                 | Reeve  | ALL_PRIMARY | lenient R |       9 |   0.991 |   0.986 |   0.005 |  -0.013 |   0.021 | greater_than -0.05 | supports     |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Butler | taxon       | lenient R |       7 |   1     |   0.512 |   0.488 |   0.244 |   0.648 | greater_than 0.0   | supports     |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Butler | person      | lenient R |       7 |   1     |   0.263 |   0.737 |   0.625 |   0.882 | greater_than 0.0   | supports     |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Butler | locality    | lenient R |       7 |   1     |   0.449 |   0.551 |   0.25  |   0.704 | greater_than 0.0   | supports     |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Butler | institution | lenient R |       7 | nan     | nan     | nan     | nan     | nan     | greater_than 0.0   | no data      |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Butler | date        | lenient R |       7 |   1     |   0.885 |   0.115 |   0     |   0.312 | greater_than 0.0   | inconclusive |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Reeve  | taxon       | lenient R |       9 |   1     |   0.917 |   0.083 |   0     |   0.114 | greater_than 0.0   | inconclusive |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Reeve  | person      | lenient R |       9 |   1     |   0.224 |   0.776 |   0.671 |   0.861 | greater_than 0.0   | supports     |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Reeve  | locality    | lenient R |       9 |   0.935 |   0.581 |   0.355 |   0     |   0.6   | greater_than 0.0   | inconclusive |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Reeve  | institution | lenient R |       9 |   1     |   0.739 |   0.261 |   0     |   0.556 | greater_than 0.0   | inconclusive |
+| RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Reeve  | date        | lenient R |       9 | nan     | nan     | nan     | nan     | nan     | greater_than 0.0   | no data      |
+| RQ2  | LLM (G1) vs rule baseline, value F1, expert                       | Butler | taxon       | value F1  |       7 |   1     |   0.636 |   0.364 |   0.207 |   0.493 | greater_than 0.0   | supports     |
+| RQ2  | LLM (G1) vs rule baseline, value F1, expert                       | Reeve  | taxon       | value F1  |       9 |   0.986 |   0.542 |   0.444 |   0.295 |   0.67  | greater_than 0.0   | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), legacy                 | Butler | ALL_PRIMARY | lenient R |       7 |   0.949 |   0.964 |  -0.015 |  -0.045 |   0     | greater_than -0.05 | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), legacy                 | Reeve  | ALL_PRIMARY | lenient R |       9 |   0.938 |   0.934 |   0.005 |   0     |   0.026 | greater_than -0.05 | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr       | Butler | ALL_PRIMARY | lenient R |       7 |   0.978 |   0.985 |  -0.007 |  -0.023 |   0     | greater_than -0.05 | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr       | Reeve  | ALL_PRIMARY | lenient R |       9 |   0.995 |   0.995 |   0     |   0     |   0     | greater_than -0.05 | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr_plain | Butler | ALL_PRIMARY | lenient R |       7 |   0.985 |   0.985 |   0     |   0     |   0     | greater_than -0.05 | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr_plain | Reeve  | ALL_PRIMARY | lenient R |       9 |   0.995 |   0.995 |   0     |   0     |   0     | greater_than -0.05 | supports     |
+
+RQ2 on the other text versions, descriptive comparisons and other fields: `comparisons.csv`.
+
+## Evidence (RQ3)
+
+| book   | version                | condition   |   outputs |   unsupported |   unsupported_rate |   wrong_line |   type_check_failed |   copied_line_label |
+|:-------|:-----------------------|:------------|----------:|--------------:|-------------------:|-------------:|--------------------:|--------------------:|
+| Butler | expert                 | G0          |       183 |             0 |                  0 |            0 |                   0 |                   0 |
+| Butler | expert                 | G1          |       182 |             0 |                  0 |            0 |                   0 |                   0 |
+| Butler | legacy                 | G0          |       179 |             0 |                  0 |            0 |                   1 |                   0 |
+| Butler | legacy                 | G1          |       174 |             0 |                  0 |            0 |                   1 |                   0 |
+| Butler | modern_dots-mocr       | G0          |       181 |             0 |                  0 |            0 |                   0 |                   0 |
+| Butler | modern_dots-mocr       | G1          |       181 |             0 |                  0 |            0 |                   0 |                   0 |
+| Butler | modern_dots-mocr_plain | G0          |       182 |             0 |                  0 |            0 |                   0 |                   0 |
+| Butler | modern_dots-mocr_plain | G1          |       179 |             0 |                  0 |            0 |                   0 |                   0 |
+| Reeve  | expert                 | G0          |       230 |             0 |                  0 |            0 |                   1 |                   0 |
+| Reeve  | expert                 | G1          |       230 |             0 |                  0 |            0 |                   1 |                   0 |
+| Reeve  | legacy                 | G0          |       225 |             0 |                  0 |            0 |                   1 |                   0 |
+| Reeve  | legacy                 | G1          |       229 |             0 |                  0 |            0 |                   1 |                   0 |
+| Reeve  | modern_dots-mocr       | G0          |       230 |             0 |                  0 |            0 |                   1 |                   0 |
+| Reeve  | modern_dots-mocr       | G1          |       232 |             0 |                  0 |            0 |                   1 |                   0 |
+| Reeve  | modern_dots-mocr_plain | G0          |       232 |             0 |                  0 |            0 |                   1 |                   0 |
+| Reeve  | modern_dots-mocr_plain | G1          |       231 |             0 |                  0 |            0 |                   1 |                   0 |
+
+## Request outcomes
+
+| run                                      | outcome   |   requests |
+|:-----------------------------------------|:----------|-----------:|
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | empty     |          3 |
+| 20261118-2102_rules-gnfinder-v1.4.0_all  | ok        |         61 |
+| 20261119-2052_claude-opus-5-5_test_batch | ok        |        128 |
+| 20261119-2052_gemini-4-carbon_test_sync  | ok        |        128 |
+
+## Shadow evaluation (RQ4): flagged = proposed auto-accept, nothing is skipped
+
+| book   | version                |   predictions |   flagged |   flagged_share |   precision_flagged |   precision_unflagged |    diff |   diff_lo |   diff_hi |   unflagged | verdict            |   excluded_no_answer_from_b |   errors_in_flagged_set |   gold |   missed_by_model_a |   missed_by_both |
+|:-------|:-----------------------|--------------:|----------:|----------------:|--------------------:|----------------------:|--------:|----------:|----------:|------------:|:-------------------|----------------------------:|------------------------:|-------:|--------------------:|-----------------:|
+| Butler | expert                 |           138 |       138 |           1     |               0.978 |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       3 |    137 |                   0 |                0 |
+| Butler | legacy                 |           131 |       130 |           0.992 |               0.615 |                     0 |   0.615 |     0.456 |     0.716 |           1 | too few to compare |                           0 |                      50 |    137 |                   7 |                0 |
+| Butler | modern_dots-mocr       |           136 |       136 |           1     |               0.956 |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       6 |    137 |                   3 |                2 |
+| Butler | modern_dots-mocr_plain |           136 |       136 |           1     |               0.971 |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       4 |    137 |                   2 |                2 |
+| Reeve  | expert                 |           211 |       211 |           1     |               0.981 |                   nan | nan     |   nan     |   nan     |           0 | too few to compare |                           0 |                       4 |    211 |                   2 |                1 |
+| Reeve  | legacy                 |           213 |       211 |           0.991 |               0.645 |                     0 |   0.645 |     0.515 |     0.726 |           2 | too few to compare |                           0 |                      75 |    211 |                  13 |               12 |
+| Reeve  | modern_dots-mocr       |           213 |       212 |           0.995 |               0.976 |                     0 |   0.976 |     0.951 |     0.991 |           1 | too few to compare |                           0 |                       5 |    211 |                   1 |                1 |
+| Reeve  | modern_dots-mocr_plain |           213 |       212 |           0.995 |               0.976 |                     0 |   0.976 |     0.951 |     0.991 |           1 | too few to compare |                           0 |                       5 |    211 |                   1 |                1 |
+
+### Risk and coverage
+
+| book   | version                |   accept_up_to_tier |   accepted |   coverage |   errors_accepted |   risk |   left_for_review |
+|:-------|:-----------------------|--------------------:|-----------:|-----------:|------------------:|-------:|------------------:|
+| Butler | expert                 |                   0 |        138 |      1     |                 3 |  0.022 |                 0 |
+| Butler | legacy                 |                   0 |        130 |      0.992 |                50 |  0.385 |                 1 |
+| Butler | legacy                 |                   1 |        131 |      1     |                51 |  0.389 |                 0 |
+| Butler | modern_dots-mocr       |                   0 |        136 |      1     |                 6 |  0.044 |                 0 |
+| Butler | modern_dots-mocr_plain |                   0 |        136 |      1     |                 4 |  0.029 |                 0 |
+| Reeve  | expert                 |                   0 |        211 |      1     |                 4 |  0.019 |                 0 |
+| Reeve  | legacy                 |                   0 |        211 |      0.991 |                75 |  0.355 |                 2 |
+| Reeve  | legacy                 |                   1 |        212 |      0.995 |                76 |  0.358 |                 1 |
+| Reeve  | legacy                 |                   2 |        213 |      1     |                77 |  0.362 |                 0 |
+| Reeve  | modern_dots-mocr       |                   0 |        212 |      0.995 |                 5 |  0.024 |                 1 |
+| Reeve  | modern_dots-mocr       |                   2 |        213 |      1     |                 6 |  0.028 |                 0 |
+| Reeve  | modern_dots-mocr_plain |                   0 |        212 |      0.995 |                 5 |  0.024 |                 1 |
+| Reeve  | modern_dots-mocr_plain |                   2 |        213 |      1     |                 6 |  0.028 |                 0 |
+
+False positives and negatives for the error analysis: `discrepancies.csv` (2835 rows).

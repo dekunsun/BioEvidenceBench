@@ -1,0 +1,39 @@
+{
+  "written_at": "2026-11-19T21:36:13+00:00",
+  "split": "test",
+  "book": "Butler",
+  "endpoint": "https://api.gbif.org/v1/species/match",
+  "params": "name only (no rank or class hint)",
+  "links": {
+    "file": "gold/gold_links_gloria.csv",
+    "sha256": "052e317e35c6468272375383d7471bb9b5416929d46f00fa4030384111b1d736",
+    "rows": 35
+  },
+  "gold": {
+    "file": "gold/gold_mentions_gloria_test.csv",
+    "sha256": "c24a9bac66ee7508725640d429dd96fd2647593701de267541103b2d22bd00cd"
+  },
+  "runs": [
+    "20261119-2052_claude-opus-5-5_test_batch",
+    "20261119-2052_gemini-4-carbon_test_sync"
+  ],
+  "correct_means": "GBIF record at the printed rank AND accepted key == gold accepted_usage_key",
+  "preregistered_rows": "condition G1, linker expanded, version expert or modern_dots-mocr; rule: linking_minus_earlier_loss greater_than 0",
+  "bootstrap": {
+    "resamples": 1000,
+    "seed": 20261118,
+    "unit": "page"
+  },
+  "distinct_names_looked_up": 61,
+  "not_scored_rank_not_in_gbif_backbone": {
+    "ranks": [
+      "subfamily"
+    ],
+    "gold_rows": 8,
+    "names": [
+      "Emberizin\u0153",
+      "FRINGILLIN\u00c6",
+      "SYLVIIN\u00c6"
+    ]
+  }
+}
