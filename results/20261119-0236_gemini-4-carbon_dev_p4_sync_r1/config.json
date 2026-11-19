@@ -78,6 +78,22 @@
         "output_token_limit": 32768,
         "retrieved_at": "2026-11-19T02:42:10+00:00"
       }
+    },
+    {
+      "at": "2026-11-19T05:54:13+00:00",
+      "already_done": 45,
+      "to_send": 3,
+      "max_usd": 1.8,
+      "unrecorded_usd_allowance": 0.15,
+      "workers": 1,
+      "model_info_from_api": {
+        "name": "models/gemini-4-carbon",
+        "version": "3.0",
+        "display_name": "Gemini 4 Carbon",
+        "input_token_limit": 1048576,
+        "output_token_limit": 32768,
+        "retrieved_at": "2026-11-19T05:54:13+00:00"
+      }
     }
   ]
 }

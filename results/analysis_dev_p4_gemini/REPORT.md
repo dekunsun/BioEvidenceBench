@@ -1,7 +1,7 @@
 # Analysis report: dev_p4_gemini (DEV pages)
 
 Gold: `gold/gold_mentions_gloria.csv` (5a3e85b6dd32…), guide ['v0.5', 'v0.6'].
-Code commit `db39e44b8d` **with uncommitted changes**.
+Code commit `67f1d533d3` **with uncommitted changes**.
 Runs: `20261119-0236_gemini-4-carbon_dev_p4_sync_r1` (llm, gemini-4-carbon, prompt p4-guide-v0.6); `20261118-2102_rules-gnfinder-v1.4.0_all` (rule, rules + gnfinder v1.4.0, prompt None).
 
 **Dev pages are not blind. These numbers are for tuning, not results.**
@@ -42,9 +42,9 @@ Runs: `20261119-0236_gemini-4-carbon_dev_p4_sync_r1` (llm, gemini-4-carbon, prom
 | 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | legacy                 | G0          |     70 |     70 |     0.714 |     0.714 |      0.714 |         0.579 |         0.778 |        1     |      0.971 |           0 |
 | 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | legacy                 | G1          |     70 |     70 |     0.714 |     0.714 |      0.714 |         0.579 |         0.778 |        1     |      0.971 |           0 |
 | 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | modern_dots-mocr       | G0          |     70 |     70 |     0.971 |     0.971 |      0.971 |         0.933 |         1     |        1     |      0.986 |           0 |
-| 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | modern_dots-mocr       | G1          |     70 |     34 |     0.971 |     0.471 |      0.635 |         0.275 |         1     |        0.654 |      0.654 |           0 |
-| 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | modern_dots-mocr_plain | G0          |     70 |     34 |     0.971 |     0.471 |      0.635 |         0.275 |         1     |        0.654 |      0.654 |           0 |
-| 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | modern_dots-mocr_plain | G1          |     70 |     34 |     0.971 |     0.471 |      0.635 |         0.275 |         1     |        0.654 |      0.654 |           0 |
+| 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | modern_dots-mocr       | G1          |     70 |     70 |     0.986 |     0.986 |      0.986 |         0.933 |         1     |        1     |      1     |           0 |
+| 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | modern_dots-mocr_plain | G0          |     70 |     70 |     0.986 |     0.986 |      0.986 |         0.933 |         1     |        1     |      1     |           0 |
+| 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | Reeve  | modern_dots-mocr_plain | G1          |     70 |     70 |     0.986 |     0.986 |      0.986 |         0.933 |         1     |        1     |      1     |           0 |
 | 20261118-2102_rules-gnfinder-v1.4.0_all      | Butler | expert                 | RULE        |     63 |     26 |     0.769 |     0.317 |      0.449 |         0.222 |         0.531 |        0.449 |      0.449 |           0 |
 | 20261118-2102_rules-gnfinder-v1.4.0_all      | Butler | legacy                 | RULE        |     63 |     20 |     0.7   |     0.222 |      0.337 |         0.235 |         0.373 |        0.361 |      0.337 |           0 |
 | 20261118-2102_rules-gnfinder-v1.4.0_all      | Butler | modern_dots-mocr       | RULE        |     63 |     25 |     0.76  |     0.302 |      0.432 |         0.222 |         0.508 |        0.432 |      0.432 |           0 |
@@ -66,8 +66,8 @@ Per field (including `vernacular`, scored apart): `scores.csv`.
 | Butler | modern_dots-mocr_plain |     63 |             1 |                      1 |                    0 |               0 |     62 |        0.984 |
 | Reeve  | expert                 |     70 |             0 |                      0 |                    0 |               0 |     70 |        1     |
 | Reeve  | legacy                 |     70 |            20 |                     20 |                    0 |               0 |     50 |        0.714 |
-| Reeve  | modern_dots-mocr       |     70 |             1 |                      1 |                   36 |               0 |     33 |        0.471 |
-| Reeve  | modern_dots-mocr_plain |     70 |             1 |                      1 |                   36 |               0 |     33 |        0.471 |
+| Reeve  | modern_dots-mocr       |     70 |             1 |                      1 |                    0 |               0 |     69 |        0.986 |
+| Reeve  | modern_dots-mocr_plain |     70 |             1 |                      1 |                    0 |               0 |     69 |        0.986 |
 
 ## Pre-registered comparisons (paired page bootstrap)
 
@@ -76,8 +76,8 @@ Shown: RQ1, RQ3, and RQ2 on the expert text. A is the arm the hypothesis expects
 
 | rq   | comparison                                                        | book   | field       | metric    |   pages |       a |       b |    diff |      lo |      hi | rule               | verdict      |
 |:-----|:------------------------------------------------------------------|:-------|:------------|:----------|--------:|--------:|--------:|--------:|--------:|--------:|:-------------------|:-------------|
-| RQ1  | modern OCR vs legacy OCR                                          | Reeve  | ALL_PRIMARY | value F1  |       3 |   0.635 |   0.714 |  -0.08  |  -0.496 |   0.421 | at_least 0.1       | inconclusive |
-| RQ1  | expert vs modern OCR                                              | Reeve  | ALL_PRIMARY | value F1  |       3 |   1     |   0.635 |   0.365 |   0     |   0.725 | less_than 0.05     | inconclusive |
+| RQ1  | modern OCR vs legacy OCR                                          | Reeve  | ALL_PRIMARY | value F1  |       3 |   0.986 |   0.714 |   0.271 |   0.2   |   0.421 | at_least 0.1       | supports     |
+| RQ1  | expert vs modern OCR                                              | Reeve  | ALL_PRIMARY | value F1  |       3 |   1     |   0.986 |   0.014 |   0     |   0.067 | less_than 0.05     | inconclusive |
 | RQ3  | recall with evidence (G1) vs without (G0), expert                 | Butler | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 | RQ3  | recall with evidence (G1) vs without (G0), expert                 | Reeve  | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 | RQ2  | LLM (G1) vs rule baseline, recall, expert                         | Butler | taxon       | lenient R |       3 |   1     |   0.615 |   0.385 |   0.385 |   0.385 | greater_than 0.0   | supports     |
@@ -95,9 +95,9 @@ Shown: RQ1, RQ3, and RQ2 on the expert text. A is the arm the hypothesis expects
 | RQ3  | recall with evidence (G1) vs without (G0), legacy                 | Butler | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 | RQ3  | recall with evidence (G1) vs without (G0), legacy                 | Reeve  | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 | RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr       | Butler | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
-| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr       | Reeve  | ALL_PRIMARY | lenient R |       3 |   0.486 |   1     |  -0.514 |  -1     |   0     | greater_than -0.05 | inconclusive |
+| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr       | Reeve  | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 | RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr_plain | Butler | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
-| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr_plain | Reeve  | ALL_PRIMARY | lenient R |       3 |   0.486 |   0.486 |   0     |   0     |   0     | greater_than -0.05 | supports     |
+| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr_plain | Reeve  | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 
 RQ2 on the other text versions, descriptive comparisons and other fields: `comparisons.csv`.
 
@@ -118,15 +118,15 @@ RQ2 on the other text versions, descriptive comparisons and other fields: `compa
 | Reeve  | legacy                 | G0          |        82 |             0 |             0      |            0 |                   0 |                   0 |
 | Reeve  | legacy                 | G1          |        82 |             0 |             0      |            0 |                   0 |                   0 |
 | Reeve  | modern_dots-mocr       | G0          |        82 |             1 |             0.0122 |            0 |                   0 |                   0 |
-| Reeve  | modern_dots-mocr       | G1          |        42 |             0 |             0      |            0 |                   0 |                   0 |
-| Reeve  | modern_dots-mocr_plain | G0          |        42 |             0 |             0      |            0 |                   0 |                   0 |
-| Reeve  | modern_dots-mocr_plain | G1          |        42 |             0 |             0      |            0 |                   0 |                   0 |
+| Reeve  | modern_dots-mocr       | G1          |        82 |             0 |             0      |            0 |                   0 |                   0 |
+| Reeve  | modern_dots-mocr_plain | G0          |        82 |             0 |             0      |            0 |                   0 |                   0 |
+| Reeve  | modern_dots-mocr_plain | G1          |        82 |             0 |             0      |            0 |                   0 |                   0 |
 
 ## Request outcomes
 
 | run                                          | outcome   |   requests |
 |:---------------------------------------------|:----------|-----------:|
 | 20261118-2102_rules-gnfinder-v1.4.0_all      | ok        |         24 |
-| 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | ok        |         45 |
+| 20261119-0236_gemini-4-carbon_dev_p4_sync_r1 | ok        |         48 |
 
-False positives and negatives for the error analysis: `discrepancies.csv` (1031 rows).
+False positives and negatives for the error analysis: `discrepancies.csv` (911 rows).

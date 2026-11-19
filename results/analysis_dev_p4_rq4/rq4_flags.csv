@@ -149,46 +149,46 @@ maica",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8967060,Reeve,modern_dots-mocr_plain,G1,vernacular,0,VERY SMALL BULIMUS,exact,115,133,140,158,tp_value,True,True,True,VERY SMALL BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8967060,Reeve,modern_dots-mocr_plain,G1,vernacular,6,MEAN-LOOKING BULIMUS,exact,819,839,846,866,tp_value,True,True,True,MEAN-LOOKING BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8967060,Reeve,modern_dots-mocr_plain,G1,vernacular,14,LITTLE TUFT BULIMUS,exact,1679,1698,1708,1727,tp_value,True,True,True,LITTLE TUFT BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,1,ACHATINA PHILIPPIANA,exact,51,71,51,71,tp_value,True,True,True,ACHATINA PHILIPPIANA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,4,Glandina,exact,805,813,812,820,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,8,ACHATINA MONILIFERA,exact,1072,1091,1079,1098,tp_value,True,True,True,ACHATINA MONILIFERA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,11,Glandina,exact,1703,1711,1714,1722,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,15,ACHATINA OLEACEA,exact,1959,1975,1971,1987,tp_value,True,True,True,ACHATINA OLEACEA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,17,Helix (Cochlicopa) oleacea,exact,2418,2444,2433,2459,tp_value,True,True,True,Helix (Cochlicopa) oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,19,Glandina oleacea,exact,2475,2491,2491,2507,tp_value,True,True,True,Glandina oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,23,ACHATINA LEUCOZONIAS,exact,2641,2661,2657,2677,tp_value,True,True,True,ACHATINA LEUCOZONIAS,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,26,Voluta leucozonias,exact,3333,3351,3351,3369,tp_value,True,True,True,Voluta leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,28,Achatina albolineata,exact,3406,3426,3424,3444,tp_value,True,True,True,Achatina albolineata,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,30,"Helix (Cochlicopa,) leucozonias",exact,3438,3469,3455,3486,tp_value,True,True,True,"Helix (Cochlicopa,) leucozonias",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,32,Polyphemus leucozonias,exact,3482,3504,3498,3520,tp_value,True,True,True,Polyphemus leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,taxon,34,Glandina leucozonias,exact,3512,3532,3527,3547,tp_value,True,True,True,Glandina leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,3,PFEIFFER,exact,794,802,801,809,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,6,Gosse,exact,856,861,864,869,tp_value,True,True,True,Gosse,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,10,PFEIFFER,exact,1692,1700,1703,1711,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,13,Lattre,exact,1784,1790,1796,1802,tp_value,True,True,True,Lattre,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,18,Férussac,exact,2446,2454,2461,2469,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,20,Beck.,exact,2493,2498,2509,2514,tp_value,True,False,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,25,SOWERBY,exact,3299,3306,3317,3324,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,27,Walch,exact,3353,3358,3371,3376,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,29,Lamarck,exact,3428,3435,3446,3453,tp_value,True,True,True,Lamarck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,31,Férussac,exact,3471,3479,3488,3496,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,33,Jan,exact,3506,3509,3522,3525,tp_value,True,True,True,Jan,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,35,Beck.,exact,3534,3539,3549,3554,tp_value,True,False,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,37,Walch,exact,3938,3943,3952,3957,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,38,Gmelin,exact,3945,3951,3959,3965,tp_value,True,True,True,Gmelin,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,person,39,Dillwyn,exact,3957,3964,3971,3978,tp_value,True,True,True,Dillwyn,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,locality,5,Jamaica,exact,847,854,855,862,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,locality,12,"Coban, Vera Cruz, Central America",exact,1749,1782,1761,1794,tp_value,True,True,True,"Coban, Vera Cruz, Central America",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,locality,21,Cuba,exact,2505,2509,2521,2525,tp_value,True,True,True,Cuba,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,locality,36,Martinique,exact,3546,3556,3561,3571,tp_value,True,True,True,Martinique,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,institution,0,Mus. Cuming,exact,36,47,36,47,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,institution,7,Mus. Dennison,exact,1055,1068,1062,1075,tp_value,True,True,True,Mus. Dennison,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,institution,14,Mus. Cuming,exact,1944,1955,1956,1967,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,institution,22,Mus. Cuming,exact,2626,2637,2642,2653,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,2,PHILIPPI'S ACHATINA,exact,398,417,402,421,tp_value,True,True,True,PHILIPPI’S ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,9,NECKLACE-BOUND ACHATINA,exact,1373,1396,1385,1408,tp_value,True,True,True,NECKLACE‐BOUND ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,16,OLIVE-SHAPED ACHATINA,exact,2182,2203,2197,2218,tp_value,True,True,True,OLIVE-SHAPED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,24,WHITE-ZONED ACHATINA,exact,2971,2991,2990,3010,tp_value,True,True,True,WHITE‐ZONED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,1,ACHATINA PHILIPPIANA,exact,51,71,51,71,tp_value,True,True,True,ACHATINA PHILIPPIANA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,4,Glandina,exact,805,813,812,820,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,8,ACHATINA MONILIFERA,exact,1072,1091,1079,1098,tp_value,True,True,True,ACHATINA MONILIFERA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,11,Glandina,exact,1703,1711,1714,1722,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,15,ACHATINA OLEACEA,exact,1959,1975,1971,1987,tp_value,True,True,True,ACHATINA OLEACEA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,17,Helix (Cochlicopa) oleacea,exact,2418,2444,2433,2459,tp_value,True,True,True,Helix (Cochlicopa) oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,19,Glandina oleacea,exact,2475,2491,2491,2507,tp_value,True,True,True,Glandina oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,23,ACHATINA LEUCOZONIAS,exact,2641,2661,2657,2677,tp_value,True,True,True,ACHATINA LEUCOZONIAS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,26,Voluta leucozonias,exact,3333,3351,3351,3369,tp_value,True,True,True,Voluta leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,28,Achatina albolineata,exact,3406,3426,3424,3444,tp_value,True,True,True,Achatina albolineata,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,30,"Helix (Cochlicopa,) leucozonias",exact,3438,3469,3455,3486,tp_value,True,True,True,"Helix (Cochlicopa,) leucozonias",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,32,Polyphemus leucozonias,exact,3482,3504,3498,3520,tp_value,True,True,True,Polyphemus leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,taxon,34,Glandina leucozonias,exact,3512,3532,3527,3547,tp_value,True,True,True,Glandina leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,3,PFEIFFER,exact,794,802,801,809,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,6,Gosse,exact,856,861,864,869,tp_value,True,True,True,Gosse,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,10,PFEIFFER,exact,1692,1700,1703,1711,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,13,Lattre,exact,1784,1790,1796,1802,tp_value,True,True,True,Lattre,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,18,Férussac,exact,2446,2454,2461,2469,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,20,Beck.,exact,2493,2498,2509,2514,tp_value,True,False,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,25,SOWERBY,exact,3299,3306,3317,3324,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,27,Walch,exact,3353,3358,3371,3376,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,29,Lamarck,exact,3428,3435,3446,3453,tp_value,True,True,True,Lamarck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,31,Férussac,exact,3471,3479,3488,3496,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,33,Jan,exact,3506,3509,3522,3525,tp_value,True,True,True,Jan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,35,Beck.,exact,3534,3539,3549,3554,tp_value,True,False,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,37,Walch,exact,3938,3943,3952,3957,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,38,Gmelin,exact,3945,3951,3959,3965,tp_value,True,True,True,Gmelin,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,person,39,Dillwyn,exact,3957,3964,3971,3978,tp_value,True,True,True,Dillwyn,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,locality,5,Jamaica,exact,847,854,855,862,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,locality,12,"Coban, Vera Cruz, Central America",exact,1749,1782,1761,1794,tp_value,True,True,True,"Coban, Vera Cruz, Central America",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,locality,21,Cuba,exact,2505,2509,2521,2525,tp_value,True,True,True,Cuba,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,locality,36,Martinique,exact,3546,3556,3561,3571,tp_value,True,True,True,Martinique,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,institution,0,Mus. Cuming,exact,36,47,36,47,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,institution,7,Mus. Dennison,exact,1055,1068,1062,1075,tp_value,True,True,True,Mus. Dennison,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,institution,14,Mus. Cuming,exact,1944,1955,1956,1967,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,institution,22,Mus. Cuming,exact,2626,2637,2642,2653,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,2,PHILIPPI'S ACHATINA,exact,398,417,402,421,tp_value,True,True,True,PHILIPPI’S ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,9,NECKLACE-BOUND ACHATINA,exact,1373,1396,1385,1408,tp_value,True,True,True,NECKLACE‐BOUND ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,16,OLIVE-SHAPED ACHATINA,exact,2182,2203,2197,2218,tp_value,True,True,True,OLIVE-SHAPED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr_plain,G1,vernacular,24,WHITE-ZONED ACHATINA,exact,2971,2991,2990,3010,tp_value,True,True,True,WHITE‐ZONED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8992582,Butler,legacy,G1,person,7,Lilford,exact,998,1005,946,953,tp_value,True,True,True,Lilford,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8992582,Butler,legacy,G1,person,20,Seebohm,exact,2687,2694,2561,2568,tp_value,True,True,True,Seebohm,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8992582,Butler,legacy,G1,locality,2,Continent,exact,552,561,520,529,tp_value,True,True,True,Continent,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
@@ -728,44 +728,44 @@ maica",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8967060,Reeve,modern_dots-mocr,G1,vernacular,0,VERY SMALL BULIMUS,exact,115,133,140,158,tp_value,True,True,True,VERY SMALL BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8967060,Reeve,modern_dots-mocr,G1,vernacular,6,MEAN-LOOKING BULIMUS,exact,823,843,846,866,tp_value,True,True,True,MEAN-LOOKING BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8967060,Reeve,modern_dots-mocr,G1,vernacular,14,LITTLE TUFT BULIMUS,exact,1689,1708,1708,1727,tp_value,True,True,True,LITTLE TUFT BULIMUS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
-8967147,Reeve,modern_dots-mocr,G1,taxon,1,ACHATINA PHILIPPIANA,exact,58,78,51,71,tp_value,True,True,True,ACHATINA PHILIPPIANA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,4,Glandina,exact,822,830,812,820,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,8,ACHATINA MONILIFERA,exact,1098,1117,1079,1098,tp_value,True,True,True,ACHATINA MONILIFERA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,11,Glandina,exact,1739,1747,1714,1722,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,15,ACHATINA OLEACEA,exact,2004,2020,1971,1987,tp_value,True,True,True,ACHATINA OLEACEA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,17,Helix (Cochlicopa) oleacea,exact,2472,2498,2433,2459,tp_value,True,True,True,Helix (Cochlicopa) oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,19,Glandina oleacea,exact,2531,2547,2491,2507,tp_value,True,True,True,Glandina oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,23,ACHATINA LEUCOZONIAS,exact,2705,2725,2657,2677,tp_value,True,True,True,ACHATINA LEUCOZONIAS,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,26,Voluta leucozonias,exact,3410,3428,3351,3369,tp_value,True,True,True,Voluta leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,28,Achatina albolineata,exact,3485,3505,3424,3444,tp_value,True,True,True,Achatina albolineata,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,1,ACHATINA PHILIPPIANA,exact,58,78,51,71,tp_value,True,True,True,ACHATINA PHILIPPIANA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,4,Glandina,exact,822,830,812,820,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,8,ACHATINA MONILIFERA,exact,1098,1117,1079,1098,tp_value,True,True,True,ACHATINA MONILIFERA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,11,Glandina,exact,1739,1747,1714,1722,tp_value,True,True,True,Glandina,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,15,ACHATINA OLEACEA,exact,2004,2020,1971,1987,tp_value,True,True,True,ACHATINA OLEACEA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,17,Helix (Cochlicopa) oleacea,exact,2472,2498,2433,2459,tp_value,True,True,True,Helix (Cochlicopa) oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,19,Glandina oleacea,exact,2531,2547,2491,2507,tp_value,True,True,True,Glandina oleacea,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,23,ACHATINA LEUCOZONIAS,exact,2705,2725,2657,2677,tp_value,True,True,True,ACHATINA LEUCOZONIAS,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,26,Voluta leucozonias,exact,3410,3428,3351,3369,tp_value,True,True,True,Voluta leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,28,Achatina albolineata,exact,3485,3505,3424,3444,tp_value,True,True,True,Achatina albolineata,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
 8967147,Reeve,modern_dots-mocr,G1,taxon,30,Helix,exact,3519,3524,3455,3460,fp_no_gold,False,False,False,,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,31,Cochlicopa,exact,3526,3536,3462,3472,fp_value_wrong,True,False,False,"Helix (Cochlicopa,) leucozonias",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,33,Polyphemus leucozonias,exact,3565,3587,3498,3520,tp_value,True,True,True,Polyphemus leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,taxon,35,Glandina leucozonias,exact,3597,3617,3527,3547,tp_value,True,True,True,Glandina leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,3,PFEIFFER,exact,811,819,801,809,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,6,Gosse,exact,877,882,864,869,tp_value,True,True,True,Gosse,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,10,PFEIFFER,exact,1728,1736,1703,1711,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,13,Lattre,exact,1824,1830,1796,1802,tp_value,True,True,True,Lattre,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,18,Férussac,exact,2501,2509,2461,2469,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,20,Beck,exact,2550,2554,2509,2513,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,25,SOWERBY,exact,3373,3380,3317,3324,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,27,Walch,exact,3431,3436,3371,3376,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,29,Lamarck,exact,3508,3515,3446,3453,tp_value,True,True,True,Lamarck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,32,Férussac,exact,3553,3561,3488,3496,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,34,Jan,exact,3590,3593,3522,3525,tp_value,True,True,True,Jan,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,36,Beck,exact,3620,3624,3549,3553,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,38,Walch,exact,4026,4031,3952,3957,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,39,Gmelin,exact,4033,4039,3959,3965,tp_value,True,True,True,Gmelin,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,person,40,Dillwyn,exact,4045,4052,3971,3978,tp_value,True,True,True,Dillwyn,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,locality,5,Jamaica,exact,868,875,855,862,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,locality,12,"Coban, Vera Cruz, Central America",exact,1789,1822,1761,1794,tp_value,True,True,True,"Coban, Vera Cruz, Central America",20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,locality,21,Cuba,exact,2564,2568,2521,2525,tp_value,True,True,True,Cuba,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,locality,37,Martinique,exact,3634,3644,3561,3571,tp_value,True,True,True,Martinique,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,institution,0,Mus. Cuming,exact,41,52,36,47,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,institution,7,Mus. Dennison,exact,1079,1092,1062,1075,tp_value,True,True,True,Mus. Dennison,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,institution,14,Mus. Cuming,exact,1987,1998,1956,1967,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,institution,22,Mus. Cuming,exact,2688,2699,2642,2653,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,vernacular,2,PHILIPPI'S ACHATINA,exact,411,430,402,421,tp_value,True,True,True,PHILIPPI’S ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,vernacular,9,NECKLACE-BOUND ACHATINA,exact,1405,1428,1385,1408,tp_value,True,True,True,NECKLACE‐BOUND ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,vernacular,16,OLIVE-SHAPED ACHATINA,exact,2233,2254,2197,2218,tp_value,True,True,True,OLIVE-SHAPED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
-8967147,Reeve,modern_dots-mocr,G1,vernacular,24,WHITE-ZONED ACHATINA,exact,3041,3061,2990,3010,tp_value,True,True,True,WHITE‐ZONED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,False,True,True,False,2
+8967147,Reeve,modern_dots-mocr,G1,taxon,31,Cochlicopa,exact,3526,3536,3462,3472,fp_value_wrong,True,False,False,"Helix (Cochlicopa,) leucozonias",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,33,Polyphemus leucozonias,exact,3565,3587,3498,3520,tp_value,True,True,True,Polyphemus leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,taxon,35,Glandina leucozonias,exact,3597,3617,3527,3547,tp_value,True,True,True,Glandina leucozonias,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,3,PFEIFFER,exact,811,819,801,809,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,6,Gosse,exact,877,882,864,869,tp_value,True,True,True,Gosse,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,10,PFEIFFER,exact,1728,1736,1703,1711,tp_value,True,True,True,PFEIFFER,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,13,Lattre,exact,1824,1830,1796,1802,tp_value,True,True,True,Lattre,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,18,Férussac,exact,2501,2509,2461,2469,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,20,Beck,exact,2550,2554,2509,2513,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,25,SOWERBY,exact,3373,3380,3317,3324,tp_value,True,True,True,SOWERBY,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,27,Walch,exact,3431,3436,3371,3376,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,29,Lamarck,exact,3508,3515,3446,3453,tp_value,True,True,True,Lamarck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,32,Férussac,exact,3553,3561,3488,3496,tp_value,True,True,True,Férussac,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,34,Jan,exact,3590,3593,3522,3525,tp_value,True,True,True,Jan,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,36,Beck,exact,3620,3624,3549,3553,tp_value,True,True,True,Beck,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,38,Walch,exact,4026,4031,3952,3957,tp_value,True,True,True,Walch,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,39,Gmelin,exact,4033,4039,3959,3965,tp_value,True,True,True,Gmelin,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,person,40,Dillwyn,exact,4045,4052,3971,3978,tp_value,True,True,True,Dillwyn,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,locality,5,Jamaica,exact,868,875,855,862,tp_value,True,True,True,Jamaica,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,locality,12,"Coban, Vera Cruz, Central America",exact,1789,1822,1761,1794,tp_value,True,True,True,"Coban, Vera Cruz, Central America",20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,locality,21,Cuba,exact,2564,2568,2521,2525,tp_value,True,True,True,Cuba,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,locality,37,Martinique,exact,3634,3644,3561,3571,tp_value,True,True,True,Martinique,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,institution,0,Mus. Cuming,exact,41,52,36,47,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,institution,7,Mus. Dennison,exact,1079,1092,1062,1075,tp_value,True,True,True,Mus. Dennison,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,institution,14,Mus. Cuming,exact,1987,1998,1956,1967,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,institution,22,Mus. Cuming,exact,2688,2699,2642,2653,tp_value,True,True,True,Mus. Cuming,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,vernacular,2,PHILIPPI'S ACHATINA,exact,411,430,402,421,tp_value,True,True,True,PHILIPPI’S ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,vernacular,9,NECKLACE-BOUND ACHATINA,exact,1405,1428,1385,1408,tp_value,True,True,True,NECKLACE‐BOUND ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,vernacular,16,OLIVE-SHAPED ACHATINA,exact,2233,2254,2197,2218,tp_value,True,True,True,OLIVE-SHAPED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0
+8967147,Reeve,modern_dots-mocr,G1,vernacular,24,WHITE-ZONED ACHATINA,exact,3041,3061,2990,3010,tp_value,True,True,True,WHITE‐ZONED ACHATINA,20261119-0113_claude-opus-5-5_dev_p4_r1,True,True,True,True,0

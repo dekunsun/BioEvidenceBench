@@ -1395,3 +1395,123 @@ maica",cross_line,1188,1197,100.0
 8967147,modern_dots-mocr,G0,37,person,,Walch,False,Walch,exact,4026,4031,100.0
 8967147,modern_dots-mocr,G0,38,person,,Gmelin,False,Gmelin,exact,4033,4039,100.0
 8967147,modern_dots-mocr,G0,39,person,,Dillwyn,False,Dillwyn,exact,4045,4052,100.0
+8967147,modern_dots-mocr,G1,0,institution,5.0,Mus. Cuming,False,Mus. Cuming,exact,41,52,100.0
+8967147,modern_dots-mocr,G1,1,taxon,7.0,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,58,78,100.0
+8967147,modern_dots-mocr,G1,2,vernacular,9.0,PHILIPPI'S ACHATINA,False,PHILIPPI'S ACHATINA,exact,411,430,100.0
+8967147,modern_dots-mocr,G1,3,person,11.0,PFEIFFER,False,PFEIFFER,exact,811,819,100.0
+8967147,modern_dots-mocr,G1,4,taxon,11.0,Glandina,False,Glandina,exact,822,830,100.0
+8967147,modern_dots-mocr,G1,5,locality,12.0,Jamaica,False,Jamaica,exact,868,875,100.0
+8967147,modern_dots-mocr,G1,6,person,12.0,Gosse,False,Gosse,exact,877,882,100.0
+8967147,modern_dots-mocr,G1,7,institution,16.0,Mus. Dennison,False,Mus. Dennison,exact,1079,1092,100.0
+8967147,modern_dots-mocr,G1,8,taxon,18.0,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1098,1117,100.0
+8967147,modern_dots-mocr,G1,9,vernacular,20.0,NECKLACE-BOUND ACHATINA,False,NECKLACE-BOUND ACHATINA,exact,1405,1428,100.0
+8967147,modern_dots-mocr,G1,10,person,22.0,PFEIFFER,False,PFEIFFER,exact,1728,1736,100.0
+8967147,modern_dots-mocr,G1,11,taxon,22.0,Glandina,False,Glandina,exact,1739,1747,100.0
+8967147,modern_dots-mocr,G1,12,locality,23.0,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1789,1822,100.0
+8967147,modern_dots-mocr,G1,13,person,23.0,Lattre,False,Lattre,exact,1824,1830,100.0
+8967147,modern_dots-mocr,G1,14,institution,27.0,Mus. Cuming,False,Mus. Cuming,exact,1987,1998,100.0
+8967147,modern_dots-mocr,G1,15,taxon,29.0,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,2004,2020,100.0
+8967147,modern_dots-mocr,G1,16,vernacular,31.0,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2233,2254,100.0
+8967147,modern_dots-mocr,G1,17,taxon,33.0,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2472,2498,100.0
+8967147,modern_dots-mocr,G1,18,person,33.0,Férussac,False,Férussac,exact,2501,2509,100.0
+8967147,modern_dots-mocr,G1,19,taxon,34.0,Glandina oleacea,False,Glandina oleacea,exact,2531,2547,100.0
+8967147,modern_dots-mocr,G1,20,person,34.0,Beck,False,Beck,exact,2550,2554,100.0
+8967147,modern_dots-mocr,G1,21,locality,36.0,Cuba,False,Cuba,exact,2564,2568,100.0
+8967147,modern_dots-mocr,G1,22,institution,40.0,Mus. Cuming,False,Mus. Cuming,exact,2688,2699,100.0
+8967147,modern_dots-mocr,G1,23,taxon,42.0,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2705,2725,100.0
+8967147,modern_dots-mocr,G1,24,vernacular,44.0,WHITE-ZONED ACHATINA,False,WHITE-ZONED ACHATINA,exact,3041,3061,100.0
+8967147,modern_dots-mocr,G1,25,person,46.0,SOWERBY,False,SOWERBY,exact,3373,3380,100.0
+8967147,modern_dots-mocr,G1,26,taxon,48.0,Voluta leucozonias,False,Voluta leucozonias,exact,3410,3428,100.0
+8967147,modern_dots-mocr,G1,27,person,48.0,Walch,False,Walch,exact,3431,3436,100.0
+8967147,modern_dots-mocr,G1,28,taxon,50.0,Achatina albolineata,False,Achatina albolineata,exact,3485,3505,100.0
+8967147,modern_dots-mocr,G1,29,person,50.0,Lamarck,False,Lamarck,exact,3508,3515,100.0
+8967147,modern_dots-mocr,G1,30,taxon,52.0,"Helix (Cochlicopa,)* leucozonias",False,"Helix (Cochlicopa,)* leucozonias",exact,3519,3551,100.0
+8967147,modern_dots-mocr,G1,31,person,52.0,Férussac,False,Férussac,exact,3553,3561,100.0
+8967147,modern_dots-mocr,G1,32,taxon,54.0,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3565,3587,100.0
+8967147,modern_dots-mocr,G1,33,person,54.0,Jan,False,Jan,exact,3590,3593,100.0
+8967147,modern_dots-mocr,G1,34,taxon,56.0,Glandina leucozonias,False,Glandina leucozonias,exact,3597,3617,100.0
+8967147,modern_dots-mocr,G1,35,person,56.0,Beck,False,Beck,exact,3620,3624,100.0
+8967147,modern_dots-mocr,G1,36,locality,58.0,Martinique,False,Martinique,exact,3634,3644,100.0
+8967147,modern_dots-mocr,G1,37,person,60.0,Walch,False,Walch,exact,4026,4031,100.0
+8967147,modern_dots-mocr,G1,38,person,60.0,Gmelin,False,Gmelin,exact,4033,4039,100.0
+8967147,modern_dots-mocr,G1,39,person,60.0,Dillwyn,False,Dillwyn,exact,4045,4052,100.0
+8967147,modern_dots-mocr_plain,G0,0,institution,,Mus. Cuming,False,Mus. Cuming,exact,36,47,100.0
+8967147,modern_dots-mocr_plain,G0,1,taxon,,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,51,71,100.0
+8967147,modern_dots-mocr_plain,G0,2,vernacular,,PHILIPPI'S ACHATINA,False,PHILIPPI'S ACHATINA,exact,398,417,100.0
+8967147,modern_dots-mocr_plain,G0,3,person,,PFEIFFER,False,PFEIFFER,exact,794,802,100.0
+8967147,modern_dots-mocr_plain,G0,4,taxon,,Glandina,False,Glandina,exact,805,813,100.0
+8967147,modern_dots-mocr_plain,G0,5,locality,,Jamaica,False,Jamaica,exact,847,854,100.0
+8967147,modern_dots-mocr_plain,G0,6,person,,Gosse,False,Gosse,exact,856,861,100.0
+8967147,modern_dots-mocr_plain,G0,7,institution,,Mus. Dennison,False,Mus. Dennison,exact,1055,1068,100.0
+8967147,modern_dots-mocr_plain,G0,8,taxon,,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1072,1091,100.0
+8967147,modern_dots-mocr_plain,G0,9,vernacular,,NECKLACE-BOUND ACHATINA,False,NECKLACE-BOUND ACHATINA,exact,1373,1396,100.0
+8967147,modern_dots-mocr_plain,G0,10,person,,PFEIFFER,False,PFEIFFER,exact,1692,1700,100.0
+8967147,modern_dots-mocr_plain,G0,11,taxon,,Glandina,False,Glandina,exact,1703,1711,100.0
+8967147,modern_dots-mocr_plain,G0,12,locality,,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1749,1782,100.0
+8967147,modern_dots-mocr_plain,G0,13,person,,Lattre,False,Lattre,exact,1784,1790,100.0
+8967147,modern_dots-mocr_plain,G0,14,institution,,Mus. Cuming,False,Mus. Cuming,exact,1944,1955,100.0
+8967147,modern_dots-mocr_plain,G0,15,taxon,,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,1959,1975,100.0
+8967147,modern_dots-mocr_plain,G0,16,vernacular,,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2182,2203,100.0
+8967147,modern_dots-mocr_plain,G0,17,taxon,,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2418,2444,100.0
+8967147,modern_dots-mocr_plain,G0,18,person,,Férussac,False,Férussac,exact,2446,2454,100.0
+8967147,modern_dots-mocr_plain,G0,19,taxon,,Glandina oleacea,False,Glandina oleacea,exact,2475,2491,100.0
+8967147,modern_dots-mocr_plain,G0,20,person,,Beck,False,Beck,exact,2493,2497,100.0
+8967147,modern_dots-mocr_plain,G0,21,locality,,Cuba,False,Cuba,exact,2505,2509,100.0
+8967147,modern_dots-mocr_plain,G0,22,institution,,Mus. Cuming,False,Mus. Cuming,exact,2626,2637,100.0
+8967147,modern_dots-mocr_plain,G0,23,taxon,,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2641,2661,100.0
+8967147,modern_dots-mocr_plain,G0,24,vernacular,,WHITE-ZONED ACHATINA,False,WHITE-ZONED ACHATINA,exact,2971,2991,100.0
+8967147,modern_dots-mocr_plain,G0,25,person,,SOWERBY,False,SOWERBY,exact,3299,3306,100.0
+8967147,modern_dots-mocr_plain,G0,26,taxon,,Voluta leucozonias,False,Voluta leucozonias,exact,3333,3351,100.0
+8967147,modern_dots-mocr_plain,G0,27,person,,Walch,False,Walch,exact,3353,3358,100.0
+8967147,modern_dots-mocr_plain,G0,28,taxon,,Achatina albolineata,False,Achatina albolineata,exact,3406,3426,100.0
+8967147,modern_dots-mocr_plain,G0,29,person,,Lamarck,False,Lamarck,exact,3428,3435,100.0
+8967147,modern_dots-mocr_plain,G0,30,taxon,,"Helix (Cochlicopa,) leucozonias",False,"Helix (Cochlicopa,) leucozonias",exact,3438,3469,100.0
+8967147,modern_dots-mocr_plain,G0,31,person,,Férussac,False,Férussac,exact,3471,3479,100.0
+8967147,modern_dots-mocr_plain,G0,32,taxon,,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3482,3504,100.0
+8967147,modern_dots-mocr_plain,G0,33,person,,Jan,False,Jan,exact,3506,3509,100.0
+8967147,modern_dots-mocr_plain,G0,34,taxon,,Glandina leucozonias,False,Glandina leucozonias,exact,3512,3532,100.0
+8967147,modern_dots-mocr_plain,G0,35,person,,Beck,False,Beck,exact,3534,3538,100.0
+8967147,modern_dots-mocr_plain,G0,36,locality,,Martinique,False,Martinique,exact,3546,3556,100.0
+8967147,modern_dots-mocr_plain,G0,37,person,,Walch,False,Walch,exact,3938,3943,100.0
+8967147,modern_dots-mocr_plain,G0,38,person,,Gmelin,False,Gmelin,exact,3945,3951,100.0
+8967147,modern_dots-mocr_plain,G0,39,person,,Dillwyn,False,Dillwyn,exact,3957,3964,100.0
+8967147,modern_dots-mocr_plain,G1,0,institution,5.0,Mus. Cuming,False,Mus. Cuming,exact,36,47,100.0
+8967147,modern_dots-mocr_plain,G1,1,taxon,7.0,ACHATINA PHILIPPIANA,False,ACHATINA PHILIPPIANA,exact,51,71,100.0
+8967147,modern_dots-mocr_plain,G1,2,vernacular,9.0,PHILIPPI'S ACHATINA,False,PHILIPPI'S ACHATINA,exact,398,417,100.0
+8967147,modern_dots-mocr_plain,G1,3,person,11.0,PFEIFFER,False,PFEIFFER,exact,794,802,100.0
+8967147,modern_dots-mocr_plain,G1,4,taxon,11.0,Glandina,False,Glandina,exact,805,813,100.0
+8967147,modern_dots-mocr_plain,G1,5,locality,12.0,Jamaica,False,Jamaica,exact,847,854,100.0
+8967147,modern_dots-mocr_plain,G1,6,person,12.0,Gosse,False,Gosse,exact,856,861,100.0
+8967147,modern_dots-mocr_plain,G1,7,institution,16.0,Mus. Dennison,False,Mus. Dennison,exact,1055,1068,100.0
+8967147,modern_dots-mocr_plain,G1,8,taxon,18.0,ACHATINA MONILIFERA,False,ACHATINA MONILIFERA,exact,1072,1091,100.0
+8967147,modern_dots-mocr_plain,G1,9,vernacular,20.0,NECKLACE-BOUND ACHATINA,False,NECKLACE-BOUND ACHATINA,exact,1373,1396,100.0
+8967147,modern_dots-mocr_plain,G1,10,person,22.0,PFEIFFER,False,PFEIFFER,exact,1692,1700,100.0
+8967147,modern_dots-mocr_plain,G1,11,taxon,22.0,Glandina,False,Glandina,exact,1703,1711,100.0
+8967147,modern_dots-mocr_plain,G1,12,locality,23.0,"Coban, Vera Cruz, Central America",False,"Coban, Vera Cruz, Central America",exact,1749,1782,100.0
+8967147,modern_dots-mocr_plain,G1,13,person,23.0,Lattre,False,Lattre,exact,1784,1790,100.0
+8967147,modern_dots-mocr_plain,G1,14,institution,27.0,Mus. Cuming,False,Mus. Cuming,exact,1944,1955,100.0
+8967147,modern_dots-mocr_plain,G1,15,taxon,29.0,ACHATINA OLEACEA,False,ACHATINA OLEACEA,exact,1959,1975,100.0
+8967147,modern_dots-mocr_plain,G1,16,vernacular,31.0,OLIVE-SHAPED ACHATINA,False,OLIVE-SHAPED ACHATINA,exact,2182,2203,100.0
+8967147,modern_dots-mocr_plain,G1,17,taxon,33.0,Helix (Cochlicopa) oleacea,False,Helix (Cochlicopa) oleacea,exact,2418,2444,100.0
+8967147,modern_dots-mocr_plain,G1,18,person,33.0,Férussac,False,Férussac,exact,2446,2454,100.0
+8967147,modern_dots-mocr_plain,G1,19,taxon,34.0,Glandina oleacea,False,Glandina oleacea,exact,2475,2491,100.0
+8967147,modern_dots-mocr_plain,G1,20,person,34.0,Beck,False,Beck,exact,2493,2497,100.0
+8967147,modern_dots-mocr_plain,G1,21,locality,36.0,Cuba,False,Cuba,exact,2505,2509,100.0
+8967147,modern_dots-mocr_plain,G1,22,institution,40.0,Mus. Cuming,False,Mus. Cuming,exact,2626,2637,100.0
+8967147,modern_dots-mocr_plain,G1,23,taxon,42.0,ACHATINA LEUCOZONIAS,False,ACHATINA LEUCOZONIAS,exact,2641,2661,100.0
+8967147,modern_dots-mocr_plain,G1,24,vernacular,44.0,WHITE-ZONED ACHATINA,False,WHITE-ZONED ACHATINA,exact,2971,2991,100.0
+8967147,modern_dots-mocr_plain,G1,25,person,46.0,SOWERBY,False,SOWERBY,exact,3299,3306,100.0
+8967147,modern_dots-mocr_plain,G1,26,taxon,48.0,Voluta leucozonias,False,Voluta leucozonias,exact,3333,3351,100.0
+8967147,modern_dots-mocr_plain,G1,27,person,48.0,Walch,False,Walch,exact,3353,3358,100.0
+8967147,modern_dots-mocr_plain,G1,28,taxon,50.0,Achatina albolineata,False,Achatina albolineata,exact,3406,3426,100.0
+8967147,modern_dots-mocr_plain,G1,29,person,50.0,Lamarck,False,Lamarck,exact,3428,3435,100.0
+8967147,modern_dots-mocr_plain,G1,30,taxon,52.0,"Helix (Cochlicopa,) leucozonias",False,"Helix (Cochlicopa,) leucozonias",exact,3438,3469,100.0
+8967147,modern_dots-mocr_plain,G1,31,person,52.0,Férussac,False,Férussac,exact,3471,3479,100.0
+8967147,modern_dots-mocr_plain,G1,32,taxon,54.0,Polyphemus leucozonias,False,Polyphemus leucozonias,exact,3482,3504,100.0
+8967147,modern_dots-mocr_plain,G1,33,person,54.0,Jan,False,Jan,exact,3506,3509,100.0
+8967147,modern_dots-mocr_plain,G1,34,taxon,56.0,Glandina leucozonias,False,Glandina leucozonias,exact,3512,3532,100.0
+8967147,modern_dots-mocr_plain,G1,35,person,56.0,Beck,False,Beck,exact,3534,3538,100.0
+8967147,modern_dots-mocr_plain,G1,36,locality,58.0,Martinique,False,Martinique,exact,3546,3556,100.0
+8967147,modern_dots-mocr_plain,G1,37,person,60.0,Walch,False,Walch,exact,3938,3943,100.0
+8967147,modern_dots-mocr_plain,G1,38,person,60.0,Gmelin,False,Gmelin,exact,3945,3951,100.0
+8967147,modern_dots-mocr_plain,G1,39,person,60.0,Dillwyn,False,Dillwyn,exact,3957,3964,100.0

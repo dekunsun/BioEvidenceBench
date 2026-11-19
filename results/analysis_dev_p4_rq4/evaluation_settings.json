@@ -1,8 +1,8 @@
 {
-  "written_at": "2026-11-19T02:54:45+00:00",
+  "written_at": "2026-11-19T05:56:44+00:00",
   "split": "dev",
   "code": {
-    "commit": "db39e44b8d3f7a90782208db076ae374b60a2b7a",
+    "commit": "67f1d533d30cbace314e0c5439a2922a8ba57a91",
     "uncommitted_changes": true
   },
   "gold": {
@@ -28,7 +28,7 @@
       "model": "gemini-4-carbon",
       "prompt_version": "p4-guide-v0.6",
       "effort": null,
-      "mentions_sha256": "ec1b43a0906b89ae931cddff77cd6da4ec3911b292c2208fc8f6fbc1147d4e8b"
+      "mentions_sha256": "f323e7a8d4e474e521e744eb6a642539e7d03e2a0e29e77d966ce007cf034165"
     },
     "20261118-2102_rules-gnfinder-v1.4.0_all": {
       "role": "rule",

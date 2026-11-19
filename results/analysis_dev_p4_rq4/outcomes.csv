@@ -92,6 +92,9 @@ run,custom_id,page_id,version,condition,outcome
 20261119-0236_gemini-4-carbon_dev_p4_sync_r1,8967147__legacy__G0,8967147,legacy,G0,ok
 20261119-0236_gemini-4-carbon_dev_p4_sync_r1,8967147__legacy__G1,8967147,legacy,G1,ok
 20261119-0236_gemini-4-carbon_dev_p4_sync_r1,8967147__modern_dots-mocr__G0,8967147,modern_dots-mocr,G0,ok
+20261119-0236_gemini-4-carbon_dev_p4_sync_r1,8967147__modern_dots-mocr__G1,8967147,modern_dots-mocr,G1,ok
+20261119-0236_gemini-4-carbon_dev_p4_sync_r1,8967147__modern_dots-mocr_plain__G0,8967147,modern_dots-mocr_plain,G0,ok
+20261119-0236_gemini-4-carbon_dev_p4_sync_r1,8967147__modern_dots-mocr_plain__G1,8967147,modern_dots-mocr_plain,G1,ok
 20261118-2102_rules-gnfinder-v1.4.0_all,8992582__expert__RULE,8992582,expert,RULE,ok
 20261118-2102_rules-gnfinder-v1.4.0_all,8992582__legacy__RULE,8992582,legacy,RULE,ok
 20261118-2102_rules-gnfinder-v1.4.0_all,8992582__modern_dots-mocr__RULE,8992582,modern_dots-mocr,RULE,ok

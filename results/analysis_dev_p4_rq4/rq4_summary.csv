@@ -5,5 +5,5 @@ Butler,modern_dots-mocr,63,63,1.0,0.984,,,,,no data,1,63,0,0
 Butler,modern_dots-mocr_plain,63,63,1.0,0.984,,,,,no data,1,63,0,0
 Reeve,expert,70,70,1.0,1.0,,,,,no data,0,70,0,0
 Reeve,legacy,70,70,1.0,0.714,,,,,no data,20,70,0,0
-Reeve,modern_dots-mocr,71,34,0.479,0.971,0.946,0.025,-0.013,0.054,against,1,70,0,0
-Reeve,modern_dots-mocr_plain,70,34,0.486,0.971,1.0,-0.029,-0.067,0.0,against,1,70,0,0
+Reeve,modern_dots-mocr,71,70,0.986,0.971,0.0,0.971,0.955,0.986,supports,2,70,0,0
+Reeve,modern_dots-mocr_plain,70,70,1.0,0.986,,,,,no data,1,70,0,0
