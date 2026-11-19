@@ -35,6 +35,32 @@ By group:
 | C 所有版本都错（包括专家转录） |      13 |       1 |      13 |      12 |         0 |
 | D 专家转录错，部分版本对    |       4 |       4 |       4 |       4 |         0 |
 
-## extra_outputs
+## extra_outputs (20 cases)
 
-Tags not received yet (`received/2026-11-20_tags_extra_outputs_gloria.tsv`).
+By book:
+
+| book   |   cases |   OCR相关 |   抽取或推理 |   模糊或混合 |   只有OCR相关 |
+|:-------|--------:|--------:|--------:|--------:|----------:|
+| Butler |       4 |       4 |       2 |       3 |         0 |
+| Reeve  |      16 |      15 |       2 |      16 |         0 |
+
+By book and field:
+
+| book   | 字段          |   cases |   OCR相关 |   抽取或推理 |   模糊或混合 |   只有OCR相关 |
+|:-------|:------------|--------:|--------:|--------:|--------:|----------:|
+| Butler | date        |       1 |       1 |       0 |       1 |         0 |
+| Butler | locality    |       1 |       1 |       1 |       0 |         0 |
+| Butler | vernacular  |       2 |       2 |       1 |       2 |         0 |
+| Reeve  | institution |       1 |       1 |       0 |       1 |         0 |
+| Reeve  | locality    |       3 |       3 |       0 |       3 |         0 |
+| Reeve  | person      |       4 |       4 |       0 |       4 |         0 |
+| Reeve  | taxon       |       7 |       6 |       2 |       7 |         0 |
+| Reeve  | vernacular  |       1 |       1 |       0 |       1 |         0 |
+
+By group:
+
+| 分组          |   cases |   OCR相关 |   抽取或推理 |   模糊或混合 |   只有OCR相关 |
+|:------------|--------:|--------:|--------:|--------:|----------:|
+| E 四个版本都输出了  |       3 |       2 |       3 |       2 |         0 |
+| F 只在部分版本输出  |      12 |      12 |       1 |      12 |         0 |
+| G 无法对齐到专家转录 |       5 |       5 |       0 |       5 |         0 |
