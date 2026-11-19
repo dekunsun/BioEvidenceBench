@@ -63,3 +63,23 @@ atricapilla",,Binomial wrapped over one line break; keep newline,,v0.7
 8992379,2681,2700,taxon,Paroaria cervicalis,,,,v0.7
 8992379,2735,2746,taxon,P. capitata,,,,v0.7
 8992379,2836,2843,vernacular,Finches,,"Not a mention: inside the title of a cited work (guide v0.8, 2.0.5). Was UNCLEAR.",excluded,v0.8
+8992408,275,291,person,H. A. Macpherson,,title: Rev.; cited observer,,v0.8
+8992408,356,363,vernacular,Hawﬁnch,,,,v0.8
+8992408,436,455,person,Charles A. Witchell,,author cited; exclude possessive apostrophe-s,,v0.8
+8992408,559,566,vernacular,Hawﬁnch,,,,v0.8
+8992408,605,621,person,H. A. Macpherson,,title: Rev.; cited observer,,v0.8
+8992408,778,785,vernacular,Chaﬃnch,,hen = sex/age modifier; excluded,,v0.8
+8992408,851,872,person,Alexander von Homeyer,,title: Major; von included in surname,,v0.8
+8992408,919,938,vernacular,cherry-kernel biter,,UNCLEAR: possible descriptive epithet or historical common name for Hawfinch; review before scoring,,v0.8
+8992408,1072,1082,vernacular,Bullﬁnches,,,,v0.8
+8992408,1098,1107,vernacular,Grosbeaks,,so-called; preserve printed name,,v0.8
+8992408,1136,1145,vernacular,Grosbeaks,,,,v0.8
+8992408,1215,1230,person,Howard Saunders,,cited author,,v0.8
+8992408,1289,1296,vernacular,Finches,,,,v0.8
+8992408,1305,1313,vernacular,Buntings,,,,v0.8
+8992408,1483,1490,vernacular,Finches,,,,v0.8
+8992408,1525,1534,taxon,Fringilla,,genus name,,v0.8
+8992408,1569,1577,vernacular,Buntings,,,,v0.8
+8992408,1631,1640,taxon,Fringilla,,genus name,,v0.8
+8992408,1660,1666,taxon,Passer,,genus name,,v0.8
+8992408,1727,1737,taxon,Emberizinœ,,historical name for higher-rank taxon; retain ligature,,v0.8
