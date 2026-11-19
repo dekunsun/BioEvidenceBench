@@ -71,10 +71,17 @@ _HYPH = re.compile(r"[-‐­]\s*\n\s*")
 _MD = re.compile(r"[*_]+|^#+\s*", re.M)
 
 
+_TYPO = str.maketrans({"\u2010": "-", "\u2011": "-", "\u2019": "'", "\u2018": "'",
+                       "\u201c": '"', "\u201d": '"'})
+
+
 def norm_value(s: str) -> str:
     """For value comparison only: NFKC, Markdown emphasis and heading marks
-    (modern OCR output is Markdown), line-end hyphenation, whitespace, case."""
-    s = unicodedata.normalize("NFKC", s or "")
+    (modern OCR output is Markdown), line-end hyphenation, whitespace, case, and
+    the two ways of typing a hyphen or a quotation mark (the transcribers typed
+    U+2010 and curly quotes where an OCR engine writes "-" and "'"; a reader
+    sees the same character). Letters are never changed: "œ" is not "æ"."""
+    s = unicodedata.normalize("NFKC", s or "").translate(_TYPO)
     s = _MD.sub("", s)
     s = _HYPH.sub("", s)
     return re.sub(r"\s+", " ", s).strip(" .,;:()[]").casefold()

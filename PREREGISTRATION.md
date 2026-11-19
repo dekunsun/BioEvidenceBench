@@ -252,6 +252,13 @@ compared with an AI assistant) and decided the open cases; guide v0.6 and prompt
 state them (Latin plurals of genus names, lower-case vernacular names, one span for a place
 hierarchy, named regions, dated movements as events). The dev gold got three rows on her decision
 (`gold/gold_changes_gloria.csv`). Two things learnt on dev are fixed in advance for the test set:
+- *Value comparison* (`score.norm_value`) also folds the two ways of typing a hyphen (U+2010,
+  U+2011 and `-`) and a quotation mark (curly and straight): the transcribers typed one, OCR
+  engines write the other, and a reader sees the same character. Letters are never folded
+  (`Achatinœ` in the transcription against `Achatinæ` in the modern OCR stays a mismatch).
+- *Same occurrence rule for G1*: a quote that occurs several times in its cited line (a whole
+  paragraph is one line in the modern OCR text) is placed like a G0 value, on the first
+  whole-word occurrence not taken by a longer mention.
 - *G0 alignment* (`locate.locate_all`): a G0 value has no position, so longer values are placed
   first and each value takes its first whole-word occurrence not already taken by another
   mention. Before this, `Jackdaw` could land inside `Jackdaws` and a person and a place both
@@ -264,7 +271,10 @@ hierarchy, named regions, dated movements as events). The dev gold got three row
   that one difference is one false negative plus two false positives. Value level stays the
   primary metric, and lenient level is always printed beside it, so that boundary conventions can
   be told apart from misses.
-Dev scores with the p3 runs are in `results/analysis_dev_p3/` (tuning only, not blind).
+Dev scores are in `results/analysis_dev_p3/` and `results/analysis_dev_p4/` (tuning only, not
+blind). With p4, value F1 of the primary fields on the expert text is 1.000 in all three repeats
+for both books: the prompt and the guide were written from these six pages, so the dev set has
+nothing left to tune on and says nothing about performance elsewhere. Only the test pages do.
 
 **Scope decision (Gloria, 2026-11-18): "学名关联评分纳入，其余三项放 V2".** Taxon-link scoring
 is in the frozen plan (above). Moved to V2 and **not** part of this pre-registration: the

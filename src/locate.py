@@ -30,8 +30,9 @@ Line-number labels such as "L074|" that a model copies from our numbered
 input are removed from its text before locating (they cannot be source text);
 `had_line_label` records that it happened.
 
-Which occurrence, in G0? A G0 value comes without a position, so a string printed
-several times has to be assigned to one of its occurrences. `locate_all` places longer
+Which occurrence? A G0 value comes without a position, and a G1 quote only names its
+line (a whole paragraph in the modern OCR text), so a string printed several times has
+to be assigned to one of its occurrences. `locate_all` places longer
 values first and gives each value the first occurrence that is a whole word and is not
 already taken by another mention. So "Jackdaw" is not placed inside "Jackdaws", "Crow"
 not inside an already placed "Hooded Crow", and a person "Lilford" and a place
@@ -142,18 +143,30 @@ def _find_all(hay: str, needle: str) -> list[int]:
     return hits
 
 
-def locate_g1(text: str, line: int, quote: str, nth: int = 0) -> dict:
+def locate_g1(text: str, line: int, quote: str, nth: int = 0, taken: list | None = None) -> dict:
     """nth: this is the nth time the model gave this exact quote for this line
     (and field), so a word printed several times in one line maps to its
     successive occurrences instead of always the first. If the model gives the
     quote more often than the line contains it, the extra ones stay on the last
-    occurrence (and show up as duplicate spans)."""
+    occurrence (and show up as duplicate spans).
+
+    taken: spans already given to other mentions. When given, the quote goes to
+    its first occurrence in the line that is a whole word (if it has any) and
+    overlaps none of them, exactly as for G0. This matters when a whole
+    paragraph is one line, as in the modern OCR text."""
     lines = text.split("\n")
     starts = line_starts(text)
     if not (1 <= line <= len(lines)) or not quote:
         return {"status": "invalid_evidence", "start": None, "end": None, "score": 0.0}
     l_text, l_start = lines[line - 1], starts[line - 1]
     hits = _find_all(l_text, quote)
+    if taken is not None and hits:
+        n = len(quote)
+        whole = [h for h in hits if _whole_word(l_text, h, n)]
+        free = [h for h in (whole or hits)
+                if not any(l_start + h < b and a < l_start + h + n for a, b in taken)]
+        if free:
+            return {"status": "exact", "start": l_start + free[0], "end": l_start + free[0] + n, "score": 100.0}
     if hits:
         i = hits[min(nth, len(hits) - 1)]
         return {"status": "exact", "start": l_start + i, "end": l_start + i + len(quote), "score": 100.0}
@@ -223,12 +236,17 @@ def locate_all(text: str, condition: str, mentions: list[dict]) -> list[dict]:
 
     located: list[dict | None] = [None] * len(mentions)
     seen: dict = {}
-    if condition == "G0":
+    if condition in ("G0", "G1"):
         # Longer values first, then the model's own order; each takes a free occurrence.
         taken: list[tuple[int, int]] = []
         for i in sorted(range(len(mentions)), key=lambda k: (-len(cleaned[k][1]), k)):
-            key = (mentions[i].get("field"), cleaned[i][1])
-            r = locate_g0(text, cleaned[i][1], seen.get(key, 0), taken)
+            m, clean = mentions[i], cleaned[i][1]
+            if condition == "G1":
+                key = (m.get("field"), m.get("line"), clean)
+                r = locate_g1(text, int(m.get("line", 0) or 0), clean, seen.get(key, 0), taken)
+            else:
+                key = (m.get("field"), clean)
+                r = locate_g0(text, clean, seen.get(key, 0), taken)
             seen[key] = seen.get(key, 0) + 1
             if r["start"] is not None:
                 taken.append((r["start"], r["end"]))
@@ -241,10 +259,6 @@ def locate_all(text: str, condition: str, mentions: list[dict]) -> list[dict]:
             # rule baseline: spans come with exact offsets, nothing to locate
             r = {"status": "exact", "start": m["start"], "end": m["end"], "score": 100.0}
             model_text = text[m["start"]:m["end"]]
-        elif condition == "G1":
-            key = (m.get("field"), m.get("line"), clean)
-            r = locate_g1(text, int(m.get("line", 0)), clean, seen.get(key, 0))
-            seen[key] = seen.get(key, 0) + 1
         else:
             r = located[i]
         value = text[r["start"]:r["end"]] if r["start"] is not None else None

@@ -1,8 +1,8 @@
 {
-  "written_at": "2026-11-19T01:06:46+00:00",
+  "written_at": "2026-11-19T01:23:27+00:00",
   "split": "dev",
   "code": {
-    "commit": "8faca5c7a1ef1c8555f04c1e2a14a3f8cbb03eee",
+    "commit": "e50de30320635dc63d2ca6ed815f1a5497b3981a",
     "uncommitted_changes": true
   },
   "gold": {
@@ -21,7 +21,7 @@
       "model": "claude-opus-5-5",
       "prompt_version": "p3-guide-v0.5",
       "effort": "medium",
-      "mentions_sha256": "e5fdb783966067e31942bbdd06445a944c42f827e9f098435b41f48930de1664"
+      "mentions_sha256": "8110ec27dcdd68fee045f91fb3656493acb143ab229d83f17ae1b12708ec3ed9"
     },
     "20261118-2102_rules-gnfinder-v1.4.0_all": {
       "role": "rule",

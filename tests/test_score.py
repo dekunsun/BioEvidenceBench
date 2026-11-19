@@ -114,3 +114,10 @@ def test_issue_regions_are_parsed_as_expert_offsets(tmp_path):
                  "8992612,other,locality,Dover,90,95,,,\n")
     assert load_issues(f) == {8992612: [(10, 16), (40, 48), (90, 95)]}
     assert load_issues(None) == {}
+
+
+def test_norm_value_folds_typographic_hyphen_and_apostrophe_but_not_letters():
+    from score import norm_value
+    assert norm_value("WHITE‐ZONED ACHATINA") == norm_value("WHITE-ZONED ACHATINA")
+    assert norm_value("PHILIPPI’S ACHATINA") == norm_value("PHILIPPI'S ACHATINA")
+    assert norm_value("Achatinœ") != norm_value("Achatinæ")

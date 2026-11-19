@@ -130,3 +130,15 @@ def test_g0_same_string_in_two_fields_gets_two_occurrences():
                                   {"field": "locality", "value": "Lilford"}])
     assert out[0]["start"] != out[1]["start"]
     assert out[0]["start"] == text.index("Lilford wrote")
+
+
+def test_g1_repeated_word_in_one_long_line_takes_whole_word_free_occurrences():
+    text = "The Jackdaws left. Lord Lilford wrote of the park of Lilford; a Jackdaw stayed."
+    out = locate_all(text, "G1", [{"field": "vernacular", "line": 1, "quote": "Jackdaws"},
+                                  {"field": "person", "line": 1, "quote": "Lilford"},
+                                  {"field": "locality", "line": 1, "quote": "Lilford"},
+                                  {"field": "vernacular", "line": 1, "quote": "Jackdaw"}])
+    assert out[1]["start"] == text.index("Lilford wrote")
+    assert out[2]["start"] == text.index("Lilford;")
+    assert out[3]["start"] == text.index("Jackdaw stayed")
+    assert all(o["status"] == "exact" for o in out)

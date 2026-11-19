@@ -1,7 +1,7 @@
 # Analysis report: dev_p4 (DEV pages)
 
 Gold: `gold/gold_mentions_gloria.csv` (5a3e85b6dd32…), guide ['v0.5', 'v0.6'].
-Code commit `beccebd67b` **with uncommitted changes**.
+Code commit `e50de30320` **with uncommitted changes**.
 Runs: `20261119-0113_claude-opus-5-5_dev_p4_r1` (llm, claude-opus-5-5, prompt p4-guide-v0.6); `20261118-2102_rules-gnfinder-v1.4.0_all` (rule, rules + gnfinder v1.4.0, prompt None).
 
 **Dev pages are not blind. These numbers are for tuning, not results.**
@@ -34,9 +34,9 @@ Runs: `20261119-0113_claude-opus-5-5_dev_p4_r1` (llm, claude-opus-5-5, prompt p4
 | 20261119-0113_claude-opus-5-5_dev_p4_r1 | Butler | legacy                 | G0          |     63 |     63 |     0.794 |     0.794 |      0.794 |         0.727 |         0.873 |        1     |      1     |           0 |
 | 20261119-0113_claude-opus-5-5_dev_p4_r1 | Butler | legacy                 | G1          |     63 |     63 |     0.794 |     0.794 |      0.794 |         0.727 |         1     |        1     |      1     |           0 |
 | 20261119-0113_claude-opus-5-5_dev_p4_r1 | Butler | modern_dots-mocr       | G0          |     63 |     63 |     0.968 |     0.968 |      0.968 |         0.957 |         1     |        1     |      0.984 |           0 |
-| 20261119-0113_claude-opus-5-5_dev_p4_r1 | Butler | modern_dots-mocr       | G1          |     63 |     63 |     0.968 |     0.968 |      0.968 |         0.833 |         1     |        0.984 |      0.984 |           0 |
+| 20261119-0113_claude-opus-5-5_dev_p4_r1 | Butler | modern_dots-mocr       | G1          |     63 |     63 |     0.984 |     0.984 |      0.984 |         0.978 |         1     |        1     |      1     |           0 |
 | 20261119-0113_claude-opus-5-5_dev_p4_r1 | Butler | modern_dots-mocr_plain | G0          |     63 |     63 |     0.984 |     0.984 |      0.984 |         0.978 |         1     |        1     |      1     |           0 |
-| 20261119-0113_claude-opus-5-5_dev_p4_r1 | Butler | modern_dots-mocr_plain | G1          |     63 |     63 |     0.968 |     0.968 |      0.968 |         0.833 |         1     |        0.984 |      0.984 |           0 |
+| 20261119-0113_claude-opus-5-5_dev_p4_r1 | Butler | modern_dots-mocr_plain | G1          |     63 |     63 |     0.984 |     0.984 |      0.984 |         0.978 |         1     |        1     |      1     |           0 |
 | 20261119-0113_claude-opus-5-5_dev_p4_r1 | Reeve  | expert                 | G0          |     70 |     70 |     1     |     1     |      1     |         1     |         1     |        1     |      1     |           0 |
 | 20261119-0113_claude-opus-5-5_dev_p4_r1 | Reeve  | expert                 | G1          |     70 |     70 |     1     |     1     |      1     |         1     |         1     |        1     |      1     |           0 |
 | 20261119-0113_claude-opus-5-5_dev_p4_r1 | Reeve  | legacy                 | G0          |     70 |     70 |     0.714 |     0.714 |      0.714 |         0.579 |         0.778 |        1     |      0.971 |           0 |
@@ -62,8 +62,8 @@ Per field (including `vernacular`, scored apart): `scores.csv`.
 |:-------|:-----------------------|-------:|--------------:|-----------------------:|---------------------:|----------------:|-------:|-------------:|
 | Butler | expert                 |     63 |             0 |                      0 |                    0 |               0 |     63 |        1     |
 | Butler | legacy                 |     63 |            12 |                     12 |                    0 |               1 |     50 |        0.794 |
-| Butler | modern_dots-mocr       |     63 |             1 |                      1 |                    1 |               0 |     61 |        0.968 |
-| Butler | modern_dots-mocr_plain |     63 |             1 |                      1 |                    1 |               0 |     61 |        0.968 |
+| Butler | modern_dots-mocr       |     63 |             1 |                      1 |                    0 |               0 |     62 |        0.984 |
+| Butler | modern_dots-mocr_plain |     63 |             1 |                      1 |                    0 |               0 |     62 |        0.984 |
 | Reeve  | expert                 |     70 |             0 |                      0 |                    0 |               0 |     70 |        1     |
 | Reeve  | legacy                 |     70 |            20 |                     20 |                    0 |               0 |     50 |        0.714 |
 | Reeve  | modern_dots-mocr       |     70 |             1 |                      1 |                    0 |               1 |     68 |        0.971 |
@@ -94,9 +94,9 @@ Shown: RQ1, RQ3, and RQ2 on the expert text. A is the arm the hypothesis expects
 | RQ2  | LLM (G1) vs rule baseline, value F1, expert                       | Reeve  | taxon       | value F1  |       3 |   1     |   0.286 |   0.714 |   0.486 |   0.956 | greater_than 0.0   | supports     |
 | RQ3  | recall with evidence (G1) vs without (G0), legacy                 | Butler | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 | RQ3  | recall with evidence (G1) vs without (G0), legacy                 | Reeve  | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
-| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr       | Butler | ALL_PRIMARY | lenient R |       3 |   0.984 |   1     |  -0.016 |  -0.167 |   0     | greater_than -0.05 | inconclusive |
+| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr       | Butler | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 | RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr       | Reeve  | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
-| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr_plain | Butler | ALL_PRIMARY | lenient R |       3 |   0.984 |   1     |  -0.016 |  -0.167 |   0     | greater_than -0.05 | inconclusive |
+| RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr_plain | Butler | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 | RQ3  | recall with evidence (G1) vs without (G0), modern_dots-mocr_plain | Reeve  | ALL_PRIMARY | lenient R |       3 |   1     |   1     |   0     |   0     |   0     | greater_than -0.05 | supports     |
 
 RQ2 on the other text versions, descriptive comparisons and other fields: `comparisons.csv`.
@@ -129,4 +129,4 @@ RQ2 on the other text versions, descriptive comparisons and other fields: `compa
 | 20261118-2102_rules-gnfinder-v1.4.0_all | ok        |         24 |
 | 20261119-0113_claude-opus-5-5_dev_p4_r1 | ok        |         48 |
 
-False positives and negatives for the error analysis: `discrepancies.csv` (975 rows).
+False positives and negatives for the error analysis: `discrepancies.csv` (923 rows).

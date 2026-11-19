@@ -33,9 +33,9 @@ Per repeat and per field: `f1_by_repeat.csv`, `f1_summary.csv`.
 | Butler | legacy                 | G0          |     63 |           0.794 |         0     |          0.794 |          0.794 |             1     |           0     |
 | Butler | legacy                 | G1          |     63 |           0.794 |         0     |          0.794 |          0.794 |             1     |           0     |
 | Butler | modern_dots-mocr       | G0          |     63 |           0.979 |         0.009 |          0.968 |          0.984 |             1     |           0     |
-| Butler | modern_dots-mocr       | G1          |     63 |           0.968 |         0     |          0.968 |          0.968 |             0.984 |           0     |
+| Butler | modern_dots-mocr       | G1          |     63 |           0.984 |         0     |          0.984 |          0.984 |             1     |           0     |
 | Butler | modern_dots-mocr_plain | G0          |     63 |           0.984 |         0     |          0.984 |          0.984 |             1     |           0     |
-| Butler | modern_dots-mocr_plain | G1          |     63 |           0.968 |         0     |          0.968 |          0.968 |             0.984 |           0     |
+| Butler | modern_dots-mocr_plain | G1          |     63 |           0.984 |         0     |          0.984 |          0.984 |             1     |           0     |
 | Reeve  | expert                 | G0          |     70 |           1     |         0     |          1     |          1     |             1     |           0     |
 | Reeve  | expert                 | G1          |     70 |           1     |         0     |          1     |          1     |             1     |           0     |
 | Reeve  | legacy                 | G0          |     70 |           0.714 |         0     |          0.714 |          0.714 |             1     |           0     |
