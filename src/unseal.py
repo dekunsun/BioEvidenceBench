@@ -4,6 +4,7 @@ Checks, in order:
   1. gold/gold_mentions_<labeller>.csv exists and has at least one row for
      every TEST page (a page with nothing to label has a `none` row);
   2. check_gold.py finds no offset problems in it;
+  0. FREEZE.json exists and nothing it froze has changed (src/freeze.py --verify);
   3. the sealed file's SHA-256 matches the one recorded in SEALED.md at run time.
 Only then it writes results/<run_id>/test_outputs.jsonl and test_mentions.csv.
 
@@ -33,6 +34,12 @@ def main() -> None:
     ap.add_argument("--labeller", required=True)
     a = ap.parse_args()
     run_dir = RESULTS / a.run_id
+
+    from freeze import verify
+    changed = verify()
+    if changed:
+        sys.exit("The evaluation is not frozen, or something frozen has changed. Still sealed.\n  "
+                 + "\n  ".join(changed))
 
     gold_path = ROOT / "gold" / f"gold_mentions_{a.labeller}.csv"
     if not gold_path.exists():

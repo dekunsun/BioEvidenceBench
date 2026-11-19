@@ -335,8 +335,22 @@ Google's batch mode ignored the JSON schema and 3 of 48 answers were lost. Rules
   twice on a single unflagged mention.
 
 **Still to run before the freeze commit**: nothing on dev. Everything in this document is built.
-What remains is the gold set (one test page, the second labeller's five pages, adjudication, and
-Butler's taxon links), then the freeze commit, then the test runs with Gloria's go-ahead.
+All 16 test pages and Butler's taxon links are labelled. What remains is the second labeller's
+five pages and their adjudication, then the freeze commit, then the test runs with Gloria's go-ahead.
+
+**Agreement and freeze tools (built 2026-11-20).**
+- `src/agreement.py`: mention-level agreement between two labellers, per book and field and for
+  `ALL_PRIMARY` (vernacular separate). Exact = same span and field; overlap = same field, spans
+  overlap (one-to-one). Agreement = 2 × matched / (n_A + n_B). Run twice: `independent` (both
+  files as delivered, Gloria's reconstructed independent version for 8992643) is the reported
+  number; `working` (adjudicated gold against the second labeller) gives the list Gloria
+  adjudicates. Five pages from two books: the numbers are descriptive, no interval is given.
+- `src/freeze.py`: `--ready` lists what still stops the freeze; `--frozen-run <dev run>` writes
+  `FREEZE.json` (code commit, SHA-256 of the gold files, guide, this document and the scoring
+  code, prompt version, model settings of the named dev runs); `--verify` lists anything changed
+  since. `src/unseal.py` refuses to open sealed outputs unless `--verify` is clean. The test runs
+  use the settings of `20261119-0113_claude-opus-5-5_dev_p4_r1` (Opus, batch) and
+  `20261119-0236_gemini-4-carbon_dev_p4_sync_r1` (Gemini, sync, schema enforced).
 
 ## Deviations log
 
