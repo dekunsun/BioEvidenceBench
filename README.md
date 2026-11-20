@@ -7,6 +7,9 @@ It asks where the reliability of extracted scientific data is lost: in OCR, in e
 evidence verification, in entity resolution, or in human review. It also asks where the next
 unit of effort should go.
 
+**Read first:** [WRITEUP.md](WRITEUP.md) (the story and findings in one page), then the decision memo
+[`memo/MEMO.md`](memo/MEMO.md) ([中文](memo/MEMO_zh.md)).
+
 **Status (2026-11-20): frozen, run and scored on the test pages.** All 22 sample pages are
 labelled (6 dev, 16 locked test), a second labeller double-labelled 5 test pages, the plan and
 gold were frozen (`FREEZE.json`), and only then were the test pages run and unsealed. Error
