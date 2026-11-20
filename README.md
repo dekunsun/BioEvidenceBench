@@ -8,7 +8,7 @@ Dekun Sun · University of Pennsylvania · [ai4s.fyi](https://ai4s.fyi)
 
 Pilot · 2026
 
-[**Preprint**](docs/preprint.md) · [**Results**](docs/results.md) · [Evaluation settings](docs/eval_settings.md) · [Product summary](docs/product.md) · [Poster](poster/poster.pdf) · [中文](#中文版-tldr)
+[**Preprint**](docs/preprint/preprint.pdf) ([web](docs/preprint/preprint.html), [source](docs/preprint.md)) · [**Results**](docs/results.md) · [Evaluation settings](docs/eval_settings.md) · [Product summary](docs/product.md) · [Poster](poster/poster.pdf) · [中文](#中文版-tldr)
 
 <img src="docs/figures/hero.png" width="760" alt="Extraction value F1 on legacy OCR, modern OCR and expert transcription for Butler and Reeve, and Butler link recall for a plain GBIF lookup and an LLM linker">
 

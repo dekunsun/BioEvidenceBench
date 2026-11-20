@@ -1,0 +1,87 @@
+
+  :root {
+    --ink: #1d1f24;
+    --muted: #5b6070;
+    --rule: #d9dbe1;
+    --link: #1f5fbf;
+    --paper: #fcfcfa;
+    --head: #f1f2f5;
+  }
+  html { background: var(--paper); }
+  body {
+    margin: 0 auto;
+    max-width: 46rem;
+    padding: 2.5rem 1.25rem 4rem;
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--paper);
+    font-variant-numeric: lining-nums;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { text-align: center; margin-bottom: 2rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .6rem; text-wrap: balance; }
+  .authors { color: var(--muted); font-size: 1.02rem; margin: .2rem 0; }
+  .affil, .date { color: var(--muted); font-size: .9rem; margin: .15rem 0; }
+  h2 { font-size: 1.22rem; margin: 2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid var(--rule); }
+  h3 { font-size: 1.04rem; margin: 1.3rem 0 .4rem; }
+  p { margin: .55rem 0; text-align: justify; hyphens: auto; }
+  .abstract { font-size: .97em; }
+  header p { text-align: center; }
+  ul, ol { padding-left: 1.4rem; margin: .5rem 0; }
+  li { margin: .25rem 0; }
+  figure { margin: 1.4rem 0; break-inside: avoid; }
+  figure img { width: 100%; display: block; border: 1px solid var(--rule); background: #fff; }
+  figcaption { font-size: .86rem; line-height: 1.45; color: var(--ink); margin-top: .5rem; }
+  figcaption b:first-child { font-weight: 700; }
+  .tablewrap { overflow-x: auto; margin: 1rem 0; break-inside: avoid; }
+  table { border-collapse: collapse; width: 100%; font-size: .84rem; line-height: 1.35; }
+  caption { caption-side: top; text-align: left; font-size: .86rem; margin-bottom: .4rem; }
+  th, td { border-top: 1px solid var(--rule); padding: .32rem .45rem; text-align: left; vertical-align: top; }
+  thead th { background: var(--head); border-top: 1.5px solid var(--ink); border-bottom: 1px solid var(--ink); font-weight: 600; }
+  tbody tr:last-child td { border-bottom: 1.5px solid var(--ink); }
+  td.n, th.n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .note { font-size: .86em; color: var(--muted); }
+  .refs li { font-size: .86rem; margin: .35rem 0; text-align: left; }
+  .refs { list-style: none; padding-left: 0; }
+  .refs li { padding-left: 1.4rem; text-indent: -1.4rem; }
+  .eq { text-align: center; margin: .8rem 0; font-style: italic; }
+  @media (max-width: 520px) {
+    body { font-size: 15px; padding-inline: 16px; }
+    h1 { font-size: 1.4rem; }
+    p { text-align: left; }
+  }
+  .case { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 1.2rem 0 .4rem; break-inside: avoid; }
+  .case > div { border: 1px solid var(--rule); background: #fff; padding: .6rem .75rem; font-size: .85em; line-height: 1.4; }
+  .case h4 { margin: 0 0 .35rem; font-size: 1em; }
+  .case .ctx { color: var(--muted); margin: 0 0 .45rem; text-align: left; }
+  .case .step { margin: .3rem 0; text-align: left; }
+  .case code { font-size: .92em; }
+  .case q { font-style: italic; }
+  .truth { display: inline-block; border: 1px solid var(--ink); padding: 0 .3rem; font-size: .9em; }
+  @media (max-width: 520px) { .case { grid-template-columns: 1fr; } }
+  @page { size: A4; margin: 15mm 16mm 16mm; }
+  @media print {
+    html, body { background: #fff; }
+    body { max-width: none; padding: 0; font-size: 9.8pt; line-height: 1.38; }
+    header { margin-bottom: 1rem; }
+    h1 { font-size: 15.5pt; }
+    h2 { font-size: 11.5pt; margin: 1.1rem 0 .35rem; }
+    h3 { font-size: 10.2pt; margin: .8rem 0 .25rem; }
+    p { margin: .35rem 0; }
+    figure { margin: .8rem 0; }
+    figure img { width: 82%; margin: 0 auto; }
+    figure.wide img { width: 100%; }
+    figcaption { font-size: 8.4pt; }
+    table { font-size: 7.9pt; min-width: 0; table-layout: auto; }
+    .tablewrap { overflow: visible; }
+    td.n, th.n { white-space: normal; }
+    th, td { padding: .25rem .3rem; }
+    caption, .refs li { font-size: 8.4pt; }
+    h2 { break-after: avoid; }
+    h3 { break-after: avoid; }
+    a { color: var(--ink); }
+    figure img { border: none; }
+  }

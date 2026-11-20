@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BioEvidenceBench: Where Is Trustworthy Data Lost?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+<style>
+  :root {
+    --ink: #1d1f24;
+    --muted: #5b6070;
+    --rule: #d9dbe1;
+    --link: #1f5fbf;
+    --paper: #fcfcfa;
+    --head: #f1f2f5;
+  }
+  html { background: var(--paper); }
+  body {
+    margin: 0 auto;
+    max-width: 46rem;
+    padding: 2.5rem 1.25rem 4rem;
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--paper);
+    font-variant-numeric: lining-nums;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { text-align: center; margin-bottom: 2rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .6rem; text-wrap: balance; }
+  .authors { color: var(--muted); font-size: 1.02rem; margin: .2rem 0; }
+  .affil, .date { color: var(--muted); font-size: .9rem; margin: .15rem 0; }
+  h2 { font-size: 1.22rem; margin: 2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid var(--rule); }
+  h3 { font-size: 1.04rem; margin: 1.3rem 0 .4rem; }
+  p { margin: .55rem 0; text-align: justify; hyphens: auto; }
+  .abstract { font-size: .97em; }
+  header p { text-align: center; }
+  ul, ol { padding-left: 1.4rem; margin: .5rem 0; }
+  li { margin: .25rem 0; }
+  figure { margin: 1.4rem 0; break-inside: avoid; }
+  figure img { width: 100%; display: block; border: 1px solid var(--rule); background: #fff; }
+  figcaption { font-size: .86rem; line-height: 1.45; color: var(--ink); margin-top: .5rem; }
+  figcaption b:first-child { font-weight: 700; }
+  .tablewrap { overflow-x: auto; margin: 1rem 0; break-inside: avoid; }
+  table { border-collapse: collapse; width: 100%; font-size: .84rem; line-height: 1.35; }
+  caption { caption-side: top; text-align: left; font-size: .86rem; margin-bottom: .4rem; }
+  th, td { border-top: 1px solid var(--rule); padding: .32rem .45rem; text-align: left; vertical-align: top; }
+  thead th { background: var(--head); border-top: 1.5px solid var(--ink); border-bottom: 1px solid var(--ink); font-weight: 600; }
+  tbody tr:last-child td { border-bottom: 1.5px solid var(--ink); }
+  td.n, th.n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .note { font-size: .86em; color: var(--muted); }
+  .refs li { font-size: .86rem; margin: .35rem 0; text-align: left; }
+  .refs { list-style: none; padding-left: 0; }
+  .refs li { padding-left: 1.4rem; text-indent: -1.4rem; }
+  .eq { text-align: center; margin: .8rem 0; font-style: italic; }
+  @media (max-width: 520px) {
+    body { font-size: 15px; padding-inline: 16px; }
+    h1 { font-size: 1.4rem; }
+    p { text-align: left; }
+  }
+  .case { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 1.2rem 0 .4rem; break-inside: avoid; }
+  .case > div { border: 1px solid var(--rule); background: #fff; padding: .6rem .75rem; font-size: .85em; line-height: 1.4; }
+  .case h4 { margin: 0 0 .35rem; font-size: 1em; }
+  .case .ctx { color: var(--muted); margin: 0 0 .45rem; text-align: left; }
+  .case .step { margin: .3rem 0; text-align: left; }
+  .case code { font-size: .92em; }
+  .case q { font-style: italic; }
+  .truth { display: inline-block; border: 1px solid var(--ink); padding: 0 .3rem; font-size: .9em; }
+  @media (max-width: 520px) { .case { grid-template-columns: 1fr; } }
+  @page { size: A4; margin: 15mm 16mm 16mm; }
+  @media print {
+    html, body { background: #fff; }
+    body { max-width: none; padding: 0; font-size: 9.8pt; line-height: 1.38; }
+    header { margin-bottom: 1rem; }
+    h1 { font-size: 15.5pt; }
+    h2 { font-size: 11.5pt; margin: 1.1rem 0 .35rem; }
+    h3 { font-size: 10.2pt; margin: .8rem 0 .25rem; }
+    p { margin: .35rem 0; }
+    figure { margin: .8rem 0; }
+    figure img { width: 82%; margin: 0 auto; }
+    figure.wide img { width: 100%; }
+    figcaption { font-size: 8.4pt; }
+    table { font-size: 7.9pt; min-width: 0; table-layout: auto; }
+    .tablewrap { overflow: visible; }
+    td.n, th.n { white-space: normal; }
+    th, td { padding: .25rem .3rem; }
+    caption, .refs li { font-size: 8.4pt; }
+    h2 { break-after: avoid; }
+    h3 { break-after: avoid; }
+    a { color: var(--ink); }
+    figure img { border: none; }
+  }
+
+  .refs { list-style: decimal; padding-left: 1.6rem; }
+  .refs li { padding-left: 0; text-indent: 0; }
+  hr { display: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Where is trustworthy data lost between a historical page and a database? A pre-registered, stage-by-stage evaluation of evidence-grounded extraction from biodiversity literature</h1>
+  <p class="authors">Dekun Sun</p>
+  <p class="affil">University of Pennsylvania · <a href="https://ai4s.fyi">ai4s.fyi</a></p>
+  <p class="date">November 2026 · preprint draft, work in progress, not peer reviewed · <a href="https://github.com/dekunsun/BioEvidenceBench">github.com/dekunsun/BioEvidenceBench</a> · <a href="preprint.pdf">PDF</a></p>
+  <p class="date">Results marked <b>[pre-registered]</b> come from a run frozen before the test pages were processed; results marked <b>[exploratory]</b> were designed after the test outputs were unsealed.</p>
+</header>
+
+<h2>Abstract</h2>
+<p class="abstract">Large language models (LLMs) make it easy to pull species names, places, people and dates out of
+scanned historical literature. Making those records <em>trustworthy</em>, that is, correct and traceable to the
+printed page, is harder, and it is not obvious where the next unit of effort should go: better optical
+character recognition (OCR), a better model, automated verification, entity resolution or human review.
+We follow one mention through six steps (page to text, text to mention, mention to evidence, mention to
+entity, the definition of what counts as a datum, and review) and measure how much reliability each step
+loses. We use two English books from the Biodiversity Heritage Library (BHL), Butler 1907 (birds) and
+Reeve 1849 (shells), whose pages exist in three versions: BHL's legacy OCR, a modern open OCR and an
+expert transcription. 607 mentions on 22 pages were labelled by hand before any model output was seen;
+the plan, gold set and code were frozen before the 16 test pages were processed. The extraction model
+returns a line number and a verbatim quote; code checks the quote and slices the value, so the model
+never rewrites the source. <strong>[pre-registered]</strong> On legacy OCR, value-level F1 was 0.60 (Butler) and
+0.64 (Reeve); on modern OCR 0.95 and 0.98; on the expert transcription 0.98 for both. A plain GBIF name
+lookup then lost 14 of 34 correctly extracted bird names, against 0 lost before linking. Requiring a
+verbatim quote cost no accuracy, and agreement between two LLMs from different providers did not imply
+correctness. <strong>[exploratory]</strong> Across 22 OCR versions of the same pages, the share of gold names that
+survived OCR intact predicted extraction almost exactly (Spearman 0.95 and 1.00), while page character
+error rate did not (−0.07 and −0.62). Four Claude models differed by at most 0.05 in extraction F1 but by
+0.15 in linking recall. Three routes past bad OCR (modern OCR, LLM repair of legacy OCR, reading the page
+image) reached similar F1 but left very different evidence for an auditor. On these books, OCR was the
+first bottleneck and modern OCR removed most of it; after that, trust was limited by entity resolution and
+by the definition of what counts as a datum, not by the extraction model. We do not claim this for other
+languages, layouts, print eras, tables or handwriting.</p>
+<hr />
+<h2>1. Introduction</h2>
+<p>The Biodiversity Heritage Library holds about 64 million scanned pages of biodiversity literature. Its
+text layer is largely uncorrected OCR from old print. Several groups are now turning this layer into data:
+FineBooks re-OCRs BHL with open models and publishes an OCR leaderboard; the Natural History Museum,
+London (NHM) is building a BHL discovery layer and a knowledge graph on top of re-OCRed text [1–3]; Plazi
+has long extracted treatments with journal-specific templates [4].</p>
+<p>Most evaluations in this space report a single number per stage: a page-level OCR accuracy, or an
+end-to-end entity F1. A data curator who must decide where to spend the next unit of money needs
+something different: <strong>how much reliability is lost at each step between the printed page and the
+database record, and what it costs to win it back.</strong> This paper asks that question on a small, controlled
+pilot. It is a system-level evaluation of evidence-grounded extraction, not an OCR benchmark.</p>
+<p>The research question, written before any data were seen:</p>
+<blockquote>
+<p>When does improved OCR stop being the main bottleneck, and when do evidence verification and entity
+resolution become the limiting factors for trustworthy scientific data extraction?</p>
+</blockquote>
+<p>"When" is treated as something to measure; "there is no single threshold" is a valid answer.</p>
+<p><strong>Contributions.</strong></p>
+<ol>
+<li>A stage-by-stage evaluation design that holds each page constant and varies only the text it is read
+   from (legacy OCR, modern OCR, expert transcription), with gold labels made before any model output and
+   a pre-registered, frozen analysis.</li>
+<li>A measurement of where reliability is lost on two historical books, including the step most pipelines
+   do not score: linking extracted names to a taxonomic backbone.</li>
+<li>Evidence that <strong>name preservation</strong>, not page error rate, is the OCR metric that predicts downstream
+   extraction, and a proposal to use it as an acceptance test for re-OCR projects.</li>
+<li>A comparison showing that <strong>routes with equal accuracy can leave unequal evidence</strong>, and that a null
+   result on an evidence requirement says more about the accuracy metric than about evidence.</li>
+<li>Open materials: guide, gold set, prompts, raw outputs, scorer, run settings and a decision memo.</li>
+</ol>
+<hr />
+<h2>2. Related work</h2>
+<p><strong>OCR for BHL.</strong> FineBooks (Hugging Face and EleutherAI) published expert transcriptions for six BHL
+works from the IMPACT project, a Parquet copy of BHL metadata, per-page outputs of many open OCR models,
+and a leaderboard scored by character error rate [1]. R. Page has benchmarked further OCR and
+vision-language models with the same harness, including several Mistral OCR versions, and reports a
+regression in a newer version [5]. This paper takes OCR quality as given and studies what happens
+downstream.</p>
+<p><strong>NHM's BHL and knowledge-graph work.</strong> NHM has built botanical knowledge graphs with relational graph
+convolutional networks [6], a Planetary Knowledge Base (PKB) prototype with more than 100 million nodes
+used to align specimen-label text to graph entities [7], and ADEPT, a pipeline that extracts plant
+functional traits from BHL and online floras, released as a dataset of 888,328 trait values for 59,369
+angiosperm species [8, 9]. A 2026 BHL prototype processed about 35,000 pages from two journals, reporting
+OCR accuracy of 99.57% and taxon extraction F1 of 96.15% [2]; later talks describe re-OCR of the whole
+corpus with Mistral OCR, linking to GBIF, Catalogue of Life, Wikidata and GRSciColl with provenance and
+confidence, and an open gold set planned for early 2027 [3]. ADEPT's public evaluation bundle reports
+micro F1 0.867 on 50 development descriptions and states that it is not a held-out test [9]. These
+results are not comparable with ours (different samples, entity definitions and matching rules), and we
+make no claim to reproduce them. Our contribution is complementary: we measure the step-by-step losses
+that single end-to-end numbers do not show.</p>
+<p><strong>Evaluation method.</strong> We borrow the evaluation design of Lei, Docherty and Cooper [10], who labelled
+micrographs in materials science papers before seeing model output and compared LLMs with keyword
+baselines. Their study did not involve OCR and asked a different question; this work is not an extension
+of their experiment.</p>
+<hr />
+<h2>3. Task and data</h2>
+<h3>3.1 Books and text versions</h3>
+<p>The two English works in FineBooks' expert-transcribed set: Butler, <em>Birds of Great Britain and Ireland</em>,
+vol. 2 (1907; 341 pages), and Reeve, <em>Conchologia iconica</em>, vol. 5 (1849; 648 pages). Every page exists in
+four text versions:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Source</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>legacy</code></td>
+<td>BHL's own OCR, per page, from BHL's open data</td>
+<td>What BHL serves today</td>
+</tr>
+<tr>
+<td><code>modern_dots-mocr</code></td>
+<td>FineBooks' public output of dots.mocr</td>
+<td>Lowest CER on the FineBooks board; Markdown, no coordinates</td>
+</tr>
+<tr>
+<td><code>modern_dots-mocr_plain</code></td>
+<td>The same text with Markdown marks deleted</td>
+<td>Formatting ablation</td>
+</tr>
+<tr>
+<td><code>expert</code></td>
+<td>IMPACT expert transcription (CC-BY 3.0)</td>
+<td>Gold offsets refer to this text</td>
+</tr>
+</tbody>
+</table></div>
+<p>Median page character error rate (CER) of the legacy OCR, case-insensitive, on pages with at least 200
+characters, was 6.6% for Reeve and 2.0% for Butler; dots.mocr brought it to 1.3% and 1.1%. Reeve's legacy
+OCR fails exactly on the fields of interest (italic Latin diagnoses, abbreviations): <code>BULIMUS CHILENSIS</code>
+reads <code>BuLlMLS CiilLE.NSls</code>. Book and OCR quality are therefore confounded, and every result is reported
+per book.</p>
+<h3>3.2 Sample</h3>
+<p>22 pages were sampled by stratum (entity-rich, low-density, no target names, poor OCR) across the range
+of legacy CER, using TaxonFinder name counts from BHL metadata to find candidates: 6 development pages
+(3 per book) and 16 locked test pages (Butler 7, Reeve 9). Strata were defined before the labelling guide;
+one page sampled as "no entities" turned out to hold two mentions under the guide.</p>
+<h3>3.3 Gold labels</h3>
+<p>The annotation unit is a <strong>mention</strong>: a character span in the expert transcription plus one field:
+<code>taxon</code>, <code>person</code>, <code>locality</code>, <code>institution</code>, <code>date</code> (event dates only) and <code>vernacular</code> (scored
+separately, never in the primary number). The field set follows the entity types of NHM's BHL prototype,
+plus dates. The guide went through ten versions (v0.1–v0.10), each with a changelog. The labeller
+labelled every page before seeing any model output on it; each delivery was archived unchanged before any
+comparison; every later change was decided by the labeller and logged. Rules found on test pages went into
+the guide and the gold but never into the prompt, which was fixed at guide v0.6; scores are also reported
+with those rows treated as optional. Known typos in the expert transcription (<code>nontifringilla</code> for the
+scan's <code>montifringilla</code>) are recorded with the scan's reading as an accepted alternative.</p>
+<p>Gold size: development 186 mentions, test 421 (primary fields: Butler 137, Reeve 213). A second labeller
+labelled 5 test pages with a copy of the guide whose examples did not come from those pages. Agreement on
+the primary fields was 0.90 (exact span) and 0.95 (overlap); locality was lowest (0.75 exact), almost all
+at span edges. All 23 disagreements were adjudicated by the first labeller; none changed the gold.</p>
+<h3>3.4 External and scale-up material</h3>
+<ul>
+<li><strong>PCAS botany case</strong> [exploratory]: 8 pages of Eastwood 1898 (Proceedings of the California Academy of
+  Sciences, 3rd series, Botany 1), labelled against the scans (210 mentions), with no expert transcription.
+  Reported separately and never pooled.</li>
+<li><strong>Whole-book run</strong> [exploratory]: all 682 pages of both books with at least 20 characters of dots.mocr
+  text, with a 60-item spot-check against the scans.</li>
+</ul>
+<hr />
+<h2>4. Methods</h2>
+<h3>4.1 Extraction without rewriting</h3>
+<p>The model never rewrites the source. Lines are numbered; in condition <strong>G0</strong> the model returns field and
+value and code aligns the value to the source afterwards; in <strong>G1</strong> the model returns field, line number
+and a verbatim quote, and code checks the quote character by character in that line and slices the value
+from the source. A quote that does not match is logged as a silent correction; a quote not found is
+invalid evidence. Because values are sliced, "hallucination rate" is zero by construction and is not
+reported; we report unsupported outputs, wrong lines and type-check failures instead.</p>
+<p>Pre-registered models: Claude Opus 5.5 (Message Batches API, adaptive thinking, effort medium) and Gemini
+4 Carbon (synchronous API with the JSON schema enforced; Google's batch interface did not enforce the
+schema in a development run). Temperature was never set. One prompt (<code>p4-guide-v0.6</code>) for every text
+version. A rule baseline used gnfinder v1.4.0 for names and regular expressions for places and dates.</p>
+<h3>4.2 Scoring</h3>
+<p>One-to-one matching per page and field at three levels: <strong>lenient</strong> (character overlap), <strong>exact</strong> (same
+span) and <strong>value</strong> (overlap and the same text after normalising case, whitespace, end punctuation,
+line-end hyphenation and typographic quote and hyphen forms; letters are never changed). Value level is
+primary, because a well-placed misread name is wrong data. Predictions on OCR text are mapped to expert
+offsets by character alignment. 95% intervals come from 1,000 page-bootstrap resamples per book, paired
+for differences; verdicts compare intervals with thresholds written in advance. There is no correction for
+multiple comparisons: this is a pilot, and every comparison is reported.</p>
+<h3>4.3 Entity resolution</h3>
+<p>For Butler's 29 distinct printed names (43 taxon mentions), the labeller recorded the currently accepted
+name, using Avibase first, with a status of resolved, partial, ambiguous or unresolved; a script turned
+names into GBIF backbone keys by exact, rank-checked match. The pre-registered linker is a plain GBIF
+<code>species/match</code> lookup with no hints. Subfamily names are not scored because the backbone has no such
+rank. The pre-registered hypothesis was that more gold-resolved names are lost at linking than before it.</p>
+<h3>4.4 Review prioritisation (shadow evaluation)</h3>
+<p>A prediction is flagged "proposed auto-accept" if the other model extracted an overlapping span of the
+same field and the evidence and type checks pass. Nothing skips review; flags are scored against the gold
+set to see how many errors would have passed. Verdicts need at least 10 unflagged predictions.</p>
+<h3>4.5 Freeze and sealing</h3>
+<p>Test-page outputs were written to a sealed archive on arrival. Before unsealing, the gold set, guide,
+prompt, scorer, analysis code and run settings were hashed into <code>FREEZE.json</code>; the unseal script refuses
+to run unless every hash matches. The pre-registration itself is frozen, so every later change is logged
+in a separate deviations file.</p>
+<hr />
+<h2>5. Pre-registered results</h2>
+<figure class="wide"><img src="../figures/hero.png" alt="Extraction value F1 on three text versions and Butler link recall"><figcaption><b>Figure 1.</b> Left: value F1 of Claude Opus 5.5 (G1) on the same 16 test pages read as legacy OCR, modern OCR
+and expert transcription, with 95% page-bootstrap intervals. Right: Butler link recall on the expert text
+for the pre-registered plain GBIF lookup and, for reference, the exploratory LLM linker (§6.2).</figcaption></figure>
+<h3>5.1 RQ1: OCR quality</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Value F1, primary fields, G1</th>
+<th>Butler (137 gold)</th>
+<th>Reeve (213 gold)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opus, legacy OCR</td>
+<td class="n">0.597 [0.445, 0.736]</td>
+<td class="n">0.638 [0.521, 0.719]</td>
+</tr>
+<tr>
+<td>Opus, modern OCR</td>
+<td class="n">0.952 [0.923, 0.979]</td>
+<td class="n">0.977 [0.954, 0.997]</td>
+</tr>
+<tr>
+<td>Opus, expert transcription</td>
+<td class="n">0.982 [0.947, 1.000]</td>
+<td class="n">0.981 [0.974, 1.000]</td>
+</tr>
+<tr>
+<td>Gemini, legacy / modern / expert</td>
+<td class="n">0.604 / 0.964 / 0.975</td>
+<td class="n">0.642 / 0.979 / 0.988</td>
+</tr>
+</tbody>
+</table></div>
+<p>For Reeve, legacy → modern gained +0.34 [0.25, 0.46] (verdict: supports, threshold 0.10) and modern →
+expert +0.005 [−0.015, 0.03] (supports, below 0.05). Butler is descriptive: +0.36 and +0.03 [0.01, 0.06].
+On legacy OCR the models found the right place (lenient F1 0.93–0.97) but copied the misread text.
+Removing Markdown changed F1 by −0.015 to 0. The labeller tagged each of the 163 gold mentions that Opus
+got wrong in some text version (several tags allowed): 151 were OCR-sensitive (130 only that), 17
+extraction or reasoning errors, 32 ambiguous or mixed.</p>
+<h3>5.2 RQ2: LLM against a rule baseline</h3>
+<p>On the expert text, the LLM's recall was higher for taxon and person in both books and for Butler's
+localities (supports); Reeve's localities and institutions and Butler's dates were inconclusive. Taxon
+value F1 was 1.00 against 0.64 (Butler) and 0.99 against 0.54 (Reeve). The largest gap was for person
+(recall +0.74 and +0.78), not for institution as predicted.</p>
+<h3>5.3 RQ3: requiring evidence</h3>
+<p>Requiring a verbatim quote changed recall by −0.015 to +0.007 (no cost; supports). Neither condition
+produced an unsupported output in either book or text version (0 of 174–232 outputs per cell), and there
+were no wrong lines or silent corrections. The expected reduction could therefore not be observed (§7.3).</p>
+<h3>5.4 RQ4: agreement as a review signal</h3>
+<p>The two models agreed on 99–100% of predictions, leaving at most 2 unflagged per book and text version:
+too few to compare. Errors inside the "proposed auto-accept" set were 3 (Butler) and 4 (Reeve) on the
+expert text, 6 and 5 on modern OCR, and <strong>50 and 75 on legacy OCR</strong>. Both models copied the same OCR
+damage.</p>
+<h3>5.5 E4: where names are lost</h3>
+<p>On the expert text, of 34 gold-resolved Butler names, <strong>14 were lost at linking and 0 before it</strong>
+(difference 0.41 [0.25, 0.60]; supports); on modern OCR, 13 against 1 (0.35 [0.10, 0.55]). Plain-lookup
+link recall was 0.59 even on the expert text (8 matched only at genus, 3 to the wrong taxon, 3 not found)
+and 0.12 on legacy OCR. The lost names are old genera and synonyms (<code>Aedon</code>, <code>Lusciniola</code>, <code>Munia</code>),
+names now treated as races of another species (<code>Motacilla beema</code>), abbreviated genera whose full name is
+not on the page (<code>M. minuta</code>) and a homonym (<code>Passer</code>).</p>
+<h3>5.6 Sensitivity</h3>
+<p>Treating the 12 gold rows decided by guide rules added after the prompt as optional changed primary F1 by
+at most 0.004.</p>
+<hr />
+<h2>6. Exploratory results</h2>
+<p>Everything in this section was designed after the test outputs were unsealed, uses the same 16 test pages,
+frozen gold and scorer, and needs a fresh test set before it counts as a finding.</p>
+<h3>6.1 Name preservation, not page error rate</h3>
+<p>All 21 FineBooks OCR rows whose outputs may be sent to an API, plus legacy OCR, were run through the frozen
+G1 condition. Value F1 tracked the share of gold names that survived OCR intact (Spearman 0.95 Butler, 1.00
+Reeve) and not page CER (−0.07, −0.62). Several OCR models with page CER under 0.5% kept only 57–80% of
+Butler's names intact. Extraction recall was close to preservation (median gap +0.01): if the name
+survives OCR, the model gets it.</p>
+<figure class="wide"><img src="../../poster/fig/ladder_poster.png" alt="Value F1 against gold names intact after OCR"><figcaption><b>Figure 2.</b> Each point is one OCR version of the same 16 pages (Butler blue, Reeve orange). The dashed line
+is y = x.</figcaption></figure>
+<h3>6.2 Is the linking loss the linker's?</h3>
+<p>Mostly. A GBIF lookup with an animal hint and abbreviation expansion reached 0.62. An LLM linker (printed
+name and its context → currently accepted name → GBIF) reached 0.91 on the expert text and 0.71 on legacy
+OCR (from 0.12). Its remaining misses are taxonomic judgments (<code>Phylloscopus tristis</code> as a race of
+<em>P. collybita</em>). The model mattered here: Opus 0.91, Fable 5.2 0.88, Sonnet 5.5 0.79, Haiku 5.5 0.76.</p>
+<h3>6.3 Cheaper and stronger extraction models</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Value F1, G1 (Butler / Reeve)</th>
+<th>Haiku 5.5</th>
+<th>Sonnet 5.5</th>
+<th>Opus 5.5</th>
+<th>Fable 5.2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modern OCR</td>
+<td class="n">0.94 / 0.95</td>
+<td class="n">0.93 / 0.97</td>
+<td class="n">0.95 / 0.98</td>
+<td class="n">0.96 / 0.98</td>
+</tr>
+<tr>
+<td>Legacy OCR</td>
+<td class="n">0.61 / 0.60</td>
+<td class="n">0.58 / 0.64</td>
+<td class="n">0.60 / 0.64</td>
+<td class="n">0.60 / 0.65</td>
+</tr>
+<tr>
+<td>US$ per 1,000 page-passes</td>
+<td>0.6 (batch)</td>
+<td>10 (sync)</td>
+<td>11 (batch)</td>
+<td>43 (sync)</td>
+</tr>
+</tbody>
+</table></div>
+<p>The model gap (≤ 0.05) is small next to the OCR gap (about 0.35).</p>
+<h3>6.4 LLM repair and reading the image</h3>
+<ul>
+<li><strong>G2, repair</strong>: the model keeps a verbatim quote (checked as in G1) and adds a separate repaired reading,
+  scored on the reading and flagged when it differs. Legacy OCR rose from 0.60 to 0.96 (Butler) and 0.64 to
+  0.91 (Reeve); Tesseract output from 0.68 and 0.67 to 0.96 and 0.94. About 30% of legacy values were changed, 92%
+  of them correctly. On the expert text G2 changed four values, three of them the transcription's own
+  typos.</li>
+<li><strong>Fluent OCR errors are not repairable</strong>: DeepSeek-OCR-2 writes plausible text (<code>Linnaeus</code> for
+  <code>Linnæus</code>, <code>Turritella brevisis</code>); repair reached only 0.81 and 0.87.</li>
+<li><strong>V1, page image only</strong>: 0.96 and 0.98 (value-bag scoring). <strong>V2</strong>, image plus OCR, added nothing over
+  repair.</li>
+</ul>
+<h3>6.5 Memorisation probe</h3>
+<p>The books are public. In the expert text we swapped two neighbouring letters in 69 gold names (a visible
+error) and replaced the epithet of 29 binomials with one printed elsewhere in the same book (a fluent
+change). Opus and Fable restored 65–68 of the 69 typos and Haiku 54; <strong>none of the three models restored
+any of the 29 fluent swaps</strong>, even when the original name was printed elsewhere on the page. Repair reacts
+to visible errors, not to a remembered page. This does not rule out memorisation in general.</p>
+<h3>6.6 Image-level evidence</h3>
+<p>Asked to read the page image and draw a box per mention (V3), Opus got 96–98% of values right, but the box
+contained the right word (Internet Archive hOCR word boxes as reference, lenient matching) for only 67%
+(Butler) and 40% (Reeve, two-column dense pages) of them.</p>
+<h3>6.7 Cheap review signals</h3>
+<p>On legacy OCR, two mechanical checks (OCR-junk characters in a value; no exact GBIF match for a taxon)
+flagged 25% of outputs and caught 55% of the errors at 77% precision; model disagreement caught 7%. On
+modern OCR, errors were rare (about 3%) and no cheap signal found them.</p>
+<h3>6.8 Whole books</h3>
+<p>The frozen G1 prompt on 682 pages took 7.5 minutes per batch and cost US$7.64 (Opus) and US$0.40 (Haiku).
+On the 16 test pages inside the run, F1 matched the evaluated setting (Opus 0.96 / 0.98). In a 60-item
+shuffled spot-check against the scans, with the stratum hidden, all 25 decided Opus outputs from outside
+the sample were correct, with no misread. 19 of 21 "unsure" items were entries in Reeve's index, a scope
+the guide never defined: 16% of Opus's output outside the sample sat on index pages. Ruling BHL <code>Index</code>
+pages out of scope cut the queue of mentions needing review (no agreement or a failed check) from 1,404 to
+555. Of 14 decided outputs that only Haiku produced, 10 were real mentions Opus missed. Median review time
+was 30 s per item (9 timed items).</p>
+<h3>6.9 Botany (PCAS 1898)</h3>
+<p>On 8 botany pages without an expert transcription (value-level scoring, pages pooled, Opus): frozen G1 on
+legacy OCR 0.70, repair 0.83, image only 0.83 as labelled; taxa 0.73, 0.96 and 0.99. After the labeller
+adjudicated five boundary conventions (titles not part of person names, narrow-to-wide place chains as one
+span, a sub-unit and its parent as one institution, a part-of-place phrase, <code>Carolinæ</code> as printed), the
+totals rose to 0.80, 0.94 and 0.94. Every adjudication moved the gold towards the model's boundary and was
+made after seeing model output, so both versions are reported. Joint botanical authorities (<code>H. &amp; A.</code>) are
+one person under the labeller's rule; the model splits them.</p>
+<hr />
+<h2>7. Discussion</h2>
+<h3>7.1 Where reliability is lost</h3>
+<p>On these two English printed books the answer to the research question is: OCR is the first bottleneck,
+and it stops being the main one as soon as entity names survive it. Modern OCR, LLM repair and reading the
+image all bring extraction to about 0.95. After that the limits are entity resolution (the largest
+measured loss on clean text), the definition of what counts as a datum (boundary conventions and
+undefined scope account for differences of up to ten points), and errors no later step can see (fluent OCR
+misreadings). There is no single page-CER threshold; name preservation is the measure to watch.</p>
+<h3>7.2 Same accuracy is not the same evidence</h3>
+<p>The three routes past bad OCR are not interchangeable for a curator. Modern OCR with quote-checked
+extraction yields values sliced from text, with a line and a quote an auditor can check mechanically.
+Repair yields the model's reading, of which about one in twelve changed values is a confident wrong
+reading. Image reading yields a transcription with no text anchor and boxes that cannot be trusted as
+pointers. Where records go to GBIF or into a citable dataset, the route should be chosen on audit cost per
+value as well as on F1, and image coordinates should come from OCR word boxes.</p>
+<h3>7.3 What the null evidence result means</h3>
+<p>Requiring a verbatim quote produced no measurable accuracy gain. That is a statement about the metric:
+both conditions took values from the source by code, so the comparison was between two forms of
+verification, not verification against none. The value of evidence is traceability and audit cost, and it
+should be measured as such: the share of values traceable to the page, reviewer time per value, and errors
+caught with and without evidence.</p>
+<h3>7.4 Implications for re-OCR projects</h3>
+<p>Large re-OCR projects are under way. Our results suggest two cheap additions. First, accept an OCR model
+(and every new version of it) on name preservation measured on a small labelled sample per kind of
+material, not on page accuracy; a model that writes fluent errors can score well on page CER and still
+break names that no later step can repair. Second, report losses per stage, including linking, rather
+than one end-to-end F1. We would welcome running these tests on open gold sets as they appear.</p>
+<h3>7.5 Where to spend</h3>
+<p>Keep investing in OCR, accepted on name survival per kind of material; fund entity resolution as its own
+workstream, with a curator-owned taxonomy policy; write the scope before scaling; review by sampling, with
+evidence attached; and do not buy a bigger extraction model: Haiku 5.5 was within a few points of Opus 5.5
+at about a fifteenth of the cost.</p>
+<hr />
+<h2>8. Limitations</h2>
+<ul>
+<li><strong>Small and narrow.</strong> Two English books printed in 1849 and 1907, 16 test pages, plus 8 botany pages.
+  Intervals are wide; nothing generalises to BHL as a whole. Other languages, layouts, eras, tables,
+  plates and handwriting were not tested.</li>
+<li><strong>Confounding.</strong> Book and OCR quality are confounded; results are per book.</li>
+<li><strong>Contamination.</strong> BHL, the IMPACT transcriptions and PCAS are public and may be in the models'
+  pre-training data.</li>
+<li><strong>Labels.</strong> One gold labeller; a second on 5 pages. The guide grew during labelling; rules added after
+  the prompt are reported both ways. The development pages are not blind.</li>
+<li><strong>Exploratory work</strong> was designed after unsealing and needs a fresh test.</li>
+<li><strong>Linking</strong> was scored on birds only (34 names); molluscs, with heavier synonymy, were deferred.</li>
+<li><strong>Review time</strong> comes from 9 timed spot-check items, not a review-time study.</li>
+<li><strong>AI assistance.</strong> The pipeline, scorer and documents were built with an AI coding assistant (Claude
+  Code), and Claude models are among those evaluated. The assistant never created or pre-filled gold
+  labels and did not review test labels for omissions; every labelling decision was made by the labeller
+  and logged.</li>
+</ul>
+<hr />
+<h2>9. Conclusion</h2>
+<p>A pre-registered, stage-by-stage evaluation on two historical books shows that OCR is where most
+reliability is lost and that modern OCR wins most of it back; after that, linking names to today's
+taxonomy and defining what counts as a datum limit trust, not the extraction model. Page error rate is the
+wrong OCR metric for this use; name preservation is the right one. And because routes with equal accuracy
+leave unequal evidence, the choice between them should be made on audit cost as well as on F1.</p>
+<hr />
+<h2>Data and code availability</h2>
+<p>Repository: <a href="https://github.com/dekunsun/BioEvidenceBench">github.com/dekunsun/BioEvidenceBench</a>.
+<a href="../results.md">Results</a> · <a href="../eval_settings.md">evaluation settings, one row per run</a> ·
+<a href="../product.md">product summary and decision memo</a> · <a href="../lessons_learned.md">lessons learned</a> ·
+<a href="../../ANNOTATION_GUIDE.md">annotation guide</a> · <a href="../../PREREGISTRATION.md">pre-registration</a> ·
+<a href="../../DEVIATIONS.md">deviations</a>. Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata:
+CC0. Total API spend for the project was about US$50.</p>
+<h2>Acknowledgements</h2>
+<p>Thanks to the second labeller for five pages of independent labels, and to the FineBooks, IMPACT and BHL
+teams for open data.</p>
+<h2>References</h2>
+<ol class="refs">
+<li>FineBooks. README, BHL OCR leaderboard and datasets <code>finebooks/bhl-impact-gt</code>, <code>finebooks/bhl-metadata</code>.
+   https://finebooks-readme.static.hf.space/README.md</li>
+<li>Hartley B, Gu QH, Smith V (2026). BHL &amp; the Planetary Knowledge Base: Structuring Biodiversity
+   Literature for the Next Generation. Talk, BHL Annual Meeting (BHL Day), Natural History Museum, London.</li>
+<li>Gu QH (2026). BHL and the Planetary Knowledge Base. Talk, TDWG 2026, 22 September; Smith V (2026). The
+   Planetary Knowledge Base: an infinite solutions engine converting data into action for nature. Talk,
+   TDWG 2026, 25 September.</li>
+<li>Plazi. TreatmentBank. https://plazi.org/treatmentbank/</li>
+<li>Page R (2026). bhl-ocr-bench. https://github.com/rdmpage/bhl-ocr-bench</li>
+<li>Gu Q, Scott B, Smith VS (2022). Enhancing Botanical Knowledge Graphs with Machine Learning.
+   Biodiversity Information Science and Standards 6: e91384. https://doi.org/10.3897/biss.6.91384</li>
+<li>Gu Q, Scott B, Smith VS (2023). Planetary Knowledge Base: Semantic Transcription Using Graph Neural
+   Networks. Biodiversity Information Science and Standards 7: e111168. https://doi.org/10.3897/biss.7.111168</li>
+<li>Araujo AC, Hartley B, Brummitt N (2026). Angiosperm functional traits extracted from botanical
+   descriptions. Natural History Museum data portal. https://doi.org/10.5519/p3dm31kc</li>
+<li>Natural History Museum. ADEPT: Automated Data Extraction for Plant Traits (code and evaluation bundle).
+   https://github.com/NaturalHistoryMuseum/ADEPT</li>
+<li>Lei, Docherty and Cooper (2024). Materials science in the era of large language models: a perspective.
+    Digital Discovery. https://pubs.rsc.org/en/content/articlelanding/2024/dd/d4dd00074a (arXiv:2403.06949)</li>
+<li>Global Names Architecture. gnfinder v1.4.0. https://github.com/gnames/gnfinder</li>
+<li>GBIF. Species API (v1). https://techdocs.gbif.org/en/openapi/v1/species</li>
+</ol>
+
+</body>
+</html>
