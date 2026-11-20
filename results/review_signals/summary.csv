@@ -1,0 +1,61 @@
+versions,book,signal,predictions,errors,flagged,flagged_share,errors_caught,recall,precision,errors_left_unflagged,error_rate_unflagged
+all OCR versions,both,ocr_junk,9443,1226,242,0.026,62,0.051,0.256,1164,0.127
+all OCR versions,Butler,ocr_junk,4155,494,216,0.052,40,0.081,0.185,454,0.115
+all OCR versions,Reeve,ocr_junk,5288,732,26,0.005,22,0.03,0.846,710,0.135
+all OCR versions,both,gbif_no_exact,9443,1226,1451,0.154,447,0.365,0.308,779,0.097
+all OCR versions,Butler,gbif_no_exact,4155,494,632,0.152,250,0.506,0.396,244,0.069
+all OCR versions,Reeve,gbif_no_exact,5288,732,819,0.155,197,0.269,0.241,535,0.12
+all OCR versions,both,any_cheap,9443,1226,1659,0.176,478,0.39,0.288,748,0.096
+all OCR versions,Butler,any_cheap,4155,494,831,0.2,273,0.553,0.329,221,0.066
+all OCR versions,Reeve,any_cheap,5288,732,828,0.157,205,0.28,0.248,527,0.118
+all OCR versions,both,not_agreed,816,156,13,0.016,12,0.077,0.923,144,0.179
+all OCR versions,Butler,not_agreed,355,66,6,0.017,5,0.076,0.833,61,0.175
+all OCR versions,Reeve,not_agreed,461,90,7,0.015,7,0.078,1.0,83,0.183
+all OCR versions,both,legacy_text,9443,1226,403,0.043,143,0.117,0.355,1083,0.12
+all OCR versions,Butler,legacy_text,4155,494,174,0.042,59,0.119,0.339,435,0.109
+all OCR versions,Reeve,legacy_text,5288,732,229,0.043,84,0.115,0.367,648,0.128
+expert,both,ocr_junk,412,8,8,0.019,0,0.0,0.0,8,0.02
+expert,Butler,ocr_junk,182,4,8,0.044,0,0.0,0.0,4,0.023
+expert,Reeve,ocr_junk,230,4,0,0.0,0,0.0,,4,0.017
+expert,both,gbif_no_exact,412,8,56,0.136,0,0.0,0.0,8,0.022
+expert,Butler,gbif_no_exact,182,4,25,0.137,0,0.0,0.0,4,0.025
+expert,Reeve,gbif_no_exact,230,4,31,0.135,0,0.0,0.0,4,0.02
+expert,both,any_cheap,412,8,64,0.155,0,0.0,0.0,8,0.023
+expert,Butler,any_cheap,182,4,33,0.181,0,0.0,0.0,4,0.027
+expert,Reeve,any_cheap,230,4,31,0.135,0,0.0,0.0,4,0.02
+expert,both,not_agreed,412,8,5,0.012,3,0.375,0.6,5,0.012
+expert,Butler,not_agreed,182,4,3,0.016,2,0.5,0.667,2,0.011
+expert,Reeve,not_agreed,230,4,2,0.009,1,0.25,0.5,3,0.013
+expert,both,legacy_text,412,8,0,0.0,0,0.0,,8,0.019
+expert,Butler,legacy_text,182,4,0,0.0,0,0.0,,4,0.022
+expert,Reeve,legacy_text,230,4,0,0.0,0,0.0,,4,0.017
+legacy,both,ocr_junk,403,143,47,0.117,42,0.294,0.894,101,0.284
+legacy,Butler,ocr_junk,174,59,30,0.172,26,0.441,0.867,33,0.229
+legacy,Reeve,ocr_junk,229,84,17,0.074,16,0.19,0.941,68,0.321
+legacy,both,gbif_no_exact,403,143,80,0.199,61,0.427,0.762,82,0.254
+legacy,Butler,gbif_no_exact,174,59,33,0.19,29,0.492,0.879,30,0.213
+legacy,Reeve,gbif_no_exact,229,84,47,0.205,32,0.381,0.681,52,0.286
+legacy,both,any_cheap,403,143,101,0.251,78,0.545,0.772,65,0.215
+legacy,Butler,any_cheap,174,59,49,0.282,41,0.695,0.837,18,0.144
+legacy,Reeve,any_cheap,229,84,52,0.227,37,0.44,0.712,47,0.266
+legacy,both,not_agreed,403,143,11,0.027,10,0.07,0.909,133,0.339
+legacy,Butler,not_agreed,174,59,5,0.029,4,0.068,0.8,55,0.325
+legacy,Reeve,not_agreed,229,84,6,0.026,6,0.071,1.0,78,0.35
+legacy,both,legacy_text,403,143,403,1.0,143,1.0,0.355,0,
+legacy,Butler,legacy_text,174,59,174,1.0,59,1.0,0.339,0,
+legacy,Reeve,legacy_text,229,84,229,1.0,84,1.0,0.367,0,
+modern_dots-mocr,both,ocr_junk,413,13,8,0.019,0,0.0,0.0,13,0.032
+modern_dots-mocr,Butler,ocr_junk,181,7,8,0.044,0,0.0,0.0,7,0.04
+modern_dots-mocr,Reeve,ocr_junk,232,6,0,0.0,0,0.0,,6,0.026
+modern_dots-mocr,both,gbif_no_exact,413,13,55,0.133,3,0.231,0.055,10,0.028
+modern_dots-mocr,Butler,gbif_no_exact,181,7,23,0.127,1,0.143,0.043,6,0.038
+modern_dots-mocr,Reeve,gbif_no_exact,232,6,32,0.138,2,0.333,0.062,4,0.02
+modern_dots-mocr,both,any_cheap,413,13,63,0.153,3,0.231,0.048,10,0.029
+modern_dots-mocr,Butler,any_cheap,181,7,31,0.171,1,0.143,0.032,6,0.04
+modern_dots-mocr,Reeve,any_cheap,232,6,32,0.138,2,0.333,0.062,4,0.02
+modern_dots-mocr,both,not_agreed,413,13,2,0.005,2,0.154,1.0,11,0.027
+modern_dots-mocr,Butler,not_agreed,181,7,1,0.006,1,0.143,1.0,6,0.033
+modern_dots-mocr,Reeve,not_agreed,232,6,1,0.004,1,0.167,1.0,5,0.022
+modern_dots-mocr,both,legacy_text,413,13,0,0.0,0,0.0,,13,0.031
+modern_dots-mocr,Butler,legacy_text,181,7,0,0.0,0,0.0,,7,0.039
+modern_dots-mocr,Reeve,legacy_text,232,6,0,0.0,0,0.0,,6,0.026

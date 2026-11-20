@@ -1,0 +1,384 @@
+{"q": "Lanius collurio", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 7745240, "canonicalName": "Lanius collurio"}, "at": "2026-11-20T00:34:01+00:00"}
+{"q": "M. mituita", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:01+00:00"}
+{"q": "M. leucura", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:02+00:00"}
+{"q": "M. parva", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:03+00:00"}
+{"q": "M. hyperythra", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:03+00:00"}
+{"q": "Munia atricapilla", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 11193829, "canonicalName": "Munia atricapilla"}, "at": "2026-11-20T00:34:04+00:00"}
+{"q": "Quelea quelea", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 2493987, "canonicalName": "Quelea quelea"}, "at": "2026-11-20T00:34:04+00:00"}
+{"q": "Q. ri<sst", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:05+00:00"}
+{"q": "Paroaria ccrvicalis", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2492080, "canonicalName": "Paroaria"}, "at": "2026-11-20T00:34:06+00:00"}
+{"q": "P. capiiata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:06+00:00"}
+{"q": "Fyi>igiIIa", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:07+00:00"}
+{"q": "I^ri)ioi/ln", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:07+00:00"}
+{"q": "Piisser", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:08+00:00"}
+{"q": "Emberizina", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:08+00:00"}
+{"q": "Frinoii/d iiii>iitijriii<^illii", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:09+00:00"}
+{"q": "Phy/Iosiopus f^ivrcgit/iis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:09+00:00"}
+{"q": "TURDID.F", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:09+00:00"}
+{"q": "SYL I IIN.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:10+00:00"}
+{"q": "Phy//oscop!is tristis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:10+00:00"}
+{"q": "TURDIL)^", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:11+00:00"}
+{"q": "SYL I 'IIN.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:11+00:00"}
+{"q": "Phylloscopiis viridaiius", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:12+00:00"}
+{"q": "TL ^RDID", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:12+00:00"}
+{"q": "Aidon (^alcnimAs", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:13+00:00"}
+{"q": "TURDID.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:13+00:00"}
+{"q": "Acdoii fnmiliaris", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:13+00:00"}
+{"q": "TURD ID ^", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:14+00:00"}
+{"q": "SYL I IIN^", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:14+00:00"}
+{"q": "Lusciniola sckwarzi", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "DOUBTFUL", "usageKey": 7468026, "canonicalName": "Lusciniola"}, "at": "2026-11-20T00:34:15+00:00"}
+{"q": "MO TA CIL L ID^", "r": {"matchType": "HIGHERRANK", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 11888443, "canonicalName": "Mota"}, "at": "2026-11-20T00:34:15+00:00"}
+{"q": "Motacilla vulauoccphala", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2490295, "canonicalName": "Motacilla"}, "at": "2026-11-20T00:34:15+00:00"}
+{"q": "M. flaz'a", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:16+00:00"}
+{"q": "MO TA CILL ID. F", "r": {"matchType": "HIGHERRANK", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 11888443, "canonicalName": "Mota"}, "at": "2026-11-20T00:34:16+00:00"}
+{"q": "Motacilla beema", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2490295, "canonicalName": "Motacilla"}, "at": "2026-11-20T00:34:17+00:00"}
+{"q": "MO TA CILLlDzE", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 11888443, "canonicalName": "Mota"}, "at": "2026-11-20T00:34:17+00:00"}
+{"q": "Motacilla cinereocapilla", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5789216, "canonicalName": "Motacilla cinereocapilla"}, "at": "2026-11-20T00:34:18+00:00"}
+{"q": "M. /lava", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:18+00:00"}
+{"q": "BuLlMLS CiilLE.NSls", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:19+00:00"}
+{"q": "Bulimics granulosus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11393321, "canonicalName": "Bulimus granulosus"}, "at": "2026-11-20T00:34:19+00:00"}
+{"q": "Pupa", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3244098, "canonicalName": "Pupa"}, "at": "2026-11-20T00:34:19+00:00"}
+{"q": "B. riigiferm", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:20+00:00"}
+{"q": "Bancinii", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:20+00:00"}
+{"q": "lili.lMUS TURRlTUS", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:21+00:00"}
+{"q": "lUl.lMis sciLPTUKATUS", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:21+00:00"}
+{"q": "lUl.mus C.4.LVUS", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:21+00:00"}
+{"q": "Jc/ia/iiiella", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:22+00:00"}
+{"q": "Bulimus pustulosus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 8967607, "canonicalName": "Bulinus pustulosus"}, "at": "2026-11-20T00:34:22+00:00"}
+{"q": "Helix calcarea", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:34:22+00:00"}
+{"q": "BuLiMUS OBTUSATUS", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:34:23+00:00"}
+{"q": "Helix obtusuta", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:34:23+00:00"}
+{"q": "Bulimus calcareus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11292509, "canonicalName": "Bulimus calcareus"}, "at": "2026-11-20T00:34:24+00:00"}
+{"q": "Bulimus clavator", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10157959, "canonicalName": "Bulimus clavator"}, "at": "2026-11-20T00:34:24+00:00"}
+{"q": "BuLiJius ROSEATUS", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:24+00:00"}
+{"q": "B. oreades", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:25+00:00"}
+{"q": "B. perdu", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:25+00:00"}
+{"q": "Bulimus feriatus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 8918572, "canonicalName": "Bulimus feriatus"}, "at": "2026-11-20T00:34:26+00:00"}
+{"q": "Bulimus perdix", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9045238, "canonicalName": "Bulimus perdix"}, "at": "2026-11-20T00:34:26+00:00"}
+{"q": "Bulimus euuyomphalus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10397056, "canonicalName": "Bulimus euryomphalus"}, "at": "2026-11-20T00:34:26+00:00"}
+{"q": "Bulimus glaber", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11330880, "canonicalName": "Bulimus glaber"}, "at": "2026-11-20T00:34:27+00:00"}
+{"q": "TUEEITELLA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:27+00:00"}
+{"q": "Turritella", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3245560, "canonicalName": "Turritella"}, "at": "2026-11-20T00:34:28+00:00"}
+{"q": "Cerithium", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 8179898, "canonicalName": "Cerithium"}, "at": "2026-11-20T00:34:28+00:00"}
+{"q": "Turbo acutangulus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 6514863, "canonicalName": "Turbo acutangulus"}, "at": "2026-11-20T00:34:28+00:00"}
+{"q": "T. duplicat/is", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:29+00:00"}
+{"q": "Turbo variega- tm", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:34:29+00:00"}
+{"q": "Turbo iuibricaltis", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:34:30+00:00"}
+{"q": "Turbo ungulinus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497841, "canonicalName": "Turbo ungulinus"}, "at": "2026-11-20T00:34:30+00:00"}
+{"q": "Turritella fuscata", "r": {"matchType": "HIGHERRANK", "rank": "CLASS", "status": "ACCEPTED", "usageKey": 225, "canonicalName": "Gastropoda"}, "at": "2026-11-20T00:34:30+00:00"}
+{"q": "Turbo terebra", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497807, "canonicalName": "Turbo terebra"}, "at": "2026-11-20T00:34:31+00:00"}
+{"q": "T. cornea", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:31+00:00"}
+{"q": "Turritella brevialis", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497744, "canonicalName": "Turritella brevialis"}, "at": "2026-11-20T00:34:32+00:00"}
+{"q": "Mesalia", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:32+00:00"}
+{"q": "Turritella lactea", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497742, "canonicalName": "Turritella lactea"}, "at": "2026-11-20T00:34:32+00:00"}
+{"q": "Eglisia", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 4362800, "canonicalName": "Eglisia"}, "at": "2026-11-20T00:34:33+00:00"}
+{"q": "Turritella spirata", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 6493670, "canonicalName": "Turritella spirata"}, "at": "2026-11-20T00:34:33+00:00"}
+{"q": "Turritella ingulina", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3245560, "canonicalName": "Turritella"}, "at": "2026-11-20T00:34:34+00:00"}
+{"q": "T. fuscata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:34+00:00"}
+{"q": "T. unguUua", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:35+00:00"}
+{"q": "TURIUTF.LLA DUPLICATA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:35+00:00"}
+{"q": "Turbo dupUcatm", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:34:36+00:00"}
+{"q": "Turbo repUcatus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6514849, "canonicalName": "Turbo replicatus"}, "at": "2026-11-20T00:34:36+00:00"}
+{"q": "Turbo acutmigulus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 6514863, "canonicalName": "Turbo acutangulus"}, "at": "2026-11-20T00:34:36+00:00"}
+{"q": "Turbo dupUcatus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497817, "canonicalName": "Turbo duplicatus"}, "at": "2026-11-20T00:34:37+00:00"}
+{"q": "Turr'UeUa dupUcata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:37+00:00"}
+{"q": "TurRITELLA TEREBUA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:38+00:00"}
+{"q": "Tnrritella Archimedis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:38+00:00"}
+{"q": "T. terebra", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:39+00:00"}
+{"q": "T.commmm", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:39+00:00"}
+{"q": "Turritella attenuata", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5934264, "canonicalName": "Turritella attenuata"}, "at": "2026-11-20T00:34:40+00:00"}
+{"q": "Turritella acutangula", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 9473164, "canonicalName": "Turritella acutangula"}, "at": "2026-11-20T00:34:40+00:00"}
+{"q": "Turbo cfcutangulus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:34:40+00:00"}
+{"q": "T. duplicatus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:41+00:00"}
+{"q": "T. lentiijhwsn", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:41+00:00"}
+{"q": "T. goniostoma", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:42+00:00"}
+{"q": "T. letiliginosa", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:42+00:00"}
+{"q": "CASSIDARIA", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 7390893, "canonicalName": "Littorinimorpha"}, "at": "2026-11-20T00:34:43+00:00"}
+{"q": "E B U R N A", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:43+00:00"}
+{"q": "M. minuta", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:43+00:00"}
+{"q": "Q. russi", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:44+00:00"}
+{"q": "Paroaria cervicalis", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2492080, "canonicalName": "Paroaria"}, "at": "2026-11-20T00:34:44+00:00"}
+{"q": "P. capitata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:45+00:00"}
+{"q": "Fringilla", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2494421, "canonicalName": "Fringilla"}, "at": "2026-11-20T00:34:45+00:00"}
+{"q": "Passer", "r": {"matchType": "HIGHERRANK", "rank": "PHYLUM", "status": "ACCEPTED", "usageKey": 44, "canonicalName": "Chordata"}, "at": "2026-11-20T00:34:45+00:00"}
+{"q": "Emberizin\u00e6", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 9608, "canonicalName": "Emberizidae"}, "at": "2026-11-20T00:34:46+00:00"}
+{"q": "Fringilla montifringilla", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 2494441, "canonicalName": "Fringilla montifringilla"}, "at": "2026-11-20T00:34:46+00:00"}
+{"q": "TURDID\u00c6", "r": {"matchType": "EXACT", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5290, "canonicalName": "Turdidae"}, "at": "2026-11-20T00:34:47+00:00"}
+{"q": "SYLVIIN\u00c6", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5285, "canonicalName": "Sylviidae"}, "at": "2026-11-20T00:34:47+00:00"}
+{"q": "Phylloscopus proregulus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 2493090, "canonicalName": "Phylloscopus proregulus"}, "at": "2026-11-20T00:34:48+00:00"}
+{"q": "Phylloscopus tristis", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 7947730, "canonicalName": "Phylloscopus tristis"}, "at": "2026-11-20T00:34:48+00:00"}
+{"q": "Phylloscopus viridanus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2493047, "canonicalName": "Phylloscopus"}, "at": "2026-11-20T00:34:49+00:00"}
+{"q": "Aedon galactodes", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11363027, "canonicalName": "Aedon galactodes"}, "at": "2026-11-20T00:34:49+00:00"}
+{"q": "Aedon familiaris", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "SYNONYM", "usageKey": 4850583, "canonicalName": "Aedon"}, "at": "2026-11-20T00:34:49+00:00"}
+{"q": "Lusciniola schwarzi", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "DOUBTFUL", "usageKey": 7468026, "canonicalName": "Lusciniola"}, "at": "2026-11-20T00:34:50+00:00"}
+{"q": "MOTACILLID\u00c6", "r": {"matchType": "EXACT", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5257, "canonicalName": "Motacillidae"}, "at": "2026-11-20T00:34:50+00:00"}
+{"q": "Motacilla melanocephala", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9102728, "canonicalName": "Motacilla melanocephala"}, "at": "2026-11-20T00:34:51+00:00"}
+{"q": "M. flava", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:51+00:00"}
+{"q": "BULIMUS CHILENSIS", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:34:51+00:00"}
+{"q": "Bulimus granulosus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11393321, "canonicalName": "Bulimus granulosus"}, "at": "2026-11-20T00:34:52+00:00"}
+{"q": "BULIMUS TURRITUS", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9488863, "canonicalName": "Bulimus turritus"}, "at": "2026-11-20T00:34:52+00:00"}
+{"q": "BULIMUS SCULPTURATUS", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 8792143, "canonicalName": "Bulimus sculpturatus"}, "at": "2026-11-20T00:34:53+00:00"}
+{"q": "B. rugiferus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:53+00:00"}
+{"q": "Darwinii", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:53+00:00"}
+{"q": "BULIMUS CALVUS", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11349403, "canonicalName": "Bulimus clava"}, "at": "2026-11-20T00:34:54+00:00"}
+{"q": "Achatinella", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 7409048, "canonicalName": "Achatinella"}, "at": "2026-11-20T00:34:54+00:00"}
+{"q": "BULIMUS PUSTULOSUS", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 8967607, "canonicalName": "Bulinus pustulosus"}, "at": "2026-11-20T00:34:55+00:00"}
+{"q": "BULIMUS OBTUSATUS", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 8373851, "canonicalName": "Bulimus"}, "at": "2026-11-20T00:34:55+00:00"}
+{"q": "Helix obtusata", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:34:55+00:00"}
+{"q": "BULIMUS CLAVATOR", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10157959, "canonicalName": "Bulimus clavator"}, "at": "2026-11-20T00:34:56+00:00"}
+{"q": "BULIMUS ROSEATUS", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 8880690, "canonicalName": "Bulimus roseatus"}, "at": "2026-11-20T00:34:56+00:00"}
+{"q": "BULIMUS FERIATUS", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 8918572, "canonicalName": "Bulimus feriatus"}, "at": "2026-11-20T00:34:57+00:00"}
+{"q": "BULIMUS PERDIX", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9045238, "canonicalName": "Bulimus perdix"}, "at": "2026-11-20T00:34:57+00:00"}
+{"q": "B. perdix", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:34:57+00:00"}
+{"q": "BULIMUS EURYOMPHALUS", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10397056, "canonicalName": "Bulimus euryomphalus"}, "at": "2026-11-20T00:34:58+00:00"}
+{"q": "BULIMUS GLABER", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11330880, "canonicalName": "Bulimus glaber"}, "at": "2026-11-20T00:34:58+00:00"}
+{"q": "TURRITELLA", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3245560, "canonicalName": "Turritella"}, "at": "2026-11-20T00:34:59+00:00"}
+{"q": "Turbo variegatus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497823, "canonicalName": "Turbo variegatus"}, "at": "2026-11-20T00:34:59+00:00"}
+{"q": "Turbo imbricatus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497820, "canonicalName": "Turbo imbricatus"}, "at": "2026-11-20T00:34:59+00:00"}
+{"q": "MESALIA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:00+00:00"}
+{"q": "EGLISIA", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 4362800, "canonicalName": "Eglisia"}, "at": "2026-11-20T00:35:00+00:00"}
+{"q": "Turritell\u00e6", "r": {"matchType": "FUZZY", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3245560, "canonicalName": "Turritella"}, "at": "2026-11-20T00:35:01+00:00"}
+{"q": "TURRITELLA UNGULINA", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725617, "canonicalName": "Turritella ungulina"}, "at": "2026-11-20T00:35:01+00:00"}
+{"q": "T. ungulina", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:01+00:00"}
+{"q": "TURRITELLA DUPLICATA", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725615, "canonicalName": "Turritella duplicata"}, "at": "2026-11-20T00:35:02+00:00"}
+{"q": "Turbo duplicatus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497817, "canonicalName": "Turbo duplicatus"}, "at": "2026-11-20T00:35:02+00:00"}
+{"q": "Turbo replicatus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6514849, "canonicalName": "Turbo replicatus"}, "at": "2026-11-20T00:35:03+00:00"}
+{"q": "Turritella duplicata", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725615, "canonicalName": "Turritella duplicata"}, "at": "2026-11-20T00:35:03+00:00"}
+{"q": "TURRITELLA TEREBRA", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725604, "canonicalName": "Turritella terebra"}, "at": "2026-11-20T00:35:04+00:00"}
+{"q": "Turritella Archimedis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:04+00:00"}
+{"q": "T. Linnei", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:04+00:00"}
+{"q": "ungulinus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:05+00:00"}
+{"q": "T. communis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:05+00:00"}
+{"q": "TURRITELLA ATTENUATA", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5934264, "canonicalName": "Turritella attenuata"}, "at": "2026-11-20T00:35:06+00:00"}
+{"q": "T. lentiginosa", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:06+00:00"}
+{"q": "Emberizin\u0153", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:06+00:00"}
+{"q": "FRINGILLID\u00c6", "r": {"matchType": "EXACT", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5242, "canonicalName": "Fringillidae"}, "at": "2026-11-20T00:35:07+00:00"}
+{"q": "FRINGILLIN\u00c6", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5242, "canonicalName": "Fringillidae"}, "at": "2026-11-20T00:35:07+00:00"}
+{"q": "Fringilla nontifringilla", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2494421, "canonicalName": "Fringilla"}, "at": "2026-11-20T00:35:08+00:00"}
+{"q": "M. \ufb02ava", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:08+00:00"}
+{"q": "Turritell\u0153", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:09+00:00"}
+{"q": "EBURNA", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3243574, "canonicalName": "Eburna"}, "at": "2026-11-20T00:35:09+00:00"}
+{"q": "Emberizinae", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 9608, "canonicalName": "Emberizidae"}, "at": "2026-11-20T00:35:10+00:00"}
+{"q": "FRINGILLINE", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:10+00:00"}
+{"q": "SYLVILN\u00c6", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:10+00:00"}
+{"q": "SYLVILIN\u00c6", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:11+00:00"}
+{"q": "SYLVIIIN\u00c6", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:11+00:00"}
+{"q": "Motacilla melanocophala", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9102728, "canonicalName": "Motacilla melanocephala"}, "at": "2026-11-20T00:35:12+00:00"}
+{"q": "BULIMUS EURYOPHALLUS", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10397056, "canonicalName": "Bulimus euryomphalus"}, "at": "2026-11-20T00:35:12+00:00"}
+{"q": "TURRIELLA ATTENUATA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5934264, "canonicalName": "Turritella attenuata"}, "at": "2026-11-20T00:35:13+00:00"}
+{"q": "C A S S I D A R I A", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:13+00:00"}
+{"q": "Emberiz\u00e6", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2491468, "canonicalName": "Emberiza"}, "at": "2026-11-20T00:35:14+00:00"}
+{"q": "Bulimus granulatus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11393321, "canonicalName": "Bulimus granulosus"}, "at": "2026-11-20T00:35:14+00:00"}
+{"q": "$B$. rugiferus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:15+00:00"}
+{"q": "Turbo unguinus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497841, "canonicalName": "Turbo ungulinus"}, "at": "2026-11-20T00:35:15+00:00"}
+{"q": "Turritella brevalis", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497744, "canonicalName": "Turritella brevialis"}, "at": "2026-11-20T00:35:16+00:00"}
+{"q": "T. unguina", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:16+00:00"}
+{"q": "unguinus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:16+00:00"}
+{"q": "TURRITELLA TEREBA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11275261, "canonicalName": "Turritella teres"}, "at": "2026-11-20T00:35:17+00:00"}
+{"q": "EBURN\u0410", "r": {"matchType": "EXACT", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3243574, "canonicalName": "Eburna"}, "at": "2026-11-20T00:35:17+00:00"}
+{"q": "Af. minufa", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:18+00:00"}
+{"q": "J/. /eucura", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:18+00:00"}
+{"q": "JZ. parva", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:18+00:00"}
+{"q": "JZ. hyferythra", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:19+00:00"}
+{"q": "JZunia atvicapilla", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:19+00:00"}
+{"q": "Quelea gue/ea", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2493986, "canonicalName": "Quelea"}, "at": "2026-11-20T00:35:20+00:00"}
+{"q": "Q. russt", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:20+00:00"}
+{"q": "Pavoaria cervicalis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:21+00:00"}
+{"q": "/77ngi//a", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:21+00:00"}
+{"q": "Faussery", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:22+00:00"}
+{"q": "EAm\u00e9erizine", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:22+00:00"}
+{"q": "FRINGILLIDA", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5242, "canonicalName": "Fringillidae"}, "at": "2026-11-20T00:35:22+00:00"}
+{"q": "FRINGILLINA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:23+00:00"}
+{"q": "fringtlla montifringilla", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 2494441, "canonicalName": "Fringilla montifringilla"}, "at": "2026-11-20T00:35:23+00:00"}
+{"q": "TURDIDA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:24+00:00"}
+{"q": "S VL VINE", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:24+00:00"}
+{"q": "SVL VINA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:24+00:00"}
+{"q": "SVLVUNA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:25+00:00"}
+{"q": "TURDID A", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:25+00:00"}
+{"q": "SVLVIINE", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:26+00:00"}
+{"q": "cledon valactudes", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:26+00:00"}
+{"q": "TURDIDE", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5290, "canonicalName": "Turdidae"}, "at": "2026-11-20T00:35:26+00:00"}
+{"q": "SVLVTINA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:27+00:00"}
+{"q": "S VL VINA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:27+00:00"}
+{"q": "MOTACILLIDA", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5257, "canonicalName": "Motacillidae"}, "at": "2026-11-20T00:35:28+00:00"}
+{"q": "MOTACIL LID", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:28+00:00"}
+{"q": "Motactlla beema", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:28+00:00"}
+{"q": "JZ. flava", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:29+00:00"}
+{"q": "Buirucs Cui.ensis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:29+00:00"}
+{"q": "Beuimus turrirus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:29+00:00"}
+{"q": "sULIMUS scuULPTURATUS", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:30+00:00"}
+{"q": "BuLIMUS CALVUs", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:35:30+00:00"}
+{"q": "BuLimus pustuLosus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 8373851, "canonicalName": "Bulimus"}, "at": "2026-11-20T00:35:31+00:00"}
+{"q": "BuLimus OBTUSATUS", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:35:31+00:00"}
+{"q": "Bul", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:32+00:00"}
+{"q": "Helix calearea", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:35:32+00:00"}
+{"q": "Butimus ciavator", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10157959, "canonicalName": "Bulimus clavator"}, "at": "2026-11-20T00:35:32+00:00"}
+{"q": "Butruus rosgatus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:33+00:00"}
+{"q": "Butimus rertatus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:33+00:00"}
+{"q": "BuLIMus PERDIX", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:35:34+00:00"}
+{"q": "BL. perdix", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:34+00:00"}
+{"q": "Butinus Evryompuatus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:34+00:00"}
+{"q": "Burimus Guaser", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:35+00:00"}
+{"q": "Zurritella", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:35+00:00"}
+{"q": "7. duplicatus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:35+00:00"}
+{"q": "Turbo variegadus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497823, "canonicalName": "Turbo variegatus"}, "at": "2026-11-20T00:35:36+00:00"}
+{"q": "Twrritel/a Juscata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:36+00:00"}
+{"q": "7. cornea", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:37+00:00"}
+{"q": "Mrsauta", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:37+00:00"}
+{"q": "Eeutst1a", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:37+00:00"}
+{"q": "Turritelle", "r": {"matchType": "FUZZY", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3245560, "canonicalName": "Turritella"}, "at": "2026-11-20T00:35:38+00:00"}
+{"q": "Zurbo ungulinus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:38+00:00"}
+{"q": "7. fuscata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:39+00:00"}
+{"q": "7. wngulina", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:39+00:00"}
+{"q": "TuRrRITELLA bupLicata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:39+00:00"}
+{"q": "Lurbo acutangulus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:40+00:00"}
+{"q": "Zurritella duplicata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:40+00:00"}
+{"q": "7. terebra", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:41+00:00"}
+{"q": "7. Linnet", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:41+00:00"}
+{"q": "Turbo qeutangulus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:35:42+00:00"}
+{"q": "7. goniostoma", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:42+00:00"}
+{"q": "7. lentiginosa", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:42+00:00"}
+{"q": "CASSTDARIA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:43+00:00"}
+{"q": "EBURN A", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:43+00:00"}
+{"q": "Quilea quilea", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 2493987, "canonicalName": "Quelea quelea"}, "at": "2026-11-20T00:35:44+00:00"}
+{"q": "P. capilata", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:44+00:00"}
+{"q": "FRINGILLID", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:45+00:00"}
+{"q": "SYLVIINE", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:45+00:00"}
+{"q": "SYLVII.N.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:46+00:00"}
+{"q": "Lusciniola schwarzii", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "DOUBTFUL", "usageKey": 7468026, "canonicalName": "Lusciniola"}, "at": "2026-11-20T00:35:46+00:00"}
+{"q": "MOTACILLID", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:46+00:00"}
+{"q": "BULIMUS TURRITS", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9488863, "canonicalName": "Bulimus turritus"}, "at": "2026-11-20T00:35:47+00:00"}
+{"q": "BULIMUS OBITUSATUS", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 8373851, "canonicalName": "Bulimus"}, "at": "2026-11-20T00:35:47+00:00"}
+{"q": "BULIMUS ROSEAUS", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:35:48+00:00"}
+{"q": "Turritella brevisis", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 10850921, "canonicalName": "Turritella brevis"}, "at": "2026-11-20T00:35:48+00:00"}
+{"q": "TURRIETLA DUPLICATA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725615, "canonicalName": "Turritella duplicata"}, "at": "2026-11-20T00:35:49+00:00"}
+{"q": "TURRIETLA TEREBRA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725604, "canonicalName": "Turritella terebra"}, "at": "2026-11-20T00:35:49+00:00"}
+{"q": "TURRIETLA ATTENUATA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5934264, "canonicalName": "Turritella attenuata"}, "at": "2026-11-20T00:35:50+00:00"}
+{"q": "T. goniosoma", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:50+00:00"}
+{"q": "FRINGILLIDAE", "r": {"matchType": "EXACT", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5242, "canonicalName": "Fringillidae"}, "at": "2026-11-20T00:35:50+00:00"}
+{"q": "TURDIDAE", "r": {"matchType": "EXACT", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5290, "canonicalName": "Turdidae"}, "at": "2026-11-20T00:35:51+00:00"}
+{"q": "SYLVINAE", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 9371634, "canonicalName": "Sylvidae"}, "at": "2026-11-20T00:35:51+00:00"}
+{"q": "Lusciniola schwarz", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "DOUBTFUL", "usageKey": 7468026, "canonicalName": "Lusciniola"}, "at": "2026-11-20T00:35:51+00:00"}
+{"q": "MOTACILLIDAE", "r": {"matchType": "EXACT", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5257, "canonicalName": "Motacillidae"}, "at": "2026-11-20T00:35:52+00:00"}
+{"q": "Motacilla melanoccephala", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9102728, "canonicalName": "Motacilla melanocephala"}, "at": "2026-11-20T00:35:52+00:00"}
+{"q": "FRINGILLID.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:53+00:00"}
+{"q": "FRINGILLIN.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:53+00:00"}
+{"q": "SYLVHNE", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:54+00:00"}
+{"q": "MOTACILLID.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:54+00:00"}
+{"q": "Bulinus granulosus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10966460, "canonicalName": "Bulinus granulosus"}, "at": "2026-11-20T00:35:55+00:00"}
+{"q": "BULIMUS Sculpturatus", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:35:55+00:00"}
+{"q": "Darveini", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:55+00:00"}
+{"q": "B. perdur", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:56+00:00"}
+{"q": "Turbo inabricatus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:35:56+00:00"}
+{"q": "Turbo nugualinus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:35:57+00:00"}
+{"q": "Turbo nugulinus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:35:57+00:00"}
+{"q": "TURRITELLA Archimedis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:57+00:00"}
+{"q": "T. Linne", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:58+00:00"}
+{"q": "ungulias", "r": {"matchType": "FUZZY", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 4679214, "canonicalName": "Ungulia"}, "at": "2026-11-20T00:35:58+00:00"}
+{"q": "TURRITELLA acutangula", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 9473164, "canonicalName": "Turritella acutangula"}, "at": "2026-11-20T00:35:59+00:00"}
+{"q": "Quelae qualea", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 2493987, "canonicalName": "Quelea quelea"}, "at": "2026-11-20T00:35:59+00:00"}
+{"q": "SYL VIN\u00c6", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:35:59+00:00"}
+{"q": "SYL VIIN\u00c6", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:00+00:00"}
+{"q": "SYLVIN\u00c6", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 9371634, "canonicalName": "Sylvidae"}, "at": "2026-11-20T00:36:00+00:00"}
+{"q": "Luscinola schwarzi", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:01+00:00"}
+{"q": "M. flavia", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:01+00:00"}
+{"q": "M. parvai", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:01+00:00"}
+{"q": "Emberizine", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:02+00:00"}
+{"q": "SYLVIINA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:02+00:00"}
+{"q": "SYLVIINAE", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5285, "canonicalName": "Sylviidae"}, "at": "2026-11-20T00:36:03+00:00"}
+{"q": "SYLVIIN.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:03+00:00"}
+{"q": "Motacilla melanocphala", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9102728, "canonicalName": "Motacilla melanocephala"}, "at": "2026-11-20T00:36:03+00:00"}
+{"q": "Bulimus Chilensis", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:36:04+00:00"}
+{"q": "Darvinii", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:04+00:00"}
+{"q": "Bulimus obtusatus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 8373851, "canonicalName": "Bulimus"}, "at": "2026-11-20T00:36:05+00:00"}
+{"q": "Bulimus clavATOR", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10157959, "canonicalName": "Bulimus clavator"}, "at": "2026-11-20T00:36:05+00:00"}
+{"q": "BULIMUS EURYOPHALUS", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 10397056, "canonicalName": "Bulimus euryomphalus"}, "at": "2026-11-20T00:36:06+00:00"}
+{"q": "Turbo variega-tus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497823, "canonicalName": "Turbo variegatus"}, "at": "2026-11-20T00:36:06+00:00"}
+{"q": "MesALIA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:06+00:00"}
+{"q": "EglISIA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:07+00:00"}
+{"q": "Turritella terebra", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725604, "canonicalName": "Turritella terebra"}, "at": "2026-11-20T00:36:07+00:00"}
+{"q": "Luscinioia schwarzi", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:08+00:00"}
+{"q": "Turritellae", "r": {"matchType": "FUZZY", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 3245560, "canonicalName": "Turritella"}, "at": "2026-11-20T00:36:08+00:00"}
+{"q": "Turrivella duplicata", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725615, "canonicalName": "Turritella duplicata"}, "at": "2026-11-20T00:36:08+00:00"}
+{"q": "Turrivella terebra", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725604, "canonicalName": "Turritella terebra"}, "at": "2026-11-20T00:36:09+00:00"}
+{"q": "Turrivella Archimedis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:09+00:00"}
+{"q": "Turrivella attenuata", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5934264, "canonicalName": "Turritella attenuata"}, "at": "2026-11-20T00:36:10+00:00"}
+{"q": "Turrivella acutangula", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 9473164, "canonicalName": "Turritella acutangula"}, "at": "2026-11-20T00:36:10+00:00"}
+{"q": "Turbo qcutangulus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:36:10+00:00"}
+{"q": "BULIMUS CUILENSIS", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:36:11+00:00"}
+{"q": "Turbo variega-", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497823, "canonicalName": "Turbo variegatus"}, "at": "2026-11-20T00:36:11+00:00"}
+{"q": "T.duplicatus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:12+00:00"}
+{"q": "S IDARIA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:12+00:00"}
+{"q": "Turbo inbricatus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497820, "canonicalName": "Turbo imbricatus"}, "at": "2026-11-20T00:36:12+00:00"}
+{"q": "Turbo ungulatus", "r": {"matchType": "HIGHERRANK", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 6802, "canonicalName": "Turbinidae"}, "at": "2026-11-20T00:36:13+00:00"}
+{"q": "T. unguinea", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:13+00:00"}
+{"q": "unguineus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:14+00:00"}
+{"q": "Muna atricapilla", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 11193829, "canonicalName": "Munia atricapilla"}, "at": "2026-11-20T00:36:14+00:00"}
+{"q": "Quela quelea", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 2493987, "canonicalName": "Quelea quelea"}, "at": "2026-11-20T00:36:15+00:00"}
+{"q": "Paroaria cervialis", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2492080, "canonicalName": "Paroaria"}, "at": "2026-11-20T00:36:15+00:00"}
+{"q": "Fringsilla monlfringilla", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:15+00:00"}
+{"q": "SYL VILIN.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:16+00:00"}
+{"q": "Aidon galactudes", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11363027, "canonicalName": "Aedon galactodes"}, "at": "2026-11-20T00:36:16+00:00"}
+{"q": "MOTACILLLID.E", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:17+00:00"}
+{"q": "BULIMUS CHILESIS", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:36:17+00:00"}
+{"q": "BULMUS ROSEAUTS", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:18+00:00"}
+{"q": "B. obrades", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:18+00:00"}
+{"q": "BULMUS FERATUS", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 8918572, "canonicalName": "Bulimus feriatus"}, "at": "2026-11-20T00:36:18+00:00"}
+{"q": "BULMUS PERDIX", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9045238, "canonicalName": "Bulimus perdix"}, "at": "2026-11-20T00:36:19+00:00"}
+{"q": "BULMUS EURYHOMALUS", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:19+00:00"}
+{"q": "BULMUS GLABER", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11330880, "canonicalName": "Bulimus glaber"}, "at": "2026-11-20T00:36:20+00:00"}
+{"q": "Cerithum", "r": {"matchType": "FUZZY", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 8179898, "canonicalName": "Cerithium"}, "at": "2026-11-20T00:36:20+00:00"}
+{"q": "Turbo varieagatus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497823, "canonicalName": "Turbo variegatus"}, "at": "2026-11-20T00:36:21+00:00"}
+{"q": "Turbo inubricus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:36:21+00:00"}
+{"q": "Turbo inuginis", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:36:22+00:00"}
+{"q": "Turbo terrebra", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497807, "canonicalName": "Turbo terebra"}, "at": "2026-11-20T00:36:22+00:00"}
+{"q": "Turritella brevica", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 10850921, "canonicalName": "Turritella brevis"}, "at": "2026-11-20T00:36:22+00:00"}
+{"q": "EGISIA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:23+00:00"}
+{"q": "Turritella Ungulina", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:23+00:00"}
+{"q": "Turbo unglinnus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497841, "canonicalName": "Turbo ungulinus"}, "at": "2026-11-20T00:36:24+00:00"}
+{"q": "Turbo anguitas", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 8512011, "canonicalName": "Turbo angustus"}, "at": "2026-11-20T00:36:24+00:00"}
+{"q": "T. angulina", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:24+00:00"}
+{"q": "Turro duplicatus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497817, "canonicalName": "Turbo duplicatus"}, "at": "2026-11-20T00:36:25+00:00"}
+{"q": "Turbo actuangulus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 6514863, "canonicalName": "Turbo acutangulus"}, "at": "2026-11-20T00:36:25+00:00"}
+{"q": "Turbo repellatus", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2293195, "canonicalName": "Turbo"}, "at": "2026-11-20T00:36:26+00:00"}
+{"q": "Turro actuangulus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 6514863, "canonicalName": "Turbo acutangulus"}, "at": "2026-11-20T00:36:26+00:00"}
+{"q": "Turrittella duplicata", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725615, "canonicalName": "Turritella duplicata"}, "at": "2026-11-20T00:36:27+00:00"}
+{"q": "Turbo terera", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497807, "canonicalName": "Turbo terebra"}, "at": "2026-11-20T00:36:27+00:00"}
+{"q": "T. Linnaei", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:28+00:00"}
+{"q": "ugulinus", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:28+00:00"}
+{"q": "Turrritella acutangulosa", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:29+00:00"}
+{"q": "E BURNA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:29+00:00"}
+{"q": "M. leucora", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:29+00:00"}
+{"q": "SYLVIIINE", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:30+00:00"}
+{"q": "Aedon salactodes", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "SYNONYM", "usageKey": 4850583, "canonicalName": "Aedon"}, "at": "2026-11-20T00:36:30+00:00"}
+{"q": "Turritella brevitalis", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 6497744, "canonicalName": "Turritella brevialis"}, "at": "2026-11-20T00:36:31+00:00"}
+{"q": "Turritella Archimedeis", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:31+00:00"}
+{"q": "SYLVIIINAE", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:31+00:00"}
+{"q": "Bulimus turritus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 9488863, "canonicalName": "Bulimus turritus"}, "at": "2026-11-20T00:36:32+00:00"}
+{"q": "Bulimus sculpturatus", "r": {"matchType": "EXACT", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 8792143, "canonicalName": "Bulimus sculpturatus"}, "at": "2026-11-20T00:36:32+00:00"}
+{"q": "Bulimus calvus", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11349403, "canonicalName": "Bulimus clava"}, "at": "2026-11-20T00:36:33+00:00"}
+{"q": "B. perdigx", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:33+00:00"}
+{"q": "Accon galactodes", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:33+00:00"}
+{"q": "Accon familiaris", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:34+00:00"}
+{"q": "Lusciola schwarzi", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "DOUBTFUL", "usageKey": 4575931, "canonicalName": "Lusciola"}, "at": "2026-11-20T00:36:34+00:00"}
+{"q": "Turbo angulina", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 7363206, "canonicalName": "Turbo anglicus"}, "at": "2026-11-20T00:36:35+00:00"}
+{"q": "TURRITELLA TEREGBRA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725604, "canonicalName": "Turritella terebra"}, "at": "2026-11-20T00:36:35+00:00"}
+{"q": "TURRITELLA ATENUATA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5934264, "canonicalName": "Turritella attenuata"}, "at": "2026-11-20T00:36:35+00:00"}
+{"q": "Q. russii", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:36+00:00"}
+{"q": "Paroaria cervicialis", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2492080, "canonicalName": "Paroaria"}, "at": "2026-11-20T00:36:36+00:00"}
+{"q": "FRINGILLINAE", "r": {"matchType": "FUZZY", "rank": "FAMILY", "status": "ACCEPTED", "usageKey": 5242, "canonicalName": "Fringillidae"}, "at": "2026-11-20T00:36:37+00:00"}
+{"q": "Phylloscopus viridans", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 2493047, "canonicalName": "Phylloscopus"}, "at": "2026-11-20T00:36:37+00:00"}
+{"q": "SYLVIVINAE", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:37+00:00"}
+{"q": "Aedon galactoides", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "SYNONYM", "usageKey": 11363027, "canonicalName": "Aedon galactodes"}, "at": "2026-11-20T00:36:38+00:00"}
+{"q": "Bulimus Chilesis", "r": {"matchType": "HIGHERRANK", "rank": "ORDER", "status": "ACCEPTED", "usageKey": 1456, "canonicalName": "Stylommatophora"}, "at": "2026-11-20T00:36:38+00:00"}
+{"q": "Darvicini", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:39+00:00"}
+{"q": "Achatineella", "r": {"matchType": "FUZZY", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 7409048, "canonicalName": "Achatinella"}, "at": "2026-11-20T00:36:39+00:00"}
+{"q": "BULIMUS OBUTSATUS", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 8373851, "canonicalName": "Bulimus"}, "at": "2026-11-20T00:36:39+00:00"}
+{"q": "TURRIELLA", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:40+00:00"}
+{"q": "TURRIELLA UNGULINA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725617, "canonicalName": "Turritella ungulina"}, "at": "2026-11-20T00:36:40+00:00"}
+{"q": "TURRIELLA DUPLICATA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725615, "canonicalName": "Turritella duplicata"}, "at": "2026-11-20T00:36:41+00:00"}
+{"q": "TURRIELLA TEREBRA", "r": {"matchType": "FUZZY", "rank": "SPECIES", "status": "ACCEPTED", "usageKey": 5725604, "canonicalName": "Turritella terebra"}, "at": "2026-11-20T00:36:41+00:00"}
+{"q": "Turritella Archimedes", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:41+00:00"}
+{"q": "T. goniosloma", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:42+00:00"}
+{"q": "Luscinia schwarzi", "r": {"matchType": "HIGHERRANK", "rank": "GENUS", "status": "ACCEPTED", "usageKey": 5429330, "canonicalName": "Luscinia"}, "at": "2026-11-20T00:36:42+00:00"}
+{"q": "TURRITELLA TEREbra", "r": {"matchType": "HIGHERRANK", "rank": "KINGDOM", "status": "ACCEPTED", "usageKey": 1, "canonicalName": "Animalia"}, "at": "2026-11-20T00:36:43+00:00"}
