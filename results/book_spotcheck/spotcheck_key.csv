@@ -1,0 +1,141 @@
+item,stratum,model,tier,junk,page_id,field,value,status
+1,A,opus,0,False,8966782,person,PFEIFFER,exact
+2,B,opus,1,False,8967088,taxon,trilineatus,exact
+3,B,opus,1,False,8992640,taxon,stapazina,exact
+4,C,haiku,2,False,8967201,vernacular,deer tribe,exact
+5,B,opus,1,False,8967086,taxon,multicolor,exact
+6,C,haiku,2,False,8992509,vernacular,furze,exact
+7,C,haiku,2,False,8992474,vernacular,lettuce,exact
+8,B,opus,1,False,8967084,taxon,irroratus,exact
+9,A,opus,0,False,8966785,taxon,Bulimi,exact
+10,C,haiku,2,False,8992451,vernacular,Mealy,exact
+11,B,opus,0,True,8992642,date,"September 20th, 1902",exact
+12,B,opus,1,False,8967187,taxon,fulva,exact
+13,C,haiku,2,False,8992463,vernacular,hard-head,exact
+14,A,opus,0,False,8966833,vernacular,Midas' Ear,exact
+15,A,opus,0,False,8967209,institution,British Museum,exact
+16,A,opus,0,False,8967071,locality,West Indies,exact
+17,B,opus,1,False,8967086,taxon,obscurus,exact
+18,A,opus,0,False,8966998,taxon,BULIMUS NIVICOLA,exact
+19,C,haiku,2,False,8992406,vernacular,hawthorn,exact
+20,A,opus,0,False,8967067,person,Müller,exact
+21,B,opus,1,False,8967085,taxon,lagotis,exact
+22,A,opus,0,False,8967185,person,Gould,exact
+23,B,opus,1,False,8967084,taxon,impressus,exact
+24,A,opus,0,False,8967081,person,Sow.,exact
+25,A,opus,0,False,8967043,person,Anton,exact
+26,A,opus,0,False,8992600,locality,Wales,exact
+27,B,opus,1,False,8967083,taxon,electricus,exact
+28,A,opus,0,False,8967213,person,Philippi,exact
+29,B,opus,3,False,8967087,taxon,rufistrigatus,exact
+30,B,opus,1,False,8967082,taxon,crassilabris,exact
+31,B,opus,2,False,8967293,taxon,Vermetus,exact
+32,A,opus,0,False,8966941,person,Dufo.,exact
+33,A,opus,0,False,8967020,institution,Mus. Cuming,exact
+34,B,opus,1,False,8967188,taxon,splendida,exact
+35,A,opus,0,False,8966965,institution,Mus. Cuming,exact
+36,C,haiku,3,False,8992629,date,autumn,exact
+37,C,haiku,2,False,8992617,taxon,THE WOOD-LARK.,exact
+38,B,opus,1,False,8967323,taxon,rubescens,exact
+39,A,opus,0,False,8967082,person,Jay,exact
+40,B,opus,2,False,8967329,vernacular,Mesal,exact
+41,C,haiku,2,False,8992353,locality,Linton,exact
+42,A,opus,0,False,8967001,taxon,Achatina,exact
+43,A,opus,0,False,8992486,vernacular,Chaffinch,exact
+44,C,haiku,2,False,8992561,vernacular,Choughs,exact
+45,A,opus,0,False,8967337,locality,Mediterranean,exact
+46,A,opus,0,False,8967245,taxon,Buccinum flammeum,exact
+47,B,opus,2,False,8967087,taxon,Popelairianus,exact
+48,C,haiku,2,False,8992578,vernacular,snails,exact
+49,C,haiku,2,False,8967288,person,R.,exact
+50,A,opus,0,False,8966925,locality,South of Europe,exact
+51,B,opus,1,False,8967187,taxon,albolineata,exact
+52,C,haiku,2,False,8992505,locality,Siberia,exact
+53,C,haiku,2,False,8966993,taxon,BULIMUS,exact
+54,A,opus,0,False,8967087,person,Reeve,exact
+55,B,opus,1,False,8967084,taxon,heterotrichus,exact
+56,A,opus,0,False,8967084,taxon,Jussieui,exact
+57,B,opus,1,False,8966789,taxon,mutabilis,exact
+58,A,opus,0,False,8967169,taxon,ACHATINA ACCINCTA,exact
+59,C,haiku,2,False,8966821,institution,Mr. Cuming's collection,exact
+60,A,opus,0,False,8967265,taxon,C. decussata,exact
+61,B,opus,2,False,8967289,person,Bonpland,exact
+62,A,opus,0,False,8992404,locality,Russia,exact
+63,B,opus,1,False,8967084,taxon,gastrum,exact
+64,B,opus,1,False,8967086,taxon,olorinus,exact
+65,B,opus,1,False,8967089,taxon,zebra,exact
+66,B,opus,1,False,8967085,taxon,monilifer,exact
+67,A,opus,0,False,8967343,taxon,ONISCIA EXQUISITA,exact
+68,A,opus,0,False,8966869,taxon,BULIMUS CONTUSUS,exact
+69,C,haiku,2,False,8992516,vernacular,hawthorn,exact
+70,B,opus,1,False,8967089,taxon,xanthostoma,exact
+71,C,haiku,2,False,8992407,vernacular,Common-,exact
+72,C,haiku,2,False,8992467,vernacular,Brown,exact
+73,A,opus,0,False,8992389,date,June 1906,exact
+74,B,opus,1,False,8967088,taxon,terebraster,exact
+75,C,haiku,2,False,8992406,vernacular,lichens,exact
+76,A,opus,0,False,8967081,person,Lam.,exact
+77,A,opus,0,False,8966793,institution,Mus. Cuming,exact
+78,A,opus,0,False,8992484,person,Seebohm,exact
+79,A,opus,0,False,8967329,taxon,Mesalia,exact
+80,A,opus,0,False,8992480,locality,Norfolk,exact
+81,B,opus,2,False,8967087,taxon,Sayi,exact
+82,A,opus,0,False,8992600,person,Henry Stevenson,exact
+83,A,opus,0,False,8992376,locality,Cley,exact
+84,A,opus,0,False,8967188,taxon,Sandwicensis,exact
+85,C,haiku,2,False,8992566,vernacular,conifers,exact
+86,B,opus,2,False,8966797,taxon,Succinea,exact
+87,A,opus,0,False,8992514,vernacular,YELLOW-BREASTED BUNTING,exact
+88,B,opus,2,False,8967087,taxon,Rivasii,exact
+89,C,haiku,3,False,8966994,locality,—?,exact
+90,A,opus,0,False,8966933,person,Metcalfe,exact
+91,A,opus,0,False,8967083,person,Reeve,exact
+92,A,opus,0,False,8992485,vernacular,Chaffinches,exact
+93,C,haiku,2,False,8992332,locality,Speeton,exact
+94,C,haiku,2,False,8966850,locality,Vegas,exact
+95,A,opus,0,False,8966822,person,Chemnitz,exact
+96,B,opus,1,False,8967082,taxon,castrensis,exact
+97,B,opus,2,False,8966929,person,Spix,exact
+98,B,opus,2,True,8992498,date,February 14th to 19th,exact
+99,A,opus,0,False,8992646,person,SUND.,exact
+100,A,opus,0,False,8967139,institution,Mus. Rolfe,exact
+101,B,opus,0,True,8992516,date,26th May,exact
+102,A,opus,0,False,8966901,taxon,BULIMUS CASTUS,exact
+103,C,haiku,2,False,8992616,vernacular,watercress,exact
+104,A,opus,0,False,8967193,taxon,D. galea,exact
+105,C,haiku,2,False,8992549,vernacular,spiders,exact
+106,B,opus,1,False,8967085,taxon,membranaceus,exact
+107,A,opus,0,False,8992511,date,November,exact
+108,C,haiku,2,False,8992556,locality,British Isles,exact
+109,A,opus,0,False,8992442,vernacular,Linnet,exact
+110,C,haiku,2,False,8966914,taxon,BULIMUS,exact
+111,B,opus,1,False,8967084,taxon,gilvus,exact
+112,B,opus,1,False,8967323,taxon,imbricata,exact
+113,A,opus,0,False,8967297,locality,"Island of Margarita, West Indies",exact
+114,A,opus,0,False,8966833,person,SOWERBY,exact
+115,A,opus,0,False,8967293,locality,Conchagua,exact
+116,B,opus,1,False,8967081,taxon,acuminatus,exact
+117,A,opus,0,False,8966906,taxon,BULIMUS BENGUELENSIS,exact
+118,A,opus,0,False,8967331,taxon,Turbo suturalis,exact
+119,A,opus,0,False,8966969,vernacular,KUNAWUR BULIMUS,exact
+120,A,opus,0,False,8966857,person,Cuming,exact
+121,A,opus,0,False,8967082,person,Born,exact
+122,A,opus,0,False,8967082,person,Moric.,exact
+123,A,opus,0,False,8966769,locality,"Island of Romblon, Philippines",exact
+124,C,haiku,2,False,8992516,vernacular,hazel,exact
+125,A,opus,0,False,8966909,person,BENSON,exact
+126,A,opus,0,False,8967265,person,Martini,exact
+127,A,opus,0,False,8992327,locality,Lincolnshire,exact
+128,A,opus,0,False,8967343,person,Deshayes,exact
+129,A,opus,0,False,8967177,person,BENSON,exact
+130,A,opus,0,False,8967293,locality,Conchagua,exact
+131,A,opus,0,False,8967317,person,MENKE,exact
+132,C,haiku,2,False,8992583,vernacular,leather-jackets,exact
+133,B,opus,1,False,8967084,taxon,gibber,exact
+134,A,opus,0,False,8967187,person,Benson,exact
+135,A,opus,0,False,8966946,taxon,BULIMUS CALIFORNICUS,exact
+136,A,opus,0,False,8967187,person,Pfr.,exact
+137,B,opus,2,False,8992627,locality,India,exact
+138,C,haiku,2,False,8967003,locality,Guadaloupe,exact
+139,A,opus,0,False,8966817,person,PFEIFFER,exact
+140,A,opus,0,False,8992504,vernacular,Sparrow,exact

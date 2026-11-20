@@ -1,0 +1,14 @@
+{
+  "model": "claude-haiku-5-5",
+  "batch": true,
+  "requests": 682,
+  "usd_total": 0.4025,
+  "usd_per_page": 0.00059,
+  "usd_per_1000_pages": 0.59,
+  "stop_reasons": {
+    "end_turn": 682
+  },
+  "unparsed": 0,
+  "batch_minutes": 7.5,
+  "mentions": 15834
+}

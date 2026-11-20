@@ -1,0 +1,14 @@
+{
+  "model": "claude-opus-5-5",
+  "batch": true,
+  "requests": 682,
+  "usd_total": 7.6368,
+  "usd_per_page": 0.0112,
+  "usd_per_1000_pages": 11.2,
+  "stop_reasons": {
+    "end_turn": 682
+  },
+  "unparsed": 0,
+  "batch_minutes": 7.5,
+  "mentions": 16045
+}

@@ -1,0 +1,409 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score
+8992328,modern_dots-mocr,G1,0,locality,3,Kent,False,Kent,exact,386.0,390.0,100.0
+8992328,modern_dots-mocr,G1,1,vernacular,5,Red-backed Shrike,False,Red-backed Shrike,exact,835.0,852.0,100.0
+8992328,modern_dots-mocr,G1,2,locality,5,Maidstone,False,Maidstone,exact,891.0,900.0,100.0
+8992328,modern_dots-mocr,G1,3,vernacular,5,Greenfinch,False,Greenfinch,exact,1128.0,1138.0,100.0
+8992328,modern_dots-mocr,G1,4,vernacular,7,Butcher-bird,False,Butcher-bird,exact,1289.0,1301.0,100.0
+8992328,modern_dots-mocr,G1,5,vernacular,7,Shrikes,False,Shrikes,exact,1387.0,1394.0,100.0
+8992328,modern_dots-mocr,G1,6,vernacular,7,Red-backed Shrike,False,Red-backed Shrike,exact,1816.0,1833.0,100.0
+8992328,modern_dots-mocr,G1,7,person,9,Mathias Rausch,False,Mathias Rausch,exact,2027.0,2041.0,100.0
+8992328,modern_dots-mocr,G1,8,vernacular,9,Red-backed Shrike,False,Red-backed Shrike,exact,2160.0,2177.0,100.0
+8992328,modern_dots-mocr,G1,9,vernacular,9,Thorn-piercer,False,Thorn-piercer,exact,2181.0,2194.0,100.0
+8992328,modern_dots-mocr,G1,10,taxon,9,Lanius collurio,False,Lanius collurio,exact,2197.0,2212.0,100.0
+8992328,modern_dots-mocr,G1,11,locality,9,Europe,False,Europe,exact,2352.0,2358.0,100.0
+8992328,modern_dots-mocr,G1,12,vernacular,9,Red-backed Shrikes,False,Red-backed Shrikes,exact,2476.0,2494.0,100.0
+8992328,modern_dots-mocr,G1,13,person,13,H. A. Macpherson,False,H. A. Macpherson,exact,2856.0,2872.0,100.0
+8992328,modern_dots-mocr,G1,14,vernacular,13,Woodchat,False,Woodchat,exact,2949.0,2957.0,100.0
+8992328,modern_dots-mocr,G1,15,vernacular,13,Great Grey Shrikes,False,Great Grey Shrikes,exact,2963.0,2981.0,100.0
+8992379,modern_dots-mocr,G1,0,locality,1,Berwickshire,False,Berwickshire,exact,0.0,12.0,100.0
+8992379,modern_dots-mocr,G1,1,locality,1,Yorkshire,False,Yorkshire,exact,22.0,31.0,100.0
+8992379,modern_dots-mocr,G1,2,locality,1,Scarborough,False,Scarborough,exact,60.0,71.0,100.0
+8992379,modern_dots-mocr,G1,3,date,1,"October 23rd, 1889",False,"October 23rd, 1889",exact,73.0,91.0,100.0
+8992379,modern_dots-mocr,G1,4,date,1,1887,False,1887,exact,143.0,147.0,100.0
+8992379,modern_dots-mocr,G1,5,locality,1,Wells,False,Wells,exact,181.0,186.0,100.0
+8992379,modern_dots-mocr,G1,6,date,1,1900,False,1900,exact,190.0,194.0,100.0
+8992379,modern_dots-mocr,G1,7,date,1,1904,False,1904,exact,223.0,227.0,100.0
+8992379,modern_dots-mocr,G1,8,date,1,1905,False,1905,exact,241.0,245.0,100.0
+8992379,modern_dots-mocr,G1,9,date,1,1906,False,1906,exact,257.0,261.0,100.0
+8992379,modern_dots-mocr,G1,10,locality,1,Norfolk,False,Norfolk,exact,272.0,279.0,100.0
+8992379,modern_dots-mocr,G1,11,locality,1,Yorkshire,False,Yorkshire,exact,300.0,309.0,100.0
+8992379,modern_dots-mocr,G1,12,date,1,1907,False,1907,exact,313.0,317.0,100.0
+8992379,modern_dots-mocr,G1,13,locality,1,Cheshire,False,Cheshire,exact,322.0,330.0,100.0
+8992379,modern_dots-mocr,G1,14,date,1,June 1903,False,June 1903,exact,347.0,356.0,100.0
+8992379,modern_dots-mocr,G1,15,locality,1,Shetlands,False,Shetlands,exact,365.0,374.0,100.0
+8992379,modern_dots-mocr,G1,16,date,1,1906,False,1906,exact,411.0,415.0,100.0
+8992379,modern_dots-mocr,G1,17,vernacular,1,Flycatcher,False,Flycatcher,exact,460.0,470.0,100.0
+8992379,modern_dots-mocr,G1,18,vernacular,3,Robin,False,Robin,exact,826.0,831.0,100.0
+8992379,modern_dots-mocr,G1,19,person,3,Seebohm,False,Seebohm,exact,837.0,844.0,100.0
+8992379,modern_dots-mocr,G1,20,vernacular,3,Robins,False,Robins,exact,909.0,915.0,100.0
+8992379,modern_dots-mocr,G1,21,vernacular,3,Flycatchers,False,Flycatchers,exact,924.0,935.0,100.0
+8992379,modern_dots-mocr,G1,22,vernacular,3,Red-breasted Flycatcher,False,Red-breasted Flycatcher,exact,1047.0,1070.0,100.0
+8992379,modern_dots-mocr,G1,23,taxon,5,M. minuta,False,M. minuta,exact,1803.0,1812.0,100.0
+8992379,modern_dots-mocr,G1,24,taxon,5,M. leucura,False,M. leucura,exact,1872.0,1882.0,100.0
+8992379,modern_dots-mocr,G1,25,taxon,5,M. parva,False,M. parva,exact,1947.0,1955.0,100.0
+8992379,modern_dots-mocr,G1,26,taxon,5,M. hyperythra,False,M. hyperythra,exact,2024.0,2037.0,100.0
+8992379,modern_dots-mocr,G1,27,date,7,1887,False,1887,exact,2343.0,2347.0,100.0
+8992379,modern_dots-mocr,G1,28,taxon,7,Munia atricapilla,False,Munia atricapilla,exact,2287.0,2304.0,100.0
+8992379,modern_dots-mocr,G1,29,taxon,7,Quelea quelea,False,Quelea quelea,exact,2514.0,2527.0,100.0
+8992379,modern_dots-mocr,G1,30,date,7,spring of 1896,False,spring of 1896,exact,2466.0,2480.0,100.0
+8992379,modern_dots-mocr,G1,31,taxon,7,Q. russi,False,Q. russi,exact,2562.0,2570.0,100.0
+8992379,modern_dots-mocr,G1,32,vernacular,7,Cardinal,False,Cardinal,exact,2647.0,2655.0,100.0
+8992379,modern_dots-mocr,G1,33,taxon,7,Paroaria cervicalis,False,Paroaria cervicalis,exact,2658.0,2677.0,100.0
+8992379,modern_dots-mocr,G1,34,taxon,7,P. capitata,False,P. capitata,exact,2714.0,2725.0,100.0
+8992644,modern_dots-mocr,G1,0,vernacular,1,Willow-Warbler,False,Willow-Warbler,exact,24.0,38.0,100.0
+8992644,modern_dots-mocr,G1,1,locality,1,Shetlands,False,Shetlands,exact,87.0,96.0,100.0
+8992644,modern_dots-mocr,G1,2,date,1,"May, 1901",False,"May, 1901",exact,100.0,109.0,100.0
+8992644,modern_dots-mocr,G1,3,vernacular,3,Wood-Warbler,False,Wood-Warbler,exact,116.0,128.0,100.0
+8992644,modern_dots-mocr,G1,4,locality,3,Isle of Man,False,Isle of Man,exact,146.0,157.0,100.0
+8992644,modern_dots-mocr,G1,5,date,3,May 1901,False,May 1901,exact,162.0,170.0,100.0
+8992644,modern_dots-mocr,G1,6,date,3,1905,False,1905,exact,175.0,179.0,100.0
+8992644,modern_dots-mocr,G1,7,taxon,5,TURDIDÆ,False,TURDIDÆ,exact,194.0,201.0,100.0
+8992644,modern_dots-mocr,G1,8,taxon,7,SYLVIINÆ,False,SYLVIINÆ,exact,220.0,228.0,100.0
+8992644,modern_dots-mocr,G1,9,vernacular,9,RUFOUS WARBLER,False,RUFOUS WARBLER,exact,239.0,253.0,100.0
+8992644,modern_dots-mocr,G1,10,taxon,11,Aedon galactodes,False,Aedon galactodes,exact,257.0,273.0,100.0
+8992644,modern_dots-mocr,G1,11,person,11,TEMM,False,TEMM,exact,276.0,280.0,100.0
+8992644,modern_dots-mocr,G1,12,locality,13,Sussex,False,Sussex,exact,317.0,323.0,100.0
+8992644,modern_dots-mocr,G1,13,locality,13,Devon,False,Devon,exact,328.0,333.0,100.0
+8992644,modern_dots-mocr,G1,14,taxon,15,TURDIDÆ,False,TURDIDÆ,exact,362.0,369.0,100.0
+8992644,modern_dots-mocr,G1,15,taxon,17,SYLVIINÆ,False,SYLVIINÆ,exact,388.0,396.0,100.0
+8992644,modern_dots-mocr,G1,16,vernacular,19,GREY-BACKED WARBLER,False,GREY-BACKED WARBLER,exact,407.0,426.0,100.0
+8992644,modern_dots-mocr,G1,17,taxon,21,Aedon familiaris,False,Aedon familiaris,exact,430.0,446.0,100.0
+8992644,modern_dots-mocr,G1,18,locality,23,Hythe,False,Hythe,exact,469.0,474.0,100.0
+8992644,modern_dots-mocr,G1,19,locality,23,Kent,False,Kent,exact,476.0,480.0,100.0
+8992644,modern_dots-mocr,G1,20,date,23,"July 15th, 1907",False,"July 15th, 1907",exact,485.0,500.0,100.0
+8992644,modern_dots-mocr,G1,21,taxon,25,TURDIDÆ,False,TURDIDÆ,exact,515.0,522.0,100.0
+8992644,modern_dots-mocr,G1,22,taxon,27,SYLVIINÆ,False,SYLVIINÆ,exact,541.0,549.0,100.0
+8992644,modern_dots-mocr,G1,23,vernacular,29,RADDE'S BUSH-WARBLER,False,RADDE'S BUSH-WARBLER,exact,556.0,576.0,100.0
+8992644,modern_dots-mocr,G1,24,taxon,31,Lusciniola schwarzi,False,Lusciniola schwarzi,exact,580.0,599.0,100.0
+8992644,modern_dots-mocr,G1,25,person,31,RADDE,False,RADDE,exact,602.0,607.0,100.0
+8992644,modern_dots-mocr,G1,26,date,33,"October, 1898",False,"October, 1898",exact,637.0,650.0,100.0
+8992644,modern_dots-mocr,G1,27,locality,33,Lincolnshire,False,Lincolnshire,exact,659.0,671.0,100.0
+8992644,modern_dots-mocr,G1,28,locality,33,Humber,False,Humber,exact,684.0,690.0,100.0
+8992644,modern_dots-mocr,G1,29,person,33,Haigh,False,Haigh,exact,699.0,704.0,100.0
+8966930,modern_dots-mocr,G1,0,institution,3,Mus. Cuming,False,Mus. Cuming,exact,153.0,164.0,100.0
+8966930,modern_dots-mocr,G1,1,taxon,5,BULIMUS OBTUSATUS,False,BULIMUS OBTUSATUS,exact,170.0,187.0,100.0
+8966930,modern_dots-mocr,G1,2,vernacular,7,BLUNTED BULIMUS,False,BLUNTED BULIMUS,exact,498.0,513.0,100.0
+8966930,modern_dots-mocr,G1,3,person,9,PFEIFFER,False,PFEIFFER,exact,864.0,872.0,100.0
+8966930,modern_dots-mocr,G1,4,taxon,11,Helix obtusata,False,Helix obtusata,exact,900.0,914.0,100.0
+8966930,modern_dots-mocr,G1,5,person,11,Gmelin,False,Gmelin,exact,917.0,923.0,100.0
+8966930,modern_dots-mocr,G1,6,taxon,13,Bulimus calcareus,False,Bulimus calcareus,exact,927.0,944.0,100.0
+8966930,modern_dots-mocr,G1,7,person,13,Bruguière,False,Bruguière,exact,947.0,956.0,100.0
+8966930,modern_dots-mocr,G1,8,person,13,Lamarck,False,Lamarck,exact,958.0,965.0,100.0
+8966930,modern_dots-mocr,G1,9,person,13,Deshayes,False,Deshayes,exact,967.0,975.0,100.0
+8966930,modern_dots-mocr,G1,10,locality,15,Madagascar,False,Madagascar,exact,985.0,995.0,100.0
+8966930,modern_dots-mocr,G1,11,person,15,Beck,False,Beck,exact,997.0,1001.0,100.0
+8966930,modern_dots-mocr,G1,12,person,17,Lamarck,False,Lamarck,exact,1033.0,1040.0,100.0
+8966930,modern_dots-mocr,G1,13,taxon,17,Helix calcarea,False,Helix calcarea,exact,1098.0,1112.0,100.0
+8966930,modern_dots-mocr,G1,14,person,17,Born,False,Born,exact,1117.0,1121.0,100.0
+8966930,modern_dots-mocr,G1,15,institution,19,Mus. Cuming,False,Mus. Cuming,exact,1253.0,1264.0,100.0
+8966930,modern_dots-mocr,G1,16,taxon,21,BULIMUS CLAVATOR,False,BULIMUS CLAVATOR,exact,1270.0,1286.0,100.0
+8966930,modern_dots-mocr,G1,17,vernacular,23,CLUB-BEARER BULIMUS,False,CLUB-BEARER BULIMUS,exact,1574.0,1593.0,100.0
+8966930,modern_dots-mocr,G1,18,person,25,PETIT,False,PETIT,exact,1905.0,1910.0,100.0
+8966930,modern_dots-mocr,G1,19,locality,27,Madagascar,False,Madagascar,exact,1950.0,1960.0,100.0
+8967282,modern_dots-mocr,G1,0,person,1,M. Kiener,False,M. Kiener,exact,13.0,22.0,100.0
+8967282,modern_dots-mocr,G1,1,person,1,Linnæus,False,Linnæus,exact,119.0,126.0,100.0
+8967282,modern_dots-mocr,G1,2,taxon,1,T. cornea,False,T. cornea,exact,177.0,186.0,100.0
+8967282,modern_dots-mocr,G1,3,person,1,Lamarck,False,Lamarck,exact,189.0,196.0,100.0
+8967282,modern_dots-mocr,G1,4,person,1,M. Deshayes,False,M. Deshayes,exact,198.0,209.0,100.0
+8967282,modern_dots-mocr,G1,5,taxon,1,T. ungulina,False,T. ungulina,exact,212.0,223.0,100.0
+8967282,modern_dots-mocr,G1,6,institution,3,Mus. Cuming,False,Mus. Cuming,exact,306.0,317.0,100.0
+8967282,modern_dots-mocr,G1,7,taxon,5,TURRITELLA DUPLICATA,False,TURRITELLA DUPLICATA,exact,323.0,343.0,100.0
+8967282,modern_dots-mocr,G1,8,vernacular,7,DUPLICATE TURRITELLA,False,DUPLICATE TURRITELLA,exact,657.0,677.0,100.0
+8967282,modern_dots-mocr,G1,9,person,9,LAMARCK,False,LAMARCK,exact,1031.0,1038.0,100.0
+8967282,modern_dots-mocr,G1,10,person,9,Deshayes,False,Deshayes,exact,1058.0,1066.0,100.0
+8967282,modern_dots-mocr,G1,11,taxon,9,Turbo duplicatus,False,Turbo duplicatus,exact,1095.0,1111.0,100.0
+8967282,modern_dots-mocr,G1,12,person,9,Linnæus,False,Linnæus,exact,1114.0,1121.0,100.0
+8967282,modern_dots-mocr,G1,13,taxon,11,Turbo acutangulus,False,Turbo acutangulus,exact,1136.0,1153.0,100.0
+8967282,modern_dots-mocr,G1,14,person,11,Linnæus,False,Linnæus,exact,1156.0,1163.0,100.0
+8967282,modern_dots-mocr,G1,15,taxon,13,Turbo replicatus,False,Turbo replicatus,exact,1182.0,1198.0,100.0
+8967282,modern_dots-mocr,G1,16,person,13,Linnæus,False,Linnæus,exact,1201.0,1208.0,100.0
+8967282,modern_dots-mocr,G1,17,locality,15,Eastern Seas,False,Eastern Seas,exact,1216.0,1228.0,100.0
+8967282,modern_dots-mocr,G1,18,taxon,17,Turbo acutangulus,False,Turbo acutangulus,exact,1236.0,1253.0,100.0
+8967282,modern_dots-mocr,G1,19,person,17,Linnæus,False,Linnæus,exact,1258.0,1265.0,100.0
+8967282,modern_dots-mocr,G1,20,taxon,17,Turbo duplicatus,False,Turbo duplicatus,exact,1293.0,1309.0,100.0
+8967282,modern_dots-mocr,G1,21,institution,17,Linnæan collection,False,Linnæan collection,exact,1372.0,1390.0,100.0
+8967282,modern_dots-mocr,G1,22,person,17,M. Deshayes,False,M. Deshayes,exact,1424.0,1435.0,100.0
+8967282,modern_dots-mocr,G1,23,person,17,M. Kiener,False,M. Kiener,exact,1472.0,1481.0,100.0
+8967282,modern_dots-mocr,G1,24,taxon,19,Turritella duplicata,False,Turritella duplicata,exact,1568.0,1588.0,100.0
+8967282,modern_dots-mocr,G1,25,person,19,Linnæus,False,Linnæus,exact,1832.0,1839.0,100.0
+8967282,modern_dots-mocr,G1,26,taxon,19,Turbo acutangulus,False,Turbo acutangulus,exact,1843.0,1860.0,100.0
+8967282,modern_dots-mocr,G1,27,institution,21,Mus. Cuming,False,Mus. Cuming,exact,2065.0,2076.0,100.0
+8967282,modern_dots-mocr,G1,28,taxon,23,TURRITELLA TEREBRA,False,TURRITELLA TEREBRA,exact,2082.0,2100.0,100.0
+8967282,modern_dots-mocr,G1,29,vernacular,25,AUGUR TURRITELLA,False,AUGUR TURRITELLA,exact,2317.0,2333.0,100.0
+8967282,modern_dots-mocr,G1,30,person,29,LAMARCK,False,LAMARCK,exact,2544.0,2551.0,100.0
+8967282,modern_dots-mocr,G1,31,person,29,Deshayes,False,Deshayes,exact,2571.0,2579.0,100.0
+8967282,modern_dots-mocr,G1,32,taxon,29,Turbo terebra,False,Turbo terebra,exact,2608.0,2621.0,100.0
+8967282,modern_dots-mocr,G1,33,person,29,Linnæus,False,Linnæus,exact,2624.0,2631.0,100.0
+8967282,modern_dots-mocr,G1,34,taxon,31,Turritella Archimedis,False,Turritella Archimedis,exact,2670.0,2691.0,100.0
+8967282,modern_dots-mocr,G1,35,person,31,Dillwyn,False,Dillwyn,exact,2694.0,2701.0,100.0
+8967282,modern_dots-mocr,G1,36,person,31,Mawe,False,Mawe,exact,2703.0,2707.0,100.0
+8967282,modern_dots-mocr,G1,37,locality,33,Philippine Islands,False,Philippine Islands,exact,2715.0,2733.0,100.0
+8967282,modern_dots-mocr,G1,38,person,33,Cuming,False,Cuming,exact,2735.0,2741.0,100.0
+8967282,modern_dots-mocr,G1,39,person,35,Martyn,False,Martyn,exact,2823.0,2829.0,100.0
+8967282,modern_dots-mocr,G1,40,person,35,Cuming,False,Cuming,exact,3159.0,3165.0,100.0
+8967282,modern_dots-mocr,G1,41,locality,35,Island of Negros,False,Island of Negros,exact,3199.0,3215.0,100.0
+8967282,modern_dots-mocr,G1,42,locality,35,Philippines,False,Philippines,exact,3228.0,3239.0,100.0
+8967282,modern_dots-mocr,G1,43,taxon,35,T. terebra,False,T. terebra,exact,3246.0,3256.0,100.0
+8967282,modern_dots-mocr,G1,44,taxon,35,T. Linnei,False,T. Linnei,exact,3306.0,3315.0,100.0
+8967282,modern_dots-mocr,G1,45,taxon,35,ungulinus,False,ungulinus,exact,3322.0,3331.0,100.0
+8967282,modern_dots-mocr,G1,46,person,35,Deshayes,False,Deshayes,exact,3334.0,3342.0,100.0
+8967282,modern_dots-mocr,G1,47,taxon,35,T. communis,False,T. communis,exact,3345.0,3356.0,100.0
+8967282,modern_dots-mocr,G1,48,person,35,Philippi,False,Philippi,exact,3359.0,3367.0,100.0
+8967282,modern_dots-mocr,G1,49,taxon,35,T. cornea,False,T. cornea,exact,3377.0,3386.0,100.0
+8967282,modern_dots-mocr,G1,50,person,35,Lamarck,False,Lamarck,exact,3391.0,3398.0,100.0
+8967282,modern_dots-mocr,G1,51,institution,37,Mus. Cuming,False,Mus. Cuming,exact,3417.0,3428.0,100.0
+8967282,modern_dots-mocr,G1,52,taxon,39,TURRITELLA ATTENUATA,False,TURRITELLA ATTENUATA,exact,3434.0,3454.0,100.0
+8967282,modern_dots-mocr,G1,53,vernacular,41,ATTENUATED TURRITELLA,False,ATTENUATED TURRITELLA,exact,3714.0,3735.0,100.0
+8967282,modern_dots-mocr,G1,54,taxon,43,Turritella acutangula,False,Turritella acutangula,exact,4007.0,4028.0,100.0
+8967282,modern_dots-mocr,G1,55,person,43,Deshayes,False,Deshayes,exact,4031.0,4039.0,100.0
+8967282,modern_dots-mocr,G1,56,taxon,43,Turbo acutangulus,False,Turbo acutangulus,exact,4080.0,4097.0,100.0
+8967282,modern_dots-mocr,G1,57,person,43,Linn.,False,Linn.,exact,4100.0,4105.0,100.0
+8967282,modern_dots-mocr,G1,58,person,47,Linnæus,False,Linnæus,exact,4156.0,4163.0,100.0
+8967282,modern_dots-mocr,G1,59,taxon,47,Turbo acutangulus,False,Turbo acutangulus,exact,4183.0,4200.0,100.0
+8967282,modern_dots-mocr,G1,60,taxon,47,T. duplicatus,False,T. duplicatus,exact,4257.0,4270.0,100.0
+8992408,modern_dots-mocr,G1,0,person,1,H. A. Macpherson,False,H. A. Macpherson,exact,257.0,273.0,100.0
+8992408,modern_dots-mocr,G1,1,vernacular,1,Hawfinch,False,Hawfinch,exact,337.0,345.0,100.0
+8992408,modern_dots-mocr,G1,2,person,1,Charles A. Witchell,False,Charles A. Witchell,exact,418.0,437.0,100.0
+8992408,modern_dots-mocr,G1,3,vernacular,1,Hawfinch,False,Hawfinch,exact,539.0,547.0,100.0
+8992408,modern_dots-mocr,G1,4,person,1,H. A. Macpherson,False,H. A. Macpherson,exact,586.0,602.0,100.0
+8992408,modern_dots-mocr,G1,5,person,3,Alexander von Homeyer,False,Alexander von Homeyer,exact,835.0,856.0,100.0
+8992408,modern_dots-mocr,G1,6,vernacular,3,Chaffinch,False,Chaffinch,exact,759.0,768.0,100.0
+8992408,modern_dots-mocr,G1,7,vernacular,3,cherry-kernel biter,False,cherry-kernel biter,exact,904.0,923.0,100.0
+8992408,modern_dots-mocr,G1,8,vernacular,5,Bullfinches,False,Bullfinches,exact,1057.0,1068.0,100.0
+8992408,modern_dots-mocr,G1,9,vernacular,5,Grosbeaks,False,Grosbeaks,exact,1084.0,1093.0,100.0
+8992408,modern_dots-mocr,G1,10,vernacular,5,Grosbeaks,False,Grosbeaks,exact,1122.0,1131.0,100.0
+8992408,modern_dots-mocr,G1,11,person,5,Howard Saunders,False,Howard Saunders,exact,1201.0,1216.0,100.0
+8992408,modern_dots-mocr,G1,12,vernacular,5,Finches,False,Finches,exact,1275.0,1282.0,100.0
+8992408,modern_dots-mocr,G1,13,vernacular,5,Buntings,False,Buntings,exact,1291.0,1299.0,100.0
+8992408,modern_dots-mocr,G1,14,vernacular,7,Finches,False,Finches,exact,1469.0,1476.0,100.0
+8992408,modern_dots-mocr,G1,15,taxon,7,Fringilla,False,Fringilla,exact,1512.0,1521.0,100.0
+8992408,modern_dots-mocr,G1,16,vernacular,7,Buntings,False,Buntings,exact,1557.0,1565.0,100.0
+8992408,modern_dots-mocr,G1,17,taxon,7,Fringilla,False,Fringilla,exact,1620.0,1629.0,100.0
+8992408,modern_dots-mocr,G1,18,taxon,7,Passer,False,Passer,exact,1651.0,1657.0,100.0
+8992408,modern_dots-mocr,G1,19,taxon,7,Emberizinæ,False,Emberizinæ,exact,1720.0,1730.0,100.0
+8992489,modern_dots-mocr,G1,0,vernacular,1,BRAMBLING,False,BRAMBLING,exact,4.0,13.0,100.0
+8992489,modern_dots-mocr,G1,1,taxon,3,Fringilla montifringilla,False,Fringilla montifringilla,exact,16.0,40.0,100.0
+8992489,modern_dots-mocr,G1,2,person,3,LINN.,False,LINN.,exact,42.0,47.0,100.0
+8992489,modern_dots-mocr,G1,3,person,5,Howard Saunders,False,Howard Saunders,exact,85.0,100.0,100.0
+8992489,modern_dots-mocr,G1,4,vernacular,5,Brambling,False,Brambling,exact,126.0,135.0,100.0
+8992489,modern_dots-mocr,G1,5,locality,5,Faroes,False,Faroes,exact,115.0,121.0,100.0
+8992489,modern_dots-mocr,G1,6,locality,5,Norway,False,Norway,exact,249.0,255.0,100.0
+8992489,modern_dots-mocr,G1,7,locality,5,valley of the Amur,False,valley of the Amur,exact,263.0,281.0,100.0
+8992489,modern_dots-mocr,G1,8,locality,5,Japan,False,Japan,exact,315.0,320.0,100.0
+8992489,modern_dots-mocr,G1,9,locality,5,China,False,China,exact,322.0,327.0,100.0
+8992489,modern_dots-mocr,G1,10,locality,5,Northern India,False,Northern India,exact,329.0,343.0,100.0
+8992489,modern_dots-mocr,G1,11,locality,5,Asia Minor,False,Asia Minor,exact,345.0,355.0,100.0
+8992489,modern_dots-mocr,G1,12,locality,5,Europe,False,Europe,exact,374.0,380.0,100.0
+8992489,modern_dots-mocr,G1,13,locality,5,Mediterranean,False,Mediterranean,exact,477.0,490.0,100.0
+8992489,modern_dots-mocr,G1,14,locality,5,Belgium,False,Belgium,exact,523.0,530.0,100.0
+8992489,modern_dots-mocr,G1,15,locality,5,Holland,False,Holland,exact,532.0,539.0,100.0
+8992489,modern_dots-mocr,G1,16,locality,5,Germany,False,Germany,exact,541.0,548.0,100.0
+8992489,modern_dots-mocr,G1,17,locality,5,Heligoland,False,Heligoland,exact,554.0,564.0,100.0
+8992489,modern_dots-mocr,G1,18,locality,5,Pyrenees,False,Pyrenees,exact,617.0,625.0,100.0
+8992489,modern_dots-mocr,G1,19,locality,5,Alps,False,Alps,exact,631.0,635.0,100.0
+8992489,modern_dots-mocr,G1,20,locality,5,Ardennes,False,Ardennes,exact,644.0,652.0,100.0
+8992489,modern_dots-mocr,G1,21,locality,7,Great Britain,False,Great Britain,exact,718.0,731.0,100.0
+8992489,modern_dots-mocr,G1,22,vernacular,7,Brambling,False,Brambling,exact,736.0,745.0,100.0
+8992489,modern_dots-mocr,G1,23,locality,7,Scotland,False,Scotland,exact,989.0,997.0,100.0
+8992489,modern_dots-mocr,G1,24,locality,7,England,False,England,exact,1006.0,1013.0,100.0
+8992489,modern_dots-mocr,G1,25,locality,7,Cornwall,False,Cornwall,exact,1025.0,1033.0,100.0
+8992489,modern_dots-mocr,G1,26,locality,7,west of England,False,west of England,exact,1039.0,1054.0,100.0
+8992489,modern_dots-mocr,G1,27,locality,7,south of Ireland,False,south of Ireland,exact,1064.0,1080.0,100.0
+8967345,modern_dots-mocr,G1,0,taxon,5,E B U R N A,False,E B U R N A,exact,25.0,36.0,100.0
+8967345,modern_dots-mocr,G1,1,person,11,Crabbe,False,Crabbe,exact,246.0,252.0,100.0
+8992647,modern_dots-mocr,G1,0,taxon,1,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,8.0,19.0,100.0
+8992647,modern_dots-mocr,G1,1,vernacular,3,BLACK-HEADED WAGTAIL,False,BLACK-HEADED WAGTAIL,exact,30.0,50.0,100.0
+8992647,modern_dots-mocr,G1,2,taxon,5,Motacilla melanocephala,False,Motacilla melanocephala,exact,54.0,77.0,100.0
+8992647,modern_dots-mocr,G1,3,person,5,LICHT,False,LICHT,exact,79.0,84.0,100.0
+8992647,modern_dots-mocr,G1,4,locality,7,Willingdon,False,Willingdon,exact,109.0,119.0,100.0
+8992647,modern_dots-mocr,G1,5,date,7,"May 13th, 1906",False,"May 13th, 1906",exact,124.0,138.0,100.0
+8992647,modern_dots-mocr,G1,6,taxon,7,M. flava,False,M. flava,exact,162.0,170.0,100.0
+8992647,modern_dots-mocr,G1,7,taxon,9,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,208.0,219.0,100.0
+8992647,modern_dots-mocr,G1,8,vernacular,11,SYKES' WAGTAIL,False,SYKES' WAGTAIL,exact,226.0,240.0,100.0
+8992647,modern_dots-mocr,G1,9,taxon,13,Motacilla beema,False,Motacilla beema,exact,244.0,259.0,100.0
+8992647,modern_dots-mocr,G1,10,person,13,SYKES,False,SYKES,exact,261.0,266.0,100.0
+8992647,modern_dots-mocr,G1,11,locality,15,"Rottingdean, Sussex",False,"Rottingdean, Sussex",exact,293.0,312.0,100.0
+8992647,modern_dots-mocr,G1,12,date,15,"April 20th, 1898",False,"April 20th, 1898",exact,317.0,333.0,100.0
+8992647,modern_dots-mocr,G1,13,taxon,17,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,344.0,355.0,100.0
+8992647,modern_dots-mocr,G1,14,vernacular,19,ASHY-HEADED WAGTAIL,False,ASHY-HEADED WAGTAIL,exact,366.0,385.0,100.0
+8992647,modern_dots-mocr,G1,15,taxon,21,Motacilla cinereocapilla,False,Motacilla cinereocapilla,exact,389.0,413.0,100.0
+8992647,modern_dots-mocr,G1,16,person,21,SAVI,False,SAVI,exact,415.0,419.0,100.0
+8992647,modern_dots-mocr,G1,17,locality,23,Penzance,False,Penzance,exact,470.0,478.0,100.0
+8992647,modern_dots-mocr,G1,18,locality,23,"Sheringham, Norfolk",False,"Sheringham, Norfolk",exact,496.0,515.0,100.0
+8992647,modern_dots-mocr,G1,19,date,23,1842,False,1842,exact,526.0,530.0,100.0
+8992647,modern_dots-mocr,G1,20,taxon,25,M. flava,False,M. flava,exact,624.0,632.0,100.0
+8967333,modern_dots-mocr,G1,0,taxon,5,CASSIDARIA,False,CASSIDARIA,exact,25.0,35.0,100.0
+8967333,modern_dots-mocr,G1,1,person,12,Landsborough,False,Landsborough,exact,312.0,324.0,100.0
+8967281,modern_dots-mocr,G1,0,taxon,1,TURRITELLA,False,TURRITELLA,exact,6.0,16.0,100.0
+8967281,modern_dots-mocr,G1,1,person,1,Lamarck,False,Lamarck,exact,18.0,25.0,100.0
+8967281,modern_dots-mocr,G1,2,taxon,7,Turritella,False,Turritella,exact,658.0,668.0,100.0
+8967281,modern_dots-mocr,G1,3,taxon,7,Cerithium,False,Cerithium,exact,1137.0,1146.0,100.0
+8967281,modern_dots-mocr,G1,4,taxon,7,Turritella,False,Turritella,exact,1257.0,1267.0,100.0
+8967281,modern_dots-mocr,G1,5,taxon,9,Turritella,False,Turritella,exact,1723.0,1733.0,100.0
+8967281,modern_dots-mocr,G1,6,person,9,Lamarck,False,Lamarck,exact,1819.0,1826.0,100.0
+8967281,modern_dots-mocr,G1,7,person,9,M. Kiener,False,M. Kiener,exact,1873.0,1882.0,100.0
+8967281,modern_dots-mocr,G1,8,locality,9,Paris,False,Paris,exact,1864.0,1869.0,100.0
+8967281,modern_dots-mocr,G1,9,person,9,Cuming,False,Cuming,exact,1957.0,1963.0,100.0
+8967281,modern_dots-mocr,G1,10,person,9,Metcalfe,False,Metcalfe,exact,1969.0,1977.0,100.0
+8967281,modern_dots-mocr,G1,11,person,9,Hanley,False,Hanley,exact,1983.0,1989.0,100.0
+8967281,modern_dots-mocr,G1,12,person,9,Edward Belcher,False,Edward Belcher,exact,1996.0,2010.0,100.0
+8967281,modern_dots-mocr,G1,13,institution,9,British Museum,False,British Museum,exact,2016.0,2030.0,100.0
+8967281,modern_dots-mocr,G1,14,institution,9,Banksian Collection,False,Banksian Collection,exact,2040.0,2059.0,100.0
+8967281,modern_dots-mocr,G1,15,institution,9,Linnæan Society,False,Linnæan Society,exact,2081.0,2096.0,100.0
+8967281,modern_dots-mocr,G1,16,person,11,Lamarck,False,Lamarck,exact,2256.0,2263.0,100.0
+8967281,modern_dots-mocr,G1,17,person,11,Deshayes,False,Deshayes,exact,2265.0,2273.0,100.0
+8967281,modern_dots-mocr,G1,18,person,11,Kiener,False,Kiener,exact,2278.0,2284.0,100.0
+8967281,modern_dots-mocr,G1,19,institution,11,Linnæan Society of London,False,Linnæan Society of London,exact,2382.0,2407.0,100.0
+8967281,modern_dots-mocr,G1,20,taxon,11,Turbo acutangulus,False,Turbo acutangulus,exact,2414.0,2431.0,100.0
+8967281,modern_dots-mocr,G1,21,person,11,Linnæus,False,Linnæus,exact,2436.0,2443.0,100.0
+8967281,modern_dots-mocr,G1,22,taxon,11,T. duplicatus,False,T. duplicatus,exact,2482.0,2495.0,100.0
+8967281,modern_dots-mocr,G1,23,person,11,M. Deshayes,False,M. Deshayes,exact,2534.0,2545.0,100.0
+8967281,modern_dots-mocr,G1,24,taxon,13,Turbo imbricatus,False,Turbo imbricatus,exact,2712.0,2728.0,100.0
+8967281,modern_dots-mocr,G1,25,taxon,13,Turbo ungulinus,False,Turbo ungulinus,exact,2800.0,2815.0,100.0
+8967281,modern_dots-mocr,G1,26,person,13,Linnæus,False,Linnæus,exact,2820.0,2827.0,100.0
+8967281,modern_dots-mocr,G1,27,person,13,Lamarck,False,Lamarck,exact,2856.0,2863.0,100.0
+8967281,modern_dots-mocr,G1,28,taxon,13,Turritella fuscata,False,Turritella fuscata,exact,2867.0,2885.0,100.0
+8967281,modern_dots-mocr,G1,29,taxon,13,Turbo terebra,False,Turbo terebra,exact,2909.0,2922.0,100.0
+8967281,modern_dots-mocr,G1,30,person,13,Linn.,False,Linn.,exact,2925.0,2930.0,100.0
+8967281,modern_dots-mocr,G1,31,person,13,Montagu,False,Montagu,exact,2974.0,2981.0,100.0
+8967281,modern_dots-mocr,G1,32,taxon,13,T. cornea,False,T. cornea,exact,3008.0,3017.0,100.0
+8967281,modern_dots-mocr,G1,33,person,13,Lamarck,False,Lamarck,exact,3022.0,3029.0,100.0
+8967281,modern_dots-mocr,G1,34,taxon,15,Turritella brevialis,False,Turritella brevialis,exact,3037.0,3057.0,100.0
+8967281,modern_dots-mocr,G1,35,person,15,Lamarck,False,Lamarck,exact,3062.0,3069.0,100.0
+8967281,modern_dots-mocr,G1,36,taxon,15,LeMesal,False,LeMesal,exact,3071.0,3078.0,100.0
+8967281,modern_dots-mocr,G1,37,person,15,Adanson,False,Adanson,exact,3082.0,3089.0,100.0
+8967281,modern_dots-mocr,G1,38,person,15,Gray,False,Gray,exact,3143.0,3147.0,100.0
+8967281,modern_dots-mocr,G1,39,taxon,15,MESALIA,False,MESALIA,exact,3164.0,3171.0,100.0
+8967281,modern_dots-mocr,G1,40,taxon,15,Turritella lactea,False,Turritella lactea,exact,3204.0,3221.0,100.0
+8967281,modern_dots-mocr,G1,41,person,15,Möller,False,Möller,exact,3226.0,3232.0,100.0
+8967281,modern_dots-mocr,G1,42,person,15,Gray,False,Gray,exact,3339.0,3343.0,100.0
+8967281,modern_dots-mocr,G1,43,taxon,15,EGLISIA,False,EGLISIA,exact,3381.0,3388.0,100.0
+8967281,modern_dots-mocr,G1,44,taxon,15,Turritella spirata,False,Turritella spirata,exact,3406.0,3424.0,100.0
+8967281,modern_dots-mocr,G1,45,person,15,Cuming,False,Cuming,exact,3504.0,3510.0,100.0
+8967281,modern_dots-mocr,G1,46,locality,15,Philippine Islands,False,Philippine Islands,exact,3525.0,3543.0,100.0
+8967281,modern_dots-mocr,G1,47,taxon,17,Turritellæ,False,Turritellæ,exact,3551.0,3561.0,100.0
+8967281,modern_dots-mocr,G1,48,taxon,17,T. cornea,False,T. cornea,exact,3663.0,3672.0,100.0
+8967281,modern_dots-mocr,G1,49,locality,17,Shetland Islands,False,Shetland Islands,exact,3708.0,3724.0,100.0
+8967281,modern_dots-mocr,G1,50,person,17,M'Andrew,False,M'Andrew,exact,3732.0,3740.0,100.0
+8967281,modern_dots-mocr,G1,51,locality,17,Mediterranean,False,Mediterranean,exact,3913.0,3926.0,100.0
+8967281,modern_dots-mocr,G1,52,locality,17,Eastern Seas,False,Eastern Seas,exact,3960.0,3972.0,100.0
+8967281,modern_dots-mocr,G1,53,locality,17,shores of Central America,False,shores of Central America,exact,3981.0,4006.0,100.0
+8967281,modern_dots-mocr,G1,54,locality,17,New Zealand,False,New Zealand,exact,4039.0,4050.0,100.0
+8967281,modern_dots-mocr,G1,55,locality,17,Australia,False,Australia,exact,4052.0,4061.0,100.0
+8967281,modern_dots-mocr,G1,56,locality,17,Van Dieman's Land,False,Van Dieman's Land,exact,4067.0,4084.0,100.0
+8967281,modern_dots-mocr,G1,57,institution,19,Mus. Cuming,False,Mus. Cuming,exact,4099.0,4110.0,100.0
+8967281,modern_dots-mocr,G1,58,taxon,21,TURRITELLA UNGULINA,False,TURRITELLA UNGULINA,exact,4114.0,4133.0,100.0
+8967281,modern_dots-mocr,G1,59,vernacular,23,NAIL-BRUISED TURRITELLA,False,NAIL-BRUISED TURRITELLA,exact,4355.0,4378.0,100.0
+8967281,modern_dots-mocr,G1,60,taxon,25,Turbo ungulinus,False,Turbo ungulinus,exact,4588.0,4603.0,100.0
+8967281,modern_dots-mocr,G1,61,person,25,Linnæus,False,Linnæus,exact,4606.0,4613.0,100.0
+8967281,modern_dots-mocr,G1,62,taxon,27,Turritella fuscata,False,Turritella fuscata,exact,4651.0,4669.0,100.0
+8967281,modern_dots-mocr,G1,63,person,27,Lamarck,False,Lamarck,exact,4672.0,4679.0,100.0
+8967281,modern_dots-mocr,G1,64,locality,29,"Senegal, Mouth of the Gambia, West Africa",False,"Senegal, Mouth of the Gambia, West Africa",exact,4687.0,4728.0,100.0
+8967281,modern_dots-mocr,G1,65,person,31,Linnæus,False,Linnæus,exact,4766.0,4773.0,100.0
+8967281,modern_dots-mocr,G1,66,taxon,31,Turbo ungulinus,False,Turbo ungulinus,exact,4795.0,4810.0,100.0
+8967281,modern_dots-mocr,G1,67,institution,31,Linnæan Society of London,False,Linnæan Society of London,exact,4850.0,4875.0,100.0
+8967281,modern_dots-mocr,G1,68,person,31,Hanley,False,Hanley,exact,4892.0,4898.0,100.0
+8967281,modern_dots-mocr,G1,69,person,31,Lamarck,False,Lamarck,exact,4930.0,4937.0,100.0
+8967281,modern_dots-mocr,G1,70,taxon,31,T. fuscata,False,T. fuscata,exact,4941.0,4951.0,100.0
+8967281,modern_dots-mocr,G1,71,locality,31,Seas of Europe,False,Seas of Europe,exact,4968.0,4982.0,100.0
+8967281,modern_dots-mocr,G1,72,person,31,Pulteney,False,Pulteney,exact,5034.0,5042.0,100.0
+8967281,modern_dots-mocr,G1,73,person,31,M. Deshayes,False,M. Deshayes,exact,5057.0,5068.0,100.0
+8967281,modern_dots-mocr,G1,74,taxon,31,Turritella,False,Turritella,exact,5113.0,5123.0,100.0
+8967281,modern_dots-mocr,G1,75,locality,31,Mediterranean,False,Mediterranean,exact,5147.0,5160.0,100.0
+8966802,modern_dots-mocr,G1,0,vernacular,1,SLIGHTLY WRINKLED BULIMUS,False,SLIGHTLY WRINKLED BULIMUS,exact,6.0,31.0,100.0
+8966802,modern_dots-mocr,G1,1,person,3,SOWERBY,False,SOWERBY,exact,327.0,334.0,100.0
+8966802,modern_dots-mocr,G1,2,locality,5,Gallapagos Islands,False,Gallapagos Islands,exact,372.0,390.0,100.0
+8966802,modern_dots-mocr,G1,3,person,5,Cuming,False,Cuming,exact,392.0,398.0,100.0
+8966802,modern_dots-mocr,G1,4,institution,9,Mus. Cuming,False,Mus. Cuming,exact,489.0,500.0,100.0
+8966802,modern_dots-mocr,G1,5,taxon,11,BULIMUS TURRITUS,False,BULIMUS TURRITUS,exact,506.0,522.0,100.0
+8966802,modern_dots-mocr,G1,6,vernacular,13,TURRETED BULIMUS,False,TURRETED BULIMUS,exact,733.0,749.0,100.0
+8966802,modern_dots-mocr,G1,7,person,15,BRODERIP,False,BRODERIP,exact,963.0,971.0,100.0
+8966802,modern_dots-mocr,G1,8,locality,17,"Truxillo, Peru",False,"Truxillo, Peru",exact,1012.0,1026.0,100.0
+8966802,modern_dots-mocr,G1,9,person,17,Cuming,False,Cuming,exact,1047.0,1053.0,100.0
+8966802,modern_dots-mocr,G1,10,institution,21,Mus. Cuming,False,Mus. Cuming,exact,1180.0,1191.0,100.0
+8966802,modern_dots-mocr,G1,11,taxon,23,BULIMUS SCULPTURATUS,False,BULIMUS SCULPTURATUS,exact,1197.0,1217.0,100.0
+8966802,modern_dots-mocr,G1,12,vernacular,25,SCULPTURED BULIMUS,False,SCULPTURED BULIMUS,exact,1452.0,1470.0,100.0
+8966802,modern_dots-mocr,G1,13,person,27,PFEIFFER,False,PFEIFFER,exact,1720.0,1728.0,100.0
+8966802,modern_dots-mocr,G1,14,locality,29,Gallapagos Islands,False,Gallapagos Islands,exact,1768.0,1786.0,100.0
+8966802,modern_dots-mocr,G1,15,person,29,Darwin,False,Darwin,exact,1800.0,1806.0,100.0
+8966802,modern_dots-mocr,G1,16,taxon,31,B. rugiferus,False,B. rugiferus,exact,1883.0,1895.0,100.0
+8966802,modern_dots-mocr,G1,17,institution,33,Mus. Cuming,False,Mus. Cuming,exact,2064.0,2075.0,100.0
+8966802,modern_dots-mocr,G1,18,taxon,35,BULIMUS CALVUS,False,BULIMUS CALVUS,exact,2081.0,2095.0,100.0
+8966802,modern_dots-mocr,G1,19,vernacular,37,BALD BULIMUS,False,BALD BULIMUS,exact,2303.0,2315.0,100.0
+8966802,modern_dots-mocr,G1,20,person,39,SOWERBY,False,SOWERBY,exact,2515.0,2522.0,100.0
+8966802,modern_dots-mocr,G1,21,locality,41,"James' Island, Gallapagos",False,"James' Island, Gallapagos",exact,2562.0,2587.0,100.0
+8966802,modern_dots-mocr,G1,22,person,41,Cuming,False,Cuming,exact,2615.0,2621.0,100.0
+8966802,modern_dots-mocr,G1,23,taxon,43,Achatinella,False,Achatinella,exact,2670.0,2681.0,100.0
+8966802,modern_dots-mocr,G1,24,institution,45,Mus. Cuming,False,Mus. Cuming,exact,2719.0,2730.0,100.0
+8966802,modern_dots-mocr,G1,25,taxon,47,BULIMUS PUSTULOSUS,False,BULIMUS PUSTULOSUS,exact,2736.0,2754.0,100.0
+8966802,modern_dots-mocr,G1,26,vernacular,49,PUSTULOSE BULIMUS,False,PUSTULOSE BULIMUS,exact,3000.0,3017.0,100.0
+8966802,modern_dots-mocr,G1,27,person,51,BRODERIP,False,BRODERIP,exact,3261.0,3269.0,100.0
+8966802,modern_dots-mocr,G1,28,locality,53,"Huasco, Chili",False,"Huasco, Chili",exact,3310.0,3323.0,100.0
+8966802,modern_dots-mocr,G1,29,person,53,Cuming,False,Cuming,exact,3359.0,3365.0,100.0
+8966790,modern_dots-mocr,G1,0,institution,3,Mus. Cuming,False,Mus. Cuming,exact,152.0,163.0,100.0
+8966790,modern_dots-mocr,G1,1,taxon,5,BULIMUS CHILENSIS,False,BULIMUS CHILENSIS,exact,167.0,184.0,100.0
+8966790,modern_dots-mocr,G1,2,vernacular,7,CHILI BULIMUS,False,CHILI BULIMUS,exact,426.0,439.0,100.0
+8966790,modern_dots-mocr,G1,3,person,11,LESSON,False,LESSON,exact,674.0,680.0,100.0
+8966790,modern_dots-mocr,G1,4,taxon,13,Bulimus granulosus,False,Bulimus granulosus,exact,717.0,735.0,100.0
+8966790,modern_dots-mocr,G1,5,person,13,Broderip,False,Broderip,exact,737.0,745.0,100.0
+8966790,modern_dots-mocr,G1,6,locality,15,Valparaiso,False,Valparaiso,exact,753.0,763.0,100.0
+8966790,modern_dots-mocr,G1,7,locality,15,"Conception, Chili",False,"Conception, Chili",exact,768.0,785.0,100.0
+8966790,modern_dots-mocr,G1,8,person,15,Cuming,False,Cuming,exact,787.0,793.0,100.0
+8966790,modern_dots-mocr,G1,9,locality,17,mountains of Conception,False,mountains of Conception,exact,1027.0,1050.0,100.0
+8966790,modern_dots-mocr,G1,10,locality,17,Valparaiso,False,Valparaiso,exact,1105.0,1115.0,100.0
+8967290,modern_dots-mocr,G1,0,taxon,9,T. lentiginosa,False,T. lentiginosa,exact,379.0,393.0,100.0
+8967290,modern_dots-mocr,G1,1,taxon,13,T. goniostoma,False,T. goniostoma,exact,539.0,552.0,100.0
+8967290,modern_dots-mocr,G1,2,taxon,17,T. lentiginosa,False,T. lentiginosa,exact,754.0,768.0,100.0
+8966937,modern_dots-mocr,G1,0,institution,5,Mus. Cuming,False,Mus. Cuming,exact,50.0,61.0,100.0
+8966937,modern_dots-mocr,G1,1,taxon,7,BULIMUS ROSEATUS,False,BULIMUS ROSEATUS,exact,67.0,83.0,100.0
+8966937,modern_dots-mocr,G1,2,vernacular,9,ROSEATE BULIMUS,False,ROSEATE BULIMUS,exact,382.0,397.0,100.0
+8966937,modern_dots-mocr,G1,3,locality,11,Venezuela,False,Venezuela,exact,729.0,738.0,100.0
+8966937,modern_dots-mocr,G1,4,taxon,13,B. oreades,False,B. oreades,exact,832.0,842.0,100.0
+8966937,modern_dots-mocr,G1,5,institution,15,Mus. Cuming,False,Mus. Cuming,exact,860.0,871.0,100.0
+8966937,modern_dots-mocr,G1,6,taxon,17,BULIMUS FERIATUS,False,BULIMUS FERIATUS,exact,877.0,893.0,100.0
+8966937,modern_dots-mocr,G1,7,vernacular,19,UNEMPLOYED BULIMUS,False,UNEMPLOYED BULIMUS,exact,1193.0,1211.0,100.0
+8966937,modern_dots-mocr,G1,8,locality,21,Venezuela,False,Venezuela,exact,1536.0,1545.0,100.0
+8966937,modern_dots-mocr,G1,9,institution,25,Mus. Cuming,False,Mus. Cuming,exact,1636.0,1647.0,100.0
+8966937,modern_dots-mocr,G1,10,taxon,27,BULIMUS PERDIX,False,BULIMUS PERDIX,exact,1653.0,1667.0,100.0
+8966937,modern_dots-mocr,G1,11,vernacular,29,PARTRIDGE BULIMUS,False,PARTRIDGE BULIMUS,exact,1965.0,1982.0,100.0
+8966937,modern_dots-mocr,G1,12,person,31,PFEIFFER,False,PFEIFFER,exact,2274.0,2282.0,100.0
+8966937,modern_dots-mocr,G1,13,locality,33,New Granada,False,New Granada,exact,2313.0,2324.0,100.0
+8966937,modern_dots-mocr,G1,14,person,33,Funck,False,Funck,exact,2326.0,2331.0,100.0
+8966937,modern_dots-mocr,G1,15,taxon,35,B. perdix,False,B. perdix,exact,2728.0,2737.0,100.0
+8966937,modern_dots-mocr,G1,16,institution,37,Mus. Cuming,False,Mus. Cuming,exact,2904.0,2915.0,100.0
+8966937,modern_dots-mocr,G1,17,taxon,39,BULIMUS EURYOMPHALUS,False,BULIMUS EURYOMPHALUS,exact,2921.0,2941.0,100.0
+8966937,modern_dots-mocr,G1,18,vernacular,41,BROAD-PLAITED BULIMUS,False,BROAD-PLAITED BULIMUS,exact,3268.0,3289.0,100.0
+8966937,modern_dots-mocr,G1,19,locality,43,Venezuela,False,Venezuela,exact,3603.0,3612.0,100.0
+8966937,modern_dots-mocr,G1,20,person,43,Dyson,False,Dyson,exact,3614.0,3619.0,100.0
+8966937,modern_dots-mocr,G1,21,institution,47,Mus. Cuming,False,Mus. Cuming,exact,3700.0,3711.0,100.0
+8966937,modern_dots-mocr,G1,22,taxon,49,BULIMUS GLABER,False,BULIMUS GLABER,exact,3717.0,3731.0,100.0
+8992643,modern_dots-mocr,G1,0,taxon,1,TURDIDÆ,False,TURDIDÆ,exact,8.0,15.0,100.0
+8992643,modern_dots-mocr,G1,1,taxon,3,SYLVIINÆ,False,SYLVIINÆ,exact,30.0,38.0,100.0
+8992643,modern_dots-mocr,G1,2,vernacular,5,PALLAS' WILLOW-WARBLER,False,PALLAS' WILLOW-WARBLER,exact,45.0,67.0,100.0
+8992643,modern_dots-mocr,G1,3,taxon,7,Phylloscopus proregulus,False,Phylloscopus proregulus,exact,71.0,94.0,100.0
+8992643,modern_dots-mocr,G1,4,locality,9,Norfolk,False,Norfolk,exact,147.0,154.0,100.0
+8992643,modern_dots-mocr,G1,5,date,9,"October, 1896",False,"October, 1896",exact,159.0,172.0,100.0
+8992643,modern_dots-mocr,G1,6,vernacular,11,Chiffchaffs,False,Chiffchaffs,exact,187.0,198.0,100.0
+8992643,modern_dots-mocr,G1,7,locality,11,Shetlands,False,Shetlands,exact,211.0,220.0,100.0
+8992643,modern_dots-mocr,G1,8,date,11,"April 15th and 24th, 1904",False,"April 15th and 24th, 1904",exact,229.0,254.0,100.0
+8992643,modern_dots-mocr,G1,9,date,11,May,False,May,exact,259.0,262.0,100.0
+8992643,modern_dots-mocr,G1,10,person,11,John S. Tulloch,False,John S. Tulloch,exact,300.0,315.0,100.0
+8992643,modern_dots-mocr,G1,11,locality,11,Lerwick,False,Lerwick,exact,319.0,326.0,100.0
+8992643,modern_dots-mocr,G1,12,date,11,May 27th,False,May 27th,exact,335.0,343.0,100.0
+8992643,modern_dots-mocr,G1,13,taxon,13,TURDIDÆ,False,TURDIDÆ,exact,385.0,392.0,100.0
+8992643,modern_dots-mocr,G1,14,taxon,15,SYLVIINÆ,False,SYLVIINÆ,exact,407.0,415.0,100.0
+8992643,modern_dots-mocr,G1,15,vernacular,17,SIBERIAN CHIFFCHAFF,False,SIBERIAN CHIFFCHAFF,exact,426.0,445.0,100.0
+8992643,modern_dots-mocr,G1,16,taxon,19,Phylloscopus tristis,False,Phylloscopus tristis,exact,449.0,469.0,100.0
+8992643,modern_dots-mocr,G1,17,person,19,BLYTH,False,BLYTH,exact,471.0,476.0,100.0
+8992643,modern_dots-mocr,G1,18,locality,21,Orkneys,False,Orkneys,exact,527.0,534.0,100.0
+8992643,modern_dots-mocr,G1,19,date,21,1902,False,1902,exact,538.0,542.0,100.0
+8992643,modern_dots-mocr,G1,20,taxon,23,TURDIDÆ,False,TURDIDÆ,exact,553.0,560.0,100.0
+8992643,modern_dots-mocr,G1,21,taxon,25,SYLVIINÆ,False,SYLVIINÆ,exact,575.0,583.0,100.0
+8992643,modern_dots-mocr,G1,22,vernacular,27,GREENISH WILLOW-WARBLER,False,GREENISH WILLOW-WARBLER,exact,594.0,617.0,100.0
+8992643,modern_dots-mocr,G1,23,taxon,29,Phylloscopus viridanus,False,Phylloscopus viridanus,exact,621.0,643.0,100.0
+8992643,modern_dots-mocr,G1,24,person,29,BLYTH,False,BLYTH,exact,645.0,650.0,100.0
+8992643,modern_dots-mocr,G1,25,locality,31,Lincolnshire,False,Lincolnshire,exact,680.0,692.0,100.0
+8992643,modern_dots-mocr,G1,26,date,31,"September 5th, 1896",False,"September 5th, 1896",exact,697.0,716.0,100.0
+8992643,modern_dots-mocr,G1,27,locality,31,Sule Skerry Lighthouse,False,Sule Skerry Lighthouse,exact,734.0,756.0,100.0
+8992643,modern_dots-mocr,G1,28,locality,31,Sutherlandshire,False,Sutherlandshire,exact,758.0,773.0,100.0
+8992643,modern_dots-mocr,G1,29,date,31,"September 5th, 1902",False,"September 5th, 1902",exact,779.0,798.0,100.0
