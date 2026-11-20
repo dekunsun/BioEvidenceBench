@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202569-S1WE9628dWiZbwc90hjd",
+ "object": "chat.completion",
+ "created": 1795202569,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "priority",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "6de4118772796dfa45fc98de02ac9a674b614e7862adfc30ccc04725bb5bd3b9",
+       "name": "8992612.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8992612.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "THE SKY-LARK 183\n\nPractically the *Alaudidae* constitute an Old World family, one species only occurring in North America, whilst, as Jerdon observes, “They are very sparingly represented in Malayana and Australia.”\n\n*Family—ALAUDIDÆ.*\n\n# THE SKY-LARK.\n\n*Alauda arvensis*, Linn.\n\nFound during the summer months throughout the whole of Europe; nesting in Scandinavia as far north as lat. 70°, whilst in North Africa it breeds sparingly as far south as the slopes of the Atlas Mountains, and in the east, in Russia and Siberia, and at high elevations in Japan, the valley of the Amoor, South-east Mongolia, Turkestan and Persia. In winter it visits China, North-west India, Afghanistan, Persia, Asia Minor, Palestine and Egypt. It has been met with at Madeira, and is reputed to have occurred on Greenland. It has also been introduced into the United States,* New Zealand and Australia.\n\nThroughout Great Britain and Ireland, the Sky-Lark is widely distributed, abundant, and (excepting in the extreme north) resident.\n\nThe climatic variations of the Sky-Lark have been separated under several distinctive names, such as *A. dulcivox*, *A. japonica*, *A. cantarella*, *A. liopus*, *A. blakistoni*, *A. gulgula*, *A. australis*, *A. caelivox*, *A. wattersi*, and *A. sala*; but so many intergrades exist that Ornithologists generally are now content to regard them as one variable species.\n\nOur Sky-Lark in breeding-plumage has the upper parts golden brown, with blackish centres to the feathers; edges of greater wing-coverts paler; the outermost tail-feather white, with the exception of a blackish streak on the inner web;\n\n* One example was also shot in the Bermudas, in 1850."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 446,
+  "completion_tokens": 3,
+  "total_tokens": 449,
+  "cost": 0.002051075,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 5.1075e-05,
+   "upstream_inference_prompt_cost": 5.0175e-05,
+   "upstream_inference_completions_cost": 9e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

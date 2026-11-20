@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202607-OQ04Mj0wOIf9WbW4vOqU",
+ "object": "chat.completion",
+ "created": 1795202607,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "26b17d3e2f351eef0dd023ee1395d32d27e6f3ea0fdd567ec418c5c71456a230",
+       "name": "8967282.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8967282.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "TURRITELLA.—PLATE I.\n\nauthority of M. Kiener, however, who has the same access to the types of the Lamarckian species as we have to those of Linnæus, the European representative of the genus is the *T. cornea*, Lamarck. M. Deshayes’ *T. ungulina* (Anim. sans vert. vol. ix. p. 260) must therefore be cancelled.\n\n## Species 2. (Mus. Cuming.)\n\n**TURRITELLA DUPLICATA.** *Turr. testâ obeso-turbinatâ, crassâ, ponderosâ, anfractibus ad sedecim, primis per-paucis multi-carinatis, carinâ unicâ, deinde duabus multo emineutioribus, carinis parvis cito exaudis, majoribus gradatim minus elatis, aperturâ valdê sinuatâ; fulvescente-lacteâ, anfractuum parte supremâ saturatiorâ.*\n\n**THE DUPLICATE TURRITELLA.** Shell stoutly turbinated, thick, ponderous, whorls about sixteen in number, the first few many-keeled, one keel and afterwards two to three very conspicuously elevated, small keels quickly disappearing, larger keels gradually less raised, aperture considerably sinuated; fulvous cream-colour, uppermost part of the whorls of rather darker colour.\n\n**LAMARCK, Anim. sans vert.** (Deshayes’ edit.) vol. ix. p. 251.\n*Turbo duplicatus*, Linnæus.\nEadem var. *Turbo acutangulus*, Linnæus.\nAn eadem var. ? *Turbo replicatus*, Linnæus.\n*Hab.* Eastern Seas.\n\nThe *Turbo acutangulus* of Linnæus is truly a variety of his *Turbo duplicatus*, as may be seen on reference to the original specimen in the Linnaean collection; but not so the species to which M. Deshayes has assigned that title, figured by M. Kiener at Pl. 2. Fig. 26, and in the accompanying plate at Fig. 4.\n\nThe first few whorls of *Turritella duplicata* are encircled by numerous keels, one of which is particularly sharp and prominent. The smaller keels quickly disappear, and a second of equal prominence with the principal keel makes its appearance in most specimens at about the tenth whorl. Linnæus’s *Turbo acutangulus* is a specimen in which the second prominent keel is not developed. The first sharp-angled keel is equally prominent in all varieties of the species during the first eight or ten whorls.\n\n## Species 3. (Mus. Cuming.)\n\n**TURRITELLA TERERRA.** *Turr. testâ lanceolato-turritâ, acutissimê attenuatâ, anfractibus ad quinque et viginti, medio tumidinsculis, spiraliter acutê sex-carinatis, suturis lavibus, excavatis; castaneo-brunneâ aut fulvescente.*\n\n**THE AUGUR TURRITELLA.** Shell lanceolately turreted, very sharply attenuated, whorls about twenty-five in number, rather swollen in the middle, spirally sharply six-keeled, sutures smooth, excavated; chestnut-brown or fulvous.\n\n**LAMARCK, Anim. sans vert.** (Deshayes’ edit.) vol. ix. p. 253.\n*Turbo terebra*, Linnæus, Syst. Nat. (not of Fauna Suecica.)\n*Turritella Archimedis*, Dillwyn, Mawe.\n*Hab.* Philippine Islands; Cuming.\n\nThe magnificent specimen here represented, is very similar to that selected by Martyn for the frontispiece of his ‘Universal Conchologist.’ Struck by the perfect symmetry of its convolutions, he distinguished it by the title of *’Appoliorâ*, significant of its graceful form and marine origin, and truly the geometrical proportions of this species are the perfection of beauty. The specimen figured was dredged by Mr. Cuming in fine sand at low water at the Island of Negros, one of the Philippines. The *T. terebra* of the ‘Fauna Suecica’ and of British authors (*T. Linnei* and *ungulinus*, Deshayes, *T. communis*, Philippi) is the *T. cornea* of Lamarck.\n\n## Species 4. (Mus. Cuming.)\n\n**TURRITELLA ATTENUATA.** *Turr. testâ acutissimê attenuatâ, anfractibus ad viginti, spiraliter striatis, ulterioribus medio acutê et tenuê unicarinatis striis exaudis, suturis subexcavatis; fuscescente-albâ, lividâ, anfractuum parte superiori saturatiorâ, aperturâ sinuatâ.*\n\n**THE ATTENUATED TURRITELLA.** Shell very sharply attenuated, whorls about twenty in number, spirally striated, latter whorls sharply and finely one-keeled in the middle, striae disappearing, sutures rather excavated; light fulvous white, livid, upper part of the whorls darker, aperture sinuated.\n\n*Turritella acutangula*, Deshayes, *Anim. sans vert. vol. ix.* p. 259 (not *Turbo acutangulus*, Linn.).\n*Hab.* ——?\n\nThe “*carinâ majore acutâ*” by which Linnæus characterizes his *Turbo acutangulus*, constitutes a very prominent feature in that and the *T. duplicatus*, and proves them, beyond doubt, to be one and the same species. In the species under consideration there is no indication of this character, the whorls being merely encircled from the apex with ten elevated striae or fine ridges which become more numerous, fainter, and almost obsolete. The species is further distinguished by its more attenuated growth, and a central fine keel or cord which is not developed until after the tenth or twelfth whorl, and the keel-like striae become obsolete."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1386,
+  "completion_tokens": 3,
+  "total_tokens": 1389,
+  "cost": 0.0021306875,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001306875,
+   "upstream_inference_prompt_cost": 0.0001299375,
+   "upstream_inference_completions_cost": 7.5e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

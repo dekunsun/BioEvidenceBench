@@ -95,6 +95,15 @@ def main() -> None:
     for row, meta in rows.items():
         print("fetching", row)
         sources[row] = (texts_for(row, meta, pages), meta.get("model", ""), meta.get("licence", ""))
+    # Rows we produced ourselves (not in FineBooks' bucket): Mistral OCR through OpenRouter,
+    # src/fetch_mistral_ocr_openrouter.py (exploratory; Mistral version not reported by OpenRouter).
+    local = {"mistral-ocr (OpenRouter)": ("modern_mistral-ocr-openrouter", "Mistral OCR via OpenRouter file-parser",
+                                          "Mistral / OpenRouter terms")}
+    for name, (version, model, licence) in local.items():
+        d = DATA / "text" / version
+        if d.exists():
+            sources[name] = ({p: ((d / f"{p}.txt").read_text(encoding="utf-8"), "") for p in pages
+                              if (d / f"{p}.txt").exists()}, model, licence)
 
     page_rows, ment_rows = [], []
     for name, (texts, model, licence) in sources.items():

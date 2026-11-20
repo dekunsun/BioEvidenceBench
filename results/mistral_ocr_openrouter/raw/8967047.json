@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202571-DrIm30Y6Njml9S0lTxse",
+ "object": "chat.completion",
+ "created": 1795202571,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "b63e085eee2d436c15dab0a997ed49acaefff190612934758506c4b5d80122a7",
+       "name": "8967047.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8967047.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "# BULIMUS.\n\n## PLATE LXXXI.\n\n### Species 597. (Mus. Taylor.)\n\n**BULIMUS BIVITATUS.** *Bul. testā pyramidalis-ovatā, basiu versus obliquā, umbilicatā, aufractibus octo, lavibus, ad suturas peculiariter crenulatis, aperturā obliquē ovatā, columellā labroque latē reflexis et effusis; albā, aufractu ultimo castaneo pallidē bifasciato.*\n\n**THE TWO-FILLETED BULIMUS.** Shell pyramidally ovate, oblique towards the base, umbilicated, whorls eight in number, smooth, peculiarly crenulated at the sutures, aperture obliquely ovate, lip and columella broadly reflected and effused; white, last whorl faintly two-banded with chestnut.\n\n**SOWERRY, Conchological Illustrations, f. 46.**\n\n*Hab. Brazil.*\n\nEffused in an oblique direction at the base, after the manner of the *B. auris-leporis*.\n\n---\n\n### Species 598. (Mus. Taylor.)\n\n**BULIMUS MULIEBRIS.** *Bul. testā acuminato-oblongā, umbilicatā, teuniculā, aufractibus septem, subrudē subtilissimē striatis, columellā reflexā, aperturā ovatā, labro simplici; albidā, strigis augustis fascis, hic illic saturatioribus, andique longitudinaliter pictā.*\n\n**THE EFFEMINATE BULIMUS.** Shell acuminately oblong, umbilicated, rather thin, whorls seven in number, somewhat rudely very finely striated, columella reflected, aperture ovate, lip simple; whitish, longitudinally painted throughout with narrow brown streaks which are here and there darker.\n\n*Hab. New Granada.*\n\nA light delicately painted species, finely rudely striated.\n\n---\n\n### Species 599. (Mus. Cuming.)\n\n**BULIMUS BOLIVIANUS.** *Bul. testā acuminato-oblongā, compressē umbilicatā, aufractibus septem, lavibus aut minutissimē decussatim impresso-striatis, columellā contorto-plicatā, latissimē depresso-dilatatā, aperturā ovatā, labro simplici; carneo-albidā, purpureo-fusco fasciatā, fasciis latis, confertis, hic illic interruptis, columellā rubellā, apice rubro.*\n\n**THE BOLIVIAN BULIMUS.** Shell acuminately oblong, compressly umbilicated, whorls seven in number, smooth or very minutely decussated with impressed\n\n---\n\nstriae, columella plicately twisted, very broadly depressly dilated, aperture ovate, lip simple; flesh-white, banded with purple-brown, bands broad, close-set, here and there interrupted, columella reddish, apex red.\n\n**PFEIFFER, Pro. Zool. Soc., 1846, p. 34.**\n\n*Hab. Near Merida, Andes of Bolivia.*\n\nThe shell here represented is the original type of the species described by Dr. Pfeiffer. To that which I have mistaken for it at Pl. XLIV. Sp. 281, the name *B. annulatus* may be given. The species are truly distinct, as may readily be seen by an accurate comparison of the figures.\n\n---\n\n### Species 600. (Mus. Taylor.)\n\n**BULIMUS PATRICIUS.** *Bul. testā pyramidalis-oblongā, sub-umpliter compressē umbilicatā, aufractibus octo, obliquē subrudē striatis, aperturā parviusculā, ovatā, columellā labroque latē reflexis; albidā, rufescens-purpureo subobscurē interruptē fasciatā, aperture fusco roseo-purpureā.*\n\n**THE PATRICIAN BULIMUS.** Shell pyramidally oblong, rather largely compressly umbilicated, whorls obliquely somewhat rudely striated, aperture rather small, ovate, lip and columella broadly reflected; whitish, rather obscurely interrupted banded with reddish purple, interior of the aperture rose-purple.\n\n*Hab. ——?*\n\nThis fine species is probably from New Granada, but I have no authority for stating it to be the locality.\n\n---\n\n### Species 601. (Fig. a, b, c, Mus. Taylor.)\n\n**BULIMUS SPECTATUS.** *Bul. testā fusiformi-ovatā, vix umbilicatā, teuniculā, aufractibus sex ad septem, longitudinaliter subrudē teunistriatis, columellā reflexā, depressiusculā, aperturā ovatā, labro peculiariter effuso; albidā vel cinereo-fuscescente variē strigatā aut fasciatā, columellā et aperture fusco roseo-purpureis.*\n\n**THE CHOICE BULIMUS.** Shell fusiformly ovate, scarcely umbilicated, rather thin, whorls six to seven in number, longitudinally somewhat rudely finely striated, columella reflected, rather depressed, aperture ovate, lip peculiarly effused; whitish or ash-brown, vari-\n\nDecember, 1849."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1248,
+  "completion_tokens": 3,
+  "total_tokens": 1251,
+  "cost": 0.00211775,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00011775,
+   "upstream_inference_prompt_cost": 0.000117,
+   "upstream_inference_completions_cost": 7.5e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

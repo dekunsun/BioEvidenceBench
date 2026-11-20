@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202598-w3SneuBj2GnDWx4dJkO0",
+ "object": "chat.completion",
+ "created": 1795202598,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "priority",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "0f8e9412f50315e0aee4a22d8ebf37536acf5a440971a4ba41d2a7d258988369",
+       "name": "8966802.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8966802.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "BULIMUS.—PLATE XX.\n\n**THE SLIGHTLY WRINKLED BULIMUS.** Shell cylindrically elongated, somewhat Pupa-shaped, umbilicated, apex subpapillary, whorls eight in number, slightly concentrically wrinkled, columella reflected over the umbilicus, aperture small, lip very slightly dilated; olive-brown, encircled round the middle with a single pale band.\n\nSOWERRY, Conch. Illus. *Bul.* f. 85.\n\n*Hab. Gallapagos Islands; Cuming.*\n\nOf a peculiar red-tinged olive brown-colour and chrysalis-like form.\n\n---\n\n**Species 124. (Mus. Cuming.)**\n\n**BULIMUS TURRITUS.** *Bul.* *testâ* *elongato-turritâ*, *imperforatâ*, *spirae* *suturis impressis*, *anfractibus decem ad nadecem*, *lavibus*, *subdepresso-convexis*, *aperturâ* *parvâ*, *labro simplici*; *albidâ*, *rufo-fuscescente trifasciatâ*.\n\n**THE TURRETED BULIMUS.** Shell elongately turreted, imperforated, sutures of the spire impressed, whorls ten to eleven in number, smooth, depressly convex, aperture small, lip simple; whitish, encircled with four reddish-brown bands.\n\nBRODERIP, Pro. Zool. Soc., 1832, p. 106.\n\n*Hab. Truxillo, Peru (on the mountains); Cuming.*\n\nThe uppermost of the bands is next the suture of each whorl, the lowest is only shown in the last whorl.\n\n---\n\n**Species 125. (Mus. Cuming.)**\n\n**BULIMUS SCULPTURATUS.** *Bul.* *testâ* *ocatâ*, *teuniculâ*, *vix umbilicatâ*, *anfractibus septem*, *subventricosis*, *conspicuê reticulatim rugatis*, *interstitiis transversim corrugato-striatis*, *columellâ* *simplicê reflexâ*, *labro tenui*; *intus extusque fictili*.\n\n**THE SCULPTURED BULIMUS.** Shell ovate, rather thin, scarcely umbilicated, whorls seven in number, somewhat ventricose, conspicuously reticulately wrinkled, the interstices being corrugately striated, columella simply reflected, lip thin; earthy brown within and without.\n\nPFEIFFER, Pro. Zool. Soc., 1846, p. 29.\n\n*Hab. Gallapagos Islands (on bushes); Darwin.*\n\nThe sculpture of this species is precisely that already described in the *B. rugiferus* and *Darwinii*, from both of which it differs in form, and from the latter more especially by the absence of any callous tubercles in the aperture.\n\n---\n\n**Species 126. (Mus. Cuming.)**\n\n**BULIMUS CALVUS.** *Bul.* *testâ* *oblongâ*, *subturritâ*, *umbilicatâ*, *anfractibus septem rotundatis*, *lavibus aut minutê* *concentricê striatis*, *aperturâ* *parvâ*, *labro viz dilatato*; *pallescente brunneâ*, *ad apicem nigricante*.\n\n**THE BALD BULIMUS.** Shell oblong, somewhat turreted, umbilicated, whorls seven in number, rounded, smooth or minutely concentrically striated, aperture small, lip slightly dilated; pale brown, blackish at the apex.\n\nSOWERRY, Pro. Zool. Soc., 1833, p. 72.\n\n*Hab. James’ Island, Gallapagos (on dried tufts of grass); Cuming.*\n\nA smooth pale brown shell having somewhat an *Achatinella*-like appearance.\n\n---\n\n**Species 127. (Mus. Cuming.)**\n\n**BULIMUS PUSTULOSUS.** *Bul.* *testâ* *subfusiformi-ovatâ*, *ampliter umbilicatâ*, *anfractibus sex*, *subrugosis*, *striis rudibus granulatis*, *moniliformibus*, *longitudinaliter exsculptis*, *columellâ* *supra umbilicum reflexâ*, *labro simplici*; *intus extusque sordidê albâ*.\n\n**THE PUSTULOSE BULIMUS.** Shell somewhat fusiformly ovate, largely umbilicated, whorls six in number, rather rough, longitudinally engraved with rude granulated necklace-like striae, columella reflected over the umbilicus, lip simple; dead white within and without.\n\nBRODERIP, Pro. Zool. Soc., 1832, p. 105.\n\n*Hab. Huasco, Chili (under stones on elevated ground); Cuming.*\n\nThe necklace-like granulated striae with which this species is longitudinally sculptured are extremely characteristic."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1157,
+  "completion_tokens": 3,
+  "total_tokens": 1160,
+  "cost": 0.0021310625,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001310625,
+   "upstream_inference_prompt_cost": 0.0001301625,
+   "upstream_inference_completions_cost": 9e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

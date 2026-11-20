@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202577-d8GH8B1dRu97604vRO1P",
+ "object": "chat.completion",
+ "created": 1795202577,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "priority",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "4480640da344d4cd9100ce4b07f29825abf13fab69d35f797b2d9003916ca758",
+       "name": "8967147.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8967147.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "# ACHATINA.\n\n## PLATE XIV.\n\n### Species 49. (Mus. Cuming.)\n\n**ACHATINA PHILIPPIANA.** *Achat. testâ fusiformi-ovatâ, subpellucidâ, anfractibus octo, supernê rotundatis, undique longitudinaliter creberrimê costulatis, columellâ contortâ, attenuatê truncatâ, aperturâ parviusculâ, medio subdepressâ; sericeo-lutescente, strigis latis intensê purpureo-brunneis, e suturis hic illic decurrentibus, conspicuê pictâ.*\n\n**PHILIPPI’S ACHATINA.** Shell fusiformly ovate, somewhat transparent, whorls eight in number, rounded at the upper part, longitudinally very closely finely ribbed throughout, columella twisted, attenuately truncated, aperture rather small, slightly depressed in the middle; pale silken yellow, conspicuously painted with broad deep purple-brown streaks, descending here and there from the sutures.\n\n**PFEIFFER, (Glandina,)** *Symbolae, vol. iii. p. 90.*\n*Hab. Jamaica, Gosse.*\n\nThe fine ribs with which the surface of this shell is excessively closely sculptured, give it a delicate silken aspect. It is very richly painted in the manner above described.\n\n### Species 50. (Mus. Dennison.)\n\n**ACHATINA MONILIFERA.** *Achat. testâ oblongo-ovatâ, ventricosâ, tenni, pellucidâ, anfractibus septem, longitudinaliter creberrimê costulato-striatis, striis basin versus exaudis, columellâ contortâ, abruptê truncatâ; fulvoroseâ, corneâ, strigis augustis remotis rafo-brunneis irregulariter pictâ.*\n\n**THE NECKLACE-BOUND ACHATINA.** Shell oblong-ovate, ventricose, thin, transparent, whorls seven in number, longitudinally very closely striated after the manner of fine ribs, striæ fading towards the base, columella twisted, abruptly truncated; fulvous-rose, horny, irregularly painted with distant narrow red-brown streaks.\n\n**PFEIFFER, (Glandina,)** *Pro. Zool. Soc., 1845. p. 75.*\n*Hab. Coban, Vera Cruz, Central America; Lattre.*\n\nAn extremely delicate transparent swollen shell in which the columella is not attenuated as in the last species, but abruptly truncated.\n\n### Species 51. (Mus. Cuming.)\n\n**ACHATINA OLEACEA.** *Achat. testâ cylindraceo-oblongâ, pellucido-corneâ, spirâ brevi, anfractibus septem, laevigatis, columellâ subprofundê arcuatâ, aperturâ oblongâ, supernê augustâ, labro medio dilatato; fulvâ, uitente.*\n\n**THE OLIVE-SHAPED ACHATINA.** Shell cylindrically oblong, transparent-horny, spire short, whorls seven in number, smooth, columella rather deeply arched, aperture oblong, narrow at the upper part, lip dilated in the middle; fulvous, shining.\n\n**Helix (Cochlicopa) oleacea,** *Férussac, Prodrome, No. 360.*\n*Glandina oleacea, Beck.*\n*Hab. Cuba.*\n\nA smooth transparent fulvous horny shell, of cylindric oblong form, without any design of painting.\n\n### Species 52. (Mus. Cuming.)\n\n**ACHATINA LEUCOZONIAS.** *Achat. testâ fusiformi-oblongâ, spirâ subacuminatâ, anfractibus octo, plano-convexis, longitudinaliter subtiliter et creberrimê inciso-striatis, columellâ contortâ, aperturâ oblongâ, labro angulato-dilatato; intensê purpureo-brunneâ, zomilis longitudinalibus augustis albis notatâ, labro albimarginato.*\n\n**THE WHITE-ZONED ACHATINA.** Shell fusiformly oblong, spire somewhat acuminated, whorls eight in number, flatly convex, longitudinally finely and very closely striated in a grooved manner, columella twisted, aperture oblong, lip angularly dilated; deep purple-brown, marked with narrow longitudinal white zones, lip edged with white.\n\n**SOWERBY, Genera of Shells, f. 3.**\n\n*Voluta leuczoonias,* *Waleh, Naturforsch, vol. iv. p. 40. pl. 1. f. 3, 4.*\n*Achatina albolineata,* *Lamarek.*\n*Helix (Cochlicopa,) leuczoonias,* *Férussac.*\n*Polyphemus leuczoonias,* *Jan.*\n*Glandina leuczoonias,* *Beck.*\n*Hab. Martinique.*\n\nThis species is remarkable for the angularly dilated growth of the lip, which forms a slightly elevated ridge or varix at intervals of from four to five in a whorl. The shell being of a uniform dark purple-brown colour with the lip edged with white, these delicate concentric varices appear as stripes, and turning inwards over the columella have the appearance of false plaits. Waleh, Gmelin, and Dillwyn, misled by this varicose peculiarity of growth,\n\nApril, 1849."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1263,
+  "completion_tokens": 3,
+  "total_tokens": 1266,
+  "cost": 0.0021429875,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001429875,
+   "upstream_inference_prompt_cost": 0.0001420875,
+   "upstream_inference_completions_cost": 9e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -16216,3 +16216,624 @@ falcon-ocr,8992647,Butler,test,locality,458,466,Penzance,Penzance,True,True,Fals
 falcon-ocr,8992647,Butler,test,locality,484,503,"Sheringham, Norfolk","Sheringham, Norfolk",True,True,False
 falcon-ocr,8992647,Butler,test,date,515,519,1842,1842,True,True,False
 falcon-ocr,8992647,Butler,test,taxon,614,621,M. ﬂava,M. flava,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,institution,174,185,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,taxon,189,206,BULIMUS CHILENSIS,Bulimus Chilensis,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,vernacular,450,463,CHILI BULIMUS,Chili Bulimus,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,person,697,703,LESSON,Lesson,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,taxon,739,757,Bulimus granulosus,Bulimus granulosus,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,person,759,767,Broderip,Broderip,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,locality,775,785,Valparaiso,Valparaiso,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,locality,790,807,"Conception, Chili","Conception, Chili",True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,person,809,815,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,vernacular,1027,1031,peas,peas,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,locality,1049,1072,mountains of Conception,mountains of Conception,True,True,False
+mistral-ocr (OpenRouter),8966790,Reeve,test,locality,1127,1137,Valparaiso,Valparaiso,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,vernacular,24,49,SLIGHTLY WRINKLED BULIMUS,SLIGHTLY WRINKLED BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,347,354,SOWERBY,SOWERRY,False,False,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,locality,388,406,Gallapagos Islands,Gallapagos Islands,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,408,414,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,institution,503,514,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,taxon,518,534,BULIMUS TURRITUS,BULIMUS TURRITUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,vernacular,741,757,TURRETED BULIMUS,TURRETED BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,969,977,BRODERIP,BRODERIP,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,locality,1016,1030,"Truxillo, Peru","Truxillo, Peru",True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,1051,1057,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,institution,1180,1191,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,taxon,1195,1215,BULIMUS SCULPTURATUS,BULIMUS SCULPTURATUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,vernacular,1443,1461,SCULPTURED BULIMUS,SCULPTURED BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,1710,1718,PFEIFFER,PFEIFFER,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,locality,1756,1774,Gallapagos Islands,Gallapagos Islands,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,1788,1794,Darwin,Darwin,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,taxon,1870,1882,B. rugiferus,B. rugiferus,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,taxon,1887,1895,Darwinii,Darwinii,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,institution,2043,2054,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,taxon,2058,2072,BULIMUS CALVUS,BULIMUS CALVUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,vernacular,2276,2288,BALD BULIMUS,BALD BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,2486,2493,SOWERBY,SOWERRY,False,False,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,locality,2531,2556,"James' Island, Gallapagos","James’ Island, Gallapagos",True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,vernacular,2576,2581,grass,grass,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,2584,2590,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,institution,2682,2693,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,taxon,2697,2715,BULIMUS PUSTULOSUS,BULIMUS PUSTULOSUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,vernacular,2956,2973,PUSTULOSE BULIMUS,PUSTULOSE BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,3214,3222,BRODERIP,BRODERIP,True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,locality,3261,3274,"Huasco, Chili","Huasco, Chili",True,True,False
+mistral-ocr (OpenRouter),8966802,Reeve,test,person,3310,3316,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,institution,172,183,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,taxon,187,204,BULIMUS OBTUSATUS,Bulimus obtusatus,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,vernacular,512,527,BLUNTED BULIMUS,Blunted Bulimus,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,875,883,PFEIFFER,Pfeiffer,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,taxon,906,920,Helix obtusata,Helix obtusata,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,922,928,Gmelin,Gmelin,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,taxon,930,947,Bulimus calcareus,Bulimus calcareus,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,949,958,Bruguière,Bruguière,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,960,967,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,969,977,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,locality,984,994,Madagascar,Madagascar,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,997,1001,Beck,Beck,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,1033,1040,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,taxon,1098,1112,Helix calcarea,Helix calcarea,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,1116,1120,Born,Born,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,institution,1251,1262,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,taxon,1266,1282,BULIMUS CLAVATOR,Bulimus clavator,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,vernacular,1567,1586,CLUB‐BEARER BULIMUS,Club-Bearer Bulimus,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,person,1893,1898,PETIT,Petit,True,True,False
+mistral-ocr (OpenRouter),8966930,Reeve,test,locality,1934,1944,Madagascar,Madagascar,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,institution,50,61,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,taxon,65,81,BULIMUS ROSEATUS,BULIMUS ROSEATUS,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,vernacular,378,393,ROSEATE BULIMUS,ROSEATE BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,locality,724,733,Venezuela,Venezuela,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,taxon,826,836,B. oreades,B. oreades,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,institution,853,864,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,taxon,868,884,BULIMUS FERIATUS,BULIMUS FERIATUS,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,vernacular,1180,1198,UNEMPLOYED BULIMUS,UNEMPLOYED BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,locality,1521,1530,Venezuela,Venezuela,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,institution,1621,1632,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,taxon,1636,1650,BULIMUS PERDIX,BULIMUS PERDIX,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,vernacular,1940,1957,PARTRIDGE BULIMUS,PARTRIDGE BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,person,2246,2254,PFEIFFER,PFEIFFER,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,locality,2285,2296,New Granada,New Granada,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,person,2298,2303,Funck,Funck,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,taxon,2698,2707,B. perdix,B. perdix,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,institution,2873,2884,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,taxon,2888,2908,BULIMUS EURYOMPHALUS,BULIMUS EURYOMPHALUS,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,vernacular,3230,3251,BROAD‐PLAITED BULIMUS,BROAD-PLAITED BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,locality,3561,3570,Venezuela,Venezuela,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,person,3572,3577,Dyson,Dyson,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,institution,3657,3668,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8966937,Reeve,test,taxon,3672,3686,BULIMUS GLABER,BULIMUS GLABER,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,institution,38,49,Mus. Taylor,Mus. Taylor,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,taxon,53,71,BULIMUS BIVITTATUS,BULIMUS BIVITATUS,False,False,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,vernacular,322,342,TWO-FILLETED BULIMUS,TWO-FILLETED BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,person,604,611,SOWERBY,SOWERRY,False,False,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,locality,655,661,Brazil,Brazil,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,taxon,732,748,B. auris-leporis,B. auris-leporis,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,institution,765,776,Mus. Taylor,Mus. Taylor,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,taxon,780,797,BULIMUS MULIEBRIS,BULIMUS MULIEBRIS,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,vernacular,1053,1071,EFFEMINATE BULIMUS,EFFEMINATE BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,locality,1346,1357,New Granada,New Granada,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,institution,1434,1445,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,taxon,1449,1467,BULIMUS BOLIVIANUS,BULIMUS BOLIVIANUS,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,vernacular,1810,1826,BOLIVIAN BULIMUS,BOLIVIAN BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,person,2174,2182,PFEIFFER,PFEIFFER,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,locality,2225,2249,"Merida, Andes of Bolivia","Merida, Andes of Bolivia",True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,person,2332,2339,Pfeiﬀer,Pfeiffer,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,taxon,2409,2423,"B. annu-
+latus",B. annulatus,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,institution,2549,2560,Mus. Taylor,Mus. Taylor,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,taxon,2564,2581,BULIMUS PATRICIUS,BULIMUS PATRICIUS,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,vernacular,2856,2873,PATRICIAN BULIMUS,PATRICIAN BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,locality,3200,3211,New Granada,New Granada,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,institution,3301,3312,Mus. Taylor,Mus. Taylor,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,taxon,3316,3333,BULIMUS SPECTATUS,BULIMUS SPECTATUS,True,True,False
+mistral-ocr (OpenRouter),8967047,Reeve,dev,vernacular,3649,3663,CHOICE BULIMUS,CHOICE BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,vernacular,140,158,VERY SMALL BULIMUS,VERY SMALL BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,person,381,386,ADAMS,ADAMS,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,locality,398,405,Jamaica,Jamaica,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,taxon,507,517,B. minimus,B. minimus,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,institution,639,649,Mus. Adams,Mus. Adams,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,taxon,653,672,BULIMUS PAUPERCULUS,BULIMUS PAUPERCULUS,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,vernacular,846,866,MEAN-LOOKING BULIMUS,MEAN-LOOKING BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,person,1053,1058,ADAMS,ADAMS,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,locality,1070,1077,Jamaica,Jamaica,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,taxon,1163,1169,Bulimi,Bulimi,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,taxon,1174,1182,Achatinœ,Achatiue,False,False,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,locality,1188,1197,"Ja‐
+maica",Jamaica,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,institution,1411,1422,Mus. Benson,Mus. Benson,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,taxon,1426,1441,BULIMUS TUTULUS,BULIMUS TUTULUS,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,vernacular,1708,1727,LITTLE TUFT BULIMUS,LITTLE TUFT BULIMUS,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,person,2013,2019,BENSON,BENSON,True,True,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,locality,2031,2061,"Humeerpore, Bundelkhund, India","Humearpore, Bundelkhund, India",False,False,False
+mistral-ocr (OpenRouter),8967060,Reeve,dev,person,2063,2069,Benson,Benson,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,institution,36,47,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,51,71,ACHATINA PHILIPPIANA,ACHATINA PHILIPPIANA,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,vernacular,402,421,PHILIPPI’S ACHATINA,PHILIPPI’S ACHATINA,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,801,809,PFEIFFER,PFEIFFER,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,812,820,Glandina,Glandina,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,locality,855,862,Jamaica,Jamaica,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,864,869,Gosse,Gosse,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,institution,1062,1075,Mus. Dennison,Mus. Dennison,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,1079,1098,ACHATINA MONILIFERA,ACHATINA MONILIFERA,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,vernacular,1385,1408,NECKLACE‐BOUND ACHATINA,NECKLACE-BOUND ACHATINA,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,1703,1711,PFEIFFER,PFEIFFER,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,1714,1722,Glandina,Glandina,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,locality,1761,1794,"Coban, Vera Cruz, Central America","Coban, Vera Cruz, Central America",True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,1796,1802,Lattre,Lattre,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,institution,1956,1967,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,1971,1987,ACHATINA OLEACEA,ACHATINA OLEACEA,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,vernacular,2197,2218,OLIVE-SHAPED ACHATINA,OLIVE-SHAPED ACHATINA,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,2433,2459,Helix (Cochlicopa) oleacea,Helix (Cochlicopa) oleacea,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,2461,2469,Férussac,Férussac,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,2491,2507,Glandina oleacea,Glandina oleacea,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,2509,2513,Beck,Beck,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,locality,2521,2525,Cuba,Cuba,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,institution,2642,2653,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,2657,2677,ACHATINA LEUCOZONIAS,ACHATINA LEUCOZONIAS,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,vernacular,2990,3010,WHITE‐ZONED ACHATINA,WHITE-ZONED ACHATINA,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3317,3324,SOWERBY,SOWERBY,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,3351,3369,Voluta leucozonias,Voluta leuczoonias,False,False,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3371,3376,Walch,Waleh,False,False,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,3424,3444,Achatina albolineata,Achatina albolineata,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3446,3453,Lamarck,Lamarek,False,False,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,3455,3486,"Helix (Cochlicopa,) leucozonias","Helix (Cochlicopa,) leuczoonias",False,False,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3488,3496,Férussac,Férussac,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,3498,3520,Polyphemus leucozonias,Polyphemus leuczoonias,False,False,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3522,3525,Jan,Jan,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,taxon,3527,3547,Glandina leucozonias,Glandina leuczoonias,False,False,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3549,3553,Beck,Beck,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,locality,3561,3571,Martinique,Martinique,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3952,3957,Walch,Waleh,False,False,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3959,3965,Gmelin,Gmelin,True,True,False
+mistral-ocr (OpenRouter),8967147,Reeve,dev,person,3971,3978,Dillwyn,Dillwyn,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,29,39,TURRITELLA,TURRITELLA,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,41,48,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,683,693,Turritella,Turritella,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,1159,1168,Cerithium,Cerithium,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,1277,1287,Turritella,Turritella,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,1741,1751,Turritella,Turritella,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,1836,1843,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,1893,1899,Kiener,Kiener,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,1974,1980,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,1986,1994,Metcalfe,Metcalfe,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2000,2006,Hanley,Hanley,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2013,2027,Edward Belcher,Edward Belcher,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,institution,2033,2047,British Museum,British Museum,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,institution,2057,2076,Banksian Collection,Banksian Collection,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,institution,2098,2113,"Linnæan
+Society",Linnaean Society,False,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2276,2283,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2285,2293,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2298,2304,Kiener,Kiener,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,institution,2402,2427,Linnæan Society of London,Linnaean Society of London,False,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,2433,2450,Turbo acutangulus,Turbo acutangulus,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2454,2461,Linnæus,Linnaeus,False,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,2499,2512,T. duplicatus,T. duplicatus,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2553,2561,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,2586,2604,"Turbo variega-
+tus",Turbo variegatus,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,2726,2742,Turbo imbricatus,Turbo imbricatus,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,2812,2827,Turbo ungulinus,Turbo ungulinus,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2831,2838,Linnæus,Linnaeus,False,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2867,2874,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,2877,2895,"Turritella
+fuscata",Turritella fuscata,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,2917,2930,Turbo terebra,Turbo terebra,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2932,2937,Linn.,Linn.,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,2981,2988,Montagu,Montagu,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,3014,3023,T. cornea,T. cornea,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,3027,3034,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,3041,3061,Turritella brevialis,Turritella brevialis,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,3065,3072,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,vernacular,3074,3081,LeMesal,Le Mesal,False,False,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,3085,3092,Adanson,Adanson,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,3146,3150,Gray,Gray,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,3167,3174,MESALIA,Mesalla,False,False,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,3206,3223,Turritella lactea,Turritella lactea,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,3227,3233,Möller,Möller,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,institution,3278,3298,Cumingian collection,Cumingian collection,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,3342,3346,Gray,Gray,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,3384,3391,EGLISIA,Eglisia,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,3408,3426,Turritella spirata,Turritella spirata,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,3507,3513,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,3528,3546,Philippine Islands,Philippine Islands,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,3553,3563,Turritellœ,Turritella*,False,False,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,3663,3672,T. cornea,T. cornea,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,3706,3722,Shetland Islands,Shetland Islands,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,3730,3738,M’Andrew,M’Andrew,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,3910,3923,Mediterranean,Mediterranean,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,3957,3969,Eastern Seas,Eastern Seas,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,3978,4003,shores of Central America,shores of Central America,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,4036,4047,New Zealand,New Zealand,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,4049,4058,Australia,Australia,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,4064,4081,Van Dieman’s Land,Van Dieman’s Land,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,institution,4096,4107,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,4111,4130,TURRITELLA UNGULINA,TURRITELLA UNGULINA,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,vernacular,4353,4376,NAIL‐BRUISED TURRITELLA,NAIL-BRUISED TURRITELLA,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,4583,4598,Turbo ungulinus,Turbo ungulinus,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,4600,4607,Linnæus,Linnaeus,False,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,4643,4661,Turritella fuscata,Turritella fuscata,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,4663,4670,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,4678,4685,Senegal,Senegal,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,4687,4719,"Mouth of the Gambia, West Africa","Mouth of the Gambia, West Africa",True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,4757,4764,Linnæus,Linnaeus,False,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,4785,4800,Turbo ungulinus,Turbo ungulinus,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,institution,4839,4864,Linnæan Society of London,Linnaean Society of London,False,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,4881,4887,Hanley,Hanley,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,4918,4925,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,4928,4938,"T.
+fuscata",T. fuscata,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,4954,4968,Seas of Europe,Seas of Europe,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,5020,5028,Pulteney,Pulteney,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,person,5046,5054,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,taxon,5098,5108,Turritella,Turritella,True,True,False
+mistral-ocr (OpenRouter),8967281,Reeve,test,locality,5131,5144,Mediterranean,Mediterranean,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,38,44,Kiener,Kiener,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,141,148,Linnæus,Linnæus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,198,207,T. cornea,T. cornea,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,209,216,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,221,229,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,231,242,T. ungulina,T. ungulina,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,institution,320,331,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,335,355,TURRITELLA DUPLICATA,TURRITELLA DUPLICATA,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,vernacular,669,689,DUPLICATE TURRITELLA,DUPLICATE TURRITELLA,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1042,1049,LAMARCK,LAMARCK,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1069,1077,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,1104,1120,Turbo duplicatus,Turbo duplicatus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1122,1129,Linnæus,Linnæus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,1142,1159,Turbo acutangulus,Turbo acutangulus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1161,1168,Linnæus,Linnæus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,1185,1201,Turbo replicatus,Turbo replicatus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1203,1210,Linnæus,Linnæus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,locality,1218,1230,Eastern Seas,Eastern Seas,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,1237,1254,Turbo acutangulus,Turbo acutangulus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1258,1265,Linnæus,Linnæus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,1292,1308,Turbo duplicatus,Turbo duplicatus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,institution,1370,1388,Linnæan collection,Linnaean collection,False,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1425,1433,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1472,1478,Kiener,Kiener,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,1565,1585,Turritella duplicata,Turritella duplicata,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,1828,1835,Linnæus,Linnæus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,1838,1855,Turbo acutangulus,Turbo acutangulus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,institution,2054,2065,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,2069,2087,TURRITELLA TEREBRA,TURRITELLA TERERRA,False,False,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,vernacular,2302,2318,AUGUR TURRITELLA,AUGUR TURRITELLA,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,2525,2532,LAMARCK,LAMARCK,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,2552,2560,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,2587,2600,Turbo terebra,Turbo terebra,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,2602,2609,Linnæus,Linnæus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,2646,2667,Turritella Archimedis,Turritella Archimedis,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,2669,2676,Dillwyn,Dillwyn,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,2678,2682,Mawe,Mawe,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,locality,2690,2708,Philippine Islands,Philippine Islands,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,2710,2716,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,2797,2803,Martyn,Martyn,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,3131,3137,Cuming,Cuming,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,locality,3170,3186,Island of Negros,Island of Negros,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,locality,3199,3210,Philippines,Philippines,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,3216,3226,T. terebra,T. terebra,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,3274,3283,T. Linnei,T. Linnei,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,3288,3297,ungulinus,ungulinus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,3299,3307,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,3309,3320,T. communis,T. communis,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,3322,3330,Philippi,Philippi,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,3339,3348,T. cornea,T. cornea,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,3352,3359,Lamarck,Lamarck,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,institution,3374,3385,Mus. Cuming,Mus. Cuming,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,3389,3409,TURRITELLA ATTENUATA,TURRITELLA ATTENUATA,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,vernacular,3665,3686,ATTENUATED TURRITELLA,ATTENUATED TURRITELLA,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,3956,3977,Turritella acutangula,Turritella acutangula,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,3979,3987,Deshayes,Deshayes,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,4027,4044,Turbo acutangulus,Turbo acutangulus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,4046,4051,Linn.,Linn.,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,person,4098,4105,Linnæus,Linnæus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,4126,4143,Turbo acutangulus,Turbo acutangulus,True,True,False
+mistral-ocr (OpenRouter),8967282,Reeve,test,taxon,4198,4211,T. duplicatus,T. duplicatus,True,True,False
+mistral-ocr (OpenRouter),8967290,Reeve,test,taxon,377,391,T. lentiginosa,T. lentiginosa,True,True,False
+mistral-ocr (OpenRouter),8967290,Reeve,test,taxon,534,547,T. goniostoma,T. goniositosa,False,False,False
+mistral-ocr (OpenRouter),8967290,Reeve,test,taxon,747,761,T. lentiginosa,T. lentiginosa,True,True,False
+mistral-ocr (OpenRouter),8967333,Reeve,test,taxon,25,35,CASSIDARIA,CASSIDARIA,True,True,False
+mistral-ocr (OpenRouter),8967333,Reeve,test,person,312,324,Landsborough,Landsborough,True,True,False
+mistral-ocr (OpenRouter),8967345,Reeve,test,taxon,25,31,EBURNA,E B U R N A,False,False,False
+mistral-ocr (OpenRouter),8967345,Reeve,test,person,240,246,Crabbe,Crabbe,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,locality,412,416,Kent,Kent,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,595,603,hawthorn,hawthorn,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,857,874,Red-backed Shrike,Red-backed Shrike,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,locality,915,924,Maidstone,Maidstone,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,1152,1161,Greenﬁnch,Greenfinch,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,1225,1229,moss,moss,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,1311,1323,Butcher-bird,Butcher-bird,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,1409,1416,Shrikes,Shrikes,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,1654,1661,insects,insects,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,1709,1716,lizards,lizards,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,1722,1726,mice,mice,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,1839,1856,Red-backed Shrike,Red-backed Shrike,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,person,2046,2060,"Mathias
+Rausch",Mathias Rausch,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,2177,2194,Red-backed Shrike,Red-backed Shrike,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,2198,2211,Thorn-piercer,Thorn-piercer,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,taxon,2213,2228,Lanius collurio,Lanius collurio,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,locality,2367,2373,Europe,Europe,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,2491,2509,Red-backed Shrikes,Red-backed Shrikes,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,2581,2592,cockroaches,cockroaches,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,person,2869,2885,H. A. Macpherson,H. A. Macpherson,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,2962,2970,Woodchat,Woodchat,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,2976,2994,Great Grey Shrikes,Great Grey Shrikes,True,True,False
+mistral-ocr (OpenRouter),8992328,Butler,test,vernacular,3022,3029,insects,insect ,False,False,False
+mistral-ocr (OpenRouter),8992379,Butler,test,locality,33,45,Berwickshire,Berwickshire,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,locality,55,64,Yorkshire,Yorkshire,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,locality,93,104,Scarborough,Scarborough,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,106,124,"October
+23rd, 1889","October 23rd, 1889",True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,176,180,1887,1887,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,locality,214,219,Wells,Wells,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,223,227,1900,1900,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,256,260,1904,1904,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,274,278,1905,1905,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,290,294,1906,1906,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,locality,305,312,Norfolk,Norfolk,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,locality,333,342,Yorkshire,Yorkshire,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,346,350,1907,1907,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,locality,355,363,Cheshire,Cheshire,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,380,389,June 1903,June 1903,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,locality,398,407,Shetlands,Shetlands,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,444,448,1906,1906,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,vernacular,493,503,Flycatcher,Flycatcher,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,vernacular,859,864,Robin,Robin,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,person,870,877,Seebohm,Seebohm,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,vernacular,943,949,Robins,Robins,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,vernacular,958,969,Flycatchers,Flycatchers,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,vernacular,1082,1105,Red-breasted Flycatcher,Red-breasted Flycatcher,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,1839,1848,M. minuta,M. minuta,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,1906,1916,M. leucura,M. leucura,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,1979,1987,M. parva,M. parva,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,2054,2067,M. hyperythra,M. hyperythra,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,2314,2331,"Munia
+atricapilla",Munia atricapilla,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,2369,2373,1887,1887,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,date,2494,2508,spring of 1896,spring of 1896,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,2541,2554,Quelea quelea,Quelea quelea,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,2587,2595,Q. russi,Q. russi,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,vernacular,2671,2679,Cardinal,Cardinal,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,2681,2700,Paroaria cervicalis,Paroaria cervicalis,True,True,False
+mistral-ocr (OpenRouter),8992379,Butler,test,taxon,2735,2746,P. capitata,P. capitata,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,person,275,291,H. A. Macpherson,H. A. Macpherson,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,356,363,Hawﬁnch,Hawfinch,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,person,436,455,Charles A. Witchell,Charles A. Witchell,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,559,566,Hawﬁnch,Hawfinch,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,person,605,621,H. A. Macpherson,H. A. Macpherson,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,778,785,Chaﬃnch,Chaffinch,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,person,851,872,Alexander von Homeyer,Alexander von Homeyer,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,919,938,cherry-kernel biter,cherry-kernel biter,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,1072,1082,Bullﬁnches,Bullfinches,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,1098,1107,Grosbeaks,Grosbeaks,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,1136,1145,Grosbeaks,Grosbeaks,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,person,1215,1230,Howard Saunders,Howard Saunders,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,1289,1296,Finches,Finches,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,1305,1313,Buntings,Buntings,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,1483,1490,Finches,Finches,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,taxon,1525,1534,Fringilla,Fringilla,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,vernacular,1569,1577,Buntings,Buntings,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,taxon,1631,1640,Fringilla,Fringilla,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,taxon,1660,1666,Passer,Passer,True,True,False
+mistral-ocr (OpenRouter),8992408,Butler,test,taxon,1727,1737,Emberizinœ,Emberizinae*,False,False,False
+mistral-ocr (OpenRouter),8992489,Butler,test,taxon,27,38,FRINGILLIDÆ,FRINGILLIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,taxon,51,62,FRINGILLINÆ,FRINGILLINÆ,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,vernacular,69,78,BRAMBLING,BRAMBLING,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,taxon,81,105,Fringilla nontifringilla,Fringilla montifringilla,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,person,107,112,LINN.,Linn.,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,person,150,165,Howard Saunders,Howard Saunders,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,180,186,Faroes,Faroes,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,vernacular,191,200,Brambling,Brambling,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,vernacular,285,289,pine,pine,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,vernacular,294,299,birch,birch,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,314,320,Norway,Norway,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,328,346,valley of the Amur,valley of the Amur,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,380,385,Japan,Japan,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,387,392,China,China,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,394,408,"Northern
+India",Northern India,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,410,420,Asia Minor,Asia Minor,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,439,445,Europe,Europe,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,522,555,African side of the Mediterranean,African side of the Mediterranean,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,587,594,Belgium,Belgium,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,596,603,Holland,Holland,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,605,612,Germany,Germany,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,618,628,Heligoland,Heligoland,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,683,691,Pyrenees,Pyrenees,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,697,701,Alps,Alps,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,710,718,Ardennes,Ardennes,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,783,796,Great Britain,Great Britain,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,vernacular,801,810,Brambling,Brambling,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,1053,1061,Scotland,Scotland,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,1070,1077,England,England,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,1089,1097,Cornwall,Cornwall,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,1103,1118,west of England,west of England,True,True,False
+mistral-ocr (OpenRouter),8992489,Butler,test,locality,1128,1144,south of Ireland,south of Ireland,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,46,53,Jackdaw,Jackdaw,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,477,484,Jackdaw,Jackdaw,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,locality,520,529,Continent,Continent,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,locality,533,540,England,England,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,locality,608,622,cliﬀs of Dover,cliffs of Dover,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,747,754,Jackdaw,Jackdaw,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,812,819,Jackdaw,Jackdaw,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,person,946,953,Lilford,Lilford,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,1057,1064,Jackdaw,Jackdaw,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,locality,1291,1298,Lilford,Lilford,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,1484,1492,Barn Owl,Barn Owl,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,1577,1581,Daws,Daws,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,1619,1627,chickens,chickens,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,1629,1638,pheasants,pheasants,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,1644,1654,partridges,partridges,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,1786,1790,Owls,Owls,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2021,2029,Barn Owl,Barn Owl,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2119,2127,Jackdaws,Jackdaws,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2259,2266,Jackdaw,Jackdaw,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2328,2341,House-Sparrow,House-Sparrow,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2428,2431,Daw,Daw,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,person,2561,2568,Seebohm,Seebohm,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2630,2635,Gulls,Gulls,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2649,2656,Jackdaw,Jackdaw,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2697,2701,Rook,Rook,True,True,False
+mistral-ocr (OpenRouter),8992582,Butler,dev,vernacular,2835,2842,Jackdaw,Jackdaw,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,person,269,278,Stevenson,Stevenson,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,person,310,318,St. John,St. John,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,484,490,grouse,grouse,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,492,502,partridges,partridges,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,504,509,hares,hares,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,698,707,wild duck,wild duck,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,709,717,pheasant,pheasant,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,756,767,Hooded Crow,Hooded Crow,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,921,928,Peewits,Peewits,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,930,935,Gulls,Gulls,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,937,946,Redshanks,Redshanks,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,980,984,Crow,Crow,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,1031,1036,hoody,hoody,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,1065,1070,ducks,ducks,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,1168,1173,eagle,eagle,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,1175,1191,peregrine falcon,peregrine falcon,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,1196,1202,osprey,osprey,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,1351,1358,Hoodies,Hoodies,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,date,1368,1395,12th to the 30th of October,12th to the 30th of October,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,person,1405,1417,T. H. Nelson,T. H. Nelson,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,person,1423,1433,F. Pilling,F. Pilling,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,vernacular,1448,1455,Hoodies,Hoodies,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,person,1557,1564,Seebohm,Seebohm,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,person,1599,1604,Gätke,Gätke,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,locality,2107,2117,Heligoland,Heligoland,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,locality,2521,2526,Weser,Weser,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,locality,2547,2558,Bremerhaven,Bremerhaven,True,True,False
+mistral-ocr (OpenRouter),8992601,Butler,dev,person,2751,2756,Gätke,Gätke,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,35,43,Alaudidæ,Alaudidae*,False,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,58,67,Old World,Old World,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,106,119,North America,North America,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,person,132,138,Jerdon,Jerdon,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,189,197,Malayana,Malayana,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,202,211,Australia,Australia,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,222,230,ALAUDIDÆ,ALAUDIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,vernacular,237,245,SKY-LARK,SKY-LARK,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,248,263,Alauda arvensis,Alauda arvensis,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,person,265,270,LINN.,Linn.,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,327,333,Europe,Europe,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,346,357,Scandinavia,Scandinavia,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,394,406,North Africa,North Africa,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,447,476,slopes of the Atlas Mountains,slopes of the Atlas Mountains,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,498,504,Russia,Russia,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,509,516,Siberia,Siberia,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,544,549,Japan,Japan,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,555,574,"valley of the
+Amoor",valley of the Amoor,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,576,595,South-east Mongolia,South-east Mongolia,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,597,606,Turkestan,Turkestan,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,611,617,Persia,Persia,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,639,644,China,China,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,646,662,North-west India,North-west India,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,664,675,Afghanistan,Afghanistan,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,677,683,Persia,Persia,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,685,695,Asia Minor,Asia Minor,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,697,706,Palestine,Palestine,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,711,716,Egypt,Egypt,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,742,749,Madeira,Madeira,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,786,795,Greenland,Greenland,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,834,847,United States,United States,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,850,861,New Zealand,New Zealand,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,866,875,Australia,Australia,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,889,902,Great Britain,Great Britain,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,907,914,Ireland,Ireland,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,vernacular,920,928,Sky-Lark,Sky-Lark,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,vernacular,1041,1049,Sky-Lark,Sky-Lark,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1111,1122,A. dulcivox,A. dulcivox,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1124,1135,A. japonica,A. japonica,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1137,1150,A. cantarella,A. cantarella,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1152,1161,A. liopus,A. liopus,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1163,1178,"A. blak-
+istoni",A. blakistoni,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1180,1190,A. gulgula,A. gulgula,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1192,1204,A. australis,A. australis,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1206,1216,A. cœlivox,A. caelivox,False,False,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1218,1229,A. wattersi,A. wattersi,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,taxon,1235,1242,A. sala,A. sala,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,vernacular,1365,1373,Sky-Lark,Sky-Lark,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,locality,1634,1642,Bermudas,Bermudas,True,True,False
+mistral-ocr (OpenRouter),8992612,Butler,dev,date,1647,1651,1850,1850,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,22,29,TURDIDÆ,TURDIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,42,50,SYLVIINÆ,SYLVIINÆ,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,vernacular,53,75,PALLAS' WILLOW-WARBLER,PALLA S WILLOW-WARBLER,False,False,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,78,101,Phylloscopus proregulus,Phylloscopus proregulus,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,locality,152,159,Norfolk,Norfolk,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,date,164,177,"October, 1896","October, 1896",True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,vernacular,192,201,Chiﬀchaﬀs,Chiffchaffs,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,locality,214,223,Shetlands,Shetlands,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,date,232,257,"April 15th and 24th,
+1904","April 15th and 24th, 1904",True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,date,262,282,May of the same year,May of the same year,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,person,303,318,John S. Tulloch,John S. Tulloch,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,locality,322,329,Lerwick,Lerwick,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,date,338,346,May 27th,May 27th,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,vernacular,374,377,cat,cat,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,387,394,TURDIDÆ,TURDIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,407,415,SYLVIINÆ,SYLVIINÆ,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,vernacular,422,441,SIBERIAN CHIFFCHAFF,SIBERIAN CHIFFCHAFF,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,444,464,Phylloscopus tristis,Phylloscopus tristis,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,person,466,471,BLYTH,BLYTH,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,locality,521,528,Orkneys,Orkneys,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,date,532,536,1902,1902,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,546,553,TURDIDÆ,TURDIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,566,574,SYLVIINÆ,SYLVIINÆ,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,vernacular,581,604,GREENISH WILLOW-WARBLER,GREENISH WILLOW-WARBLER,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,taxon,607,629,Phylloscopus viridanus,Phylloscopus viridanus,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,person,631,636,BLYTH,BLYTH,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,locality,665,677,Lincolnshire,Lincolnshire,True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,date,682,701,"September 5th, 1896","September 5th, 1896",True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,locality,719,759,Sule Skerry Lighthouse (Sutherlandshire),Sule Skerry Lighthouse (Sutherlandshire),True,True,False
+mistral-ocr (OpenRouter),8992643,Butler,test,date,764,783,"September 5th, 1902","September 5th, 1902",True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,vernacular,39,53,Willow-Warbler,Willow-Warbler,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,locality,102,111,Shetlands,Shetlands,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,date,115,124,"May, 1901","May, 1901",True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,vernacular,131,143,Wood-Warbler,Wood-Warbler,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,locality,161,172,Isle of Man,Isle of Man,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,date,177,185,May 1901,May 1901,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,date,190,194,1905,1905,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,204,211,TURDIDÆ,TURDIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,224,232,SYLVIINÆ,SYLVIINÆ,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,vernacular,239,253,RUFOUS WARBLER,RUFOUS WARBLER,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,256,272,Aedon galactodes,Aedon galactodes,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,person,274,279,TEMM.,TEMM.,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,locality,315,321,Sussex,Sussex,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,locality,326,331,Devon,Devon,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,355,362,TURDIDÆ,TURDIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,375,383,SYLVIINÆ,SYLVIINÆ,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,vernacular,390,409,GREY-BACKED WARBLER,GREY-BACKED WARBLER,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,412,428,Aedon familiaris,Aedon familiaris,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,locality,449,460,"Hythe, Kent","Hythe, Kent",True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,date,465,480,"July 15th, 1907","July 15th, 1907",True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,490,497,TURDIDÆ,TURDIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,510,518,SYLVIINÆ,SYLVIINÆ,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,vernacular,521,541,RADDE'S BUSH-WARBLER,RADDE’S BUSH-WARBLER,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,taxon,544,563,Lusciniola schwarzi,Lusciniola schwarzi,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,person,565,570,RADDE,RADDE,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,date,599,612,"October, 1898","October, 1898",True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,locality,621,652,"Lincolnshire side of the
+Humber",Lincolnshire side of the Humber,True,True,False
+mistral-ocr (OpenRouter),8992644,Butler,test,person,661,666,Haigh,Haigh,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,taxon,22,33,MOTACILLIDÆ,MOTACILLIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,vernacular,40,60,BLACK‐HEADED WAGTAIL,BLACK-HEADED WAGTAIL,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,taxon,63,86,Motacilla melanocephala,Motacilla melanocephala,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,person,88,94,LICHT.,Licht.,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,locality,116,126,Willingdon,Willingdon,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,date,131,145,"May 13th, 1906","May 13th, 1906",True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,taxon,168,175,M. ﬂava,M. flava,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,taxon,211,222,MOTACILLIDÆ,MOTACILLIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,vernacular,225,239,SYKES’ WAGTAIL,SYKES’ WAGTAIL,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,taxon,242,257,Motacilla beema,Motacilla beema,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,person,259,264,SYKES,Sykes,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,locality,289,308,"Rottingdean, Sussex","Rottingdean, Sussex",True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,date,313,329,"April 20th, I898","April 20th, 1898",True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,taxon,339,350,MOTACILLIDÆ,MOTACILLIDÆ,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,vernacular,357,376,ASHY‐HEADED WAGTAIL,ASHY-HEADED WAGTAIL,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,taxon,379,403,Motacilla cinereocapilla,Motacilla cinereocapilla,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,person,405,409,SAVI,Savi,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,locality,458,466,Penzance,Penzance,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,locality,484,503,"Sheringham, Norfolk","Sheringham, Norfolk",True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,date,515,519,1842,1842,True,True,False
+mistral-ocr (OpenRouter),8992647,Butler,test,taxon,614,621,M. ﬂava,M. flava,True,True,False

@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202590-TaFSvOK9sRbsXMBYZdy1",
+ "object": "chat.completion",
+ "created": 1795202590,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "Parasail",
+ "system_fingerprint": "vllm-0.23.0-f5e491a1",
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "a7df7c42b5e1d5ae4e646ea008af356d3c1c2f5b1a2ebed72ac0a4b65dc9ecc3",
+       "name": "8992643.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8992643.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "206\n\n# APPENDIX\n\n|  Family—TURDIDÆ. | Subfamily—SYLVIINÆ.  |\n| --- | --- |\n\n## PALLA S WILLOW-WARBLER.\n\n*Phylloscopus proregulus.*\n\nA single example of this species was obtained in Norfolk, in October, 1896.\n\n---\n\nA good many Chiffchaffs visited the Shetlands between April 15th and 24th, 1904; in May of the same year one was seen by Mr. John S. Tulloch at Lerwick, and on May 27th, one was killed there by a cat.\n\n---\n\n|  Family—TURDIDÆ. | Subfamily—SYLVIINÆ.  |\n| --- | --- |\n\n## THE SIBERIAN CHIFFCHAFF.\n\n*Phylloscopus tristis, BLYTH.*\n\nA N example was obtained at a lighthouse off the Orkneys in 1902.\n\n---\n\n|  Family—TURDIDÆ. | Subfamily—SYLVIINÆ.  |\n| --- | --- |\n\n## THE GREENISH WILLOW-WARBLER.\n\n*Phylloscopus viridanus, BLYTH.*\n\nTHIS bird was obtained in Lincolnshire, on September 5th, 1896; a second struck Sule Skerry Lighthouse (Sutherlandshire), on September 5th, 1902."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 346,
+  "completion_tokens": 3,
+  "total_tokens": 349,
+  "cost": 0.00203204,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 3.204e-05,
+   "upstream_inference_prompt_cost": 3.114e-05,
+   "upstream_inference_completions_cost": 9e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

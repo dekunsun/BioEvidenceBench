@@ -25,3 +25,4 @@ indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M
 tesseract,tesseract-5,apache-2.0 (Tesseract 5)
 smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0
 falcon-ocr,tiiuae/Falcon-OCR,apache-2.0
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms

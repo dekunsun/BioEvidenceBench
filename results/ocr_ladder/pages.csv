@@ -571,3 +571,25 @@ falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992612,Butler,dev,,0.0049
 falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992643,Butler,test,,0.0558
 falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992644,Butler,test,,0.0277
 falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992647,Butler,test,,0.0238
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8966790,Reeve,test,,0.0079
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8966802,Reeve,test,,0.0164
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8966930,Reeve,test,,0.023
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8966937,Reeve,test,,0.0299
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8967047,Reeve,dev,,0.0403
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8967060,Reeve,dev,,0.015
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8967147,Reeve,dev,,0.0147
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8967281,Reeve,test,,0.0147
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8967282,Reeve,test,,0.0126
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8967290,Reeve,test,,0.0079
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8967333,Reeve,test,,0.0031
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8967345,Reeve,test,,0.0245
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992328,Butler,test,,0.0025
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992379,Butler,test,,0.0052
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992408,Butler,test,,0.0037
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992489,Butler,test,,0.0022
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992582,Butler,dev,,0.0
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992601,Butler,dev,,0.0013
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992612,Butler,dev,,0.0049
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992643,Butler,test,,0.0987
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992644,Butler,test,,0.0216
+mistral-ocr (OpenRouter),Mistral OCR via OpenRouter file-parser,Mistral / OpenRouter terms,8992647,Butler,test,,0.0168

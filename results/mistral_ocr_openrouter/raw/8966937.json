@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202603-ontbUcqTQWnbRQUueqQZ",
+ "object": "chat.completion",
+ "created": 1795202603,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "priority",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "0eae368cfde074021482ee8f1b063b7e7e67589b971f82e83d8b093f583da703",
+       "name": "8966937.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8966937.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "# BULIMUS.\n\n## PLATE LIV.\n\n### Species 353. (Fig. *a* and *b*, Mus. Cuming.)\n\n**BULIMUS ROSEATUS.** *Bul.* *testă oblongo-ovată, tenuiculă, vix umbilicată, anfractibus sex ad septem, subcentricosis, transversim minutissimă impresso-striatis, columellă reflexă, labro subexpanso, tenui, acuto; albidă, roseo exiliter tinctă, strigis fuscescentibus longitudinalibus interdum supernă notată.*\n\n**THE ROSEATE BULIMUS.** Shell oblong-ovate, rather thin, scarcely umbilicated, whorls six to seven in number, rather ventricose, transversely very minutely impressly striated, columella reflected, lip somewhat expanded, thin, sharp; whitish, faintly tinged with rose, and sometimes marked round the upper part with brownish longitudinal streaks.\n\n*Hab.* Venezuela.\n\nA delicately coloured species, approximating closely in form and style of painting to the *B. oreades*.\n\n---\n\n### Species 354. (Mus. Cuming.)\n\n**BULIMUS FERIATUS.** *Bul.* *testă acuminato-oblongă, vix umbilicată, anfractibus sex, transversim sub lente minutissimă impresso-striatis, columellă reflexă, labro expanso, simplici, vix reflexo; virescente-albă, maculis puncis olivaceo-fuscis quadratis prope apicem notatis, fasciă conspicuă circa umbilicum.*\n\n**THE UNEMPLOYED BULIMUS.** Shell acuminately oblong, scarcely umbilicated, whorls six in number, transversely very minutely impressly striated beneath the lens, columella reflected, lip expanded, simple, slightly reflected; greenish-white, marked near the apex with a few square olive-brown spots, and a conspicuous band round the umbilicus.\n\n*Hab.* Venezuela.\n\nAnother interesting new species from the same locality as the preceding.\n\n---\n\n### Species 355. (Mus. Cuming.)\n\n**BULIMUS PERDIX.** *Bul.* *testă ovato-oblongă, solidinsculă, umbilicată, anfractibus quinque ad sex, longitudinaliter creberrimă elevato-striatis, gibbosinsculis, columellă obscură plicată, labro reflexo; albidă, fammis maculis punctisque coeruleo-nigricantibus variegată, columellă supernă purpurascente.*\n\n**THE PARTRIDGE BULIMUS.** Shell ovately oblong, rather solid, umbilicated, whorls five to six in number, longitudinally very closely elevately striated, rather gibbous, columella obscurely plaited, lip reflected; whitish, variegated with blue-black flames blotches and dots, columella purplish at the upper part.\n\n**PFEIFFER, Pro. Zool. Soc., 1847.**\n\n*Hab.* New Granada; Funck.\n\nThis and the three following having been described as separate species, and, not to differ in a case which may be regarded a matter of opinion, they are here published as such; I cannot however forbear expressing my conviction that notwithstanding their apparent differences of form and detail of growth, they are but so many modified conditions of the same species. In the state described as *B. perdix*, the longitudinal striae are extremely regular, the aperture is rounded, and the plait of the columella is only obscurely developed at the upper part.\n\n---\n\n### Species 356. (Mus. Cuming.)\n\n**BULIMUS EURYOMPHALUS.** *Bul.* *testă fusiformi-oblongă, solidinsculă, umbilicată, basi angulato-compressă, anfractibus quinque ad sex, creberrimă longitudinaliter striatis, columellă plicată, apertură trigono-contractă, labro reflexo; coerulescente-albă, punctis maculisque fulgurantibus nigricantibus variegată, columellă intensă purpureă.*\n\n**THE BROAD-PLAITED BULIMUS.** Shell fusiformly oblong, rather solid, umbilicated, angularly compressed at the base, whorls five to six in number, very closely longitudinally striated, columella plaited, aperture triangularly contracted, lip reflected; bluish-white, clouded with black zigzag blotches and dots, columella deep purple.\n\n*Hab.* Venezuela; Dyson.\n\nChiefly distinguished by its clouded zigzag style of painting.\n\n---\n\n### Species 357. (Mus. Cuming.)\n\n**BULIMUS GLABER.** *Bul.* *testă subfusiformi-ovată, umbilicată, crassă, solidă, basi subcontractă, anfractibus quinque ad sex, longitudinaliter corrugato-striatis, columellă plicată, labro incrassato, reflexo; albidă, strigis grisco-rabcutibus nebulată et variegată.*\n\nDecember, 1848."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1193,
+  "completion_tokens": 3,
+  "total_tokens": 1196,
+  "cost": 0.0021351125,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001351125,
+   "upstream_inference_prompt_cost": 0.0001342125,
+   "upstream_inference_completions_cost": 9e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

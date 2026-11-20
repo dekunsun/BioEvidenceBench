@@ -1,0 +1,16 @@
+{
+  "written_at": "2026-11-20T19:23:34+00:00",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "plugin": {
+    "id": "file-parser",
+    "pdf": {
+      "engine": "mistral-ocr"
+    }
+  },
+  "chat_model": "mistralai/mistral-small-3.2-24b-instruct",
+  "text_version": "modern_mistral-ocr-openrouter",
+  "pages": 22,
+  "usd_total": 0.0455,
+  "mistral_ocr_version": "not reported by OpenRouter",
+  "exploratory": true
+}

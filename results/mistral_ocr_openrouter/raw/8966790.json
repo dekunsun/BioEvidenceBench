@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202596-CX4QVk8hlEt1wdv30WPP",
+ "object": "chat.completion",
+ "created": 1795202596,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "priority",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "6cfc5db6a41229f5cae4348764b3f02bea0d58131123145ef47c92ca33d9f193",
+       "name": "8966790.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8966790.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "BULIMUS.—PLATE XVII.\n\nmost of its congeners, brings forth its young alive, and during the dry season incloses itself within the shell by forming an epiphragm.\n\n## Species 102. (Mus. Cuming.)\n\n**Bulimus Chilensis.** *Bul. testă oblongo-ovată, tenui, subtiliter creberrimè granulată, spirâ subacută, anfrac-tibus sex, longitudinaliter rodè striatis, labro tenuissimo, simplici; fuscescente, strigis sordidè castaneis longitudinalibus hic illic tinctă.*\n\n**The Chili Bulimus.** Shell oblong-ovate, thin, finely very closely granulated, spire rather sharp, whorls six in number, longitudinally rudely striated, lip very thin, simple; light brown, stained here and there with longitudinal dull chesnut streaks.\n\n**Lesson, Voy. de la Coquille, pl. 8. f. 3.**\n\n*Bulimus granulosus*, Broderip.\n\n**Hub.** Valparaiso and Conception, Chili; Cuming.\n\nAlthough this shell is exactly similar in structure to that of the preceding species, the animal is not viviparous; it is, however, singularly distinguished by the smallness of its eggs, which are like little peas. It inhabits the mountains of Conception, and is found in ravines near the sea-shore as far as Valparaiso. During the dry season it buries itself in the earth, inclosed by an epiphragm. The shell exhibits little variation of form or colouring."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 373,
+  "completion_tokens": 3,
+  "total_tokens": 376,
+  "cost": 0.0020428625,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 4.28625e-05,
+   "upstream_inference_prompt_cost": 4.19625e-05,
+   "upstream_inference_completions_cost": 9e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

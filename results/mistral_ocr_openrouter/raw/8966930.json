@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202600-2SQ5qh7P3lv4MNztMjFF",
+ "object": "chat.completion",
+ "created": 1795202600,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "Parasail",
+ "system_fingerprint": "vllm-0.23.0-f5e491a1",
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "46daf09e1711973c3567ee937725392cf51f1b40bae6ccfac9bc3ae5d0151902",
+       "name": "8966930.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8966930.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "BULIMUS.—PLATE LII.\n\nbe observed that the shell grows to a more acuminated point than in the specimen here represented, which has the first whorls broken off.\n\n## Species 344. (Mus. Cuming.)\n\n**Bulimus obtusatus.** *Bul. testă elongato-turrită, basi suboblique productă, umbilicată, apice tumidă, obtusă, anfractibus decem ad undecim, plano-convexis, obliquă creberrimă costulato-striatis, apertură ovale, labro incrassato, paululum reflexo; lutescente-albă, rufo-fusco hic illic irregulariter tinctă et strigată.*\n\n**The Blunted Bulimus.** Shell elongately turreted, rather obliquely produced at the base, umbilicated, swollen and obtuse at the apex, whorls ten to eleven in number, flatly convex, obliquely very closely sculptured with rib-like stripe, aperture oval, lip thickened, a little reflected; yellowish-white, irregularly stained and streaked here and there with red-brown.\n\n**Pfeiffer, Monog.** *Bul. p. 151.*\n\n*Helix obtusata, Gmelin.*\n\n*Bulimus calcareus, Bruguière, Lamarck, Deshayes.*\n\n*Hab. Madagascar; Beck.*\n\nThis shell, distinguished by Lamarck as having a reflected lip, has been confounded with the *Helix calcarea* of Born, an examination of whose figure will show that it represents a worn specimen of Sp. 342, deprived of its epidermis.\n\n## Species 345. (Mus. Cuming.)\n\n**Bulimus clavator.** *Bul. testă elongato-oblongă, basi tumidă et suboblique productă, vix umbilicată, anfractibus octo, longitudinaliter rudă elevato-striatis, ad suturas crenulatis, columellă subdepresso-reflexă, labro simplici, aut paululum reflexo, supernă compresso; pallidă livido-olivaceă.*\n\n**The Club-Bearer Bulimus.** Shell elongately oblong, swollen and somewhat obliquely produced at the base, scarcely umbilicated, whorls eight in number, longitudinally rudely striated, crenulated at the sutures, columella somewhat depressly reflected, lip simple or a little reflected, compressed at the upper part; pale livid olive.\n\n**Petit, Mag. de Zool.** 1844, pl. 94.\n\n*Hab. Madagascar.*\n\nThe sutures, as in many species of this form, are white."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 614,
+  "completion_tokens": 3,
+  "total_tokens": 617,
+  "cost": 0.00205616,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 5.616e-05,
+   "upstream_inference_prompt_cost": 5.526e-05,
+   "upstream_inference_completions_cost": 9e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

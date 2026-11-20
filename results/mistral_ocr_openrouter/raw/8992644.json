@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202593-rstZ4wxiRIa0TOTRcDki",
+ "object": "chat.completion",
+ "created": 1795202593,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "eb6556f2e58320fae2799b6ce2cd359dfd9fd1995f798da57b025af71920d9a8",
+       "name": "8992644.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8992644.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "APPENDIX 207\n\nTwo nests of the common Willow-Warbler were found and others were seen building in the Shetlands in May, 1901.\n\nThe Wood-Warbler was heard on the Isle of Man, in May 1901 and 1905.\n\n---\n\n**Family—TURDIDÆ.**\n**Subfamily—SYLVIINÆ.**\n\n**THE RUFOUS WARBLER.**\n**Aedon galactodes, TEMM.**\n\n**T**HIS rare species has occurred in Sussex and Devon in the autumn.\n\n---\n\n**Family—TURDIDÆ.**\n**Subfamily—SYLVIINÆ.**\n\n**THE GREY-BACKED WARBLER.**\n**Aedon familiaris.**\n\n**A** male was shot at Hythe, Kent, on July 15th, 1907.\n\n---\n\n**Family—TURDIDÆ.**\n**Subfamily—SYLVIINÆ.**\n\n**RADDE’S BUSH-WARBLER.**\n**Lusciniola schwarzi, RADDE.**\n\n**A** specimen was obtained in October, 1898, on the Lincolnshire side of the Humber, by Mr. Haigh."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 284,
+  "completion_tokens": 3,
+  "total_tokens": 287,
+  "cost": 0.002027375,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 2.7375e-05,
+   "upstream_inference_prompt_cost": 2.6625e-05,
+   "upstream_inference_completions_cost": 7.5e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202574-PMH8TkJ4utyZbWOx8tmI",
+ "object": "chat.completion",
+ "created": 1795202574,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "bc904d0381c0687a5fb760aff5591670318d213f842af7855cba09fdb4c65948",
+       "name": "8967060.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8967060.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "BULIMUS.—PLATE LXXXIV.\n\ncentricè impresso-striatis, columellâ tenuè reflexâ, aperturâ parviusculâ, labro simplici; pallidè stramineâ.\n\nTHE VERY SMALL BULIMUS. Shell subulate, sutures of the spire somewhat impressed, whorls seven in number, somewhat rounded, concentrically impressly striated, columella thinly reflected, aperture rather small, lip simple; light straw-colour.\n\nADAMS, MS.\n\nHab. Jamaica.\n\nIt may be as well to repeat that all the species of this plate are very considerably magnified. The B. minimus under consideration, the smallest of the genus at present known, is not half the size of a grain of corn.\n\n---\n\nSpecies 624. (Mus. Adams.)\n\nBULIMUS PAUPERCULUS. Bul. testâ acuminato-oblongâ, anfractibus quinque, lavibus, supernè vix impresso-striatis, columellâ tenuè reflexâ, aperturâ ovatâ, labro simplici; sordidè stramineâ.\n\nTHE MEAN-LOOKING BULIMUS. Shell acuminately oblong, whorls five in number, smooth, slightly impressly striated round the upper part, columella thinly reflected, aperture ovate, lip simple; dull straw-colour.\n\nADAMS, MS.\n\nHab. Jamaica.\n\nIt may be observed that there is a great similarity in the majority of these small Bulimi and Achatiue from Jamaica. Though specifically distinct, they are but slight modifications of one typical character,—a diaphanous shell of more or less elongated convolution, with the whorls concentrically impressly striated.\n\n---\n\nSpecies 625. (Mus. Benson.)\n\nBULIMUS TUTULUS. Bul. testâ conicâ, basi latiusculâ, compressè umbilicatâ, anfractibus sex, rotundatis, minutissimè striatis, columellâ latè verticaliter dilatatâ, callositate parvâ supra, aperturâ ferè rotundâ, labro subreflexo; pallidè castaneâ, subcorneâ, callositate albâ.\n\nTHE LITTLE TUFT BULIMUS. Shell conical, rather broad at the base, compressly umbilicated, whorls six in number, rounded, very minutely striated, columella broadly vertically dilated, with a small callosity above, aperture nearly round, lip slightly reflected; light chestnut, somewhat horny, callosity white.\n\nBENSON, MS.\n\nHab. Humearpore, Bundelkhund, India; Benson.\n\nThis interesting little species is well distinguished by the broad convolution of the last whorl. Only two specimens were found."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 633,
+  "completion_tokens": 3,
+  "total_tokens": 636,
+  "cost": 0.00206009375,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 6.009375e-05,
+   "upstream_inference_prompt_cost": 5.934375e-05,
+   "upstream_inference_completions_cost": 7.5e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

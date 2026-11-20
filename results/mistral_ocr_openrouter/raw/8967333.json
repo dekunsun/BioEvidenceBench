@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202612-AVO0u5Kc1xrWjAYQvdL6",
+ "object": "chat.completion",
+ "created": 1795202612,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "priority",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "92dae4b0e72e6c6a16e0f5ecfca03e974c1b578f19d789581486509b3a413137",
+       "name": "8967333.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8967333.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "MONOGRAPH\nOF THE GENUS\n\nCASSIDARIA.\n\nNot lost the time in sea-side ramble spent;\nBeaced is the frame, and mental health is gained;\nKnowledge is gained of Him who made the deep,\nAnd blissful love acquired of Nature’s works.\nEach rock-pool has its treasure, every tide\nStrews on the yellow sand from Ocean’s lap.—Landsborough."
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 113,
+  "completion_tokens": 3,
+  "total_tokens": 116,
+  "cost": 0.0020136125,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 1.36125e-05,
+   "upstream_inference_prompt_cost": 1.27125e-05,
+   "upstream_inference_completions_cost": 9e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

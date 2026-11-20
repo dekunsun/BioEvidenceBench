@@ -1,0 +1,69 @@
+{
+ "id": "gen-1795202587-vK47egWf9tptaRm3WDmQ",
+ "object": "chat.completion",
+ "created": 1795202587,
+ "model": "mistralai/mistral-small-3.2-24b-instruct",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "OK.",
+    "refusal": null,
+    "reasoning": null,
+    "annotations": [
+     {
+      "type": "file",
+      "file": {
+       "hash": "3c00a489b7cead2fe9b434a27ea28dbe67430f24da36a337287fcf293b873fef",
+       "name": "8992489.pdf",
+       "content": [
+        {
+         "type": "text",
+         "text": "<file name=\"8992489.pdf\">"
+        },
+        {
+         "type": "text",
+         "text": "102 THE BRAMBLING\nFamily—FRINGILLIDÆ. Subfamily—FRINGILLINÆ.\n\n# THE BRAMBLING.\n\n*Fringilla montifringilla*, Linn.\n\nOf the distribution of this species Howard Saunders says:—\"To the Faroes the Brambling is only an exceptional visitor. On the mainland it breeds throughout the sub-Arctic pine and birch forests, from Norway to the valley of the Amur: while on migration it occurs in Japan, China, Northern India, Asia Minor, and the whole of Europe; but it is only in very severe winters that it pushes its wanderings to the African side of the Mediterranean. Immense flocks sometimes visit Belgium, Holland, Germany, and Heligoland; but statements that this species has nested in the Pyrenees, the Alps, or the Ardennes, are as yet unconfirmed.\" (Manual of British Birds, p. 177).\n\nTo Great Britain the Brambling is chiefly a winter migrant, although there is reason for believing that a few pairs have occasionally remained to breed with us. Although pretty generally distributed throughout our islands in winter, it appears to be rather more numerous in Scotland than in England, whilst in Cornwall, the west of England, and the south of Ireland, it is rarer than elsewhere; and in very severe winters it is more abundant, but particularly near beech-woods.\n\nThe adult male in breeding plumage has the upper parts blue-black, some of the feathers with tawny margins, the middle of the lower back and rump white; scapulars and lesser wing-coverts bright tawny; median coverts white; greater coverts black, tipped with white, so as to form a prominent bar; quills smoky black; the primaries with narrow yellowish white margins, the inner ones with white bases; secondaries with white margins towards their extremities; upper tail-coverts black, with ashy tips; tail black, the outer feathers with a little white at the base of the inner web, and about half the outer web broadly white; sides of head black; throat and breast reddish-tawny; belly white, the flanks spotted with black, and the thighs black behind; under tail-coverts white, tawny on the vent; beak blue-black; feet reddish-brown; iris hazel. After the autumn moult the feathers of the head and back have broad tawny margins, as also have the tips of the greater wing-coverts and the innermost secondaries; the quills and"
+        },
+        {
+         "type": "text",
+         "text": "</file>"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 556,
+  "completion_tokens": 3,
+  "total_tokens": 559,
+  "cost": 0.002052875,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 5.2875e-05,
+   "upstream_inference_prompt_cost": 5.2125e-05,
+   "upstream_inference_completions_cost": 7.5e-07
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

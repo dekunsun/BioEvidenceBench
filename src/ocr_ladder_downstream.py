@@ -22,7 +22,7 @@ from score import score_run_detail
 
 OUT = ROOT / "results" / "ocr_ladder"
 RUNS = ["20261120-ocrladder_claude-opus-5-5_test_G1", "20261120-ocrladder2_claude-opus-5-5_test_G1",
-        "20261119-2052_claude-opus-5-5_test_batch"]
+        "20261119-2052_claude-opus-5-5_test_batch", "20261120-ocrladder3_claude-opus-5-5_test_G1"]
 GOLD = ROOT / "gold" / "gold_mentions_gloria_test.csv"
 PRIMARY = ["taxon", "person", "locality", "institution", "date"]
 INK, MUTED, ACCENT, GRID = "#0b0b0b", "#52514e", "#2a78d6", "#e6e5e1"
@@ -30,7 +30,8 @@ INK, MUTED, ACCENT, GRID = "#0b0b0b", "#52514e", "#2a78d6", "#e6e5e1"
 
 def ocr_name(version: str) -> str:
     v = version.removeprefix("modern_")
-    return {"legacy": "legacy (BHL)", "lighton-ocr3-0p8b": "lighton-ocr3-0.8b"}.get(v, v)
+    return {"legacy": "legacy (BHL)", "lighton-ocr3-0p8b": "lighton-ocr3-0.8b",
+            "mistral-ocr-openrouter": "mistral-ocr (OpenRouter)"}.get(v, v)
 
 
 def main() -> None:
