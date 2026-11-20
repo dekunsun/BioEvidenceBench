@@ -2,7 +2,8 @@
 books (Cuvier is never touched), report alignment and damage per book, and draw the alignment
 audit sample.
 
-    python src/rl_task_b_build.py
+    python src/rl_task_b_build.py               # align all pages, then statistics
+    python src/rl_task_b_build.py --stats-only  # statistics from the saved index
 
 Writes
   data/cache/taskb/units/{train,dev,intest}.jsonl   all units (regenerable; not committed)
@@ -28,6 +29,9 @@ from common import CACHE, ROOT
 OUT = ROOT / "rl" / "env" / "task_b_ocr_repair" / "build"
 UNITS = CACHE / "taskb" / "units"
 SEED = 20261120
+# Round 1 of the alignment audit used SEED on the build before the MUFI fix (kept in build/audit_round1/);
+# round 2 draws a fresh sample from the fixed build so the fix is not checked on the pairs that found it.
+AUDIT_SEED = 20261121
 SPECIAL = re.compile(r"[æœÆŒſâêîôûàèìòùáéíóúäëïöüçß]")
 
 
@@ -60,11 +64,24 @@ def damage_bin(n: int) -> str:
     return "0" if n == 0 else "1" if n == 1 else "2-5" if n <= 5 else ">5"
 
 
-def main() -> None:
-    splits = pd.read_csv(ROOT / "rl" / "env" / "task_b_ocr_repair" / "splits.csv")
-    use = splits[splits.split.isin(["train", "dev", "intest"])]
-    UNITS.mkdir(parents=True, exist_ok=True)
-    OUT.mkdir(parents=True, exist_ok=True)
+def why_no_lines(pid: int) -> str:
+    """Why a page gave no unit (all such pages so far: plates, blank pages, short captions)."""
+    if not T.expert_text(pid).strip():
+        return "expert transcription empty (plate or blank page)"
+    if not T.legacy_text(pid).strip():
+        return "legacy OCR empty"
+    return "only lines under 15 characters or 2 words (caption)"
+
+
+def missing_pages(use: pd.DataFrame, d: pd.DataFrame) -> pd.DataFrame:
+    """Pages of the splits with no line in the index, with the reason."""
+    m = use[~use.PageID.isin(d.page_id)]
+    return pd.DataFrame([{"page_id": int(p), "book": b, "split": sp, "error": why_no_lines(int(p))}
+                         for p, b, sp in zip(m.PageID, m.book, m.split)], columns=["page_id", "book", "split", "error"])
+
+
+def build(use: pd.DataFrame) -> None:
+    """Align every page and write the unit files plus an index of all lines (slow: about 30 minutes)."""
     rows, missing = [], []
     files = {s: (UNITS / f"{s}.jsonl").open("w", encoding="utf-8") for s in ("train", "dev", "intest")}
     for r in use.itertuples():
@@ -73,6 +90,8 @@ def main() -> None:
         except Exception as e:                       # no legacy OCR for this page, or no text
             missing.append({"page_id": r.PageID, "book": r.book, "error": repr(e)[:120]})
             continue
+        if not units:
+            missing.append({"page_id": r.PageID, "book": r.book, "error": why_no_lines(int(r.PageID))})
         for u in units:
             u.update({"book": r.book, "split": r.split, "block": r.block})
             u["flags"] = failure_flags(u)
@@ -85,8 +104,20 @@ def main() -> None:
                         | {"flags": "; ".join(u["flags"])})
     for f in files.values():
         f.close()
-    d = pd.DataFrame(rows)
-    d.to_csv(UNITS / "all_units_index.csv", index=False)
+    pd.DataFrame(rows).to_csv(UNITS / "all_units_index.csv", index=False)
+    pd.DataFrame(missing, columns=["page_id", "book", "error"]).to_csv(UNITS / "missing_pages.csv", index=False)
+
+
+def main() -> None:
+    import sys
+    splits = pd.read_csv(ROOT / "rl" / "env" / "task_b_ocr_repair" / "splits.csv")
+    use = splits[splits.split.isin(["train", "dev", "intest"])]
+    UNITS.mkdir(parents=True, exist_ok=True)
+    OUT.mkdir(parents=True, exist_ok=True)
+    if "--stats-only" not in sys.argv:              # --stats-only reuses the saved index
+        build(use)
+    d = pd.read_csv(UNITS / "all_units_index.csv")
+    missing = missing_pages(use, d)          # recomputed from the index (fast: texts are cached)
 
     v = d[d.valid == True]  # noqa: E712
     per_book = d.groupby("book").agg(pages=("page_id", "nunique"), lines=("line_no", "size"),
@@ -97,13 +128,13 @@ def main() -> None:
     names = v.groupby("book").agg(lines_with_damaged_name=("n_name_damaged", lambda s: int((s > 0).sum())))
     # what lowering the similarity floor from 0.5 to 0.3 added
     gain = d[(d.valid == True) & (d.similarity < 0.5)].groupby("book").size().rename("valid_only_at_0.3")  # noqa: E712
-    flags = (d.assign(flag=d.flags.str.split("; ")).explode("flag").query("flag != ''")
-             .pipe(lambda x: pd.crosstab(x.book, x.flag)))
+    ex = d.assign(flag=d["flags"].fillna("").str.split("; ")).explode("flag").reset_index(drop=True)
+    flags = pd.crosstab(ex.book, ex.flag).drop(columns="", errors="ignore")
     per_split = pd.crosstab(v.book, v.split)
     for name, t in [("per_book", per_book), ("similarity", sims), ("damage_share", dmg), ("damage_counts", dmg_n),
                     ("names", names), ("threshold_gain", gain.to_frame()), ("flags", flags), ("splits", per_split)]:
         t.to_csv(OUT / f"stats_{name}.csv")
-    pd.DataFrame(missing).to_csv(OUT / "missing_pages.csv", index=False)
+    missing.to_csv(OUT / "missing_pages.csv", index=False)
 
     # Piscium: is the long s used consistently?
     pis = splits[splits.book == "Piscium"].PageID.astype(int)
@@ -112,7 +143,7 @@ def main() -> None:
     pl.to_csv(OUT / "piscium_long_s.csv", index=False)
 
     # audit sample: 100 pairs, low-confidence and special characters first, every book represented
-    rng = random.Random(SEED)
+    rng = random.Random(AUDIT_SEED)
     pool = d[d.input.fillna("") != ""].copy()
     want = {"0.3-0.5": 35, "<0.3": 10, "0.5-0.8": 30, "0.8-1.0": 25}
     picked = []
@@ -124,7 +155,7 @@ def main() -> None:
         take = []
         for bk in books:
             s2 = sub[sub.book == bk]
-            spec = s2[s2.flags.str.contains("special")]
+            spec = s2[s2["flags"].fillna("").str.contains("special")]
             cand = list(spec.index) + list(s2.index.difference(spec.index))
             take += rng.sample(cand[:max(per * 3, per)], min(per, len(cand)))
         rest = list(sub.index.difference(take))
@@ -146,7 +177,9 @@ def main() -> None:
     digest = {s: hashlib.sha256((UNITS / f"{s}.jsonl").read_bytes()).hexdigest() for s in ("train", "dev", "intest")}
     lines = ["# Task B step 4: units, alignment and damage per book", "",
              f"Built by `src/rl_task_b_build.py` with Reward v1.1 rules. Cuvier (held-out book) not touched; "
-             f"the 38 excluded pages not used. Pages without legacy OCR: {len(missing)}.", "",
+             f"the 38 excluded pages not used. Pages that gave no line: {len(missing)} "
+             f"({', '.join(f'{k}: {n}' for k, n in missing.error.str.replace(r' \(.*', '', regex=True).value_counts().items()) if len(missing) else 'none'}; "
+             f"see `missing_pages.csv`).", "",
              "Unit files (not committed; regenerate with the script) and their SHA-256:", ""]
     lines += [f"- `{s}.jsonl`: {int((v.split == s).sum())} valid units, `{h[:16]}…`" for s, h in digest.items()]
     lines += ["", "## Alignment per book", "", per_book.to_markdown(), "",

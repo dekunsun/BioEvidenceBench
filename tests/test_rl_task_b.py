@@ -138,3 +138,12 @@ def test_reward_is_clipped_to_minus_one():
     clean = "one two three four five"
     d = r(u(clean, clean, [False] * 5), "oNe tWo tHree fOur fIve")
     assert d["reward"] == -1.0
+
+
+def test_mufi_ligatures_are_folded_and_long_s_kept():
+    assert T.nfc("e\ueada, fo\ueba7libus, Inſe\ueec5a") == "eſt, foſſilibus, Inſecta"
+
+
+def test_reference_with_an_unreadable_character_is_marked():
+    assert T._UNREADABLE.search("GOLDEN ORIOLE \ufffd") and T._UNREADABLE.search("Sturnid\uefa1")
+    assert not T._UNREADABLE.search("Linnæus ſpecies")

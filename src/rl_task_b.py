@@ -50,8 +50,16 @@ GNFINDER = "/tmp/claude-0/-home-user/b6a70ceb-f87e-5d66-a2c3-ae166d1e15d1/scratc
 # transcription sometimes types "ﬁ" where an OCR engine writes "fi". They are folded to letters in
 # every text (reference, OCR input and model output). Letters that ARE spelling stay as they are:
 # æ, œ, and the long s ſ (whether ſ ≡ s is Gloria's decision; the two English books have none).
+# The Piscium querelae transcription types the same kind of ligature as MUFI private-use code
+# points (Medieval Unicode Font Initiative). Readings were taken from the words they occur in
+# (e.g. e+U+EADA = "eſt", fo+U+EBA7+libus = "foſſilibus"), 2026-11-20, step 4 audit.
+_MUFI = {"\ueada": "ſt", "\ueba2": "ſi", "\ueba6": "ſſ", "\ueba7": "ſſi", "\ueec5": "ct"}
 _PRESENTATION = str.maketrans({"\ufb00": "ff", "\ufb01": "fi", "\ufb02": "fl", "\ufb03": "ffi",
-                               "\ufb04": "ffl", "\ufb05": "ſt", "\ufb06": "st"})
+                               "\ufb04": "ffl", "\ufb05": "ſt", "\ufb06": "st"} | _MUFI)
+# A reference line that still holds U+FFFD (a glyph the transcription could not encode: Greek in
+# Piscium, sex symbols and fractions in Butler's plate captions) or an unidentified private-use
+# character cannot be a target: no output can match it. Such lines are marked invalid.
+_UNREADABLE = re.compile("[\ufffd\ue000-\uf8ff]")
 
 
 def nfc(s: str) -> str:
@@ -214,6 +222,8 @@ def line_pairs(pid: int, min_chars: int = 15, min_words: int = 2) -> list[dict]:
             why.append(f"span ratio {span_ratio:.2f}")
         if sim < 0.3:
             why.append(f"similarity {sim:.2f}")
+        if _UNREADABLE.search(s):
+            why.append("unreadable character in reference")
         units.append(make_unit(s, inp, flags, page_id=pid, line_no=li + 1,
                                input_had_linebreak="\n" in raw.strip(), coverage=round(cov, 3),
                                span_ratio=round(span_ratio, 3), similarity=round(sim, 3),
