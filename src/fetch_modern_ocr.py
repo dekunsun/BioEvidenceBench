@@ -58,8 +58,13 @@ def main() -> None:
 
     gt = pd.read_parquet(CACHE / "gt_english.parquet")
     want = set(gt.loc[gt.gt_chars > 0, "PageID"].astype(str))
-    out = pd.read_parquet(pq, columns=["PageID", "markdown", "finish_reason", "error"])
-    out = out[out.PageID.isin(want)]
+    import pyarrow.parquet as papq
+    have = set(papq.read_schema(pq).names)      # some rows (kraken, tesseract, ...) lack the last two
+    out = pd.read_parquet(pq, columns=[c for c in ("PageID", "markdown", "finish_reason", "error") if c in have])
+    for c in ("finish_reason", "error"):
+        if c not in out.columns:
+            out[c] = ""
+    out = out[out.PageID.astype(str).isin(want)]      # PageID is a string in some rows, int64 in others
 
     version = f"modern_{row}"
     (TEXT / version).mkdir(parents=True, exist_ok=True)

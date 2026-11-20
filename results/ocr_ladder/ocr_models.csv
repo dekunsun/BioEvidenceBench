@@ -1,0 +1,27 @@
+ocr,model,licence
+legacy (BHL),BHL legacy OCR,
+dots-ocr,rednote-hilab/dots.ocr,mit
+dots-mocr,rednote-hilab/dots.mocr,mit
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410)
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0
+glm-ocr,zai-org/GLM-OCR,mit
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0
+unlimited-ocr,baidu/Unlimited-OCR,mit
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M
+tesseract,tesseract-5,apache-2.0 (Tesseract 5)
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0

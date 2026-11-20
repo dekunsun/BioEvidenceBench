@@ -1,0 +1,23 @@
+{
+  "model": "claude-opus-5-5",
+  "batch": true,
+  "requests": 16,
+  "pages": 16,
+  "usd_total": 0.1918,
+  "usd_per_page_all_conditions": 0.012,
+  "usd_per_request": 0.01199,
+  "tokens": {
+    "input_tokens": 19042,
+    "output_tokens": 14930,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 44000
+  },
+  "stop_reasons": {
+    "end_turn": 16
+  },
+  "errors": 0,
+  "retried_once": 0,
+  "model_versions_returned": {
+    "claude-opus-5-5": 16
+  }
+}

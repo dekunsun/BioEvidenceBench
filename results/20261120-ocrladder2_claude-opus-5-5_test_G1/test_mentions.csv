@@ -1,0 +1,415 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score
+8967282,modern_lighton-ocr3-0p8b,G1,0,person,3,Kiener,False,Kiener,exact,40,46,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,1,person,3,Linnaeus,False,Linnaeus,exact,143,151,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,2,taxon,3,T. cornea,False,T. cornea,exact,202,211,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,3,person,3,Lamarck,False,Lamarck,exact,214,221,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,4,person,3,Deshayes,False,Deshayes,exact,226,234,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,5,taxon,3,T. ungulina,False,T. ungulina,exact,237,248,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,6,institution,7,Mus. Cuming,False,Mus. Cuming,exact,335,346,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,7,taxon,9,TURRITELLA DUPLICATA,False,TURRITELLA DUPLICATA,exact,352,372,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,8,vernacular,11,DUPLICATE TURRITELLA,False,DUPLICATE TURRITELLA,exact,684,704,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,9,person,13,LAMARCK,False,LAMARCK,exact,1058,1065,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,10,person,13,Deshayes,False,Deshayes,exact,1085,1093,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,11,taxon,15,Turbo duplicatus,False,Turbo duplicatus,exact,1123,1139,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,12,person,15,Linnaeus,False,Linnaeus,exact,1142,1150,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,13,taxon,17,Turbo acutangulus,False,Turbo acutangulus,exact,1165,1182,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,14,person,17,Linnaeus,False,Linnaeus,exact,1185,1193,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,15,taxon,19,Turbo replicatus,False,Turbo replicatus,exact,1212,1228,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,16,person,19,Linnaeus,False,Linnaeus,exact,1231,1239,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,17,locality,21,Eastern Seas,False,Eastern Seas,exact,1249,1261,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,18,taxon,23,Turbo acutangulus,False,Turbo acutangulus,exact,1269,1286,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,19,person,23,Linnaeus,False,Linnaeus,exact,1291,1299,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,20,taxon,23,Turbo duplicatus,False,Turbo duplicatus,exact,1327,1343,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,21,institution,23,Linnaean collection,False,Linnaean collection,exact,1406,1425,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,22,person,23,Deshayes,False,Deshayes,exact,1462,1470,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,23,person,23,Kiener,False,Kiener,exact,1510,1516,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,24,taxon,25,Turritella duplicata,False,Turritella duplicata,exact,1603,1623,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,25,person,25,Linnaeus,False,Linnaeus,exact,1867,1875,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,26,taxon,25,Turbo acutangulus,False,Turbo acutangulus,exact,1879,1896,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,27,institution,29,Mus. Cuming,False,Mus. Cuming,exact,2107,2118,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,28,taxon,31,TURRITELLA TEREbra,False,TURRITELLA TEREbra,exact,2124,2142,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,29,vernacular,33,AUGUR TURRITELLA,False,AUGUR TURRITELLA,exact,2359,2375,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,30,person,35,LAMARCK,False,LAMARCK,exact,2585,2592,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,31,person,35,Deshayes,False,Deshayes,exact,2612,2620,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,32,taxon,37,Turbo terebra,False,Turbo terebra,exact,2650,2663,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,33,person,37,Linnaeus,False,Linnaeus,exact,2666,2674,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,34,taxon,39,Turritella Archimedis,False,Turritella Archimedis,exact,2713,2734,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,35,person,39,Dillwyn,False,Dillwyn,exact,2737,2744,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,36,person,39,Mawe,False,Mawe,exact,2746,2750,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,37,locality,41,Philippine Islands,False,Philippine Islands,exact,2760,2778,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,38,person,41,Cuming,False,Cuming,exact,2780,2786,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,39,person,43,Martyn,False,Martyn,exact,2868,2874,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,40,person,43,Cuming,False,Cuming,exact,3206,3212,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,41,locality,43,Island of Negros,False,Island of Negros,exact,3246,3262,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,42,locality,43,Philippines,False,Philippines,exact,3275,3286,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,43,taxon,43,T. terebra,False,T. terebra,exact,3293,3303,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,44,taxon,43,T. Linnei,False,T. Linnei,exact,3353,3362,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,45,taxon,43,ungulinus,False,ungulinus,exact,3369,3378,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,46,person,43,Deshayes,False,Deshayes,exact,3381,3389,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,47,taxon,43,T. communis,False,T. communis,exact,3392,3403,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,48,person,43,Philippi,False,Philippi,exact,3406,3414,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,49,taxon,43,T. cornea,False,T. cornea,exact,3424,3433,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,50,person,43,Lamarck,False,Lamarck,exact,3438,3445,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,51,institution,47,Mus. Cuming,False,Mus. Cuming,exact,3468,3479,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,52,taxon,49,TURRITELLA ATTENUATA,False,TURRITELLA ATTENUATA,exact,3485,3505,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,53,vernacular,51,ATTENUATED TURRITELLA,False,ATTENUATED TURRITELLA,exact,3765,3786,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,54,taxon,53,Turritella acutangula,False,Turritella acutangula,exact,4058,4079,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,55,person,53,Deshayes,False,Deshayes,exact,4082,4090,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,56,taxon,53,Turbo acutangulus,False,Turbo acutangulus,exact,4131,4148,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,57,person,53,Linn.,False,Linn.,exact,4151,4156,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,58,person,57,Linnaeus,False,Linnaeus,exact,4209,4217,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,59,taxon,57,Turbo acutangulus,False,Turbo acutangulus,exact,4237,4254,100.0
+8967282,modern_lighton-ocr3-0p8b,G1,60,taxon,57,T. duplicatus,False,T. duplicatus,exact,4311,4324,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,0,person,5,H. A. Macpherson,False,H. A. Macpherson,exact,277,293,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,1,vernacular,5,Hawfinch,False,Hawfinch,exact,357,365,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,2,person,5,Charles A. Witchell,False,Charles A. Witchell,exact,438,457,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,3,vernacular,5,Hawfinch,False,Hawfinch,exact,560,568,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,4,person,5,H. A. Macpherson,False,H. A. Macpherson,exact,607,623,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,5,vernacular,7,Chaffinch,False,Chaffinch,exact,780,789,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,6,person,7,Alexander von Homeyer,False,Alexander von Homeyer,exact,856,877,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,7,vernacular,7,cherry-kernel biter,False,cherry-kernel biter,exact,925,944,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,8,vernacular,9,Bullfinches,False,Bullfinches,exact,1078,1089,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,9,vernacular,9,Grosbeaks,False,Grosbeaks,exact,1105,1114,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,10,vernacular,9,Grosbeaks,False,Grosbeaks,exact,1143,1152,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,11,person,9,Howard Saunders,False,Howard Saunders,exact,1222,1237,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,12,vernacular,9,Finches,False,Finches,exact,1296,1303,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,13,vernacular,9,Buntings,False,Buntings,exact,1312,1320,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,14,vernacular,11,Finches,False,Finches,exact,1490,1497,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,15,taxon,11,Fringilla,False,Fringilla,exact,1533,1542,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,16,vernacular,11,Buntings,False,Buntings,exact,1578,1586,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,17,taxon,11,Fringilla,False,Fringilla,exact,1641,1650,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,18,taxon,11,Passer,False,Passer,exact,1672,1678,100.0
+8992408,modern_lighton-ocr3-0p8b,G1,19,taxon,11,Emberizinae,False,Emberizinae,exact,1741,1752,100.0
+8967290,modern_lighton-ocr3-0p8b,G1,0,taxon,3,T. lentiginosa,False,T. lentiginosa,exact,379,393,100.0
+8967290,modern_lighton-ocr3-0p8b,G1,1,taxon,3,T. goniostoma,False,T. goniostoma,exact,538,551,100.0
+8967290,modern_lighton-ocr3-0p8b,G1,2,taxon,3,T. lentiginosa,False,T. lentiginosa,exact,751,765,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,0,vernacular,3,SLIGHTLY WRINKLED BULIMUS,False,SLIGHTLY WRINKLED BULIMUS,exact,29,54,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,1,taxon,5,Pupa,False,Pupa,exact,97,101,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,2,person,7,SOWERBY,False,SOWERBY,exact,351,358,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,3,locality,9,Gallapagos Islands,False,Gallapagos Islands,exact,396,414,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,4,person,9,Cuming,False,Cuming,exact,416,422,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,5,institution,15,Mus. Cuming,False,Mus. Cuming,exact,517,528,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,6,taxon,17,BULIMUS TURRITUS,False,BULIMUS TURRITUS,exact,536,552,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,7,vernacular,21,TURRETED BULIMUS,False,TURRETED BULIMUS,exact,762,778,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,8,person,23,BRODERIP,False,BRODERIP,exact,994,1002,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,9,locality,25,"Truxillo, Peru",False,"Truxillo, Peru",exact,1045,1059,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,10,person,25,Cuming,False,Cuming,exact,1080,1086,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,11,institution,31,Mus. Cuming,False,Mus. Cuming,exact,1217,1228,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,12,taxon,33,BULIMUS SCULPTURATUS,False,BULIMUS SCULPTURATUS,exact,1236,1256,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,13,vernacular,37,SCULPTURED BULIMUS,False,SCULPTURED BULIMUS,exact,1490,1508,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,14,person,39,PFEIFFER,False,PFEIFFER,exact,1761,1769,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,15,locality,41,Gallapagos Islands,False,Gallapagos Islands,exact,1811,1829,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,16,person,41,Darwin,False,Darwin,exact,1843,1849,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,17,taxon,45,B. rugiferus,False,B. rugiferus,exact,1931,1943,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,18,taxon,45,Darwinii,False,Darwinii,exact,1950,1958,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,19,institution,49,Mus. Cuming,False,Mus. Cuming,exact,2116,2127,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,20,taxon,51,BULIMUS CALVUS,False,BULIMUS CALVUS,exact,2135,2149,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,21,vernacular,55,BALD BULIMUS,False,BALD BULIMUS,exact,2356,2368,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,22,person,57,SOWERBY,False,SOWERBY,exact,2570,2577,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,23,locality,59,"James’ Island, Gallapagos",False,"James’ Island, Gallapagos",exact,2619,2644,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,24,person,59,Cuming,False,Cuming,exact,2672,2678,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,25,taxon,61,Achatinella,False,Achatinella,exact,2727,2738,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,26,institution,65,Mus. Cuming,False,Mus. Cuming,exact,2780,2791,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,27,taxon,67,BULIMUS PUSTULOSUS,False,BULIMUS PUSTULOSUS,exact,2799,2817,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,28,vernacular,71,PUSTULOSE BULIMUS,False,PUSTULOSE BULIMUS,exact,3064,3081,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,29,person,73,BRODERIP,False,BRODERIP,exact,3327,3335,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,30,locality,75,"Huasco, Chili",False,"Huasco, Chili",exact,3378,3391,100.0
+8966802,modern_lighton-ocr3-0p8b,G1,31,person,75,Cuming,False,Cuming,exact,3427,3433,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,0,institution,7,Mus. Cuming,False,Mus. Cuming,exact,183,194,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,1,taxon,9,BULIMUS CHILENSIS,False,BULIMUS CHILENSIS,exact,202,219,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,2,vernacular,11,CHILI BULIMUS,False,CHILI BULIMUS,exact,465,478,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,3,person,13,Lesson,False,Lesson,exact,715,721,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,4,taxon,15,Bulimus granulosus,False,Bulimus granulosus,exact,760,778,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,5,person,15,Broderip,False,Broderip,exact,780,788,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,6,locality,17,Valparaiso,False,Valparaiso,exact,798,808,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,7,locality,17,"Conception, Chili",False,"Conception, Chili",exact,813,830,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,8,person,17,Cuming,False,Cuming,exact,832,838,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,9,locality,19,mountains of Conception,False,mountains of Conception,exact,1073,1096,100.0
+8966790,modern_lighton-ocr3-0p8b,G1,10,locality,19,Valparaiso,False,Valparaiso,exact,1151,1161,100.0
+8967333,modern_lighton-ocr3-0p8b,G1,0,taxon,5,CASSIDARIA,False,CASSIDARIA,exact,32,42,100.0
+8967333,modern_lighton-ocr3-0p8b,G1,1,person,14,Landsborough,False,Landsborough,exact,335,347,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,0,vernacular,1,RED-BACKED SHRIKE,False,RED-BACKED SHRIKE,exact,6,23,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,1,locality,5,Kent,False,Kent,exact,411,415,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,2,vernacular,7,Red-backed Shrike,False,Red-backed Shrike,exact,860,877,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,3,locality,7,Maidstone,False,Maidstone,exact,916,925,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,4,vernacular,7,Greenfinch,False,Greenfinch,exact,1153,1163,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,5,vernacular,9,Butcher-bird,False,Butcher-bird,exact,1314,1326,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,6,vernacular,9,Shrikes,False,Shrikes,exact,1412,1419,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,7,vernacular,9,Red-backed Shrike,False,Red-backed Shrike,exact,1840,1857,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,8,person,11,Mathias Rausch,False,Mathias Rausch,exact,2051,2065,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,9,vernacular,11,Red-backed Shrike,False,Red-backed Shrike,exact,2183,2200,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,10,vernacular,11,Thorn-piercer,False,Thorn-piercer,exact,2204,2217,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,11,taxon,11,Lanius collurio,False,Lanius collurio,exact,2220,2235,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,12,locality,11,Europe,False,Europe,exact,2375,2381,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,13,vernacular,11,Red-backed Shrikes,False,Red-backed Shrikes,exact,2499,2517,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,14,vernacular,15,cockroaches,False,cockroaches,exact,2595,2606,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,15,person,17,H. A. Macpherson,False,H. A. Macpherson,exact,2884,2900,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,16,vernacular,17,Woodchat,False,Woodchat,exact,2977,2985,100.0
+8992328,modern_lighton-ocr3-0p8b,G1,17,vernacular,17,Great Grey Shrikes,False,Great Grey Shrikes,exact,2991,3009,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,0,taxon,5,TURRITELLA,False,TURRITELLA,exact,38,48,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,1,person,5,Lamarck,False,Lamarck,exact,50,57,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,2,taxon,11,Turritella,False,Turritella,exact,691,701,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,3,taxon,11,Cerithium,False,Cerithium,exact,1170,1179,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,4,taxon,11,Turritella,False,Turritella,exact,1289,1299,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,5,taxon,13,Turritella,False,Turritella,exact,1755,1765,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,6,person,13,Lamarck,False,Lamarck,exact,1851,1858,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,7,locality,13,Paris,False,Paris,exact,1896,1901,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,8,person,13,Kiener,False,Kiener,exact,1908,1914,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,9,person,13,Cuming,False,Cuming,exact,1989,1995,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,10,person,13,Metcalfe,False,Metcalfe,exact,2001,2009,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,11,person,13,Hanley,False,Hanley,exact,2015,2021,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,12,person,13,Edward Belcher,False,Edward Belcher,exact,2028,2042,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,13,institution,13,British Museum,False,British Museum,exact,2048,2062,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,14,institution,13,Banksian Collection,False,Banksian Collection,exact,2072,2091,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,15,institution,13,Linnaean Society,False,Linnaean Society,exact,2113,2129,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,16,person,15,Lamarck,False,Lamarck,exact,2290,2297,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,17,person,15,Deshayes,False,Deshayes,exact,2299,2307,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,18,person,15,Kiener,False,Kiener,exact,2312,2318,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,19,institution,15,Linnaean Society of London,False,Linnaean Society of London,exact,2416,2442,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,20,taxon,15,Turbo acutangulus,False,Turbo acutangulus,exact,2449,2466,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,21,person,15,Linnaeus,False,Linnaeus,exact,2471,2479,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,22,taxon,15,T. duplicatus,False,T. duplicatus,exact,2518,2531,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,23,person,15,Deshayes,False,Deshayes,exact,2573,2581,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,24,taxon,15,Turbo variegatus,False,Turbo variegatus,exact,2607,2623,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,25,taxon,15,Turbo imbricatus,False,Turbo imbricatus,exact,2747,2763,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,26,taxon,15,Turbo ungulinus,False,Turbo ungulinus,exact,2835,2850,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,27,person,15,Linnaeus,False,Linnaeus,exact,2855,2863,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,28,person,15,Lamarck,False,Lamarck,exact,2892,2899,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,29,taxon,15,Turritella fuscata,False,Turritella fuscata,exact,2903,2921,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,30,taxon,15,Turbo terebra,False,Turbo terebra,exact,2945,2958,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,31,person,15,Linn.,False,Linn.,exact,2961,2966,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,32,person,15,Montagu,False,Montagu,exact,3010,3017,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,33,taxon,15,T. cornea,False,T. cornea,exact,3044,3053,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,34,person,15,Lamarck,False,Lamarck,exact,3058,3065,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,35,taxon,17,Turritella brevialis,False,Turritella brevialis,exact,3073,3093,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,36,person,17,Lamarck,False,Lamarck,exact,3098,3105,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,37,vernacular,17,LeMesal,False,LeMesal,exact,3108,3115,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,38,person,17,Adanson,False,Adanson,exact,3120,3127,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,39,person,17,Gray,False,Gray,exact,3181,3185,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,40,taxon,17,MESALIA,False,MESALIA,exact,3202,3209,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,41,taxon,17,Turritella lactea,False,Turritella lactea,exact,3242,3259,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,42,person,17,Möller,False,Möller,exact,3264,3270,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,43,institution,17,Cumingian collection,False,Cumingian collection,exact,3315,3335,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,44,person,17,Gray,False,Gray,exact,3377,3381,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,45,taxon,17,EGLISIA,False,EGLISIA,exact,3419,3426,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,46,taxon,17,Turritella spirata,False,Turritella spirata,exact,3444,3462,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,47,person,17,Cuming,False,Cuming,exact,3542,3548,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,48,locality,17,Philippine Islands,False,Philippine Islands,exact,3563,3581,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,49,taxon,19,Turritellæ,False,Turritellæ,exact,3589,3599,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,50,taxon,19,T. cornea,False,T. cornea,exact,3701,3710,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,51,locality,19,Shetland Islands,False,Shetland Islands,exact,3746,3762,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,52,person,19,M. Andrew,False,M. Andrew,exact,3770,3779,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,53,locality,19,Mediterranean,False,Mediterranean,exact,3952,3965,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,54,locality,19,Eastern Seas,False,Eastern Seas,exact,3999,4011,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,55,locality,19,shores of Central America,False,shores of Central America,exact,4020,4045,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,56,locality,19,New Zealand,False,New Zealand,exact,4078,4089,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,57,locality,19,Australia,False,Australia,exact,4091,4100,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,58,locality,19,Van Dieman’s Land,False,Van Dieman’s Land,exact,4106,4123,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,59,institution,23,Mus. Cuming,False,Mus. Cuming,exact,4147,4158,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,60,taxon,25,TURRITELLA UNGULINA,False,TURRITELLA UNGULINA,exact,4164,4183,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,61,vernacular,27,NAIL-BRUISED TURRITELLA,False,NAIL-BRUISED TURRITELLA,exact,4410,4433,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,62,taxon,29,Turbo ungulinus,False,Turbo ungulinus,exact,4645,4660,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,63,person,29,Linnaeus,False,Linnaeus,exact,4663,4671,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,64,taxon,31,Turritella fuscata,False,Turritella fuscata,exact,4709,4727,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,65,person,31,Lamarck,False,Lamarck,exact,4730,4737,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,66,locality,33,"Senegal, Mouth of the Gambia, West Africa",False,"Senegal, Mouth of the Gambia, West Africa",exact,4747,4788,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,67,person,35,Linnaeus,False,Linnaeus,exact,4826,4834,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,68,taxon,35,Turbo ungulinus,False,Turbo ungulinus,exact,4856,4871,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,69,institution,35,Linnaean Society of London,False,Linnaean Society of London,exact,4911,4937,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,70,person,35,Hanley,False,Hanley,exact,4954,4960,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,71,person,35,Lamarck,False,Lamarck,exact,4992,4999,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,72,taxon,35,T. fuscata,False,T. fuscata,exact,5003,5013,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,73,locality,35,Seas of Europe,False,Seas of Europe,exact,5030,5044,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,74,person,35,Pulteney,False,Pulteney,exact,5096,5104,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,75,person,35,Deshayes,False,Deshayes,exact,5122,5130,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,76,taxon,35,Turritella,False,Turritella,exact,5176,5186,100.0
+8967281,modern_lighton-ocr3-0p8b,G1,77,locality,35,Mediterranean,False,Mediterranean,exact,5210,5223,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,0,vernacular,3,Willow-Warbler,False,Willow-Warbler,exact,102,116,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,1,locality,3,Shetlands,False,Shetlands,exact,165,174,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,2,date,3,"May, 1901",False,"May, 1901",exact,178,187,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,3,vernacular,5,Wood-Warbler,False,Wood-Warbler,exact,194,206,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,4,locality,5,Isle of Man,False,Isle of Man,exact,224,235,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,5,date,5,May 1901,False,May 1901,exact,240,248,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,6,date,5,1905,False,1905,exact,253,257,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,7,taxon,9,TURDIDÆ,False,TURDIDÆ,exact,273,280,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,8,taxon,9,SYLVIINÆ,False,SYLVIINÆ,exact,358,366,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,9,vernacular,11,RUFOUS WARBLER,False,RUFOUS WARBLER,exact,376,390,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,10,taxon,13,Aedon galactodes,False,Aedon galactodes,exact,396,412,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,11,person,13,TEMM.,False,TEMM.,exact,414,419,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,12,locality,15,Sussex,False,Sussex,exact,456,462,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,13,locality,15,Devon,False,Devon,exact,467,472,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,14,taxon,19,TURDIDÆ,False,TURDIDÆ,exact,502,509,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,15,taxon,19,SYLVIINÆ,False,SYLVIINÆ,exact,587,595,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,16,vernacular,21,GREY-BACKED WARBLER,False,GREY-BACKED WARBLER,exact,605,624,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,17,taxon,23,Aedon familiaris,False,Aedon familiaris,exact,630,646,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,18,locality,25,"Hythe, Kent",False,"Hythe, Kent",exact,669,680,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,19,date,25,"July 15th, 1907",False,"July 15th, 1907",exact,685,700,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,20,taxon,29,TURDIDÆ,False,TURDIDÆ,exact,716,723,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,21,taxon,29,SYLVIINÆ,False,SYLVIINÆ,exact,801,809,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,22,vernacular,31,RADDE’S BUSH-WARBLER,False,RADDE’S BUSH-WARBLER,exact,815,835,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,23,taxon,33,Luscinia schwarzi,False,Luscinia schwarzi,exact,841,858,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,24,person,33,RADDE,False,RADDE,exact,860,865,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,25,date,35,"October, 1898",False,"October, 1898",exact,896,909,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,26,locality,35,Lincolnshire side of the Humber,False,Lincolnshire side of the Humber,exact,918,949,100.0
+8992644,modern_lighton-ocr3-0p8b,G1,27,person,35,Haigh,False,Haigh,exact,958,963,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,0,taxon,5,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,23,34,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,1,vernacular,7,BLACK-HEADED WAGTAIL,False,BLACK-HEADED WAGTAIL,exact,44,64,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,2,taxon,9,Motacilla melanocphala,False,Motacilla melanocphala,exact,68,90,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,3,person,9,LIGHT,False,LIGHT,exact,92,97,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,4,locality,11,Willingdon,False,Willingdon,exact,122,132,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,5,date,11,"May 13th, 1906",False,"May 13th, 1906",exact,137,151,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,6,taxon,11,M. flava,False,M. flava,exact,175,183,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,7,taxon,15,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,226,237,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,8,vernacular,17,SYKES’ WAGTAIL,False,SYKES’ WAGTAIL,exact,243,257,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,9,taxon,19,Motacilla beema,False,Motacilla beema,exact,261,276,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,10,person,19,SYKES,False,SYKES,exact,278,283,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,11,locality,21,"Rottingdean, Sussex",False,"Rottingdean, Sussex",exact,310,329,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,12,date,21,"April 20th, 1898",False,"April 20th, 1898",exact,334,350,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,13,taxon,25,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,366,377,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,14,vernacular,27,ASHY-HEADED WAGTAIL,False,ASHY-HEADED WAGTAIL,exact,387,406,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,15,taxon,29,Motacilla cinereocapilla,False,Motacilla cinereocapilla,exact,410,434,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,16,person,29,SAVI,False,SAVI,exact,436,440,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,17,locality,31,Penzance,False,Penzance,exact,491,499,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,18,locality,31,"Sheringham, Norfolk",False,"Sheringham, Norfolk",exact,517,536,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,19,date,31,May?) 1842,False,May?) 1842,exact,541,551,100.0
+8992647,modern_lighton-ocr3-0p8b,G1,20,taxon,33,M. flava,False,M. flava,exact,645,653,100.0
+8967345,modern_lighton-ocr3-0p8b,G1,0,taxon,5,EBURNA,False,EBURNA,exact,32,38,100.0
+8967345,modern_lighton-ocr3-0p8b,G1,1,person,13,Crabbe,False,Crabbe,exact,261,267,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,0,vernacular,9,THE BRAMBLING,False,THE BRAMBLING,exact,71,84,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,1,taxon,5,FRINGILLIDÆ,False,FRINGILLIDÆ,exact,28,39,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,2,taxon,7,FRINGILLINE,False,FRINGILLINE,exact,54,65,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,3,taxon,11,Fringilla montifringilla,False,Fringilla montifringilla,exact,88,112,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,4,person,11,LINN.,False,LINN.,exact,114,119,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,5,person,13,Howard Saunders,False,Howard Saunders,exact,158,173,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,6,locality,13,Faroes,False,Faroes,exact,188,194,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,7,vernacular,13,Brambling,False,Brambling,exact,199,208,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,8,locality,13,Norway,False,Norway,exact,322,328,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,9,locality,13,valley of the Amur,False,valley of the Amur,exact,336,354,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,10,locality,13,Japan,False,Japan,exact,388,393,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,11,locality,13,China,False,China,exact,395,400,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,12,locality,13,Northern India,False,Northern India,exact,402,416,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,13,locality,13,Asia Minor,False,Asia Minor,exact,418,428,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,14,locality,13,Europe,False,Europe,exact,447,453,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,15,locality,13,African side of the Mediterranean,False,African side of the Mediterranean,exact,530,563,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,16,locality,13,Belgium,False,Belgium,exact,596,603,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,17,locality,13,Holland,False,Holland,exact,605,612,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,18,locality,13,Germany,False,Germany,exact,614,621,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,19,locality,13,Heligoland,False,Heligoland,exact,627,637,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,20,locality,13,Pyrenees,False,Pyrenees,exact,690,698,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,21,locality,13,Alps,False,Alps,exact,704,708,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,22,locality,13,Ardennes,False,Ardennes,exact,717,725,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,23,locality,15,Great Britain,False,Great Britain,exact,791,804,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,24,vernacular,15,Brambling,False,Brambling,exact,809,818,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,25,locality,15,Scotland,False,Scotland,exact,1062,1070,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,26,locality,15,England,False,England,exact,1079,1086,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,27,locality,15,Cornwall,False,Cornwall,exact,1098,1106,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,28,locality,15,west of England,False,west of England,exact,1112,1127,100.0
+8992489,modern_lighton-ocr3-0p8b,G1,29,locality,15,south of Ireland,False,south of Ireland,exact,1137,1153,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,0,institution,7,Mus. Cuming,False,Mus. Cuming,exact,184,195,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,1,taxon,9,BULIMUS OBTUSATUS,False,BULIMUS OBTUSATUS,exact,201,218,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,2,vernacular,11,BLUNTED BULIMUS,False,BLUNTED BULIMUS,exact,529,544,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,3,person,13,PFEIFFER,False,PFEIFFER,exact,894,902,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,4,taxon,15,Helix obtusata,False,Helix obtusata,exact,927,941,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,5,person,15,Gmelin.,False,Gmelin.,exact,943,950,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,6,taxon,17,Bulimus calcareus,False,Bulimus calcareus,exact,954,971,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,7,person,17,Bruguière,False,Bruguière,exact,973,982,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,8,person,17,Lamarck,False,Lamarck,exact,984,991,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,9,person,17,Deshayes,False,Deshayes,exact,993,1001,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,10,locality,17,Madagascar,False,Madagascar,exact,1008,1018,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,11,person,17,Beck,False,Beck,exact,1020,1024,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,12,person,19,Lamarck,False,Lamarck,exact,1057,1064,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,13,taxon,19,Helix calcarea,False,Helix calcarea,exact,1122,1136,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,14,person,19,Born,False,Born,exact,1141,1145,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,15,institution,23,Mus. Cuming,False,Mus. Cuming,exact,1285,1296,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,16,taxon,25,BULIMUS CLAVATOR,False,BULIMUS CLAVATOR,exact,1302,1318,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,17,vernacular,27,CLUB-BEARER BULIMUS,False,CLUB-BEARER BULIMUS,exact,1606,1625,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,18,person,29,PETIT,False,PETIT,exact,1939,1944,100.0
+8966930,modern_lighton-ocr3-0p8b,G1,19,locality,31,Madagascar,False,Madagascar,exact,1982,1992,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,0,taxon,5,TURDIDÆ,False,TURDIDÆ,exact,23,30,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,1,taxon,5,SYLVIINÆ,False,SYLVIINÆ,exact,81,89,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,2,vernacular,7,PALLAS’ WILLOW-WARBLER,False,PALLAS’ WILLOW-WARBLER,exact,95,117,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,3,taxon,9,Phylloscopus proregulus,False,Phylloscopus proregulus,exact,121,144,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,4,locality,11,Norfolk,False,Norfolk,exact,197,204,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,5,date,11,"October, 1896",False,"October, 1896",exact,209,222,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,6,vernacular,15,Chiffchaffs,False,Chiffchaffs,exact,242,253,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,7,locality,15,Shetlands,False,Shetlands,exact,266,275,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,8,date,15,"April 15th and 24th, 1904",False,"April 15th and 24th, 1904",exact,284,309,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,9,date,15,May,False,May,exact,314,317,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,10,person,15,John S. Tulloch,False,John S. Tulloch,exact,355,370,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,11,locality,15,Lerwick,False,Lerwick,exact,374,381,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,12,date,15,May 27th,False,May 27th,exact,390,398,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,13,taxon,19,TURDIDÆ,False,TURDIDÆ,exact,445,452,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,14,taxon,19,SYLVIINÆ,False,SYLVIINÆ,exact,503,511,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,15,vernacular,21,SIBERIAN CHIFFCHAFF,False,SIBERIAN CHIFFCHAFF,exact,521,540,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,16,taxon,23,Phylloscopus tristis,False,Phylloscopus tristis,exact,544,564,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,17,person,23,BLYTH,False,BLYTH,exact,566,571,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,18,locality,25,Orkneys,False,Orkneys,exact,624,631,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,19,date,25,1902,False,1902,exact,635,639,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,20,taxon,29,TURDIDÆ,False,TURDIDÆ,exact,655,662,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,21,taxon,29,SYLVIINÆ,False,SYLVIINÆ,exact,713,721,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,22,vernacular,31,GREENISH WILLOW-WARBLER,False,GREENISH WILLOW-WARBLER,exact,731,754,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,23,taxon,33,Phylloscopus viridanus,False,Phylloscopus viridanus,exact,758,780,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,24,person,33,BLYTH,False,BLYTH,exact,782,787,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,25,locality,35,Lincolnshire,False,Lincolnshire,exact,818,830,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,26,date,35,"September 5th, 1896",False,"September 5th, 1896",exact,835,854,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,27,locality,35,Sule Skerry,False,Sule Skerry,exact,872,883,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,28,locality,35,Sutherlandshire,False,Sutherlandshire,exact,896,911,100.0
+8992643,modern_lighton-ocr3-0p8b,G1,29,date,35,"September 5th, 1902",False,"September 5th, 1902",exact,917,936,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,0,institution,5,Mus. Cuming,False,Mus. Cuming,exact,63,74,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,1,taxon,7,BULIMUS ROSEATUS,False,BULIMUS ROSEATUS,exact,80,96,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,2,vernacular,9,ROSEATE BULIMUS,False,ROSEATE BULIMUS,exact,395,410,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,3,locality,11,Venezuela,False,Venezuela,exact,747,756,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,4,taxon,13,B. oreades,False,B. oreades,exact,850,860,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,5,institution,17,Mus. Cuming,False,Mus. Cuming,exact,887,898,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,6,taxon,19,BULIMUS FERIATUS,False,BULIMUS FERIATUS,exact,904,920,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,7,vernacular,21,UNEMPLOYED BULIMUS,False,UNEMPLOYED BULIMUS,exact,1220,1238,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,8,locality,23,Venezuela,False,Venezuela,exact,1567,1576,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,9,institution,29,Mus. Cuming,False,Mus. Cuming,exact,1676,1687,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,10,taxon,31,BULIMUS PERDIX,False,BULIMUS PERDIX,exact,1693,1707,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,11,vernacular,33,PARTRIDGE BULIMUS,False,PARTRIDGE BULIMUS,exact,2005,2022,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,12,person,35,PFEIFFER,False,PFEIFFER,exact,2316,2324,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,13,locality,37,New Granada,False,New Granada,exact,2358,2369,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,14,person,37,Funck,False,Funck,exact,2371,2376,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,15,taxon,39,B. perdix,False,B. perdix,exact,2773,2782,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,16,institution,43,Mus. Cuming,False,Mus. Cuming,exact,2958,2969,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,17,taxon,45,BULIMUS EURYOMPHALUS,False,BULIMUS EURYOMPHALUS,exact,2975,2995,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,18,vernacular,47,BROAD-PLAITED BULIMUS,False,BROAD-PLAITED BULIMUS,exact,3322,3343,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,19,locality,49,Venezuela,False,Venezuela,exact,3659,3668,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,20,person,49,Dyson,False,Dyson,exact,3670,3675,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,21,institution,55,Mus. Cuming,False,Mus. Cuming,exact,3765,3776,100.0
+8966937,modern_lighton-ocr3-0p8b,G1,22,taxon,57,BULIMUS GLABER,False,BULIMUS GLABER,exact,3782,3796,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,0,locality,3,Berwickshire,False,Berwickshire,exact,31,43,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,1,locality,3,Yorkshire,False,Yorkshire,exact,53,62,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,2,locality,3,Scarborough,False,Scarborough,exact,91,102,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,3,date,3,"October 23rd, 1889",False,"October 23rd, 1889",exact,104,122,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,4,date,3,1887,False,1887,exact,174,178,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,5,locality,3,Wells,False,Wells,exact,212,217,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,6,date,3,1900,False,1900,exact,221,225,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,7,date,3,1904,False,1904,exact,254,258,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,8,date,3,1905,False,1905,exact,272,276,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,9,date,3,1906,False,1906,exact,288,292,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,10,locality,3,Norfolk,False,Norfolk,exact,303,310,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,11,locality,3,Yorkshire,False,Yorkshire,exact,331,340,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,12,date,3,1907,False,1907,exact,344,348,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,13,locality,3,Cheshire,False,Cheshire,exact,353,361,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,14,date,3,June 1903,False,June 1903,exact,378,387,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,15,locality,3,Shetlands,False,Shetlands,exact,396,405,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,16,date,3,1906,False,1906,exact,442,446,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,17,vernacular,3,Flycatcher,False,Flycatcher,exact,491,501,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,18,vernacular,5,Robin,False,Robin,exact,857,862,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,19,person,5,Seebohm,False,Seebohm,exact,868,875,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,20,vernacular,5,Robins,False,Robins,exact,940,946,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,21,vernacular,5,Flycatchers,False,Flycatchers,exact,955,966,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,22,vernacular,5,Red-breasted Flycatcher,False,Red-breasted Flycatcher,exact,1078,1101,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,23,taxon,7,M. minuta,False,M. minuta,exact,1834,1843,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,24,taxon,7,M. leucura,False,M. leucura,exact,1903,1913,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,25,taxon,7,M. parva,False,M. parva,exact,1978,1986,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,26,taxon,7,M. hyperythra,False,M. hyperythra,exact,2055,2068,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,27,taxon,9,Munia atricapilla,False,Munia atricapilla,exact,2318,2335,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,28,date,9,1887,False,1887,exact,2374,2378,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,29,date,9,spring of 1896,False,spring of 1896,exact,2497,2511,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,30,taxon,9,Quelea quelea,False,Quelea quelea,exact,2545,2558,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,31,taxon,9,Q. russi,False,Q. russi,exact,2593,2601,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,32,vernacular,9,Cardinal,False,Cardinal,exact,2678,2686,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,33,taxon,9,Paroaria cervicalis,False,Paroaria cervicalis,exact,2689,2708,100.0
+8992379,modern_lighton-ocr3-0p8b,G1,34,taxon,9,P. capitata,False,P. capitata,exact,2745,2756,100.0

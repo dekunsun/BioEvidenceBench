@@ -1,0 +1,69 @@
+{
+  "run_id": "20261120-ocrladder_claude-opus-5-5_test_G1",
+  "created_at": "2026-11-20T00:20:37+00:00",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "max_tokens": 16000,
+  "mode": "batch",
+  "prompt_version": "p4-guide-v0.6",
+  "system_sha256": "ad7f90379c0277d1c0199ee7b3c5ebc6dc71e6b590fa730f7c088e54e0f237c0",
+  "pages": "test",
+  "page_ids": [
+    8992328,
+    8992379,
+    8992408,
+    8992489,
+    8992643,
+    8992644,
+    8992647,
+    8966790,
+    8966802,
+    8966930,
+    8966937,
+    8967281,
+    8967282,
+    8967290,
+    8967333,
+    8967345
+  ],
+  "versions": [
+    "modern_deepseek-ocr",
+    "modern_deepseek-ocr2",
+    "modern_dots-ocr",
+    "modern_falcon-ocr",
+    "modern_glm-ocr",
+    "modern_kraken-ppocrv6",
+    "modern_lighton-ocr2",
+    "modern_lighton-ocr3-4b",
+    "modern_minicpm-ocr",
+    "modern_nemotron-parse-35",
+    "modern_olmocr2",
+    "modern_ovis-ocr2",
+    "modern_ovis-ocr3",
+    "modern_paddleocr-vl-16",
+    "modern_qianfan-ocr",
+    "modern_qwen35-9b",
+    "modern_smoldocling",
+    "modern_tesseract",
+    "modern_unlimited-ocr",
+    "modern_unlimited-ocr2"
+  ],
+  "conditions": [
+    "G1"
+  ],
+  "max_usd": 8.0,
+  "n_requests": 320,
+  "dry_run": false,
+  "effort": "medium",
+  "prices_usd_per_mtok": [
+    4.0,
+    20.0,
+    5.0,
+    0.2
+  ],
+  "anthropic_sdk": "2.10.0",
+  "estimate": {
+    "from": "20261119-2052_claude-opus-5-5_test_batch",
+    "usd": 3.7472
+  }
+}

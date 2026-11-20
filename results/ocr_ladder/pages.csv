@@ -1,0 +1,573 @@
+ocr,model,licence,page_id,book,split,finish_reason,page_cer
+legacy (BHL),BHL legacy OCR,,8966790,Reeve,test,,0.1002
+legacy (BHL),BHL legacy OCR,,8966802,Reeve,test,,0.2353
+legacy (BHL),BHL legacy OCR,,8966930,Reeve,test,,0.275
+legacy (BHL),BHL legacy OCR,,8966937,Reeve,test,,0.4374
+legacy (BHL),BHL legacy OCR,,8967047,Reeve,dev,,0.1225
+legacy (BHL),BHL legacy OCR,,8967060,Reeve,dev,,0.0588
+legacy (BHL),BHL legacy OCR,,8967147,Reeve,dev,,0.0568
+legacy (BHL),BHL legacy OCR,,8967281,Reeve,test,,0.0316
+legacy (BHL),BHL legacy OCR,,8967282,Reeve,test,,0.074
+legacy (BHL),BHL legacy OCR,,8967290,Reeve,test,,0.0262
+legacy (BHL),BHL legacy OCR,,8967333,Reeve,test,,0.0155
+legacy (BHL),BHL legacy OCR,,8967345,Reeve,test,,0.0857
+legacy (BHL),BHL legacy OCR,,8992328,Butler,test,,0.0067
+legacy (BHL),BHL legacy OCR,,8992379,Butler,test,,0.0115
+legacy (BHL),BHL legacy OCR,,8992408,Butler,test,,0.0369
+legacy (BHL),BHL legacy OCR,,8992489,Butler,test,,0.0474
+legacy (BHL),BHL legacy OCR,,8992582,Butler,dev,,0.0089
+legacy (BHL),BHL legacy OCR,,8992601,Butler,dev,,0.0201
+legacy (BHL),BHL legacy OCR,,8992612,Butler,dev,,0.0292
+legacy (BHL),BHL legacy OCR,,8992643,Butler,test,,0.1234
+legacy (BHL),BHL legacy OCR,,8992644,Butler,test,,0.1371
+legacy (BHL),BHL legacy OCR,,8992647,Butler,test,,0.0784
+dots-ocr,rednote-hilab/dots.ocr,mit,8966790,Reeve,test,stop,0.0237
+dots-ocr,rednote-hilab/dots.ocr,mit,8966802,Reeve,test,stop,0.0208
+dots-ocr,rednote-hilab/dots.ocr,mit,8966930,Reeve,test,stop,0.028
+dots-ocr,rednote-hilab/dots.ocr,mit,8966937,Reeve,test,stop,0.0213
+dots-ocr,rednote-hilab/dots.ocr,mit,8967047,Reeve,dev,stop,0.0237
+dots-ocr,rednote-hilab/dots.ocr,mit,8967060,Reeve,dev,stop,0.021
+dots-ocr,rednote-hilab/dots.ocr,mit,8967147,Reeve,dev,stop,0.0159
+dots-ocr,rednote-hilab/dots.ocr,mit,8967281,Reeve,test,stop,0.0052
+dots-ocr,rednote-hilab/dots.ocr,mit,8967282,Reeve,test,stop,0.0117
+dots-ocr,rednote-hilab/dots.ocr,mit,8967290,Reeve,test,stop,0.0026
+dots-ocr,rednote-hilab/dots.ocr,mit,8967333,Reeve,test,stop,0.0
+dots-ocr,rednote-hilab/dots.ocr,mit,8967345,Reeve,test,stop,0.0
+dots-ocr,rednote-hilab/dots.ocr,mit,8992328,Butler,test,stop,0.0114
+dots-ocr,rednote-hilab/dots.ocr,mit,8992379,Butler,test,stop,0.0188
+dots-ocr,rednote-hilab/dots.ocr,mit,8992408,Butler,test,stop,0.0155
+dots-ocr,rednote-hilab/dots.ocr,mit,8992489,Butler,test,stop,0.029
+dots-ocr,rednote-hilab/dots.ocr,mit,8992582,Butler,dev,stop,0.0055
+dots-ocr,rednote-hilab/dots.ocr,mit,8992601,Butler,dev,stop,0.0081
+dots-ocr,rednote-hilab/dots.ocr,mit,8992612,Butler,dev,stop,0.014
+dots-ocr,rednote-hilab/dots.ocr,mit,8992643,Butler,test,stop,0.0403
+dots-ocr,rednote-hilab/dots.ocr,mit,8992644,Butler,test,stop,0.0231
+dots-ocr,rednote-hilab/dots.ocr,mit,8992647,Butler,test,stop,0.1134
+dots-mocr,rednote-hilab/dots.mocr,mit,8966790,Reeve,test,stop,0.0181
+dots-mocr,rednote-hilab/dots.mocr,mit,8966802,Reeve,test,stop,0.0126
+dots-mocr,rednote-hilab/dots.mocr,mit,8966930,Reeve,test,stop,0.019
+dots-mocr,rednote-hilab/dots.mocr,mit,8966937,Reeve,test,stop,0.0114
+dots-mocr,rednote-hilab/dots.mocr,mit,8967047,Reeve,dev,stop,0.0153
+dots-mocr,rednote-hilab/dots.mocr,mit,8967060,Reeve,dev,stop,0.021
+dots-mocr,rednote-hilab/dots.mocr,mit,8967147,Reeve,dev,stop,0.0085
+dots-mocr,rednote-hilab/dots.mocr,mit,8967281,Reeve,test,stop,0.0114
+dots-mocr,rednote-hilab/dots.mocr,mit,8967282,Reeve,test,stop,0.0132
+dots-mocr,rednote-hilab/dots.mocr,mit,8967290,Reeve,test,stop,0.0026
+dots-mocr,rednote-hilab/dots.mocr,mit,8967333,Reeve,test,stop,0.0
+dots-mocr,rednote-hilab/dots.mocr,mit,8967345,Reeve,test,stop,0.0286
+dots-mocr,rednote-hilab/dots.mocr,mit,8992328,Butler,test,stop,0.0098
+dots-mocr,rednote-hilab/dots.mocr,mit,8992379,Butler,test,stop,0.0185
+dots-mocr,rednote-hilab/dots.mocr,mit,8992408,Butler,test,stop,0.0176
+dots-mocr,rednote-hilab/dots.mocr,mit,8992489,Butler,test,stop,0.029
+dots-mocr,rednote-hilab/dots.mocr,mit,8992582,Butler,dev,stop,0.0055
+dots-mocr,rednote-hilab/dots.mocr,mit,8992601,Butler,dev,stop,0.0081
+dots-mocr,rednote-hilab/dots.mocr,mit,8992612,Butler,dev,stop,0.0116
+dots-mocr,rednote-hilab/dots.mocr,mit,8992643,Butler,test,stop,0.0195
+dots-mocr,rednote-hilab/dots.mocr,mit,8992644,Butler,test,stop,0.0416
+dots-mocr,rednote-hilab/dots.mocr,mit,8992647,Butler,test,stop,0.0294
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8966790,Reeve,test,stop,0.0276
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8966802,Reeve,test,stop,0.0126
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8966930,Reeve,test,stop,0.019
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8966937,Reeve,test,stop,0.0089
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8967047,Reeve,dev,stop,0.014
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8967060,Reeve,dev,stop,0.02
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8967147,Reeve,dev,stop,0.0115
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8967281,Reeve,test,stop,0.0081
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8967282,Reeve,test,stop,0.0141
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8967290,Reeve,test,stop,0.0118
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8967333,Reeve,test,stop,0.0311
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8967345,Reeve,test,stop,0.0612
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992328,Butler,test,stop,0.0101
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992379,Butler,test,stop,0.0192
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992408,Butler,test,stop,0.0176
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992489,Butler,test,stop,0.0118
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992582,Butler,dev,stop,0.0055
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992601,Butler,dev,stop,0.0081
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992612,Butler,dev,stop,0.0164
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992643,Butler,test,stop,0.0338
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992644,Butler,test,stop,0.0416
+chandra-ocr2,datalab-to/chandra-ocr-2,Datalab modified OpenRAIL-M,8992647,Butler,test,stop,0.0406
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8966790,Reeve,test,stop,0.0071
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8966802,Reeve,test,stop,0.0167
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8966930,Reeve,test,stop,0.02
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8966937,Reeve,test,stop,0.021
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8967047,Reeve,dev,stop,0.0286
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8967060,Reeve,dev,stop,0.0219
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8967147,Reeve,dev,stop,0.0164
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8967281,Reeve,test,stop,0.0101
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8967282,Reeve,test,stop,0.0164
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8967290,Reeve,test,stop,0.0052
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8967333,Reeve,test,stop,0.0248
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8967345,Reeve,test,stop,0.0367
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992328,Butler,test,stop,0.0022
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992379,Butler,test,stop,0.0042
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992408,Butler,test,stop,0.0048
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992489,Butler,test,stop,0.0035
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992582,Butler,dev,stop,0.0
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992601,Butler,dev,stop,0.0013
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992612,Butler,dev,stop,0.0061
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992643,Butler,test,stop,0.0221
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992644,Butler,test,stop,0.0354
+ovis-ocr2,ATH-MaaS/OvisOCR2,apache-2.0,8992647,Butler,test,stop,0.021
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8966790,Reeve,test,stop,0.0221
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8966802,Reeve,test,stop,0.0061
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8966930,Reeve,test,stop,0.0195
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8966937,Reeve,test,stop,0.0086
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8967047,Reeve,dev,stop,0.0115
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8967060,Reeve,dev,stop,0.0342
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8967147,Reeve,dev,stop,0.0065
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8967281,Reeve,test,stop,0.014
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8967282,Reeve,test,stop,0.013
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8967290,Reeve,test,stop,0.0354
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8967333,Reeve,test,stop,0.0
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8967345,Reeve,test,stop,0.0041
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992328,Butler,test,stop,0.0038
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992379,Butler,test,stop,0.0185
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992408,Butler,test,stop,0.0176
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992489,Butler,test,stop,0.0039
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992582,Butler,dev,stop,0.0014
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992601,Butler,dev,stop,0.0081
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992612,Butler,dev,stop,0.0164
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992643,Butler,test,stop,0.0182
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992644,Butler,test,stop,0.0046
+lighton-ocr3-4b,lightonai/LightOnOCR-3-4B,apache-2.0,8992647,Butler,test,stop,0.0308
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8966790,Reeve,test,stop,0.0055
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8966802,Reeve,test,stop,0.0117
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8966930,Reeve,test,stop,0.0125
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8966937,Reeve,test,stop,0.0238
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8967047,Reeve,dev,stop,0.0186
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8967060,Reeve,dev,stop,0.0137
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8967147,Reeve,dev,stop,0.0147
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8967281,Reeve,test,stop,0.0076
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8967282,Reeve,test,stop,0.0139
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8967290,Reeve,test,stop,0.0066
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8967333,Reeve,test,stop,0.028
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8967345,Reeve,test,stop,0.0286
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992328,Butler,test,stop,0.0022
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992379,Butler,test,stop,0.0042
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992408,Butler,test,stop,0.0043
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992489,Butler,test,stop,0.0026
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992582,Butler,dev,stop,0.0
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992601,Butler,dev,stop,0.0013
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992612,Butler,dev,stop,0.0043
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992643,Butler,test,stop,0.0065
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992644,Butler,test,stop,0.0169
+unlimited-ocr2,baidu/Unlimited-OCR-2,mit,8992647,Butler,test,stop,0.0168
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8966790,Reeve,test,,0.086
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8966802,Reeve,test,,0.0041
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8966930,Reeve,test,,0.0065
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8966937,Reeve,test,,0.02
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8967047,Reeve,dev,,0.0179
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8967060,Reeve,dev,,0.0087
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8967147,Reeve,dev,,0.0386
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8967281,Reeve,test,,0.03
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8967282,Reeve,test,,0.0262
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8967290,Reeve,test,,0.3005
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8967333,Reeve,test,,0.0217
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8967345,Reeve,test,,0.0204
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992328,Butler,test,,0.0019
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992379,Butler,test,,0.0049
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992408,Butler,test,,0.0032
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992489,Butler,test,,0.0149
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992582,Butler,dev,,0.0
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992601,Butler,dev,,0.004
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992612,Butler,dev,,0.003
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992643,Butler,test,,0.087
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992644,Butler,test,,0.0108
+kraken-ppocrv6,kraken/PP-OCRv6-medium,apache-2.0 (Zenodo 10.5281/zenodo.21788410),8992647,Butler,test,,0.0434
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8966790,Reeve,test,,0.0252
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8966802,Reeve,test,,0.0219
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8966930,Reeve,test,,0.022
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8966937,Reeve,test,,0.022
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8967047,Reeve,dev,,0.0181
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8967060,Reeve,dev,,0.0342
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8967147,Reeve,dev,,0.0152
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8967281,Reeve,test,,0.0091
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8967282,Reeve,test,,0.0158
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8967290,Reeve,test,,0.0354
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8967333,Reeve,test,,0.0311
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8967345,Reeve,test,,0.049
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992328,Butler,test,,0.0092
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992379,Butler,test,,0.0157
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992408,Butler,test,,0.0166
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992489,Butler,test,,0.0202
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992582,Butler,dev,,0.0055
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992601,Butler,dev,,0.0081
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992612,Butler,dev,,0.014
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992643,Butler,test,,0.0545
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992644,Butler,test,,0.0431
+minicpm-ocr,openbmb/MiniCPM-OCR-1.0,apache-2.0,8992647,Butler,test,,0.0434
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8966790,Reeve,test,stop,0.0079
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8966802,Reeve,test,stop,0.0164
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8966930,Reeve,test,stop,0.018
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8966937,Reeve,test,stop,0.0208
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8967047,Reeve,dev,stop,0.024
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8967060,Reeve,dev,stop,0.0246
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8967147,Reeve,dev,stop,0.0157
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8967281,Reeve,test,stop,0.0109
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8967282,Reeve,test,stop,0.0164
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8967290,Reeve,test,stop,0.0052
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8967333,Reeve,test,stop,0.0
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8967345,Reeve,test,stop,0.0245
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992328,Butler,test,stop,0.0022
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992379,Butler,test,stop,0.0059
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992408,Butler,test,stop,0.0043
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992489,Butler,test,stop,0.0026
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992582,Butler,dev,stop,0.0
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992601,Butler,dev,stop,0.0013
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992612,Butler,dev,stop,0.0134
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992643,Butler,test,stop,0.0052
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992644,Butler,test,stop,0.0216
+ovis-ocr3,ATH-MaaS/OvisOCR3,apache-2.0,8992647,Butler,test,stop,0.0224
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8966790,Reeve,test,stop,0.3297
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8966802,Reeve,test,stop,0.0375
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8966930,Reeve,test,stop,0.0275
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8966937,Reeve,test,stop,0.0357
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8967047,Reeve,dev,stop,0.0408
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8967060,Reeve,dev,stop,0.0223
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8967147,Reeve,dev,stop,0.0274
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8967281,Reeve,test,stop,0.02
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8967282,Reeve,test,stop,0.0256
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8967290,Reeve,test,stop,0.0052
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8967333,Reeve,test,stop,0.0062
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8967345,Reeve,test,stop,0.0122
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992328,Butler,test,stop,0.0029
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992379,Butler,test,stop,0.0042
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992408,Butler,test,stop,0.0053
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992489,Butler,test,stop,0.0053
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992582,Butler,dev,stop,0.0003
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992601,Butler,dev,stop,0.002
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992612,Butler,dev,stop,0.0085
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992643,Butler,test,stop,0.0234
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992644,Butler,test,stop,0.0632
+paddleocr-vl-16,PaddlePaddle/PaddleOCR-VL-1.6,apache-2.0,8992647,Butler,test,stop,0.0238
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8966790,Reeve,test,stop,0.0315
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8966802,Reeve,test,stop,0.0272
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8966930,Reeve,test,stop,0.034
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8966937,Reeve,test,stop,0.0372
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8967047,Reeve,dev,stop,0.0411
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8967060,Reeve,dev,stop,0.031
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8967147,Reeve,dev,stop,0.0336
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8967281,Reeve,test,stop,0.0165
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8967282,Reeve,test,stop,0.0271
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8967290,Reeve,test,stop,0.0367
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8967333,Reeve,test,stop,0.0031
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8967345,Reeve,test,stop,0.0041
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992328,Butler,test,stop,0.0095
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992379,Butler,test,stop,0.0192
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992408,Butler,test,stop,0.0176
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992489,Butler,test,stop,0.0101
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992582,Butler,dev,stop,0.0055
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992601,Butler,dev,stop,0.0084
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992612,Butler,dev,stop,0.0146
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992643,Butler,test,stop,0.0195
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992644,Butler,test,stop,0.0231
+olmocr2,allenai/olmOCR-2-7B-1025-FP8,apache-2.0,8992647,Butler,test,stop,0.0308
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8966790,Reeve,test,stop,0.0079
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8966802,Reeve,test,stop,0.017
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8966930,Reeve,test,stop,0.02
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8966937,Reeve,test,stop,0.0243
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8967047,Reeve,dev,stop,0.0263
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8967060,Reeve,dev,stop,0.0241
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8967147,Reeve,dev,stop,0.0207
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8967281,Reeve,test,stop,0.0074
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8967282,Reeve,test,stop,0.0122
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8967290,Reeve,test,stop,0.0105
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8967333,Reeve,test,stop,0.0311
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8967345,Reeve,test,stop,0.0041
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992328,Butler,test,stop,0.0029
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992379,Butler,test,stop,0.0049
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992408,Butler,test,stop,0.0032
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992489,Butler,test,stop,0.0031
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992582,Butler,dev,stop,0.0
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992601,Butler,dev,stop,0.0013
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992612,Butler,dev,stop,0.0043
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992643,Butler,test,stop,0.0234
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992644,Butler,test,stop,0.0447
+surya-ocr25,datalab-to/surya-ocr-2.5,Datalab modified OpenRAIL-M,8992647,Butler,test,stop,0.0224
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8966790,Reeve,test,stop,0.011
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8966802,Reeve,test,stop,0.0219
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8966930,Reeve,test,stop,0.0275
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8966937,Reeve,test,stop,0.0261
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8967047,Reeve,dev,stop,0.0322
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8967060,Reeve,dev,stop,0.0301
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8967147,Reeve,dev,stop,0.0217
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8967281,Reeve,test,stop,0.0114
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8967282,Reeve,test,stop,0.0207
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8967290,Reeve,test,stop,0.0052
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8967333,Reeve,test,stop,0.0248
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8967345,Reeve,test,stop,0.0367
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992328,Butler,test,stop,0.0038
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992379,Butler,test,stop,0.0052
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992408,Butler,test,stop,0.0053
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992489,Butler,test,stop,0.0026
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992582,Butler,dev,stop,0.0
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992601,Butler,dev,stop,0.0013
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992612,Butler,dev,stop,0.0128
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992643,Butler,test,stop,0.0195
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992644,Butler,test,stop,0.0247
+lighton-ocr3-0.8b,lightonai/LightOnOCR-3-0.8B,apache-2.0,8992647,Butler,test,stop,0.0252
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8966790,Reeve,test,stop,0.0103
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8966802,Reeve,test,stop,0.0211
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8966930,Reeve,test,stop,0.019
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8966937,Reeve,test,stop,0.0208
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8967047,Reeve,dev,stop,0.0311
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8967060,Reeve,dev,stop,0.0219
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8967147,Reeve,dev,stop,0.0157
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8967281,Reeve,test,stop,0.0128
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8967282,Reeve,test,stop,0.0166
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8967290,Reeve,test,stop,0.0052
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8967333,Reeve,test,stop,0.0
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8967345,Reeve,test,stop,0.0082
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992328,Butler,test,stop,0.0092
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992379,Butler,test,stop,0.0042
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992408,Butler,test,stop,0.0053
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992489,Butler,test,stop,0.0022
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992582,Butler,dev,stop,0.0
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992601,Butler,dev,stop,0.0013
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992612,Butler,dev,stop,0.0097
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992643,Butler,test,stop,0.0688
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992644,Butler,test,stop,0.0139
+lighton-ocr2,lightonai/LightOnOCR-2-1B,apache-2.0,8992647,Butler,test,stop,0.0224
+glm-ocr,zai-org/GLM-OCR,mit,8966790,Reeve,test,stop,0.0237
+glm-ocr,zai-org/GLM-OCR,mit,8966802,Reeve,test,stop,0.0164
+glm-ocr,zai-org/GLM-OCR,mit,8966930,Reeve,test,stop,0.0215
+glm-ocr,zai-org/GLM-OCR,mit,8966937,Reeve,test,stop,0.0238
+glm-ocr,zai-org/GLM-OCR,mit,8967047,Reeve,dev,stop,0.0317
+glm-ocr,zai-org/GLM-OCR,mit,8967060,Reeve,dev,stop,0.0333
+glm-ocr,zai-org/GLM-OCR,mit,8967147,Reeve,dev,stop,0.0204
+glm-ocr,zai-org/GLM-OCR,mit,8967281,Reeve,test,stop,0.0091
+glm-ocr,zai-org/GLM-OCR,mit,8967282,Reeve,test,stop,0.0156
+glm-ocr,zai-org/GLM-OCR,mit,8967290,Reeve,test,stop,0.0354
+glm-ocr,zai-org/GLM-OCR,mit,8967333,Reeve,test,stop,0.0
+glm-ocr,zai-org/GLM-OCR,mit,8967345,Reeve,test,stop,0.0245
+glm-ocr,zai-org/GLM-OCR,mit,8992328,Butler,test,stop,0.0092
+glm-ocr,zai-org/GLM-OCR,mit,8992379,Butler,test,stop,0.0185
+glm-ocr,zai-org/GLM-OCR,mit,8992408,Butler,test,stop,0.0171
+glm-ocr,zai-org/GLM-OCR,mit,8992489,Butler,test,stop,0.029
+glm-ocr,zai-org/GLM-OCR,mit,8992582,Butler,dev,stop,0.0055
+glm-ocr,zai-org/GLM-OCR,mit,8992601,Butler,dev,stop,0.0081
+glm-ocr,zai-org/GLM-OCR,mit,8992612,Butler,dev,stop,0.0171
+glm-ocr,zai-org/GLM-OCR,mit,8992643,Butler,test,stop,0.1584
+glm-ocr,zai-org/GLM-OCR,mit,8992644,Butler,test,stop,0.0324
+glm-ocr,zai-org/GLM-OCR,mit,8992647,Butler,test,stop,0.0252
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8966790,Reeve,test,stop,0.0268
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8966802,Reeve,test,stop,0.026
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8966930,Reeve,test,stop,0.02
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8966937,Reeve,test,stop,0.0243
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8967047,Reeve,dev,stop,0.036
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8967060,Reeve,dev,stop,0.0351
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8967147,Reeve,dev,stop,0.0157
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8967281,Reeve,test,stop,0.0109
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8967282,Reeve,test,stop,0.0207
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8967290,Reeve,test,stop,0.0354
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8967333,Reeve,test,stop,0.0
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8967345,Reeve,test,stop,0.0245
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992328,Butler,test,stop,0.0092
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992379,Butler,test,stop,0.0185
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992408,Butler,test,stop,0.0182
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992489,Butler,test,stop,0.0026
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992582,Butler,dev,stop,0.0014
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992601,Butler,dev,stop,0.0081
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992612,Butler,dev,stop,0.003
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992643,Butler,test,stop,0.0013
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992644,Butler,test,stop,0.0185
+qwen35-9b,Qwen/Qwen3.5-9B,apache-2.0,8992647,Butler,test,stop,0.0126
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8966790,Reeve,test,stop,0.0181
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8966802,Reeve,test,stop,0.014
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8966930,Reeve,test,stop,0.0215
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8966937,Reeve,test,stop,0.0246
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8967047,Reeve,dev,stop,0.034
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8967060,Reeve,dev,stop,0.0296
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8967147,Reeve,dev,stop,0.0227
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8967281,Reeve,test,stop,0.013
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8967282,Reeve,test,stop,0.0213
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8967290,Reeve,test,stop,0.0052
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8967333,Reeve,test,stop,0.0031
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8967345,Reeve,test,stop,0.0286
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992328,Butler,test,stop,0.0022
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992379,Butler,test,stop,0.0045
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992408,Butler,test,stop,0.0043
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992489,Butler,test,stop,0.0022
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992582,Butler,dev,stop,0.0
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992601,Butler,dev,stop,0.0013
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992612,Butler,dev,stop,0.0055
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992643,Butler,test,stop,0.013
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992644,Butler,test,stop,0.037
+qianfan-ocr,baidu/Qianfan-OCR,apache-2.0,8992647,Butler,test,stop,0.0224
+unlimited-ocr,baidu/Unlimited-OCR,mit,8966790,Reeve,test,stop,0.011
+unlimited-ocr,baidu/Unlimited-OCR,mit,8966802,Reeve,test,stop,0.0193
+unlimited-ocr,baidu/Unlimited-OCR,mit,8966930,Reeve,test,stop,0.02
+unlimited-ocr,baidu/Unlimited-OCR,mit,8966937,Reeve,test,stop,0.0246
+unlimited-ocr,baidu/Unlimited-OCR,mit,8967047,Reeve,dev,stop,0.0266
+unlimited-ocr,baidu/Unlimited-OCR,mit,8967060,Reeve,dev,stop,0.0205
+unlimited-ocr,baidu/Unlimited-OCR,mit,8967147,Reeve,dev,stop,0.0204
+unlimited-ocr,baidu/Unlimited-OCR,mit,8967281,Reeve,test,stop,0.0107
+unlimited-ocr,baidu/Unlimited-OCR,mit,8967282,Reeve,test,stop,0.0179
+unlimited-ocr,baidu/Unlimited-OCR,mit,8967290,Reeve,test,stop,0.0052
+unlimited-ocr,baidu/Unlimited-OCR,mit,8967333,Reeve,test,stop,0.0
+unlimited-ocr,baidu/Unlimited-OCR,mit,8967345,Reeve,test,stop,0.0122
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992328,Butler,test,stop,0.0025
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992379,Butler,test,stop,0.0045
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992408,Butler,test,stop,0.0037
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992489,Butler,test,stop,0.0026
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992582,Butler,dev,stop,0.0
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992601,Butler,dev,stop,0.0013
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992612,Butler,dev,stop,0.0061
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992643,Butler,test,stop,0.0117
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992644,Butler,test,stop,0.0324
+unlimited-ocr,baidu/Unlimited-OCR,mit,8992647,Butler,test,stop,0.0182
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8966790,Reeve,test,stop,0.0126
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8966802,Reeve,test,stop,0.0219
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8966930,Reeve,test,stop,0.023
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8966937,Reeve,test,stop,0.0284
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8967047,Reeve,dev,stop,0.0306
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8967060,Reeve,dev,stop,0.0305
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8967147,Reeve,dev,stop,0.0232
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8967281,Reeve,test,stop,0.0149
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8967282,Reeve,test,stop,0.0175
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8967290,Reeve,test,stop,0.0079
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8967333,Reeve,test,stop,0.0031
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8967345,Reeve,test,stop,0.0082
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992328,Butler,test,stop,0.0035
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992379,Butler,test,stop,0.0059
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992408,Butler,test,stop,0.0021
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992489,Butler,test,stop,0.0022
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992582,Butler,dev,stop,0.001
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992601,Butler,dev,stop,0.0013
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992612,Butler,dev,stop,0.0055
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992643,Butler,test,stop,0.0182
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992644,Butler,test,stop,0.0277
+nemotron-parse-35,nvidia/Nemotron-3.5-Parse,openmdw-1.1,8992647,Butler,test,stop,0.0196
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8966790,Reeve,test,stop,0.0315
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8966802,Reeve,test,stop,0.0436
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8966930,Reeve,test,stop,0.275
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8966937,Reeve,test,stop,0.2001
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8967047,Reeve,dev,stop,0.0421
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8967060,Reeve,dev,stop,0.041
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8967147,Reeve,dev,stop,0.0274
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8967281,Reeve,test,stop,0.0186
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8967282,Reeve,test,stop,0.0292
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8967290,Reeve,test,stop,0.0381
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8967333,Reeve,test,stop,0.0093
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8967345,Reeve,test,stop,0.0041
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992328,Butler,test,stop,0.2133
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992379,Butler,test,stop,0.038
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992408,Butler,test,stop,0.0214
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992489,Butler,test,stop,0.0154
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992582,Butler,dev,stop,0.0086
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992601,Butler,dev,stop,0.0101
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992612,Butler,dev,stop,0.0627
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992643,Butler,test,stop,0.0273
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992644,Butler,test,stop,0.0663
+deepseek-ocr,deepseek-ai/DeepSeek-OCR,mit,8992647,Butler,test,stop,0.0392
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8966790,Reeve,test,stop,0.0339
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8966802,Reeve,test,stop,0.0372
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8966930,Reeve,test,stop,0.0435
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8966937,Reeve,test,stop,0.0329
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8967047,Reeve,dev,stop,0.0411
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8967060,Reeve,dev,stop,0.0433
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8967147,Reeve,dev,stop,0.0284
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8967281,Reeve,test,stop,0.0151
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8967282,Reeve,test,stop,0.0256
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8967290,Reeve,test,stop,0.0367
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8967333,Reeve,test,stop,0.0
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8967345,Reeve,test,stop,0.0082
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992328,Butler,test,stop,0.2098
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992379,Butler,test,stop,0.0334
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992408,Butler,test,stop,0.0187
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992489,Butler,test,stop,0.0149
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992582,Butler,dev,stop,0.0055
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992601,Butler,dev,stop,0.0081
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992612,Butler,dev,stop,0.0572
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992643,Butler,test,stop,0.0416
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992644,Butler,test,stop,0.0555
+deepseek-ocr2,deepseek-ai/DeepSeek-OCR-2,apache-2.0,8992647,Butler,test,stop,0.042
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8966790,Reeve,test,,0.8178
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8966802,Reeve,test,,0.0331
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8966930,Reeve,test,,0.0215
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8966937,Reeve,test,,0.0352
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8967047,Reeve,dev,,0.0368
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8967060,Reeve,dev,,0.0246
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8967147,Reeve,dev,,0.0381
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8967281,Reeve,test,,0.0331
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8967282,Reeve,test,,0.023
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8967290,Reeve,test,,0.0052
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8967333,Reeve,test,,0.0559
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8967345,Reeve,test,,0.0367
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992328,Butler,test,,0.0105
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992379,Butler,test,,0.0164
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992408,Butler,test,,0.0342
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992489,Butler,test,,0.0127
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992582,Butler,dev,,0.0055
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992601,Butler,dev,,0.0091
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992612,Butler,dev,,0.0183
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992643,Butler,test,,0.0364
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992644,Butler,test,,0.0493
+indra-ocr,datalab-to/indra-ocr,Datalab modified OpenRAIL-M,8992647,Butler,test,,0.0504
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8966790,Reeve,test,,0.1128
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8966802,Reeve,test,,0.1185
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8966930,Reeve,test,,0.061
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8966937,Reeve,test,,0.036
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8967047,Reeve,dev,,0.0722
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8967060,Reeve,dev,,0.0506
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8967147,Reeve,dev,,0.0339
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8967281,Reeve,test,,0.0143
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8967282,Reeve,test,,0.0284
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8967290,Reeve,test,,0.4449
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8967333,Reeve,test,,0.0186
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8967345,Reeve,test,,0.0122
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992328,Butler,test,,0.0035
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992379,Butler,test,,0.0129
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992408,Butler,test,,0.0123
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992489,Butler,test,,0.0066
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992582,Butler,dev,,0.0045
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992601,Butler,dev,,0.0101
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992612,Butler,dev,,0.011
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992643,Butler,test,,0.0338
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992644,Butler,test,,0.0878
+tesseract,tesseract-5,apache-2.0 (Tesseract 5),8992647,Butler,test,,0.0378
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8966790,Reeve,test,stop,0.0308
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8966802,Reeve,test,length,0.9939
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8966930,Reeve,test,stop,0.099
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8966937,Reeve,test,stop,0.0722
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8967047,Reeve,dev,stop,0.0993
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8967060,Reeve,dev,stop,0.0556
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8967147,Reeve,dev,stop,0.0705
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8967281,Reeve,test,stop,0.057
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8967282,Reeve,test,stop,0.0518
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8967290,Reeve,test,stop,0.0171
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8967333,Reeve,test,stop,0.0062
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8967345,Reeve,test,stop,0.0204
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992328,Butler,test,stop,0.0073
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992379,Butler,test,stop,0.0108
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992408,Butler,test,stop,0.0053
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992489,Butler,test,stop,0.0097
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992582,Butler,dev,stop,0.0052
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992601,Butler,dev,stop,0.004
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992612,Butler,dev,stop,0.0073
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992643,Butler,test,stop,0.0714
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992644,Butler,test,stop,0.1818
+smoldocling,ds4sd/SmolDocling-256M-preview,cdla-permissive-2.0,8992647,Butler,test,stop,0.0266
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8966790,Reeve,test,,0.0118
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8966802,Reeve,test,,0.017
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8966930,Reeve,test,,0.019
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8966937,Reeve,test,,0.1745
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8967047,Reeve,dev,,0.047
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8967060,Reeve,dev,,0.0191
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8967147,Reeve,dev,,0.0329
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8967281,Reeve,test,,0.0281
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8967282,Reeve,test,,0.0126
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8967290,Reeve,test,,0.0052
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8967333,Reeve,test,,0.1615
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8967345,Reeve,test,,0.2898
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992328,Butler,test,,0.0016
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992379,Butler,test,,0.0059
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992408,Butler,test,,0.0043
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992489,Butler,test,,0.0189
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992582,Butler,dev,,0.0
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992601,Butler,dev,,0.0013
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992612,Butler,dev,,0.0049
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992643,Butler,test,,0.0558
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992644,Butler,test,,0.0277
+falcon-ocr,tiiuae/Falcon-OCR,apache-2.0,8992647,Butler,test,,0.0238
