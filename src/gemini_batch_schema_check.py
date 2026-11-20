@@ -1,6 +1,7 @@
 """Does the Gemini Batch API enforce response_json_schema? A small, reproducible check.
 
-    python src/gemini_batch_schema_check.py            # submit, wait, compare, write the report
+    python src/gemini_batch_schema_check.py                          # response_json_schema (default)
+    python src/gemini_batch_schema_check.py --field response_schema  # the older field, same schema
 
 Background (gemini_backend.py, 2026-11-19): in run ..._gemini-4-carbon_dev_p4_r1 the Batch API
 answered 44 of 48 requests with a bare JSON array instead of {"mentions": [...]}, while the same
@@ -10,11 +11,17 @@ inline batch, and checks every answer against the schema in code (gemini_backend
 It also records the prompt token count of each answer: if the batch count is lower by about the
 size of the schema, the schema was probably not passed to the model.
 
-Dev pages only. Writes results/gemini_batch_schema_check/<stamp>/ (requests, raw answers, REPORT.md).
+--field response_schema sends the same schema through the older `response_schema` field (an OpenAPI
+subset, so `additionalProperties` is left out; it is listed in the report). If the batch answers follow
+the schema with the older field but not with the newer one, only the newer field is dropped in batch mode.
+
+Dev pages only. Writes results/gemini_batch_schema_check/<stamp>[_<field>]/ (requests, raw answers, REPORT.md).
 Cost: about $0.15 (prices in gemini_backend.PRICES).
 """
 from __future__ import annotations
 
+import argparse
+import copy
 import json
 import os
 import time
@@ -32,9 +39,21 @@ PAGES = 3
 OUT = ROOT / "results" / "gemini_batch_schema_check"
 
 
+def strip_additional(sch):
+    """response_schema (OpenAPI subset) has no additionalProperties: remove it everywhere."""
+    if isinstance(sch, dict):
+        return {k: strip_additional(v) for k, v in sch.items() if k != "additionalProperties"}
+    if isinstance(sch, list):
+        return [strip_additional(v) for v in sch]
+    return sch
+
+
 def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--field", default="response_json_schema", choices=["response_json_schema", "response_schema"])
+    field = ap.parse_args().field
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
-    out = OUT / stamp
+    out = OUT / (stamp + ("" if field == "response_json_schema" else "_" + field))
     out.mkdir(parents=True)
     task, schema = CONDITIONS["G1"]
     pages = pd.read_csv(DATA / "sample_split.csv").query("split == 'dev'").head(PAGES)
@@ -44,6 +63,9 @@ def main() -> None:
         reqs.append({"custom_id": f"{p.PageID}__expert__G1", "page_id": int(p.PageID), "split": "dev",
                      "version": "expert", "condition": "G1",
                      "params": gb.build_params(SYSTEM, task.format(numbered_text=number_lines(text)), schema)})
+        if field == "response_schema":
+            cfg = reqs[-1]["params"]["config"]
+            cfg["response_schema"] = strip_additional(copy.deepcopy(cfg.pop("response_json_schema")))
     (out / "requests.json").write_text(json.dumps(reqs, indent=1, ensure_ascii=False), encoding="utf-8")
     client = gb.make_client(os.environ["GEMINI_API_KEY"])
     info = gb.model_info(client, MODEL)
@@ -81,7 +103,9 @@ def main() -> None:
              f"{gb.sdk_version()}, endpoint {gb.API_BASE} {gb.API_VERSION}. Batch submitted {submitted}, "
              f"final state {gb.batch_state(job)}.",
              "Identical requests (frozen G1 prompt, expert text, dev pages; `requests.json`) sent synchronously "
-             "and as one inline batch. Every answer is checked against the schema in code.", "",
+             "and as one inline batch. Every answer is checked against the schema in code.",
+             f"Schema sent in the field `{field}`" + (" (with `additionalProperties` removed: the field does not "
+             "take it)." if field == "response_schema" else "."), "",
              table.to_markdown(index=False), "",
              f"Total cost (computed from token counts): ${table.usd.sum():.3f}."]
     (out / "REPORT.md").write_text("\n".join(lines), encoding="utf-8")

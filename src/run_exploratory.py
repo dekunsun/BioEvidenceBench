@@ -342,7 +342,7 @@ def score_all() -> None:
     posd = pd.DataFrame(pos_rows)
     posd.to_csv(out / "position_scores.csv", index=False)
     lines = ["# Exploratory conditions: LLM repair, vision only, vision + OCR (test pages)", "",
-             "Decided after unsealing (DEVIATIONS.md); Claude Opus 5.5, effort medium, frozen field definitions. "
+             "Decided after unsealing (DEVIATIONS.md); Claude Opus 5.5 (effort medium) unless another model is named in brackets (Gemini: sync, schema enforced, thinking at the model default); frozen field definitions. "
              "`bag` = per page and field, multiset of normalised values against the gold texts (works without "
              "positions, so the image-only condition can be compared); ALL_PRIMARY.", "",
              bag.pivot_table(index="condition", columns="book", values="bag_F1").to_markdown(), "",

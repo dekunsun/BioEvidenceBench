@@ -62,3 +62,27 @@ context, or send the xlsx); placing a second labeller's mention when its text oc
 page (marked as inferred); Excel on a Mac not reading UTF-8 CSV (send xlsx); legacy OCR decoded
 with the wrong encoding (`â`); a batch API refusing a dot in a request id; GBIF website codes
 differing from API keys.
+
+## E. When the platform fails silently
+
+Twice, across two projects, a model API reported a normal finish while something had gone wrong on
+the provider's side. Both times the failure looked like the **model's behaviour**, and both times
+only a control on the **same request** sent another way exposed it.
+
+| What happened | How it looked | How it was found |
+| --- | --- | --- |
+| **BioEvidenceBench, Gemini Batch API (2026-11-19, reproduced 2026-11-20).** The JSON schema was not enforced in batch mode: 44 of 48 dev answers were a bare array instead of `{"mentions": [...]}`, 3 others another wrong shape. Finish reason `STOP`, job "succeeded", no error | A model that ignores the output format | The same 3 requests sent synchronously all followed the schema; in batch all 3 were bare arrays, with prompt token counts a constant 167 lower on every page, which fits the schema not reaching the model (an inference: Google's internals are not visible). [Check](../results/gemini_batch_schema_check/) |
+| **LiveLab, Gemini Live Extended Thinking on the free tier (2026-09-19).** Over a six-hour run the share of items with no tool call rose 1/12 → 9/12. The server ended each turn normally (`generation_complete`, `turn_complete`); the model said *"I apologize, but a system error occurred."* The error went to the model, not to the client | A model that declines to answer, which under the first scoring would have supported the study's own conclusion | The standard `gemini-3.8-live`, same item, same key, same minute, answered in 1.3 s. A token-quota hypothesis was tested and refuted (a request cut to a sixth failed the same way); the mechanism was never found. With billing on, the missing data took 20 minutes and $0.20 ([LiveLab](https://github.com/dekunsun/livelab), `docs/probe_preregistration.md`, deviation 7) |
+| **LiveLab, a cap of our own (contrast).** Claude answers were cut at a 1,024-token output cap; 128 answers lost their later fields | Missing fields | The API did report it (`stop_reason = "max_tokens"`); the runner did not save it. Silent on our side, not the provider's |
+
+Both provider-side failures happened on a cheaper or secondary path (batch at half price, the free
+tier); the standard paid synchronous path, sent the same request, worked and raised its errors.
+That is two cases, not a rule.
+
+| Lesson | What to do |
+| --- | --- |
+| "Success" from an API is not evidence the request was processed as sent | Save the full request, the finish reason and the usage of every call; check the finish reason |
+| A platform failure can masquerade as model behaviour, and may even favour your hypothesis | Validate every answer in code (`check_shape`); count non-answers and malformed answers separately, never as the model's choice; report coverage beside every rate |
+| The decisive test is a control on the identical request | When a model behaves oddly, resend the same request by another path (sync instead of batch, the standard model instead of the variant, paid instead of free) before interpreting it |
+| The call path is part of the configuration | Freeze the call mode with the model; record SDK version, endpoint and tier; do not mix modes within one comparison |
+| Diagnostics can disturb what they measure | In LiveLab, a second test started four minutes after the first ran inside the first one's failure window; space diagnostics out and change one thing at a time |
