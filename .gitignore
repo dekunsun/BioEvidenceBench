@@ -16,3 +16,4 @@ adept_repro/vendor/
 adept_repro/.assets/
 adept_repro/outputs/logs/*.log
 results/vision_boxes/*.png
+results/*.log

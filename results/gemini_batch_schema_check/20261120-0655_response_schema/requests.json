@@ -1,0 +1,188 @@
+[
+ {
+  "custom_id": "8992582__expert__G1",
+  "page_id": 8992582,
+  "split": "dev",
+  "version": "expert",
+  "condition": "G1",
+  "params": {
+   "contents": [
+    {
+     "role": "user",
+     "parts": [
+      {
+       "text": "Extract all mentions from the page below. For each mention give its field, the number of the line where it appears, and a quote: the mention copied character for character from that line, exactly as written there, including any errors, spacing and punctuation inside it. The quote is checked automatically against the line; a quote that is not an exact copy counts as unsupported. If a mention is broken across two lines, give the line where it starts and quote the whole mention, writing the line break as one space and keeping any hyphen that is printed there. Never include the line labels (such as \"L07|\") in a quote.\n\n<page>\nL01| THE JACKDAW\nL02| \nL03| 163\nL04| \nL05| The upper parts of the male Jackdaw are glossy black with purple and green\nL06| reﬂections; the ear-coverts, nape and sides of neck ashy-grey inclining to white;\nL07| under parts dull black; bill and feet black, iris greyish-white. The female is\nL08| slightly smaller than the male and has a slightly smaller and duller grey patch\nL09| on the nape; her bill is also a triﬂe shorter. The young are dull black, the\nL10| grey patch very feebly indicated.\nL11| \nL12| There are few places where the Jackdaw cannot ﬁnd a home: coming from\nL13| the Continent to England, this bird may be seen in numbers ﬂying in and out of\nL14| holes in the cliﬀs of Dover, its incessant cries chack, chack, being a welcome sound;\nL15| so also in country or town, in ruined castle or modern palace the Jackdaw is\nL16| everywhere to be seen. I must confess that I like the Jackdaw: he is a bird\nL17| with considerable sense of humour, and (in spite of much persecution) he seems\nL18| to bear no malice. The late Lord Lilford, however, could ﬁnd nothing good to\nL19| say of him: the following being some of his remarks respecting the Jackdaw in\nL20| his “Birds of Northamptonshire”:—“This amusing but most pernicious bird is\nL21| extremely common in our county, and probably only too well-known to most of\nL22| our readers. In the hollow trees about the park and pleasure-grounds of Lilford\nL23| they used to swarm at the breeding-season, till we found it absolutely necessary\nL24| to wage war upon them in the interests of our garden, poultry, and game, to say\nL25| nothing of those of the Barn Owl, a species for which we have always entertained\nL26| a sincere respect and aﬀection. The Daws not only carried oﬀ numbers of young\nL27| chickens, pheasants, and partridges, and committed havoc among our green-peas\nL28| and other vegetables, but in several instances, to our knowledge, took possession\nL29| of the Owls’ nests, destroyed their eggs, and piled up their own nests in the cavities\nL30| selected by the harmless and most useful bird of night; occasionally, however, the\nL31| tables are turned, as we have previously mentioned when treating of the Barn Owl.\nL32| For these misdemeanours we have for some years past made a practice of shooting\nL33| the old Jackdaws and destroying their nests and eggs wherever we found them,\nL34| with the result of decided beneﬁt to ourselves and our neighbours. The Jackdaw\nL35| disputes the palm for noisy and obtrusive impudence with the House-Sparrow, and\nL36| does not, to our knowledge, compensate us in any way for his misdoings. That\nL37| the Daw fulﬁls his duties in the great scheme of nature I do not deny, but must\nL38| confess that I am unable to discover what they may be.”\nL39| \nL40| Seebohm, however, although he admits that it levies blackmail on the Gulls,\nL41| says of the Jackdaw:—“It is quite as harmless a bird as the Rook, and at certain\nL42| seasons of the year it is very useful. You have but to watch its actions in the\nL43| ﬁelds to be convinced of this.”\nL44| \nL45| The Jackdaw’s ﬂight is like himself, strong, but somewhat purposeless; he\n</page>"
+      }
+     ]
+    }
+   ],
+   "config": {
+    "system_instruction": "You extract biodiversity occurrence information from one page of a historical natural-history book (19th or early 20th century). The page is given as numbered lines. The text may be a transcription or raw OCR and may contain recognition errors, odd spacing, broken words and stray characters. Never correct, normalise, expand or modernise anything: report what is written on the page.\n\nExtract every MENTION of these six fields. A mention is one occurrence in the text; if the same name appears three times, report it three times. Report mentions in the order they appear. If the page has none, return an empty list.\n\nEdges of a mention, for every field:\n- Leave out brackets, quotation marks, commas and semicolons around it: \"(Mus. Taylor.)\" gives \"Mus. Taylor\".\n- A full stop at the end is kept only when the word before it is shortened, because it then belongs to the abbreviation (\"Linn.\", \"Pfr.\"). After a word printed in full it is left out: \"(Mus. Cuming.)\" gives \"Mus. Cuming\"; \"Hab. Brazil.\" gives \"Brazil\".\n- A name broken across two lines is one mention: report the whole name, never only its first part.\n- Headings, for every field: include the heading that opens a species or genus account (\"BULIMUS CASTUS.\" at the start of its description, \"THE SKY-LARK.\" above the account of that bird) and names in a real figure or plate caption that says what is shown. Exclude text that only helps to navigate the page: running heads repeated at the top of pages (such as the genus name or chapter title beside a page number), bare plate labels (\"PLATE XLV.\"), page numbers and signatures.\n\ntaxon: a scientific (Latin) name of an organism.\n- Include binomials and trinomials (\"Accentor modularis\"), names of a single word at any rank used as the name of a taxon (\"Bulimus\", \"Turdidae\"), and an abbreviated genus followed by an epithet (\"A. modularis\"). Names in capitals or small capitals count (\"BULIMUS CASTUS\").\n- Include the Latin plural of a genus name used for the members of the genus (\"these small Bulimi\" gives \"Bulimi\"), and a genus name given in brackets inside a citation (\"PFEIFFER, (Glandina,) Pro. Zool. Soc.\" gives \"Glandina\").\n- The authority after a name is not part of the taxon: for \"Accentor modularis (Linn.)\" the taxon is \"Accentor modularis\" and \"Linn.\" is a separate person mention.\n- Exclude a bare abbreviated genus that only opens a Latin description (\"Bul. testa ...\").\n- Vernacular names are never taxon; they are the separate field vernacular.\n\nvernacular: a common-language name that identifies a particular kind of organism (a species or a named group).\n- Examples: \"Hedge-Sparrow\", \"Sky-Lark\", \"Lesser Redpoll\"; \"the Buntings\" gives \"Buntings\"; \"THE CHASTE BULIMUS\" gives \"CHASTE BULIMUS\" (no leading article).\n- Capital or lower-case makes no difference, and any kind of organism counts: \"pheasants\", \"grouse\", \"Owls\", \"hares\".\n- Exclude generic words that name no particular kind (\"bird\", \"shell\", \"species\", \"the male\", \"the young\") and words for an age, a sex or a stage rather than a kind (\"lambs\", \"chicks\", \"the hen\").\n\nlocality: a named real geographic place, in whatever role it appears.\n- Include habitat, distribution, collection and observation statements and any other mention of a place. In \"Hab. Central America?\" the mention is \"Central America\".\n- One place or several: place names separated by commas, each later one being the wider region that holds the earlier one, are ONE mention (\"Isle of Luzon, Philippine Islands\"; \"Humeerpore, Bundelkhund, India\"); in a \"Hab.\" line assume this order and never check or correct the geography. Names joined by \"and\" or \"or\", separated by a semicolon, or listed side by side as places of the same kind are separate mentions (\"Cornwall and Devon\" is two; \"China, Persia, Egypt\" is three).\n- Named regions used as proper names count: \"the Continent\" gives \"Continent\"; \"Old World\".\n- Words for a natural feature or a compass part, joined directly to the name, stay in the mention: \"valley of the Amoor\", \"north coast of Norfolk\", \"South-east Mongolia\", \"mouth of the Thames\", \"interior of Brazil\", \"cliffs of Dover\". Buildings and grounds do not: \"the park and gardens of Holkham\" gives \"Holkham\".\n- Words that place something relative to the place, and plain prepositions, stay out: \"near Dover\" gives \"Dover\"; \"ten miles north of York\" gives \"York\"; \"off the coast of Peru\" gives \"coast of Peru\"; \"throughout Europe\" gives \"Europe\".\n- Exclude habitat types without a place name (\"woods\", \"on rocks\"), places of publication inside bibliographic citations, places that are part of an institution's name, adjectives such as \"British\", places in titles or running heads, places in the title of a cited work (\"his 'Birds of Norfolk'\" gives no locality), and common nouns that point back to a place (\"the island\").\n\ndate: the date of a particular event (a specimen collected, shot, captured or seen, a nest found, an arrival recorded).\n- Include the whole date expression as printed: \"3rd May, 1890\", \"May 1890\", \"1890\", \"1880-85\". A month without a year counts when it belongs to a particular event: \"one was collected in April\" gives \"April\". A day number tied to something observed marks an event: \"the immigration from the 12th to the 30th of October\" gives \"12th to the 30th of October\".\n- Exclude publication dates and years in citations (\"Pro. Zool. Soc., 1846\", \"published in April 1890\"), general behaviour that is not one event (\"arrives in April\", \"breeds in spring\", \"most numerous in October and November\"), ages, durations and page numbers.\n\nperson: any named person, in whatever role: collector or observer, cited author, naming authority (abbreviated or not).\n- Examples: \"shot by Mr. J. Smith\" gives \"J. Smith\"; \"PFEIFFER, Pro. Zool. Soc.\" gives \"PFEIFFER\"; \"Giusti's (1997)\" gives \"Giusti\"; \"(Linn.)\" gives \"Linn.\".\n- Keep initials. Drop every title, rank or form of address (\"Mr.\", \"Dr.\", \"Capt.\", \"Lord\", \"Sir\", \"Herr\", \"Rev.\", \"Prof.\"): \"Lord Lilford\" gives \"Lilford\".\n- Label a name by its role at that spot: \"ADAMS, MS.\" gives the person \"ADAMS\", while \"(Mus. Adams.)\" is an institution and no person.\n- Exclude a person's name that is part of a taxon name (\"Cumingii\") or of an institution name (\"Cuming\" in \"Mus. Cuming\").\n\ninstitution: a named museum, herbarium, private collection, society, university or expedition.\n- Report the whole name as printed, abbreviations included: \"Mus. Cuming\", \"Mus. Dennison\", \"British Museum\".\n- Exclude journal titles in citations (\"Pro. Zool. Soc.\") and generic words without a name (\"the museum\").",
+    "response_mime_type": "application/json",
+    "max_output_tokens": 32768,
+    "response_schema": {
+     "type": "object",
+     "properties": {
+      "mentions": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "field": {
+          "type": "string",
+          "enum": [
+           "taxon",
+           "vernacular",
+           "person",
+           "locality",
+           "institution",
+           "date"
+          ]
+         },
+         "line": {
+          "type": "integer"
+         },
+         "quote": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "field",
+         "line",
+         "quote"
+        ]
+       }
+      }
+     },
+     "required": [
+      "mentions"
+     ]
+    }
+   }
+  }
+ },
+ {
+  "custom_id": "8992601__expert__G1",
+  "page_id": 8992601,
+  "split": "dev",
+  "version": "expert",
+  "condition": "G1",
+  "params": {
+   "contents": [
+    {
+     "role": "user",
+     "parts": [
+      {
+       "text": "Extract all mentions from the page below. For each mention give its field, the number of the line where it appears, and a quote: the mention copied character for character from that line, exactly as written there, including any errors, spacing and punctuation inside it. The quote is checked automatically against the line; a quote that is not an exact copy counts as unsupported. If a mention is broken across two lines, give the line where it starts and quote the whole mention, writing the line break as one space and keeping any hyphen that is printed there. Never include the line labels (such as \"L07|\") in a quote.\n\n<page>\nL01| 176\nL02| \nL03| THE HOODED CROW\nL04| \nL05| birds, nor indeed, in some cases, old ones either, being safe from its prying eyes\nL06| and carnivorous propensities. There are, however, one or two instances on record\nL07| of its having remained to nest in this neighbourhood, but not of late years.”\nL08| \nL09| Mr. Stevenson also quotes the following from St. John’s “Natural History\nL10| and Sport in Moray,” p. 59:—“It kills newly-born lambs, picking out the eyes\nL11| and tongue while the poor creature is still alive. It preys on young grouse,\nL12| partridges, hares, etc., and is very destructive to eggs of all sorts. In certain\nL13| feeding spots in the woods I have seen the remains of eggs of the most extra‐\nL14| ordinary variety and number. No sooner does a wild duck, pheasant, or any bird\nL15| leave its nest, than the Hooded Crow is on the look-out, and I have no doubt\nL16| that a single pair often destroys many hundred eggs in the course of a season.\nL17| All birds seem aware of this, and Peewits, Gulls, Redshanks, etc., attack most\nL18| furiously any Crow which they see hunting near their nests. The ‘hoody’ is\nL19| also very fond of young ducks, and destroys great numbers. In the mountains\nL20| it is bold enough to make prize of the eggs of the eagle, peregrine falcon, or\nL21| osprey, if the parent birds happen to be driven oﬀ their nests.”\nL22| \nL23| In their “Notes from Redcar” (“Zoologist,” 1893, p. 6), speaking of the immi‐\nL24| gration of Hoodies from the 12th to the 30th of October, Messrs. T. H. Nelson,\nL25| and F. Pilling observe:—“The Hoodies are generally noticed in largest numbers\nL26| during thick weather in October and November.” According to Seebohm this\nL27| species migrates by day, and Gätke says:—“In the autumn, and with favourable\nL28| weather, the migration commences at about eight o’clock in the morning, with\nL29| ﬂocks of from ﬁfty to one hundred individuals; the movement soon passes into a\nL30| stream of ﬂocks, consisting of from a hundred to at least ﬁve hundred examples,\nL31| and continues in this manner, without gaps of any kind, until two o’clock in the\nL32| afternoon. We can scarcely, in a case of this kind, assume that we are dealing\nL33| with a stream or route of migration which just chances to cross Heligoland, for\nL34| the movement proceeds in equal magnitude from east to west as far as the eye\nL35| can reach. More than this, on days when powerful migrations of this kind take\nL36| place, the migration-front or column has been seen from boats eight miles north\nL37| of the island to stretch farther to the north, as far as the limits of vision extend;\nL38| while on the south it reached, simultaneously and in equal magnitude, up the\nL39| Weser, at least as far as Bremerhaven, as was determined from the steamer which\nL40| regularly plies between this island and the latter place. We thus get a migration\nL41| column of at least thirty-six geographical miles in breadth.”\nL42| \nL43| Herr Gätke proceeds to make many other observations of considerable interest,\nL44| which it would be well worth our readers’ while to peruse, but for which we\nL45| cannot ﬁnd space here; nevertheless, his concluding paragraphs are, we consider,\n</page>"
+      }
+     ]
+    }
+   ],
+   "config": {
+    "system_instruction": "You extract biodiversity occurrence information from one page of a historical natural-history book (19th or early 20th century). The page is given as numbered lines. The text may be a transcription or raw OCR and may contain recognition errors, odd spacing, broken words and stray characters. Never correct, normalise, expand or modernise anything: report what is written on the page.\n\nExtract every MENTION of these six fields. A mention is one occurrence in the text; if the same name appears three times, report it three times. Report mentions in the order they appear. If the page has none, return an empty list.\n\nEdges of a mention, for every field:\n- Leave out brackets, quotation marks, commas and semicolons around it: \"(Mus. Taylor.)\" gives \"Mus. Taylor\".\n- A full stop at the end is kept only when the word before it is shortened, because it then belongs to the abbreviation (\"Linn.\", \"Pfr.\"). After a word printed in full it is left out: \"(Mus. Cuming.)\" gives \"Mus. Cuming\"; \"Hab. Brazil.\" gives \"Brazil\".\n- A name broken across two lines is one mention: report the whole name, never only its first part.\n- Headings, for every field: include the heading that opens a species or genus account (\"BULIMUS CASTUS.\" at the start of its description, \"THE SKY-LARK.\" above the account of that bird) and names in a real figure or plate caption that says what is shown. Exclude text that only helps to navigate the page: running heads repeated at the top of pages (such as the genus name or chapter title beside a page number), bare plate labels (\"PLATE XLV.\"), page numbers and signatures.\n\ntaxon: a scientific (Latin) name of an organism.\n- Include binomials and trinomials (\"Accentor modularis\"), names of a single word at any rank used as the name of a taxon (\"Bulimus\", \"Turdidae\"), and an abbreviated genus followed by an epithet (\"A. modularis\"). Names in capitals or small capitals count (\"BULIMUS CASTUS\").\n- Include the Latin plural of a genus name used for the members of the genus (\"these small Bulimi\" gives \"Bulimi\"), and a genus name given in brackets inside a citation (\"PFEIFFER, (Glandina,) Pro. Zool. Soc.\" gives \"Glandina\").\n- The authority after a name is not part of the taxon: for \"Accentor modularis (Linn.)\" the taxon is \"Accentor modularis\" and \"Linn.\" is a separate person mention.\n- Exclude a bare abbreviated genus that only opens a Latin description (\"Bul. testa ...\").\n- Vernacular names are never taxon; they are the separate field vernacular.\n\nvernacular: a common-language name that identifies a particular kind of organism (a species or a named group).\n- Examples: \"Hedge-Sparrow\", \"Sky-Lark\", \"Lesser Redpoll\"; \"the Buntings\" gives \"Buntings\"; \"THE CHASTE BULIMUS\" gives \"CHASTE BULIMUS\" (no leading article).\n- Capital or lower-case makes no difference, and any kind of organism counts: \"pheasants\", \"grouse\", \"Owls\", \"hares\".\n- Exclude generic words that name no particular kind (\"bird\", \"shell\", \"species\", \"the male\", \"the young\") and words for an age, a sex or a stage rather than a kind (\"lambs\", \"chicks\", \"the hen\").\n\nlocality: a named real geographic place, in whatever role it appears.\n- Include habitat, distribution, collection and observation statements and any other mention of a place. In \"Hab. Central America?\" the mention is \"Central America\".\n- One place or several: place names separated by commas, each later one being the wider region that holds the earlier one, are ONE mention (\"Isle of Luzon, Philippine Islands\"; \"Humeerpore, Bundelkhund, India\"); in a \"Hab.\" line assume this order and never check or correct the geography. Names joined by \"and\" or \"or\", separated by a semicolon, or listed side by side as places of the same kind are separate mentions (\"Cornwall and Devon\" is two; \"China, Persia, Egypt\" is three).\n- Named regions used as proper names count: \"the Continent\" gives \"Continent\"; \"Old World\".\n- Words for a natural feature or a compass part, joined directly to the name, stay in the mention: \"valley of the Amoor\", \"north coast of Norfolk\", \"South-east Mongolia\", \"mouth of the Thames\", \"interior of Brazil\", \"cliffs of Dover\". Buildings and grounds do not: \"the park and gardens of Holkham\" gives \"Holkham\".\n- Words that place something relative to the place, and plain prepositions, stay out: \"near Dover\" gives \"Dover\"; \"ten miles north of York\" gives \"York\"; \"off the coast of Peru\" gives \"coast of Peru\"; \"throughout Europe\" gives \"Europe\".\n- Exclude habitat types without a place name (\"woods\", \"on rocks\"), places of publication inside bibliographic citations, places that are part of an institution's name, adjectives such as \"British\", places in titles or running heads, places in the title of a cited work (\"his 'Birds of Norfolk'\" gives no locality), and common nouns that point back to a place (\"the island\").\n\ndate: the date of a particular event (a specimen collected, shot, captured or seen, a nest found, an arrival recorded).\n- Include the whole date expression as printed: \"3rd May, 1890\", \"May 1890\", \"1890\", \"1880-85\". A month without a year counts when it belongs to a particular event: \"one was collected in April\" gives \"April\". A day number tied to something observed marks an event: \"the immigration from the 12th to the 30th of October\" gives \"12th to the 30th of October\".\n- Exclude publication dates and years in citations (\"Pro. Zool. Soc., 1846\", \"published in April 1890\"), general behaviour that is not one event (\"arrives in April\", \"breeds in spring\", \"most numerous in October and November\"), ages, durations and page numbers.\n\nperson: any named person, in whatever role: collector or observer, cited author, naming authority (abbreviated or not).\n- Examples: \"shot by Mr. J. Smith\" gives \"J. Smith\"; \"PFEIFFER, Pro. Zool. Soc.\" gives \"PFEIFFER\"; \"Giusti's (1997)\" gives \"Giusti\"; \"(Linn.)\" gives \"Linn.\".\n- Keep initials. Drop every title, rank or form of address (\"Mr.\", \"Dr.\", \"Capt.\", \"Lord\", \"Sir\", \"Herr\", \"Rev.\", \"Prof.\"): \"Lord Lilford\" gives \"Lilford\".\n- Label a name by its role at that spot: \"ADAMS, MS.\" gives the person \"ADAMS\", while \"(Mus. Adams.)\" is an institution and no person.\n- Exclude a person's name that is part of a taxon name (\"Cumingii\") or of an institution name (\"Cuming\" in \"Mus. Cuming\").\n\ninstitution: a named museum, herbarium, private collection, society, university or expedition.\n- Report the whole name as printed, abbreviations included: \"Mus. Cuming\", \"Mus. Dennison\", \"British Museum\".\n- Exclude journal titles in citations (\"Pro. Zool. Soc.\") and generic words without a name (\"the museum\").",
+    "response_mime_type": "application/json",
+    "max_output_tokens": 32768,
+    "response_schema": {
+     "type": "object",
+     "properties": {
+      "mentions": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "field": {
+          "type": "string",
+          "enum": [
+           "taxon",
+           "vernacular",
+           "person",
+           "locality",
+           "institution",
+           "date"
+          ]
+         },
+         "line": {
+          "type": "integer"
+         },
+         "quote": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "field",
+         "line",
+         "quote"
+        ]
+       }
+      }
+     },
+     "required": [
+      "mentions"
+     ]
+    }
+   }
+  }
+ },
+ {
+  "custom_id": "8992612__expert__G1",
+  "page_id": 8992612,
+  "split": "dev",
+  "version": "expert",
+  "condition": "G1",
+  "params": {
+   "contents": [
+    {
+     "role": "user",
+     "parts": [
+      {
+       "text": "Extract all mentions from the page below. For each mention give its field, the number of the line where it appears, and a quote: the mention copied character for character from that line, exactly as written there, including any errors, spacing and punctuation inside it. The quote is checked automatically against the line; a quote that is not an exact copy counts as unsupported. If a mention is broken across two lines, give the line where it starts and quote the whole mention, writing the line break as one space and keeping any hyphen that is printed there. Never include the line labels (such as \"L07|\") in a quote.\n\n<page>\nL01| THE SKY-LARK\nL02| \nL03| 183\nL04| \nL05| Practically the Alaudidæ constitute an Old World family, one species only\nL06| occurring in North America, whilst, as Jerdon observes, “They are very sparingly\nL07| represented in Malayana and Australia.”\nL08| \nL09| Family—ALAUDIDÆ.\nL10| \nL11| THE SKY-LARK.\nL12| \nL13| Alauda arvensis, LINN.\nL14| \nL15| FOUND during the summer months throughout the whole of Europe; nesting\nL16| in Scandinavia as far north as lat. 70°, whilst in North Africa it breeds\nL17| sparingly as far south as the slopes of the Atlas Mountains, and in the\nL18| east, in Russia and Siberia, and at high elevations in Japan, the valley of the\nL19| Amoor, South-east Mongolia, Turkestan and Persia. In winter it visits China,\nL20| North-west India, Afghanistan, Persia, Asia Minor, Palestine and Egypt. It has\nL21| been met with at Madeira, and is reputed to have occurred on Greenland. It has\nL22| also been introduced into the United States,* New Zealand and Australia.\nL23| \nL24| Throughout Great Britain and Ireland, the Sky-Lark is widely distributed,\nL25| abundant, and (excepting in the extreme north) resident.\nL26| \nL27| The climatic variations of the Sky-Lark have been separated under several\nL28| distinctive names, such as A. dulcivox, A. japonica, A. cantarella, A. liopus, A. blak-\nL29| istoni, A. gulgula, A. australis, A. cœlivox, A. wattersi, and A. sala; but so many\nL30| intergrades exist that Ornithologists generally are now content to regard them as\nL31| one variable species.\nL32| \nL33| Our Sky-Lark in breeding-plumage has the upper parts golden brown, with\nL34| blackish centres to the feathers; edges of greater wing-coverts paler; the outer-\nL35| most tail-feather white, with the exception of a blackish streak on the inner web;\nL36| \nL37| * One example was also shot in the Bermudas, in 1850.\n</page>"
+      }
+     ]
+    }
+   ],
+   "config": {
+    "system_instruction": "You extract biodiversity occurrence information from one page of a historical natural-history book (19th or early 20th century). The page is given as numbered lines. The text may be a transcription or raw OCR and may contain recognition errors, odd spacing, broken words and stray characters. Never correct, normalise, expand or modernise anything: report what is written on the page.\n\nExtract every MENTION of these six fields. A mention is one occurrence in the text; if the same name appears three times, report it three times. Report mentions in the order they appear. If the page has none, return an empty list.\n\nEdges of a mention, for every field:\n- Leave out brackets, quotation marks, commas and semicolons around it: \"(Mus. Taylor.)\" gives \"Mus. Taylor\".\n- A full stop at the end is kept only when the word before it is shortened, because it then belongs to the abbreviation (\"Linn.\", \"Pfr.\"). After a word printed in full it is left out: \"(Mus. Cuming.)\" gives \"Mus. Cuming\"; \"Hab. Brazil.\" gives \"Brazil\".\n- A name broken across two lines is one mention: report the whole name, never only its first part.\n- Headings, for every field: include the heading that opens a species or genus account (\"BULIMUS CASTUS.\" at the start of its description, \"THE SKY-LARK.\" above the account of that bird) and names in a real figure or plate caption that says what is shown. Exclude text that only helps to navigate the page: running heads repeated at the top of pages (such as the genus name or chapter title beside a page number), bare plate labels (\"PLATE XLV.\"), page numbers and signatures.\n\ntaxon: a scientific (Latin) name of an organism.\n- Include binomials and trinomials (\"Accentor modularis\"), names of a single word at any rank used as the name of a taxon (\"Bulimus\", \"Turdidae\"), and an abbreviated genus followed by an epithet (\"A. modularis\"). Names in capitals or small capitals count (\"BULIMUS CASTUS\").\n- Include the Latin plural of a genus name used for the members of the genus (\"these small Bulimi\" gives \"Bulimi\"), and a genus name given in brackets inside a citation (\"PFEIFFER, (Glandina,) Pro. Zool. Soc.\" gives \"Glandina\").\n- The authority after a name is not part of the taxon: for \"Accentor modularis (Linn.)\" the taxon is \"Accentor modularis\" and \"Linn.\" is a separate person mention.\n- Exclude a bare abbreviated genus that only opens a Latin description (\"Bul. testa ...\").\n- Vernacular names are never taxon; they are the separate field vernacular.\n\nvernacular: a common-language name that identifies a particular kind of organism (a species or a named group).\n- Examples: \"Hedge-Sparrow\", \"Sky-Lark\", \"Lesser Redpoll\"; \"the Buntings\" gives \"Buntings\"; \"THE CHASTE BULIMUS\" gives \"CHASTE BULIMUS\" (no leading article).\n- Capital or lower-case makes no difference, and any kind of organism counts: \"pheasants\", \"grouse\", \"Owls\", \"hares\".\n- Exclude generic words that name no particular kind (\"bird\", \"shell\", \"species\", \"the male\", \"the young\") and words for an age, a sex or a stage rather than a kind (\"lambs\", \"chicks\", \"the hen\").\n\nlocality: a named real geographic place, in whatever role it appears.\n- Include habitat, distribution, collection and observation statements and any other mention of a place. In \"Hab. Central America?\" the mention is \"Central America\".\n- One place or several: place names separated by commas, each later one being the wider region that holds the earlier one, are ONE mention (\"Isle of Luzon, Philippine Islands\"; \"Humeerpore, Bundelkhund, India\"); in a \"Hab.\" line assume this order and never check or correct the geography. Names joined by \"and\" or \"or\", separated by a semicolon, or listed side by side as places of the same kind are separate mentions (\"Cornwall and Devon\" is two; \"China, Persia, Egypt\" is three).\n- Named regions used as proper names count: \"the Continent\" gives \"Continent\"; \"Old World\".\n- Words for a natural feature or a compass part, joined directly to the name, stay in the mention: \"valley of the Amoor\", \"north coast of Norfolk\", \"South-east Mongolia\", \"mouth of the Thames\", \"interior of Brazil\", \"cliffs of Dover\". Buildings and grounds do not: \"the park and gardens of Holkham\" gives \"Holkham\".\n- Words that place something relative to the place, and plain prepositions, stay out: \"near Dover\" gives \"Dover\"; \"ten miles north of York\" gives \"York\"; \"off the coast of Peru\" gives \"coast of Peru\"; \"throughout Europe\" gives \"Europe\".\n- Exclude habitat types without a place name (\"woods\", \"on rocks\"), places of publication inside bibliographic citations, places that are part of an institution's name, adjectives such as \"British\", places in titles or running heads, places in the title of a cited work (\"his 'Birds of Norfolk'\" gives no locality), and common nouns that point back to a place (\"the island\").\n\ndate: the date of a particular event (a specimen collected, shot, captured or seen, a nest found, an arrival recorded).\n- Include the whole date expression as printed: \"3rd May, 1890\", \"May 1890\", \"1890\", \"1880-85\". A month without a year counts when it belongs to a particular event: \"one was collected in April\" gives \"April\". A day number tied to something observed marks an event: \"the immigration from the 12th to the 30th of October\" gives \"12th to the 30th of October\".\n- Exclude publication dates and years in citations (\"Pro. Zool. Soc., 1846\", \"published in April 1890\"), general behaviour that is not one event (\"arrives in April\", \"breeds in spring\", \"most numerous in October and November\"), ages, durations and page numbers.\n\nperson: any named person, in whatever role: collector or observer, cited author, naming authority (abbreviated or not).\n- Examples: \"shot by Mr. J. Smith\" gives \"J. Smith\"; \"PFEIFFER, Pro. Zool. Soc.\" gives \"PFEIFFER\"; \"Giusti's (1997)\" gives \"Giusti\"; \"(Linn.)\" gives \"Linn.\".\n- Keep initials. Drop every title, rank or form of address (\"Mr.\", \"Dr.\", \"Capt.\", \"Lord\", \"Sir\", \"Herr\", \"Rev.\", \"Prof.\"): \"Lord Lilford\" gives \"Lilford\".\n- Label a name by its role at that spot: \"ADAMS, MS.\" gives the person \"ADAMS\", while \"(Mus. Adams.)\" is an institution and no person.\n- Exclude a person's name that is part of a taxon name (\"Cumingii\") or of an institution name (\"Cuming\" in \"Mus. Cuming\").\n\ninstitution: a named museum, herbarium, private collection, society, university or expedition.\n- Report the whole name as printed, abbreviations included: \"Mus. Cuming\", \"Mus. Dennison\", \"British Museum\".\n- Exclude journal titles in citations (\"Pro. Zool. Soc.\") and generic words without a name (\"the museum\").",
+    "response_mime_type": "application/json",
+    "max_output_tokens": 32768,
+    "response_schema": {
+     "type": "object",
+     "properties": {
+      "mentions": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "field": {
+          "type": "string",
+          "enum": [
+           "taxon",
+           "vernacular",
+           "person",
+           "locality",
+           "institution",
+           "date"
+          ]
+         },
+         "line": {
+          "type": "integer"
+         },
+         "quote": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "field",
+         "line",
+         "quote"
+        ]
+       }
+      }
+     },
+     "required": [
+      "mentions"
+     ]
+    }
+   }
+  }
+ }
+]
