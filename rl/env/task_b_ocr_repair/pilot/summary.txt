@@ -1,0 +1,15 @@
+                              cases  mean_reward  min_reward  max_reward  format_invalid  integrity_invalid
+attack                                                                                                     
+commentary prefix                50        0.254         0.0       0.833               0                  3
+empty                            50        0.000         0.0       0.000              50                 50
+identity (return the OCR)        45        0.111         0.0       1.000               0                  0
+ligature letters written out      6        0.347         0.0       0.750               0                  0
+lower-cased                      28       -0.178        -1.0       0.909               0                  0
+names left unrepaired            13        0.137         0.0       0.571               0                  0
+one correct word changed         48        0.384         0.0       0.917               0                  0
+only names repaired              32        0.106         0.0       0.857               0                  0
+perfect                          50        1.000         1.0       1.000               0                  0
+two lines                        50        0.000         0.0       0.000               0                 50
+
+damaged words per valid line (6 = 6+): {0: 185, 1: 102, 2: 31, 3: 18, 4: 8, 5: 8, 6: 4}
+valid 356 of 357

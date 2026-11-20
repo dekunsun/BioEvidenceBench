@@ -1,0 +1,358 @@
+page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damaged,n_name_damaged,input,target
+8966754,5,True,,1.0,1.0,0.913,3,1,1,"Genus BULBfUS, Lamarck.","Genus BULIMUS, Lamarck."
+8966754,7,True,,1.0,1.017,0.967,9,1,0,"Testa ovata, vel oblonga, vel turrita, anfractibits nunc per-","Testa ovata, vel oblonga, vel turrita, anfractibus nunc per-"
+8966754,8,True,,1.0,1.0,1.0,7,0,0,"paucis, ventricosis, nunc plurimis, contractis, aut fra-","paucis, ventricosis, nunc plurimis, contractis, aut fra-"
+8966754,9,True,,0.915,0.949,0.78,7,3,0,"ffiUius et nape translucidis, aut cramuscwUs, epidermide","gilibus et sæpè translucidis, aut crassiusculis, epidermide"
+8966754,10,True,,0.982,1.0,0.911,7,3,0,"interdum duplici indutk; columella recta, interdum, uni-","interdum duplici indutis; columellâ rectâ, interdum uni-"
+8966754,11,True,,0.961,1.0,0.745,6,6,0,"pUcatd, hasinunqnam trmicatd; aperture! nonnunqtiam","plicatâ, basi nunquam truncatâ; aperturâ nonnunquam"
+8966754,12,True,,0.982,1.036,0.759,6,5,0,"dentatd, plerumque integrd, iimrgiiii/mi diyiinctis, lahro","dentatâ, plerumque integrâ, marginibus disjunctis, labro"
+8966754,13,True,,1.0,1.068,0.723,6,3,2,"vel simplici, vel re/texo. Opercii/iim hhIIuih.","vel simplici, vel reflexo. Operculum nullum."
+8966754,15,True,,1.0,1.0,1.0,8,0,0,"Shell ovate, oblong, or turreted, whorls sometimes very","Shell ovate, oblong, or turreted, whorls sometimes very"
+8966754,16,True,,1.0,1.0,1.0,7,0,0,"few and ventricose, sometimes many and contracted,","few and ventricose, sometimes many and contracted,"
+8966754,17,True,,1.0,1.0,1.0,8,0,0,"either fragile and often transparent, or rather thick,","either fragile and often transparent, or rather thick,"
+8966754,18,True,,1.0,1.0,1.0,7,0,0,"covered with, sometimes, a double diaphanous epi-","covered with, sometimes, a double diaphanous epi-"
+8966754,19,True,,1.0,1.02,0.98,5,0,0,"dermis ; columella straight, sometimes one-plaited,","dermis; columella straight, sometimes one-plaited,"
+8966754,20,True,,1.0,1.02,0.98,9,0,0,never truncated at the base ; aperture in some in-,never truncated at the base; aperture in some in-
+8966754,21,True,,1.0,1.0,1.0,7,0,0,"stances toothed, generally entire, with the margins","stances toothed, generally entire, with the margins"
+8966754,22,True,,1.0,1.0,1.0,6,0,0,"disjoined, lip either simple or reflected.","disjoined, lip either simple or reflected."
+8966754,24,True,,1.0,1.0,1.0,9,0,0,The beautiful forms and varieties of shells produced by,The beautiful forms and varieties of shells produced by
+8966754,25,True,,1.0,1.019,0.964,7,1,0,"those aii'-breathing mollusks, which, under the generic","those air-breathing mollusks, which, under the generic"
+8966754,26,True,,0.982,0.982,0.964,7,1,1,"appellation of BuUmus, constitute an important division","appellation of Bulimus, constitute an important division"
+8966754,27,True,,1.0,1.019,0.868,10,2,0,"of the gi-eat tribe of Snails, have become objects of","of the great tribe of SNAILS, have become objects of"
+8966754,28,True,,1.0,1.0,1.0,9,0,0,"especial interest to the conchologist, owing to the zeal","especial interest to the conchologist, owing to the zeal"
+8966754,29,True,,1.0,1.0,1.0,8,0,0,with which a few enterprising scientific travellers have,with which a few enterprising scientific travellers have
+8966754,30,True,,1.0,1.0,1.0,9,0,0,lately penetrated into tropical countries in pursuit of them.,lately penetrated into tropical countries in pursuit of them.
+8966754,31,True,,1.0,1.0,1.0,10,0,0,"It is, however, to the productive exertions of Mr. Cuming","It is, however, to the productive exertions of Mr. Cuming"
+8966754,32,True,,1.0,1.0,1.0,10,0,0,that we are mainly indebted for the newer and more,that we are mainly indebted for the newer and more
+8966754,33,True,,1.0,1.0,1.0,8,0,0,attractive subjects of the present monograph. The re-,attractive subjects of the present monograph. The re-
+8966754,34,True,,1.0,1.0,1.0,11,0,0,searches of this ardent naturalist in the arid plains on the,searches of this ardent naturalist in the arid plains on the
+8966754,35,True,,1.0,1.0,1.0,11,0,0,"west side of the Andes, in the dense woods of West","west side of the Andes, in the dense woods of West"
+8966754,36,True,,0.981,1.0,0.962,8,1,0,"Colmubia and Central America, and, more recently, in","Columbia and Central America, and, more recently, in"
+8966754,37,True,,1.0,1.0,1.0,9,0,0,"the luxuriant open forests of the Philippine Islands, whilst","the luxuriant open forests of the Philippine Islands, whilst"
+8966754,38,True,,1.0,1.0,1.0,8,0,0,"they present an instructive contrast, exceed any result","they present an instructive contrast, exceed any result"
+8966754,39,True,,1.0,1.0,1.0,8,0,0,the most sanguine collector could have anticipated. In,the most sanguine collector could have anticipated. In
+8966754,40,True,,1.0,1.0,0.962,10,1,0,"the dry and ban-en regions of Western Chili and Peru,","the dry and barren regions of Western Chili and Peru,"
+8966754,41,True,,0.982,0.982,0.964,9,1,0,the BuUmi are mostly small and of comparatively fragile,the Bulimi are mostly small and of comparatively fragile
+8966754,42,True,,1.0,1.019,0.927,9,2,0,structui-e; but in the beautifid islands of the Eastern,structure; but in the beautiful islands of the Eastern
+8966754,43,True,,1.0,1.0,0.981,7,1,0,"Archipelago, where climate aud vegetation combine to","Archipelago, where climate and vegetation combine to"
+8966754,44,True,,1.0,1.0,0.961,9,1,0,"favom- the growth of arboreal species, the genus is","favour the growth of arboreal species, the genus is"
+8966754,45,True,,1.0,1.019,0.925,7,2,0,represented with prolific splendom-. Blr. Cuming must,represented with prolific splendour. Mr. Cuming must
+8966754,46,True,,1.0,1.0,1.0,11,0,0,have truly felt like one transported to the fabled garden of,have truly felt like one transported to the fabled garden of
+8966754,47,True,,1.0,1.0,1.0,9,0,0,"the Hesperides, when beholding the lofty trees of these","the Hesperides, when beholding the lofty trees of these"
+8966754,48,True,,1.0,1.0,1.0,9,0,0,sunny isles laden with snails of such magnificent propor-,sunny isles laden with snails of such magnificent propor-
+8966754,49,True,,1.0,1.0,0.964,9,1,0,"tions. Aladdin, in the Arabian tale, could not, sm-ely,","tions. Aladdin, in the Arabian tale, could not, surely,"
+8966754,50,True,,1.0,1.0,0.983,8,1,0,have contemplated the rich clusters of vaii-coloured fruit,have contemplated the rich clusters of vari-coloured fruit
+8966754,51,True,,1.0,1.0,1.0,10,0,0,in the garden of the African Magician with more astonish-,in the garden of the African Magician with more astonish-
+8966754,52,True,,0.98,0.98,0.959,8,1,0,"ment, nor probably gathered it with more aWdity.","ment, nor probably gathered it with more avidity."
+8966754,54,True,,1.0,1.061,0.865,9,2,0,"""It was in 18.36,"" relates Mi-. Broderip, ""that :Mr.","“It was in 1836,” relates Mr. Broderip, “that Mr."
+8966754,55,True,,1.0,1.018,0.965,8,1,0,Ciuning proceeded to the Philippine Islands by permission,Cuming proceeded to the Philippine Islands by permission
+8966754,56,True,,1.0,1.0,0.941,10,2,0,"of the Queen Eegent of Spain, and aided by powerfid","of the Queen Regent of Spain, and aided by powerful"
+8966754,57,True,,1.0,1.0,1.0,7,0,0,"recommendations from her government, which opened to","recommendations from her government, which opened to"
+8966754,58,True,,1.0,1.0,1.0,11,0,0,"him the interior of the islands, and caused him to be","him the interior of the islands, and caused him to be"
+8966754,59,True,,0.982,0.982,0.927,9,2,0,"received with a noble hospitaUty, equalled oidy by the","received with a noble hospitality, equalled only by the"
+8966754,60,True,,1.0,1.0,0.964,8,1,0,warm interest which facilitated his pm-suits wherever he,warm interest which facilitated his pursuits wherever he
+8966754,61,True,,1.0,1.0,0.923,9,1,0,"amved and made himself known."" Species of which we",arrived and made himself known.” Species of which we
+8966754,62,True,,1.0,1.0,1.0,9,0,0,"had but an imperfect knowledge, in consequence of the","had but an imperfect knowledge, in consequence of the"
+8966754,63,True,,1.0,1.0,1.0,9,0,0,bad condition in which a stray individual chanced to,bad condition in which a stray individual chanced to
+8966754,64,True,,1.0,1.018,0.929,9,1,0,"reach our cabinets, were found in liixm-iant plenty, and","reach our cabinets, were found in luxuriant plenty, and"
+8966754,65,True,,1.0,1.018,0.965,10,1,0,many new kinds were discovered in their aii-y solitude in,many new kinds were discovered in their airy solitude in
+8966754,66,True,,1.0,1.0,0.96,7,1,0,"equal abundance. Had De Terussac, the enthusiastic","equal abundance. Had De Férussac, the enthusiastic"
+8966754,67,True,,0.983,1.0,0.931,11,2,0,"admii-er of this tribe, Hved to see the glorious series of","admirer of this tribe, lived to see the glorious series of"
+8966754,68,True,,1.0,1.017,0.967,8,1,0,Bull mi accumulated in the Cumingian collection in different,Bulimi accumulated in the Cumingian collection in different
+8966754,69,True,,1.0,1.0,1.0,10,0,0,"stages of growth, and in the finest state of preservation,","stages of growth, and in the finest state of preservation,"
+8966754,70,True,,1.0,1.0,1.0,11,0,0,"from the egg to the adult, he would have been indeed","from the egg to the adult, he would have been indeed"
+8966754,71,True,,1.0,1.0,1.0,11,0,0,amazed. Sorry am I that the limits of the present work,amazed. Sorry am I that the limits of the present work
+8966754,72,True,,0.982,0.982,0.964,11,1,0,"win not allow me to illustrate more than two, or occa-","will not allow me to illustrate more than two, or occa-"
+8966754,73,True,,1.0,1.0,1.0,10,0,0,"sionally three, of the typical varieties of each species, and","sionally three, of the typical varieties of each species, and"
+8966754,74,True,,1.0,1.0,1.0,6,0,0,of these but a single view.,of these but a single view.
+8966754,76,True,,0.981,0.981,0.962,8,1,1,"The genus BuUmus, as restricted by Lamarck, compre-","The genus Bulimus, as restricted by Lamarck, compre-"
+8966754,77,True,,1.0,1.0,1.0,7,0,0,"hends an extremely natural group, though presenting","hends an extremely natural group, though presenting"
+8966754,78,True,,1.0,1.019,0.982,8,0,0,important differences of growth and texture ; and these,important differences of growth and texture; and these
+8966754,79,True,,1.0,1.0,1.0,8,0,0,"variations are peculiarly local. In the Philippine Islands,","variations are peculiarly local. In the Philippine Islands,"
+8966754,80,True,,0.983,0.983,0.967,11,1,0,"as just described, the species are of large and rather soUd","as just described, the species are of large and rather solid"
+8966754,81,True,,1.0,1.019,0.963,7,1,0,"gi-owth with a remarkable hydrophanous epidermis, that","growth with a remarkable hydrophanous epidermis, that"
+8966754,82,True,,1.0,1.019,0.963,9,1,0,"is, one pei-meable by water or other evaporable fluid.","is, one permeable by water or other evaporable fluid."
+8966754,83,True,,1.0,1.0,0.965,12,1,0,On the barren liUls of Lima and the sandy plains of Chili,On the barren hills of Lima and the sandy plains of Chili
+8966754,84,True,,1.0,1.019,0.982,9,0,0,"and Peru, they are mostly small and delicately formed ;","and Peru, they are mostly small and delicately formed;"
+8966754,85,True,,1.0,1.0,1.0,10,0,0,"in Brazil, the species are remarkable for having the aper-","in Brazil, the species are remarkable for having the aper-"
+8966754,86,True,,1.0,1.0,1.0,8,0,0,ture in frequent instances denticulated; and in New,ture in frequent instances denticulated; and in New
+8966754,87,True,,1.0,1.0,1.0,7,0,0,"Caledonia, Venezuela, New Grenada, and New Hebrides,","Caledonia, Venezuela, New Grenada, and New Hebrides,"
+8966754,88,True,,1.0,1.0,0.963,8,1,0,"they not imcommonly exhibit, with equal peculiarity, a","they not uncommonly exhibit, with equal peculiarity, a"
+8966754,89,True,,1.0,1.0,0.938,3,1,0,plaited Auricula-YikQ columella.,plaited Auricula-like columella.
+8966754,91,True,,1.0,1.019,0.964,10,1,0,It is a curious featui-e in the Philippine species that,It is a curious feature in the Philippine species that
+8966754,92,True,,1.0,1.0,0.967,9,1,0,"the varieties of pattern, which constitute then- chief orna-","the varieties of pattern, which constitute their chief orna-"
+8966754,93,True,,1.0,1.0,1.0,10,0,0,"ment, reside only in the epidermis. The colours of the","ment, reside only in the epidermis. The colours of the"
+8966754,94,True,,1.0,1.018,0.983,9,0,0,shell rarely describe any sort of configuration : they are,shell rarely describe any sort of configuration: they are
+8966754,95,True,,1.0,1.0,1.0,10,0,0,"mostly blended into a uniform tint, over which a fanciful","mostly blended into a uniform tint, over which a fanciful"
+8966754,96,True,,1.0,1.019,0.963,9,1,0,pattern is produced by the epidei-mis forming a double,pattern is produced by the epidermis forming a double
+8966754,97,True,,1.0,1.0,1.0,10,0,0,"porous membrane in some places, and a single one only","porous membrane in some places, and a single one only"
+8966754,98,True,,1.0,1.0,1.0,8,0,0,"in others, developed, moreover, with the same continuous","in others, developed, moreover, with the same continuous"
+8966754,99,True,,1.0,1.0,1.0,10,0,0,regularity as the textile marking of a Volute or Cone.,regularity as the textile marking of a Volute or Cone.
+8966754,100,True,,1.0,1.0,1.0,8,0,0,This phenomenon is easily detected by immersing the,This phenomenon is easily detected by immersing the
+8966754,101,True,,1.0,1.0,1.0,10,0,0,"shell in water, when the light portion or upper porous","shell in water, when the light portion or upper porous"
+8966753,1,True,,1.0,1.059,0.722,3,1,0,BULIMUS.— Plate I.,BULIMUS.—PLATE I.
+8966753,3,True,,1.0,1.0,0.981,8,1,0,"laver of epidermis becomes saturated, and the ground","layer of epidermis becomes saturated, and the ground"
+8966753,4,True,,1.0,1.0,1.0,11,0,0,colour of the shell is seen through it; as the moisture,colour of the shell is seen through it; as the moisture
+8966753,5,True,,1.0,1.0,1.0,7,0,0,"evaporates, the epidermis resumes its light appearance.","evaporates, the epidermis resumes its light appearance."
+8966753,6,True,,0.966,0.983,0.931,11,2,0,"Sir DaWd Brewster, hi reply to a letter from Mr. Broderip","Sir David Brewster, in reply to a letter from Mr. Broderip"
+8966753,7,True,,1.0,1.034,0.934,11,1,0,"ou this subject, says : "" It appears to me, from very careful","on this subject, says: “It appears to me, from very careful"
+8966753,8,True,,1.0,1.0,1.0,8,0,0,"observations, that the epidermis consists of two layers,","observations, that the epidermis consists of two layers,"
+8966753,9,True,,1.0,1.0,1.0,11,0,0,and that it is only the upper layer which is porous,and that it is only the upper layer which is porous
+8966753,10,True,,1.0,1.019,0.962,9,1,0,wherever the pattern is wliite. These white or porous,wherever the pattern is white. These white or porous
+8966753,11,True,,1.0,1.0,1.0,10,0,0,portions of the epidermis differ from the other parts of,portions of the epidermis differ from the other parts of
+8966753,12,True,,0.981,0.981,0.963,11,1,0,"the upper layer only in hanng been deprived of, or in","the upper layer only in having been deprived of, or in"
+8966753,13,True,,1.0,1.0,1.0,8,0,0,"never having possessed, the element which gives trans-","never having possessed, the element which gives trans-"
+8966753,14,True,,1.0,1.019,0.981,10,0,0,parency to the membrane ; in the same manner as hydro-,parency to the membrane; in the same manner as hydro-
+8966753,15,True,,1.0,1.0,0.981,9,1,0,"phauous opal has become white, from the expulsion of","phanous opal has become white, from the expulsion of"
+8966753,16,True,,1.0,1.0,0.967,4,0,0,"its water of crystallization.""",its water of crystallization.”
+8966753,18,True,,0.981,1.0,0.943,10,1,1,There is little variety in the animal of BuUmus : the,There is little variety in the animal of Bulimus: the
+8966753,19,True,,0.983,0.983,0.966,12,1,0,"Chilian species are mostly of a bght colour, and a few in","Chilian species are mostly of a light colour, and a few in"
+8966753,20,True,,1.0,1.018,0.965,9,1,0,"tliis and the Columbian district are spotted, some having","this and the Columbian district are spotted, some having"
+8966753,21,True,,1.0,1.0,1.0,9,0,0,a transparent shell through which the spots are visible.,a transparent shell through which the spots are visible.
+8966753,22,True,,0.983,0.983,0.966,9,1,0,"The PhiUppine species are, without exception, of a sombre","The Philippine species are, without exception, of a sombre"
+8966753,23,True,,1.0,1.018,0.966,10,1,0,"olivaceous bro^vn, and dwell in family groups, as it were,","olivaceous brown, and dwell in family groups, as it were,"
+8966753,24,True,,1.0,1.018,0.964,11,1,0,among the shady foliage of the branches. Out of a gi-oup,among the shady foliage of the branches. Out of a group
+8966753,25,True,,1.0,1.0,1.0,10,0,0,of some dozen living specimens not more than three or,of some dozen living specimens not more than three or
+8966753,26,True,,1.0,1.0,1.0,13,0,0,four may be found in an adult state with the lip of the,four may be found in an adult state with the lip of the
+8966753,27,True,,1.0,1.0,1.0,9,0,0,shell reflected. They may be dislodged by shaking the,shell reflected. They may be dislodged by shaking the
+8966753,28,True,,1.0,1.019,0.945,9,1,0,"branches, but are cliielly disturbed by the heavy rains","branches, but are chiefly disturbed by the heavy rains"
+8966753,29,True,,1.0,1.018,0.966,10,1,0,with wliich those islands are at times visited. Mr. Cuming,with which those islands are at times visited. Mr. Cuming
+8966753,30,True,,1.0,1.0,0.982,9,1,0,"preferred, however, to collect them in diy sunny weather,","preferred, however, to collect them in dry sunny weather,"
+8966753,31,True,,1.0,1.0,1.0,12,0,0,because he was sure of finding the objects of his search in,because he was sure of finding the objects of his search in
+8966753,32,True,,1.0,1.0,1.0,10,0,0,their shady places of retreat. In the immense sandy tract,their shady places of retreat. In the immense sandy tract
+8966753,33,True,,1.0,1.0,1.0,12,0,0,"on the west side of the Andes, the reverse of this con-","on the west side of the Andes, the reverse of this con-"
+8966753,34,True,,1.0,1.018,0.966,9,1,0,dition of nature prevails. Tlie Bulimi are here physically,dition of nature prevails. The Bulimi are here physically
+8966753,35,True,,1.0,1.019,0.982,10,0,0,very distinct ; some reside all the year round upon the,very distinct; some reside all the year round upon the
+8966753,36,True,,1.0,1.0,1.0,9,0,0,"numerous Cacti, but during the dry season, which lasts","numerous Cacti, but during the dry season, which lasts"
+8966753,37,True,,1.0,1.0,1.0,11,0,0,"for several months, they mostly live in a state of torpor,","for several months, they mostly live in a state of torpor,"
+8966753,38,True,,0.982,0.982,0.964,9,1,0,"inclosed within their sheU by an epiphragm, and buried","inclosed within their shell by an epiphragm, and buried"
+8966753,39,True,,1.0,1.039,0.925,11,2,0,ill tlie sand or under stones. On the approach of the,in the sand or under stones. On the approach of the
+8966753,40,True,,1.0,1.017,0.966,11,1,0,"ilews, they revive to a state of animation, and crawl about","dews, they revive to a state of animation, and crawl about"
+8966753,41,True,,1.0,1.0,1.0,6,0,0,at night in quest of food.,at night in quest of food.
+8966753,43,True,,1.0,1.0,1.0,8,0,0,In illustration of the remarkable drought that prevails,In illustration of the remarkable drought that prevails
+8966753,44,True,,0.983,0.983,0.966,10,1,0,"in Northern Chili, and of its effect upon moUuscous life,","in Northern Chili, and of its effect upon molluscous life,"
+8966753,45,True,,1.0,1.0,1.0,11,0,0,"I am tempted to repeat, in brief, an anecdote related to","I am tempted to repeat, in brief, an anecdote related to"
+8966753,46,True,,1.0,1.0,1.0,12,0,0,me by Mr. Cuming. On the arrival of our friend at the,me by Mr. Cuming. On the arrival of our friend at the
+8966753,47,True,,1.0,1.0,1.0,9,0,0,"Port of Copiapo in 1829, he discovered the beautiful","Port of Copiapo in 1829, he discovered the beautiful"
+8966753,48,True,,0.983,1.034,0.898,8,1,1,"Jiidimm Broderipii in considerable numbers, in the fissures","Bulimus Broderipii in considerable numbers, in the fissures"
+8966753,49,True,,1.0,1.0,1.0,13,0,0,of the rocks that may be seen here and there in the sandy,of the rocks that may be seen here and there in the sandy
+8966753,50,True,,1.0,1.0,1.0,9,0,0,plains of that country. Finding a large proportion of,plains of that country. Finding a large proportion of
+8966753,51,True,,1.0,1.019,0.964,9,1,0,"them dead, with tlie soft parts entirely decomposed, he","them dead, with the soft parts entirely decomposed, he"
+8966753,52,True,,1.0,1.0,0.983,10,1,0,requested a solitary iuhabitant of the place to collect as,requested a solitary inhabitant of the place to collect as
+8966753,53,True,,1.0,1.0,1.0,10,0,0,many specimens as he could pick out alive whilst he,many specimens as he could pick out alive whilst he
+8966753,54,True,,1.0,1.0,1.0,7,0,0,occupied himself with botanizing. Returning from his,occupied himself with botanizing. Returning from his
+8966753,56,True,,1.0,1.0,1.0,8,0,0,"excursion, Mr. Cuming was greatly disappointed to find","excursion, Mr. Cuming was greatly disappointed to find"
+8966753,57,True,,1.0,1.0,1.0,9,0,0,that among the quantity his Chilian collector had accumu-,that among the quantity his Chilian collector had accumu-
+8966753,58,True,,1.0,1.0,1.0,10,0,0,"lated, there was scarcely one in a living state. Upon","lated, there was scarcely one in a living state. Upon"
+8966753,59,True,,1.0,1.0,1.0,8,0,0,"remonstrating with him for his inattention, the native","remonstrating with him for his inattention, the native"
+8966753,60,True,,1.0,1.036,0.931,11,1,0,"replied : "" Ouly wait till the dews come, and they will be","replied: “Only wait till the dews come, and they will be"
+8966753,61,True,,1.0,1.038,0.927,9,0,0,"all alive again."" Mr. Cuming rejoined : "" I suppose you",all alive again.” Mr. Cuming rejoined: “I suppose you
+8966753,62,True,,1.0,1.0,0.982,10,0,0,"mean when it rains."" The man, however, in perfect aston-","mean when it rains.” The man, however, in perfect aston-"
+8966753,63,True,,1.0,1.019,0.982,8,0,0,"ishment inquired what he meant ; though a sexagenarian,","ishment inquired what he meant; though a sexagenarian,"
+8966753,64,True,,1.0,1.0,1.0,10,0,0,he had never heard of such a thing as rain.,he had never heard of such a thing as rain.
+8966753,66,True,,0.981,1.0,0.943,9,1,0,The Bulimi vary in their mode of propagation : fragOe,The Bulimi vary in their mode of propagation: fragile
+8966753,67,True,,1.0,1.0,0.966,11,1,0,"species, with the lip of the shell simple, are mostly \nvi-","species, with the lip of the shell simple, are mostly vivi-"
+8966753,68,True,,1.0,1.0,1.0,9,0,0,"parous, whilst those with a reflected lip are oviparous.","parous, whilst those with a reflected lip are oviparous."
+8966753,69,True,,1.0,1.0,1.0,9,0,0,The arboreal species of the Philippines deposit their eggs,The arboreal species of the Philippines deposit their eggs
+8966753,70,True,,1.0,1.0,1.0,10,0,0,"in little clusters on the trees, between two leaves which","in little clusters on the trees, between two leaves which"
+8966753,71,True,,1.0,1.0,1.0,12,0,0,"the animal manages to curl up one upon the other, so as","the animal manages to curl up one upon the other, so as"
+8966753,72,True,,1.0,1.018,0.983,11,0,0,"to form a receptacle for their protection ; and, so far as","to form a receptacle for their protection; and, so far as"
+8966753,73,True,,1.0,1.0,0.981,9,1,0,"Mr. Cuming's observations go, they are all soft like","Mr. Cuming’s observations go, they are all soft like"
+8966753,74,True,,1.0,1.019,0.964,10,2,0,"snake's eggs, w^ith the single exception of the B. Min-","snake’s eggs, with the single exception of the B. Min-"
+8966753,75,True,,0.981,0.981,0.943,8,1,0,"doroen-m, in which instance the eggs are calcareous,","doroensis, in which instance the eggs are calcareous,"
+8966753,76,True,,1.0,1.0,1.0,9,0,0,"deposited upon the leaf in parallel rows, each standing","deposited upon the leaf in parallel rows, each standing"
+8966753,77,True,,1.0,1.0,0.966,10,1,0,"perpendicidarly on end, attached at the base by a glutinous","perpendicularly on end, attached at the base by a glutinous"
+8966753,80,True,,1.0,1.0,1.0,10,0,0,The habits of the Bulimi in the two widely remote,The habits of the Bulimi in the two widely remote
+8966753,81,True,,1.0,1.0,0.964,9,1,0,"coimtries explored by Mr. Cuming, having been treated of","countries explored by Mr. Cuming, having been treated of"
+8966753,82,True,,1.0,1.0,1.0,11,0,0,"in the foregoing remarks, it only remains to speak of them","in the foregoing remarks, it only remains to speak of them"
+8966753,83,True,,1.0,1.0,1.0,10,0,0,in other parts. Turning to New Holland we are unex-,in other parts. Turning to New Holland we are unex-
+8966753,84,True,,1.0,1.0,0.964,9,1,0,pectedly sm-prised to find that the genus is represented,pectedly surprised to find that the genus is represented
+8966753,85,True,,1.0,1.0,1.0,11,0,0,to an extremely limited extent. I am not aware of more,to an extremely limited extent. I am not aware of more
+8966753,86,True,,0.982,0.982,0.965,10,1,0,than three species hanng been found in this wide expanse,than three species having been found in this wide expanse
+8966753,87,True,,1.0,1.0,0.982,9,1,0,"of countiy, although several fine Helices have been dis-","of country, although several fine Helices have been dis-"
+8966753,88,True,,1.0,1.019,0.981,11,0,0,covered ; and in a region of which the Fauna and Flora,covered; and in a region of which the Fauna and Flora
+8966753,89,True,,1.0,1.0,1.0,9,0,0,"exhibit so luxuriant and distinctive a character, the scarcity","exhibit so luxuriant and distinctive a character, the scarcity"
+8966753,90,True,,1.0,1.0,1.0,12,0,0,of a genus of so much importance in the Eastern Isles is,of a genus of so much importance in the Eastern Isles is
+8966753,91,True,,1.0,1.0,1.0,8,0,0,"remarkable. The same observation applies to New Zealand,","remarkable. The same observation applies to New Zealand,"
+8966753,92,True,,1.0,1.017,0.966,12,1,0,"fi-om whence, so far as the interior of the islands of that","from whence, so far as the interior of the islands of that"
+8966753,93,True,,1.0,1.0,1.0,11,0,0,"group has been visited, no more than one or two species","group has been visited, no more than one or two species"
+8966753,94,True,,1.0,1.0,1.0,9,0,0,have been received. In Africa the Bulimi are almost,have been received. In Africa the Bulimi are almost
+8966753,95,True,,0.982,0.982,0.964,10,1,0,as great strangers as in the locabties just spoken of;,as great strangers as in the localities just spoken of;
+8966753,96,True,,1.0,1.0,1.0,10,0,0,throughout the whole extent of land yet explored of this,throughout the whole extent of land yet explored of this
+8966753,97,True,,1.0,1.0,1.0,9,0,0,"vast continent, scarcely a dozen species have been ob-","vast continent, scarcely a dozen species have been ob-"
+8966753,98,True,,1.0,1.02,0.9,8,1,0,tained. The Bulimi are here replaced by Jcluitina.,tained. The Bulimi are here replaced by Achatinæ.
+8966753,99,True,,1.0,1.0,0.943,11,1,0,Such a phenomenon may also be obseiTcd in some of the,Such a phenomenon may also be observed in some of the
+8966753,100,True,,1.0,1.017,0.966,10,0,0,islands of the Pacific ; in the Sandwich Islands the Bulimi,islands of the Pacific: in the Sandwich Islands the Bulimi
+8966753,101,True,,1.0,1.0,1.0,10,0,0,"are replaced by the genus Achatinella, and in the Society","are replaced by the genus Achatinella, and in the Society"
+8966753,102,True,,1.0,1.019,0.945,10,1,0,Islands their place is occupied by the ParlulrB. In the,Islands their place is occupied by the Partulæ. In the
+8966753,103,True,,1.0,1.038,0.926,9,1,1,West Indies the genera Achatina and Glaiidiiia seem to,West Indies the genera Achatina and Glandina seem to
+8966753,104,True,,1.0,1.0,1.0,8,0,0,prevail. Howsoever abundant is the genus Bulimus in,prevail. Howsoever abundant is the genus Bulimus in
+8966753,105,True,,1.0,1.0,1.0,9,0,0,"most of the islands of the Eastern Archipelago, few","most of the islands of the Eastern Archipelago, few"
+8966753,106,True,,1.0,1.0,1.0,10,0,0,species appear to inhabit the great territories of India and,species appear to inhabit the great territories of India and
+8966753,107,True,,1.0,1.019,0.926,10,2,0,"Cliina, Ou the coast of Borneo a beautiful species was",China. On the coast of Borneo a beautiful species was
+8966752,1,True,,1.0,1.0,0.706,3,1,0,BULIMUS.-Plate I.,BULIMUS.—PLATE I.
+8966752,3,True,,1.0,1.0,1.0,10,0,0,"recently discovered by Mr. Adams, of H.M.S. Samarang,","recently discovered by Mr. Adams, of H.M.S. Samarang,"
+8966752,4,True,,1.0,1.0,1.0,12,0,0,"by the accidental falling of a huge tree, in a woody islet","by the accidental falling of a huge tree, in a woody islet"
+8966752,5,True,,1.0,1.0,1.0,7,0,0,"situated between Banguey and Balambangan, but they","situated between Banguey and Balambangan, but they"
+8966752,6,True,,1.0,1.0,0.965,10,1,0,"are of rare occurrence in that locality. In Em'ope, where","are of rare occurrence in that locality. In Europe, where"
+8966752,7,True,,1.0,1.017,0.966,10,1,0,"natui-e is exposed to the vicissitudes of a colder climate,","nature is exposed to the vicissitudes of a colder climate,"
+8966752,8,True,,1.0,1.0,1.0,10,0,0,the Bulimi are mostly small and exhibit no brilliancy of,the Bulimi are mostly small and exhibit no brilliancy of
+8966752,9,True,,1.0,1.017,0.966,10,1,0,"colour. So also, in the extensive region of North Ajnerica,","colour. So also, in the extensive region of North America,"
+8966752,10,True,,1.0,1.0,1.0,10,0,0,where no more than a few insignificant species are known,where no more than a few insignificant species are known
+8966752,11,True,,1.0,1.017,0.967,12,1,0,to exist. It is in the riclily fertile and woody district of,to exist. It is in the richly fertile and woody district of
+8966752,12,True,,1.0,1.0,0.926,9,1,1,"Columbia, that the genus BuUmtis is represented with a","Columbia, that the genus Bulimus is represented with a"
+8966752,13,True,,1.0,1.0,1.0,8,0,0,magnificence little inferior to that of the Philippine,magnificence little inferior to that of the Philippine
+8966752,14,True,,0.981,1.0,0.942,8,1,0,Islands ; here they are large enough and sufBciently,Islands; here they are large enough and sufficiently
+8966752,15,True,,1.0,1.0,1.0,11,0,0,abundant to be roasted and eaten by the aborigines as a,abundant to be roasted and eaten by the aborigines as a
+8966752,16,True,,1.0,1.0,1.0,8,0,0,"frequent article of food. Several fine species, entirely","frequent article of food. Several fine species, entirely"
+8966752,17,True,,1.0,1.0,1.0,9,0,0,"new to science, have been collected in Venezuela and","new to science, have been collected in Venezuela and"
+8966752,18,True,,1.0,1.0,1.0,8,0,0,"New Granada by Mr. Linden, an assiduous Botanical","New Granada by Mr. Linden, an assiduous Botanical"
+8966752,19,True,,1.0,1.0,1.0,9,0,0,"Traveller, only within the last twelvemonth, at an altitude","Traveller, only within the last twelvemonth, at an altitude"
+8966752,20,True,,1.0,1.0,1.0,11,0,0,"of from 5000 to 8000 feet, and many more, no doubt,","of from 5000 to 8000 feet, and many more, no doubt,"
+8966752,21,True,,1.0,1.0,0.931,10,1,0,tw(>U in undisturbed solitude in the vast interior of this,dwell in undisturbed solitude in the vast interior of this
+8966752,22,True,,1.0,1.0,1.0,9,0,0,immense continent. It is extremely probable that a large,immense continent. It is extremely probable that a large
+8966752,23,True,,1.0,1.0,1.0,10,0,0,portion of South America yet remains to be explored by,portion of South America yet remains to be explored by
+8966752,24,True,,1.0,1.0,0.966,10,1,0,"the adventm-ous naturalist, where there is no doubt a fine","the adventurous naturalist, where there is no doubt a fine"
+8966752,25,True,,1.0,1.0,1.0,10,0,0,"expanse of forest country, grand in extent, rich in foliage,","expanse of forest country, grand in extent, rich in foliage,"
+8966752,26,True,,1.0,1.0,1.0,9,0,0,and possessing all the elements favourable to the growth,and possessing all the elements favourable to the growth
+8966752,27,True,,0.969,0.969,0.938,5,1,0,and beauty of arboreal moUusks.,and beauty of arboreal mollusks.
+8966752,29,True,,1.0,1.0,1.0,4,0,0,Species 1. (Mus. Cuming.),Species 1. (Mus. Cuming.)
+8966752,31,True,,1.0,1.061,0.615,6,5,2,"BuLiMUs jiac;rostom.\. Bid. testa ovali, ventricosd,","BULIMUS MACROSTOMA. Bul. testâ ovali, ventricosâ,"
+8966752,32,True,,0.982,1.071,0.567,5,5,0,"yjirn sii/jfiUrerin/ri., mifradihis setiis, convexo-tumicUs,","spirâ subabbreviatâ, anfractibus senis, convexo-tumidis,"
+8966752,33,True,,0.981,1.148,0.557,6,5,0,rniirriitrirr xtrhilis^ ciilniiielld basi siibcontorta ; pnr-,"concentricè striatis, columellâ basi subcontortâ; pur-"
+8966752,34,True,,1.0,1.204,0.538,6,3,0,"piirvd-fii^iii. ,'jiiiln-ifiiili' Injdrophand, in anfractu ultimo","pureo-fuscâ, epidermide hydrophanâ, in anfractu ultimo"
+8966752,35,True,,1.0,1.231,0.484,6,6,0,"iiiiizniKiIti, iiiihdii ,■ niii'iiurd cmruleacente-alhd, lahro","unizonatâ, indutâ; aperturâ crulescente-albâ, labro"
+8966752,38,True,,1.0,1.0,0.638,6,3,1,"The wide-mouth Bulimus. Shell oval, ventricose,","THE WIDE-MOUTH BULIMUS. Shell oval, ventricose,"
+8966752,39,True,,0.98,0.98,0.898,7,2,0,"spu'c sUghtly abbreviated, whorls six in number,","spire slightly abbreviated, whorls six in number,"
+8966752,40,True,,1.0,1.0,1.0,5,0,0,"convexly tumid, concentrically striated, columella","convexly tumid, concentrically striated, columella"
+8966752,41,True,,1.0,1.02,0.962,7,0,0,"slightly twisted at the base ; purple-brown, covered","slightly twisted at the base, purple-brown, covered"
+8966752,42,True,,1.0,1.0,1.0,8,0,0,"with a hydrophauous epidermis, marked with a single","with a hydrophauous epidermis, marked with a single"
+8966752,43,True,,1.0,1.02,0.981,9,0,0,"zone on the last whorl ; aperture blueish white, lip","zone on the last whorl; aperture blueish white, lip"
+8966752,46,True,,0.975,0.975,0.775,7,2,0,"Pfeiffer, Pro. Zool. Soc, 1843, p. 152.","PFEIFFER, Pro. Zool. Soc., 1842, p. 152."
+8966752,48,True,,1.0,1.0,1.0,8,0,0,"Hab. Sual, Province of Pangasinan, Island of Luzon,","Hab. Sual, Province of Pangasinan, Island of Luzon,"
+8966752,49,True,,1.0,1.024,0.976,6,0,0,Philippines (on leaves of trees) ; Cuming.,Philippines (on leaves of trees); Cuming.
+8966752,51,True,,1.0,1.019,0.945,8,2,1,"TJiis species approaches the B. rnfogaster, it partakes","This species approaches the B. rufogaster, it partakes"
+8966752,52,True,,1.0,1.0,1.0,11,0,0,"of the same shades of colour, and the epidermis is charac-","of the same shades of colour, and the epidermis is charac-"
+8966752,53,True,,1.0,1.017,0.983,12,0,0,terised by a similar zone round the last whorl ; it does not,terised by a similar zone round the last whorl; it does not
+8966752,54,True,,1.0,1.0,1.0,8,0,0,however exhibit the vacant patches beneath the sutures.,however exhibit the vacant patches beneath the sutures.
+8966752,55,True,,1.0,1.036,0.912,9,3,1,"The columella uf B. iiiacrostoma is slightlv twisted, and","The columella of B. macrostoma is slightly twisted, and"
+8966752,57,True,,1.0,1.0,1.0,9,0,0,the general form of the shell is eminently distinguished,the general form of the shell is eminently distinguished
+8966752,58,True,,0.97,0.97,0.939,5,1,0,by its swoUen egg-shaped growth.,by its swollen egg-shaped growth.
+8966752,60,True,,1.0,1.0,0.949,8,2,0,Species 3. (Pig. a and b. Mus. Cuming.),Species 2. (Fig. a and b. Mus. Cuming.)
+8966752,62,True,,1.0,1.019,0.585,5,5,1,"Bulimus pythogastee. Bui. testa subpyraviidali-ovatd,","BULIMUS PYTHOGASTER. Bul. testâ subpyramidali-ovatâ,"
+8966752,63,True,,0.981,0.981,0.962,5,1,0,"anfractibm senis, plano-convexis, ultimo ventricoso,","anfractibus senis, plano-convexis, ultimo ventricoso,"
+8966752,64,True,,1.0,1.058,0.673,5,4,0,"cohwielld recta ; piirpureo-niyrirnide, rpiJi'miide in-","columellâ rectâ; purpureo-nigricante, epidermide in-"
+8966752,65,True,,1.0,1.212,0.603,5,4,0,"terdniii simplici, interd mil loiiijilinViiiiiViti'r atriijatd,","terdum simplici, interdum longitudinaliter strigatâ,"
+8966752,66,True,,0.981,1.038,0.63,5,5,0,"npertiird ctenilesceitte-albd, columt/ld nmnrro-purpu-","aperturâ crulescente-albâ, columellâ rosaceo-purpu-"
+8966752,69,True,,1.0,1.0,0.667,6,3,1,The oriental Bulimus. Shell somewhat pyramidally,THE ORIENTAL BULIMUS. Shell somewhat pyramidally
+8966752,70,True,,1.0,1.0,1.0,9,0,0,"ovate, whorls six in number, flatly convex, the last","ovate, whorls six in number, flatly convex, the last"
+8966752,71,True,,1.0,1.019,0.963,5,0,0,"ventricose, columella straight ; purple-black, epider-","ventricose, columella straight; purple-black, epider‐"
+8966752,72,True,,1.0,1.0,1.0,7,0,0,"mis sometimes simple, sometimes arranged in longi-","mis sometimes simple, sometimes arranged in longi-"
+8966752,73,True,,1.0,1.04,0.923,6,2,0,"tudinal streaks, apertui'e blueish wliite, columella","tudinal streaks, aperture blueish white, columella"
+8966752,74,True,,1.0,1.067,0.875,2,1,0,pinkish piu-ple.,pinkish purple.
+8966752,76,True,,1.0,1.0,0.792,9,2,0,"Ferussac, Lamarck, Anim. sans vert, vol.viii. p. 33G.","FERUSSAC, Lamarck, Anim. sans vert. vol.viii. p. 226."
+8966752,78,True,,1.0,1.034,0.933,11,2,0,"Hub. Fig. /I, Island of Ticao ; Fig. b, Mount Isarog, Island","Hab. Fig. a, Island of Ticao; Fig. b, Mount Isarog, Island"
+8966752,79,True,,1.0,1.02,0.981,8,0,0,"of Luzon, Philippines (on leaves of trees) ; Cuming.","of Luzon, Philippines (on leaves of trees); Cuming."
+8966752,81,True,,0.983,1.0,0.845,8,3,2,The examples ofB.pi/iko//nster selected for representation,The examples of B. pythogaster selected for representation
+8966752,82,True,,1.0,1.0,1.0,12,0,0,"vary so materially in form, as well as in the arrangement of","vary so materially in form, as well as in the arrangement of"
+8966752,83,True,,1.0,1.0,1.0,10,0,0,"the epidermis, that one might consider them to belong to","the epidermis, that one might consider them to belong to"
+8966752,84,True,,1.0,1.0,1.0,11,0,0,"distinct species, were it not for the similarity in the struc-","distinct species, were it not for the similarity in the struc-"
+8966752,85,True,,1.0,1.0,1.0,10,0,0,ture and colouring of the aperture. In the specimen from,ture and colouring of the aperture. In the specimen from
+8966752,86,True,,1.0,1.0,1.0,11,0,0,"Ticao, Fig. a, the shell is broader and more acutely ven-","Ticao, Fig. a, the shell is broader and more acutely ven-"
+8966752,87,True,,1.0,1.0,1.0,10,0,0,"tricose at the base, and the epidermis is arranged in","tricose at the base, and the epidermis is arranged in"
+8966752,88,True,,1.0,1.034,0.95,10,1,0,"longitudinal streaks ; in that fi-om Luzon, Fig. b, the base","longitudinal streaks; in that from Luzon, Fig. b, the base"
+8966752,89,True,,1.0,1.0,1.0,8,0,0,"is somewhat contracted, imparting a more pyramidal form","is somewhat contracted, imparting a more pyramidal form"
+8966752,90,True,,0.983,0.983,0.915,12,2,0,"to the shcU, the apex is dark pm-ple, and the epidermis is","to the shell, the apex is dark purple, and the epidermis is"
+8966752,91,True,,1.0,1.017,0.966,7,1,0,"soft and velvety, uniformly distributed thi'oughout without","soft and velvety, uniformly distributed throughout without"
+8966752,92,True,,1.0,1.0,1.0,4,0,0,any description of pattern.,any description of pattern.
+8966752,94,True,,1.0,1.0,1.0,4,0,0,Species 3. (Mus. Cuming.),Species 3. (Mus. Cuming.)
+8966752,96,True,,1.0,1.019,0.611,6,6,2,"Bulimus lignarius. Bid. testa ovato-conoided, veiitri-","BULIMUS LIGNARIUS. Bul. testâ ovato-conoideâ, ventri-"
+8966752,97,True,,0.962,1.038,0.796,5,4,0,"cosisslmd, anfractibm senis, tmiiido-convexis ; colit-","cosissimâ, anfractibus senis, tumido-convexis; colu‐"
+8966752,98,True,,1.0,1.02,0.904,5,3,0,"melld recta; purpureo-nigricante, €pid4'rmide lineis","mellâ rectâ; purpureo-nigricante, epidermide lineis"
+8966752,99,True,,0.981,0.981,0.926,7,1,0,"fasciiMjne in anfractu ultimo, et interdum penultimo,","fasciisque in anfractu, ultimo, et interdum penultimo,"
+8966752,100,True,,0.962,0.962,0.774,6,6,0,"Hotatd; aperturd caridescente-albd, columeUd Uvido-","notatâ; aperturâ crulescente-albâ, columellâ livido-"
+8966752,103,True,,1.0,1.0,0.725,8,3,1,"The wooden Bulimus. Shell ovately conoid, very ven-","THE WOODEN BULIMUS. Shell ovately conoid, very ven-"
+8966752,104,True,,1.0,1.038,0.944,8,1,0,"tricose, whorls six in number, timiidly convex ; colu-","tricose, whorls six in number, tumidly convex; colu-"
+8966752,105,True,,0.98,1.02,0.904,6,2,0,"meUa straight ; purple-black, epidei-mis marked with","mella straight; purple-black, epidermis marked with"
+8966752,106,True,,1.0,1.0,1.0,10,0,0,bands or lines on the last and sometimes the penul-,bands or lines on the last and sometimes the penul-
+8966752,107,True,,1.0,1.019,0.981,6,0,0,"timate whorl ; aperture blueish-white, columella livid","timate whorl; aperture blueish-white, columella livid"
+8966752,110,True,,0.969,0.969,0.719,5,2,0,"Pfeiffer, Pro. Zool. Soc, 1843.","PFEIFFER, Pro. Zool. Soc., 1842."
+8966752,112,True,,1.0,1.0,0.981,8,1,0,"Hah. Gattarang, Province of Cagayan, Island of Luzon,","Hab. Gattarang, Province of Cagayan, Island of Luzon,"
+8966752,113,True,,1.0,1.024,0.976,6,0,0,Philippines (on leaves of trees) ; Cuming.,Philippines (on leaves of trees); Cuming.
+8966751,1,True,,1.0,1.118,0.444,3,3,0,BULBIL'S.— Plate L,BULIMUS.—PLATE I.
+8966751,3,True,,1.0,1.0,1.0,10,0,0,"This is the largest of the Philippine species, and that","This is the largest of the Philippine species, and that"
+8966751,4,True,,1.0,1.0,1.0,9,0,0,of the most ventricose proportions. The columella is of,of the most ventricose proportions. The columella is of
+8966751,5,True,,1.0,1.0,1.0,9,0,0,"a livid blueish purple, and the epidermal pattern consists","a livid blueish purple, and the epidermal pattern consists"
+8966751,6,True,,1.0,1.0,0.944,10,1,0,"of a number of circidar bands or lines, frequently ex-","of a number of circular bands or lines, frequently ex‐"
+8966751,7,True,,1.0,1.039,0.943,8,1,0,tending around the last and penultimate whorls ; tiie,tending around the last and penultimate whorls; the
+8966751,8,True,,1.0,1.0,1.0,10,0,0,"specimen figured, in which the bands are confined to the","specimen figured, in which the bands are confined to the"
+8966751,9,True,,1.0,1.0,1.0,7,0,0,"last whorl, is rather an exceptional variety.","last whorl, is rather an exceptional variety."
+8966751,11,True,,1.0,1.0,1.0,4,0,0,Species 4. (Mus. Cuming.),Species 4. (Mus. Cuming.)
+8966751,13,True,,0.98,0.98,0.824,6,4,1,"BuLiMUS RUFOGASTER. Bid. testd ovato-comided, sub-","BULIMUS RUFOGASTER. Bul. testâ ovato-conoideâ, sub‐"
+8966751,14,True,,1.0,1.055,0.828,6,5,0,"veiitricosd, anfractibtis senis, convexin, columella suli-","ventricosâ, anfractibus senis, convexis, columellâ sub‐"
+8966751,15,True,,1.0,1.02,0.941,4,2,0,"intortd ; nigricante-purpured, interdum rufescente,","intortâ; nigricante-purpureâ, interdum rufescente,"
+8966751,16,True,,1.0,1.018,0.929,6,1,0,"epidermide basin versus ttnifasciatd, strigis longitudi-","epidermide basin versus unifasciatâ, strigis longitudi‐"
+8966751,17,True,,1.0,1.0,0.964,7,2,0,"naliius nigricantibus, prope ad suturas latiorihus, no-","nalibus nigricantibus, prope ad suturas latioribus, no-"
+8966751,18,True,,1.0,1.0,0.898,4,4,0,"tatd, aperturd columelldgue cwrulescente-albidis.","tatâ, aperturâ columellâque cœrulescente-albidis."
+8966751,20,True,,1.0,1.0,0.766,7,3,1,"The red Bclimus. Shell ovately conoid, somewhat","THE RED BULIMUS. Shell ovately conoid, somewhat"
+8966751,21,True,,1.0,1.0,1.0,7,0,0,"ventricose, whorls six in number, convex, columella","ventricose, whorls six in number, convex, columella"
+8966751,22,True,,1.0,1.0,1.0,6,0,0,"somewhat twisted; blackish purple, sometimes reddish,","somewhat twisted; blackish purple, sometimes reddish,"
+8966751,23,True,,1.0,1.0,1.0,8,0,0,epidermis marked towards the base with a single,epidermis marked towards the base with a single
+8966751,24,True,,1.0,1.02,0.962,8,1,0,"band, and with dark longitudinal streaks, wliich are","band, and with dark longitudinal streaks, which are"
+8966751,25,True,,1.0,1.0,1.0,7,0,0,"broader near the sutures, aperture and columella","broader near the sutures, aperture and columella"
+8966751,28,True,,1.0,1.0,1.0,10,0,0,"Hab. Province of Baie, Island of Luzon (in dark and","Hab. Province of Baie, Island of Luzon (in dark and"
+8966751,29,True,,1.0,1.043,0.958,3,0,0,lofty forests) ; Cuming.,lofty forests); Cuming.
+8966751,31,True,,1.0,1.0,1.0,10,0,0,"In this species the columella is slightly twisted, and of","In this species the columella is slightly twisted, and of"
+8966751,32,True,,1.0,1.0,1.0,11,0,0,the same blueish white hue as the interior of the shell.,the same blueish white hue as the interior of the shell.
+8966751,33,True,,1.0,1.035,0.915,10,2,0,TJie pattern of the cpidei-mis exhibits a single band round,The pattern of the epidermis exhibits a single band round
+8966751,34,True,,1.0,1.0,1.0,12,0,0,"the lower part of the last whorl, and a row of broad,","the lower part of the last whorl, and a row of broad,"
+8966751,35,True,,1.0,1.0,1.0,8,0,0,"short, interrupted streaks around the sutures. This last","short, interrupted streaks around the sutures. This last"
+8966751,36,True,,1.0,1.0,1.0,10,0,0,mentioned design I have not observed in any other species.,mentioned design I have not observed in any other species.
+8966751,38,True,,1.0,1.0,1.0,4,0,0,Species 5. (Mus. Cuming.),Species 5. (Mus. Cuming.)
+8966751,40,True,,1.0,1.0,0.72,5,4,1,"IkLiMUs PuiLiPPiNENSis. Bul. testd ovnto-conoidcd,","BULIMUS PHILIPPINENSIS. Bul. testâ ovato-conoideâ,"
+8966751,41,True,,0.981,0.981,0.907,6,3,0,"ba.u subplanulatd, anfractibm senis, convexis, ultimo","basi subplanulatâ, anfractibus senis, convexis, ultimo"
+8966751,42,True,,1.0,1.02,0.904,6,4,0,basin versus subobscure angulaio ; columella leviler,basin versus subobscurè angulato; columellâ leviter
+8966751,43,True,,1.0,1.0,0.929,6,3,0,"intortd; nigricanie-fuscd, epidermide in strigis oblique","intortâ; nigricante-fuscâ, epidermide in strigis obliquè"
+8966751,44,True,,0.982,0.982,0.857,5,3,0,"concentricis, aperturd candescente-albd, columella pal-","concentricis, aperturâ cœrulescente-albâ, columellâ pal‐"
+8966751,45,True,,1.0,1.0,0.963,2,1,0,lida rosaceo-purpurascente.,lidè rosaceo-purpurascente.
+8966751,47,True,,1.0,1.039,0.642,7,3,1,"TiiK Philiim'Ine Bulimcs. Shell ovately conoid, some-","THE PHILIPPINE BULIMUS. Shell ovately conoid, some‐"
+8966751,48,True,,1.0,1.041,0.98,9,0,0,"what flattened at the base, whorls six in number.","what flattened at the base, whorls six in number,"
+8966751,50,True,,1.0,1.0,1.0,7,0,0,"convex, last whorl somewhat obscurely angled towards","convex, last whorl somewhat obscurely angled towards"
+8966751,51,True,,1.0,1.038,0.964,6,0,0,"the base ; columella slightly twisted ; blackish-brown,","the base; columella slightly twisted; blackish-brown,"
+8966751,52,True,,1.0,1.0,0.961,6,1,0,"epidennis disposed in obliquely concentric streaks,","epidermis disposed in obliquely concentric streaks,"
+8966751,53,True,,1.0,1.019,0.964,7,1,0,"aperture blueish wliite, columella pale pinkish purple.","aperture blueish white, columella pale pinkish purple."
+8966751,55,True,,0.969,0.969,0.75,5,1,0,"Pfeiffer, Pro. Zool. Soc, 1846.","PFEIFFER, Pro. Zool. Soc., 1846."
+8966751,57,True,,1.0,1.019,0.963,8,1,0,"JIab. Islands of Luzon and Marinduque, Philippines (on","Hab. Islands of Luzon and Marinduque, Philippines (on"
+8966751,58,True,,1.0,1.069,0.903,5,1,0,the leaves of trees) ; Ciuning.,the leaves of trees); Cuming.
+8966751,60,True,,1.0,1.019,0.962,9,1,0,There is little to distingiiish this species from the,There is little to distinguish this species from the
+8966751,61,True,,1.0,1.036,0.897,9,1,1,B. pijlhoganler ; it has a somewhat angular inclination of,B. pythogaster; it has a somewhat angular inclination of
+8966751,62,True,,1.0,1.0,1.0,11,0,0,"growth around the lower part, but this is not a character","growth around the lower part, but this is not a character"
+8966751,63,True,,1.0,1.0,1.0,9,0,0,"to which much importance can be attached, seeing that","to which much importance can be attached, seeing that"
+8966751,64,True,,1.0,1.0,1.0,9,0,0,the typical varieties above figured of that species present,the typical varieties above figured of that species present
+8966751,65,True,,1.0,1.0,1.0,7,0,0,almost as great a difference of form.,almost as great a difference of form.
+8966751,67,False,coverage 0.64,0.64,0.64,0.56,4,2,0,(Mus. Cuming.),Species 6. (Mus. Cuming.)
+8966751,69,True,,1.0,1.019,0.796,6,4,0,"BULIMUS Reevii. Bul. testd oblongo-ovatd, aiifraciibux","BULIMUS REEVII. Bul. testâ oblongo-ovatâ, anfractibus"
+8966751,70,True,,1.0,1.036,0.931,6,2,0,"senis, tumidiusculis, ultimo ventricoso, ejf'uso ; intense","senis, tumidiusculis, ultimo ventricoso, effuso; intensè"
+8966751,71,True,,0.966,0.983,0.847,6,5,0,"ustulato-fuscd, epidermide infaseiis insignibm laliuscidis","ustulato-fuscâ,epidermide in fasciis insignibus latiusculis"
+8966751,72,True,,0.982,0.982,0.895,5,2,0,"remotis lineisque subtilibus, aperturd candescente-albd,","remotis lineisque subtilibus, aperturâ cœrulescente-albâ,"
+8966751,73,True,,0.98,0.98,0.863,5,2,0,"cohmieUd vix intortd, peritremate livido-purpuras-","columellâ vix intortâ, peritremate livido-purpuras-"
+8966751,76,True,,1.0,1.0,0.76,8,3,1,"Reeve's Bulimus. Shell oblong-ovate, whorls six in","REEVE′S BULIMUS. Shell oblong-ovate, whorls six in"
+8966751,77,True,,1.0,1.02,0.96,7,1,0,"nimiber, rather swollen, last whorl ventricose and","number, rather swollen, last whorl ventricose and"
+8966751,78,True,,1.0,1.0,1.0,7,0,0,"effused; rich burnt-brown, with the epidermis in","effused; rich burnt-brown, with the epidermis in"
+8966751,79,True,,1.0,1.0,0.961,8,1,0,"remarkable rather broad bands and fine lines, apcr-","remarkable rather broad bands and fine lines, aper‐"
+8966751,80,True,,1.0,1.038,0.907,7,2,0,"tui-e blueish white, columella sc;u-cely twisted, and,","ture blueish white, columella scarcely twisted, and,"
+8966751,81,True,,0.98,0.98,0.922,9,2,0,"together with the pcritreme, of a h^id purple hue.","together with the peritreme, of a livid purple hue."
+8966751,83,True,,1.0,1.0,0.808,4,1,0,"Cuming, MSS., Mus. Cuming.","CUMING, MSS., Mus. Cuming."
+8966751,85,True,,1.0,1.022,0.894,7,2,0,"Helix Reevii, Broderip, Pro. Zool. Soe., lS-11.","Helix Reevii, Broderip, Pro. Zool. Soc., 1841."
+8966751,87,True,,1.0,1.0,0.94,8,1,0,"IM. Luhban, Province of Tayabas, Island of Luzon,","Hab. Luhban, Province of Tayabas, Island of Luzon,"
+8966751,88,True,,1.0,1.022,0.978,7,0,0,Philippines (on the leaves of trees) ; Cuming.,Philippines (on the leaves of trees); Cuming.
+8966751,90,True,,1.0,1.0,1.0,11,0,0,"This is the first species of Bulimus, and I believe the","This is the first species of Bulimus, and I believe the"
+8966751,91,True,,1.0,1.0,1.0,9,0,0,"first shell, which Mr. Cuming unpacked from his vast","first shell, which Mr. Cuming unpacked from his vast"
+8966751,92,True,,1.0,1.0,1.0,9,0,0,"collection on his return from the Philippines, and, being","collection on his return from the Philippines, and, being"
+8966751,93,True,,1.0,1.0,1.0,10,0,0,"present at this exciting moment, I shall not easily forget","present at this exciting moment, I shall not easily forget"
+8966751,94,True,,1.0,1.0,1.0,11,0,0,the impression caused by the sight of so superb an example,the impression caused by the sight of so superb an example
+8966751,95,True,,1.0,1.0,1.0,9,0,0,of an arboreal Snail. The remarkable disposition of the,of an arboreal Snail. The remarkable disposition of the
+8966751,96,True,,1.0,1.0,1.0,9,0,0,"epidermis was quite a matter of astonishment, nothing of","epidermis was quite a matter of astonishment, nothing of"
+8966751,97,True,,1.0,1.0,1.0,10,0,0,"the kind had been observed before, nor had any specimen","the kind had been observed before, nor had any specimen"
+8966751,98,True,,1.0,1.07,0.869,11,2,0,of the 7?. pi/tliogaster been collected in a state of preser-,of the B.phthogaster been collected in a state of preser‐
+8966751,99,True,,1.0,1.077,0.839,8,3,0,vation by wliich this iihenomeiion could be unilcrstood.,vation by which this phenomenon could be understood.

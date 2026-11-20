@@ -440,3 +440,5 @@ Claude API 计入 $100 预算（已用约 $43）。Gemini 的运行尽量在 202
 | 2026-11-20 | 计划 | 四项决定：封存 16 页（先标 8 页）；Cuvier 作留出书；模块六比较"现用 Opus 5.5"与"候选 Haiku 5.5"，标准中加格式符合率；外部审计仓库名 `benchmark-audits` | Gloria 授权 Claude 判断 |
 | 2026-11-20 | 第 0 步 | **完成**：封存 16 页（`rl/sealed/pages.csv`，抽样框 Butler 208 页、Reeve 259 页）；任务 B 划分（`rl/env/task_b_ocr_repair/splits.csv`）：Cuvier 516 页留出，训练 1,277 页、开发 167 页、同书内测试 167 页，排除 38 页（22 个样本页 + 16 个封存页）。详见 `rl/LOG.md` | Claude 执行，Gloria 同意开始 |
 | 2026-11-20 | 2A | **完成第一轮**：68 个对抗案例；发现值对引语保真度不敏感（G0 模糊定位、G1 静默更正仍得满分，8 例）、引号未去除（3 例）、空回答等同于"什么都没找到"（3 例）。补丁版只剩空回答一项（需在环境层标记）。冻结的测试运行中这些情况出现 0 次，已报告的数字不变。详见 `rl/verifier_audit/adversarial/REPORT.md`、`rl/REWARD_AUDIT.md` | Claude 执行，待 Gloria 审 |
+| 2026-11-20 | 2A | 状态记为 "First-round audit completed; additional fidelity and parser checks pending"，下一阶段不等补充测试 | Gloria |
+| 2026-11-20 | 任务 B 第 1–3 步 | 按 Gloria 的顺序先做 Reeve 4 页试验：357 行中 356 行对齐；两次词对齐和 Reward v1.0（含诊断字段）；10 类零成本对抗检查，发现并修复 2 个奖励 bug。规则变更：排版连字（U+FB00–FB06）折叠为字母（æ、œ、ſ 保留）；相似度门槛 0.5 → 0.3；新增 extra_words（按对齐判定插入）。待定：扣分的归一化方式、长 s。见 `rl/env/task_b_ocr_repair/pilot/REPORT.md` | Claude 执行，待 Gloria 决定 |
