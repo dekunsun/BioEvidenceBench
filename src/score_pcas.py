@@ -21,7 +21,7 @@ from common import ROOT
 from score import norm_value
 
 GOLDS = {"as labelled": ROOT / "gold" / "gold_mentions_pcas_gloria.csv",
-         # Gloria's decisions made AFTER seeing model outputs (gold/gold_changes_gloria.csv, 2026-11-20):
+         # Gloria's decisions made AFTER seeing model outputs (gold/gold_changes_pcas_gloria.csv, 2026-11-20):
          # titles out of person spans, narrow-to-wide chains as one span, one institution, a part-of-place
          # phrase, and `Carolinæ` as printed. Both are reported; neither replaces the other.
          "adjudicated": ROOT / "gold" / "gold_mentions_pcas_gloria_adjudicated.csv"}

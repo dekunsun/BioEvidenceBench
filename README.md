@@ -132,7 +132,7 @@ the PCAS case (`data/pcas/`, labels pending) is a check on other material, but i
 
 ## PCAS botany case (external, reported separately)
 
-Eastwood 1898, *Proc. Cal. Acad. Sci.* 3rd ser. Botany vol. 1, 8 pages (BHL item 48989; no expert transcription). Gloria labelled 210 mentions against the scans before any model ran (`gold/received/2026-11-20_pcas_gloria.tsv`); after seeing the outputs she adjudicated five boundary questions by the guide (titles out of person spans, narrow-to-wide chains as one span, one institution, a part-of-place phrase, `Carolinæ` as printed; `gold/gold_changes_gloria.csv`). Both versions are reported. Value-level F1, Opus 5.5, 8 pages pooled (no interval):
+Eastwood 1898, *Proc. Cal. Acad. Sci.* 3rd ser. Botany vol. 1, 8 pages (BHL item 48989; no expert transcription). Gloria labelled 210 mentions against the scans before any model ran (`gold/received/2026-11-20_pcas_gloria.tsv`); after seeing the outputs she adjudicated five boundary questions by the guide (titles out of person spans, narrow-to-wide chains as one span, one institution, a part-of-place phrase, `Carolinæ` as printed; `gold/gold_changes_pcas_gloria.csv`). Both versions are reported. Value-level F1, Opus 5.5, 8 pages pooled (no interval):
 
 | Condition | as labelled | adjudicated | taxon (either) |
 |---|---|---|---|
@@ -140,7 +140,7 @@ Eastwood 1898, *Proc. Cal. Acad. Sci.* 3rd ser. Botany vol. 1, 8 pages (BHL item
 | LLM repair (G2) on legacy OCR | 0.83 | 0.94 | 0.96 |
 | Page image only (V1) | 0.83 | 0.94 | 0.99 |
 
-The main experiment's pattern holds on botany: legacy OCR costs most on names, and repair or reading the image recovers it. New here: joint botanical authorities (`H. & A.`, `Torr. & Gr.`) are labelled as one person span in gold but split into two by the model. Public text again, so contamination is not excluded. `src/score_pcas.py`, `results/pcas/`.
+The main experiment's pattern holds on botany: legacy OCR costs most on names, and repair or reading the image recovers it. New here: joint botanical authorities (`H. & A.`, `Torr. & Gr.`) are one person span (Gloria's rule, `GUIDE_ADDENDUM.md`), and the model splits them into two, a domain-specific error the bird and shell books did not show. Public text again, so contamination is not excluded. `src/score_pcas.py`, `results/pcas/`.
 
 ## Limitations (known in advance)
 
