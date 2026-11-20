@@ -130,6 +130,10 @@ public, so repair and image reading may be helped by the model having seen these
 memorisation probe above found no sign of page memory in repair, but it cannot prove there is none;
 the PCAS case (`data/pcas/`, labels pending) is a check on other material, but it is public too.
 
+### Whole-book run and spot-check (exploratory)
+
+Frozen G1 prompt on all 682 text pages of both books (dots.mocr), Opus 5.5 $7.64 and Haiku 5.5 $0.40, 7.5 minutes per batch; on the 16 test pages inside the run, value F1 reproduces the evaluated setting (Opus 0.96 / 0.98). Gloria checked 60 shuffled Opus/Haiku outputs from outside the sample against the scans: setting aside `unsure`, 25 of 25 Opus outputs were correct, none misread; 19 of the 21 `unsure` rows are entries in Reeve's index, a scope the guide never defined (16% of Opus's output sits on `Index` pages); 10 of 14 Haiku-only outputs were real mentions Opus missed. Median 30 s per checked item (9 timed). `results/book_spotcheck/`.
+
 ## PCAS botany case (external, reported separately)
 
 Eastwood 1898, *Proc. Cal. Acad. Sci.* 3rd ser. Botany vol. 1, 8 pages (BHL item 48989; no expert transcription). Gloria labelled 210 mentions against the scans before any model ran (`gold/received/2026-11-20_pcas_gloria.tsv`); after seeing the outputs she adjudicated five boundary questions by the guide (titles out of person spans, narrow-to-wide chains as one span, one institution, a part-of-place phrase, `Carolinæ` as printed; `gold/gold_changes_pcas_gloria.csv`). Both versions are reported. Value-level F1, Opus 5.5, 8 pages pooled (no interval):
