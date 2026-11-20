@@ -76,7 +76,7 @@ def main() -> None:
     for d in sorted(RES.glob("linking_variants*")):
         cfg = json.loads((d / "config.json").read_text())
         rows.append({"Run": d.name, "Role": "exploratory", "Model": cfg.get("llm_model", "—"),
-                     "Provider": "anthropic", "Mode": "sync", "Effort": "—", "Prompt": "LLM linker",
+                     "Provider": "gemini" if "gemini" in cfg.get("llm_model", "") else "anthropic", "Mode": "sync", "Effort": "—", "Prompt": "LLM linker",
                      "Condition": "linking", "Text versions": "expert, dots-mocr, legacy", "Pages": "test (Butler)",
                      "Requests": "—", "Stop reasons": "—", "Errors": "—", "Input tokens": "—",
                      "Output tokens": "—", "Spend (US$)": round(cfg.get("new_llm_usd", 0.0), 2)})
