@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BioEvidenceBench poster</title>
+<style>
+@page { size: 24in 36in; margin: 0; }
+:root{
+  --ink:#15201c; --soft:#4d5a55; --faint:#6f7b76; --rule:#d9dee6; --panel:#ffffff; --ground:#ffffff;
+  --accent:#011F5B; --accent-soft:#e9edf5; --anom:#011F5B; --unk:#011F5B; --unk-soft:#e9edf5; --part:#4d5a55; --part-soft:#eef1f0;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:24in;height:36in;background:var(--ground);color:var(--ink);
+  font-family:"Helvetica Neue",Helvetica,Arial,"Noto Sans",sans-serif;font-size:26px;line-height:1.33}
+.poster{width:24in;height:36in;overflow:hidden;box-sizing:border-box;padding:0.733in 0.8in 0.533in;display:grid;grid-template-rows:auto 1fr;gap:0.3in}
+header{display:grid;grid-template-columns:1fr auto;gap:0.533in;align-items:center;background:var(--accent);color:#fff;margin:-0.733in -0.8in 0;padding:0.46in 0.8in 0.40in}
+.brand{display:grid;justify-items:center;gap:.75in;align-self:center}
+.brand .penn{width:3.5in;display:block}
+.hqr img{width:1.35in;height:1.35in;display:block;background:#fff;padding:.08in;border-radius:8px;margin:0 auto}
+.hqr span{display:block;font-size:26px;color:#b9c6e6;text-align:center;margin-top:0.067in}
+.kicker{font-size:26px;color:#b9c6e6;font-weight:700;margin:0 0 0.133in}
+h1{font-size:83px;line-height:1.05;margin:0 0 0.167in;font-weight:700;color:#fff}
+.sub{font-size:34px;color:#dfe5f3;margin:0 0 0.167in;max-width:20in}
+.key{font-size:34px;color:#fff;margin:.08in 0 .2in;line-height:1.3;max-width:19.5in}
+.key b{color:#fff;font-weight:700}
+.authors{font-size:26px;margin:0;color:#fff}
+.authors b{font-weight:700}
+.authors .aff{color:#b9c6e6}
+main{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.367in;min-height:0}
+.col{display:flex;flex-direction:column;gap:0.62in;min-height:0}
+section{background:var(--panel);padding:0 0 0.133in}
+.act{font-size:34px;color:#fff;background:var(--accent);font-weight:700;margin:0 0 0.2in;padding:0.107in 0.2in;border-radius:4px}
+h2{font-size:26px;line-height:1.3;margin:0 0 .14in;font-weight:700}
+h3{font-size:34px;margin:0.12in 0 0.067in;font-weight:700}
+p{margin:0 0 0.133in;max-width:none}
+ul{margin:0 0 0.1in;padding-left:0.367in}
+li{margin-bottom:0.067in}
+.callout{border:0;background:none;padding:0;margin:.14in 0;font-size:26px}
+.callout b{font-weight:700}
+table{border-collapse:collapse;width:100%;table-layout:fixed;font-size:26px;margin:0.067in 0 0.167in}
+th,td{text-align:left;padding:0.13in 0.12in;border-bottom:2px solid var(--rule);vertical-align:top}
+th{font-size:26px;color:var(--faint);font-weight:700}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tag{display:inline;font-size:26px;font-weight:700;color:var(--accent);margin-left:.06in;white-space:nowrap}
+figure{margin:0.1in 0 0.067in}
+figure img{width:100%;display:block;border:0;border-radius:0;background:#fff}
+.crop{overflow:hidden;border:0;background:#fff}
+.crop img{border:0;border-radius:0}
+figcaption{font-size:26px;color:var(--faint);margin-top:0.08in;line-height:1.35}
+.q{display:grid;grid-template-columns:0.6in 1fr;gap:0.167in;align-items:start;margin-top:0.067in}
+.q .n{font-size:26px;font-weight:700;color:var(--accent);line-height:1}
+.q h3{margin-top:0.033in}
+.stats{display:grid;grid-template-columns:1fr;gap:0.093in;margin:0.067in 0 0.067in}
+.stat{display:grid;grid-template-columns:1.733in 1fr;gap:0.167in;align-items:center}
+.stat .d{font-size:26px;color:var(--soft);margin-top:0;line-height:1.3}
+.stat{background:#f3f5f9;border:2px solid var(--rule);border-radius:8px;padding:0.08in 0.2in}
+.stat .v{font-size:26px;white-space:nowrap;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.stat .v.unk{color:var(--unk)} .stat .v.anom{color:var(--anom)}
+.stat .d{font-size:26px;color:var(--soft);margin-top:0.1in;line-height:1.3}
+.flowcap{font-size:26px;color:var(--soft);margin:0.067in 0 0}
+.flowcap b{color:var(--ink)}
+footer{display:block;border-top:6px solid var(--accent);padding-top:.3in}
+footer h2{font-size:34px}
+footer p,footer li{font-size:26px}
+.promo{background:#fff;border:2px solid var(--rule);border-radius:16px;padding:.15in .35in;display:grid;grid-template-columns:auto 1fr auto;gap:.5in;align-items:center}
+.promo .logo{width:3.4in;display:block;margin:0}
+.promo .tag-line{font-size:26px;color:var(--soft);font-weight:700;margin:0 0 .08in}
+.promo p{color:var(--soft);margin:0 0 .06in;font-size:26px}
+.promo .handle{font-size:26px;color:var(--ink);font-weight:700}
+.promo .qrs{display:grid;grid-template-columns:auto auto;gap:.3in;text-align:center;font-size:26px;color:var(--soft)}
+.promo .qrs img{width:1.25in;height:1.25in;display:block;margin:0 auto .04in;border:2px solid var(--rule);border-radius:8px;padding:.05in;background:#fff}
+.case{border:0;background:none;padding:0;margin:.12in 0 .1in;font-size:26px;line-height:1.38}
+.case h4{font-size:26px;margin:0 0 0.08in;font-weight:700}
+.case .ctx{color:var(--faint);margin:0 0 0.1in;font-size:26px}
+.case .step{margin:0 0 0.067in}
+.case code{font-family:inherit;font-size:26px;background:none;padding:0}
+.case q{font-style:normal}
+.case .truth{font-weight:700;color:var(--accent)}
+figure .case{margin:0.1in 0 0.067in}
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.12in}
+.trio>div{background:none;border:0;padding:.1in 0;text-align:left}
+.trio .v{font-size:26px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.trio .m{font-size:26px;color:var(--soft);margin-top:.07in}
+.trio-cap{font-size:26px;color:var(--soft);margin:.08in 0 .1in;line-height:1.3}
+svg text{font-family:inherit}
+.small{font-size:26px;color:var(--faint)}
+
+/* flexible grid of boxed panels */
+main{display:grid;grid-template-columns:repeat(3,1fr);gap:0.45in;align-items:stretch;min-height:0}
+.box{border:2px solid var(--rule);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.box.tall>.in{display:flex;flex-direction:column;justify-content:space-between;flex:1}
+.box>.act{margin:0;border-radius:0;padding:0.13in 0.25in}
+.box>.in{padding:0.52in 0.34in 0.40in}
+.stack{display:flex;flex-direction:column;gap:0.32in}
+.stack .box{flex:1}
+.w2{grid-column:span 2}
+.w3{grid-column:span 3}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.4in;padding-left:.3in}
+.row3 li{margin:0}
+.three{display:grid;grid-template-columns:1.45fr 0.75fr 1fr;gap:0.35in;align-items:start}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0.45in;align-items:start}
+.two.l3{grid-template-columns:0.36fr 0.64fr}
+.two.sys{grid-template-columns:1fr 1.25fr}
+.box h2{font-size:26px;margin:0 0 .14in;font-weight:700;color:var(--ink)}
+.box h3{margin:.05in 0 .1in}
+.box figure{margin:.1in 0 .05in}
+.box .q{margin-top:0}
+.sub-h{font-size:26px;font-weight:700;margin:0 0 .08in;color:var(--ink)}
+
+/* lighter panels */
+.box{border:1.5px solid var(--rule) !important;border-radius:10px}
+.box>.act{background:#eef1f7 !important;color:var(--accent) !important;border-bottom:1.5px solid var(--rule)}
+
+.callout{border-left-width:5px !important}
+/* rows with their own split, like the reference posters */
+main{display:flex !important;flex-direction:column;gap:0.36in;min-height:0}
+.row{display:grid;gap:0.4in;align-items:stretch}
+#r1{grid-template-columns:0.38fr 0.62fr}
+#r2{grid-template-columns:0.72fr 0.28fr}
+#r3{grid-template-columns:0.61fr 0.39fr}
+.box>.in{flex:1}
+#r1 .two{grid-template-columns:0.44fr 0.56fr}
+.two.r2b{grid-template-columns:0.62fr 0.38fr;margin-top:.3in}
+ul.concl li{margin-bottom:.08in;font-size:26px}
+figure.arms{width:100%;margin-left:auto;margin-right:auto}
+.note{margin:.18in 0 0;color:var(--soft)}
+footer.bar{display:grid;grid-template-columns:auto 1fr auto;gap:.5in;align-items:center;border-top:6px solid var(--accent);padding-top:.25in}
+footer.bar .logo{width:3.0in;display:block}
+footer.bar .bar-text{margin:0;color:var(--soft)}
+footer.bar .qrs{display:grid;grid-template-columns:auto auto;gap:.3in;text-align:center;font-size:26px;color:var(--soft)}
+footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
+.stack{display:flex;flex-direction:column;gap:0.4in}
+.stack>.box:first-child{flex:1}
+.stack>.box.contact{flex:none}
+.box.contact .ct{display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:center}
+.box.contact .ct p{margin:.04in 0}
+.box.contact .logo{width:2.6in;display:block;margin:0 0 .08in}
+.box.contact .qrs{display:grid;grid-template-columns:auto auto;gap:.2in;text-align:center;color:var(--soft)}
+.box.contact .qrs img{width:0.9in;height:0.9in;display:block;margin:0 auto .04in}
+.box.contact>.in{padding:0.26in 0.34in 0.2in}
+#r1 .two figure img{margin:0 auto}
+#r2 > .box:nth-child(2) > .in{display:flex;flex-direction:column}
+.gate{margin:.2in 0 0;white-space:nowrap}
+.social{display:flex;align-items:center;gap:.1in}
+.social .sico{display:block}
+.social span{margin-left:.04in}
+
+.ct2{display:grid;grid-template-columns:1fr auto;gap:.35in;align-items:start}
+.ct2-text .ai4s{width:2.6in;display:block;margin:0 0 .12in -.04in}
+.ct2-text p{margin:0;color:var(--soft)}
+.ct2-qr{text-align:center;color:var(--soft)}
+.ct2-qr img{width:0.92in;height:0.92in;display:block;margin:0 auto .06in}
+.ct2-social{display:flex;align-items:center;gap:.12in;margin-top:.14in}
+.ct2-social .sico{display:block;width:32px;height:32px}
+.ct2-social span{margin-left:.06in;font-weight:700;color:var(--ink)}
+.cx{display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:center}
+.cx-sep{margin-top:.12in;padding-top:.12in;border-top:1.5px solid var(--rule)}
+.cx-text p{margin:0 0 .03in;color:var(--soft)}
+.cx-text .ai4s{width:2.6in;display:block;margin:0 0 .1in -.04in}
+.cx-name{display:flex;align-items:center;gap:.1in;flex-wrap:wrap}
+.cx-name b,.cx-name span{color:var(--ink)}
+.cx-name .sico{display:block;width:30px;height:30px}
+.cx-qr{text-align:center;color:var(--soft)}
+.cx-qr img{width:100%;max-width:1.45in;aspect-ratio:1;height:auto;display:block;margin:0 auto .06in}
+.ink{color:var(--ink)}
+.cx-text .ai4s{width:2.1in;margin-bottom:.06in}
+.box.contact>.in{padding:0.3in 0.34in 0.24in}
+.cw{display:grid;grid-template-columns:max-content 1fr;gap:.3in;align-items:start}
+.cw-qrs{display:grid;grid-template-columns:1fr 1fr;gap:.2in}
+.box.contact .cw-left .ai4s{width:3.3in;display:block;margin:0 0 .14in -.05in}
+.cw-left p{margin:0;color:var(--soft)}
+.cw-rule{border-top:1.5px solid var(--rule);margin:.14in 0 .12in}
+.cw-line{margin:.16in 0 0;padding-top:.14in;border-top:1.5px solid var(--rule);color:var(--soft);white-space:nowrap}
+</style>
+<style>
+#r1{grid-template-columns:0.40fr 0.60fr}
+#r2{grid-template-columns:0.70fr 0.30fr}
+#r3{grid-template-columns:0.60fr 0.40fr}
+.charts2{display:grid;grid-template-columns:1fr 1fr;gap:.35in;align-items:start}
+.charts3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.3in;align-items:start}
+.dwide{margin-top:.2in}
+.charts2b{display:grid;grid-template-columns:0.44fr 0.56fr;gap:.35in;align-items:start;margin-top:.25in}
+.cap{font-size:26px;color:var(--soft);margin:.04in 0 0}
+.sub-h small{font-weight:400;color:var(--faint)}
+td.b{font-weight:700}
+.tagpre{color:var(--accent);font-weight:700}
+.tagexp{color:var(--faint);font-weight:700}
+.steps{display:grid;grid-template-columns:1fr;gap:.12in;margin:.1in 0 0}
+.st{display:grid;grid-template-columns:.62in 1fr auto;gap:.18in;align-items:center;border:2px solid var(--rule);border-radius:12px;padding:.1in .2in}
+.st .n{font-weight:700;color:var(--accent)}
+.st .w{font-weight:700}
+.st .l{color:var(--soft);white-space:nowrap}
+.st.hot{background:#eef1f7;border-color:var(--accent)}
+.flow3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.2in;margin:.15in 0}
+.flow3 div{border:2px solid var(--rule);border-radius:12px;padding:.12in .15in;text-align:center}
+.flow3 b{display:block}
+.arrow{text-align:center;color:var(--soft);margin:.04in 0}
+.pill{border:3px solid var(--accent);border-radius:40px;padding:.1in .25in;text-align:center;font-weight:700;color:var(--accent);margin:.08in auto;width:fit-content}
+.trio3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.2in;margin:.15in 0 .05in}
+.trio3 div{background:#f3f5f9;border:2px solid var(--rule);border-radius:10px;padding:.14in .18in}
+.trio3 .v{display:block;font-weight:700;font-size:34px;color:var(--accent);line-height:1.1}
+.trio3 .m{display:block;color:var(--soft);margin-top:.05in}
+</style>
+</head>
+<body>
+<div class="poster">
+<header>
+  <div>
+    <p class="kicker">Work in progress · 2026</p>
+    <h1>Where Is Trustworthy Data Lost Between the Page and the Database?</h1>
+    <p class="key"><b>BioEvidenceBench · Key finding:</b> On two English printed books, most reliability was lost at OCR, and modern OCR won it back (value F1 0.60–0.64 → 0.95–0.98). After that, linking names to today's taxonomy and an undefined scope limited trust, not the extraction model.</p>
+    <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS</span></p>
+  </div>
+  <div class="brand">
+    <img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
+    <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>github.com/dekunsun/BioEvidenceBench</span></div>
+  </div>
+</header>
+<main>
+<div class="row" id="r1">
+<div class="box">
+  <p class="act">01 · Motivation</p>
+  <div class="in">
+  <h2>A record is only as trustworthy as its weakest step</h2>
+  <p class="cap" style="margin-bottom:.15in">BHL holds about 64 million scanned pages. Which step should the next unit of effort go to?</p>
+  <div class="steps">
+    <div class="st hot"><span class="n">1</span><span class="w">Page → text</span><span class="l">OCR</span></div>
+    <div class="st"><span class="n">2</span><span class="w">Text → mentions</span><span class="l">extraction</span></div>
+    <div class="st"><span class="n">3</span><span class="w">Mentions → evidence</span><span class="l">verbatim quote</span></div>
+    <div class="st hot"><span class="n">4</span><span class="w">Mentions → entities</span><span class="l">name linking</span></div>
+    <div class="st hot"><span class="n">5</span><span class="w">What counts as a datum</span><span class="l">scope</span></div>
+    <div class="st"><span class="n">6</span><span class="w">Review</span><span class="l">people</span></div>
+  </div>
+  <p class="note">Highlighted: where this pilot found the largest losses.</p>
+  </div>
+</div>
+<div class="box">
+  <p class="act">02 · Methodology</p>
+  <div class="in">
+    <h2>Hold the page constant, vary only the text, and let the model point rather than write</h2>
+    <div class="pill">One scanned page</div>
+    <div class="arrow">▼ read three ways</div>
+    <div class="flow3">
+      <div><b>Legacy BHL OCR</b><span class="small">what BHL serves today</span></div>
+      <div><b>Modern open OCR</b><span class="small">dots.mocr (FineBooks)</span></div>
+      <div><b>Expert transcription</b><span class="small">IMPACT ground truth</span></div>
+    </div>
+    <div class="arrow">▼ LLM returns a line number + verbatim quote; code checks the quote and slices the value</div>
+    <div class="pill">Scored against gold labelled by hand before any model output</div>
+    <div class="trio3">
+      <div><span class="v">22</span><span class="m">pages, Butler 1907 (birds) and Reeve 1849 (shells); 16 locked for test</span></div>
+      <div><span class="v">607</span><span class="m">gold mentions: taxon, person, place, institution, date</span></div>
+      <div><span class="v">0.90 / 0.95</span><span class="m">two-labeller agreement, exact / overlap</span></div>
+    </div>
+    <p class="gate"><b>Frozen</b> (hashes in FREEZE.json) before the test pages ran; test outputs sealed until then.</p>
+  </div>
+</div>
+</div>
+
+<div class="row" id="r2">
+<div class="box">
+  <p class="act">03 · Results</p>
+  <div class="in">
+  <h2>OCR is the first loss; after it, linking and scope</h2>
+  <div class="charts3">
+    <div>
+      <p class="sub-h">A · Same 16 pages, three texts <span class="tagpre">pre-reg.</span></p>
+      <figure><img src="fig/extraction_poster.png" alt="Value F1: legacy OCR Butler 0.60, Reeve 0.64; modern OCR 0.95 and 0.98; expert 0.98 and 0.98"></figure>
+      <p class="cap">Legacy OCR: right place, misread text (lenient F1 0.93–0.97).</p>
+    </div>
+    <div>
+      <p class="sub-h">B · 22 OCR versions <span class="tagexp">exploratory</span></p>
+      <figure><img src="fig/ladder_poster.png" alt="Value F1 against share of gold names intact after OCR; Spearman 0.95 Butler, 1.00 Reeve"></figure>
+      <p class="cap">Page error rate does not predict it (ρ −0.07 / −0.62).</p>
+    </div>
+    <div>
+      <p class="sub-h">C · Linking bird names to GBIF</p>
+      <figure><img src="fig/linking_poster.png" alt="Butler link recall on the expert text: plain GBIF lookup 0.59, GBIF with hint 0.62, LLM linker Haiku 0.76, Opus 0.91"></figure>
+      <p class="cap">Plain lookup <span class="tagpre">pre-reg.</span>: 14 of 34 lost.</p>
+    </div>
+  </div>
+  <div class="dwide">
+    <p class="sub-h">D · The extraction model matters little; the OCR matters a lot <span class="tagexp">exploratory</span></p>
+    <table>
+      <tr><th>Value F1, Butler / Reeve</th><th class="num">Haiku 5.5</th><th class="num">Sonnet 5.5</th><th class="num">Opus 5.5</th><th class="num">Fable 5.2</th></tr>
+      <tr><td>Modern OCR</td><td class="num">0.94 / 0.95</td><td class="num">0.93 / 0.97</td><td class="num">0.95 / 0.98</td><td class="num">0.96 / 0.98</td></tr>
+      <tr><td>Legacy OCR</td><td class="num">0.61 / 0.60</td><td class="num">0.58 / 0.64</td><td class="num">0.60 / 0.64</td><td class="num">0.60 / 0.65</td></tr>
+      <tr><td>US$ per 1,000 pages</td><td class="num">0.6</td><td class="num">10</td><td class="num">11</td><td class="num">43</td></tr>
+    </table>
+  </div>
+  </div>
+</div>
+<div class="box">
+  <p class="act">04 · Protocol and Data</p>
+  <div class="in">
+    <p>5 pre-registered hypotheses · verdicts against thresholds set in advance · 95% page-bootstrap intervals, per book</p>
+    <p>Follow-ups decided after unsealing are logged as deviations and need a fresh test.</p>
+    <p class="sub-h" style="margin-top:.3in">Data (all public)</p>
+    <table>
+      <tr><td class="num b" style="width:22%">7</td><td><b>Butler 1907</b>, birds · test pages</td></tr>
+      <tr><td class="num b">9</td><td><b>Reeve 1849</b>, shells · test pages</td></tr>
+      <tr><td class="num b">8</td><td><b>PCAS 1898</b>, botany · scans</td></tr>
+      <tr><td class="num b">682</td><td><b>Whole books</b> · 60 spot-checked</td></tr>
+    </table>
+    <p class="sub-h" style="margin-top:.3in">Models</p>
+    <p>Claude Opus 5.5 and Gemini 4 Carbon (pre-registered); Haiku, Sonnet 5.5 and Fable 5.2 (exploratory); gnfinder + regex baseline.</p>
+    <p class="note">API spend about $50 in total. The real cost was labelling.</p>
+  </div>
+</div>
+</div>
+
+<div class="row" id="r3">
+<div class="box">
+  <p class="act">05 · Same accuracy is not the same evidence</p>
+  <div class="in">
+    <h2>Three routes reach similar F1; only one leaves a trail an auditor can check mechanically</h2>
+    <table>
+      <tr><th style="width:30%">Route</th><th class="num" style="width:17%">Value F1</th><th style="width:25%">Value comes from</th><th>Auditor must</th></tr>
+      <tr><td class="b">Modern OCR + quote-checked extraction</td><td class="num">0.95 / 0.98</td><td>sliced from the OCR text</td><td>open the scan only for OCR misreads</td></tr>
+      <tr><td class="b">Legacy OCR + LLM repair</td><td class="num">0.96 / 0.91</td><td>the model's reading; ~30% changed</td><td>check every repair (1 in 12 wrong)</td></tr>
+      <tr><td class="b">Page image only</td><td class="num">0.96 / 0.98</td><td>the model's transcription</td><td>find each value by hand; boxes hit the word 67% / 40%</td></tr>
+    </table>
+    <p class="note">Requiring a verbatim quote changed no accuracy number <span class="tagpre">pre-registered</span>: both arms took values from the source by code. Evidence buys traceability and lower audit cost, which accuracy does not measure.</p>
+  </div>
+</div>
+<div class="stack">
+<div class="box">
+  <p class="act">06 · Conclusion</p>
+  <div class="in">
+    <ul class="concl">
+      <li><b>Where to spend.</b> Accept OCR on name survival, per material; fund entity resolution; write the scope; review by sampling, with evidence. Not a bigger extraction model.</li>
+      <li><b>Scope and review.</b> Agreement is not correctness (50 / 75 errors inside it on legacy OCR). Index pages were 16% of whole-book output; five conventions move botany F1 0.83 → 0.94.</li>
+      <li><b>Limits and next.</b> Two English books and 8 botany pages; other languages, layouts and handwriting untested. Next: audit metrics for evidence, a new language.</li>
+    </ul>
+  </div>
+</div>
+<div class="box contact">
+  <p class="act">Connect &amp; Explore</p>
+  <div class="in">
+    <div class="cw">
+      <div class="cw-left">
+        <img class="ai4s" src="fig/ai4s_logo.png" alt="AI4S.fyi">
+        <p>A map of AI4S people, research,<br>companies and capital, read at source.</p>
+      </div>
+      <div class="cw-qrs">
+        <div class="cx-qr"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi"><span>ai4s.fyi</span></div>
+        <div class="cx-qr"><img src="fig/qr_linkedin.svg" alt="QR code to Dekun Sun's LinkedIn profile"><span>LinkedIn</span></div>
+      </div>
+    </div>
+    <p class="cw-line">Dekun (Gloria) Sun on LinkedIn · @gloria_sun on X</p>
+  </div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body>
+</html>
