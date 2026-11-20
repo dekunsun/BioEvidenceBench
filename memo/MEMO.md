@@ -76,6 +76,10 @@ the measure to watch.
   a probe found no sign of page memory in repair, which does not prove there is none. Material
   outside the training data is the real test (the PCAS case is public too).
 - One gold labeller; a second labeller on 5 pages agreed at 0.90 (exact) / 0.95 (overlap).
+- Entity resolution was measured on birds only (Butler, 34 gold-resolved names). Shell names
+  (Reeve, 56 distinct names) were left for the next round: building their gold links by hand would
+  take 2-3 hours, and the pre-registered linking question is already answered on Butler. Whether
+  the LLM linker's gain holds for molluscs, where synonymy is heavier, is untested.
 - No review-time study: review workload is counted in mentions, not minutes.
 
 ## Cost
