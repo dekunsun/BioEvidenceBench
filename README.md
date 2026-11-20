@@ -310,6 +310,9 @@ python src/run_extraction.py --collect <run_id>      # provider is read from con
 | [BHL open data on S3](https://github.com/gbhl/bhl-open-data) | Per-page legacy OCR | Both books are `NOT_IN_COPYRIGHT` in the BHL `item` table |
 | [FineBooks OCR outputs](https://huggingface.co/buckets/finebooks/bhl-ocr-outputs) | Modern OCR: `rednote-hilab/dots.mocr` per-page output | MIT (per `manifest.json`) |
 
+**This repository's own work:** code under the [MIT License](LICENSE); Gloria's gold annotations in
+`gold/` under [CC BY 4.0](gold/LICENSE.md) (the second labeller's files are excluded until she agrees).
+
 **Why the S3 bucket, not `biodiversitylibrary.org/itemtext/`?** It is BHL's own OCR, already split
 per page, so we never slice a whole-book file. The BHL website also returns a Cloudflare bot
 check to scripts running on cloud machines (seen 2026-11-18).
