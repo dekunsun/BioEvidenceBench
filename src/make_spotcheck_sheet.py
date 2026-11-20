@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import math
+import re
 import sys
 
 import pandas as pd
@@ -43,12 +44,28 @@ def load(run: str) -> pd.DataFrame:
     return m.reset_index(drop=True)
 
 
-def context(pid: int, s, e) -> str:
+def readable(x: str) -> str:
+    """For the checker's eyes only: dots.mocr writes Markdown (*italic*, **bold**, ### headings,
+    | tables) and HTML tables (<td>...</td>). Turn table cells into ' | ', rows into ' / ', and
+    drop the other markup. The model saw the raw text; values are sliced from it unchanged."""
+    x = re.sub(r"</t[dh]>\s*<t[dh][^>]*>", " | ", x)
+    x = re.sub(r"</tr>\s*<tr[^>]*>", " / ", x)
+    x = re.sub(r"<[^>]*>|<[^>]*$|^[^<]*>", " ", x)        # whole tags, and tags cut at the edges
+    x = re.sub(r"\*+|#{2,}\s*|(?<!\w)_|_(?!\w)", "", x)
+    x = re.sub(r"\s*\|\s*(\|\s*)+", " | ", x)
+    return re.sub(r"\s+", " ", x).strip()
+
+
+def context(pid: int, s, e, raw: bool = False) -> str:
     t = (ROOT / "data" / "text" / "modern_dots-mocr" / f"{pid}.txt").read_text(encoding="utf-8")
     if pd.isna(s):
         return ""
     s, e = int(s), int(e)
-    return (t[max(0, s - 90):s] + " [[" + t[s:e] + "]] " + t[e:e + 90]).replace("\n", " ")
+    left, mid, right = t[max(0, s - 120):s], t[s:e], t[e:e + 120]
+    if raw:
+        return (left + " [[" + mid + "]] " + right).replace("\n", " ")
+    left, right = readable(left)[-90:], readable(right)[:90]
+    return f"{left} [[{readable(mid)}]] {right}"
 
 
 def make(a) -> None:
@@ -68,13 +85,14 @@ def make(a) -> None:
     smp = pd.concat(picks).sample(frac=1, random_state=SEED).reset_index(drop=True)
     smp["item"] = range(1, len(smp) + 1)
     smp["context"] = [context(p, s, e) for p, s, e in zip(smp.page_id, smp.src_start, smp.src_end)]
+    smp["context_raw"] = [context(p, s, e, raw=True) for p, s, e in zip(smp.page_id, smp.src_start, smp.src_end)]
     smp["bhl_page"] = "https://www.biodiversitylibrary.org/page/" + smp.page_id.astype(str)
     OUT.mkdir(parents=True, exist_ok=True)
     sheet = pd.DataFrame({"item": smp.item, "page_id": smp.page_id, "book": smp.book, "field": smp.field,
                           "value": smp.value, "context": smp.context, "verdict": "", "correct_field": "",
                           "notes": "", "review_seconds": "", "bhl_page": smp.bhl_page})
     sheet.to_csv(OUT / "spotcheck_sheet.csv", index=False)
-    smp[["item", "stratum", "model", "tier", "junk", "page_id", "field", "value", "status"]].to_csv(
+    smp[["item", "stratum", "model", "tier", "junk", "page_id", "field", "value", "status", "context_raw"]].to_csv(
         OUT / "spotcheck_key.csv", index=False)
     pd.DataFrame([{"stratum": k, "mentions_in_book": v, "sampled": int((smp.stratum == k).sum())}
                   for k, v in sorted(sizes.items())]).to_csv(OUT / "strata.csv", index=False)
@@ -110,6 +128,7 @@ def make(a) -> None:
     for line in [
         "这是模型在整本书（样本 22 页以外）上的抽取结果，抽样检查。不是金标准，不会进 gold/。",
         "每行：value 是模型抽到的值，context 里 [[ ]] 标出它在 dots.mocr 文本中的位置。点 bhl_page 看扫描页核对。",
+        "context 已去掉排版符号（*斜体*、**粗体**、### 标题、表格标签），表格的格子用 | 隔开、行用 / 隔开，只为好读；模型看到的是带符号的原文，抽到的值本身不含这些符号。",
         "verdict（下拉）：correct=按标注指南 v0.10 这是一个该抽的提及，类型和边界都对；boundary=是提及但边界不对；"
         "wrong_field=是提及但类型错（在 correct_field 选对的类型）；not_a_mention=按指南不该抽；"
         "misread=OCR 把字读错了，值和扫描页不一致；unsure=拿不准（notes 写原因）。",

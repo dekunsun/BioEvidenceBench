@@ -1,141 +1,141 @@
-item,stratum,model,tier,junk,page_id,field,value,status
-1,A,opus,0,False,8966782,person,PFEIFFER,exact
-2,B,opus,1,False,8967088,taxon,trilineatus,exact
-3,B,opus,1,False,8992640,taxon,stapazina,exact
-4,C,haiku,2,False,8967201,vernacular,deer tribe,exact
-5,B,opus,1,False,8967086,taxon,multicolor,exact
-6,C,haiku,2,False,8992509,vernacular,furze,exact
-7,C,haiku,2,False,8992474,vernacular,lettuce,exact
-8,B,opus,1,False,8967084,taxon,irroratus,exact
-9,A,opus,0,False,8966785,taxon,Bulimi,exact
-10,C,haiku,2,False,8992451,vernacular,Mealy,exact
-11,B,opus,0,True,8992642,date,"September 20th, 1902",exact
-12,B,opus,1,False,8967187,taxon,fulva,exact
-13,C,haiku,2,False,8992463,vernacular,hard-head,exact
-14,A,opus,0,False,8966833,vernacular,Midas' Ear,exact
-15,A,opus,0,False,8967209,institution,British Museum,exact
-16,A,opus,0,False,8967071,locality,West Indies,exact
-17,B,opus,1,False,8967086,taxon,obscurus,exact
-18,A,opus,0,False,8966998,taxon,BULIMUS NIVICOLA,exact
-19,C,haiku,2,False,8992406,vernacular,hawthorn,exact
-20,A,opus,0,False,8967067,person,Müller,exact
-21,B,opus,1,False,8967085,taxon,lagotis,exact
-22,A,opus,0,False,8967185,person,Gould,exact
-23,B,opus,1,False,8967084,taxon,impressus,exact
-24,A,opus,0,False,8967081,person,Sow.,exact
-25,A,opus,0,False,8967043,person,Anton,exact
-26,A,opus,0,False,8992600,locality,Wales,exact
-27,B,opus,1,False,8967083,taxon,electricus,exact
-28,A,opus,0,False,8967213,person,Philippi,exact
-29,B,opus,3,False,8967087,taxon,rufistrigatus,exact
-30,B,opus,1,False,8967082,taxon,crassilabris,exact
-31,B,opus,2,False,8967293,taxon,Vermetus,exact
-32,A,opus,0,False,8966941,person,Dufo.,exact
-33,A,opus,0,False,8967020,institution,Mus. Cuming,exact
-34,B,opus,1,False,8967188,taxon,splendida,exact
-35,A,opus,0,False,8966965,institution,Mus. Cuming,exact
-36,C,haiku,3,False,8992629,date,autumn,exact
-37,C,haiku,2,False,8992617,taxon,THE WOOD-LARK.,exact
-38,B,opus,1,False,8967323,taxon,rubescens,exact
-39,A,opus,0,False,8967082,person,Jay,exact
-40,B,opus,2,False,8967329,vernacular,Mesal,exact
-41,C,haiku,2,False,8992353,locality,Linton,exact
-42,A,opus,0,False,8967001,taxon,Achatina,exact
-43,A,opus,0,False,8992486,vernacular,Chaffinch,exact
-44,C,haiku,2,False,8992561,vernacular,Choughs,exact
-45,A,opus,0,False,8967337,locality,Mediterranean,exact
-46,A,opus,0,False,8967245,taxon,Buccinum flammeum,exact
-47,B,opus,2,False,8967087,taxon,Popelairianus,exact
-48,C,haiku,2,False,8992578,vernacular,snails,exact
-49,C,haiku,2,False,8967288,person,R.,exact
-50,A,opus,0,False,8966925,locality,South of Europe,exact
-51,B,opus,1,False,8967187,taxon,albolineata,exact
-52,C,haiku,2,False,8992505,locality,Siberia,exact
-53,C,haiku,2,False,8966993,taxon,BULIMUS,exact
-54,A,opus,0,False,8967087,person,Reeve,exact
-55,B,opus,1,False,8967084,taxon,heterotrichus,exact
-56,A,opus,0,False,8967084,taxon,Jussieui,exact
-57,B,opus,1,False,8966789,taxon,mutabilis,exact
-58,A,opus,0,False,8967169,taxon,ACHATINA ACCINCTA,exact
-59,C,haiku,2,False,8966821,institution,Mr. Cuming's collection,exact
-60,A,opus,0,False,8967265,taxon,C. decussata,exact
-61,B,opus,2,False,8967289,person,Bonpland,exact
-62,A,opus,0,False,8992404,locality,Russia,exact
-63,B,opus,1,False,8967084,taxon,gastrum,exact
-64,B,opus,1,False,8967086,taxon,olorinus,exact
-65,B,opus,1,False,8967089,taxon,zebra,exact
-66,B,opus,1,False,8967085,taxon,monilifer,exact
-67,A,opus,0,False,8967343,taxon,ONISCIA EXQUISITA,exact
-68,A,opus,0,False,8966869,taxon,BULIMUS CONTUSUS,exact
-69,C,haiku,2,False,8992516,vernacular,hawthorn,exact
-70,B,opus,1,False,8967089,taxon,xanthostoma,exact
-71,C,haiku,2,False,8992407,vernacular,Common-,exact
-72,C,haiku,2,False,8992467,vernacular,Brown,exact
-73,A,opus,0,False,8992389,date,June 1906,exact
-74,B,opus,1,False,8967088,taxon,terebraster,exact
-75,C,haiku,2,False,8992406,vernacular,lichens,exact
-76,A,opus,0,False,8967081,person,Lam.,exact
-77,A,opus,0,False,8966793,institution,Mus. Cuming,exact
-78,A,opus,0,False,8992484,person,Seebohm,exact
-79,A,opus,0,False,8967329,taxon,Mesalia,exact
-80,A,opus,0,False,8992480,locality,Norfolk,exact
-81,B,opus,2,False,8967087,taxon,Sayi,exact
-82,A,opus,0,False,8992600,person,Henry Stevenson,exact
-83,A,opus,0,False,8992376,locality,Cley,exact
-84,A,opus,0,False,8967188,taxon,Sandwicensis,exact
-85,C,haiku,2,False,8992566,vernacular,conifers,exact
-86,B,opus,2,False,8966797,taxon,Succinea,exact
-87,A,opus,0,False,8992514,vernacular,YELLOW-BREASTED BUNTING,exact
-88,B,opus,2,False,8967087,taxon,Rivasii,exact
-89,C,haiku,3,False,8966994,locality,—?,exact
-90,A,opus,0,False,8966933,person,Metcalfe,exact
-91,A,opus,0,False,8967083,person,Reeve,exact
-92,A,opus,0,False,8992485,vernacular,Chaffinches,exact
-93,C,haiku,2,False,8992332,locality,Speeton,exact
-94,C,haiku,2,False,8966850,locality,Vegas,exact
-95,A,opus,0,False,8966822,person,Chemnitz,exact
-96,B,opus,1,False,8967082,taxon,castrensis,exact
-97,B,opus,2,False,8966929,person,Spix,exact
-98,B,opus,2,True,8992498,date,February 14th to 19th,exact
-99,A,opus,0,False,8992646,person,SUND.,exact
-100,A,opus,0,False,8967139,institution,Mus. Rolfe,exact
-101,B,opus,0,True,8992516,date,26th May,exact
-102,A,opus,0,False,8966901,taxon,BULIMUS CASTUS,exact
-103,C,haiku,2,False,8992616,vernacular,watercress,exact
-104,A,opus,0,False,8967193,taxon,D. galea,exact
-105,C,haiku,2,False,8992549,vernacular,spiders,exact
-106,B,opus,1,False,8967085,taxon,membranaceus,exact
-107,A,opus,0,False,8992511,date,November,exact
-108,C,haiku,2,False,8992556,locality,British Isles,exact
-109,A,opus,0,False,8992442,vernacular,Linnet,exact
-110,C,haiku,2,False,8966914,taxon,BULIMUS,exact
-111,B,opus,1,False,8967084,taxon,gilvus,exact
-112,B,opus,1,False,8967323,taxon,imbricata,exact
-113,A,opus,0,False,8967297,locality,"Island of Margarita, West Indies",exact
-114,A,opus,0,False,8966833,person,SOWERBY,exact
-115,A,opus,0,False,8967293,locality,Conchagua,exact
-116,B,opus,1,False,8967081,taxon,acuminatus,exact
-117,A,opus,0,False,8966906,taxon,BULIMUS BENGUELENSIS,exact
-118,A,opus,0,False,8967331,taxon,Turbo suturalis,exact
-119,A,opus,0,False,8966969,vernacular,KUNAWUR BULIMUS,exact
-120,A,opus,0,False,8966857,person,Cuming,exact
-121,A,opus,0,False,8967082,person,Born,exact
-122,A,opus,0,False,8967082,person,Moric.,exact
-123,A,opus,0,False,8966769,locality,"Island of Romblon, Philippines",exact
-124,C,haiku,2,False,8992516,vernacular,hazel,exact
-125,A,opus,0,False,8966909,person,BENSON,exact
-126,A,opus,0,False,8967265,person,Martini,exact
-127,A,opus,0,False,8992327,locality,Lincolnshire,exact
-128,A,opus,0,False,8967343,person,Deshayes,exact
-129,A,opus,0,False,8967177,person,BENSON,exact
-130,A,opus,0,False,8967293,locality,Conchagua,exact
-131,A,opus,0,False,8967317,person,MENKE,exact
-132,C,haiku,2,False,8992583,vernacular,leather-jackets,exact
-133,B,opus,1,False,8967084,taxon,gibber,exact
-134,A,opus,0,False,8967187,person,Benson,exact
-135,A,opus,0,False,8966946,taxon,BULIMUS CALIFORNICUS,exact
-136,A,opus,0,False,8967187,person,Pfr.,exact
-137,B,opus,2,False,8992627,locality,India,exact
-138,C,haiku,2,False,8967003,locality,Guadaloupe,exact
-139,A,opus,0,False,8966817,person,PFEIFFER,exact
-140,A,opus,0,False,8992504,vernacular,Sparrow,exact
+item,stratum,model,tier,junk,page_id,field,value,status,context_raw
+1,A,opus,0,False,8966782,person,PFEIFFER,exact,"ed, and minutely crenulated here and there along the upper margin; smoky brown, concentric striæ here and there white.   [[PFEIFFER]] , Zool. Pro. Soc. 1846. p. 114  *Hab.* —?  The growth of this shell not being completed, it is impossible to say whether"
+2,B,opus,1,False,8967088,taxon,trilineatus,exact,"lix), Chemn.</td><td>XXXIX.</td><td>237</td></tr><tr><td>trilineatus, Quoy</td><td>XLVIII.</td><td>310</td></tr><tr><td> [[trilineatus]]  (Helix), Quoy</td><td>LIX.</td><td>397</td></tr><tr><td>truncatus, Pfr.</td><td>LXX.</td><td>498</td></tr><tr><td>tuber"
+3,B,opus,1,False,8992640,taxon,stapazina,exact,"ptember of the same year, a third was shot near Pett, Sussex; a male was shot at Winchelsea on May 2nd, 1907. The name * [[stapazina]] * was given in error, by Mr. Howard Saunders, to the Black-throated species, which should now stand as *Saxicola occiden"
+4,C,haiku,2,False,8967201,vernacular,deer tribe,exact,"y fimbriated on arriving at maturity.  M. Adanson named this shell after the Minjac or Muntjak, a spotted animal of the  [[deer tribe]] , and M. Deshayes proposes to use this for the specific title. I do not, however, see how a common name of this kind can"
+5,B,opus,1,False,8967086,taxon,multicolor,exact,"><tr><td>muliebris, Reeve</td><td>LXXXI.</td><td>598</td><td>opalinus, Sow.</td><td>LVIII.</td><td>394</td></tr><tr><td> [[multicolor]]  (Helix), Rang</td><td>XXXIX.</td><td>238</td><td>Oparanus, Pfr.</td><td>LXXXVII.</td><td>646</td></tr><tr><td>multifasc"
+6,C,haiku,2,False,8992509,vernacular,furze,exact,"ding to Howard Saunders) exceptionally at a height of seven feet. I have often found it in low bushes, but only once in  [[furze]] ; in low scrub on partially cleared waste ground; in holes in grassy banks by the road-side; or under a low dividing hed"
+7,C,haiku,2,False,8992474,vernacular,lettuce,exact," insects which it devours when feeding its young, only represent a portion of their diet; whole rows of young beans and  [[lettuce]]  are devoured and partly digested by the parents for the same purpose: it must also be borne in mind that even the holdi"
+8,B,opus,1,False,8967084,taxon,irroratus,exact,"d>302</td><td>irregularis, Pfr.</td><td>LXV.</td><td>454</td></tr><tr><td>Gruneri, Pfr.</td><td>LI.</td><td>332</td><td> [[irroratus]] , Reeve</td><td>LXII.</td><td>427</td></tr><tr><td>Guadaloupensis, Brug.</td><td>XLVI.</td><td>294</td><td>interruptus, "
+9,A,opus,0,False,8966785,taxon,Bulimi,exact,"th of Coquimbo (in the crevices of rocks); Bridges.  I think Dr. Pfeiffer has greatly erred in referring this group of * [[Bulimi]] * to the genus *Succinea*, the type of which is an amphibious animal, like the *Lymnea*, affecting damp and swampy situa"
+10,C,haiku,2,False,8992451,vernacular,Mealy,exact,"ng the breeding and moulting seasons.  Not being particularly fond of Redpolls in an aviary, I have never purchased the  [[Mealy]]  race; but Henry Stevenson in his ""Birds of Norfolk"" (p. 229) says:— ""Both the Mealy and Lesser Redpolls, from their tam"
+11,B,opus,0,True,8992642,date,"September 20th, 1902",exact,"wood, Lancashire, on August 20th, 1898; a young female at North Cotes, Lincolnshire, on October 17th, 1899, a second on  [[September 20th, 1902]] , and a third on September 4th, 1905; a young bird on Barra, Outer Hebrides, October 29th, 1900.  The Dartford Warbler w"
+12,B,opus,1,False,8967187,taxon,fulva,exact,"<td>16</td><td>fulica, Férussac</td><td>II.</td><td>8</td></tr><tr><td>amentum, Benson</td><td>XVII.</td><td>82</td><td> [[fulva]]  (Bulimus), Brug.</td><td>III.</td><td>10</td></tr><tr><td>amphora, Jay</td><td>IV.</td><td>14</td><td>Funcki, Pfr.</td>"
+13,C,haiku,2,False,8992463,vernacular,hard-head,exact,"Canary-seed. My birds have no soft food given them, but as much of the flowering top of the dwarf-grass, dandelion, and  [[hard-head]]  tops, thistle, plantain, etc., as they wish, and as many aphides off rose, apple, or plum-trees as I can at the time ob"
+14,A,opus,0,False,8966833,vernacular,Midas' Ear,exact,"this. We also learn from the same source that it was known to English collectors upwards of half a century ago, as 'The  [[Midas' Ear]]  from New Caledonia.' Lamarck, however, and his followers appear to have confounded it with the *B. auris-bovina*, from "
+15,A,opus,0,False,8967209,institution,British Museum,exact," *D. variegatum* of Lamarck, who notifies the locality New Holland, from whence a magnificent series may be seen in the  [[British Museum]] , including specimens even larger than any to be found of the *D. galea*. They were collected by Mr. Jukes during his re"
+16,A,opus,0,False,8967071,locality,West Indies,exact," iii. p. 83.  *Carychium costatum*, Hutton.  Hab. Bengal.  Partaking somewhat of the typical form of *B. Gossei* of the  [[West Indies]] .  Species 645. (Mus. Metcalfe.)  **BULIMUS LUBRICUS.** *Bul. testá oblonga-ovatá, apice obtusiusculá, anfractibus sex, "
+17,B,opus,1,False,8967086,taxon,obscurus,exact,"td>oblongus (Helix), Mull.</td><td>XXXV.</td><td>210</td><td>Philippii, Pfr.</td><td>XXII.</td><td>143</td></tr><tr><td> [[obscurus]]  (Helix), Mull.</td><td>LXXXVII.</td><td>647</td><td>phlogerus, D'Orb.</td><td>XXVII.</td><td>168</td></tr><tr><td>obsol"
+18,A,opus,0,False,8966998,taxon,BULIMUS NIVICOLA,exact,"Dr. Pfeiffer's *B. Indicus* appears to be merely an immature state of this species.  ### Species 496. (Mus. Benson.)  ** [[BULIMUS NIVICOLA]] .** *Bul. testâ cylindraceo-ovatâ, obesâ, ventricosâ, sinistrâ, compressè umbilicatâ, anfractibus septem, convexis, obli"
+19,C,haiku,2,False,8992406,vernacular,hawthorn,exact,"of the nest according to the haunt which it frequents; thus in a wood or clearing it usually makes its home in some old  [[hawthorn]] , tangled with blackberry-vines, or in a holly, or on the branch of a fir, oak, or beech-tree, some fifteen to thirty fe"
+20,A,opus,0,False,8967067,person,Müller,exact,"ee-toothed, lip thickened, slightly reflected; horny-brown.  **BRUGUIERE,** Enc. Méth. vol. i. p. 350.  *Helix tridens,  [[Müller]] .*  *Turbo tridens, Gmelin.*  *Pupa tridens, Draparnaud.*  *Chondrus tridens, Cuvier.*  *Jaminea tridens, Risso.*  *Buli"
+21,B,opus,1,False,8967085,taxon,lagotis,exact,"7 | | lacunosus, D'Orb. | XXXV. | 208 | | lætus, Reeve | LXXXIII. | 616 | | lævus (*Helix*), Mull. | XXXVII. | 216 | | * [[lagotis]] *, Menke | XLI. | 259 | | Lamarckianus, *Pfr.* | XXIV. | 156 | | Largilliertii, *Philippi* | LIII. | 346 | | *larvatus*,"
+22,A,opus,0,False,8967185,person,Gould,exact,"nous epidermis, and encircled with a single band of the same beneath the angle of the last whorl.  *Bulimus balteatus*,  [[Gould]] .  Hab. Liberia, West Africa.  The name *balteatus* being already occupied in this genus, I have the pleasure of naming "
+23,B,opus,1,False,8967084,taxon,impressus,exact,"d>imperator, Pfr.</td><td>XXX.</td><td>183</td></tr><tr><td>goniostoma (Helix), Fér.</td><td>XXXIV.</td><td>206</td><td> [[impressus]] , Reeve</td><td>LXVIII.</td><td>483</td></tr><tr><td>Goodallii (Helix), Miller</td><td>LXXXIV.</td><td>621</td><td>Inca,"
+24,A,opus,0,False,8967081,person,Sow.,exact,"| | *Alberti*, Brod. | V. | 22 | | *albicans*, Brod. | XXII. | 141 | | *albizonatus*, Reeve | LXXXI. | 604 | | *albus*,  [[Sow.]]  | XIII. | 75 | | *Alepi* (Helix), Férussac | LX. | 413 | | *Alto-Peruvianus*, Reeve | LXXII. | 521 | | *alternans*, Bec"
+25,A,opus,0,False,8967043,person,Anton,exact,"onvex, smooth, columella slightly reflected; transparent horny.  PFEIFFER, Symbolæ, vol. i. p. 24.  Strobilus oblongus,  [[Anton]] .  Hab. Island of Opara.  An extremely small species, of a dull transparent horny substance.  ## Species 590. (Mus. Cumi"
+26,A,opus,0,False,8992600,locality,Wales,exact,"nerally distributed, resident and common, interbreeding occasionally with the Carrion-Crow in the former country and in  [[Wales]] .  The typical Hooded Crow has the head, throat, and front of breast, wings, tail, and thighs black, with purple and gre"
+27,B,opus,1,False,8967083,taxon,electricus,exact,"Reeve | LI. | 338 | | effusus, Pfr. | XII. | 64 | | egregious, Pfr. | XXXIV. | 205 | | Ehrenbergi, Pfr. | LX. | 411 | |  [[electricus]] , Reeve | V. | 21 | | electrum, Reeve | LVI. | 373 | | elegans (Succinea), Pfr. | XIX. | 112 | | elongatulus, Pfr. | XIV"
+28,A,opus,0,False,8967213,person,Philippi,exact,"ange.  **DESHAYES, Anim. sans vert. vol. x. p. 146.** *Buccinum Australe seu Chinense, Chemnitz.*  *Dolium variegatum*,  [[Philippi]]  (not of Lamarck).  Hab. China Seas.  If Dr. Philippi had proclaimed the *D. Chinense* and *variegatum* to be one and th"
+29,B,opus,3,False,8967087,taxon,rufistrigatus,exact,"rubrifasciatus, Reeve</td><td>XLIV.</td><td>277</td></tr><tr><td>rudis, Anton</td><td>XLV.</td><td>286</td></tr><tr><td> [[rufistrigatus]] , Benson</td><td>LXXVIII.</td><td>570</td></tr><tr><td>rufogaster, Lesson</td><td>I.</td><td>4</td></tr><tr><td>rufo-nig"
+30,B,opus,1,False,8967082,taxon,crassilabris,exact,". costatus, Pfr. ..... Costerii, Eydoux ..... costulatus, Pot. & Mich ..... coturnix, Sow. ..... Coxeiranus, Mor. .....  [[crassilabris]] , Gray ..... crepundia, D'Orbigny ..... Cretensis, Pfr. ..... Crichtoni, Brod. .....  Plate. Species.  XXIX. 179 LVI. 37"
+31,B,opus,2,False,8967293,taxon,Vermetus,exact,"K, Anim. sans vert. (Deshayes' edit.) vol. ix. p. 258.  Hab. —?  This remarkable shell has been thought to belong to a * [[Vermetus]] *, but its growth is perfectly regular.  Species 13. (Mus. Cuming.)  **TURRITELLA CUMINGII.** Turr. testâ sub-lanceolato"
+32,A,opus,0,False,8966941,person,Dufo.,exact,"p thin, a little reflected; bright brown within and without.  PFEIFFER, Symbolæ, vol. i. p. 42.  *Bulimus strigilosus*,  [[Dufo.]]   Hab. Seychelle Islands.  A very delicately formed, largely inflated shell of a rich brown-colour, the surface being de"
+33,A,opus,0,False,8967020,institution,Mus. Cuming,exact," the peculiarity of form and colouring abundantly testifies that it is distinct from any hitherto known.  Species 535. ( [[Mus. Cuming]] .)  **BULIMUS AMBUSTUS.** *Bul. testâ oblongo-ovatâ, vix umbilicatâ, anfractibus sex, lævibus, vel, sub lente, creberrim"
+34,B,opus,1,False,8967188,taxon,splendida,exact,"eeve | XII. | 38 | | sinistrorsa, Pfr. | V. | 17 | | solidula, Pfr. | XVIII. | 92 | | Sowerbyana, Pfr. | VIII. | 26 | |  [[splendida]] , Anton | XIX. | 100 | | striata (Bucc.), Müller | VI. | 19 | | striatella (Helix), Rang | XVI. | 74 | | subulata, Pfr. "
+35,A,opus,0,False,8966965,institution,Mus. Cuming,exact,"# BULIMUS.  PLATE LXI.  ## Species 414. ( [[Mus. Cuming]] .)  **BULIMUS SARCODES.** *Bul. acuminato-oblongâ, tenui, sub-profundè umbilicatâ, anfractibus sex ad septem, tenuissimè"
+36,C,haiku,3,False,8992629,date,autumn,exact," a rare straggler, about nine authenticated instances of its occurrence in England having been recorded, six of them in  [[autumn]] , one in April, and one in July: of these one was obtained on the Scilly Islands, one in Hampshire, four in Sussex, one "
+37,C,haiku,2,False,8992617,taxon,THE WOOD-LARK.,exact," [[THE WOOD-LARK.]]   *Alauda arborca, LINN.*  ""IN summer the Wood-Lark inhabits the southern portions of Scandinavia, and Russia below abou"
+38,B,opus,1,False,8967323,taxon,rubescens,exact,"td><td>16</td><td>rosea, Quoy</td><td>VIII.</td><td>41</td></tr><tr><td>cornea, Lamarck</td><td>VII.</td><td>35</td><td> [[rubescens]] , Reeve</td><td>XI.</td><td>61</td></tr><tr><td>crocea, Kiener</td><td>VI.</td><td>26</td><td>sanguinea, Reeve</td><td>V"
+39,A,opus,0,False,8967082,person,Jay,exact,"1 LXXIV. 536 XLIII. 274 LXXVIII. 576 XV. 87 XVII. 102 XLIV. 275 XXXVIII. 223 IV. 16 LVIII. 382 VI. 28 VII. 30  cinctus,  [[Jay]]  ..... cinereus, Reeve ..... cinnamomeo-lineatus, Moric. ..... citrino-vitreus, Moric. ..... citrinus, Brug. ..... Claus"
+40,B,opus,2,False,8967329,vernacular,Mesal,exact,"s species according to the present system of nomenclature, apparently from a worn specimen, did not recognise in it *Le  [[Mesal]] * of Adanson (Voyage en Sénégal, p. 159. pl. 10. f. 7); and M. Deshayes was unable to identify *Turritella brevialis* in"
+41,C,haiku,2,False,8992353,locality,Linton,exact,"ies, and several instances of its breeding with us have been recorded. In 1868, I saw a male specimen of this bird near  [[Linton]] , in Devonshire, and in July, 1887, I was just too late to see the species in Essex; Mr. Fitch, of Maldon (whom I was vi"
+42,A,opus,0,False,8967001,taxon,Achatina,exact,"*. It is a transparent turreted shell, very finely striated and delicately puckered at the sutures.  Species 503. (Pl. * [[Achatina]] *, XX. Fig. 113. Mus. Cuming.)  BULIMUS JAMAICENSIS. *Bul. testâ subulatâ, angustâ, haud umbilicatâ, anfractibus octo, p"
+43,A,opus,0,False,8992486,vernacular,Chaffinch,exact," *k*: this cry has been variously written *twink, spink, pink, bink, and fink*; it is usually uttered twice only by our  [[Chaffinch]] , but the Madeiran Chaffinch repeats it rapidly four times; so that it almost leads up to his rather monotonous and poor"
+44,C,haiku,2,False,8992561,vernacular,Choughs,exact," to make a nest in a stoke-hole, but were disturbed, and never did so again. On my removal to East Sussex I brought the  [[Choughs]]  (two pairs) with me, and the next year one pair made their nest in a tower attached to the house, and laid three eggs; "
+45,A,opus,0,False,8967337,locality,Mediterranean,exact,"Bruguière.  Buccinum echinophorum, var. Gmelin.  Buccinum ochroleucum, Gmelin.  Cassidaria echinophora, Deshayes.  Hab.  [[Mediterranean]] .  Dr. Philippi and M. Deshayes are of opinion that this shell, of which there is an accurate representation in Chemnitz"
+46,A,opus,0,False,8967245,taxon,Buccinum flammeum,exact,"h chesnut, varices stained with large black blotches.  **LAMARCK, Anim. sans vert.** (Deshayes' edit.) vol. x. p. 22.  * [[Buccinum flammeum]] , Linnæus.*  *Cassidea flammea, Bruguière.*  *Hab.* —?  The peculiar oblong oval form of this species, which is of const"
+47,B,opus,2,False,8967087,taxon,Popelairianus,exact,"politus, Reeve</td><td>XIII.</td><td>74</td></tr><tr><td>polygyratus, Reeve</td><td>LXXIX.</td><td>578</td></tr><tr><td> [[Popelairianus]] , Nyst.</td><td>XXXIV.</td><td>204</td></tr><tr><td>porphyrius, Pfr.</td><td>XV.</td><td>89</td></tr><tr><td>porraceus, "
+48,C,haiku,2,False,8992578,vernacular,snails,exact,"se of the Pied Wagtail.*  The male bird takes his share in the duties of incubation.  The food of this bird consists of  [[snails]] , worms, insects and their larvæ, eggs, young birds, mice, carrion; and later in the year, fruit, beech-mast, and acorns"
+49,C,haiku,2,False,8967288,person,R.,exact,"Turritella, Pl. III.  8  9  10. a  10. b  R. B. &  [[R.]]  imp."
+50,A,opus,0,False,8966925,locality,South of Europe,exact,", lip simple; whitish, or pale fawn-colour.  *BRUGUIERE, Enc. Méth. Diet. no. 49.*  *Helix decollata, Linnæus.*  *Hab.*  [[South of Europe]] . Sicily and the Canary Islands.  This well-known species occurs in a larger state in some parts of Northern Africa.  ##"
+51,B,opus,1,False,8967187,taxon,albolineata,exact,"></tr><tr><td>alba, Brown</td><td>XX.</td><td>111</td><td>flammigera, Férussac</td><td>XII.</td><td>39</td></tr><tr><td> [[albolineata]] , Lamarck</td><td>XIV.</td><td>52</td><td>Fraseri, Pfr.</td><td>XVI.</td><td>71</td></tr><tr><td>Algira, Brug.</td><td>X"
+52,C,haiku,2,False,8992505,locality,Siberia,exact,"hroughout the greater part of Europe, breeding in Scandinavia as far north as lat. 70°, and in the valley of the Ob, in  [[Siberia]] , up to lat 64°. To the more northern portions of its range it is only a summer visitor, and it only visits the more sou"
+53,C,haiku,2,False,8966993,taxon,BULIMUS,exact," [[BULIMUS]] .  PLATE LXVIII.  Species 480. (Mus. Cuming.)  BULIMUS ORYZA, *Bul. testâ cylindraceo-turritâ, minutè umbilicatâ, anfrac"
+54,A,opus,0,False,8967087,person,Reeve,exact,", D'Orb.</td><td>XVI.</td><td>91</td></tr><tr><td>politus, Reeve</td><td>XIII.</td><td>74</td></tr><tr><td>polygyratus,  [[Reeve]] </td><td>LXXIX.</td><td>578</td></tr><tr><td>Popelairianus, Nyst.</td><td>XXXIV.</td><td>204</td></tr><tr><td>porphyrius"
+55,B,opus,1,False,8967084,taxon,heterotrichus,exact,">Hennahi, Gray</td><td>XXIII., LXXXVIII.</td><td>148</td></tr><tr><td>Funckii, Nyst</td><td>XXVIII.</td><td>171</td><td> [[heterotrichus]] , Mor.</td><td>XXXII.</td><td>199</td></tr><tr><td>fuscagula, D'Orbigny</td><td>XLVII.</td><td>305</td><td>Hindsii, Pfr."
+56,A,opus,0,False,8967084,taxon,Jussieui,exact,"d><td>610</td><td>juglans, Pfr.</td><td>III.</td><td>12</td></tr><tr><td>Hanleyi, Pfr.</td><td>XXX.</td><td>181</td><td> [[Jussieui]] , Val.</td><td>XXXIX.</td><td>242</td></tr><tr><td>haplostylus, Pfr.</td><td>LII.</td><td>341</td><td>Kambeul, Brug.</td"
+57,B,opus,1,False,8966789,taxon,mutabilis,exact,"e or less stained or variegated with orange chesnut.  LESSON, Zool. Voy. Coquille, pl. 13. f. 3.  *Bulimi Proteus* and * [[mutabilis]] *, Broderip.  *Bulimus Cora*, D'Orbigny.  Hab. Mountains of Peru (under stones); Cuming.  The name given to this species"
+58,A,opus,0,False,8967169,taxon,ACHATINA ACCINCTA,exact,"ll, in which the columella is frequently turned up at the edge into a callous ridge.  ## Species 101. (Mus. Cuming.)  ** [[ACHATINA ACCINCTA]] .** *Achat. testâ conico-ovatâ, tenui, anfractibus sex, subplano-convexis, e suturis arcuatim striatis, columellâ contor"
+59,C,haiku,2,False,8966821,institution,Mr. Cuming's collection,exact,"g described this species, and I have to thank him for sending me a specimen which accords in all respects with those in  [[Mr. Cuming's collection]] .  June, 1848."
+60,A,opus,0,False,8967265,taxon,C. decussata,exact,", Lamarck.  Hab. Philippine Islands; Cuming.  Although the patterns of this species and the C. areola are united in the  [[C. decussata]] , they are not varieties of the same as assumed by Bruguière and Kiener. The C. areola is a narrower and more gibbous sh"
+61,B,opus,2,False,8967289,person,Bonpland,exact,"near the aperture with laminæ; white, thickly marbled with grey or reddish-black.  VALENCIENNES, Zool. Voy. Humboldt et  [[Bonpland]] , vol. ii. p. 275.  Hab. Payta, Peru; Salango, West Columbia; Guacomayo, Central America (in sandy mud at depths of from"
+62,A,opus,0,False,8992404,locality,Russia,exact,"othraustes vulgaris, PALLAS.*  THIS extremely ungainly bird is distributed over nearly the whole of Europe; breeding in  [[Russia]]  as far northwards as St. Petersburg, but only visiting Scandinavia in the winter; its range extends eastwards to Asia M"
+63,B,opus,1,False,8967084,taxon,gastrum,exact,">gallina-sultana, Fav.</td><td>XXXII.</td><td>198</td><td>Huascensis, Reeve</td><td>XXIII.</td><td>147</td></tr><tr><td> [[gastrum]] , Ehrenberg</td><td>LXXV.</td><td>538</td><td>Humboldtii, Reeve.</td><td>LVIII.</td><td>391</td></tr><tr><td>gelidus, Re"
+64,B,opus,1,False,8967086,taxon,olorinus,exact,"4</td><td>Olivieri, Pfr.</td><td>LI.</td><td>339</td></tr><tr><td>montivagus, D'Orb.</td><td>LXVII.</td><td>475</td><td> [[olorinus]] , Duclos</td><td>XIII.</td><td>75</td></tr><tr><td>Moricandi, Pfr.</td><td>XLV.</td><td>283</td><td>onager, Beck</td><td"
+65,B,opus,1,False,8967089,taxon,zebra,exact,"</td><td>Yungasensis, D'Orb.</td><td>LXV.</td><td>456</td></tr><tr><td>verecundus, Reeve</td><td>II.</td><td>62</td><td> [[zebra]]  (Bucc.), Mull.</td><td>XV., XXVII.</td><td>90</td></tr><tr><td>versicolor, Brod.</td><td>XIX.</td><td>113</td><td>zebra"
+66,B,opus,1,False,8967085,taxon,monilifer,exact," 622 | | modestus, *Brod.* | XVIII. | 109 | | *modestus*, *Sow.* | XII. | 62 | | mollicellus, Reeve | LXXVII. | 565 | |  [[monilifer]] , *Pfr.* | XLVIII. | 318 | | moniliferus, Gould | XIII. | 73 | | monozonus, *Pfr.* | XXXII. | 195 |"
+67,A,opus,0,False,8967343,taxon,ONISCIA EXQUISITA,exact,"ding species by its slighter growth, more elevated spire, and finely noduled narrow ribs.  Species 3. (Mus. Dennison.)   [[ONISCIA EXQUISITA]] . Onisc. testã subtrigono-ovata, spirã brevi, acuta, anfractibus supernè concavo-depressis, tuberculis papillaribus undi"
+68,A,opus,0,False,8966869,taxon,BULIMUS CONTUSUS,exact,"by a conspicuous central band, with fine longitudinally waved lines above and below it.  Species 220. (Mus. Cuming.)  ** [[BULIMUS CONTUSUS]] .** *Bul. testâ oblongo-ovatâ, crassius-culâ, sæpissimè sinistrali, anfractibus septem, convexis, lævibus, labro reflexo"
+69,C,haiku,2,False,8992516,vernacular,hawthorn,exact,"ze-bush tangled with a blackberry vine, two others in low juniper scrub overrun with bramble, and the fourth in a young  [[hawthorn]]  bush.  The nest is tolerably compact internally, though externally somewhat loosely put together, the outer wall usuall"
+70,B,opus,1,False,8967089,taxon,xanthostoma,exact,"xanthostoma, Hohen.</td><td>LXI.</td><td>416</td></tr><tr><td>ventrosus (Helix), Fér.</td><td>LXIX.</td><td>499</td><td> [[xanthostoma]] , D'Orb.</td><td>XLIII.</td><td>271</td></tr><tr><td>Veranyi, Pfr.</td><td>XLII.</td><td>262</td><td>Yungasensis, D'Orb."
+71,C,haiku,2,False,8992407,vernacular,Common-,exact," five is the usual complement; they are pale bluish or buffish-green in colour, and vary in pattern between that of the  [[Common-]]  and Reed-Buntings, the surface spots, blotches, and streaks being deep pitch-brown, with underlying spots of lilacine-g"
+72,C,haiku,2,False,8992467,vernacular,Brown,exact,"radually changes to the bright colouring at the approach of spring.*  This species, which is variously called the Grey,  [[Brown]] , or Red Linnet, according to the age or plumage of the specimens so named, during the summer  * Seebohm almost always e"
+73,A,opus,0,False,8992389,date,June 1906,exact,"UNDINIDÆ.*  ## THE RED-RUMPED SWALLOW.  *Hirundo rufula, TEMM.*  AN example was found dead at Fair Isle (Shetlands), in  [[June 1906]] .  *Family—HIRUNDINIDÆ.*  ## THE MARTIN.  *Chelidon urbica, LINN.*  THE House-Martin breeds throughout Europe, ranging e"
+74,B,opus,1,False,8967088,taxon,terebraster,exact,"terebella, Adams</td><td>LXXXIV.</td><td>620</td></tr><tr><td>terebralis, Pfr.</td><td>XIV.</td><td>79</td></tr><tr><td> [[terebraster]] , Férussac</td><td>LII.</td><td>341</td></tr><tr><td>Terverii, Forbes</td><td>LXXV.</td><td>539</td></tr><tr><td>thamnoi"
+75,C,haiku,2,False,8992406,vernacular,lichens,exact,"midable appearance; sometimes, however, the twigs are intermixed with coarse roots and dead plants, and ornamented with  [[lichens]] ; the"
+76,A,opus,0,False,8967081,person,Lam.,exact,"elix), Linn. | LXXV. | 539 | | *Beckianus*, Pfr. | LXVIII. | 480 | | *bellulus*, Jonas | XXIV. | 160 | | *Bengalensis*,  [[Lam.]]  | XLV. | 289 | | *Benguelensis*, Pfr. | XLVI. | 298 | | *Bensonii*, Reeve | LXXVIII. | 571 | | *Bergeri*, Pfr. | LXVIII"
+77,A,opus,0,False,8966793,institution,Mus. Cuming,exact,"ining cream-colour. The *B. cactivorus* of Broderip is merely a variety having no streaks.  Species 104. (Fig. a, b, c.  [[Mus. Cuming]] .)  **BULIMUS VARIANS.** *Bul. testâ elongatâ, tenui, umbilicatâ, anfractibus septem, convexis, longitudinaliter hic ill"
+78,A,opus,0,False,8992484,person,Seebohm,exact," species of typical Finches (Fringillinæ) and one is surprised that any man, having the knowledge of living birds which  [[Seebohm]]  undoubtedly had, should have been content to place forms with Tit-like habits (Siskin, Goldfinch, Redpolls) in the same"
+79,A,opus,0,False,8967329,taxon,Mesalia,exact,"uished in this respect from the rest of the *Turritellæ*, excepting the little Greenland *T. lactea* of Möller, also a * [[Mesalia]] *; and to these may be added a species (*M. Melanioides*) from the Cumingian collection, in which the typical character "
+80,A,opus,0,False,8992480,locality,Norfolk,exact,"sion that the ground-colour, as a rule, was lighter than in eggs of the House-Sparrow; whilst those which I obtained in  [[Norfolk]]  were usually remarkable for their darker ground-tint, although exceptions did occur.  It seems to me more probable that"
+81,B,opus,2,False,8967087,taxon,Sayi,exact,"<tr><td>sarcodes, Pfr.</td><td>LXI.</td><td>414</td></tr><tr><td>Satyrus, Brod.</td><td>VI.</td><td>29</td></tr><tr><td> [[Sayi]] , Pfr.</td><td>LXV.</td><td>458</td></tr><tr><td>scabiosus, Sow.</td><td>XIV.</td><td>84</td></tr><tr><td>Scalariformis,"
+82,A,opus,0,False,8992600,person,Henry Stevenson,exact,"n of Scandinavian Hoodies southwards at the approach of winter, to which fact we owe our seasonal visitation.  The late  [[Henry Stevenson]]  in his ""Birds of Norfolk,"" says:—""The Royston or Grey-backed Crow, as this species is also called, visits us in autumn "
+83,A,opus,0,False,8992376,locality,Cley,exact,"ogist,"" 1891, p. 136):—""On September 13th, a female Red-breasted Fly-catcher, *Muscicapa parva*, Bechstein, was shot at  [[Cley]]  by Mr. Ogilvie, the eighth on record, Cornwall being accredited with four, Ireland one,"
+84,A,opus,0,False,8967188,taxon,Sandwicensis,exact," | :--- | :---: | :---: | | reticulata, Pfr. | II. | 9 | | Richii, Reeve | X. | 39 | | rosea, Férussac | XIII. | 46 | |  [[Sandwicensis]] , Pfr. | XIX. | 101 | | Saulcydi, De Joannis | XXIII. | 127 | | semisculpta, Pfr. | XI. | 37 | | semitarum (Helix), Rang"
+85,C,haiku,2,False,8992566,vernacular,conifers,exact,", the larger dung-beetles having been found in its stomach, as well as many other species of different Orders, seeds of  [[conifers]] , nuts, acorns, berries, etc. It is probable that it also devours the eggs and newly hatched young of other birds.  Seeb"
+86,B,opus,2,False,8966797,taxon,Succinea,exact," de Arenas, Huasco, Chili (found on a small cryptogamic plant); Bridges.  An extremely delicate shell of a thin fragile  [[Succinea]] -like texture, strikingly painted with opake white streaks and black lines.  ## Species 113. (Mus. Cuming.)  **BULIMUS V"
+87,A,opus,0,False,8992514,vernacular,YELLOW-BREASTED BUNTING,exact,"*Family—FRINGILLIDÆ.*  *Subfamily—EMBERIZINÆ.*  ## THE  [[YELLOW-BREASTED BUNTING]] .  *Emberiza aurcola, PALLAS.*  AN immature female was shot at Cley, Norfolk, in September 1905. It has occurred at Heli"
+88,B,opus,2,False,8967087,taxon,Rivasii,exact,"><td>rimatus, Pfr.</td><td>LIV.</td><td>359</td></tr><tr><td>ringens, Dunker</td><td>LXXV.</td><td>542</td></tr><tr><td> [[Rivasii]] , D'Orb.</td><td>XX.</td><td>122</td></tr><tr><td>Romblonensis, Pfr.</td><td>VII.</td><td>34</td></tr><tr><td>rosaceus, "
+89,C,haiku,3,False,8966994,locality,—?,exact,"lip simple; greenish-glassy, transparent.  *Bulimus interstinctus*, Pfeiffer (not of Gould) Monog. Helic. p. 169.  Hab.  [[—?]]   Dr. Pfeiffer's description of this species is inadvertently referred to at Pl. LV. Sp. 367, owing to his having taken "
+90,A,opus,0,False,8966933,person,Metcalfe,exact," 38. f. 6,7.  Hab. Yungas and Cochabamba, Bolivia; D'Orbigny.  The specimen here represented from the collection of Mr.  [[Metcalfe]] , is the only one that I am aware of in this country.  Species 350. (Mus. Dennison.)  **BULIMUS SUFFUSUS.** *Bul. testâ "
+91,A,opus,0,False,8967083,person,Reeve,exact,"fictilis, Brod. | IX. | 44 | | fidustus, Reeve | LXXVI. | 557 | | flammeus (Helix), Mull. | LIII. | 352 | | focillatus,  [[Reeve]]  | XXXVI. | 211 | | folliculus, Pfr. | LXXXVII. | 644 | | formosus, Gray | LXIV. | 448 | | Forskalii, Beck | LXI. | 419 "
+92,A,opus,0,False,8992485,vernacular,Chaffinches,exact,"I have not seen these points noted in any description, indeed they may pass for variations to those who have not reared  [[Chaffinches]]  from the nest; they are also overlooked by judges at shows, who often give a prize to birds of the year (not in full ad"
+93,C,haiku,2,False,8992332,locality,Speeton,exact,"en obtained in various parts of England, chiefly in the southern and eastern counties, one male was seen in May 1903 at  [[Speeton]] , in Yorkshire, and, on two occasions, it has been recorded as breeding at Freshwater, in the Isle of Wight."
+94,C,haiku,2,False,8966850,locality,Vegas,exact,"ted, lip but slightly reflected, smoky chesnut-brown within and without.  PFEIFFER, Pro. Zool. Soc., 1845, p. 68.  Hab.  [[Vegas]] , on the river Quendeu, New Granada.  It may be observed that this shell is almost equally ventricose and inflated with "
+95,A,opus,0,False,8966822,person,Chemnitz,exact,"t doubt the original *Auris Sileni* of the Vienna Museum, of which a characteristic representation is given by Born and  [[Chemnitz]] , and not the shell described by Lamarck under the name *Auricula Sileni*. It is a short thick shell of tumid growth, di"
+96,B,opus,1,False,8967082,taxon,castrensis,exact,"... Caraccasensis, Reeve ..... Caribbeorum, Lam. ..... Caripensis, Val. ..... carneus, Pfr. ..... castaneus, Pfr. .....  [[castrensis]] , Pfr. ..... castus, Pfr. ..... Cathcartiæ, Reeve ..... ceratinus, Benson ..... cereus, Reeve ..... cerussatus, Reeve .."
+97,B,opus,2,False,8966929,person,Spix,exact," striæ, aperture small, lip and columella simple; chalk-white, covered with a shining chesnut brown epidermis.  WAGNER,  [[Spix]] . Test. Bras. p. 10.  Helix calcarea, Born.  Bulimus maritimus, Spix, Deshayes.  Hab. Brazil,  M. Deshayes is correct in"
+98,B,opus,2,True,8992498,date,February 14th to 19th,exact,"ing, Mr. Steele probably wished to avoid discussion, and, therefore, again entered it for the Palace Show of that year ( [[February 14th to 19th]] ) as ""Bunting-Cock."" The bird was then growing old, and was in poor plumage; therefore the judge passed it over: soon af"
+99,A,opus,0,False,8992646,person,SUND.,exact,"lderney (Channel Islands), in December, 1899.  *Family—MOTACILLIDÆ.*  ## THE GREY-HEADED WAGTAIL.  *Motacilla borealis,  [[SUND.]] *  THIS race of the Blue-headed Wagtail was obtained originally near Penzance. In 1901 one was caught near Halifax, and "
+100,A,opus,0,False,8967139,institution,Mus. Rolfe,exact,"Cape of Good Hope; Krauss.  Well characterized by its cylindrically drawn out form and style of painting.  Species 41. ( [[Mus. Rolfe]] .)  **ACHATINA LACTEA.** Achat. testâ ovatâ, crassiusculâ, anfractibus tumidiusculis, undique plicato-striatis et granat"
+101,B,opus,0,True,8992516,date,26th May,exact,"30th of May: four years later I obtained permission to nest in some private grounds near Frinstead, in Kent, and on the  [[26th May]]  I took my fourth and last nest of this species.  The Cirl Bunting appears to be double-brooded, the first nest being us"
+102,A,opus,0,False,8966901,taxon,BULIMUS CASTUS,exact,"# BULIMUS.  PLATE XLV.  Species 282. (Fig. a and b, Mus. Dennison.)  ** [[BULIMUS CASTUS]] .** *Bul. testâ subfusiformi-ovatâ, tenui, gracili, anfractibus quinque ad sex, longitudinaliter tenuiter irregulariter "
+103,C,haiku,2,False,8992616,vernacular,watercress,exact,"moistened ants' cocoons. When adult, two or three mealworms a day, a handful of canary and millet-seed once a week, and  [[watercress]]  when obtainable, should be given in addition to the usual soft food.  I think it was in the winter of 1891-2 that my ma"
+104,A,opus,0,False,8967193,taxon,D. galea,exact,"olumella, on which account they have been separated  from the genus by M. Valenciennes under the title of *Malea*. The * [[D. galea]] * of the Mediterranean is remarkable for its large size, but the *D. variegatum* has been recently collected at Torres S"
+105,C,haiku,2,False,8992549,vernacular,spiders,exact,"e breeding-season of worms, slugs, leather-jackets (the larvæ of crane-flies) and many other destructive grubs; also of  [[spiders]]  and various insects; indeed these are always eaten when procurable, but in autumn fruit and the softer berries are devo"
+106,B,opus,1,False,8967085,taxon,membranaceus,exact,"172 | | *melanorhinus*, Jan. | LIX. | 399 | | melanostoma, *Swain.* | XXXIII. | 203 | | melo, *Quoy* | XXXIX. | 243 | |  [[membranaceus]] , *Phil.* | LXXV. | 544 | | *Menkei*, Gruner | XLV. | 285 | | Merduenianus, *Kryn.* | LXVII. | 473 | | Meridanus, *Pfr.*"
+107,A,opus,0,False,8992511,date,November,exact,"y, however, never finished this nest, but continued to carry about hay and straw in an undecided desultory manner until  [[November]] , when they finally gave it up as a bad job. Early in 1890, both birds died: possibly they did not receive sufficient in"
+108,C,haiku,2,False,8992556,locality,British Isles,exact,"e toes united at the base and often to the first joint; the tail has twelve feathers.  The family is represented in the  [[British Isles]]  by five genera:—*Pyrrhocorax*; in which the bill is slender, arched, pointed and compressed; the wings graduated, with "
+109,A,opus,0,False,8992442,vernacular,Linnet,exact,"s, and was built in a plum-tree.”  The eggs number from four to five, usually the latter, and are similar to those of a  [[Linnet]] , but usually rather smaller; they are greenish-white, spotted and streaked, especially at the larger end, with purplish"
+110,C,haiku,2,False,8966914,taxon,BULIMUS,exact,"iis duabus interruptis aurantio-fuscis, valdè indistinctis, cingulatâ, aperturâ aurantio-tinctâ.*  **THE NECKLACE-BOUND  [[BULIMUS]] .** Shell somewhat pyramidally ovate, umbilicated, whorls convex, smooth, columella reflected, aperture somewhat square,"
+111,B,opus,1,False,8967084,taxon,gilvus,exact,"r><td>Gibbonius, Lea</td><td>XXXII.</td><td>196</td><td>hygrohylæus, D'Orb.</td><td>XXXVI.</td><td>215</td></tr><tr><td> [[gilvus]] , Sow.</td><td>II.</td><td>7</td><td>ignavus, Reeve</td><td>LXXVII.</td><td>562</td></tr><tr><td>glaber, Gmelin</td><td>"
+112,B,opus,1,False,8967323,taxon,imbricata,exact,"</td><td>3</td><td>Hookeri, Reeve</td><td>XI.</td><td>61</td></tr><tr><td>attenuata, Reeve</td><td>I.</td><td>4</td><td> [[imbricata]] , Lam.</td><td>V.</td><td>19</td></tr><tr><td>bacillum, Kiener</td><td>II.</td><td>7</td><td>imbricata (Turbo), Linn.</t"
+113,A,opus,0,False,8967297,locality,"Island of Margarita, West Indies",exact,". Syst. Nat. (12th. edit.) p. 1240. *Turritella imbricata*, Lamarck.  Var. elongata. *Turbo imbricatus*, Linnæus.  Hab.  [[Island of Margarita, West Indies]] ; Dr. Hornbeck.  The original type of the *Turbo variegatus* in the Linnæan collection is a shell of immature growth, bu"
+114,A,opus,0,False,8966833,person,SOWERBY,exact,"t-brown, covered with a silken epidermis, which is transversely minutely granulously crisped, peritreme rose-coloured.   [[SOWERBY]] , Conch. Illus. f. 94.  Hab. Brazil.  This beautiful species is mainly distinguished by its exquisite silken epidermis, "
+115,A,opus,0,False,8967293,locality,Conchagua,exact," have the pleasure to dedicate to Mr. Cuming, were dredged by him at Panama. It was also collected by Sir E. Belcher at  [[Conchagua]]  during the voyage of the Sulphur. Each whorl is swollen outwardly at the base so as to form an obtuse angle, and the fi"
+116,B,opus,1,False,8967081,taxon,acuminatus,exact," *abyssorum*, D'Orb. | XXXVI. | 213 | | *Achatinaceus*, Pfr. | LXVII. | 470 | | *Achatinoides*, Ziegler | L. | 327 | | * [[acuminatus]] * (Helix), Sow. | XI. | 60 | | *acutus* (Helix), Muller | LXVI. | 467 | | *Adamsii*, Reeve | XIII. | 73 | | *Adamsoni*, "
+117,A,opus,0,False,8966906,taxon,BULIMUS BENGUELENSIS,exact,"ab.* Deccan, Hindostan.  A short swollen species with somewhat of the *Pupa* character.  Species 298. (Mus. Cuming.)  ** [[BULIMUS BENGUELENSIS]] .** *Bul. testâ oblongâ, solidiusculâ, vix umbilicatâ, anfractibus sex, convexis, subtilissimè rudè striatis, columellâ "
+118,A,opus,0,False,8967331,taxon,Turbo suturalis,exact,"liquely stained and variegated with fulvous brown. *Turritella spirata*, Sowerby, Tankerville Catalogue, App. p. xiv.  * [[Turbo suturalis]] *, Gray (in Wood Index Test.)  *Eglisia suturalis*, Gray (in Brit. Mus.)  *Turritella suturalis*, Kiener.  *Hab.* Island"
+119,A,opus,0,False,8966969,vernacular,KUNAWUR BULIMUS,exact,"urâ parvâ, columellâ labroque expansis; fuscescente-corneâ, strigis opacis hic illic notatâ, labro intus niveo.*  **THE  [[KUNAWUR BULIMUS]] .** Shell elongately turreted, sinistral, compressly umbilicated, whorls twelve in number, smooth, or obscurely roughly "
+120,A,opus,0,False,8966857,person,Cuming,exact," same described by M. Nyst in the Transactions of the Royal Academy of Brussels in honour of the Baron de Popelair. Mr.  [[Cuming]]  possesses a specimen, like M. Nyst's, quite destitute of the zigzag marking, which is not a distribution of colour, nor"
+121,A,opus,0,False,8967082,person,Born,exact," ..... Cacticolus, Reeve ..... cactivorus, Brod. ..... cactorum, D'Orb. ..... calcareus, Brug. ..... calcareus (Helix),  [[Born]] . ..... calcareus, Parreyss. ..... Caledonicus, Petit. ..... Californicus, Reeve ..... caliginosus, Reeve ..... Calista,"
+122,A,opus,0,False,8967082,person,Moric.,exact," LVIII. 382 VI. 28 VII. 30  cinctus, Jay ..... cinereus, Reeve ..... cinnamomeo-lineatus, Moric. ..... citrino-vitreus,  [[Moric.]]  ..... citrinus, Brug. ..... Clausiliæformis, Menke ..... Clausilioides, Reeve ..... clava, Reeve ..... clavator, Petit "
+123,A,opus,0,False,8966769,locality,"Island of Romblon, Philippines",exact,"re small, lip rather widely reflected; white, epidermis yellowish brown.  PFEIFFER, Pro. Zool. Soc., 1842, p. 88.  Hab.  [[Island of Romblon, Philippines]]  (on bushes); Cuming."
+124,C,haiku,2,False,8992516,vernacular,hazel,exact,"to Howard Saunders who found it not uncommon on the chalk-hills of Surrey, it ""is placed in a bank among the stems of a  [[hazel]]  or other bush, though sometimes in furze, or juniper, at a little distance from the ground."" My nests were all found wi"
+125,A,opus,0,False,8966909,person,BENSON,exact,"umella broadly reflected, lip expanded, not reflected, transparent horny, obliquely marked with opake-white streaks.  ** [[BENSON]] , MS., Pfeiffer, Monog.** *Bul.* p. 119.  *Hab.* Landour and Keamaon, Western Himalaya, India, (on dead stems of the wil"
+126,A,opus,0,False,8967265,person,Martini,exact,"ite, longitudinally streaked with fulvous brown.  DESHAYES, Anim. sans vert. vol. x. p. 28, note.  Cassis lævis undata,  [[Martini]] .  Buccinum strigatum, Gmelin.  Cassidea areola, var., Bruguière.  Cassis zebra, Lamarck.  Hab. Philippine Islands; Cumi"
+127,A,opus,0,False,8992327,locality,Lincolnshire,exact,"et with in Cornwall; in Wales, and the central counties it is not uncommon, yet it is becoming rarer in Norfolk, and in  [[Lincolnshire]]  is almost unknown; in the northern counties it is rare, probably increasingly so; to Scotland it is only a chance strag"
+128,A,opus,0,False,8967343,person,Deshayes,exact,"bus Lamarckii, Deshayes.  Hab. Jamaica; Gosse.  The shell selected for illustration is the pink-lip variety to which M.  [[Deshayes]]  has given the name O. Lamarckii. The white varieties are usually of smaller dimensions, but the characters are in all r"
+129,A,opus,0,False,8967177,person,BENSON,exact," obtusely truncated, aperture rather small, peculiarly effused; transparent white, sparingly mottled with opake white.   [[BENSON]] , MS.  Hab. St. Helena; Lieut. Lefroy.  Of a very distinct type from any other species of the genus.  Species 80. (Mus. "
+130,A,opus,0,False,8967293,locality,Conchagua,exact,"oughout with purple-brown streaks and blotches.  Hab. Panama (in mud at depths from eleven to sixteen fathoms); Cuming.  [[Conchagua]] ; Belcher.  Several specimens of this fine species, which I have the pleasure to dedicate to Mr. Cuming, were dredged by"
+131,A,opus,0,False,8967317,person,MENKE,exact,"r, convex, faintly four-ridged, sutures a little contracted; yellowish, upper part of the whorls banded with dull red.   [[MENKE]] , —?  Hab. Bay of Montija, Central America (in coarse sand at the depth of seven fathoms); Cuming.  Distinguished by its"
+132,C,haiku,2,False,8992583,vernacular,leather-jackets,exact,with either a see-sawing or spiral motion. On the ground he is almost as fussy as a Starling in his search for worms or  [[leather-jackets]]  of which I have seen him carry many to his nest from my garden: undoubtedly he does fulfil his duties in the scheme of 
+133,B,opus,1,False,8967084,taxon,gibber,exact,"<tr><td>geometricus, Pfr.</td><td>XLIV.</td><td>278</td><td>hybridus, Gould</td><td>XXXIV.</td><td>205</td></tr><tr><td> [[gibber]] , Krynicki</td><td>LXXXIII.</td><td>611</td><td>hyematus, Reeve</td><td>XLIX.</td><td>324</td></tr><tr><td>Gibbonius, Le"
+134,A,opus,0,False,8967187,person,Benson,exact,">Couroupa, Lesson</td><td>II.</td><td>8</td><td>lignaria, Reeve</td><td>VIII.</td><td>27</td></tr><tr><td>crassilabris,  [[Benson]] </td><td>XXI.</td><td>81</td><td>Lindoni, Pfr.</td><td>XXI.</td><td>88</td></tr><tr><td>crassula, Benson</td><td>XXII.</"
+135,A,opus,0,False,8966946,taxon,BULIMUS CALIFORNICUS,exact,"emala; Sallé.  A delicate transparent shell, well characterized by its linear painting.  Species 378. (Mus. Cuming.)  ** [[BULIMUS CALIFORNICUS]] .** *Bul. testâ subacuminato-ovatâ, tenuiculâ, vix umbilicatâ, anfractibus sex, lævibus, columellâ reflexâ, labro simpli"
+136,A,opus,0,False,8967187,person,Pfr.,exact,"td>Griffithsii, Adams</td><td>XV.</td><td>64</td></tr><tr><td>Californica, Pfr.</td><td>XX.</td><td>115</td><td>Hugeli,  [[Pfr.]] </td><td>XV.</td><td>68</td></tr><tr><td>carinata, Pfr.</td><td>VII.</td><td>24</td><td>incerta, Reeve</td><td>XVIII.</t"
+137,B,opus,2,False,8992627,locality,India,exact,"om Pekin, where according to Pére David (P.Z.S. 1871, p. 390) it is resident and common, as it also is in Mongolia.  In  [[India]]  this bird, according to Jerdon (cf. Cat. Birds, E. Ind. Comp., vol. II, p. 466) ""feeds on various insects, chiefly gras"
+138,C,haiku,2,False,8967003,locality,Guadaloupe,exact,"ive-brown, shining, sutures edged with white.  **LAMARCK, Anim. sans vert.** (Deshayes' edit.) vol. viii. p. 260.  Hab.  [[Guadaloupe]] , St. Vincent.  Externally, this shell has a very delicate satiny appearance.  ### Species 511. (Mus. Pfeiffer.)  **BULI"
+139,A,opus,0,False,8966817,person,PFEIFFER,exact,"rown, peppered here and there with large chesnut dots, covered with an olive-brown epidermis, peritreme livid brown.  ** [[PFEIFFER]] **, Monog. *Bul.*  *Hab.* Andes of New Granada (at an elevation of about 8,000 feet); Funck.  So closely does this speci"
+140,A,opus,0,False,8992504,vernacular,Sparrow,exact,"lating flight; it also frequently sings as it goes. It is very fond of dusting itself in the road after the manner of a  [[Sparrow]]  or Skylark.  The nest is either placed in a depression in the ground, in a tuft of grass, ragged-robin, or other low-gr"
