@@ -120,11 +120,15 @@ OCR. What is left is fluent OCR errors, taxonomic judgment and the definition of
 | …and where not? | **Fluent OCR errors are not repairable.** DeepSeek-OCR-2 writes plausible text (`Linnaeus` for `Linnæus`, `Turritella brevisis`, `Valparaíso`); repair only lifts it to 0.81 / 0.87. Garbled legacy OCR (`BiioDEiup`) is easier to fix than fluent misreadings | same |
 | Is a separate OCR step needed? | **Not for this task.** Reading the page image directly (V1) gives 0.96 / 0.98 value F1 (bag scoring), the same as modern OCR + extraction. Image + legacy OCR (V2) is no better than repair alone | same |
 | Which cheap signal helps review? | On legacy OCR, two mechanical checks (OCR-junk characters; no exact GBIF match for a taxon) flag 25% of outputs and catch 55% of the errors at 77% precision; model disagreement catches 7%. On modern OCR, errors are rare (3%) and no cheap signal finds them | `results/review_signals/` |
+| Does a cheaper or stronger model change the picture? | **No.** On the frozen G1 condition (`results/model_comparison/`), value F1 on dots.mocr is 0.94 / 0.95 for Haiku 5.5, 0.93 / 0.97 Sonnet 5.5, 0.95 / 0.98 Opus 5.5, 0.96 / 0.98 Fable 5.2 (Butler / Reeve; intervals overlap); on legacy OCR every model sits at 0.58–0.65. Haiku costs about 1/15 of Opus in the same mode ($1.5 vs $23 per 1,000 page-passes, sync). The model gap (≤0.05) is small next to the OCR gap (~0.35). Sonnet under-extracts long, dense pages in the repair condition | `results/model_comparison/`, `results/exploratory_conditions/` |
+| Is repair memory of these books? | **No sign of it.** In a probe on the expert text (`results/memorisation_probe/`), two swapped letters in a gold name (a visible error) were put back in 65–68 of 69 cases by Opus and Fable (54 by Haiku); a binomial's epithet swapped for one printed on another page of the same book (a fluent change) was put back in **0 of 29** cases by all three models, even when the original name was printed elsewhere on the page. Repair reacts to visible errors, not to a remembered page. (It does not rule out memorisation in general.) | `results/memorisation_probe/` |
+| Can a vision model give Level 3 (image) grounding? | **Values yes, boxes no.** Image only plus a box per mention (V3): 96–98% of values right, but the box contains the right word for only **67% (Butler) / 40% (Reeve)** of them (reference: Internet Archive hOCR word boxes, lenient). Level 3 should come from OCR word coordinates, not from boxes a model draws | `results/vision_boxes/` (`BOX_ACCURACY.md`, example images) |
 
 Cost per page per pass (Opus 5.5, sync; batch halves it): plain extraction about $0.02, repair
 $0.05, image only $0.04. **Caveat that matters most here:** BHL and the IMPACT transcriptions are
-public, so repair and image reading may be helped by the model having seen these books; the PCAS
-case (`data/pcas/`, labels pending) is a first check on other material, but it is public too.
+public, so repair and image reading may be helped by the model having seen these books. The
+memorisation probe above found no sign of page memory in repair, but it cannot prove there is none;
+the PCAS case (`data/pcas/`, labels pending) is a check on other material, but it is public too.
 
 ## Limitations (known in advance)
 

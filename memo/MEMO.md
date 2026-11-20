@@ -31,6 +31,9 @@ any model output.
    agreement.** On legacy OCR two cheap checks catch half the errors in a quarter of the output;
    two models agreeing catches 7%. On clean text errors are rare and need sampling, not flags.
 5. **Keep evidence on (line + verbatim quote; repaired values marked) as the audit trail.**
+6. **Use the cheapest model that is good enough for extraction.** Haiku 5.5 is within a few
+   points of Opus 5.5 and Fable 5.2 at about 1/15 of Opus's cost; the model gap (≤0.05) is small
+   next to the OCR gap (~0.35). Spend the difference on entity resolution and review.
 
 ## What the pre-registered test says
 
@@ -52,6 +55,9 @@ any model output.
 | LLM repair instead of re-OCR | Legacy OCR **0.60 → 0.96** (Butler), **0.64 → 0.91** (Reeve); 92% of changed values right; on the expert text 3 of its 4 changes fixed the transcription's own typos. Fluent OCR errors (DeepSeek-OCR-2) stay: 0.81 / 0.87 |
 | No OCR at all | Page image only: **0.96 / 0.98** (value-bag scoring) |
 | Review signals | Legacy OCR: OCR-junk + no exact GBIF match flag 25% of outputs, catch 55% of errors (precision 0.77); model disagreement 7% |
+| Cheaper / stronger model | G1 on dots.mocr: Haiku 5.5 0.94 / 0.95, Sonnet 5.5 0.93 / 0.97, Opus 5.5 0.95 / 0.98, Fable 5.2 0.96 / 0.98; on legacy OCR all 0.58–0.65. Cost per 1,000 page-passes (sync): Haiku $1.5, Sonnet $10, Opus $23, Fable $43 |
+| Is repair memory? | Visible typos in gold names put back 65–68 of 69 times (Opus, Fable); fluent epithet swaps put back **0 of 29** by every model: repair reacts to visible errors, no sign of page memory |
+| Image grounding | Image-only with boxes: values 96–98% right, but boxes on the right word only 67% (Butler) / 40% (Reeve): take Level 3 from OCR word coordinates |
 
 **Answer to the main question, for these two books:** with an LLM in the loop, OCR stops being
 the bottleneck early: either modern OCR, an LLM repair of legacy OCR, or reading the image gets
@@ -66,8 +72,9 @@ the measure to watch.
   quality are confounded, so results are per book.
 - The follow-up experiments were designed after seeing the test results; they need a fresh test
   set before they count as findings.
-- The books are public. Repair and image reading may be helped by the models having seen them.
-  Material outside the training data is the real test (the PCAS case is public too).
+- The books are public. Repair and image reading may be helped by the models having seen them;
+  a probe found no sign of page memory in repair, which does not prove there is none. Material
+  outside the training data is the real test (the PCAS case is public too).
 - One gold labeller; a second labeller on 5 pages agreed at 0.90 (exact) / 0.95 (overlap).
 - No review-time study: review workload is counted in mentions, not minutes.
 
@@ -75,5 +82,5 @@ the measure to watch.
 
 Per page per pass, Opus 5.5: plain extraction about $0.01 (batch) / $0.02 (sync), LLM repair
 $0.05, image only $0.04 (sync). Gemini 4 Carbon about $0.03 per request (sync). Whole project
-about $27 of API spend. The main cost was human: labelling 22 pages, Butler's name links and the
+about $45 of API spend, including follow-up runs with four Claude models and a whole-book run. The main cost was human: labelling 22 pages, Butler's name links and the
 error analysis.
