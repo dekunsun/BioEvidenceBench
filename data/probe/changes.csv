@@ -1,0 +1,99 @@
+kind,page_id,field,orig_start,orig,changed,new_start,original_elsewhere_on_page
+typo,8966790,taxon,189,BULIMUS CHILENSIS,BULIMUS CHILENISS,189,False
+typo,8966790,person,697,LESSON,LESOSN,697,False
+typo,8966790,taxon,739,Bulimus granulosus,Bulimus granulsous,739,False
+typo,8966790,person,759,Broderip,Broedrip,759,False
+typo,8966790,person,809,Cuming,Cmuing,809,True
+typo,8966802,taxon,518,BULIMUS TURRITUS,BULIMUS TURRTIUS,518,False
+typo,8966802,taxon,1870,B. rugiferus,B. rugiefrus,1870,False
+typo,8966802,taxon,1887,Darwinii,Dawrinii,1887,False
+typo,8966802,taxon,2058,BULIMUS CALVUS,BUILMUS CALVUS,2058,False
+typo,8966802,person,3214,BRODERIP,BRODREIP,3214,True
+typo,8966802,person,3310,Cuming,Cmuing,3310,True
+typo,8966930,taxon,187,BULIMUS OBTUSATUS,BULIMUS OBTSUATUS,187,False
+typo,8966930,taxon,906,Helix obtusata,Helix obtuasta,906,False
+typo,8966930,taxon,930,Bulimus calcareus,Bulimus calcaerus,930,False
+typo,8966930,person,969,Deshayes,Desahyes,969,False
+typo,8966930,taxon,1098,Helix calcarea,Helix calcaera,1098,False
+typo,8966930,taxon,1266,BULIMUS CLAVATOR,BULIMUS CLVAATOR,1266,False
+typo,8966937,taxon,65,BULIMUS ROSEATUS,BULIMUS RSOEATUS,65,False
+typo,8966937,taxon,826,B. oreades,B. oerades,826,False
+typo,8966937,taxon,1636,BULIMUS PERDIX,BLUIMUS PERDIX,1636,False
+typo,8966937,taxon,2698,B. perdix,B. pedrix,2698,False
+typo,8966937,taxon,2888,BULIMUS EURYOMPHALUS,BULIMUS EURYOMHPALUS,2888,False
+typo,8966937,taxon,3672,BULIMUS GLABER,BULIUMS GLABER,3672,False
+typo,8967281,taxon,683,Turritella,Turrtiella,683,True
+typo,8967281,person,1836,Lamarck,Lamrack,1836,True
+typo,8967281,person,2298,Kiener,Keiner,2298,True
+typo,8967281,taxon,3014,T. cornea,T. conrea,3014,True
+typo,8967281,person,3507,Cuming,Cumnig,3507,True
+typo,8967281,person,4881,Hanley,Halney,4881,True
+typo,8967282,taxon,1237,Turbo acutangulus,Turbo acutanguuls,1237,True
+typo,8967282,person,1472,Kiener,Kineer,1472,True
+typo,8967282,person,2525,LAMARCK,LAMACRK,2525,True
+typo,8967282,person,2669,Dillwyn,Dlilwyn,2669,False
+typo,8967282,taxon,3339,T. cornea,T. cronea,3339,True
+typo,8967282,taxon,4126,Turbo acutangulus,Turbo acutnagulus,4126,True
+typo,8967290,taxon,377,T. lentiginosa,T. lentigionsa,377,True
+typo,8967290,taxon,534,T. goniostoma,T. gonoistoma,534,False
+typo,8967290,taxon,747,T. lentiginosa,T. lnetiginosa,747,True
+typo,8967333,taxon,25,CASSIDARIA,CASSIDRAIA,25,False
+typo,8967333,person,312,Landsborough,Landsboroguh,312,False
+typo,8967345,taxon,25,EBURNA,EBRUNA,25,False
+typo,8967345,person,240,Crabbe,Crbabe,240,False
+typo,8992328,taxon,2213,Lanius collurio,Lanius collruio,2213,False
+typo,8992328,person,2869,H. A. Macpherson,H. A. Macpehrson,2869,False
+typo,8992379,taxon,1906,M. leucura,M. leuucra,1906,False
+typo,8992379,taxon,1979,M. parva,M. pavra,1979,False
+typo,8992379,taxon,2054,M. hyperythra,M. hpyerythra,2054,False
+typo,8992379,taxon,2541,Quelea quelea,Queela quelea,2541,False
+typo,8992379,taxon,2681,Paroaria cervicalis,Paroaria cerviclais,2681,False
+typo,8992379,taxon,2735,P. capitata,P. cpaitata,2735,False
+typo,8992408,person,436,Charles A. Witchell,Charles A. Wtichell,436,False
+typo,8992408,person,605,H. A. Macpherson,H. A. Macphreson,605,True
+typo,8992408,person,851,Alexander von Homeyer,Alxeander von Homeyer,851,False
+typo,8992408,taxon,1525,Fringilla,Frnigilla,1525,True
+typo,8992408,taxon,1631,Fringilla,Frnigilla,1631,True
+typo,8992408,taxon,1660,Passer,Psaser,1660,False
+typo,8992489,taxon,81,Fringilla nontifringilla,Fringilla nontirfingilla,81,False
+typo,8992489,person,150,Howard Saunders,Howard Saudners,150,False
+typo,8992643,taxon,78,Phylloscopus proregulus,Phylloscpous proregulus,78,False
+typo,8992643,person,303,John S. Tulloch,John S. Tluloch,303,False
+typo,8992643,taxon,444,Phylloscopus tristis,Phyllosocpus tristis,444,False
+typo,8992643,taxon,607,Phylloscopus viridanus,Phylolscopus viridanus,607,False
+typo,8992644,taxon,256,Aedon galactodes,Aedon galatcodes,256,False
+typo,8992644,taxon,412,Aedon familiaris,Aedon familiairs,412,False
+typo,8992644,taxon,544,Lusciniola schwarzi,Lusicniola schwarzi,544,False
+typo,8992647,taxon,63,Motacilla melanocephala,Motacilla mleanocephala,63,False
+typo,8992647,person,88,LICHT.,LCIHT.,88,False
+typo,8992647,taxon,242,Motacilla beema,Mtoacilla beema,242,False
+typo,8992647,taxon,379,Motacilla cinereocapilla,Motacilla cineroecapilla,379,False
+swap,8966790,taxon,739,Bulimus granulosus,Bulimus acutangulus,739,False
+swap,8966930,taxon,906,Helix obtusata,Helix granulosus,906,False
+swap,8966930,taxon,930,Bulimus calcareus,Bulimus duplicatus,932,False
+swap,8966930,taxon,1098,Helix calcarea,Helix duplicata,1101,False
+swap,8967281,taxon,2433,Turbo acutangulus,Turbo acutangula,2433,False
+swap,8967281,taxon,2812,Turbo ungulinus,Turbo granulosus,2811,True
+swap,8967281,taxon,2917,Turbo terebra,Turbo replicatus,2917,False
+swap,8967281,taxon,3408,Turritella spirata,Turritella calcareus,3411,False
+swap,8967281,taxon,4643,Turritella fuscata,Turritella calcareus,4648,False
+swap,8967281,taxon,4785,Turbo ungulinus,Turbo granulosus,4792,True
+swap,8967282,taxon,1104,Turbo duplicatus,Turbo fuscata,1104,True
+swap,8967282,taxon,1142,Turbo acutangulus,Turbo brevialis,1139,True
+swap,8967282,taxon,1185,Turbo replicatus,Turbo calcareus,1180,False
+swap,8967282,taxon,1237,Turbo acutangulus,Turbo brevialis,1231,True
+swap,8967282,taxon,1292,Turbo duplicatus,Turbo calcarea,1284,True
+swap,8967282,taxon,1838,Turbo acutangulus,Turbo imbricatus,1828,True
+swap,8992328,taxon,2213,Lanius collurio,Lanius quelea,2213,False
+swap,8992379,taxon,2541,Quelea quelea,Quelea proregulus,2541,False
+swap,8992379,taxon,2681,Paroaria cervicalis,Paroaria schwarzi,2685,False
+swap,8992489,taxon,81,Fringilla nontifringilla,Fringilla melanocephala,81,False
+swap,8992643,taxon,78,Phylloscopus proregulus,Phylloscopus familiaris,78,False
+swap,8992643,taxon,444,Phylloscopus tristis,Phylloscopus quelea,444,False
+swap,8992643,taxon,607,Phylloscopus viridanus,Phylloscopus quelea,606,False
+swap,8992644,taxon,256,Aedon galactodes,Aedon tristis,256,False
+swap,8992644,taxon,412,Aedon familiaris,Aedon nontifringilla,409,False
+swap,8992644,taxon,544,Lusciniola schwarzi,Lusciniola nontifringilla,545,False
+swap,8992647,taxon,63,Motacilla melanocephala,Motacilla cervicalis,63,False
+swap,8992647,taxon,242,Motacilla beema,Motacilla schwarzi,239,False
+swap,8992647,taxon,379,Motacilla cinereocapilla,Motacilla collurio,379,False

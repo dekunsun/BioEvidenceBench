@@ -25,3 +25,35 @@ V2 · legacy,Butler,131,8,6,0.942,0.956,0.949
 V2 · legacy,Reeve,207,7,6,0.967,0.972,0.97
 V2 · modern_dots-mocr,Butler,132,5,5,0.964,0.964,0.964
 V2 · modern_dots-mocr,Reeve,209,6,4,0.972,0.981,0.977
+G2 [haiku-5-5] · legacy,Butler,117,14,20,0.893,0.854,0.873
+G2 [haiku-5-5] · legacy,Reeve,171,33,42,0.838,0.803,0.82
+G2 [haiku-5-5] · modern_deepseek-ocr2,Butler,108,29,29,0.788,0.788,0.788
+G2 [haiku-5-5] · modern_deepseek-ocr2,Reeve,172,36,41,0.827,0.808,0.817
+G2 [fable-5-2] · legacy,Butler,130,7,7,0.949,0.949,0.949
+G2 [fable-5-2] · legacy,Reeve,205,8,8,0.962,0.962,0.962
+G2 [fable-5-2] · modern_deepseek-ocr2,Butler,119,17,18,0.875,0.869,0.872
+G2 [fable-5-2] · modern_deepseek-ocr2,Reeve,204,10,9,0.953,0.958,0.956
+G2 [sonnet-5-5] · legacy,Butler,111,22,26,0.835,0.81,0.822
+G2 [sonnet-5-5] · legacy,Reeve,108,12,105,0.9,0.507,0.649
+G2 [sonnet-5-5] · modern_deepseek-ocr2,Butler,105,31,32,0.772,0.766,0.769
+G2 [sonnet-5-5] · modern_deepseek-ocr2,Reeve,180,37,33,0.829,0.845,0.837
+G2 · probe_swap,Butler,121,17,16,0.877,0.883,0.88
+G2 · probe_swap,Reeve,195,19,18,0.911,0.915,0.913
+G2 · probe_typo,Butler,133,5,4,0.964,0.971,0.967
+G2 · probe_typo,Reeve,207,7,6,0.967,0.972,0.97
+G2 [fable-5-2] · probe_swap,Butler,119,18,18,0.869,0.869,0.869
+G2 [fable-5-2] · probe_swap,Reeve,194,21,19,0.902,0.911,0.907
+G2 [fable-5-2] · probe_typo,Butler,132,5,5,0.964,0.964,0.964
+G2 [fable-5-2] · probe_typo,Reeve,209,4,4,0.981,0.981,0.981
+V1 [fable-5-2] · image,Butler,131,6,6,0.956,0.956,0.956
+V1 [fable-5-2] · image,Reeve,211,2,2,0.991,0.991,0.991
+V1 [haiku-5-5] · image,Butler,121,8,16,0.938,0.883,0.91
+V1 [haiku-5-5] · image,Reeve,182,36,31,0.835,0.854,0.845
+V1 [sonnet-5-5] · image,Butler,131,9,6,0.936,0.956,0.946
+V1 [sonnet-5-5] · image,Reeve,203,12,10,0.944,0.953,0.949
+V3 · image,Butler,132,6,5,0.957,0.964,0.96
+V3 · image,Reeve,211,6,2,0.972,0.991,0.981
+G2 [haiku-5-5] · probe_swap,Butler,120,17,17,0.876,0.876,0.876
+G2 [haiku-5-5] · probe_swap,Reeve,175,22,38,0.888,0.822,0.854
+G2 [haiku-5-5] · probe_typo,Butler,130,8,7,0.942,0.949,0.945
+G2 [haiku-5-5] · probe_typo,Reeve,185,20,28,0.902,0.869,0.885

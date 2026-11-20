@@ -1,0 +1,19 @@
+{
+  "run_id": "20261120-0153_explore_V1_fable-5-2",
+  "condition": "V1",
+  "model": "claude-fable-5-2",
+  "effort": "medium",
+  "max_tokens": 16000,
+  "versions": [
+    "image"
+  ],
+  "pages": "test",
+  "base_prompt_version": "p4-guide-v0.6",
+  "exploratory": true,
+  "requests": 16,
+  "usd_total": 1.1953,
+  "errors": 0,
+  "stop_reasons": {
+    "end_turn": 16
+  }
+}

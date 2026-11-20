@@ -1,0 +1,23 @@
+{
+  "model": "claude-sonnet-5-5",
+  "batch": false,
+  "requests": 48,
+  "pages": 16,
+  "usd_total": 0.4856,
+  "usd_per_page_all_conditions": 0.0304,
+  "usd_per_request": 0.01012,
+  "tokens": {
+    "input_tokens": 65075,
+    "output_tokens": 32248,
+    "cache_creation_input_tokens": 8250,
+    "cache_read_input_tokens": 123750
+  },
+  "stop_reasons": {
+    "end_turn": 48
+  },
+  "errors": 0,
+  "retried_once": 0,
+  "model_versions_returned": {
+    "claude-sonnet-5-5": 48
+  }
+}

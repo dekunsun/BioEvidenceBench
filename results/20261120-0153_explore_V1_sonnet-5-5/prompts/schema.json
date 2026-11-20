@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mentions"
+  ],
+  "properties": {
+    "mentions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "field",
+          "value"
+        ],
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "taxon",
+              "vernacular",
+              "person",
+              "locality",
+              "institution",
+              "date"
+            ]
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

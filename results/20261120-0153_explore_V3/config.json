@@ -1,0 +1,19 @@
+{
+  "run_id": "20261120-0153_explore_V3",
+  "condition": "V3",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "max_tokens": 16000,
+  "versions": [
+    "image"
+  ],
+  "pages": "test",
+  "base_prompt_version": "p4-guide-v0.6",
+  "exploratory": true,
+  "requests": 16,
+  "usd_total": 0.6961,
+  "errors": 0,
+  "stop_reasons": {
+    "end_turn": 16
+  }
+}

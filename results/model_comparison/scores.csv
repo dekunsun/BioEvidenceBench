@@ -1,0 +1,27 @@
+model,book,version,value_F1,lo,hi
+"claude-opus-5-5 (batch, frozen)",Butler,expert,0.982,0.947,1.0
+"claude-opus-5-5 (batch, frozen)",Butler,legacy,0.597,0.445,0.736
+"claude-opus-5-5 (batch, frozen)",Butler,modern_dots-mocr,0.952,0.923,0.979
+"claude-opus-5-5 (batch, frozen)",Butler,modern_dots-mocr_plain,0.967,0.929,0.994
+"claude-opus-5-5 (batch, frozen)",Reeve,expert,0.981,0.974,1.0
+"claude-opus-5-5 (batch, frozen)",Reeve,legacy,0.638,0.521,0.719
+"claude-opus-5-5 (batch, frozen)",Reeve,modern_dots-mocr,0.977,0.954,0.997
+"claude-opus-5-5 (batch, frozen)",Reeve,modern_dots-mocr_plain,0.977,0.955,0.996
+claude-sonnet-5-5,Butler,expert,0.903,0.857,0.958
+claude-sonnet-5-5,Butler,legacy,0.581,0.444,0.69
+claude-sonnet-5-5,Butler,modern_dots-mocr,0.927,0.885,0.965
+claude-sonnet-5-5,Reeve,expert,0.944,0.906,0.983
+claude-sonnet-5-5,Reeve,legacy,0.635,0.517,0.714
+claude-sonnet-5-5,Reeve,modern_dots-mocr,0.965,0.931,0.986
+claude-haiku-5-5,Butler,expert,0.956,0.945,0.971
+claude-haiku-5-5,Butler,legacy,0.61,0.455,0.749
+claude-haiku-5-5,Butler,modern_dots-mocr,0.941,0.916,0.967
+claude-haiku-5-5,Reeve,expert,0.962,0.952,0.978
+claude-haiku-5-5,Reeve,legacy,0.604,0.496,0.7
+claude-haiku-5-5,Reeve,modern_dots-mocr,0.945,0.922,0.985
+claude-fable-5-2,Butler,expert,0.964,0.932,0.988
+claude-fable-5-2,Butler,legacy,0.596,0.433,0.742
+claude-fable-5-2,Butler,modern_dots-mocr,0.956,0.933,0.977
+claude-fable-5-2,Reeve,expert,0.988,0.978,1.0
+claude-fable-5-2,Reeve,legacy,0.648,0.534,0.729
+claude-fable-5-2,Reeve,modern_dots-mocr,0.981,0.96,1.0

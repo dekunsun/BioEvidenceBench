@@ -1,0 +1,848 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score,quote_value,repaired
+8992328,probe_typo,G2,0,vernacular,1,RED‐BACKED SHRIKE,False,RED‐BACKED SHRIKE,exact,4,21,100.0,RED‐BACKED SHRIKE,False
+8992328,probe_typo,G2,1,locality,11,Kent,False,Kent,exact,412,416,100.0,Kent,False
+8992328,probe_typo,G2,2,vernacular,18,Red-backed Shrike,False,Red-backed Shrike,exact,857,874,100.0,Red-backed Shrike,False
+8992328,probe_typo,G2,3,locality,19,Maidstone,False,Maidstone,exact,915,924,100.0,Maidstone,False
+8992328,probe_typo,G2,4,vernacular,22,Greenﬁnch,False,Greenﬁnch,exact,1152,1161,100.0,Greenﬁnch,False
+8992328,probe_typo,G2,5,vernacular,25,Butcher-bird,False,Butcher-bird,exact,1311,1323,100.0,Butcher-bird,False
+8992328,probe_typo,G2,6,vernacular,26,Shrikes,False,Shrikes,exact,1409,1416,100.0,Shrikes,False
+8992328,probe_typo,G2,7,vernacular,30,lizards,False,lizards,exact,1709,1716,100.0,lizards,False
+8992328,probe_typo,G2,8,vernacular,30,mice,False,mice,exact,1722,1726,100.0,mice,False
+8992328,probe_typo,G2,9,vernacular,32,Red-backed Shrike,False,Red-backed Shrike,exact,1839,1856,100.0,Red-backed Shrike,False
+8992328,probe_typo,G2,10,person,35,Mathias Rausch,False,Mathias Rausch,cross_line,2046,2060,100.0,"Mathias
+Rausch",False
+8992328,probe_typo,G2,11,vernacular,37,Red-backed Shrike,False,Red-backed Shrike,exact,2177,2194,100.0,Red-backed Shrike,False
+8992328,probe_typo,G2,12,vernacular,37,Thorn-piercer,False,Thorn-piercer,exact,2198,2211,100.0,Thorn-piercer,False
+8992328,probe_typo,G2,13,taxon,38,Lanius collruio,False,Lanius collurio,exact,2213,2228,100.0,Lanius collruio,True
+8992328,probe_typo,G2,14,locality,40,Europe,False,Europe,exact,2367,2373,100.0,Europe,False
+8992328,probe_typo,G2,15,vernacular,41,Red-backed Shrikes,False,Red-backed Shrikes,exact,2491,2509,100.0,Red-backed Shrikes,False
+8992328,probe_typo,G2,16,vernacular,43,cockroaches,False,cockroaches,exact,2581,2592,100.0,cockroaches,False
+8992328,probe_typo,G2,17,person,48,H. A. Macpehrson,False,H. A. Macpherson,exact,2869,2885,100.0,H. A. Macpehrson,True
+8992328,probe_typo,G2,18,vernacular,49,Woodchat,False,Woodchat,exact,2962,2970,100.0,Woodchat,False
+8992328,probe_typo,G2,19,vernacular,49,Great Grey Shrikes,False,Great Grey Shrikes,exact,2976,2994,100.0,Great Grey Shrikes,False
+8992328,probe_swap,G2,0,locality,11,Kent,False,Kent,exact,412,416,100.0,Kent,False
+8992328,probe_swap,G2,1,vernacular,18,Red-backed Shrike,False,Red-backed Shrike,exact,857,874,100.0,Red-backed Shrike,False
+8992328,probe_swap,G2,2,locality,19,Maidstone,False,Maidstone,exact,915,924,100.0,Maidstone,False
+8992328,probe_swap,G2,3,vernacular,22,Greenﬁnch,False,Greenﬁnch,exact,1152,1161,100.0,Greenﬁnch,False
+8992328,probe_swap,G2,4,vernacular,25,Butcher-bird,False,Butcher-bird,exact,1311,1323,100.0,Butcher-bird,False
+8992328,probe_swap,G2,5,vernacular,26,Shrikes,False,Shrikes,exact,1409,1416,100.0,Shrikes,False
+8992328,probe_swap,G2,6,vernacular,30,lizards,False,lizards,exact,1709,1716,100.0,lizards,False
+8992328,probe_swap,G2,7,vernacular,30,mice,False,mice,exact,1722,1726,100.0,mice,False
+8992328,probe_swap,G2,8,vernacular,32,Red-backed Shrike,False,Red-backed Shrike,exact,1839,1856,100.0,Red-backed Shrike,False
+8992328,probe_swap,G2,9,person,35,Mathias Rausch,False,Mathias Rausch,cross_line,2046,2060,100.0,"Mathias
+Rausch",False
+8992328,probe_swap,G2,10,vernacular,37,Red-backed Shrike,False,Red-backed Shrike,exact,2177,2194,100.0,Red-backed Shrike,False
+8992328,probe_swap,G2,11,vernacular,37,Thorn-piercer,False,Thorn-piercer,exact,2198,2211,100.0,Thorn-piercer,False
+8992328,probe_swap,G2,12,taxon,38,Lanius quelea,False,Lanius quelea,exact,2213,2226,100.0,Lanius quelea,False
+8992328,probe_swap,G2,13,locality,40,Europe,False,Europe,exact,2365,2371,100.0,Europe,False
+8992328,probe_swap,G2,14,vernacular,41,Red-backed Shrikes,False,Red-backed Shrikes,exact,2489,2507,100.0,Red-backed Shrikes,False
+8992328,probe_swap,G2,15,vernacular,43,cockroaches,False,cockroaches,exact,2579,2590,100.0,cockroaches,False
+8992328,probe_swap,G2,16,person,48,H. A. Macpherson,False,H. A. Macpherson,exact,2867,2883,100.0,H. A. Macpherson,False
+8992328,probe_swap,G2,17,vernacular,49,Woodchat,False,Woodchat,exact,2960,2968,100.0,Woodchat,False
+8992328,probe_swap,G2,18,vernacular,49,Great Grey Shrikes,False,Great Grey Shrikes,exact,2974,2992,100.0,Great Grey Shrikes,False
+8992379,probe_typo,G2,0,locality,5,Berwickshire,False,Berwickshire,exact,33,45,100.0,Berwickshire,False
+8992379,probe_typo,G2,1,locality,5,Yorkshire,False,Yorkshire,exact,55,64,100.0,Yorkshire,False
+8992379,probe_typo,G2,2,locality,5,Scarborough,False,Scarborough,exact,93,104,100.0,Scarborough,False
+8992379,probe_typo,G2,3,date,5,"October 23rd, 1889",False,"October 23rd, 1889",cross_line,106,124,100.0,"October
+23rd, 1889",False
+8992379,probe_typo,G2,4,date,6,1887,False,1887,exact,176,180,100.0,1887,False
+8992379,probe_typo,G2,5,locality,7,Wells,False,Wells,exact,214,219,100.0,Wells,False
+8992379,probe_typo,G2,6,date,7,1900,False,1900,exact,223,227,100.0,1900,False
+8992379,probe_typo,G2,7,date,7,1904,False,1904,exact,256,260,100.0,1904,False
+8992379,probe_typo,G2,8,date,8,1905,False,1905,exact,274,278,100.0,1905,False
+8992379,probe_typo,G2,9,date,8,1906,False,1906,exact,290,294,100.0,1906,False
+8992379,probe_typo,G2,10,locality,8,Norfolk,False,Norfolk,exact,305,312,100.0,Norfolk,False
+8992379,probe_typo,G2,11,locality,8,Yorkshire,False,Yorkshire,exact,333,342,100.0,Yorkshire,False
+8992379,probe_typo,G2,12,date,9,1907,False,1907,exact,346,350,100.0,1907,False
+8992379,probe_typo,G2,13,locality,9,Cheshire,False,Cheshire,exact,355,363,100.0,Cheshire,False
+8992379,probe_typo,G2,14,date,9,June 1903,False,June 1903,exact,380,389,100.0,June 1903,False
+8992379,probe_typo,G2,15,locality,9,Shetlands,False,Shetlands,exact,398,407,100.0,Shetlands,False
+8992379,probe_typo,G2,16,date,10,1906,False,1906,exact,444,448,100.0,1906,False
+8992379,probe_typo,G2,17,vernacular,10,Flycatcher,False,Flycatcher,exact,493,503,100.0,Flycatcher,False
+8992379,probe_typo,G2,18,vernacular,16,Robin,False,Robin,exact,859,864,100.0,Robin,False
+8992379,probe_typo,G2,19,person,16,Seebohm,False,Seebohm,exact,870,877,100.0,Seebohm,False
+8992379,probe_typo,G2,20,vernacular,17,Robins,False,Robins,exact,943,949,100.0,Robins,False
+8992379,probe_typo,G2,21,vernacular,18,Flycatchers,False,Flycatchers,exact,958,969,100.0,Flycatchers,False
+8992379,probe_typo,G2,22,vernacular,19,Red-breasted Flycatcher,False,Red-breasted Flycatcher,exact,1082,1105,100.0,Red-breasted Flycatcher,False
+8992379,probe_typo,G2,23,taxon,30,M. minuta,False,M. minuta,exact,1839,1848,100.0,M. minuta,False
+8992379,probe_typo,G2,24,taxon,31,M. leuucra,False,M. leucura,exact,1906,1916,100.0,M. leuucra,True
+8992379,probe_typo,G2,25,taxon,32,M. pavra,False,M. parva,exact,1979,1987,100.0,M. pavra,True
+8992379,probe_typo,G2,26,taxon,33,M. hpyerythra,False,M. hyperythra,exact,2054,2067,100.0,M. hpyerythra,True
+8992379,probe_typo,G2,27,taxon,37,Munia atricapilla,False,Munia atricapilla,cross_line,2314,2331,100.0,"Munia
+atricapilla",False
+8992379,probe_typo,G2,28,date,38,1887,False,1887,exact,2369,2373,100.0,1887,False
+8992379,probe_typo,G2,29,date,40,spring of 1896,False,spring of 1896,exact,2494,2508,100.0,spring of 1896,False
+8992379,probe_typo,G2,30,taxon,40,Queela quelea,False,Quelea quelea,exact,2541,2554,100.0,Queela quelea,True
+8992379,probe_typo,G2,31,taxon,41,Q. russi,False,Q. russi,exact,2587,2595,100.0,Q. russi,False
+8992379,probe_typo,G2,32,vernacular,42,Cardinal,False,Cardinal,exact,2671,2679,100.0,Cardinal,False
+8992379,probe_typo,G2,33,taxon,42,Paroaria cerviclais,False,Paroaria cervicalis,exact,2681,2700,100.0,Paroaria cerviclais,True
+8992379,probe_typo,G2,34,taxon,43,P. cpaitata,False,P. capitata,exact,2735,2746,100.0,P. cpaitata,True
+8992379,probe_swap,G2,0,locality,5,Berwickshire,False,Berwickshire,exact,33,45,100.0,Berwickshire,False
+8992379,probe_swap,G2,1,locality,5,Yorkshire,False,Yorkshire,exact,55,64,100.0,Yorkshire,False
+8992379,probe_swap,G2,2,locality,5,Scarborough,False,Scarborough,exact,93,104,100.0,Scarborough,False
+8992379,probe_swap,G2,3,date,5,"October 23rd, 1889",False,"October 23rd, 1889",cross_line,106,124,100.0,"October
+23rd, 1889",False
+8992379,probe_swap,G2,4,date,6,1887,False,1887,exact,176,180,100.0,1887,False
+8992379,probe_swap,G2,5,locality,7,Wells,False,Wells,exact,214,219,100.0,Wells,False
+8992379,probe_swap,G2,6,date,7,1900,False,1900,exact,223,227,100.0,1900,False
+8992379,probe_swap,G2,7,date,7,1904,False,1904,exact,256,260,100.0,1904,False
+8992379,probe_swap,G2,8,date,8,1905,False,1905,exact,274,278,100.0,1905,False
+8992379,probe_swap,G2,9,date,8,1906,False,1906,exact,290,294,100.0,1906,False
+8992379,probe_swap,G2,10,locality,8,Norfolk,False,Norfolk,exact,305,312,100.0,Norfolk,False
+8992379,probe_swap,G2,11,locality,8,Yorkshire,False,Yorkshire,exact,333,342,100.0,Yorkshire,False
+8992379,probe_swap,G2,12,date,9,1907,False,1907,exact,346,350,100.0,1907,False
+8992379,probe_swap,G2,13,locality,9,Cheshire,False,Cheshire,exact,355,363,100.0,Cheshire,False
+8992379,probe_swap,G2,14,date,9,June 1903,False,June 1903,exact,380,389,100.0,June 1903,False
+8992379,probe_swap,G2,15,locality,9,Shetlands,False,Shetlands,exact,398,407,100.0,Shetlands,False
+8992379,probe_swap,G2,16,date,10,1906,False,1906,exact,444,448,100.0,1906,False
+8992379,probe_swap,G2,17,vernacular,10,Flycatcher,False,Flycatcher,exact,493,503,100.0,Flycatcher,False
+8992379,probe_swap,G2,18,vernacular,16,Robin,False,Robin,exact,859,864,100.0,Robin,False
+8992379,probe_swap,G2,19,person,16,Seebohm,False,Seebohm,exact,870,877,100.0,Seebohm,False
+8992379,probe_swap,G2,20,vernacular,17,Robins,False,Robins,exact,943,949,100.0,Robins,False
+8992379,probe_swap,G2,21,vernacular,18,Flycatchers,False,Flycatchers,exact,958,969,100.0,Flycatchers,False
+8992379,probe_swap,G2,22,vernacular,19,Red-breasted Flycatcher,False,Red-breasted Flycatcher,exact,1082,1105,100.0,Red-breasted Flycatcher,False
+8992379,probe_swap,G2,23,taxon,30,M. minuta,False,M. minuta,exact,1839,1848,100.0,M. minuta,False
+8992379,probe_swap,G2,24,taxon,31,M. leucura,False,M. leucura,exact,1906,1916,100.0,M. leucura,False
+8992379,probe_swap,G2,25,taxon,32,M. parva,False,M. parva,exact,1979,1987,100.0,M. parva,False
+8992379,probe_swap,G2,26,taxon,33,M. hyperythra,False,M. hyperythra,exact,2054,2067,100.0,M. hyperythra,False
+8992379,probe_swap,G2,27,taxon,37,Munia atricapilla,False,Munia atricapilla,cross_line,2314,2331,100.0,"Munia
+atricapilla",False
+8992379,probe_swap,G2,28,date,38,1887,False,1887,exact,2369,2373,100.0,1887,False
+8992379,probe_swap,G2,29,date,40,spring of 1896,False,spring of 1896,exact,2494,2508,100.0,spring of 1896,False
+8992379,probe_swap,G2,30,taxon,40,Quelea proregulus,False,Quelea proregulus,exact,2541,2558,100.0,Quelea proregulus,False
+8992379,probe_swap,G2,31,taxon,41,Q. russi,False,Q. russi,exact,2591,2599,100.0,Q. russi,False
+8992379,probe_swap,G2,32,vernacular,42,Cardinal,False,Cardinal,exact,2675,2683,100.0,Cardinal,False
+8992379,probe_swap,G2,33,taxon,42,Paroaria schwarzi,False,Paroaria schwarzi,exact,2685,2702,100.0,Paroaria schwarzi,False
+8992379,probe_swap,G2,34,taxon,43,P. capitata,False,P. capitata,exact,2737,2748,100.0,P. capitata,False
+8992408,probe_typo,G2,0,person,8,H. A. Macpherson,False,H. A. Macpherson,exact,275,291,100.0,H. A. Macpherson,False
+8992408,probe_typo,G2,1,vernacular,9,Hawﬁnch,False,Hawﬁnch,exact,356,363,100.0,Hawﬁnch,False
+8992408,probe_typo,G2,2,person,10,Charles A. Wtichell,False,Charles A. Witchell,exact,436,455,100.0,Charles A. Wtichell,True
+8992408,probe_typo,G2,3,vernacular,11,Hawﬁnch,False,Hawﬁnch,exact,559,566,100.0,Hawﬁnch,False
+8992408,probe_typo,G2,4,person,12,H. A. Macphreson,False,H. A. Macpherson,exact,605,621,100.0,H. A. Macphreson,True
+8992408,probe_typo,G2,5,vernacular,16,Chaﬃnch,False,Chaﬃnch,exact,778,785,100.0,Chaﬃnch,False
+8992408,probe_typo,G2,6,person,17,Alxeander von Homeyer,False,Alexander von Homeyer,exact,851,872,100.0,Alxeander von Homeyer,True
+8992408,probe_typo,G2,7,vernacular,18,cherry-kernel biter,False,cherry-kernel biter,exact,919,938,100.0,cherry-kernel biter,False
+8992408,probe_typo,G2,8,vernacular,21,Bullﬁnches,False,Bullﬁnches,exact,1072,1082,100.0,Bullﬁnches,False
+8992408,probe_typo,G2,9,vernacular,21,Grosbeaks,False,Grosbeaks,exact,1098,1107,100.0,Grosbeaks,False
+8992408,probe_typo,G2,10,vernacular,22,Grosbeaks,False,Grosbeaks,exact,1136,1145,100.0,Grosbeaks,False
+8992408,probe_typo,G2,11,person,23,Howard Saunders,False,Howard Saunders,exact,1215,1230,100.0,Howard Saunders,False
+8992408,probe_typo,G2,12,vernacular,24,Finches,False,Finches,exact,1289,1296,100.0,Finches,False
+8992408,probe_typo,G2,13,vernacular,24,Buntings,False,Buntings,exact,1305,1313,100.0,Buntings,False
+8992408,probe_typo,G2,14,vernacular,28,Finches,False,Finches,exact,1483,1490,100.0,Finches,False
+8992408,probe_typo,G2,15,taxon,28,Frnigilla,False,Fringilla,exact,1525,1534,100.0,Frnigilla,True
+8992408,probe_typo,G2,16,vernacular,29,Buntings,False,Buntings,exact,1569,1577,100.0,Buntings,False
+8992408,probe_typo,G2,17,taxon,30,Frnigilla,False,Fringilla,exact,1631,1640,100.0,Frnigilla,True
+8992408,probe_typo,G2,18,taxon,30,Psaser,False,Passer,exact,1660,1666,100.0,Psaser,True
+8992408,probe_typo,G2,19,taxon,31,Emberizinœ,False,Emberizinæ,exact,1727,1737,100.0,Emberizinœ,True
+8992408,probe_swap,G2,0,person,8,H. A. Macpherson,False,H. A. Macpherson,exact,275,291,100.0,H. A. Macpherson,False
+8992408,probe_swap,G2,1,vernacular,9,Hawﬁnch,False,Hawﬁnch,exact,356,363,100.0,Hawﬁnch,False
+8992408,probe_swap,G2,2,person,10,Charles A. Witchell,False,Charles A. Witchell,exact,436,455,100.0,Charles A. Witchell,False
+8992408,probe_swap,G2,3,vernacular,11,Hawﬁnch,False,Hawﬁnch,exact,559,566,100.0,Hawﬁnch,False
+8992408,probe_swap,G2,4,person,12,H. A. Macpherson,False,H. A. Macpherson,exact,605,621,100.0,H. A. Macpherson,False
+8992408,probe_swap,G2,5,vernacular,16,Chaﬃnch,False,Chaﬃnch,exact,778,785,100.0,Chaﬃnch,False
+8992408,probe_swap,G2,6,person,17,Alexander von Homeyer,False,Alexander von Homeyer,exact,851,872,100.0,Alexander von Homeyer,False
+8992408,probe_swap,G2,7,vernacular,18,cherry-kernel biter,False,cherry-kernel biter,exact,919,938,100.0,cherry-kernel biter,False
+8992408,probe_swap,G2,8,vernacular,21,Bullﬁnches,False,Bullﬁnches,exact,1072,1082,100.0,Bullﬁnches,False
+8992408,probe_swap,G2,9,vernacular,21,Grosbeaks,False,Grosbeaks,exact,1098,1107,100.0,Grosbeaks,False
+8992408,probe_swap,G2,10,vernacular,22,Grosbeaks,False,Grosbeaks,exact,1136,1145,100.0,Grosbeaks,False
+8992408,probe_swap,G2,11,person,23,Howard Saunders,False,Howard Saunders,exact,1215,1230,100.0,Howard Saunders,False
+8992408,probe_swap,G2,12,vernacular,24,Finches,False,Finches,exact,1289,1296,100.0,Finches,False
+8992408,probe_swap,G2,13,vernacular,24,Buntings,False,Buntings,exact,1305,1313,100.0,Buntings,False
+8992408,probe_swap,G2,14,vernacular,28,Finches,False,Finches,exact,1483,1490,100.0,Finches,False
+8992408,probe_swap,G2,15,taxon,28,Fringilla,False,Fringilla,exact,1525,1534,100.0,Fringilla,False
+8992408,probe_swap,G2,16,vernacular,29,Buntings,False,Buntings,exact,1569,1577,100.0,Buntings,False
+8992408,probe_swap,G2,17,taxon,30,Fringilla,False,Fringilla,exact,1631,1640,100.0,Fringilla,False
+8992408,probe_swap,G2,18,taxon,30,Passer,False,Passer,exact,1660,1666,100.0,Passer,False
+8992408,probe_swap,G2,19,taxon,31,Emberizinœ,False,Emberizinæ,exact,1727,1737,100.0,Emberizinœ,True
+8992489,probe_typo,G2,0,vernacular,9,BRAMBLING,False,BRAMBLING,exact,69,78,100.0,BRAMBLING,False
+8992489,probe_typo,G2,1,taxon,5,FRINGILLIDÆ,False,FRINGILLIDÆ,exact,27,38,100.0,FRINGILLIDÆ,False
+8992489,probe_typo,G2,2,taxon,7,FRINGILLINÆ,False,FRINGILLINÆ,exact,51,62,100.0,FRINGILLINÆ,False
+8992489,probe_typo,G2,3,taxon,11,Fringilla nontirfingilla,False,Fringilla montifringilla,exact,81,105,100.0,Fringilla nontirfingilla,True
+8992489,probe_typo,G2,4,person,11,LINN.,False,LINN.,exact,107,112,100.0,LINN.,False
+8992489,probe_typo,G2,5,person,13,Howard Saudners,False,Howard Saunders,exact,150,165,100.0,Howard Saudners,True
+8992489,probe_typo,G2,6,locality,13,Faroes,False,Faroes,exact,180,186,100.0,Faroes,False
+8992489,probe_typo,G2,7,vernacular,14,Brambling,False,Brambling,exact,191,200,100.0,Brambling,False
+8992489,probe_typo,G2,8,locality,15,Norway,False,Norway,exact,314,320,100.0,Norway,False
+8992489,probe_typo,G2,9,locality,16,valley of the Amur,False,valley of the Amur,exact,328,346,100.0,valley of the Amur,False
+8992489,probe_typo,G2,10,locality,16,Japan,False,Japan,exact,380,385,100.0,Japan,False
+8992489,probe_typo,G2,11,locality,16,China,False,China,exact,387,392,100.0,China,False
+8992489,probe_typo,G2,12,locality,16,Northern India,False,Northern India,cross_line,394,408,100.0,"Northern
+India",False
+8992489,probe_typo,G2,13,locality,17,Asia Minor,False,Asia Minor,exact,410,420,100.0,Asia Minor,False
+8992489,probe_typo,G2,14,locality,17,Europe,False,Europe,exact,439,445,100.0,Europe,False
+8992489,probe_typo,G2,15,locality,18,African side of the Mediterranean,False,African side of the Mediterranean,exact,522,555,100.0,African side of the Mediterranean,False
+8992489,probe_typo,G2,16,locality,19,Belgium,False,Belgium,exact,587,594,100.0,Belgium,False
+8992489,probe_typo,G2,17,locality,19,Holland,False,Holland,exact,596,603,100.0,Holland,False
+8992489,probe_typo,G2,18,locality,19,Germany,False,Germany,exact,605,612,100.0,Germany,False
+8992489,probe_typo,G2,19,locality,19,Heligoland,False,Heligoland,exact,618,628,100.0,Heligoland,False
+8992489,probe_typo,G2,20,locality,20,Pyrenees,False,Pyrenees,exact,683,691,100.0,Pyrenees,False
+8992489,probe_typo,G2,21,locality,20,Alps,False,Alps,exact,697,701,100.0,Alps,False
+8992489,probe_typo,G2,22,locality,20,Ardennes,False,Ardennes,exact,710,718,100.0,Ardennes,False
+8992489,probe_typo,G2,23,locality,23,Great Britain,False,Great Britain,exact,783,796,100.0,Great Britain,False
+8992489,probe_typo,G2,24,vernacular,23,Brambling,False,Brambling,exact,801,810,100.0,Brambling,False
+8992489,probe_typo,G2,25,locality,26,Scotland,False,Scotland,exact,1053,1061,100.0,Scotland,False
+8992489,probe_typo,G2,26,locality,26,England,False,England,exact,1070,1077,100.0,England,False
+8992489,probe_typo,G2,27,locality,27,Cornwall,False,Cornwall,exact,1089,1097,100.0,Cornwall,False
+8992489,probe_typo,G2,28,locality,27,west of England,False,west of England,exact,1103,1118,100.0,west of England,False
+8992489,probe_typo,G2,29,locality,27,south of Ireland,False,south of Ireland,exact,1128,1144,100.0,south of Ireland,False
+8992489,probe_swap,G2,0,taxon,5,FRINGILLIDÆ,False,FRINGILLIDÆ,exact,27,38,100.0,FRINGILLIDÆ,False
+8992489,probe_swap,G2,1,taxon,7,FRINGILLINÆ,False,FRINGILLINÆ,exact,51,62,100.0,FRINGILLINÆ,False
+8992489,probe_swap,G2,2,vernacular,9,BRAMBLING,False,BRAMBLING,exact,69,78,100.0,BRAMBLING,False
+8992489,probe_swap,G2,3,taxon,11,Fringilla melanocephala,False,Fringilla melanocephala,exact,81,104,100.0,Fringilla melanocephala,False
+8992489,probe_swap,G2,4,person,11,LINN.,False,LINN.,exact,106,111,100.0,LINN.,False
+8992489,probe_swap,G2,5,person,13,Howard Saunders,False,Howard Saunders,exact,149,164,100.0,Howard Saunders,False
+8992489,probe_swap,G2,6,locality,13,Faroes,False,Faroes,exact,179,185,100.0,Faroes,False
+8992489,probe_swap,G2,7,vernacular,14,Brambling,False,Brambling,exact,190,199,100.0,Brambling,False
+8992489,probe_swap,G2,8,locality,15,Norway,False,Norway,exact,313,319,100.0,Norway,False
+8992489,probe_swap,G2,9,locality,16,valley of the Amur,False,valley of the Amur,exact,327,345,100.0,valley of the Amur,False
+8992489,probe_swap,G2,10,locality,16,Japan,False,Japan,exact,379,384,100.0,Japan,False
+8992489,probe_swap,G2,11,locality,16,China,False,China,exact,386,391,100.0,China,False
+8992489,probe_swap,G2,12,locality,16,Northern India,False,Northern India,cross_line,393,407,100.0,"Northern
+India",False
+8992489,probe_swap,G2,13,locality,17,Asia Minor,False,Asia Minor,exact,409,419,100.0,Asia Minor,False
+8992489,probe_swap,G2,14,locality,17,Europe,False,Europe,exact,438,444,100.0,Europe,False
+8992489,probe_swap,G2,15,locality,18,African side of the Mediterranean,False,African side of the Mediterranean,exact,521,554,100.0,African side of the Mediterranean,False
+8992489,probe_swap,G2,16,locality,19,Belgium,False,Belgium,exact,586,593,100.0,Belgium,False
+8992489,probe_swap,G2,17,locality,19,Holland,False,Holland,exact,595,602,100.0,Holland,False
+8992489,probe_swap,G2,18,locality,19,Germany,False,Germany,exact,604,611,100.0,Germany,False
+8992489,probe_swap,G2,19,locality,19,Heligoland,False,Heligoland,exact,617,627,100.0,Heligoland,False
+8992489,probe_swap,G2,20,locality,20,Pyrenees,False,Pyrenees,exact,682,690,100.0,Pyrenees,False
+8992489,probe_swap,G2,21,locality,20,Alps,False,Alps,exact,696,700,100.0,Alps,False
+8992489,probe_swap,G2,22,locality,20,Ardennes,False,Ardennes,exact,709,717,100.0,Ardennes,False
+8992489,probe_swap,G2,23,locality,23,Great Britain,False,Great Britain,exact,782,795,100.0,Great Britain,False
+8992489,probe_swap,G2,24,vernacular,23,Brambling,False,Brambling,exact,800,809,100.0,Brambling,False
+8992489,probe_swap,G2,25,locality,26,Scotland,False,Scotland,exact,1052,1060,100.0,Scotland,False
+8992489,probe_swap,G2,26,locality,26,England,False,England,exact,1069,1076,100.0,England,False
+8992489,probe_swap,G2,27,locality,27,Cornwall,False,Cornwall,exact,1088,1096,100.0,Cornwall,False
+8992489,probe_swap,G2,28,locality,27,west of England,False,west of England,exact,1102,1117,100.0,west of England,False
+8992489,probe_swap,G2,29,locality,27,south of Ireland,False,south of Ireland,exact,1127,1143,100.0,south of Ireland,False
+8992643,probe_typo,G2,0,taxon,5,TURDIDÆ,False,TURDIDÆ,exact,22,29,100.0,TURDIDÆ,False
+8992643,probe_typo,G2,1,taxon,7,SYLVIINÆ,False,SYLVIINÆ,exact,42,50,100.0,SYLVIINÆ,False
+8992643,probe_typo,G2,2,vernacular,9,PALLAS' WILLOW-WARBLER,False,PALLAS' WILLOW-WARBLER,exact,53,75,100.0,PALLAS' WILLOW-WARBLER,False
+8992643,probe_typo,G2,3,taxon,11,Phylloscpous proregulus,False,Phylloscopus proregulus,exact,78,101,100.0,Phylloscpous proregulus,True
+8992643,probe_typo,G2,4,locality,13,Norfolk,False,Norfolk,exact,152,159,100.0,Norfolk,False
+8992643,probe_typo,G2,5,date,13,"October, 1896",False,"October, 1896",exact,164,177,100.0,"October, 1896",False
+8992643,probe_typo,G2,6,vernacular,15,Chiﬀchaﬀs,False,Chiffchaffs,exact,192,201,100.0,Chiﬀchaﬀs,False
+8992643,probe_typo,G2,7,locality,15,Shetlands,False,Shetlands,exact,214,223,100.0,Shetlands,False
+8992643,probe_typo,G2,8,date,15,"April 15th and 24th, 1904",False,"April 15th and 24th, 1904",cross_line,232,257,100.0,"April 15th and 24th,
+1904",False
+8992643,probe_typo,G2,9,date,16,May of the same year,False,May of the same year,exact,262,282,100.0,May of the same year,False
+8992643,probe_typo,G2,10,person,16,John S. Tluloch,False,John S. Tulloch,exact,303,318,100.0,John S. Tluloch,True
+8992643,probe_typo,G2,11,locality,17,Lerwick,False,Lerwick,exact,322,329,100.0,Lerwick,False
+8992643,probe_typo,G2,12,date,17,May 27th,False,May 27th,exact,338,346,100.0,May 27th,False
+8992643,probe_typo,G2,13,taxon,19,TURDIDÆ,False,TURDIDÆ,exact,387,394,100.0,TURDIDÆ,False
+8992643,probe_typo,G2,14,taxon,21,SYLVIINÆ,False,SYLVIINÆ,exact,407,415,100.0,SYLVIINÆ,False
+8992643,probe_typo,G2,15,vernacular,23,SIBERIAN CHIFFCHAFF,False,SIBERIAN CHIFFCHAFF,exact,422,441,100.0,SIBERIAN CHIFFCHAFF,False
+8992643,probe_typo,G2,16,taxon,25,Phyllosocpus tristis,False,Phylloscopus tristis,exact,444,464,100.0,Phyllosocpus tristis,True
+8992643,probe_typo,G2,17,person,25,BLYTH,False,BLYTH,exact,466,471,100.0,BLYTH,False
+8992643,probe_typo,G2,18,locality,27,Orkneys,False,Orkneys,exact,521,528,100.0,Orkneys,False
+8992643,probe_typo,G2,19,date,27,1902,False,1902,exact,532,536,100.0,1902,False
+8992643,probe_typo,G2,20,taxon,29,TURDIDÆ,False,TURDIDÆ,exact,546,553,100.0,TURDIDÆ,False
+8992643,probe_typo,G2,21,taxon,31,SYLVIINÆ,False,SYLVIINÆ,exact,566,574,100.0,SYLVIINÆ,False
+8992643,probe_typo,G2,22,vernacular,33,GREENISH WILLOW-WARBLER,False,GREENISH WILLOW-WARBLER,exact,581,604,100.0,GREENISH WILLOW-WARBLER,False
+8992643,probe_typo,G2,23,taxon,35,Phylolscopus viridanus,False,Phylloscopus viridanus,exact,607,629,100.0,Phylolscopus viridanus,True
+8992643,probe_typo,G2,24,person,35,BLYTH,False,BLYTH,exact,631,636,100.0,BLYTH,False
+8992643,probe_typo,G2,25,locality,37,Lincolnshire,False,Lincolnshire,exact,665,677,100.0,Lincolnshire,False
+8992643,probe_typo,G2,26,date,37,"September 5th, 1896",False,"September 5th, 1896",exact,682,701,100.0,"September 5th, 1896",False
+8992643,probe_typo,G2,27,locality,38,Sule Skerry,False,Sule Skerry,exact,719,730,100.0,Sule Skerry,False
+8992643,probe_typo,G2,28,locality,38,Sutherlandshire,False,Sutherlandshire,exact,743,758,100.0,Sutherlandshire,False
+8992643,probe_typo,G2,29,date,38,"September 5th, 1902",False,"September 5th, 1902",exact,764,783,100.0,"September 5th, 1902",False
+8992643,probe_swap,G2,0,taxon,5,TURDIDÆ,False,TURDIDÆ,exact,22,29,100.0,TURDIDÆ,False
+8992643,probe_swap,G2,1,taxon,7,SYLVIINÆ,False,SYLVIINÆ,exact,42,50,100.0,SYLVIINÆ,False
+8992643,probe_swap,G2,2,vernacular,9,PALLAS' WILLOW-WARBLER,False,PALLAS' WILLOW-WARBLER,exact,53,75,100.0,PALLAS' WILLOW-WARBLER,False
+8992643,probe_swap,G2,3,taxon,11,Phylloscopus familiaris,False,Phylloscopus familiaris,exact,78,101,100.0,Phylloscopus familiaris,False
+8992643,probe_swap,G2,4,locality,13,Norfolk,False,Norfolk,exact,152,159,100.0,Norfolk,False
+8992643,probe_swap,G2,5,date,13,"October, 1896",False,"October, 1896",exact,164,177,100.0,"October, 1896",False
+8992643,probe_swap,G2,6,vernacular,15,Chiﬀchaﬀs,False,Chiffchaffs,exact,192,201,100.0,Chiﬀchaﬀs,False
+8992643,probe_swap,G2,7,locality,15,Shetlands,False,Shetlands,exact,214,223,100.0,Shetlands,False
+8992643,probe_swap,G2,8,date,15,"April 15th and 24th, 1904",False,"April 15th and 24th, 1904",cross_line,232,257,100.0,"April 15th and 24th,
+1904",False
+8992643,probe_swap,G2,9,date,16,May of the same year,False,May of the same year,exact,262,282,100.0,May of the same year,False
+8992643,probe_swap,G2,10,person,16,John S. Tulloch,False,John S. Tulloch,exact,303,318,100.0,John S. Tulloch,False
+8992643,probe_swap,G2,11,locality,17,Lerwick,False,Lerwick,exact,322,329,100.0,Lerwick,False
+8992643,probe_swap,G2,12,date,17,May 27th,False,May 27th,exact,338,346,100.0,May 27th,False
+8992643,probe_swap,G2,13,taxon,19,TURDIDÆ,False,TURDIDÆ,exact,387,394,100.0,TURDIDÆ,False
+8992643,probe_swap,G2,14,taxon,21,SYLVIINÆ,False,SYLVIINÆ,exact,407,415,100.0,SYLVIINÆ,False
+8992643,probe_swap,G2,15,vernacular,23,SIBERIAN CHIFFCHAFF,False,SIBERIAN CHIFFCHAFF,exact,422,441,100.0,SIBERIAN CHIFFCHAFF,False
+8992643,probe_swap,G2,16,taxon,25,Phylloscopus quelea,False,Phylloscopus quelea,exact,444,463,100.0,Phylloscopus quelea,False
+8992643,probe_swap,G2,17,person,25,BLYTH,False,BLYTH,exact,465,470,100.0,BLYTH,False
+8992643,probe_swap,G2,18,locality,27,Orkneys,False,Orkneys,exact,520,527,100.0,Orkneys,False
+8992643,probe_swap,G2,19,date,27,1902,False,1902,exact,531,535,100.0,1902,False
+8992643,probe_swap,G2,20,taxon,29,TURDIDÆ,False,TURDIDÆ,exact,545,552,100.0,TURDIDÆ,False
+8992643,probe_swap,G2,21,taxon,31,SYLVIINÆ,False,SYLVIINÆ,exact,565,573,100.0,SYLVIINÆ,False
+8992643,probe_swap,G2,22,vernacular,33,GREENISH WILLOW-WARBLER,False,GREENISH WILLOW-WARBLER,exact,580,603,100.0,GREENISH WILLOW-WARBLER,False
+8992643,probe_swap,G2,23,taxon,35,Phylloscopus quelea,False,Phylloscopus quelea,exact,606,625,100.0,Phylloscopus quelea,False
+8992643,probe_swap,G2,24,person,35,BLYTH,False,BLYTH,exact,627,632,100.0,BLYTH,False
+8992643,probe_swap,G2,25,locality,37,Lincolnshire,False,Lincolnshire,exact,661,673,100.0,Lincolnshire,False
+8992643,probe_swap,G2,26,date,37,"September 5th, 1896",False,"September 5th, 1896",exact,678,697,100.0,"September 5th, 1896",False
+8992643,probe_swap,G2,27,locality,38,Sule Skerry,False,Sule Skerry,exact,715,726,100.0,Sule Skerry,False
+8992643,probe_swap,G2,28,locality,38,Sutherlandshire,False,Sutherlandshire,exact,739,754,100.0,Sutherlandshire,False
+8992643,probe_swap,G2,29,date,38,"September 5th, 1902",False,"September 5th, 1902",exact,760,779,100.0,"September 5th, 1902",False
+8992644,probe_typo,G2,0,vernacular,5,Willow-Warbler,False,Willow-Warbler,exact,39,53,100.0,Willow-Warbler,False
+8992644,probe_typo,G2,1,locality,6,Shetlands,False,Shetlands,exact,102,111,100.0,Shetlands,False
+8992644,probe_typo,G2,2,date,6,"May, 1901",False,"May, 1901",exact,115,124,100.0,"May, 1901",False
+8992644,probe_typo,G2,3,vernacular,8,Wood-Warbler,False,Wood-Warbler,exact,131,143,100.0,Wood-Warbler,False
+8992644,probe_typo,G2,4,locality,8,Isle of Man,False,Isle of Man,exact,161,172,100.0,Isle of Man,False
+8992644,probe_typo,G2,5,date,8,May 1901 and 1905,False,May 1901 and 1905,exact,177,194,100.0,May 1901 and 1905,False
+8992644,probe_typo,G2,6,taxon,10,TURDIDÆ,False,TURDIDÆ,exact,204,211,100.0,TURDIDÆ,False
+8992644,probe_typo,G2,7,taxon,12,SYLVIINÆ,False,SYLVIINÆ,exact,224,232,100.0,SYLVIINÆ,False
+8992644,probe_typo,G2,8,vernacular,14,RUFOUS WARBLER,False,RUFOUS WARBLER,exact,239,253,100.0,RUFOUS WARBLER,False
+8992644,probe_typo,G2,9,taxon,16,Aedon galatcodes,False,Aedon galactodes,exact,256,272,100.0,Aedon galatcodes,True
+8992644,probe_typo,G2,10,person,16,TEMM.,False,TEMM.,exact,274,279,100.0,TEMM.,False
+8992644,probe_typo,G2,11,locality,18,Sussex,False,Sussex,exact,315,321,100.0,Sussex,False
+8992644,probe_typo,G2,12,locality,18,Devon,False,Devon,exact,326,331,100.0,Devon,False
+8992644,probe_typo,G2,13,taxon,20,TURDIDÆ,False,TURDIDÆ,exact,355,362,100.0,TURDIDÆ,False
+8992644,probe_typo,G2,14,taxon,22,SYLVIINÆ,False,SYLVIINÆ,exact,375,383,100.0,SYLVIINÆ,False
+8992644,probe_typo,G2,15,vernacular,24,GREY-BACKED WARBLER,False,GREY-BACKED WARBLER,exact,390,409,100.0,GREY-BACKED WARBLER,False
+8992644,probe_typo,G2,16,taxon,26,Aedon familiairs,False,Aedon familiaris,exact,412,428,100.0,Aedon familiairs,True
+8992644,probe_typo,G2,17,locality,28,"Hythe, Kent",False,"Hythe, Kent",exact,449,460,100.0,"Hythe, Kent",False
+8992644,probe_typo,G2,18,date,28,"July 15th, 1907",False,"July 15th, 1907",exact,465,480,100.0,"July 15th, 1907",False
+8992644,probe_typo,G2,19,taxon,30,TURDIDÆ,False,TURDIDÆ,exact,490,497,100.0,TURDIDÆ,False
+8992644,probe_typo,G2,20,taxon,32,SYLVIINÆ,False,SYLVIINÆ,exact,510,518,100.0,SYLVIINÆ,False
+8992644,probe_typo,G2,21,vernacular,34,RADDE'S BUSH-WARBLER,False,RADDE'S BUSH-WARBLER,exact,521,541,100.0,RADDE'S BUSH-WARBLER,False
+8992644,probe_typo,G2,22,taxon,36,Lusicniola schwarzi,False,Lusciniola schwarzi,exact,544,563,100.0,Lusicniola schwarzi,True
+8992644,probe_typo,G2,23,person,36,RADDE,False,RADDE,exact,565,570,100.0,RADDE,False
+8992644,probe_typo,G2,24,date,38,"October, 1898",False,"October, 1898",exact,599,612,100.0,"October, 1898",False
+8992644,probe_typo,G2,25,locality,38,Lincolnshire side of the Humber,False,Lincolnshire side of the Humber,cross_line,621,652,100.0,"Lincolnshire side of the
+Humber",False
+8992644,probe_typo,G2,26,person,39,Haigh,False,Haigh,exact,661,666,100.0,Haigh,False
+8992644,probe_swap,G2,0,vernacular,5,Willow-Warbler,False,Willow-Warbler,exact,39,53,100.0,Willow-Warbler,False
+8992644,probe_swap,G2,1,locality,6,Shetlands,False,Shetlands,exact,102,111,100.0,Shetlands,False
+8992644,probe_swap,G2,2,date,6,"May, 1901",False,"May, 1901",exact,115,124,100.0,"May, 1901",False
+8992644,probe_swap,G2,3,vernacular,8,Wood-Warbler,False,Wood-Warbler,exact,131,143,100.0,Wood-Warbler,False
+8992644,probe_swap,G2,4,locality,8,Isle of Man,False,Isle of Man,exact,161,172,100.0,Isle of Man,False
+8992644,probe_swap,G2,5,date,8,May 1901 and 1905,False,May 1901 and 1905,exact,177,194,100.0,May 1901 and 1905,False
+8992644,probe_swap,G2,6,taxon,10,TURDIDÆ,False,TURDIDÆ,exact,204,211,100.0,TURDIDÆ,False
+8992644,probe_swap,G2,7,taxon,12,SYLVIINÆ,False,SYLVIINÆ,exact,224,232,100.0,SYLVIINÆ,False
+8992644,probe_swap,G2,8,vernacular,14,RUFOUS WARBLER,False,RUFOUS WARBLER,exact,239,253,100.0,RUFOUS WARBLER,False
+8992644,probe_swap,G2,9,taxon,16,Aedon tristis,False,Aedon tristis,exact,256,269,100.0,Aedon tristis,False
+8992644,probe_swap,G2,10,person,16,TEMM.,False,TEMM.,exact,271,276,100.0,TEMM.,False
+8992644,probe_swap,G2,11,locality,18,Sussex,False,Sussex,exact,312,318,100.0,Sussex,False
+8992644,probe_swap,G2,12,locality,18,Devon,False,Devon,exact,323,328,100.0,Devon,False
+8992644,probe_swap,G2,13,taxon,20,TURDIDÆ,False,TURDIDÆ,exact,352,359,100.0,TURDIDÆ,False
+8992644,probe_swap,G2,14,taxon,22,SYLVIINÆ,False,SYLVIINÆ,exact,372,380,100.0,SYLVIINÆ,False
+8992644,probe_swap,G2,15,vernacular,24,GREY-BACKED WARBLER,False,GREY-BACKED WARBLER,exact,387,406,100.0,GREY-BACKED WARBLER,False
+8992644,probe_swap,G2,16,taxon,26,Aedon nontifringilla,False,Aedon nontifringilla,exact,409,429,100.0,Aedon nontifringilla,False
+8992644,probe_swap,G2,17,locality,28,"Hythe, Kent",False,"Hythe, Kent",exact,450,461,100.0,"Hythe, Kent",False
+8992644,probe_swap,G2,18,date,28,"July 15th, 1907",False,"July 15th, 1907",exact,466,481,100.0,"July 15th, 1907",False
+8992644,probe_swap,G2,19,taxon,30,TURDIDÆ,False,TURDIDÆ,exact,491,498,100.0,TURDIDÆ,False
+8992644,probe_swap,G2,20,taxon,32,SYLVIINÆ,False,SYLVIINÆ,exact,511,519,100.0,SYLVIINÆ,False
+8992644,probe_swap,G2,21,vernacular,34,RADDE'S BUSH-WARBLER,False,RADDE'S BUSH-WARBLER,exact,522,542,100.0,RADDE'S BUSH-WARBLER,False
+8992644,probe_swap,G2,22,taxon,36,Lusciniola nontifringilla,False,Lusciniola nontifringilla,exact,545,570,100.0,Lusciniola nontifringilla,False
+8992644,probe_swap,G2,23,person,36,RADDE,False,RADDE,exact,572,577,100.0,RADDE,False
+8992644,probe_swap,G2,24,date,38,"October, 1898",False,"October, 1898",exact,606,619,100.0,"October, 1898",False
+8992644,probe_swap,G2,25,locality,38,Lincolnshire side of the Humber,False,Lincolnshire side of the Humber,cross_line,628,659,100.0,"Lincolnshire side of the
+Humber",False
+8992644,probe_swap,G2,26,person,39,Haigh,False,Haigh,exact,668,673,100.0,Haigh,False
+8992647,probe_typo,G2,0,taxon,5,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,22,33,100.0,MOTACILLIDÆ,False
+8992647,probe_typo,G2,1,vernacular,7,BLACK‐HEADED WAGTAIL,False,BLACK‐HEADED WAGTAIL,exact,40,60,100.0,BLACK‐HEADED WAGTAIL,False
+8992647,probe_typo,G2,2,taxon,9,Motacilla mleanocephala,False,Motacilla melanocephala,exact,63,86,100.0,Motacilla mleanocephala,True
+8992647,probe_typo,G2,3,person,9,LCIHT.,False,LICHT.,exact,88,94,100.0,LCIHT.,True
+8992647,probe_typo,G2,4,locality,11,Willingdon,False,Willingdon,exact,116,126,100.0,Willingdon,False
+8992647,probe_typo,G2,5,date,11,"May 13th, 1906",False,"May 13th, 1906",exact,131,145,100.0,"May 13th, 1906",False
+8992647,probe_typo,G2,6,taxon,12,M. ﬂava,False,M. flava,exact,168,175,100.0,M. ﬂava,False
+8992647,probe_typo,G2,7,taxon,14,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,211,222,100.0,MOTACILLIDÆ,False
+8992647,probe_typo,G2,8,vernacular,16,SYKES’ WAGTAIL,False,SYKES’ WAGTAIL,exact,225,239,100.0,SYKES’ WAGTAIL,False
+8992647,probe_typo,G2,9,taxon,18,Mtoacilla beema,False,Motacilla beema,exact,242,257,100.0,Mtoacilla beema,True
+8992647,probe_typo,G2,10,person,18,SYKES,False,SYKES,exact,259,264,100.0,SYKES,False
+8992647,probe_typo,G2,11,locality,20,"Rottingdean, Sussex",False,"Rottingdean, Sussex",exact,289,308,100.0,"Rottingdean, Sussex",False
+8992647,probe_typo,G2,12,date,20,"April 20th, I898",False,"April 20th, 1898",exact,313,329,100.0,"April 20th, I898",True
+8992647,probe_typo,G2,13,taxon,22,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,339,350,100.0,MOTACILLIDÆ,False
+8992647,probe_typo,G2,14,vernacular,24,ASHY‐HEADED WAGTAIL,False,ASHY‐HEADED WAGTAIL,exact,357,376,100.0,ASHY‐HEADED WAGTAIL,False
+8992647,probe_typo,G2,15,taxon,26,Motacilla cineroecapilla,False,Motacilla cinereocapilla,exact,379,403,100.0,Motacilla cineroecapilla,True
+8992647,probe_typo,G2,16,person,26,SAVI,False,SAVI,exact,405,409,100.0,SAVI,False
+8992647,probe_typo,G2,17,locality,28,Penzance,False,Penzance,exact,458,466,100.0,Penzance,False
+8992647,probe_typo,G2,18,locality,29,"Sheringham, Norfolk",False,"Sheringham, Norfolk",exact,484,503,100.0,"Sheringham, Norfolk",False
+8992647,probe_typo,G2,19,date,29,May ?) 1842,False,May ?) 1842,exact,508,519,100.0,May ?) 1842,False
+8992647,probe_typo,G2,20,taxon,32,M. ﬂava,False,M. flava,exact,614,621,100.0,M. ﬂava,False
+8992647,probe_swap,G2,0,taxon,5,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,22,33,100.0,MOTACILLIDÆ,False
+8992647,probe_swap,G2,1,vernacular,7,BLACK‐HEADED WAGTAIL,False,BLACK‐HEADED WAGTAIL,exact,40,60,100.0,BLACK‐HEADED WAGTAIL,False
+8992647,probe_swap,G2,2,taxon,9,Motacilla cervicalis,False,Motacilla cervicalis,exact,63,83,100.0,Motacilla cervicalis,False
+8992647,probe_swap,G2,3,person,9,LICHT.,False,LICHT.,exact,85,91,100.0,LICHT.,False
+8992647,probe_swap,G2,4,locality,11,Willingdon,False,Willingdon,exact,113,123,100.0,Willingdon,False
+8992647,probe_swap,G2,5,date,11,"May 13th, 1906",False,"May 13th, 1906",exact,128,142,100.0,"May 13th, 1906",False
+8992647,probe_swap,G2,6,taxon,12,M. ﬂava,False,M. flava,exact,165,172,100.0,M. ﬂava,False
+8992647,probe_swap,G2,7,taxon,14,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,208,219,100.0,MOTACILLIDÆ,False
+8992647,probe_swap,G2,8,vernacular,16,SYKES’ WAGTAIL,False,SYKES’ WAGTAIL,exact,222,236,100.0,SYKES’ WAGTAIL,False
+8992647,probe_swap,G2,9,taxon,18,Motacilla schwarzi,False,Motacilla schwarzi,exact,239,257,100.0,Motacilla schwarzi,False
+8992647,probe_swap,G2,10,person,18,SYKES,False,SYKES,exact,259,264,100.0,SYKES,False
+8992647,probe_swap,G2,11,locality,20,"Rottingdean, Sussex",False,"Rottingdean, Sussex",exact,289,308,100.0,"Rottingdean, Sussex",False
+8992647,probe_swap,G2,12,date,20,"April 20th, I898",False,"April 20th, 1898",exact,313,329,100.0,"April 20th, I898",True
+8992647,probe_swap,G2,13,taxon,22,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,339,350,100.0,MOTACILLIDÆ,False
+8992647,probe_swap,G2,14,vernacular,24,ASHY‐HEADED WAGTAIL,False,ASHY‐HEADED WAGTAIL,exact,357,376,100.0,ASHY‐HEADED WAGTAIL,False
+8992647,probe_swap,G2,15,taxon,26,Motacilla collurio,False,Motacilla collurio,exact,379,397,100.0,Motacilla collurio,False
+8992647,probe_swap,G2,16,person,26,SAVI,False,SAVI,exact,399,403,100.0,SAVI,False
+8992647,probe_swap,G2,17,locality,28,Penzance,False,Penzance,exact,452,460,100.0,Penzance,False
+8992647,probe_swap,G2,18,locality,29,"Sheringham, Norfolk",False,"Sheringham, Norfolk",exact,478,497,100.0,"Sheringham, Norfolk",False
+8992647,probe_swap,G2,19,date,29,May ?) 1842,False,May ?) 1842,exact,502,513,100.0,May ?) 1842,False
+8992647,probe_swap,G2,20,taxon,32,M. ﬂava,False,M. flava,exact,608,615,100.0,M. ﬂava,False
+8966790,probe_typo,G2,0,institution,7,Mus. Cuming,False,Mus. Cuming,exact,174,185,100.0,Mus. Cuming,False
+8966790,probe_typo,G2,1,taxon,9,BULIMUS CHILENISS,False,BULIMUS CHILENSIS,exact,189,206,100.0,BULIMUS CHILENISS,True
+8966790,probe_typo,G2,2,vernacular,15,CHILI BULIMUS,False,CHILI BULIMUS,exact,450,463,100.0,CHILI BULIMUS,False
+8966790,probe_typo,G2,3,person,22,LESOSN,False,LESSON,exact,697,703,100.0,LESOSN,True
+8966790,probe_typo,G2,4,taxon,23,Bulimus granulsous,False,Bulimus granulosus,exact,739,757,100.0,Bulimus granulsous,True
+8966790,probe_typo,G2,5,person,23,Broedrip,False,Broderip,exact,759,767,100.0,Broedrip,True
+8966790,probe_typo,G2,6,locality,25,Valparaiso,False,Valparaiso,exact,775,785,100.0,Valparaiso,False
+8966790,probe_typo,G2,7,locality,25,"Conception, Chili",False,"Conception, Chili",exact,790,807,100.0,"Conception, Chili",False
+8966790,probe_typo,G2,8,person,25,Cmuing,False,Cuming,exact,809,815,100.0,Cmuing,True
+8966790,probe_typo,G2,9,locality,31,mountains of Conception,False,mountains of Conception,exact,1049,1072,100.0,mountains of Conception,False
+8966790,probe_typo,G2,10,locality,32,Valparaiso,False,Valparaiso,exact,1127,1137,100.0,Valparaiso,False
+8966790,probe_swap,G2,0,institution,7,Mus. Cuming,False,Mus. Cuming,exact,174,185,100.0,Mus. Cuming,False
+8966790,probe_swap,G2,1,taxon,9,BULIMUS CHILENSIS,False,BULIMUS CHILENSIS,exact,189,206,100.0,BULIMUS CHILENSIS,False
+8966790,probe_swap,G2,2,vernacular,15,CHILI BULIMUS,False,CHILI BULIMUS,exact,450,463,100.0,CHILI BULIMUS,False
+8966790,probe_swap,G2,3,person,22,LESSON,False,LESSON,exact,697,703,100.0,LESSON,False
+8966790,probe_swap,G2,4,taxon,23,Bulimus acutangulus,False,Bulimus acutangulus,exact,739,758,100.0,Bulimus acutangulus,False
+8966790,probe_swap,G2,5,person,23,Broderip,False,Broderip,exact,760,768,100.0,Broderip,False
+8966790,probe_swap,G2,6,locality,25,Valparaiso,False,Valparaiso,exact,776,786,100.0,Valparaiso,False
+8966790,probe_swap,G2,7,locality,25,"Conception, Chili",False,"Conception, Chili",exact,791,808,100.0,"Conception, Chili",False
+8966790,probe_swap,G2,8,person,25,Cuming,False,Cuming,exact,810,816,100.0,Cuming,False
+8966790,probe_swap,G2,9,locality,31,mountains of Conception,False,mountains of Conception,exact,1050,1073,100.0,mountains of Conception,False
+8966790,probe_swap,G2,10,locality,32,Valparaiso,False,Valparaiso,exact,1128,1138,100.0,Valparaiso,False
+8966802,probe_typo,G2,0,vernacular,3,SLIGHTLY WRINKLED BULIMUS,False,SLIGHTLY WRINKLED BULIMUS,exact,24,49,100.0,SLIGHTLY WRINKLED BULIMUS,False
+8966802,probe_typo,G2,1,taxon,4,Pupa,False,Pupa,exact,91,95,100.0,Pupa,False
+8966802,probe_typo,G2,2,person,11,SOWERBY,False,SOWERBY,exact,347,354,100.0,SOWERBY,False
+8966802,probe_typo,G2,3,locality,13,Gallapagos Islands,False,Gallapagos Islands,exact,388,406,100.0,Gallapagos Islands,False
+8966802,probe_typo,G2,4,person,13,Cuming,False,Cuming,exact,408,414,100.0,Cuming,False
+8966802,probe_typo,G2,5,institution,18,Mus. Cuming,False,Mus. Cuming,exact,503,514,100.0,Mus. Cuming,False
+8966802,probe_typo,G2,6,taxon,20,BULIMUS TURRTIUS,False,BULIMUS TURRITUS,exact,518,534,100.0,BULIMUS TURRTIUS,True
+8966802,probe_typo,G2,7,vernacular,25,TURRETED BULIMUS,False,TURRETED BULIMUS,exact,741,757,100.0,TURRETED BULIMUS,False
+8966802,probe_typo,G2,8,person,31,BRODERIP,False,BRODERIP,exact,969,977,100.0,BRODERIP,False
+8966802,probe_typo,G2,9,locality,33,"Truxillo, Peru",False,"Truxillo, Peru",exact,1016,1030,100.0,"Truxillo, Peru",False
+8966802,probe_typo,G2,10,person,33,Cuming,False,Cuming,exact,1051,1057,100.0,Cuming,False
+8966802,probe_typo,G2,11,institution,38,Mus. Cuming,False,Mus. Cuming,exact,1180,1191,100.0,Mus. Cuming,False
+8966802,probe_typo,G2,12,taxon,40,BULIMUS SCULPTURATUS,False,BULIMUS SCULPTURATUS,exact,1195,1215,100.0,BULIMUS SCULPTURATUS,False
+8966802,probe_typo,G2,13,vernacular,46,SCULPTURED BULIMUS,False,SCULPTURED BULIMUS,exact,1443,1461,100.0,SCULPTURED BULIMUS,False
+8966802,probe_typo,G2,14,person,53,PFEIFFER,False,PFEIFFER,exact,1710,1718,100.0,PFEIFFER,False
+8966802,probe_typo,G2,15,locality,55,Gallapagos Islands,False,Gallapagos Islands,exact,1756,1774,100.0,Gallapagos Islands,False
+8966802,probe_typo,G2,16,person,55,Darwin,False,Darwin,exact,1788,1794,100.0,Darwin,False
+8966802,probe_typo,G2,17,taxon,58,B. rugiefrus,False,B. rugiferus,exact,1870,1882,100.0,B. rugiefrus,True
+8966802,probe_typo,G2,18,taxon,58,Dawrinii,False,Darwinii,exact,1887,1895,100.0,Dawrinii,True
+8966802,probe_typo,G2,19,institution,62,Mus. Cuming,False,Mus. Cuming,exact,2043,2054,100.0,Mus. Cuming,False
+8966802,probe_typo,G2,20,taxon,64,BUILMUS CALVUS,False,BULIMUS CALVUS,exact,2058,2072,100.0,BUILMUS CALVUS,True
+8966802,probe_typo,G2,21,vernacular,69,BALD BULIMUS,False,BALD BULIMUS,exact,2276,2288,100.0,BALD BULIMUS,False
+8966802,probe_typo,G2,22,person,75,SOWERBY,False,SOWERBY,exact,2486,2493,100.0,SOWERBY,False
+8966802,probe_typo,G2,23,locality,77,"James' Island, Gallapagos",False,"James' Island, Gallapagos",exact,2531,2556,100.0,"James' Island, Gallapagos",False
+8966802,probe_typo,G2,24,person,78,Cuming,False,Cuming,exact,2584,2590,100.0,Cuming,False
+8966802,probe_typo,G2,25,taxon,81,Achatinella,False,Achatinella,exact,2638,2649,100.0,Achatinella,False
+8966802,probe_typo,G2,26,institution,83,Mus. Cuming,False,Mus. Cuming,exact,2682,2693,100.0,Mus. Cuming,False
+8966802,probe_typo,G2,27,taxon,85,BULIMUS PUSTULOSUS,False,BULIMUS PUSTULOSUS,exact,2697,2715,100.0,BULIMUS PUSTULOSUS,False
+8966802,probe_typo,G2,28,vernacular,91,PUSTULOSE BULIMUS,False,PUSTULOSE BULIMUS,exact,2956,2973,100.0,PUSTULOSE BULIMUS,False
+8966802,probe_typo,G2,29,person,98,BRODREIP,False,BRODERIP,exact,3214,3222,100.0,BRODREIP,True
+8966802,probe_typo,G2,30,locality,100,"Huasco, Chili",False,"Huasco, Chili",exact,3261,3274,100.0,"Huasco, Chili",False
+8966802,probe_typo,G2,31,person,101,Cmuing,False,Cuming,exact,3310,3316,100.0,Cmuing,True
+8966802,probe_swap,G2,0,vernacular,3,SLIGHTLY WRINKLED BULIMUS,False,SLIGHTLY WRINKLED BULIMUS,exact,24,49,100.0,SLIGHTLY WRINKLED BULIMUS,False
+8966802,probe_swap,G2,1,taxon,4,Pupa,False,Pupa,exact,91,95,100.0,Pupa,False
+8966802,probe_swap,G2,2,person,11,SOWERBY,False,SOWERBY,exact,347,354,100.0,SOWERBY,False
+8966802,probe_swap,G2,3,locality,13,Gallapagos Islands,False,Gallapagos Islands,exact,388,406,100.0,Gallapagos Islands,False
+8966802,probe_swap,G2,4,person,13,Cuming,False,Cuming,exact,408,414,100.0,Cuming,False
+8966802,probe_swap,G2,5,institution,18,Mus. Cuming,False,Mus. Cuming,exact,503,514,100.0,Mus. Cuming,False
+8966802,probe_swap,G2,6,taxon,20,BULIMUS TURRITUS,False,BULIMUS TURRITUS,exact,518,534,100.0,BULIMUS TURRITUS,False
+8966802,probe_swap,G2,7,vernacular,25,TURRETED BULIMUS,False,TURRETED BULIMUS,exact,741,757,100.0,TURRETED BULIMUS,False
+8966802,probe_swap,G2,8,person,31,BRODERIP,False,BRODERIP,exact,969,977,100.0,BRODERIP,False
+8966802,probe_swap,G2,9,locality,33,"Truxillo, Peru",False,"Truxillo, Peru",exact,1016,1030,100.0,"Truxillo, Peru",False
+8966802,probe_swap,G2,10,person,33,Cuming,False,Cuming,exact,1051,1057,100.0,Cuming,False
+8966802,probe_swap,G2,11,institution,38,Mus. Cuming,False,Mus. Cuming,exact,1180,1191,100.0,Mus. Cuming,False
+8966802,probe_swap,G2,12,taxon,40,BULIMUS SCULPTURATUS,False,BULIMUS SCULPTURATUS,exact,1195,1215,100.0,BULIMUS SCULPTURATUS,False
+8966802,probe_swap,G2,13,vernacular,46,SCULPTURED BULIMUS,False,SCULPTURED BULIMUS,exact,1443,1461,100.0,SCULPTURED BULIMUS,False
+8966802,probe_swap,G2,14,person,53,PFEIFFER,False,PFEIFFER,exact,1710,1718,100.0,PFEIFFER,False
+8966802,probe_swap,G2,15,locality,55,Gallapagos Islands,False,Gallapagos Islands,exact,1756,1774,100.0,Gallapagos Islands,False
+8966802,probe_swap,G2,16,person,55,Darwin,False,Darwin,exact,1788,1794,100.0,Darwin,False
+8966802,probe_swap,G2,17,taxon,58,B. rugiferus,False,B. rugiferus,exact,1870,1882,100.0,B. rugiferus,False
+8966802,probe_swap,G2,18,taxon,58,Darwinii,False,Darwinii,exact,1887,1895,100.0,Darwinii,False
+8966802,probe_swap,G2,19,institution,62,Mus. Cuming,False,Mus. Cuming,exact,2043,2054,100.0,Mus. Cuming,False
+8966802,probe_swap,G2,20,taxon,64,BULIMUS CALVUS,False,BULIMUS CALVUS,exact,2058,2072,100.0,BULIMUS CALVUS,False
+8966802,probe_swap,G2,21,vernacular,69,BALD BULIMUS,False,BALD BULIMUS,exact,2276,2288,100.0,BALD BULIMUS,False
+8966802,probe_swap,G2,22,person,75,SOWERBY,False,SOWERBY,exact,2486,2493,100.0,SOWERBY,False
+8966802,probe_swap,G2,23,locality,77,"James' Island, Gallapagos",False,"James' Island, Gallapagos",exact,2531,2556,100.0,"James' Island, Gallapagos",False
+8966802,probe_swap,G2,24,person,78,Cuming,False,Cuming,exact,2584,2590,100.0,Cuming,False
+8966802,probe_swap,G2,25,taxon,81,Achatinella,False,Achatinella,exact,2638,2649,100.0,Achatinella,False
+8966802,probe_swap,G2,26,institution,83,Mus. Cuming,False,Mus. Cuming,exact,2682,2693,100.0,Mus. Cuming,False
+8966802,probe_swap,G2,27,taxon,85,BULIMUS PUSTULOSUS,False,BULIMUS PUSTULOSUS,exact,2697,2715,100.0,BULIMUS PUSTULOSUS,False
+8966802,probe_swap,G2,28,vernacular,91,PUSTULOSE BULIMUS,False,PUSTULOSE BULIMUS,exact,2956,2973,100.0,PUSTULOSE BULIMUS,False
+8966802,probe_swap,G2,29,person,98,BRODERIP,False,BRODERIP,exact,3214,3222,100.0,BRODERIP,False
+8966802,probe_swap,G2,30,locality,100,"Huasco, Chili",False,"Huasco, Chili",exact,3261,3274,100.0,"Huasco, Chili",False
+8966802,probe_swap,G2,31,person,101,Cuming,False,Cuming,exact,3310,3316,100.0,Cuming,False
+8966930,probe_typo,G2,0,institution,7,Mus. Cuming,False,Mus. Cuming,exact,172,183,100.0,Mus. Cuming,False
+8966930,probe_typo,G2,1,taxon,9,BULIMUS OBTSUATUS,False,BULIMUS OBTUSATUS,exact,187,204,100.0,BULIMUS OBTSUATUS,True
+8966930,probe_typo,G2,2,vernacular,16,BLUNTED BULIMUS,False,BLUNTED BULIMUS,exact,512,527,100.0,BLUNTED BULIMUS,False
+8966930,probe_typo,G2,3,person,24,PFEIFFER,False,PFEIFFER,exact,875,883,100.0,PFEIFFER,False
+8966930,probe_typo,G2,4,taxon,26,Helix obtuasta,False,Helix obtusata,exact,906,920,100.0,Helix obtuasta,True
+8966930,probe_typo,G2,5,person,26,Gmelin,False,Gmelin,exact,922,928,100.0,Gmelin,False
+8966930,probe_typo,G2,6,taxon,27,Bulimus calcaerus,False,Bulimus calcareus,exact,930,947,100.0,Bulimus calcaerus,True
+8966930,probe_typo,G2,7,person,27,Bruguière,False,Bruguière,exact,949,958,100.0,Bruguière,False
+8966930,probe_typo,G2,8,person,27,Lamarck,False,Lamarck,exact,960,967,100.0,Lamarck,False
+8966930,probe_typo,G2,9,person,27,Desahyes,False,Deshayes,exact,969,977,100.0,Desahyes,True
+8966930,probe_typo,G2,10,locality,29,Madagascar,False,Madagascar,exact,984,994,100.0,Madagascar,False
+8966930,probe_typo,G2,11,person,29,Beck,False,Beck,exact,997,1001,100.0,Beck,False
+8966930,probe_typo,G2,12,person,31,Lamarck,False,Lamarck,exact,1033,1040,100.0,Lamarck,False
+8966930,probe_typo,G2,13,taxon,32,Helix calcaera,False,Helix calcarea,exact,1098,1112,100.0,Helix calcaera,True
+8966930,probe_typo,G2,14,person,33,Born,False,Born,exact,1116,1120,100.0,Born,False
+8966930,probe_typo,G2,15,institution,37,Mus. Cuming,False,Mus. Cuming,exact,1251,1262,100.0,Mus. Cuming,False
+8966930,probe_typo,G2,16,taxon,39,BULIMUS CLVAATOR,False,BULIMUS CLAVATOR,exact,1266,1282,100.0,BULIMUS CLVAATOR,True
+8966930,probe_typo,G2,17,vernacular,46,CLUB‐BEARER BULIMUS,False,CLUB‐BEARER BULIMUS,exact,1567,1586,100.0,CLUB‐BEARER BULIMUS,False
+8966930,probe_typo,G2,18,person,54,PETIT,False,PETIT,exact,1893,1898,100.0,PETIT,False
+8966930,probe_typo,G2,19,locality,56,Madagascar,False,Madagascar,exact,1934,1944,100.0,Madagascar,False
+8966930,probe_swap,G2,0,institution,7,Mus. Cuming,False,Mus. Cuming,exact,172,183,100.0,Mus. Cuming,False
+8966930,probe_swap,G2,1,taxon,9,BULIMUS OBTUSATUS,False,BULIMUS OBTUSATUS,exact,187,204,100.0,BULIMUS OBTUSATUS,False
+8966930,probe_swap,G2,2,vernacular,16,BLUNTED BULIMUS,False,BLUNTED BULIMUS,exact,512,527,100.0,BLUNTED BULIMUS,False
+8966930,probe_swap,G2,3,person,24,PFEIFFER,False,PFEIFFER,exact,875,883,100.0,PFEIFFER,False
+8966930,probe_swap,G2,4,taxon,26,Helix granulosus,False,Helix granulosus,exact,906,922,100.0,Helix granulosus,False
+8966930,probe_swap,G2,5,person,26,Gmelin,False,Gmelin,exact,924,930,100.0,Gmelin,False
+8966930,probe_swap,G2,6,taxon,27,Bulimus duplicatus,False,Bulimus duplicatus,exact,932,950,100.0,Bulimus duplicatus,False
+8966930,probe_swap,G2,7,person,27,Bruguière,False,Bruguière,exact,952,961,100.0,Bruguière,False
+8966930,probe_swap,G2,8,person,27,Lamarck,False,Lamarck,exact,963,970,100.0,Lamarck,False
+8966930,probe_swap,G2,9,person,27,Deshayes,False,Deshayes,exact,972,980,100.0,Deshayes,False
+8966930,probe_swap,G2,10,locality,29,Madagascar,False,Madagascar,exact,987,997,100.0,Madagascar,False
+8966930,probe_swap,G2,11,person,29,Beck,False,Beck,exact,1000,1004,100.0,Beck,False
+8966930,probe_swap,G2,12,person,31,Lamarck,False,Lamarck,exact,1036,1043,100.0,Lamarck,False
+8966930,probe_swap,G2,13,taxon,32,Helix duplicata,False,Helix duplicata,exact,1101,1116,100.0,Helix duplicata,False
+8966930,probe_swap,G2,14,person,33,Born,False,Born,exact,1120,1124,100.0,Born,False
+8966930,probe_swap,G2,15,institution,37,Mus. Cuming,False,Mus. Cuming,exact,1255,1266,100.0,Mus. Cuming,False
+8966930,probe_swap,G2,16,taxon,39,BULIMUS CLAVATOR,False,BULIMUS CLAVATOR,exact,1270,1286,100.0,BULIMUS CLAVATOR,False
+8966930,probe_swap,G2,17,vernacular,46,CLUB‐BEARER BULIMUS,False,CLUB-BEARER BULIMUS,exact,1571,1590,100.0,CLUB‐BEARER BULIMUS,False
+8966930,probe_swap,G2,18,person,54,PETIT,False,PETIT,exact,1897,1902,100.0,PETIT,False
+8966930,probe_swap,G2,19,locality,56,Madagascar,False,Madagascar,exact,1938,1948,100.0,Madagascar,False
+8966937,probe_typo,G2,0,institution,5,Mus. Cuming,False,Mus. Cuming,exact,50,61,100.0,Mus. Cuming,False
+8966937,probe_typo,G2,1,taxon,7,BULIMUS RSOEATUS,False,BULIMUS ROSEATUS,exact,65,81,100.0,BULIMUS RSOEATUS,True
+8966937,probe_typo,G2,2,vernacular,14,ROSEATE BULIMUS,False,ROSEATE BULIMUS,exact,378,393,100.0,ROSEATE BULIMUS,False
+8966937,probe_typo,G2,3,locality,22,Venezuela,False,Venezuela,exact,724,733,100.0,Venezuela,False
+8966937,probe_typo,G2,4,taxon,25,B. oerades,False,B. oreades,exact,826,836,100.0,B. oerades,True
+8966937,probe_typo,G2,5,institution,27,Mus. Cuming,False,Mus. Cuming,exact,853,864,100.0,Mus. Cuming,False
+8966937,probe_typo,G2,6,taxon,29,BULIMUS FERIATUS,False,BULIMUS FERIATUS,exact,868,884,100.0,BULIMUS FERIATUS,False
+8966937,probe_typo,G2,7,vernacular,36,UNEMPLOYED BULIMUS,False,UNEMPLOYED BULIMUS,exact,1180,1198,100.0,UNEMPLOYED BULIMUS,False
+8966937,probe_typo,G2,8,locality,44,Venezuela,False,Venezuela,exact,1521,1530,100.0,Venezuela,False
+8966937,probe_typo,G2,9,institution,49,Mus. Cuming,False,Mus. Cuming,exact,1621,1632,100.0,Mus. Cuming,False
+8966937,probe_typo,G2,10,taxon,51,BLUIMUS PERDIX,False,BULIMUS PERDIX,exact,1636,1650,100.0,BLUIMUS PERDIX,True
+8966937,probe_typo,G2,11,vernacular,58,PARTRIDGE BULIMUS,False,PARTRIDGE BULIMUS,exact,1940,1957,100.0,PARTRIDGE BULIMUS,False
+8966937,probe_typo,G2,12,person,65,PFEIFFER,False,PFEIFFER,exact,2246,2254,100.0,PFEIFFER,False
+8966937,probe_typo,G2,13,locality,67,New Granada,False,New Granada,exact,2285,2296,100.0,New Granada,False
+8966937,probe_typo,G2,14,person,67,Funck,False,Funck,exact,2298,2303,100.0,Funck,False
+8966937,probe_typo,G2,15,taxon,76,B. pedrix,False,B. perdix,exact,2698,2707,100.0,B. pedrix,True
+8966937,probe_typo,G2,16,institution,80,Mus. Cuming,False,Mus. Cuming,exact,2873,2884,100.0,Mus. Cuming,False
+8966937,probe_typo,G2,17,taxon,82,BULIMUS EURYOMHPALUS,False,BULIMUS EURYOMPHALUS,exact,2888,2908,100.0,BULIMUS EURYOMHPALUS,True
+8966937,probe_typo,G2,18,vernacular,90,BROAD‐PLAITED BULIMUS,False,BROAD‐PLAITED BULIMUS,exact,3230,3251,100.0,BROAD‐PLAITED BULIMUS,False
+8966937,probe_typo,G2,19,locality,98,Venezuela,False,Venezuela,exact,3561,3570,100.0,Venezuela,False
+8966937,probe_typo,G2,20,person,98,Dyson,False,Dyson,exact,3572,3577,100.0,Dyson,False
+8966937,probe_typo,G2,21,institution,103,Mus. Cuming,False,Mus. Cuming,exact,3657,3668,100.0,Mus. Cuming,False
+8966937,probe_typo,G2,22,taxon,105,BULIUMS GLABER,False,BULIMUS GLABER,exact,3672,3686,100.0,BULIUMS GLABER,True
+8966937,probe_swap,G2,0,institution,5,Mus. Cuming,False,Mus. Cuming,exact,50,61,100.0,Mus. Cuming,False
+8966937,probe_swap,G2,1,taxon,7,BULIMUS ROSEATUS,False,BULIMUS ROSEATUS,exact,65,81,100.0,BULIMUS ROSEATUS,False
+8966937,probe_swap,G2,2,vernacular,14,ROSEATE BULIMUS,False,ROSEATE BULIMUS,exact,378,393,100.0,ROSEATE BULIMUS,False
+8966937,probe_swap,G2,3,locality,22,Venezuela,False,Venezuela,exact,724,733,100.0,Venezuela,False
+8966937,probe_swap,G2,4,taxon,25,B. oreades,False,B. oreades,exact,826,836,100.0,B. oreades,False
+8966937,probe_swap,G2,5,institution,27,Mus. Cuming,False,Mus. Cuming,exact,853,864,100.0,Mus. Cuming,False
+8966937,probe_swap,G2,6,taxon,29,BULIMUS FERIATUS,False,BULIMUS FERIATUS,exact,868,884,100.0,BULIMUS FERIATUS,False
+8966937,probe_swap,G2,7,vernacular,36,UNEMPLOYED BULIMUS,False,UNEMPLOYED BULIMUS,exact,1180,1198,100.0,UNEMPLOYED BULIMUS,False
+8966937,probe_swap,G2,8,locality,44,Venezuela,False,Venezuela,exact,1521,1530,100.0,Venezuela,False
+8966937,probe_swap,G2,9,institution,49,Mus. Cuming,False,Mus. Cuming,exact,1621,1632,100.0,Mus. Cuming,False
+8966937,probe_swap,G2,10,taxon,51,BULIMUS PERDIX,False,BULIMUS PERDIX,exact,1636,1650,100.0,BULIMUS PERDIX,False
+8966937,probe_swap,G2,11,vernacular,58,PARTRIDGE BULIMUS,False,PARTRIDGE BULIMUS,exact,1940,1957,100.0,PARTRIDGE BULIMUS,False
+8966937,probe_swap,G2,12,person,65,PFEIFFER,False,PFEIFFER,exact,2246,2254,100.0,PFEIFFER,False
+8966937,probe_swap,G2,13,locality,67,New Granada,False,New Granada,exact,2285,2296,100.0,New Granada,False
+8966937,probe_swap,G2,14,person,67,Funck,False,Funck,exact,2298,2303,100.0,Funck,False
+8966937,probe_swap,G2,15,taxon,76,B. perdix,False,B. perdix,exact,2698,2707,100.0,B. perdix,False
+8966937,probe_swap,G2,16,institution,80,Mus. Cuming,False,Mus. Cuming,exact,2873,2884,100.0,Mus. Cuming,False
+8966937,probe_swap,G2,17,taxon,82,BULIMUS EURYOMPHALUS,False,BULIMUS EURYOMPHALUS,exact,2888,2908,100.0,BULIMUS EURYOMPHALUS,False
+8966937,probe_swap,G2,18,vernacular,90,BROAD‐PLAITED BULIMUS,False,BROAD‐PLAITED BULIMUS,exact,3230,3251,100.0,BROAD‐PLAITED BULIMUS,False
+8966937,probe_swap,G2,19,locality,98,Venezuela,False,Venezuela,exact,3561,3570,100.0,Venezuela,False
+8966937,probe_swap,G2,20,person,98,Dyson,False,Dyson,exact,3572,3577,100.0,Dyson,False
+8966937,probe_swap,G2,21,institution,103,Mus. Cuming,False,Mus. Cuming,exact,3657,3668,100.0,Mus. Cuming,False
+8966937,probe_swap,G2,22,taxon,105,BULIMUS GLABER,False,BULIMUS GLABER,exact,3672,3686,100.0,BULIMUS GLABER,False
+8967281,probe_typo,G2,0,taxon,5,TURRITELLA,False,TURRITELLA,exact,29,39,100.0,TURRITELLA,False
+8967281,probe_typo,G2,1,person,5,Lamarck,False,Lamarck,exact,41,48,100.0,Lamarck,False
+8967281,probe_typo,G2,2,taxon,21,Turrtiella,False,Turritella,exact,683,693,100.0,Turrtiella,True
+8967281,probe_typo,G2,3,taxon,29,Cerithium,False,Cerithium,exact,1159,1168,100.0,Cerithium,False
+8967281,probe_typo,G2,4,taxon,31,Turritella,False,Turritella,exact,1277,1287,100.0,Turritella,False
+8967281,probe_typo,G2,5,taxon,41,Turritella,False,Turritella,exact,1741,1751,100.0,Turritella,False
+8967281,probe_typo,G2,6,person,43,Lamrack,False,Lamarck,exact,1836,1843,100.0,Lamrack,True
+8967281,probe_typo,G2,7,person,44,Kiener,False,Kiener,exact,1893,1899,100.0,Kiener,False
+8967281,probe_typo,G2,8,person,45,Cuming,False,Cuming,exact,1974,1980,100.0,Cuming,False
+8967281,probe_typo,G2,9,person,45,Metcalfe,False,Metcalfe,exact,1986,1994,100.0,Metcalfe,False
+8967281,probe_typo,G2,10,person,46,Hanley,False,Hanley,exact,2000,2006,100.0,Hanley,False
+8967281,probe_typo,G2,11,person,46,Edward Belcher,False,Edward Belcher,exact,2013,2027,100.0,Edward Belcher,False
+8967281,probe_typo,G2,12,institution,46,British Museum,False,British Museum,exact,2033,2047,100.0,British Museum,False
+8967281,probe_typo,G2,13,institution,47,Banksian Collection,False,Banksian Collection,exact,2057,2076,100.0,Banksian Collection,False
+8967281,probe_typo,G2,14,institution,47,Linnæan Society,False,Linnæan Society,cross_line,2098,2113,100.0,"Linnæan
+Society",False
+8967281,probe_typo,G2,15,person,52,Lamarck,False,Lamarck,exact,2276,2283,100.0,Lamarck,False
+8967281,probe_typo,G2,16,person,52,Deshayes,False,Deshayes,exact,2285,2293,100.0,Deshayes,False
+8967281,probe_typo,G2,17,person,52,Keiner,False,Kiener,exact,2298,2304,100.0,Keiner,True
+8967281,probe_typo,G2,18,institution,54,Linnæan Society of London,False,Linnæan Society of London,exact,2402,2427,100.0,Linnæan Society of London,False
+8967281,probe_typo,G2,19,taxon,55,Turbo acutangulus,False,Turbo acutangulus,exact,2433,2450,100.0,Turbo acutangulus,False
+8967281,probe_typo,G2,20,person,55,Linnæus,False,Linnæus,exact,2454,2461,100.0,Linnæus,False
+8967281,probe_typo,G2,21,taxon,56,T. duplicatus,False,T. duplicatus,exact,2499,2512,100.0,T. duplicatus,False
+8967281,probe_typo,G2,22,person,57,Deshayes,False,Deshayes,exact,2553,2561,100.0,Deshayes,False
+8967281,probe_typo,G2,23,taxon,57,Turbo variega- tus,False,Turbo variegatus,cross_line,2586,2604,100.0,"Turbo variega-
+tus",True
+8967281,probe_typo,G2,24,taxon,61,Turbo imbricatus,False,Turbo imbricatus,exact,2726,2742,100.0,Turbo imbricatus,False
+8967281,probe_typo,G2,25,taxon,62,Turbo ungulinus,False,Turbo ungulinus,exact,2812,2827,100.0,Turbo ungulinus,False
+8967281,probe_typo,G2,26,person,63,Linnæus,False,Linnæus,exact,2831,2838,100.0,Linnæus,False
+8967281,probe_typo,G2,27,person,63,Lamarck,False,Lamarck,exact,2867,2874,100.0,Lamarck,False
+8967281,probe_typo,G2,28,taxon,63,Turritella fuscata,False,Turritella fuscata,cross_line,2877,2895,100.0,"Turritella
+fuscata",False
+8967281,probe_typo,G2,29,taxon,64,Turbo terebra,False,Turbo terebra,exact,2917,2930,100.0,Turbo terebra,False
+8967281,probe_typo,G2,30,person,64,Linn.,False,Linn.,exact,2932,2937,100.0,Linn.,False
+8967281,probe_typo,G2,31,person,65,Montagu,False,Montagu,exact,2981,2988,100.0,Montagu,False
+8967281,probe_typo,G2,32,taxon,66,T. conrea,False,T. cornea,exact,3014,3023,100.0,T. conrea,True
+8967281,probe_typo,G2,33,person,66,Lamarck,False,Lamarck,exact,3027,3034,100.0,Lamarck,False
+8967281,probe_typo,G2,34,taxon,68,Turritella brevialis,False,Turritella brevialis,exact,3041,3061,100.0,Turritella brevialis,False
+8967281,probe_typo,G2,35,person,68,Lamarck,False,Lamarck,exact,3065,3072,100.0,Lamarck,False
+8967281,probe_typo,G2,36,vernacular,68,LeMesal,False,Le Mesal,exact,3074,3081,100.0,LeMesal,True
+8967281,probe_typo,G2,37,person,68,Adanson,False,Adanson,exact,3085,3092,100.0,Adanson,False
+8967281,probe_typo,G2,38,person,69,Gray,False,Gray,exact,3146,3150,100.0,Gray,False
+8967281,probe_typo,G2,39,taxon,70,MESALIA,False,MESALIA,exact,3167,3174,100.0,MESALIA,False
+8967281,probe_typo,G2,40,taxon,71,Turritella lactea,False,Turritella lactea,exact,3206,3223,100.0,Turritella lactea,False
+8967281,probe_typo,G2,41,person,71,Möller,False,Möller,exact,3227,3233,100.0,Möller,False
+8967281,probe_typo,G2,42,institution,72,Cumingian collection,False,Cumingian collection,exact,3278,3298,100.0,Cumingian collection,False
+8967281,probe_typo,G2,43,person,73,Gray,False,Gray,exact,3342,3346,100.0,Gray,False
+8967281,probe_typo,G2,44,taxon,74,EGLISIA,False,EGLISIA,exact,3384,3391,100.0,EGLISIA,False
+8967281,probe_typo,G2,45,taxon,74,Turritella spirata,False,Turritella spirata,exact,3408,3426,100.0,Turritella spirata,False
+8967281,probe_typo,G2,46,person,76,Cumnig,False,Cuming,exact,3507,3513,100.0,Cumnig,True
+8967281,probe_typo,G2,47,locality,76,Philippine Islands,False,Philippine Islands,exact,3528,3546,100.0,Philippine Islands,False
+8967281,probe_typo,G2,48,taxon,78,Turritellœ,False,Turritellæ,exact,3553,3563,100.0,Turritellœ,True
+8967281,probe_typo,G2,49,taxon,80,T. cornea,False,T. cornea,exact,3663,3672,100.0,T. cornea,False
+8967281,probe_typo,G2,50,locality,80,Shetland Islands,False,Shetland Islands,exact,3706,3722,100.0,Shetland Islands,False
+8967281,probe_typo,G2,51,person,81,M’Andrew,False,M’Andrew,exact,3730,3738,100.0,M’Andrew,False
+8967281,probe_typo,G2,52,locality,84,Mediterranean,False,Mediterranean,exact,3910,3923,100.0,Mediterranean,False
+8967281,probe_typo,G2,53,locality,85,Eastern Seas,False,Eastern Seas,exact,3957,3969,100.0,Eastern Seas,False
+8967281,probe_typo,G2,54,locality,85,shores of Central America,False,shores of Central America,exact,3978,4003,100.0,shores of Central America,False
+8967281,probe_typo,G2,55,locality,86,New Zealand,False,New Zealand,exact,4036,4047,100.0,New Zealand,False
+8967281,probe_typo,G2,56,locality,86,Australia,False,Australia,exact,4049,4058,100.0,Australia,False
+8967281,probe_typo,G2,57,locality,87,Van Dieman’s Land,False,Van Dieman’s Land,exact,4064,4081,100.0,Van Dieman’s Land,False
+8967281,probe_typo,G2,58,institution,89,Mus. Cuming,False,Mus. Cuming,exact,4096,4107,100.0,Mus. Cuming,False
+8967281,probe_typo,G2,59,taxon,91,TURRITELLA UNGULINA,False,TURRITELLA UNGULINA,exact,4111,4130,100.0,TURRITELLA UNGULINA,False
+8967281,probe_typo,G2,60,vernacular,97,NAIL‐BRUISED TURRITELLA,False,NAIL-BRUISED TURRITELLA,exact,4353,4376,100.0,NAIL‐BRUISED TURRITELLA,False
+8967281,probe_typo,G2,61,taxon,103,Turbo ungulinus,False,Turbo ungulinus,exact,4583,4598,100.0,Turbo ungulinus,False
+8967281,probe_typo,G2,62,person,103,Linnæus,False,Linnæus,exact,4600,4607,100.0,Linnæus,False
+8967281,probe_typo,G2,63,taxon,104,Turritella fuscata,False,Turritella fuscata,exact,4643,4661,100.0,Turritella fuscata,False
+8967281,probe_typo,G2,64,person,104,Lamarck,False,Lamarck,exact,4663,4670,100.0,Lamarck,False
+8967281,probe_typo,G2,65,locality,106,"Senegal, Mouth of the Gambia, West Africa",False,"Senegal, Mouth of the Gambia, West Africa",exact,4678,4719,100.0,"Senegal, Mouth of the Gambia, West Africa",False
+8967281,probe_typo,G2,66,person,108,Linnæus,False,Linnæus,exact,4757,4764,100.0,Linnæus,False
+8967281,probe_typo,G2,67,taxon,109,Turbo ungulinus,False,Turbo ungulinus,exact,4785,4800,100.0,Turbo ungulinus,False
+8967281,probe_typo,G2,68,institution,110,Linnæan Society of London,False,Linnæan Society of London,exact,4839,4864,100.0,Linnæan Society of London,False
+8967281,probe_typo,G2,69,person,111,Halney,False,Hanley,exact,4881,4887,100.0,Halney,True
+8967281,probe_typo,G2,70,person,111,Lamarck,False,Lamarck,exact,4918,4925,100.0,Lamarck,False
+8967281,probe_typo,G2,71,taxon,111,T. fuscata,False,T. fuscata,cross_line,4928,4938,100.0,"T.
+fuscata",False
+8967281,probe_typo,G2,72,locality,112,Seas of Europe,False,Seas of Europe,exact,4954,4968,100.0,Seas of Europe,False
+8967281,probe_typo,G2,73,person,113,Pulteney,False,Pulteney,exact,5020,5028,100.0,Pulteney,False
+8967281,probe_typo,G2,74,person,114,Deshayes,False,Deshayes,exact,5046,5054,100.0,Deshayes,False
+8967281,probe_typo,G2,75,taxon,115,Turritella,False,Turritella,exact,5098,5108,100.0,Turritella,False
+8967281,probe_typo,G2,76,locality,115,Mediterranean,False,Mediterranean,exact,5131,5144,100.0,Mediterranean,False
+8967281,probe_swap,G2,0,taxon,5,TURRITELLA,False,TURRITELLA,exact,29,39,100.0,TURRITELLA,False
+8967281,probe_swap,G2,1,person,5,Lamarck,False,Lamarck,exact,41,48,100.0,Lamarck,False
+8967281,probe_swap,G2,2,taxon,21,Turritella,False,Turritella,exact,683,693,100.0,Turritella,False
+8967281,probe_swap,G2,3,taxon,29,Cerithium,False,Cerithium,exact,1159,1168,100.0,Cerithium,False
+8967281,probe_swap,G2,4,taxon,31,Turritella,False,Turritella,exact,1277,1287,100.0,Turritella,False
+8967281,probe_swap,G2,5,taxon,41,Turritella,False,Turritella,exact,1741,1751,100.0,Turritella,False
+8967281,probe_swap,G2,6,person,43,Lamarck,False,Lamarck,exact,1836,1843,100.0,Lamarck,False
+8967281,probe_swap,G2,7,locality,43,Paris,False,Paris,exact,1881,1886,100.0,Paris,False
+8967281,probe_swap,G2,8,person,44,Kiener,False,Kiener,exact,1893,1899,100.0,Kiener,False
+8967281,probe_swap,G2,9,person,45,Cuming,False,Cuming,exact,1974,1980,100.0,Cuming,False
+8967281,probe_swap,G2,10,person,45,Metcalfe,False,Metcalfe,exact,1986,1994,100.0,Metcalfe,False
+8967281,probe_swap,G2,11,person,46,Hanley,False,Hanley,exact,2000,2006,100.0,Hanley,False
+8967281,probe_swap,G2,12,person,46,Edward Belcher,False,Edward Belcher,exact,2013,2027,100.0,Edward Belcher,False
+8967281,probe_swap,G2,13,institution,46,British Museum,False,British Museum,exact,2033,2047,100.0,British Museum,False
+8967281,probe_swap,G2,14,institution,47,Banksian Collection,False,Banksian Collection,exact,2057,2076,100.0,Banksian Collection,False
+8967281,probe_swap,G2,15,institution,47,Linnæan Society,False,Linnæan Society,cross_line,2098,2113,100.0,"Linnæan
+Society",False
+8967281,probe_swap,G2,16,person,52,Lamarck,False,Lamarck,exact,2276,2283,100.0,Lamarck,False
+8967281,probe_swap,G2,17,person,52,Deshayes,False,Deshayes,exact,2285,2293,100.0,Deshayes,False
+8967281,probe_swap,G2,18,person,52,Kiener,False,Kiener,exact,2298,2304,100.0,Kiener,False
+8967281,probe_swap,G2,19,institution,54,Linnæan Society of London,False,Linnæan Society of London,exact,2402,2427,100.0,Linnæan Society of London,False
+8967281,probe_swap,G2,20,taxon,55,Turbo acutangula,False,Turbo acutangula,exact,2433,2449,100.0,Turbo acutangula,False
+8967281,probe_swap,G2,21,person,55,Linnæus,False,Linnæus,exact,2453,2460,100.0,Linnæus,False
+8967281,probe_swap,G2,22,taxon,56,T. duplicatus,False,T. duplicatus,exact,2498,2511,100.0,T. duplicatus,False
+8967281,probe_swap,G2,23,person,57,Deshayes,False,Deshayes,exact,2552,2560,100.0,Deshayes,False
+8967281,probe_swap,G2,24,taxon,57,Turbo variega- tus,False,Turbo variegatus,cross_line,2585,2603,100.0,"Turbo variega-
+tus",True
+8967281,probe_swap,G2,25,taxon,61,Turbo imbricatus,False,Turbo imbricatus,exact,2725,2741,100.0,Turbo imbricatus,False
+8967281,probe_swap,G2,26,taxon,62,Turbo granulosus,False,Turbo granulosus,exact,2811,2827,100.0,Turbo granulosus,False
+8967281,probe_swap,G2,27,person,63,Linnæus,False,Linnæus,exact,2831,2838,100.0,Linnæus,False
+8967281,probe_swap,G2,28,person,63,Lamarck,False,Lamarck,exact,2867,2874,100.0,Lamarck,False
+8967281,probe_swap,G2,29,taxon,63,Turritella fuscata,False,Turritella fuscata,cross_line,2877,2895,100.0,"Turritella
+fuscata",False
+8967281,probe_swap,G2,30,taxon,64,Turbo replicatus,False,Turbo replicatus,exact,2917,2933,100.0,Turbo replicatus,False
+8967281,probe_swap,G2,31,person,64,Linn.,False,Linn.,exact,2935,2940,100.0,Linn.,False
+8967281,probe_swap,G2,32,person,65,Montagu,False,Montagu,exact,2984,2991,100.0,Montagu,False
+8967281,probe_swap,G2,33,taxon,66,T. cornea,False,T. cornea,exact,3017,3026,100.0,T. cornea,False
+8967281,probe_swap,G2,34,person,66,Lamarck,False,Lamarck,exact,3030,3037,100.0,Lamarck,False
+8967281,probe_swap,G2,35,taxon,68,Turritella brevialis,False,Turritella brevialis,exact,3044,3064,100.0,Turritella brevialis,False
+8967281,probe_swap,G2,36,person,68,Lamarck,False,Lamarck,exact,3068,3075,100.0,Lamarck,False
+8967281,probe_swap,G2,37,vernacular,68,LeMesal,False,Le Mesal,exact,3077,3084,100.0,LeMesal,True
+8967281,probe_swap,G2,38,person,68,Adanson,False,Adanson,exact,3088,3095,100.0,Adanson,False
+8967281,probe_swap,G2,39,person,69,Gray,False,Gray,exact,3149,3153,100.0,Gray,False
+8967281,probe_swap,G2,40,taxon,70,MESALIA,False,MESALIA,exact,3170,3177,100.0,MESALIA,False
+8967281,probe_swap,G2,41,taxon,71,Turritella lactea,False,Turritella lactea,exact,3209,3226,100.0,Turritella lactea,False
+8967281,probe_swap,G2,42,person,71,Möller,False,Möller,exact,3230,3236,100.0,Möller,False
+8967281,probe_swap,G2,43,institution,72,Cumingian collection,False,Cumingian collection,exact,3281,3301,100.0,Cumingian collection,False
+8967281,probe_swap,G2,44,person,73,Gray,False,Gray,exact,3345,3349,100.0,Gray,False
+8967281,probe_swap,G2,45,taxon,74,EGLISIA,False,EGLISIA,exact,3387,3394,100.0,EGLISIA,False
+8967281,probe_swap,G2,46,taxon,74,Turritella calcareus,False,Turritella calcareus,exact,3411,3431,100.0,Turritella calcareus,False
+8967281,probe_swap,G2,47,person,76,Cuming,False,Cuming,exact,3512,3518,100.0,Cuming,False
+8967281,probe_swap,G2,48,locality,76,Philippine Islands,False,Philippine Islands,exact,3533,3551,100.0,Philippine Islands,False
+8967281,probe_swap,G2,49,taxon,78,Turritellœ,False,Turritellæ,exact,3558,3568,100.0,Turritellœ,True
+8967281,probe_swap,G2,50,taxon,80,T. cornea,False,T. cornea,exact,3668,3677,100.0,T. cornea,False
+8967281,probe_swap,G2,51,locality,80,Shetland Islands,False,Shetland Islands,exact,3711,3727,100.0,Shetland Islands,False
+8967281,probe_swap,G2,52,person,81,M’Andrew,False,M’Andrew,exact,3735,3743,100.0,M’Andrew,False
+8967281,probe_swap,G2,53,locality,84,Mediterranean,False,Mediterranean,exact,3915,3928,100.0,Mediterranean,False
+8967281,probe_swap,G2,54,locality,85,Eastern Seas,False,Eastern Seas,exact,3962,3974,100.0,Eastern Seas,False
+8967281,probe_swap,G2,55,locality,85,shores of Central America,False,shores of Central America,exact,3983,4008,100.0,shores of Central America,False
+8967281,probe_swap,G2,56,locality,86,New Zealand,False,New Zealand,exact,4041,4052,100.0,New Zealand,False
+8967281,probe_swap,G2,57,locality,86,Australia,False,Australia,exact,4054,4063,100.0,Australia,False
+8967281,probe_swap,G2,58,locality,87,Van Dieman’s Land,False,Van Dieman’s Land,exact,4069,4086,100.0,Van Dieman’s Land,False
+8967281,probe_swap,G2,59,institution,89,Mus. Cuming,False,Mus. Cuming,exact,4101,4112,100.0,Mus. Cuming,False
+8967281,probe_swap,G2,60,taxon,91,TURRITELLA UNGULINA,False,TURRITELLA UNGULINA,exact,4116,4135,100.0,TURRITELLA UNGULINA,False
+8967281,probe_swap,G2,61,vernacular,97,NAIL‐BRUISED TURRITELLA,False,NAIL‐BRUISED TURRITELLA,exact,4358,4381,100.0,NAIL‐BRUISED TURRITELLA,False
+8967281,probe_swap,G2,62,taxon,103,Turbo ungulinus,False,Turbo ungulinus,exact,4588,4603,100.0,Turbo ungulinus,False
+8967281,probe_swap,G2,63,person,103,Linnæus,False,Linnæus,exact,4605,4612,100.0,Linnæus,False
+8967281,probe_swap,G2,64,taxon,104,Turritella calcareus,False,Turritella calcareus,exact,4648,4668,100.0,Turritella calcareus,False
+8967281,probe_swap,G2,65,person,104,Lamarck,False,Lamarck,exact,4670,4677,100.0,Lamarck,False
+8967281,probe_swap,G2,66,locality,106,"Senegal, Mouth of the Gambia, West Africa",False,"Senegal, Mouth of the Gambia, West Africa",exact,4685,4726,100.0,"Senegal, Mouth of the Gambia, West Africa",False
+8967281,probe_swap,G2,67,person,108,Linnæus,False,Linnæus,exact,4764,4771,100.0,Linnæus,False
+8967281,probe_swap,G2,68,taxon,109,Turbo granulosus,False,Turbo granulosus,exact,4792,4808,100.0,Turbo granulosus,False
+8967281,probe_swap,G2,69,institution,110,Linnæan Society of London,False,Linnæan Society of London,exact,4847,4872,100.0,Linnæan Society of London,False
+8967281,probe_swap,G2,70,person,111,Hanley,False,Hanley,exact,4889,4895,100.0,Hanley,False
+8967281,probe_swap,G2,71,person,111,Lamarck,False,Lamarck,exact,4926,4933,100.0,Lamarck,False
+8967281,probe_swap,G2,72,taxon,111,T. fuscata,False,T. fuscata,cross_line,4936,4946,100.0,"T.
+fuscata",False
+8967281,probe_swap,G2,73,locality,112,Seas of Europe,False,Seas of Europe,exact,4962,4976,100.0,Seas of Europe,False
+8967281,probe_swap,G2,74,person,113,Pulteney,False,Pulteney,exact,5028,5036,100.0,Pulteney,False
+8967281,probe_swap,G2,75,person,114,Deshayes,False,Deshayes,exact,5054,5062,100.0,Deshayes,False
+8967281,probe_swap,G2,76,taxon,115,Turritella,False,Turritella,exact,5106,5116,100.0,Turritella,False
+8967281,probe_swap,G2,77,locality,115,Mediterranean,False,Mediterranean,exact,5139,5152,100.0,Mediterranean,False
+8967282,probe_typo,G2,0,person,3,Kiener,False,Kiener,exact,38,44,100.0,Kiener,False
+8967282,probe_typo,G2,1,person,5,Linnæus,False,Linnæus,exact,141,148,100.0,Linnæus,False
+8967282,probe_typo,G2,2,taxon,6,T. cornea,False,T. cornea,exact,198,207,100.0,T. cornea,False
+8967282,probe_typo,G2,3,person,6,Lamarck,False,Lamarck,exact,209,216,100.0,Lamarck,False
+8967282,probe_typo,G2,4,person,6,Deshayes,False,Deshayes,exact,221,229,100.0,Deshayes,False
+8967282,probe_typo,G2,5,taxon,6,T. ungulina,False,T. ungulina,exact,231,242,100.0,T. ungulina,False
+8967282,probe_typo,G2,6,institution,9,Mus. Cuming,False,Mus. Cuming,exact,320,331,100.0,Mus. Cuming,False
+8967282,probe_typo,G2,7,taxon,11,TURRITELLA DUPLICATA,False,TURRITELLA DUPLICATA,exact,335,355,100.0,TURRITELLA DUPLICATA,False
+8967282,probe_typo,G2,8,vernacular,19,DUPLICATE TURRITELLA,False,DUPLICATE TURRITELLA,exact,669,689,100.0,DUPLICATE TURRITELLA,False
+8967282,probe_typo,G2,9,person,28,LAMARCK,False,LAMARCK,exact,1042,1049,100.0,LAMARCK,False
+8967282,probe_typo,G2,10,person,28,Deshayes,False,Deshayes,exact,1069,1077,100.0,Deshayes,False
+8967282,probe_typo,G2,11,taxon,30,Turbo duplicatus,False,Turbo duplicatus,exact,1104,1120,100.0,Turbo duplicatus,False
+8967282,probe_typo,G2,12,person,30,Linnæus,False,Linnæus,exact,1122,1129,100.0,Linnæus,False
+8967282,probe_typo,G2,13,taxon,31,Turbo acutangulus,False,Turbo acutangulus,exact,1142,1159,100.0,Turbo acutangulus,False
+8967282,probe_typo,G2,14,person,31,Linnæus,False,Linnæus,exact,1161,1168,100.0,Linnæus,False
+8967282,probe_typo,G2,15,taxon,32,Turbo replicatus,False,Turbo replicatus,exact,1185,1201,100.0,Turbo replicatus,False
+8967282,probe_typo,G2,16,person,32,Linnæus,False,Linnæus,exact,1203,1210,100.0,Linnæus,False
+8967282,probe_typo,G2,17,locality,34,Eastern Seas,False,Eastern Seas,exact,1218,1230,100.0,Eastern Seas,False
+8967282,probe_typo,G2,18,taxon,36,Turbo acutanguuls,False,Turbo acutangulus,exact,1237,1254,100.0,Turbo acutanguuls,True
+8967282,probe_typo,G2,19,person,36,Linnæus,False,Linnæus,exact,1258,1265,100.0,Linnæus,False
+8967282,probe_typo,G2,20,taxon,37,Turbo duplicatus,False,Turbo duplicatus,exact,1292,1308,100.0,Turbo duplicatus,False
+8967282,probe_typo,G2,21,institution,38,Linnæan collection,False,Linnæan collection,exact,1370,1388,100.0,Linnæan collection,False
+8967282,probe_typo,G2,22,person,39,Deshayes,False,Deshayes,exact,1425,1433,100.0,Deshayes,False
+8967282,probe_typo,G2,23,person,40,Kineer,False,Kiener,exact,1472,1478,100.0,Kineer,True
+8967282,probe_typo,G2,24,taxon,43,Turritella duplicata,False,Turritella duplicata,exact,1565,1585,100.0,Turritella duplicata,False
+8967282,probe_typo,G2,25,person,48,Linnæus,False,Linnæus,exact,1828,1835,100.0,Linnæus,False
+8967282,probe_typo,G2,26,taxon,48,Turbo acutangulus,False,Turbo acutangulus,exact,1838,1855,100.0,Turbo acutangulus,False
+8967282,probe_typo,G2,27,institution,53,Mus. Cuming,False,Mus. Cuming,exact,2054,2065,100.0,Mus. Cuming,False
+8967282,probe_typo,G2,28,taxon,55,TURRITELLA TEREBRA,False,TURRITELLA TEREBRA,exact,2069,2087,100.0,TURRITELLA TEREBRA,False
+8967282,probe_typo,G2,29,vernacular,61,AUGUR TURRITELLA,False,AUGUR TURRITELLA,exact,2302,2318,100.0,AUGUR TURRITELLA,False
+8967282,probe_typo,G2,30,person,68,LAMACRK,False,LAMARCK,exact,2525,2532,100.0,LAMACRK,True
+8967282,probe_typo,G2,31,person,68,Deshayes,False,Deshayes,exact,2552,2560,100.0,Deshayes,False
+8967282,probe_typo,G2,32,taxon,70,Turbo terebra,False,Turbo terebra,exact,2587,2600,100.0,Turbo terebra,False
+8967282,probe_typo,G2,33,person,70,Linnæus,False,Linnæus,exact,2602,2609,100.0,Linnæus,False
+8967282,probe_typo,G2,34,taxon,72,Turritella Archimedis,False,Turritella Archimedis,exact,2646,2667,100.0,Turritella Archimedis,False
+8967282,probe_typo,G2,35,person,72,Dlilwyn,False,Dillwyn,exact,2669,2676,100.0,Dlilwyn,True
+8967282,probe_typo,G2,36,person,72,Mawe,False,Mawe,exact,2678,2682,100.0,Mawe,False
+8967282,probe_typo,G2,37,locality,74,Philippine Islands,False,Philippine Islands,exact,2690,2708,100.0,Philippine Islands,False
+8967282,probe_typo,G2,38,person,74,Cuming,False,Cuming,exact,2710,2716,100.0,Cuming,False
+8967282,probe_typo,G2,39,person,77,Martyn,False,Martyn,exact,2797,2803,100.0,Martyn,False
+8967282,probe_typo,G2,40,person,83,Cuming,False,Cuming,exact,3131,3137,100.0,Cuming,False
+8967282,probe_typo,G2,41,locality,84,Island of Negros,False,Island of Negros,exact,3170,3186,100.0,Island of Negros,False
+8967282,probe_typo,G2,42,locality,84,Philippines,False,Philippines,exact,3199,3210,100.0,Philippines,False
+8967282,probe_typo,G2,43,taxon,85,T. terebra,False,T. terebra,exact,3216,3226,100.0,T. terebra,False
+8967282,probe_typo,G2,44,taxon,86,T. Linnei,False,T. Linnei,exact,3274,3283,100.0,T. Linnei,False
+8967282,probe_typo,G2,45,person,86,Deshayes,False,Deshayes,exact,3299,3307,100.0,Deshayes,False
+8967282,probe_typo,G2,46,taxon,86,T. communis,False,T. communis,exact,3309,3320,100.0,T. communis,False
+8967282,probe_typo,G2,47,person,87,Philippi,False,Philippi,exact,3322,3330,100.0,Philippi,False
+8967282,probe_typo,G2,48,taxon,87,T. cronea,False,T. cornea,exact,3339,3348,100.0,T. cronea,True
+8967282,probe_typo,G2,49,person,87,Lamarck,False,Lamarck,exact,3352,3359,100.0,Lamarck,False
+8967282,probe_typo,G2,50,institution,89,Mus. Cuming,False,Mus. Cuming,exact,3374,3385,100.0,Mus. Cuming,False
+8967282,probe_typo,G2,51,taxon,91,TURRITELLA ATTENUATA,False,TURRITELLA ATTENUATA,exact,3389,3409,100.0,TURRITELLA ATTENUATA,False
+8967282,probe_typo,G2,52,vernacular,97,ATTENUATED TURRITELLA,False,ATTENUATED TURRITELLA,exact,3665,3686,100.0,ATTENUATED TURRITELLA,False
+8967282,probe_typo,G2,53,taxon,104,Turritella acutangula,False,Turritella acutangula,exact,3956,3977,100.0,Turritella acutangula,False
+8967282,probe_typo,G2,54,person,104,Deshayes,False,Deshayes,exact,3979,3987,100.0,Deshayes,False
+8967282,probe_typo,G2,55,taxon,105,Turbo acutangulus,False,Turbo acutangulus,exact,4027,4044,100.0,Turbo acutangulus,False
+8967282,probe_typo,G2,56,person,105,Linn.,False,Linn.,exact,4046,4051,100.0,Linn.,False
+8967282,probe_typo,G2,57,person,109,Linnæus,False,Linnæus,exact,4098,4105,100.0,Linnæus,False
+8967282,probe_typo,G2,58,taxon,110,Turbo acutnagulus,False,Turbo acutangulus,exact,4126,4143,100.0,Turbo acutnagulus,True
+8967282,probe_typo,G2,59,taxon,111,T. duplicatus,False,T. duplicatus,exact,4198,4211,100.0,T. duplicatus,False
+8967282,probe_swap,G2,0,person,3,Kiener,False,Kiener,exact,38,44,100.0,Kiener,False
+8967282,probe_swap,G2,1,person,5,Linnæus,False,Linnæus,exact,141,148,100.0,Linnæus,False
+8967282,probe_swap,G2,2,taxon,6,T. cornea,False,T. cornea,exact,198,207,100.0,T. cornea,False
+8967282,probe_swap,G2,3,person,6,Lamarck,False,Lamarck,exact,209,216,100.0,Lamarck,False
+8967282,probe_swap,G2,4,person,6,Deshayes,False,Deshayes,exact,221,229,100.0,Deshayes,False
+8967282,probe_swap,G2,5,taxon,6,T. ungulina,False,T. ungulina,exact,231,242,100.0,T. ungulina,False
+8967282,probe_swap,G2,6,institution,9,Mus. Cuming,False,Mus. Cuming,exact,320,331,100.0,Mus. Cuming,False
+8967282,probe_swap,G2,7,taxon,11,TURRITELLA DUPLICATA,False,TURRITELLA DUPLICATA,exact,335,355,100.0,TURRITELLA DUPLICATA,False
+8967282,probe_swap,G2,8,vernacular,19,DUPLICATE TURRITELLA,False,DUPLICATE TURRITELLA,exact,669,689,100.0,DUPLICATE TURRITELLA,False
+8967282,probe_swap,G2,9,person,28,LAMARCK,False,LAMARCK,exact,1042,1049,100.0,LAMARCK,False
+8967282,probe_swap,G2,10,person,28,Deshayes,False,Deshayes,exact,1069,1077,100.0,Deshayes,False
+8967282,probe_swap,G2,11,taxon,30,Turbo fuscata,False,Turbo fuscata,exact,1104,1117,100.0,Turbo fuscata,False
+8967282,probe_swap,G2,12,person,30,Linnæus,False,Linnæus,exact,1119,1126,100.0,Linnæus,False
+8967282,probe_swap,G2,13,taxon,31,Turbo brevialis,False,Turbo brevialis,exact,1139,1154,100.0,Turbo brevialis,False
+8967282,probe_swap,G2,14,person,31,Linnæus,False,Linnæus,exact,1156,1163,100.0,Linnæus,False
+8967282,probe_swap,G2,15,taxon,32,Turbo calcareus,False,Turbo calcareus,exact,1180,1195,100.0,Turbo calcareus,False
+8967282,probe_swap,G2,16,person,32,Linnæus,False,Linnæus,exact,1197,1204,100.0,Linnæus,False
+8967282,probe_swap,G2,17,locality,34,Eastern Seas,False,Eastern Seas,exact,1212,1224,100.0,Eastern Seas,False
+8967282,probe_swap,G2,18,taxon,36,Turbo brevialis,False,Turbo brevialis,exact,1231,1246,100.0,Turbo brevialis,False
+8967282,probe_swap,G2,19,person,36,Linnæus,False,Linnæus,exact,1250,1257,100.0,Linnæus,False
+8967282,probe_swap,G2,20,taxon,37,Turbo calcarea,False,Turbo calcarea,exact,1284,1298,100.0,Turbo calcarea,False
+8967282,probe_swap,G2,21,institution,38,Linnæan collection,False,Linnæan collection,exact,1360,1378,100.0,Linnæan collection,False
+8967282,probe_swap,G2,22,person,39,Deshayes,False,Deshayes,exact,1415,1423,100.0,Deshayes,False
+8967282,probe_swap,G2,23,person,40,Kiener,False,Kiener,exact,1462,1468,100.0,Kiener,False
+8967282,probe_swap,G2,24,taxon,43,Turritella duplicata,False,Turritella duplicata,exact,1555,1575,100.0,Turritella duplicata,False
+8967282,probe_swap,G2,25,person,48,Linnæus,False,Linnæus,exact,1818,1825,100.0,Linnæus,False
+8967282,probe_swap,G2,26,taxon,48,Turbo imbricatus,False,Turbo imbricatus,exact,1828,1844,100.0,Turbo imbricatus,False
+8967282,probe_swap,G2,27,institution,53,Mus. Cuming,False,Mus. Cuming,exact,2043,2054,100.0,Mus. Cuming,False
+8967282,probe_swap,G2,28,taxon,55,TURRITELLA TEREBRA,False,TURRITELLA TEREBRA,exact,2058,2076,100.0,TURRITELLA TEREBRA,False
+8967282,probe_swap,G2,29,vernacular,61,AUGUR TURRITELLA,False,AUGUR TURRITELLA,exact,2291,2307,100.0,AUGUR TURRITELLA,False
+8967282,probe_swap,G2,30,person,68,LAMARCK,False,LAMARCK,exact,2514,2521,100.0,LAMARCK,False
+8967282,probe_swap,G2,31,person,68,Deshayes,False,Deshayes,exact,2541,2549,100.0,Deshayes,False
+8967282,probe_swap,G2,32,taxon,70,Turbo terebra,False,Turbo terebra,exact,2576,2589,100.0,Turbo terebra,False
+8967282,probe_swap,G2,33,person,70,Linnæus,False,Linnæus,exact,2591,2598,100.0,Linnæus,False
+8967282,probe_swap,G2,34,taxon,72,Turritella Archimedis,False,Turritella Archimedis,exact,2635,2656,100.0,Turritella Archimedis,False
+8967282,probe_swap,G2,35,person,72,Dillwyn,False,Dillwyn,exact,2658,2665,100.0,Dillwyn,False
+8967282,probe_swap,G2,36,person,72,Mawe,False,Mawe,exact,2667,2671,100.0,Mawe,False
+8967282,probe_swap,G2,37,locality,74,Philippine Islands,False,Philippine Islands,exact,2679,2697,100.0,Philippine Islands,False
+8967282,probe_swap,G2,38,person,74,Cuming,False,Cuming,exact,2699,2705,100.0,Cuming,False
+8967282,probe_swap,G2,39,person,77,Martyn,False,Martyn,exact,2786,2792,100.0,Martyn,False
+8967282,probe_swap,G2,40,person,83,Cuming,False,Cuming,exact,3120,3126,100.0,Cuming,False
+8967282,probe_swap,G2,41,locality,84,Island of Negros,False,Island of Negros,exact,3159,3175,100.0,Island of Negros,False
+8967282,probe_swap,G2,42,locality,84,Philippines,False,Philippines,exact,3188,3199,100.0,Philippines,False
+8967282,probe_swap,G2,43,taxon,85,T. terebra,False,T. terebra,exact,3205,3215,100.0,T. terebra,False
+8967282,probe_swap,G2,44,taxon,86,T. Linnei,False,T. Linnei,exact,3263,3272,100.0,T. Linnei,False
+8967282,probe_swap,G2,45,taxon,86,ungulinus,False,ungulinus,exact,3277,3286,100.0,ungulinus,False
+8967282,probe_swap,G2,46,person,86,Deshayes,False,Deshayes,exact,3288,3296,100.0,Deshayes,False
+8967282,probe_swap,G2,47,taxon,86,T. communis,False,T. communis,exact,3298,3309,100.0,T. communis,False
+8967282,probe_swap,G2,48,person,87,Philippi,False,Philippi,exact,3311,3319,100.0,Philippi,False
+8967282,probe_swap,G2,49,taxon,87,T. cornea,False,T. cornea,exact,3328,3337,100.0,T. cornea,False
+8967282,probe_swap,G2,50,person,87,Lamarck,False,Lamarck,exact,3341,3348,100.0,Lamarck,False
+8967282,probe_swap,G2,51,institution,89,Mus. Cuming,False,Mus. Cuming,exact,3363,3374,100.0,Mus. Cuming,False
+8967282,probe_swap,G2,52,taxon,91,TURRITELLA ATTENUATA,False,TURRITELLA ATTENUATA,exact,3378,3398,100.0,TURRITELLA ATTENUATA,False
+8967282,probe_swap,G2,53,vernacular,97,ATTENUATED TURRITELLA,False,ATTENUATED TURRITELLA,exact,3654,3675,100.0,ATTENUATED TURRITELLA,False
+8967282,probe_swap,G2,54,taxon,104,Turritella acutangula,False,Turritella acutangula,exact,3945,3966,100.0,Turritella acutangula,False
+8967282,probe_swap,G2,55,person,104,Deshayes,False,Deshayes,exact,3968,3976,100.0,Deshayes,False
+8967282,probe_swap,G2,56,taxon,105,Turbo acutangulus,False,Turbo acutangulus,exact,4016,4033,100.0,Turbo acutangulus,False
+8967282,probe_swap,G2,57,person,105,Linn.,False,Linn.,exact,4035,4040,100.0,Linn.,False
+8967282,probe_swap,G2,58,person,109,Linnæus,False,Linnæus,exact,4087,4094,100.0,Linnæus,False
+8967282,probe_swap,G2,59,taxon,110,Turbo acutangulus,False,Turbo acutangulus,exact,4115,4132,100.0,Turbo acutangulus,False
+8967282,probe_swap,G2,60,taxon,111,T. duplicatus,False,T. duplicatus,exact,4187,4200,100.0,T. duplicatus,False
+8967290,probe_typo,G2,0,taxon,9,T. lentigionsa,False,T. lentiginosa,exact,377,391,100.0,T. lentigionsa,True
+8967290,probe_typo,G2,1,taxon,13,T. gonoistoma,False,T. goniostoma,exact,534,547,100.0,T. gonoistoma,True
+8967290,probe_typo,G2,2,taxon,17,T. lnetiginosa,False,T. lentiginosa,exact,747,761,100.0,T. lnetiginosa,True
+8967290,probe_swap,G2,0,taxon,9,T. lentiginosa,False,T. lentiginosa,exact,377,391,100.0,T. lentiginosa,False
+8967290,probe_swap,G2,1,taxon,13,T. goniostoma,False,T. goniostoma,exact,534,547,100.0,T. goniostoma,False
+8967290,probe_swap,G2,2,taxon,17,T. lentiginosa,False,T. lentiginosa,exact,747,761,100.0,T. lentiginosa,False
+8967333,probe_typo,G2,0,taxon,5,CASSIDRAIA,False,CASSIDARIA,exact,25,35,100.0,CASSIDRAIA,True
+8967333,probe_typo,G2,1,person,12,Landsboroguh,False,Landsborough,exact,312,324,100.0,Landsboroguh,True
+8967333,probe_swap,G2,0,taxon,5,CASSIDARIA,False,CASSIDARIA,exact,25,35,100.0,CASSIDARIA,False
+8967333,probe_swap,G2,1,person,12,Landsborough,False,Landsborough,exact,312,324,100.0,Landsborough,False
+8967345,probe_typo,G2,0,taxon,5,EBRUNA,False,EBURNA,exact,25,31,100.0,EBRUNA,True
+8967345,probe_typo,G2,1,person,11,Crbabe,False,Crabbe,exact,240,246,100.0,Crbabe,True
+8967345,probe_swap,G2,0,taxon,5,EBURNA,False,EBURNA,exact,25,31,100.0,EBURNA,False
+8967345,probe_swap,G2,1,person,11,Crabbe,False,Crabbe,exact,240,246,100.0,Crabbe,False

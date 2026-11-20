@@ -123,9 +123,16 @@ class Cache:
 def gbif_hinted(name: str, rank: str, cache: Cache) -> dict:
     if not name:
         return {"matchType": "NONE"}
-    r = cache.get(f"{name}|{rank}", lambda: requests.get(
-        lt.GBIF_MATCH, params={"name": name, "kingdom": "Animalia", "verbose": "true"}, timeout=30,
-        headers={"User-Agent": "bioevidencebench-linking-eval"}).json())
+    def fetch():
+        import time
+        for attempt in range(5):                 # GBIF sometimes resets the connection
+            try:
+                return requests.get(lt.GBIF_MATCH, params={"name": name, "kingdom": "Animalia", "verbose": "true"},
+                                    timeout=30, headers={"User-Agent": "bioevidencebench-linking-eval"}).json()
+            except requests.RequestException:
+                time.sleep(2 * (attempt + 1))
+        raise RuntimeError(f"GBIF unreachable for {name!r}")
+    r = cache.get(f"{name}|{rank}", fetch)
     if (r.get("rank") or "").lower() == rank and r.get("class") == "Aves":
         return r
     cands = [a for a in [r] + r.get("alternatives", [])

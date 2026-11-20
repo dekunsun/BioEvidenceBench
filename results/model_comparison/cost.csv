@@ -1,0 +1,5 @@
+model,requests_all,usd_total_run,usd_per_request,usd_per_1000_pages,mode,note
+"claude-opus-5-5 (batch, frozen)",128,1.499,0.0117,11.71,batch (50% off),"4 versions x G0,G1"
+claude-sonnet-5-5,48,0.486,0.0101,10.12,sync,3 versions x G1
+claude-haiku-5-5,48,0.072,0.0015,1.49,sync,3 versions x G1
+claude-fable-5-2,48,2.071,0.0432,43.15,sync,3 versions x G1

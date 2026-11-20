@@ -1,0 +1,23 @@
+{
+  "model": "claude-fable-5-2",
+  "batch": false,
+  "requests": 48,
+  "pages": 16,
+  "usd_total": 2.0712,
+  "usd_per_page_all_conditions": 0.1295,
+  "usd_per_request": 0.04315,
+  "tokens": {
+    "input_tokens": 65075,
+    "output_tokens": 36084,
+    "cache_creation_input_tokens": 8250,
+    "cache_read_input_tokens": 123750
+  },
+  "stop_reasons": {
+    "end_turn": 48
+  },
+  "errors": 0,
+  "retried_once": 0,
+  "model_versions_returned": {
+    "claude-fable-5-2": 48
+  }
+}

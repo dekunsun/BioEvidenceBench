@@ -1,0 +1,414 @@
+page_id,field,value,box,value_in_gold
+8966790,institution,Mus. Cuming,"[315, 173, 421, 187]",True
+8966790,taxon,BULIMUS CHILENSIS,"[158, 196, 280, 211]",True
+8966790,vernacular,CHILI BULIMUS,"[176, 276, 280, 291]",True
+8966790,person,LESSON,"[536, 141, 585, 155]",True
+8966790,taxon,Bulimus granulosus,"[570, 147, 693, 162]",True
+8966790,person,Broderip,"[696, 147, 750, 162]",True
+8966790,locality,Valparaiso,"[577, 162, 642, 177]",True
+8966790,locality,"Conception, Chili","[669, 162, 789, 177]",True
+8966790,person,Cuming,"[797, 162, 838, 177]",True
+8966790,locality,mountains of Conception,"[532, 256, 686, 271]",True
+8966790,locality,Valparaiso,"[720, 269, 783, 284]",True
+8966802,vernacular,SLIGHTLY WRINKLED BULIMUS,"[173, 56, 358, 68]",True
+8966802,person,SOWERBY,"[154, 166, 208, 177]",True
+8966802,taxon,Bul.,"[300, 166, 324, 177]",False
+8966802,locality,Gallapagos Islands,"[195, 182, 315, 194]",True
+8966802,person,Cuming,"[328, 182, 377, 194]",True
+8966802,institution,Mus. Cuming,"[279, 264, 429, 276]",True
+8966802,taxon,BULIMUS TURRITUS,"[154, 282, 315, 294]",True
+8966802,vernacular,TURRETED BULIMUS,"[173, 347, 312, 359]",True
+8966802,person,BRODERIP,"[154, 428, 213, 439]",True
+8966802,locality,"Truxillo, Peru","[195, 435, 286, 447]",True
+8966802,person,Cuming,"[427, 435, 476, 447]",True
+8966802,institution,Mus. Cuming,"[279, 501, 429, 513]",True
+8966802,taxon,BULIMUS SCULPTURATUS,"[154, 519, 336, 531]",True
+8966802,vernacular,SCULPTURED BULIMUS,"[173, 585, 330, 597]",True
+8966802,person,PFEIFFER,"[154, 673, 209, 685]",True
+8966802,locality,Gallapagos Islands,"[195, 681, 320, 693]",True
+8966802,person,Darwin,"[413, 681, 463, 693]",True
+8966802,taxon,B. rugiferus,"[668, 68, 744, 81]",True
+8966802,taxon,Darwinii,"[770, 68, 826, 81]",True
+8966802,institution,Mus. Cuming,"[703, 160, 834, 172]",True
+8966802,taxon,BULIMUS CALVUS,"[543, 178, 692, 190]",True
+8966802,vernacular,BALD BULIMUS,"[566, 242, 673, 254]",True
+8966802,person,SOWERBY,"[543, 315, 602, 326]",True
+8966802,locality,"James' Island, Gallapagos","[581, 322, 767, 334]",True
+8966802,person,Cuming,"[581, 338, 631, 350]",True
+8966802,taxon,Achatinella,"[565, 376, 636, 388]",False
+8966802,institution,Mus. Cuming,"[703, 420, 834, 432]",True
+8966802,taxon,BULIMUS PUSTULOSUS,"[543, 439, 712, 451]",True
+8966802,vernacular,PUSTULOSE BULIMUS,"[566, 502, 734, 514]",True
+8966802,person,BRODERIP,"[543, 611, 604, 622]",True
+8966802,locality,"Huasco, Chili","[581, 619, 673, 631]",True
+8966802,person,Cuming,"[581, 635, 631, 647]",True
+8966930,institution,Mus. Cuming,"[293, 142, 437, 154]",True
+8966930,taxon,BULIMUS OBTUSATUS,"[164, 161, 309, 174]",True
+8966930,vernacular,BLUNTED BULIMUS,"[203, 255, 345, 268]",True
+8966930,person,PFEIFFER,"[164, 360, 236, 372]",True
+8966930,taxon,Bul.,"[294, 360, 320, 372]",False
+8966930,taxon,Helix obtusata,"[198, 375, 293, 388]",True
+8966930,person,Gmelin,"[298, 375, 345, 388]",True
+8966930,taxon,Bulimus calcareus,"[198, 390, 315, 403]",True
+8966930,person,Bruguière,"[320, 390, 388, 403]",True
+8966930,person,Lamarck,"[393, 390, 453, 403]",True
+8966930,person,Deshayes,"[459, 390, 519, 403]",True
+8966930,locality,Madagascar,"[204, 405, 279, 418]",True
+8966930,person,Beck,"[293, 405, 328, 418]",True
+8966930,person,Lamarck,"[694, 65, 750, 78]",True
+8966930,taxon,Helix calcarea,"[862, 80, 934, 93]",True
+8966930,person,Born,"[561, 96, 591, 109]",True
+8966930,institution,Mus. Cuming,"[741, 156, 844, 169]",True
+8966930,taxon,BULIMUS CLAVATOR,"[561, 172, 708, 185]",True
+8966930,vernacular,CLUB-BEARER BULIMUS,"[597, 264, 758, 277]",True
+8966930,person,PETIT,"[561, 370, 604, 382]",True
+8966930,locality,Madagascar,"[595, 385, 670, 398]",True
+8966937,institution,Mus. Cuming,"[352, 137, 436, 148]",True
+8966937,taxon,BULIMUS ROSEATUS,"[104, 157, 253, 170]",True
+8966937,vernacular,ROSEATE BULIMUS,"[123, 234, 262, 248]",True
+8966937,locality,Venezuela,"[132, 353, 207, 366]",True
+8966937,taxon,B. oreades,"[313, 389, 383, 402]",True
+8966937,institution,Mus. Cuming,"[324, 425, 386, 439]",True
+8966937,taxon,BULIMUS FERIATUS,"[95, 446, 254, 460]",True
+8966937,vernacular,UNEMPLOYED BULIMUS,"[123, 560, 294, 575]",True
+8966937,locality,Venezuela,"[132, 642, 202, 656]",True
+8966937,institution,Mus. Cuming,"[327, 717, 375, 732]",True
+8966937,taxon,BULIMUS PERDIX,"[95, 739, 234, 752]",True
+8966937,vernacular,PARTRIDGE BULIMUS,"[518, 137, 673, 150]",True
+8966937,person,PFEIFFER,"[499, 227, 571, 240]",True
+8966937,locality,New Granada,"[529, 241, 620, 255]",True
+8966937,person,Funck,"[630, 241, 686, 255]",True
+8966937,taxon,B. perdix,"[498, 368, 557, 382]",True
+8966937,institution,Mus. Cuming,"[619, 436, 710, 450]",True
+8966937,taxon,BULIMUS EURYOMPHALUS,"[497, 455, 708, 470]",True
+8966937,vernacular,BROAD-PLAITED BULIMUS,"[521, 563, 714, 577]",True
+8966937,locality,Venezuela,"[530, 666, 595, 680]",True
+8966937,person,Dyson,"[612, 666, 655, 680]",True
+8966937,institution,Mus. Cuming,"[685, 739, 767, 753]",True
+8966937,taxon,BULIMUS GLABER,"[492, 758, 628, 771]",True
+8967281,taxon,TURRITELLA,"[262, 97, 365, 111]",True
+8967281,person,Lamarck,"[372, 97, 421, 111]",True
+8967281,taxon,Turritella,"[351, 145, 416, 159]",True
+8967281,taxon,Cerithium,"[372, 418, 436, 432]",True
+8967281,taxon,Turritella,"[453, 465, 503, 479]",True
+8967281,taxon,Turritella,"[351, 604, 416, 618]",True
+8967281,person,Lamarck,"[132, 629, 186, 643]",True
+8967281,person,Kiener,"[143, 644, 183, 658]",True
+8967281,person,Cuming,"[365, 660, 408, 674]",True
+8967281,person,Metcalfe,"[434, 660, 503, 674]",True
+8967281,person,Hanley,"[156, 676, 203, 690]",True
+8967281,person,Edward Belcher,"[244, 676, 348, 690]",True
+8967281,institution,British Museum,"[369, 676, 496, 690]",True
+8967281,institution,Banksian Collection,"[152, 691, 280, 705]",True
+8967281,institution,Linnæan Society,"[401, 691, 503, 720]",True
+8967281,person,Lamarck,"[245, 736, 295, 750]",True
+8967281,person,Deshayes,"[299, 736, 356, 750]",True
+8967281,person,Kiener,"[376, 736, 416, 750]",True
+8967281,institution,Linnæan Society of London,"[213, 766, 438, 780]",True
+8967281,taxon,Turbo acutangulus,"[132, 781, 240, 795]",True
+8967281,person,Linnæus,"[262, 781, 318, 795]",True
+8967281,taxon,T. duplicatus,"[227, 796, 307, 811]",True
+8967281,person,Deshayes,"[179, 812, 239, 826]",True
+8967281,taxon,Turbo variegatus,"[418, 812, 503, 826]",True
+8967281,taxon,Turbo imbricatus,"[557, 25, 647, 39]",True
+8967281,taxon,Turbo ungulinus,"[818, 52, 883, 66]",True
+8967281,person,Linnæus,"[527, 70, 583, 84]",True
+8967281,person,Lamarck,"[699, 70, 765, 84]",True
+8967281,taxon,Turritella fuscata,"[527, 70, 883, 98]",True
+8967281,taxon,Turbo terebra,"[801, 86, 866, 100]",True
+8967281,person,Linn.,"[866, 86, 883, 100]",True
+8967281,person,Montagu,"[795, 100, 849, 114]",True
+8967281,taxon,T. cornea,"[625, 114, 680, 128]",True
+8967281,person,Lamarck,"[699, 114, 750, 128]",True
+8967281,taxon,Turritella brevialis,"[545, 135, 659, 149]",True
+8967281,person,Lamarck,"[678, 135, 729, 149]",True
+8967281,taxon,LeMesal,"[734, 135, 780, 149]",True
+8967281,person,Adanson,"[796, 135, 883, 149]",True
+8967281,person,Gray,"[840, 149, 883, 163]",True
+8967281,taxon,MESALIA,"[584, 163, 640, 177]",True
+8967281,taxon,Turritella lactea,"[527, 177, 640, 191]",True
+8967281,person,Möller,"[655, 177, 695, 191]",True
+8967281,institution,Cumingian collection,"[593, 191, 721, 205]",True
+8967281,person,Gray,"[555, 205, 590, 219]",True
+8967281,taxon,EGLISIA,"[527, 219, 578, 233]",True
+8967281,taxon,Turritella spirata,"[621, 219, 730, 233]",True
+8967281,person,Cuming,"[550, 247, 594, 261]",True
+8967281,locality,Philippine Islands,"[686, 247, 817, 261]",True
+8967281,taxon,Turritellæ,"[547, 262, 597, 276]",False
+8967281,taxon,T. cornea,"[527, 290, 582, 304]",True
+8967281,locality,Shetland Islands,"[751, 290, 883, 304]",True
+8967281,person,M'Andrew,"[550, 304, 612, 318]",True
+8967281,locality,Mediterranean,"[601, 346, 693, 360]",True
+8967281,locality,Eastern Seas,"[660, 360, 736, 374]",True
+8967281,locality,Central America,"[788, 360, 883, 374]",False
+8967281,locality,New Zealand,"[692, 374, 770, 388]",True
+8967281,locality,Australia,"[778, 374, 883, 388]",True
+8967281,locality,Van Dieman's Land,"[552, 388, 666, 402]",True
+8967281,institution,Mus. Cuming,"[722, 421, 792, 435]",True
+8967281,taxon,TURRITELLA UNGULINA,"[527, 448, 664, 462]",True
+8967281,vernacular,NAIL-BRUISED TURRITELLA,"[548, 559, 722, 573]",True
+8967281,taxon,Turbo ungulinus,"[527, 665, 620, 679]",True
+8967281,person,Linnæus,"[620, 665, 671, 679]",True
+8967281,taxon,Turritella fuscata,"[548, 679, 649, 693]",True
+8967281,person,Lamarck,"[653, 679, 707, 693]",True
+8967281,locality,Senegal,"[562, 692, 611, 706]",True
+8967281,locality,"Mouth of the Gambia, West Africa","[614, 692, 853, 706]",True
+8967281,person,Linnæus,"[818, 714, 867, 728]",True
+8967281,taxon,Turbo ungulinus,"[617, 729, 722, 743]",True
+8967281,institution,Linnæan Society of London,"[738, 743, 883, 757]",True
+8967281,person,Hanley,"[548, 758, 595, 772]",True
+8967281,person,Lamarck,"[828, 758, 870, 772]",True
+8967281,taxon,T. fuscata,"[871, 758, 883, 772]",True
+8967281,locality,Seas of Europe,"[647, 772, 738, 786]",True
+8967281,person,Pulteney,"[685, 786, 746, 800]",True
+8967281,person,Deshayes,"[548, 800, 604, 814]",True
+8967281,taxon,Turritella,"[527, 814, 586, 828]",True
+8967281,locality,Mediterranean,"[700, 814, 794, 828]",True
+8967282,person,Kiener,"[155, 7, 199, 19]",True
+8967282,person,Linnæus,"[156, 24, 200, 36]",True
+8967282,taxon,T. cornea,"[149, 55, 201, 69]",True
+8967282,person,Lamarck,"[205, 55, 260, 69]",True
+8967282,person,Deshayes,"[283, 55, 345, 69]",True
+8967282,taxon,T. ungulina,"[351, 55, 433, 69]",True
+8967282,institution,Mus. Cuming,"[305, 113, 407, 127]",True
+8967282,taxon,TURRITELLA DUPLICATA,"[133, 136, 315, 150]",True
+8967282,vernacular,DUPLICATE TURRITELLA,"[167, 256, 366, 270]",True
+8967282,person,LAMARCK,"[134, 391, 205, 405]",True
+8967282,person,Deshayes,"[358, 391, 412, 405]",True
+8967282,taxon,Turbo duplicatus,"[152, 408, 262, 422]",True
+8967282,person,Linnæus,"[265, 408, 317, 422]",True
+8967282,taxon,Turbo acutangulus,"[203, 425, 328, 439]",True
+8967282,person,Linnæus,"[333, 425, 384, 439]",True
+8967282,taxon,Turbo replicatus,"[211, 442, 325, 456]",True
+8967282,person,Linnæus,"[329, 442, 382, 456]",True
+8967282,locality,Eastern Seas,"[177, 459, 254, 473]",True
+8967282,taxon,Turbo acutangulus,"[172, 481, 282, 495]",True
+8967282,person,Linnæus,"[290, 481, 345, 495]",True
+8967282,taxon,Turbo duplicatus,"[155, 498, 262, 512]",True
+8967282,institution,Linnæan collection,"[322, 514, 437, 528]",True
+8967282,person,Deshayes,"[319, 529, 378, 543]",True
+8967282,person,Kiener,"[211, 544, 256, 558]",True
+8967282,taxon,Turritella duplicata,"[281, 578, 410, 592]",True
+8967282,person,Linnæus,"[155, 658, 213, 672]",True
+8967282,taxon,Turbo acutangulus,"[213, 658, 323, 672]",True
+8967282,institution,Mus. Cuming,"[298, 736, 401, 750]",True
+8967282,taxon,TURRITELLA TEREBRA,"[133, 759, 292, 773]",True
+8967282,vernacular,AUGUR TURRITELLA,"[159, 875, 339, 889]",True
+8967282,person,LAMARCK,"[529, 140, 592, 154]",True
+8967282,person,Deshayes,"[743, 140, 795, 154]",True
+8967282,taxon,Turbo terebra,"[563, 157, 654, 171]",True
+8967282,person,Linnæus,"[658, 157, 708, 171]",True
+8967282,taxon,Turritella Archimedis,"[563, 191, 708, 205]",True
+8967282,person,Dillwyn,"[712, 191, 757, 205]",True
+8967282,person,Mawe,"[761, 191, 797, 205]",True
+8967282,locality,Philippine Islands,"[565, 207, 676, 221]",True
+8967282,person,Cuming,"[685, 207, 729, 221]",True
+8967282,person,Martyn,"[700, 240, 754, 254]",True
+8967282,person,Cuming,"[702, 330, 752, 344]",True
+8967282,locality,Island of Negros,"[613, 345, 722, 359]",True
+8967282,locality,Philippines,"[786, 345, 841, 359]",True
+8967282,taxon,T. terebra,"[549, 360, 601, 374]",True
+8967282,taxon,T. Linnei,"[572, 375, 629, 389]",True
+8967282,taxon,ungulinus,"[657, 375, 715, 389]",True
+8967282,person,Deshayes,"[719, 375, 774, 389]",True
+8967282,taxon,T. communis,"[780, 375, 858, 389]",True
+8967282,person,Philippi,"[529, 390, 577, 404]",True
+8967282,taxon,T. cornea,"[620, 390, 671, 404]",True
+8967282,person,Lamarck,"[685, 390, 739, 404]",True
+8967282,institution,Mus. Cuming,"[724, 418, 827, 432]",True
+8967282,taxon,TURRITELLA ATTENUATA,"[535, 440, 722, 454]",True
+8967282,vernacular,ATTENUATED TURRITELLA,"[564, 557, 780, 571]",True
+8967282,taxon,Turritella acutangula,"[535, 604, 673, 618]",True
+8967282,person,Deshayes,"[677, 604, 733, 618]",True
+8967282,taxon,Turbo acutangulus,"[606, 619, 722, 633]",True
+8967282,person,Linn.,"[727, 619, 758, 633]",True
+8967282,person,Linnæus,"[715, 663, 769, 677]",True
+8967282,taxon,Turbo acutangulus,"[580, 678, 698, 692]",True
+8967282,taxon,T. duplicatus,"[667, 693, 750, 707]",True
+8967290,taxon,T. lentiginosa,"[333, 159, 412, 170]",True
+8967290,taxon,T. goniostoma,"[577, 103, 654, 115]",True
+8967290,taxon,T. lentiginosa,"[547, 159, 634, 171]",True
+8967333,taxon,CASSIDARIA,"[256, 424, 770, 459]",True
+8967333,person,Landsborough,"[630, 591, 710, 601]",True
+8967345,taxon,EBURNA,"[326, 400, 688, 434]",True
+8967345,person,Crabbe,"[623, 553, 665, 566]",True
+8992328,locality,Kent,"[149, 226, 187, 240]",True
+8992328,vernacular,Red-backed Shrike,"[383, 346, 594, 362]",True
+8992328,locality,Maidstone,"[200, 366, 303, 382]",True
+8992328,vernacular,Greenfinch,"[144, 428, 256, 444]",True
+8992328,vernacular,Butcher-bird,"[438, 469, 577, 485]",True
+8992328,vernacular,Shrikes,"[704, 489, 794, 506]",True
+8992328,vernacular,Red-backed Shrike,"[144, 610, 358, 626]",True
+8992328,person,Mathias Rausch,"[783, 651, 876, 667]",True
+8992328,vernacular,Red-backed Shrike,"[526, 692, 743, 708]",True
+8992328,vernacular,Thorn-piercer,"[775, 692, 876, 708]",True
+8992328,taxon,Lanius collurio,"[149, 712, 251, 729]",True
+8992328,locality,Europe,"[144, 753, 212, 769]",True
+8992328,vernacular,Red-backed Shrikes,"[519, 773, 731, 790]",True
+8992328,person,H. A. Macpherson,"[189, 838, 350, 851]",True
+8992328,vernacular,Woodchat,"[160, 846, 236, 860]",True
+8992328,vernacular,Great Grey Shrikes,"[265, 846, 393, 860]",True
+8992379,locality,Berwickshire,"[86, 108, 165, 124]",True
+8992379,locality,Yorkshire,"[201, 108, 265, 124]",True
+8992379,locality,Scarborough,"[555, 108, 642, 124]",True
+8992379,date,"October 23rd, 1889","[650, 108, 890, 144]",True
+8992379,date,1887,"[688, 128, 722, 144]",True
+8992379,locality,Wells,"[363, 148, 401, 164]",True
+8992379,date,1900,"[416, 148, 452, 164]",True
+8992379,date,1904,"[812, 148, 848, 164]",True
+8992379,date,1905,"[156, 168, 193, 184]",True
+8992379,date,1906,"[276, 168, 312, 184]",True
+8992379,locality,Norfolk,"[402, 168, 457, 184]",True
+8992379,locality,Yorkshire,"[825, 168, 889, 184]",True
+8992379,date,1907,"[106, 188, 143, 204]",True
+8992379,locality,Cheshire,"[183, 188, 243, 204]",True
+8992379,date,June 1903,"[426, 188, 502, 204]",True
+8992379,locality,Shetlands,"[556, 188, 624, 204]",True
+8992379,date,1906,"[289, 208, 324, 224]",True
+8992379,vernacular,Flycatcher,"[780, 208, 889, 224]",True
+8992379,vernacular,Robin,"[793, 310, 834, 326]",True
+8992379,person,Seebohm,"[838, 310, 889, 326]",True
+8992379,vernacular,Robins,"[748, 330, 792, 346]",True
+8992379,vernacular,Flycatchers,"[86, 350, 166, 366]",True
+8992379,vernacular,Red-breasted Flycatcher,"[486, 370, 722, 386]",True
+8992379,taxon,M. minuta,"[238, 572, 307, 588]",True
+8992379,taxon,M. leucura,"[236, 592, 308, 608]",True
+8992379,taxon,M. parva,"[205, 612, 262, 628]",True
+8992379,taxon,M. hyperythra,"[151, 632, 240, 648]",True
+8992379,taxon,Munia atricapilla,"[825, 693, 889, 709]",True
+8992379,date,1887,"[466, 713, 503, 729]",True
+8992379,date,spring of 1896,"[230, 753, 333, 769]",True
+8992379,taxon,Quelea quelea,"[656, 753, 768, 769]",True
+8992379,taxon,Q. russi,"[294, 773, 350, 789]",True
+8992379,vernacular,Cardinal,"[574, 793, 631, 809]",True
+8992379,taxon,Paroaria cervicalis,"[647, 793, 792, 809]",True
+8992379,taxon,P. capitata,"[197, 813, 289, 829]",True
+8992408,person,H. A. Macpherson,"[193, 175, 309, 188]",True
+8992408,vernacular,Hawfinch,"[221, 197, 284, 210]",True
+8992408,person,Charles A. Witchell,"[201, 217, 374, 230]",True
+8992408,vernacular,Hawfinch,"[722, 237, 790, 251]",True
+8992408,person,H. A. Macpherson,"[312, 258, 437, 271]",True
+8992408,vernacular,Chaffinch,"[358, 318, 427, 331]",True
+8992408,person,Alexander von Homeyer,"[292, 338, 467, 351]",True
+8992408,vernacular,cherry-kernel biter,"[310, 358, 460, 373]",True
+8992408,vernacular,Bullfinches,"[260, 398, 350, 412]",True
+8992408,vernacular,Grosbeaks,"[519, 398, 621, 412]",True
+8992408,vernacular,Grosbeaks,"[88, 418, 182, 432]",True
+8992408,person,Howard Saunders,"[88, 438, 233, 452]",True
+8992408,vernacular,Finches,"[88, 458, 145, 472]",True
+8992408,vernacular,Buntings,"[194, 458, 259, 472]",True
+8992408,vernacular,Finches,"[226, 519, 283, 533]",True
+8992408,taxon,Fringilla,"[584, 519, 642, 533]",True
+8992408,vernacular,Buntings,"[290, 539, 357, 553]",True
+8992408,taxon,Fringilla,"[119, 559, 177, 573]",True
+8992408,taxon,Passer,"[416, 559, 463, 573]",True
+8992408,taxon,Emberizinæ,"[283, 579, 393, 593]",False
+8992489,taxon,FRINGILLIDÆ,"[118, 115, 338, 129]",True
+8992489,taxon,FRINGILLINÆ,"[677, 115, 876, 129]",True
+8992489,vernacular,BRAMBLING,"[439, 196, 597, 215]",True
+8992489,taxon,Fringilla montifringilla,"[369, 251, 567, 265]",False
+8992489,person,LINN.,"[577, 251, 620, 264]",True
+8992489,person,Howard Saunders,"[454, 298, 621, 314]",True
+8992489,locality,Faroes,"[812, 298, 877, 314]",True
+8992489,vernacular,Brambling,"[198, 318, 293, 334]",True
+8992489,locality,Norway,"[731, 339, 805, 355]",True
+8992489,locality,valley of the Amur,"[72, 359, 268, 375]",True
+8992489,locality,Japan,"[528, 359, 583, 375]",True
+8992489,locality,China,"[594, 359, 650, 375]",True
+8992489,locality,Northern India,"[662, 359, 876, 395]",True
+8992489,locality,Asia Minor,"[121, 380, 231, 395]",True
+8992489,locality,Europe,"[504, 380, 569, 395]",True
+8992489,locality,African side of the Mediterranean,"[433, 400, 749, 416]",True
+8992489,locality,Belgium,"[302, 420, 380, 436]",True
+8992489,locality,Holland,"[391, 420, 465, 436]",True
+8992489,locality,Germany,"[475, 420, 560, 436]",True
+8992489,locality,Heligoland,"[587, 420, 693, 436]",True
+8992489,locality,Pyrenees,"[431, 441, 520, 456]",True
+8992489,locality,Alps,"[561, 441, 605, 456]",True
+8992489,locality,Ardennes,"[667, 441, 877, 456]",True
+8992489,locality,Great Britain,"[140, 481, 265, 497]",True
+8992489,vernacular,Brambling,"[300, 481, 396, 497]",True
+8992489,locality,Scotland,"[503, 542, 589, 558]",True
+8992489,locality,England,"[627, 542, 707, 558]",True
+8992489,locality,Cornwall,"[72, 562, 161, 578]",True
+8992489,locality,west of England,"[184, 562, 348, 578]",True
+8992489,locality,south of Ireland,"[401, 562, 566, 578]",True
+8992643,taxon,TURDIDÆ,"[121, 108, 309, 121]",True
+8992643,taxon,SYLVIINÆ,"[724, 108, 895, 121]",True
+8992643,vernacular,PALLAS' WILLOW-WARBLER,"[299, 150, 692, 170]",True
+8992643,taxon,Phylloscopus proregulus,"[385, 196, 601, 212]",True
+8992643,locality,Norfolk,"[620, 237, 679, 252]",True
+8992643,date,"October, 1896","[694, 237, 879, 253]",True
+8992643,vernacular,Chiffchaffs,"[279, 328, 372, 343]",True
+8992643,locality,Shetlands,"[397, 328, 493, 343]",True
+8992643,date,"April 15th and 24th, 1904","[690, 328, 896, 344]",True
+8992643,date,May,"[240, 349, 279, 364]",False
+8992643,person,John S. Tulloch,"[537, 349, 857, 364]",True
+8992643,locality,Lerwick,"[92, 369, 162, 384]",True
+8992643,date,May 27th,"[263, 369, 357, 384]",True
+8992643,taxon,TURDIDÆ,"[121, 477, 307, 491]",True
+8992643,taxon,SYLVIINÆ,"[725, 477, 895, 491]",True
+8992643,vernacular,SIBERIAN CHIFFCHAFF,"[379, 520, 696, 539]",True
+8992643,taxon,Phylloscopus tristis,"[370, 566, 559, 582]",True
+8992643,person,BLYTH,"[565, 568, 622, 580]",True
+8992643,locality,Orkneys,"[630, 607, 700, 624]",True
+8992643,date,1902,"[722, 608, 796, 622]",True
+8992643,taxon,TURDIDÆ,"[121, 698, 309, 712]",True
+8992643,taxon,SYLVIINÆ,"[728, 698, 897, 712]",True
+8992643,vernacular,GREENISH WILLOW-WARBLER,"[326, 741, 748, 760]",True
+8992643,taxon,Phylloscopus viridanus,"[350, 788, 577, 803]",True
+8992643,person,BLYTH,"[586, 790, 640, 802]",True
+8992643,locality,Lincolnshire,"[418, 829, 528, 845]",True
+8992643,date,"September 5th, 1896","[555, 829, 758, 845]",True
+8992643,locality,Sule Skerry Lighthouse,"[238, 850, 470, 866]",False
+8992643,locality,Sutherlandshire,"[480, 850, 623, 866]",False
+8992643,date,"September 5th, 1902","[690, 850, 896, 866]",True
+8992644,vernacular,Willow-Warbler,"[395, 130, 548, 147]",True
+8992644,locality,Shetlands,"[236, 150, 323, 167]",True
+8992644,date,"May, 1901","[375, 150, 482, 167]",True
+8992644,vernacular,Wood-Warbler,"[176, 171, 308, 188]",True
+8992644,locality,Isle of Man,"[465, 172, 591, 189]",True
+8992644,date,May 1901 and 1905,"[631, 172, 874, 190]",False
+8992644,taxon,TURDIDÆ,"[171, 267, 297, 285]",True
+8992644,taxon,SYLVIINÆ,"[788, 269, 883, 287]",True
+8992644,vernacular,RUFOUS WARBLER,"[392, 312, 659, 333]",True
+8992644,taxon,Aedon galactodes,"[368, 360, 518, 377]",True
+8992644,person,TEMM.,"[528, 360, 595, 375]",True
+8992644,locality,Sussex,"[469, 399, 535, 417]",True
+8992644,locality,Devon,"[588, 399, 646, 417]",True
+8992644,taxon,TURDIDÆ,"[171, 500, 297, 517]",True
+8992644,taxon,SYLVIINÆ,"[788, 500, 883, 518]",True
+8992644,vernacular,GREY-BACKED WARBLER,"[351, 540, 701, 562]",True
+8992644,taxon,Aedon familiaris,"[405, 589, 563, 606]",True
+8992644,locality,"Hythe, Kent","[322, 628, 434, 647]",True
+8992644,date,"July 15th, 1907","[475, 628, 655, 647]",True
+8992644,taxon,TURDIDÆ,"[171, 720, 297, 737]",True
+8992644,taxon,SYLVIINÆ,"[788, 721, 883, 739]",True
+8992644,vernacular,RADDE'S BUSH-WARBLER,"[305, 762, 661, 785]",True
+8992644,taxon,Lusciniola schwarzi,"[353, 808, 532, 826]",True
+8992644,person,RADDE,"[545, 809, 617, 825]",True
+8992644,date,"October, 1898","[416, 848, 580, 867]",True
+8992644,locality,Lincolnshire side of the Humber,"[651, 848, 885, 867]",True
+8992644,person,Haigh,"[343, 870, 397, 888]",True
+8992647,taxon,MOTACILLIDÆ,"[150, 112, 378, 127]",True
+8992647,vernacular,BLACK-HEADED WAGTAIL,"[370, 157, 731, 180]",True
+8992647,taxon,Motacilla melanocephala,"[358, 206, 577, 222]",True
+8992647,person,LICHT.,"[588, 207, 650, 221]",True
+8992647,locality,Willingdon,"[376, 247, 463, 263]",True
+8992647,date,"May 13th, 1906","[532, 247, 686, 263]",True
+8992647,taxon,M. flava,"[176, 267, 240, 283]",True
+8992647,taxon,MOTACILLIDÆ,"[150, 384, 378, 399]",True
+8992647,vernacular,SYKES' WAGTAIL,"[383, 429, 628, 452]",True
+8992647,taxon,Motacilla beema,"[395, 478, 538, 494]",True
+8992647,person,SYKES,"[551, 479, 617, 494]",True
+8992647,locality,"Rottingdean, Sussex","[378, 519, 577, 535]",True
+8992647,date,"April 20th, 1898","[625, 519, 793, 535]",False
+8992647,taxon,MOTACILLIDÆ,"[150, 639, 378, 654]",True
+8992647,vernacular,ASHY-HEADED WAGTAIL,"[371, 684, 720, 708]",True
+8992647,taxon,Motacilla cinereocapilla,"[367, 733, 580, 749]",True
+8992647,person,SAVI,"[592, 734, 641, 748]",True
+8992647,locality,Penzance,"[668, 773, 750, 789]",True
+8992647,locality,"Sheringham, Norfolk","[176, 793, 356, 809]",True
+8992647,date,May,"[408, 793, 446, 809]",False
+8992647,date,1842,"[477, 793, 550, 809]",True
+8992647,taxon,M. flava,"[244, 845, 325, 862]",True

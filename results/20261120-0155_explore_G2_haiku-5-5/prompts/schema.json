@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mentions"
+  ],
+  "properties": {
+    "mentions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "field",
+          "line",
+          "quote",
+          "reading"
+        ],
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "taxon",
+              "vernacular",
+              "person",
+              "locality",
+              "institution",
+              "date"
+            ]
+          },
+          "line": {
+            "type": "integer"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "reading": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

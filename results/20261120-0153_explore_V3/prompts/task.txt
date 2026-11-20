@@ -1,0 +1,1 @@
+Extract all mentions from the page in the image, in reading order. For each mention give its field, its value as printed, and the box around it on the image as [x0, y0, x1, y1] on a 0-1000 scale (0,0 = top left corner of the image, 1000,1000 = bottom right). If a mention runs over two lines, give the box around its first line.

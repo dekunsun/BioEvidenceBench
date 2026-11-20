@@ -1,0 +1,401 @@
+page_id,book,field,value,outcome,distance_line_heights
+8966790,Reeve,institution,Mus. Cuming,hit,2.61
+8966790,Reeve,taxon,BULIMUS CHILENSIS,hit,4.73
+8966790,Reeve,vernacular,CHILI BULIMUS,off,4.5
+8966790,Reeve,person,LESSON,off,1.69
+8966790,Reeve,taxon,Bulimus granulosus,hit,2.35
+8966790,Reeve,person,Broderip,hit,0.64
+8966790,Reeve,locality,Valparaiso,hit,0.59
+8966790,Reeve,locality,"Conception, Chili",hit,1.8
+8966790,Reeve,person,Cuming,hit,0.68
+8966790,Reeve,locality,mountains of Conception,off,4.92
+8966790,Reeve,locality,Valparaiso,off,5.12
+8966802,Reeve,vernacular,SLIGHTLY WRINKLED BULIMUS,off,3.84
+8966802,Reeve,person,SOWERBY,near,1.5
+8966802,Reeve,locality,Gallapagos Islands,off,2.16
+8966802,Reeve,person,Cuming,near,0.89
+8966802,Reeve,institution,Mus. Cuming,hit,4.03
+8966802,Reeve,taxon,BULIMUS TURRITUS,hit,2.37
+8966802,Reeve,vernacular,TURRETED BULIMUS,hit,1.07
+8966802,Reeve,person,BRODERIP,near,1.32
+8966802,Reeve,locality,"Truxillo, Peru",hit,1.48
+8966802,Reeve,person,Cuming,hit,0.25
+8966802,Reeve,institution,Mus. Cuming,hit,4.03
+8966802,Reeve,taxon,BULIMUS SCULPTURATUS,hit,2.65
+8966802,Reeve,vernacular,SCULPTURED BULIMUS,off,1.69
+8966802,Reeve,person,PFEIFFER,no_target,
+8966802,Reeve,locality,Gallapagos Islands,off,2.71
+8966802,Reeve,person,Darwin,off,2.04
+8966802,Reeve,taxon,B. rugiferus,no_target,
+8966802,Reeve,taxon,Darwinii,off,74.94
+8966802,Reeve,institution,Mus. Cuming,hit,2.52
+8966802,Reeve,taxon,BULIMUS CALVUS,hit,2.8
+8966802,Reeve,vernacular,BALD BULIMUS,hit,4.01
+8966802,Reeve,person,SOWERBY,hit,0.92
+8966802,Reeve,locality,"James' Island, Gallapagos",off,4.07
+8966802,Reeve,person,Cuming,near,0.92
+8966802,Reeve,institution,Mus. Cuming,off,2.69
+8966802,Reeve,taxon,BULIMUS PUSTULOSUS,off,3.89
+8966802,Reeve,vernacular,PUSTULOSE BULIMUS,off,3.15
+8966802,Reeve,person,BRODERIP,near,1.3
+8966802,Reeve,locality,"Huasco, Chili",no_target,
+8966802,Reeve,person,Cuming,near,1.48
+8966930,Reeve,institution,Mus. Cuming,hit,4.13
+8966930,Reeve,taxon,BULIMUS OBTUSATUS,hit,3.78
+8966930,Reeve,vernacular,BLUNTED BULIMUS,hit,2.62
+8966930,Reeve,person,PFEIFFER,hit,0.33
+8966930,Reeve,taxon,Helix obtusata,hit,1.87
+8966930,Reeve,person,Gmelin,hit,0.28
+8966930,Reeve,taxon,Bulimus calcareus,hit,2.67
+8966930,Reeve,person,Bruguière,hit,0.23
+8966930,Reeve,person,Lamarck,hit,0.27
+8966930,Reeve,person,Deshayes,hit,0.13
+8966930,Reeve,locality,Madagascar,hit,0.14
+8966930,Reeve,person,Beck,hit,0.26
+8966930,Reeve,person,Lamarck,off,6.37
+8966930,Reeve,taxon,Helix calcarea,hit,0.33
+8966930,Reeve,person,Born,hit,0.39
+8966930,Reeve,institution,Mus. Cuming,hit,1.85
+8966930,Reeve,taxon,BULIMUS CLAVATOR,hit,3.58
+8966930,Reeve,vernacular,CLUB-BEARER BULIMUS,hit,4.99
+8966930,Reeve,person,PETIT,hit,0.36
+8966930,Reeve,locality,Madagascar,hit,0.57
+8966937,Reeve,institution,Mus. Cuming,hit,0.4
+8966937,Reeve,taxon,BULIMUS ROSEATUS,hit,2.93
+8966937,Reeve,vernacular,ROSEATE BULIMUS,off,2.33
+8966937,Reeve,locality,Venezuela,hit,0.3
+8966937,Reeve,taxon,B. oreades,hit,0.85
+8966937,Reeve,institution,Mus. Cuming,hit,0.12
+8966937,Reeve,taxon,BULIMUS FERIATUS,hit,2.9
+8966937,Reeve,vernacular,UNEMPLOYED BULIMUS,off,3.54
+8966937,Reeve,locality,Venezuela,hit,0.1
+8966937,Reeve,institution,Mus. Cuming,hit,0.59
+8966937,Reeve,taxon,BULIMUS PERDIX,hit,2.89
+8966937,Reeve,vernacular,PARTRIDGE BULIMUS,hit,1.56
+8966937,Reeve,person,PFEIFFER,hit,0.22
+8966937,Reeve,locality,New Granada,hit,2.0
+8966937,Reeve,person,Funck,hit,0.52
+8966937,Reeve,taxon,B. perdix,hit,0.92
+8966937,Reeve,institution,Mus. Cuming,off,6.57
+8966937,Reeve,taxon,BULIMUS EURYOMPHALUS,hit,2.16
+8966937,Reeve,vernacular,BROAD-PLAITED BULIMUS,hit,2.74
+8966937,Reeve,locality,Venezuela,hit,0.11
+8966937,Reeve,person,Dyson,hit,0.13
+8966937,Reeve,institution,Mus. Cuming,hit,1.19
+8966937,Reeve,taxon,BULIMUS GLABER,hit,2.71
+8967281,Reeve,taxon,TURRITELLA,hit,0.31
+8967281,Reeve,person,Lamarck,hit,0.34
+8967281,Reeve,taxon,Turritella,off,7.8
+8967281,Reeve,taxon,Cerithium,off,2.47
+8967281,Reeve,taxon,Turritella,hit,0.76
+8967281,Reeve,taxon,Turritella,off,10.64
+8967281,Reeve,person,Lamarck,hit,0.36
+8967281,Reeve,person,Kiener,hit,1.2
+8967281,Reeve,person,Cuming,hit,0.43
+8967281,Reeve,person,Metcalfe,hit,0.58
+8967281,Reeve,person,Hanley,hit,0.47
+8967281,Reeve,person,Edward Belcher,hit,1.91
+8967281,Reeve,institution,British Museum,hit,3.38
+8967281,Reeve,institution,Banksian Collection,hit,3.37
+8967281,Reeve,institution,Linnæan Society,hit,2.41
+8967281,Reeve,person,Lamarck,off,4.12
+8967281,Reeve,person,Deshayes,off,3.54
+8967281,Reeve,person,Kiener,off,2.92
+8967281,Reeve,institution,Linnæan Society of London,off,1.85
+8967281,Reeve,taxon,Turbo acutangulus,off,3.05
+8967281,Reeve,person,Linnæus,hit,1.65
+8967281,Reeve,taxon,T. duplicatus,off,1.67
+8967281,Reeve,person,Deshayes,off,1.82
+8967281,Reeve,taxon,Turbo variegatus,off,1.74
+8967281,Reeve,taxon,Turbo imbricatus,off,11.37
+8967281,Reeve,taxon,Turbo ungulinus,off,9.1
+8967281,Reeve,person,Linnæus,off,8.59
+8967281,Reeve,person,Lamarck,off,10.55
+8967281,Reeve,taxon,Turritella fuscata,off,15.93
+8967281,Reeve,taxon,Turbo terebra,off,8.71
+8967281,Reeve,person,Linn.,off,8.53
+8967281,Reeve,person,Montagu,off,8.87
+8967281,Reeve,taxon,T. cornea,off,9.54
+8967281,Reeve,person,Lamarck,off,7.65
+8967281,Reeve,taxon,Turritella brevialis,off,8.1
+8967281,Reeve,person,Lamarck,off,8.32
+8967281,Reeve,taxon,LeMesal,off,8.78
+8967281,Reeve,person,Adanson,off,8.4
+8967281,Reeve,person,Gray,off,8.44
+8967281,Reeve,taxon,MESALIA,off,9.67
+8967281,Reeve,taxon,Turritella lactea,off,3.78
+8967281,Reeve,person,Möller,off,8.46
+8967281,Reeve,institution,Cumingian collection,off,8.96
+8967281,Reeve,person,Gray,off,10.47
+8967281,Reeve,taxon,EGLISIA,off,8.85
+8967281,Reeve,taxon,Turritella spirata,off,6.18
+8967281,Reeve,person,Cuming,off,4.66
+8967281,Reeve,locality,Philippine Islands,off,9.11
+8967281,Reeve,taxon,T. cornea,off,9.25
+8967281,Reeve,locality,Shetland Islands,off,9.17
+8967281,Reeve,person,M'Andrew,off,9.63
+8967281,Reeve,locality,Mediterranean,off,10.16
+8967281,Reeve,locality,Eastern Seas,off,11.85
+8967281,Reeve,locality,New Zealand,off,11.74
+8967281,Reeve,locality,Australia,off,10.39
+8967281,Reeve,locality,Van Dieman's Land,off,10.07
+8967281,Reeve,institution,Mus. Cuming,off,9.89
+8967281,Reeve,taxon,TURRITELLA UNGULINA,off,9.35
+8967281,Reeve,vernacular,NAIL-BRUISED TURRITELLA,off,6.37
+8967281,Reeve,taxon,Turbo ungulinus,off,2.66
+8967281,Reeve,person,Linnæus,off,2.1
+8967281,Reeve,taxon,Turritella fuscata,off,1.8
+8967281,Reeve,person,Lamarck,off,2.57
+8967281,Reeve,locality,Senegal,off,2.07
+8967281,Reeve,locality,"Mouth of the Gambia, West Africa",off,1.88
+8967281,Reeve,person,Linnæus,off,2.56
+8967281,Reeve,taxon,Turbo ungulinus,off,3.47
+8967281,Reeve,institution,Linnæan Society of London,off,10.23
+8967281,Reeve,person,Hanley,off,2.06
+8967281,Reeve,person,Lamarck,off,1.62
+8967281,Reeve,taxon,T. fuscata,off,20.66
+8967281,Reeve,locality,Seas of Europe,off,4.98
+8967281,Reeve,person,Pulteney,off,5.92
+8967281,Reeve,person,Deshayes,off,2.33
+8967281,Reeve,taxon,Turritella,off,2.27
+8967281,Reeve,locality,Mediterranean,off,3.7
+8967282,Reeve,person,Kiener,off,10.04
+8967282,Reeve,person,Linnæus,off,9.16
+8967282,Reeve,taxon,T. cornea,off,7.47
+8967282,Reeve,person,Lamarck,off,6.07
+8967282,Reeve,person,Deshayes,off,7.73
+8967282,Reeve,taxon,T. ungulina,off,43.78
+8967282,Reeve,institution,Mus. Cuming,off,5.56
+8967282,Reeve,taxon,TURRITELLA DUPLICATA,off,6.28
+8967282,Reeve,vernacular,DUPLICATE TURRITELLA,off,5.32
+8967282,Reeve,person,LAMARCK,off,2.0
+8967282,Reeve,person,Deshayes,off,3.68
+8967282,Reeve,taxon,Turbo duplicatus,off,10.82
+8967282,Reeve,person,Linnæus,off,8.37
+8967282,Reeve,taxon,Turbo acutangulus,off,4.36
+8967282,Reeve,person,Linnæus,off,2.6
+8967282,Reeve,taxon,Turbo replicatus,off,5.91
+8967282,Reeve,person,Linnæus,off,2.53
+8967282,Reeve,locality,Eastern Seas,off,1.51
+8967282,Reeve,taxon,Turbo acutangulus,off,3.18
+8967282,Reeve,person,Linnæus,off,7.34
+8967282,Reeve,taxon,Turbo duplicatus,hit,2.44
+8967282,Reeve,institution,Linnæan collection,hit,1.75
+8967282,Reeve,person,Deshayes,hit,1.82
+8967282,Reeve,person,Kiener,hit,1.84
+8967282,Reeve,taxon,Turritella duplicata,off,18.79
+8967282,Reeve,person,Linnæus,hit,0.68
+8967282,Reeve,taxon,Turbo acutangulus,hit,2.09
+8967282,Reeve,institution,Mus. Cuming,hit,3.0
+8967282,Reeve,taxon,TURRITELLA TEREBRA,off,2.18
+8967282,Reeve,vernacular,AUGUR TURRITELLA,off,6.62
+8967282,Reeve,person,LAMARCK,hit,0.62
+8967282,Reeve,person,Deshayes,off,2.2
+8967282,Reeve,taxon,Turbo terebra,hit,2.31
+8967282,Reeve,person,Linnæus,off,39.06
+8967282,Reeve,taxon,Turritella Archimedis,off,3.3
+8967282,Reeve,person,Dillwyn,near,1.19
+8967282,Reeve,person,Mawe,off,1.6
+8967282,Reeve,locality,Philippine Islands,off,1.65
+8967282,Reeve,person,Cuming,off,2.2
+8967282,Reeve,person,Martyn,off,2.36
+8967282,Reeve,person,Cuming,hit,2.13
+8967282,Reeve,locality,Island of Negros,off,1.7
+8967282,Reeve,locality,Philippines,off,4.77
+8967282,Reeve,taxon,T. terebra,off,3.17
+8967282,Reeve,taxon,T. Linnei,off,18.25
+8967282,Reeve,taxon,ungulinus,off,3.2
+8967282,Reeve,person,Deshayes,off,3.99
+8967282,Reeve,taxon,T. communis,no_target,
+8967282,Reeve,person,Philippi,hit,1.1
+8967282,Reeve,taxon,T. cornea,off,2.77
+8967282,Reeve,person,Lamarck,off,3.05
+8967282,Reeve,institution,Mus. Cuming,hit,0.51
+8967282,Reeve,taxon,TURRITELLA ATTENUATA,hit,4.12
+8967282,Reeve,vernacular,ATTENUATED TURRITELLA,off,6.62
+8967282,Reeve,taxon,Turritella acutangula,hit,2.53
+8967282,Reeve,person,Deshayes,hit,1.33
+8967282,Reeve,taxon,Turbo acutangulus,off,2.14
+8967282,Reeve,person,Linn.,off,3.99
+8967282,Reeve,person,Linnæus,off,6.35
+8967282,Reeve,taxon,Turbo acutangulus,off,4.29
+8967282,Reeve,taxon,T. duplicatus,off,4.33
+8967290,Reeve,taxon,T. lentiginosa,off,19.16
+8967290,Reeve,taxon,T. goniostoma,off,7.89
+8967290,Reeve,taxon,T. lentiginosa,hit,0.72
+8967333,Reeve,taxon,CASSIDARIA,hit,1.12
+8967333,Reeve,person,Landsborough,hit,0.14
+8967345,Reeve,taxon,EBURNA,no_target,
+8967345,Reeve,person,Crabbe,no_target,
+8992328,Butler,locality,Kent,hit,0.77
+8992328,Butler,vernacular,Red-backed Shrike,hit,2.78
+8992328,Butler,locality,Maidstone,hit,0.05
+8992328,Butler,vernacular,Greenfinch,hit,0.31
+8992328,Butler,vernacular,Butcher-bird,hit,0.26
+8992328,Butler,vernacular,Shrikes,off,4.03
+8992328,Butler,vernacular,Red-backed Shrike,hit,4.9
+8992328,Butler,person,Mathias Rausch,hit,0.8
+8992328,Butler,vernacular,Red-backed Shrike,hit,2.97
+8992328,Butler,vernacular,Thorn-piercer,hit,0.92
+8992328,Butler,taxon,Lanius collurio,hit,0.64
+8992328,Butler,locality,Europe,off,3.62
+8992328,Butler,vernacular,Red-backed Shrikes,hit,5.26
+8992328,Butler,person,H. A. Macpherson,off,1.95
+8992328,Butler,vernacular,Woodchat,off,3.9
+8992328,Butler,vernacular,Great Grey Shrikes,off,2.09
+8992379,Butler,locality,Berwickshire,hit,1.72
+8992379,Butler,locality,Yorkshire,off,7.9
+8992379,Butler,locality,Scarborough,off,9.74
+8992379,Butler,date,"October 23rd, 1889",hit,5.5
+8992379,Butler,date,1887,off,6.22
+8992379,Butler,locality,Wells,hit,0.72
+8992379,Butler,date,1900,off,4.02
+8992379,Butler,date,1904,near,1.46
+8992379,Butler,date,1905,off,2.62
+8992379,Butler,date,1906,off,5.01
+8992379,Butler,locality,Norfolk,off,6.62
+8992379,Butler,locality,Yorkshire,hit,0.78
+8992379,Butler,date,1907,hit,1.1
+8992379,Butler,locality,Cheshire,off,3.13
+8992379,Butler,date,June 1903,off,2.55
+8992379,Butler,locality,Shetlands,off,8.46
+8992379,Butler,date,1906,off,2.89
+8992379,Butler,vernacular,Flycatcher,hit,0.44
+8992379,Butler,vernacular,Robin,off,2.89
+8992379,Butler,person,Seebohm,hit,0.88
+8992379,Butler,vernacular,Robins,hit,0.49
+8992379,Butler,vernacular,Flycatchers,hit,1.24
+8992379,Butler,vernacular,Red-breasted Flycatcher,hit,5.34
+8992379,Butler,taxon,M. minuta,off,12.38
+8992379,Butler,taxon,M. leucura,off,3.57
+8992379,Butler,taxon,M. parva,off,3.69
+8992379,Butler,taxon,M. hyperythra,off,5.37
+8992379,Butler,taxon,Munia atricapilla,off,46.04
+8992379,Butler,date,1887,off,7.42
+8992379,Butler,date,spring of 1896,off,5.55
+8992379,Butler,taxon,Quelea quelea,near,0.78
+8992379,Butler,taxon,Q. russi,no_target,
+8992379,Butler,vernacular,Cardinal,off,11.43
+8992379,Butler,taxon,Paroaria cervicalis,off,6.55
+8992379,Butler,taxon,P. capitata,off,2.17
+8992408,Butler,person,H. A. Macpherson,off,4.66
+8992408,Butler,vernacular,Hawfinch,hit,1.3
+8992408,Butler,person,Charles A. Witchell,off,7.61
+8992408,Butler,vernacular,Hawfinch,hit,1.38
+8992408,Butler,person,H. A. Macpherson,off,7.7
+8992408,Butler,vernacular,Chaffinch,off,4.8
+8992408,Butler,person,Alexander von Homeyer,hit,3.54
+8992408,Butler,vernacular,cherry-kernel biter,no_target,
+8992408,Butler,vernacular,Bullfinches,hit,1.02
+8992408,Butler,vernacular,Grosbeaks,hit,0.51
+8992408,Butler,vernacular,Grosbeaks,hit,0.1
+8992408,Butler,person,Howard Saunders,hit,4.38
+8992408,Butler,vernacular,Finches,hit,0.91
+8992408,Butler,vernacular,Buntings,off,5.04
+8992408,Butler,vernacular,Finches,hit,0.63
+8992408,Butler,taxon,Fringilla,no_target,
+8992408,Butler,vernacular,Buntings,hit,1.19
+8992408,Butler,taxon,Fringilla,no_target,
+8992408,Butler,taxon,Passer,hit,0.93
+8992489,Butler,taxon,FRINGILLIDÆ,off,15.36
+8992489,Butler,taxon,FRINGILLINÆ,no_target,
+8992489,Butler,vernacular,BRAMBLING,hit,0.14
+8992489,Butler,person,LINN.,hit,0.44
+8992489,Butler,person,Howard Saunders,hit,4.25
+8992489,Butler,locality,Faroes,hit,0.23
+8992489,Butler,vernacular,Brambling,hit,0.47
+8992489,Butler,locality,Norway,hit,0.44
+8992489,Butler,locality,valley of the Amur,hit,4.01
+8992489,Butler,locality,Japan,off,8.35
+8992489,Butler,locality,China,off,8.71
+8992489,Butler,locality,Northern India,hit,4.34
+8992489,Butler,locality,Asia Minor,hit,3.16
+8992489,Butler,locality,Europe,off,4.36
+8992489,Butler,locality,African side of the Mediterranean,hit,7.91
+8992489,Butler,locality,Belgium,hit,0.76
+8992489,Butler,locality,Holland,hit,1.5
+8992489,Butler,locality,Germany,hit,2.17
+8992489,Butler,locality,Heligoland,off,4.1
+8992489,Butler,locality,Pyrenees,off,5.21
+8992489,Butler,locality,Alps,off,6.28
+8992489,Butler,locality,Ardennes,hit,3.72
+8992489,Butler,locality,Great Britain,hit,3.49
+8992489,Butler,vernacular,Brambling,hit,3.07
+8992489,Butler,locality,Scotland,hit,0.23
+8992489,Butler,locality,England,off,3.29
+8992489,Butler,locality,Cornwall,hit,0.44
+8992489,Butler,locality,west of England,off,5.53
+8992489,Butler,locality,south of Ireland,off,8.72
+8992643,Butler,taxon,TURDIDÆ,off,33.99
+8992643,Butler,taxon,SYLVIINÆ,no_target,
+8992643,Butler,vernacular,PALLAS' WILLOW-WARBLER,hit,7.94
+8992643,Butler,taxon,Phylloscopus proregulus,hit,3.11
+8992643,Butler,locality,Norfolk,hit,1.05
+8992643,Butler,date,"October, 1896",hit,0.08
+8992643,Butler,vernacular,Chiffchaffs,hit,0.57
+8992643,Butler,locality,Shetlands,off,6.84
+8992643,Butler,date,"April 15th and 24th, 1904",hit,4.41
+8992643,Butler,person,John S. Tulloch,hit,8.76
+8992643,Butler,locality,Lerwick,hit,0.76
+8992643,Butler,date,May 27th,hit,2.21
+8992643,Butler,taxon,TURDIDÆ,off,12.97
+8992643,Butler,taxon,SYLVIINÆ,no_target,
+8992643,Butler,vernacular,SIBERIAN CHIFFCHAFF,hit,4.63
+8992643,Butler,taxon,Phylloscopus tristis,hit,2.23
+8992643,Butler,person,BLYTH,hit,0.31
+8992643,Butler,locality,Orkneys,hit,0.74
+8992643,Butler,date,1902,hit,1.06
+8992643,Butler,taxon,TURDIDÆ,off,13.06
+8992643,Butler,taxon,SYLVIINÆ,no_target,
+8992643,Butler,vernacular,GREENISH WILLOW-WARBLER,hit,8.43
+8992643,Butler,taxon,Phylloscopus viridanus,hit,3.32
+8992643,Butler,person,BLYTH,hit,0.48
+8992643,Butler,locality,Lincolnshire,hit,0.87
+8992643,Butler,date,"September 5th, 1896",hit,0.68
+8992643,Butler,date,"September 5th, 1902",hit,2.75
+8992644,Butler,vernacular,Willow-Warbler,hit,0.45
+8992644,Butler,locality,Shetlands,hit,1.02
+8992644,Butler,date,"May, 1901",hit,1.87
+8992644,Butler,vernacular,Wood-Warbler,hit,2.65
+8992644,Butler,locality,Isle of Man,hit,0.43
+8992644,Butler,taxon,TURDIDÆ,hit,0.24
+8992644,Butler,taxon,SYLVIINÆ,no_target,
+8992644,Butler,vernacular,RUFOUS WARBLER,hit,3.95
+8992644,Butler,taxon,Aedon galactodes,no_target,
+8992644,Butler,person,TEMM.,hit,0.25
+8992644,Butler,locality,Sussex,hit,0.4
+8992644,Butler,locality,Devon,hit,0.53
+8992644,Butler,taxon,TURDIDÆ,off,11.06
+8992644,Butler,taxon,SYLVIINÆ,no_target,
+8992644,Butler,vernacular,GREY-BACKED WARBLER,hit,6.65
+8992644,Butler,taxon,Aedon familiaris,hit,1.94
+8992644,Butler,locality,"Hythe, Kent",hit,0.99
+8992644,Butler,date,"July 15th, 1907",hit,2.67
+8992644,Butler,taxon,TURDIDÆ,hit,1.91
+8992644,Butler,taxon,SYLVIINÆ,no_target,
+8992644,Butler,vernacular,RADDE'S BUSH-WARBLER,hit,4.25
+8992644,Butler,taxon,Lusciniola schwarzi,hit,2.51
+8992644,Butler,person,RADDE,hit,0.03
+8992644,Butler,date,"October, 1898",hit,2.14
+8992644,Butler,locality,Lincolnshire side of the Humber,hit,3.31
+8992644,Butler,person,Haigh,hit,0.33
+8992647,Butler,taxon,MOTACILLIDÆ,off,12.1
+8992647,Butler,vernacular,BLACK-HEADED WAGTAIL,hit,7.34
+8992647,Butler,taxon,Motacilla melanocephala,no_target,
+8992647,Butler,person,LICHT.,hit,0.13
+8992647,Butler,locality,Willingdon,hit,0.89
+8992647,Butler,date,"May 13th, 1906",no_target,
+8992647,Butler,taxon,M. flava,off,2.37
+8992647,Butler,taxon,MOTACILLIDÆ,off,14.01
+8992647,Butler,vernacular,SYKES' WAGTAIL,hit,3.74
+8992647,Butler,taxon,Motacilla beema,hit,1.61
+8992647,Butler,person,SYKES,hit,0.17
+8992647,Butler,locality,"Rottingdean, Sussex",hit,2.04
+8992647,Butler,taxon,MOTACILLIDÆ,off,12.6
+8992647,Butler,vernacular,ASHY-HEADED WAGTAIL,hit,7.02
+8992647,Butler,taxon,Motacilla cinereocapilla,hit,3.44
+8992647,Butler,person,SAVI,hit,0.21
+8992647,Butler,locality,Penzance,hit,0.47
+8992647,Butler,locality,"Sheringham, Norfolk",hit,1.52
+8992647,Butler,date,1842,hit,0.76
+8992647,Butler,taxon,M. flava,hit,1.55

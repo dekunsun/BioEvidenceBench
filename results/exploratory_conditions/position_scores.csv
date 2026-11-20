@@ -13,3 +13,27 @@ V2 · legacy,Butler,0.949,0.919,0.977,0.312
 V2 · legacy,Reeve,0.909,0.789,0.972,0.312
 V2 · modern_dots-mocr,Butler,0.964,0.93,0.991,0.002
 V2 · modern_dots-mocr,Reeve,0.977,0.962,1.0,0.002
+G2 [haiku-5-5] · legacy,Butler,0.873,0.77,0.945,0.291
+G2 [haiku-5-5] · legacy,Reeve,0.767,0.694,0.874,0.291
+G2 [haiku-5-5] · modern_deepseek-ocr2,Butler,0.788,0.707,0.859,0.042
+G2 [haiku-5-5] · modern_deepseek-ocr2,Reeve,0.817,0.744,0.964,0.042
+G2 [fable-5-2] · legacy,Butler,0.949,0.897,0.987,0.32
+G2 [fable-5-2] · legacy,Reeve,0.901,0.786,0.96,0.32
+G2 [fable-5-2] · modern_deepseek-ocr2,Butler,0.872,0.784,0.941,0.137
+G2 [fable-5-2] · modern_deepseek-ocr2,Reeve,0.956,0.936,1.0,0.137
+G2 [sonnet-5-5] · legacy,Butler,0.822,0.754,0.895,0.306
+G2 [sonnet-5-5] · legacy,Reeve,0.577,0.424,0.84,0.306
+G2 [sonnet-5-5] · modern_deepseek-ocr2,Butler,0.769,0.625,0.897,0.059
+G2 [sonnet-5-5] · modern_deepseek-ocr2,Reeve,0.837,0.784,0.933,0.059
+G2 · probe_swap,Butler,0.88,0.823,0.929,0.01
+G2 · probe_swap,Reeve,0.913,0.89,0.962,0.01
+G2 · probe_typo,Butler,0.967,0.931,0.995,0.171
+G2 · probe_typo,Reeve,0.97,0.947,0.986,0.171
+G2 [fable-5-2] · probe_swap,Butler,0.869,0.807,0.924,0.012
+G2 [fable-5-2] · probe_swap,Reeve,0.907,0.881,0.962,0.012
+G2 [fable-5-2] · probe_typo,Butler,0.964,0.933,0.986,0.179
+G2 [fable-5-2] · probe_typo,Reeve,0.981,0.971,1.0,0.179
+G2 [haiku-5-5] · probe_swap,Butler,0.869,0.826,0.922,0.005
+G2 [haiku-5-5] · probe_swap,Reeve,0.844,0.794,0.947,0.005
+G2 [haiku-5-5] · probe_typo,Butler,0.945,0.913,0.974,0.161
+G2 [haiku-5-5] · probe_typo,Reeve,0.88,0.836,0.9,0.161

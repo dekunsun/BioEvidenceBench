@@ -92,7 +92,19 @@ SCHEMA_VISION = {"type": "object", "additionalProperties": False, "required": ["
                      "type": "object", "additionalProperties": False, "required": ["field", "value"],
                      "properties": {"field": _F, "value": {"type": "string"}}}}}}
 
-CONDS = {"G2": (OPEN_REPAIR, TASK_REPAIR, SCHEMA_REPAIR, False, True),
+# V3: as V1, plus where each mention is on the page image (Level 3 grounding without any OCR).
+TASK_BOX = ("Extract all mentions from the page in the image, in reading order. For each mention give its field, "
+            "its value as printed, and the box around it on the image as [x0, y0, x1, y1] on a 0-1000 scale "
+            "(0,0 = top left corner of the image, 1000,1000 = bottom right). If a mention runs over two lines, "
+            "give the box around its first line.")
+SCHEMA_BOX = {"type": "object", "additionalProperties": False, "required": ["mentions"],
+              "properties": {"mentions": {"type": "array", "items": {
+                  "type": "object", "additionalProperties": False, "required": ["field", "value", "box"],
+                  "properties": {"field": _F, "value": {"type": "string"},
+                                 "box": {"type": "array", "items": {"type": "integer"}}}}}}}
+
+CONDS = {"V3": (OPEN_VISION, TASK_BOX, SCHEMA_BOX, True, False),
+         "G2": (OPEN_REPAIR, TASK_REPAIR, SCHEMA_REPAIR, False, True),
          "V1": (OPEN_VISION, TASK_VISION, SCHEMA_VISION, True, False),
          "V2": (OPEN_REPAIR_IMG, TASK_REPAIR_IMG, SCHEMA_REPAIR, True, True)}
 
@@ -175,9 +187,11 @@ def write_mentions(out, recs, cond) -> None:
     rows = []
     for r in recs:
         ms = (r.get("parsed") or {}).get("mentions", [])
-        if cond == "V1":
+        if cond in ("V1", "V3"):
             rows += [{"page_id": r["page_id"], "version": "image", "condition": cond, "i": i, "field": m["field"],
-                      "value": m["value"], "status": "no_position", "start": None, "end": None} for i, m in enumerate(ms)]
+                      "value": m["value"], "status": "no_position", "start": None, "end": None,
+                      "box": json.dumps(m.get("box")) if m.get("box") is not None else ""}
+                     for i, m in enumerate(ms)]
             continue
         src = text_path(r["version"], r["page_id"]).read_text(encoding="utf-8")
         located = locate_all(src, "G1", [{"field": m["field"], "line": m["line"], "quote": m["quote"]} for m in ms])
@@ -239,7 +253,7 @@ def score_all() -> None:
         cond = cfg["condition"] + ("" if cfg["model"] == MODEL else f" [{cfg['model'].removeprefix('claude-')}]")
         for v, mv in m.groupby("version"):
             rows += bag_scores(mv, gold, f"{cond} · {v}")
-            if not cond.startswith("V1"):
+            if not cond.startswith(("V1", "V3")):
                 pos.append((d.name, cond, v, mv))
     bag = pd.DataFrame(rows)
     out = RESULTS / "exploratory_conditions"
