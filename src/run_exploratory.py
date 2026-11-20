@@ -39,7 +39,7 @@ import pandas as pd
 
 from common import DATA, ROOT
 from locate import locate_all
-from prompts import FIELDS, PROMPT_VERSION, SYSTEM, number_lines
+from prompts import FIELDS, PROMPT_VERSION, SCHEMA_G1, SYSTEM, TASK_G1, number_lines
 from run_extraction import text_path
 from score import load_gold, norm_value, score_run_detail
 
@@ -103,7 +103,8 @@ SCHEMA_BOX = {"type": "object", "additionalProperties": False, "required": ["men
                   "properties": {"field": _F, "value": {"type": "string"},
                                  "box": {"type": "array", "items": {"type": "integer"}}}}}}}
 
-CONDS = {"V3": (OPEN_VISION, TASK_BOX, SCHEMA_BOX, True, False),
+CONDS = {"G1F": (_OPENING, TASK_G1, SCHEMA_G1, False, True),   # the frozen G1 prompt, word for word
+         "V3": (OPEN_VISION, TASK_BOX, SCHEMA_BOX, True, False),
          "G2": (OPEN_REPAIR, TASK_REPAIR, SCHEMA_REPAIR, False, True),
          "V1": (OPEN_VISION, TASK_VISION, SCHEMA_VISION, True, False),
          "V2": (OPEN_REPAIR_IMG, TASK_REPAIR_IMG, SCHEMA_REPAIR, True, True)}
@@ -120,14 +121,22 @@ def image_block(page_id: int) -> dict:
                                          "data": base64.b64encode(buf.getvalue()).decode()}}
 
 
-def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL) -> None:
+def load_pages(which: str) -> pd.DataFrame:
+    """test = the 16 locked test pages; pcas = the 8 PCAS botany pages (external case, reported
+    separately; text version `pcas_legacy` = data/pcas/legacy copied to data/text/pcas_legacy)."""
+    if which == "pcas":
+        return pd.read_csv(DATA / "pcas" / "pcas_pages.csv").rename(columns={"page_id": "PageID"}).assign(book="PCAS")
+    return pd.read_csv(DATA / "sample_split.csv").query("split == 'test'")
+
+
+def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL, which: str = "test") -> None:
     import anthropic
     opening, task, schema, use_img, use_text = CONDS[cond]
     system = opening + "\n\n" + _DEFS
-    pages = pd.read_csv(DATA / "sample_split.csv").query("split == 'test'")
+    pages = load_pages(which)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
     short = "" if model == MODEL else "_" + model.removeprefix("claude-")
-    run_id = f"{stamp}_explore_{cond}{short}"
+    run_id = f"{stamp}_explore_{cond}{short}" + ("_pcas" if which == "pcas" else "")
     out = RESULTS / run_id
     (out / "prompts").mkdir(parents=True)
     (out / "prompts" / "system.txt").write_text(system, encoding="utf-8")
@@ -172,7 +181,7 @@ def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL) -> N
         for r in recs:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     cfg = {"run_id": run_id, "condition": cond, "model": model, "effort": "medium", "max_tokens": 16000,
-           "versions": versions, "pages": "test", "base_prompt_version": PROMPT_VERSION,
+           "versions": versions, "pages": which, "base_prompt_version": PROMPT_VERSION,
            "exploratory": True, "requests": len(jobs), "usd_total": round(sum(spent), 4),
            "errors": sum(1 for r in recs if r.get("error") and not r.get("parsed")),
            "stop_reasons": dict(Counter(r.get("stop_reason") for r in recs))}
@@ -187,6 +196,11 @@ def write_mentions(out, recs, cond) -> None:
     rows = []
     for r in recs:
         ms = (r.get("parsed") or {}).get("mentions", [])
+        if cond == "G1F":                       # frozen G1: values sliced from the source
+            src = text_path(r["version"], r["page_id"]).read_text(encoding="utf-8")
+            rows += [{"page_id": r["page_id"], "version": r["version"], "condition": cond, "i": i, **loc}
+                     for i, loc in enumerate(locate_all(src, "G1", ms))]
+            continue
         if cond in ("V1", "V3"):
             rows += [{"page_id": r["page_id"], "version": "image", "condition": cond, "i": i, "field": m["field"],
                       "value": m["value"], "status": "no_position", "start": None, "end": None,
@@ -248,8 +262,10 @@ def score_all() -> None:
     for v in ("expert", "modern_dots-mocr", "legacy", "modern_tesseract", "modern_deepseek-ocr2"):
         rows += bag_scores(base[(base.version == v) & (base.condition == "G1")], gold, f"G1 · {v}")
     for d in sorted(RESULTS.glob("*_explore_*")):
-        m = pd.read_csv(d / "test_mentions.csv")
         cfg = json.loads((d / "config.json").read_text())
+        if cfg.get("pages", "test") != "test":     # PCAS runs are scored by src/score_pcas.py
+            continue
+        m = pd.read_csv(d / "test_mentions.csv")
         cond = cfg["condition"] + ("" if cfg["model"] == MODEL else f" [{cfg['model'].removeprefix('claude-')}]")
         for v, mv in m.groupby("version"):
             rows += bag_scores(mv, gold, f"{cond} · {v}")
@@ -287,11 +303,12 @@ def main() -> None:
     ap.add_argument("--max-usd", type=float, default=5.0)
     ap.add_argument("--score", action="store_true")
     ap.add_argument("--model", default=MODEL, choices=list(PRICES))
+    ap.add_argument("--pages", default="test", choices=["test", "pcas"])
     a = ap.parse_args()
     if a.score:
         score_all()
     elif a.cond:
-        run(a.cond, a.versions.split(","), a.max_usd, a.model)
+        run(a.cond, a.versions.split(","), a.max_usd, a.model, a.pages)
     else:
         sys.exit("--cond or --score")
 

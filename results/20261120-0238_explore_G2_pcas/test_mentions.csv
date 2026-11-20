@@ -1,0 +1,225 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score,quote_value,repaired
+13793658,pcas_legacy,G2,0,institution,3,Herbarium of the Academy,False,Herbarium of the Academy,exact,52,76,100.0,Herbarium of the Academy,False
+13793658,pcas_legacy,G2,1,person,4,T. S. Brandegee,False,T. S. Brandegee,exact,151,166,100.0,T. S. Brandegee,False
+13793658,pcas_legacy,G2,2,locality,6,San Miguel,False,San Miguel,exact,236,246,100.0,San Miguel,False
+13793658,pcas_legacy,G2,3,locality,6,Santa Rosa,False,Santa Rosa,exact,248,258,100.0,Santa Rosa,False
+13793658,pcas_legacy,G2,4,locality,6,Santa Cruz,False,Santa Cruz,exact,260,270,100.0,Santa Cruz,False
+13793658,pcas_legacy,G2,5,locality,6,Santa Catalina,False,Santa Catalina,exact,272,286,100.0,Santa Catalina,False
+13793658,pcas_legacy,G2,6,locality,7,San Clemente,False,San Clemente,exact,292,304,100.0,San Clemente,False
+13793658,pcas_legacy,G2,7,locality,10,San Nicolas,False,San Nicolas,exact,417,428,100.0,San Nicolas,False
+13793658,pcas_legacy,G2,8,person,11,Stephen Bowers,False,Stephen Bowers,exact,469,483,100.0,Stephen Bowers,False
+13793658,pcas_legacy,G2,9,locality,15,San Nicolas Island,False,San Nicolas Island,exact,570,588,100.0,San Nicolas Island,False
+13793658,pcas_legacy,G2,10,locality,15,Ventura County,False,Ventura County,exact,600,614,100.0,Ventura County,False
+13793658,pcas_legacy,G2,11,locality,16,Ventura,False,Ventura,exact,664,671,100.0,Ventura,False
+13793658,pcas_legacy,G2,12,locality,18,Greenwich,False,Greenwich,exact,765,774,100.0,Greenwich,False
+13793658,pcas_legacy,G2,13,locality,30,San Nicolas,False,San Nicolas,exact,1055,1066,100.0,San Nicolas,False
+13793658,pcas_legacy,G2,14,vernacular,33,tree cactus,False,tree cactus,exact,1281,1292,100.0,tree cactus,False
+13793659,pcas_legacy,G2,0,locality,28,San Nicolas,False,San Nicolas,exact,1320,1331,100.0,San Nicolas,False
+13793659,pcas_legacy,G2,1,vernacular,29,fox,False,fox,exact,1345,1348,100.0,fox,False
+13793659,pcas_legacy,G2,2,vernacular,29,kangaroo mouse,False,kangaroo mouse,exact,1352,1366,100.0,kangaroo mouse,False
+13793659,pcas_legacy,G2,3,vernacular,29,sand lizard,False,sand lizard,exact,1385,1396,100.0,sand lizard,False
+13793659,pcas_legacy,G2,4,vernacular,30,Seals,False,Seals,exact,1403,1408,100.0,Seals,False
+13793659,pcas_legacy,G2,5,vernacular,30,sea-lions,False,sea-lions,exact,1410,1419,100.0,sea-lions,False
+13793659,pcas_legacy,G2,6,taxon,30,Phoce,False,Phocæ,exact,1444,1449,100.0,Phoce,True
+13793659,pcas_legacy,G2,7,vernacular,32,dogs,False,dogs,exact,1562,1566,100.0,dogs,False
+13793659,pcas_legacy,G2,8,vernacular,34,bull-terrier,False,bull-terrier,exact,1643,1655,100.0,bull-terrier,False
+13793659,pcas_legacy,G2,9,person,35,Baird,False,Baird,exact,1743,1748,100.0,Baird,False
+13793659,pcas_legacy,G2,10,date,38,1853,False,1853,exact,1824,1828,100.0,1853,False
+13793659,pcas_legacy,G2,11,vernacular,41,bald eagle,False,bald eagle,exact,1933,1943,100.0,bald eagle,False
+13793659,pcas_legacy,G2,12,vernacular,41,ground owl,False,ground owl,exact,1945,1955,100.0,ground owl,False
+13793659,pcas_legacy,G2,13,vernacular,41,raven,False,raven,exact,1957,1962,100.0,raven,False
+13793659,pcas_legacy,G2,14,vernacular,42,crow,False,crow,exact,1965,1969,100.0,crow,False
+13793659,pcas_legacy,G2,15,vernacular,42,plover,False,plover,exact,1975,1981,100.0,plover,False
+13793659,pcas_legacy,G2,16,vernacular,42,Water fowl,False,Water fowl,exact,1983,1993,100.0,Water fowl,False
+13793660,pcas_legacy,G2,0,person,13,Nidever,False,Nidever,exact,485,492,100.0,Nidever,False
+13793660,pcas_legacy,G2,1,locality,18,San Nicolas Island,False,San Nicolas Island,exact,599,617,100.0,San Nicolas Island,False
+13793660,pcas_legacy,G2,2,person,24,Bowers,False,Bowers,exact,936,942,100.0,Bowers,False
+13793660,pcas_legacy,G2,3,person,29,Trask,False,Trask,exact,1094,1099,100.0,Trask,False
+13793660,pcas_legacy,G2,4,person,29,Bowers,False,Bowers,exact,1119,1125,100.0,Bowers,False
+13793660,pcas_legacy,G2,5,person,31,Bowers,False,Bowers,exact,1236,1242,100.0,Bowers,False
+13793660,pcas_legacy,G2,6,vernacular,33,ice-plants,False,ice-plants,exact,1365,1375,100.0,ice-plants,False
+13793660,pcas_legacy,G2,7,taxon,34,Hordeum,False,Hordeum,exact,1417,1424,100.0,Hordeum,False
+13793660,pcas_legacy,G2,8,vernacular,34,fox- tail,False,fox-tail,cross_line,1428,1438,100.0,"fox- 
+tail",True
+13793660,pcas_legacy,G2,9,vernacular,44,ice- plants,False,ice-plants,cross_line,1835,1847,100.0,"ice- 
+plants",True
+13793662,pcas_legacy,G2,0,taxon,3,GRAMINE,False,GRAMINEÆ,exact,52,59,100.0,GRAMINE,True
+13793662,pcas_legacy,G2,1,person,5,F. Lamson Scribner,False,F. Lamson Scribner,cross_line,106,125,100.0,"F. Lamson 
+Scribner",False
+13793662,pcas_legacy,G2,2,institution,6,"Division of Agrostology, U. S. Department of Agriculture",False,"Division of Agrostology, U. S. Department of Agriculture",cross_line,140,197,100.0,"Division of Agrostology, U. S. 
+Department of Agriculture",False
+13793662,pcas_legacy,G2,3,taxon,10,Bromus Trinii,False,Bromus Trinii,exact,246,259,100.0,Bromus Trinii,False
+13793662,pcas_legacy,G2,4,person,10,Desv.,False,Desv.,exact,260,265,100.0,Desv.,False
+13793662,pcas_legacy,G2,5,taxon,11,Trisetum barbatum,False,Trisetum barbatum,exact,267,284,100.0,Trisetum barbatum,False
+13793662,pcas_legacy,G2,6,person,11,STEUD.,False,STEUD.,exact,285,291,100.0,STEUD.,False
+13793662,pcas_legacy,G2,7,locality,12,Santa Cruz Island,False,Santa Cruz Island,exact,329,346,100.0,Santa Cruz Island,False
+13793662,pcas_legacy,G2,8,locality,14,San Nicolas,False,San Nicolas,exact,367,378,100.0,San Nicolas,False
+13793662,pcas_legacy,G2,9,taxon,15,Opuntia,False,Opuntia,exact,403,410,100.0,Opuntia,False
+13793662,pcas_legacy,G2,10,person,15,Engelmann,False,Engelmann,exact,411,420,100.0,Engelmann,False
+13793662,pcas_legacy,G2,11,taxon,17,Bromus Hookerianus,False,Bromus Hookerianus,exact,427,445,100.0,Bromus Hookerianus,False
+13793662,pcas_legacy,G2,12,person,17,7hurb.,False,Thurb.,exact,446,452,100.0,7hurb.,True
+13793662,pcas_legacy,G2,13,locality,18,San Miguel,False,San Miguel,exact,491,501,100.0,San Miguel,False
+13793662,pcas_legacy,G2,14,locality,18,San Nicolas,False,San Nicolas,exact,506,517,100.0,San Nicolas,False
+13793662,pcas_legacy,G2,15,taxon,19,Opuntia,False,Opuntia,exact,541,548,100.0,Opuntia,False
+13793662,pcas_legacy,G2,16,taxon,21,Bromus virens,False,Bromus virens,exact,596,609,100.0,Bromus virens,False
+13793662,pcas_legacy,G2,17,person,21,/Vutt.,False,Nutt.,exact,610,616,100.0,/Vutt.,True
+13793662,pcas_legacy,G2,18,taxon,23,Opuniza,False,Opuntia,exact,711,718,100.0,Opuniza,True
+13793662,pcas_legacy,G2,19,taxon,25,Cynodon Dactylon,False,Cynodon Dactylon,exact,725,741,100.0,Cynodon Dactylon,False
+13793662,pcas_legacy,G2,20,person,25,Pervs.,False,Pers.,exact,742,748,100.0,Pervs.,True
+13793662,pcas_legacy,G2,21,taxon,29,Stipa setigera,False,Stipa setigera,exact,845,859,100.0,Stipa setigera,False
+13793662,pcas_legacy,G2,22,person,29,Pres/.,False,Presl.,exact,860,866,100.0,Pres/.,True
+13793662,pcas_legacy,G2,23,locality,30,San Miguel,False,San Miguel,exact,905,915,100.0,San Miguel,False
+13793662,pcas_legacy,G2,24,locality,30,San Nicolas,False,San Nicolas,exact,920,931,100.0,San Nicolas,False
+13793662,pcas_legacy,G2,25,taxon,31,Opuntia,False,Opuntia,exact,969,976,100.0,Opuntia,False
+13793662,pcas_legacy,G2,26,taxon,33,Stipa robusta,False,Stipa robusta,exact,983,996,100.0,Stipa robusta,False
+13793662,pcas_legacy,G2,27,person,33,Vasey,False,Vasey,exact,997,1002,100.0,Vasey,False
+13793662,pcas_legacy,G2,28,taxon,34,Opuntia,False,Opuntia,exact,1071,1078,100.0,Opuntia,False
+13793662,pcas_legacy,G2,29,taxon,36,Hordeum murinum,False,Hordeum murinum,exact,1085,1100,100.0,Hordeum murinum,False
+13793662,pcas_legacy,G2,30,person,36,/.,False,L.,exact,1101,1103,100.0,/.,True
+13793662,pcas_legacy,G2,31,locality,36,Santa Rosa,False,Santa Rosa,exact,1118,1128,100.0,Santa Rosa,False
+13793662,pcas_legacy,G2,32,locality,37,Santa Cruz,False,Santa Cruz,exact,1131,1141,100.0,Santa Cruz,False
+13793662,pcas_legacy,G2,33,locality,37,Santa Catalina,False,Santa Catalina,exact,1147,1161,100.0,Santa Catalina,False
+13793662,pcas_legacy,G2,34,locality,37,San Nicolas,False,San Nicolas,exact,1166,1177,100.0,San Nicolas,False
+13793662,pcas_legacy,G2,35,taxon,41,Avena barbata,False,Avena barbata,exact,1260,1273,100.0,Avena barbata,False
+13793662,pcas_legacy,G2,36,person,41,£.,False,L.,exact,1274,1276,100.0,£.,True
+13793662,pcas_legacy,G2,37,taxon,42,Opuntia,False,Opuntia,exact,1350,1357,100.0,Opuntia,False
+13793662,pcas_legacy,G2,38,taxon,44,Phalaris Canariensis,False,Phalaris Canariensis,exact,1364,1384,100.0,Phalaris Canariensis,False
+13793662,pcas_legacy,G2,39,person,44,£.,False,L.,exact,1385,1387,100.0,£.,True
+13793662,pcas_legacy,G2,40,locality,45,Santa Rosa,False,Santa Rosa,exact,1426,1436,100.0,Santa Rosa,False
+13793664,pcas_legacy,G2,0,locality,3,San Miguel,False,San Miguel,exact,66,76,100.0,San Miguel,False
+13793664,pcas_legacy,G2,1,locality,3,Santa Cruz,False,Santa Cruz,exact,78,88,100.0,Santa Cruz,False
+13793664,pcas_legacy,G2,2,locality,3,Santa Catalina,False,Santa Catalina,cross_line,94,109,100.0,"Santa 
+Catalina",False
+13793664,pcas_legacy,G2,3,taxon,6,Atriplex Californicum,False,Atriplex Californicum,exact,117,138,100.0,Atriplex Californicum,False
+13793664,pcas_legacy,G2,4,person,6,J/og.,False,Moq.,exact,139,144,100.0,J/og.,True
+13793664,pcas_legacy,G2,5,person,6,DC.,False,DC.,exact,146,149,100.0,DC.,False
+13793664,pcas_legacy,G2,6,locality,7,California,False,California,exact,181,191,100.0,California,False
+13793664,pcas_legacy,G2,7,person,7,Coulter,False,Coulter,exact,193,200,100.0,Coulter,False
+13793664,pcas_legacy,G2,8,locality,9,San Miguel,False,San Miguel,exact,220,230,100.0,San Miguel,False
+13793664,pcas_legacy,G2,9,locality,9,Santa Cruz,False,Santa Cruz,exact,232,242,100.0,Santa Cruz,False
+13793664,pcas_legacy,G2,10,locality,9,Santa Catalina,False,Santa Catalina,exact,244,258,100.0,Santa Catalina,False
+13793664,pcas_legacy,G2,11,locality,10,San Clemente,False,San Clemente,exact,261,273,100.0,San Clemente,False
+13793664,pcas_legacy,G2,12,person,10,Trask,False,Trask,exact,280,285,100.0,Trask,False
+13793664,pcas_legacy,G2,13,institution,13,Herbarium of the Acad- emy,False,Herbarium of the Academy,cross_line,467,494,100.0,"Herbarium of the Acad- 
+emy",True
+13793664,pcas_legacy,G2,14,taxon,16,Atriplex decumbens,False,Atriplex decumbens,exact,545,563,100.0,Atriplex decumbens,False
+13793664,pcas_legacy,G2,15,person,16,Wats.,False,Wats.,exact,564,569,100.0,Wats.,False
+13793664,pcas_legacy,G2,16,locality,17,San Diego,False,San Diego,exact,614,623,100.0,San Diego,False
+13793664,pcas_legacy,G2,17,locality,19,San Nicolas,False,San Nicolas,exact,645,656,100.0,San Nicolas,False
+13793664,pcas_legacy,G2,18,locality,20,Santa Catalina,False,Santa Catalina,exact,722,736,100.0,Santa Catalina,False
+13793664,pcas_legacy,G2,19,locality,21,San Nicolas,False,San Nicolas,exact,742,753,100.0,San Nicolas,False
+13793664,pcas_legacy,G2,20,taxon,23,Sux#da,False,Suæda,exact,787,793,100.0,Sux#da,True
+13793664,pcas_legacy,G2,21,taxon,25,S. Californica,False,S. Californica,exact,913,927,100.0,S. Californica,False
+13793664,pcas_legacy,G2,22,person,25,Wats.,False,Wats.,exact,928,933,100.0,Wats.,False
+13793664,pcas_legacy,G2,23,taxon,25,S. Torreyana,False,S. Torreyana,exact,934,946,100.0,S. Torreyana,False
+13793664,pcas_legacy,G2,24,locality,27,Santa Rosa Island,False,Santa Rosa Island,exact,1016,1033,100.0,Santa Rosa Island,False
+13793664,pcas_legacy,G2,25,institution,27,Herbarium of the Academy,False,Herbarium of the Academy,cross_line,1054,1079,100.0,"Herbarium of 
+the Academy",False
+13793664,pcas_legacy,G2,26,taxon,28,S. Californica,False,S. Californica,exact,1094,1108,100.0,S. Californica,False
+13793664,pcas_legacy,G2,27,locality,29,Santa Catalina,False,Santa Catalina,exact,1155,1169,100.0,Santa Catalina,False
+13793664,pcas_legacy,G2,28,person,30,Trask,False,Trask,exact,1179,1184,100.0,Trask,False
+13793664,pcas_legacy,G2,29,taxon,32,Aphanisma blitoides,False,Aphanisma blitoides,exact,1192,1211,100.0,Aphanisma blitoides,False
+13793664,pcas_legacy,G2,30,person,32,Vutt.,False,Nutt.,exact,1212,1217,100.0,Vutt.,True
+13793664,pcas_legacy,G2,31,person,32,Moq.,False,Moq.,exact,1219,1223,100.0,Moq.,False
+13793664,pcas_legacy,G2,32,person,32,DC.,False,DC.,exact,1227,1230,100.0,DC.,False
+13793664,pcas_legacy,G2,33,locality,33,San Diego,False,San Diego,exact,1267,1276,100.0,San Diego,False
+13793664,pcas_legacy,G2,34,locality,36,San Clemente,False,San Clemente,exact,1362,1374,100.0,San Clemente,False
+13793664,pcas_legacy,G2,35,locality,36,San Pedro,False,San Pedro,exact,1379,1388,100.0,San Pedro,False
+13793664,pcas_legacy,G2,36,locality,37,Los Angeles,False,Los Angeles,exact,1396,1407,100.0,Los Angeles,False
+13793664,pcas_legacy,G2,37,locality,37,San Nicolas,False,San Nicolas,exact,1413,1424,100.0,San Nicolas,False
+13793664,pcas_legacy,G2,38,taxon,38,Leptosyne gigantea,False,Leptosyne gigantea,exact,1454,1472,100.0,Leptosyne gigantea,False
+13793664,pcas_legacy,G2,39,taxon,40,NYCTAGINACE,False,NYCTAGINACEÆ,exact,1476,1487,100.0,NYCTAGINACE,True
+13793664,pcas_legacy,G2,40,taxon,41,Abronia maritima,False,Abronia maritima,exact,1494,1510,100.0,Abronia maritima,False
+13793664,pcas_legacy,G2,41,person,41,/Vuit.,False,Nutt.,exact,1511,1517,100.0,/Vuit.,True
+13793664,pcas_legacy,G2,42,locality,43,Santa Barbara,False,Santa Barbara,exact,1582,1595,100.0,Santa Barbara,False
+13793664,pcas_legacy,G2,43,locality,43,San Diego,False,San Diego,cross_line,1599,1609,100.0,"San 
+Diego",False
+13793668,pcas_legacy,G2,0,taxon,3,Lupinus albifrons,False,Lupinus albifrons,exact,57,74,100.0,Lupinus albifrons,False
+13793668,pcas_legacy,G2,1,person,3,Benth.,False,Benth.,exact,75,81,100.0,Benth.,False
+13793668,pcas_legacy,G2,2,person,7,Agardh,False,Agardh,exact,195,201,100.0,Agardh,False
+13793668,pcas_legacy,G2,3,person,7,Douglas,False,Douglas,exact,215,222,100.0,Douglas,False
+13793668,pcas_legacy,G2,4,institution,7,Lind- ley’s Herbarium,False,Lindley’s Herbarium,cross_line,237,259,100.0,"Lind- 
+ley’s Herbarium",True
+13793668,pcas_legacy,G2,5,person,9,Douglas,False,Douglas,exact,309,316,100.0,Douglas,False
+13793668,pcas_legacy,G2,6,person,13,Trask,False,Trask,exact,564,569,100.0,Trask,False
+13793668,pcas_legacy,G2,7,locality,14,San Nicolas,False,San Nicolas,exact,601,612,100.0,San Nicolas,False
+13793668,pcas_legacy,G2,8,taxon,15,Z. Chamissonis,False,L. Chamissonis,exact,701,715,100.0,Z. Chamissonis,True
+13793668,pcas_legacy,G2,9,locality,16,San Miguel,False,San Miguel,exact,722,732,100.0,San Miguel,False
+13793668,pcas_legacy,G2,10,locality,16,Santa Rosa,False,Santa Rosa,exact,734,744,100.0,Santa Rosa,False
+13793668,pcas_legacy,G2,11,locality,16,Santa Cruz,False,Santa Cruz,exact,746,756,100.0,Santa Cruz,False
+13793668,pcas_legacy,G2,12,locality,16,Santa Catalina,False,Santa Catalina,cross_line,762,777,100.0,"Santa 
+Catalina",False
+13793668,pcas_legacy,G2,13,taxon,19,Trifolium microdon,False,Trifolium microdon,exact,785,803,100.0,Trifolium microdon,False
+13793668,pcas_legacy,G2,14,person,19,H.,False,H.,exact,804,806,100.0,H.,False
+13793668,pcas_legacy,G2,15,person,19,A.,False,A.,exact,809,811,100.0,A.,False
+13793668,pcas_legacy,G2,16,taxon,19,pilosum,False,pilosum,exact,818,825,100.0,pilosum,False
+13793668,pcas_legacy,G2,17,taxon,30,7. microdon,False,T. microdon,exact,1332,1343,100.0,7. microdon,True
+13793668,pcas_legacy,G2,18,locality,31,Santa Cruz Island,False,Santa Cruz Island,exact,1368,1385,100.0,Santa Cruz Island,False
+13793668,pcas_legacy,G2,19,locality,31,Santa Catalina,False,Santa Catalina,exact,1403,1417,100.0,Santa Catalina,False
+13793668,pcas_legacy,G2,20,person,32,Trask,False,Trask,exact,1427,1432,100.0,Trask,False
+13793668,pcas_legacy,G2,21,institution,34,Herbarium of the Academy,False,Herbarium of the Academy,exact,1458,1482,100.0,Herbarium of the Academy,False
+13793668,pcas_legacy,G2,22,locality,36,"Tennessee Cove, Marin Co., Calif.",False,"Tennessee Cove, Marin Co., Calif.",exact,1564,1597,100.0,"Tennessee Cove, Marin Co., Calif.",False
+13793668,pcas_legacy,G2,23,taxon,40,Trifolium gracilentum,False,Trifolium gracilentum,exact,1696,1717,100.0,Trifolium gracilentum,False
+13793668,pcas_legacy,G2,24,person,40,7. G& G.,False,T. & G.,exact,1718,1726,100.0,7. G& G.,True
+13793668,pcas_legacy,G2,25,locality,41,California,False,California,exact,1750,1760,100.0,California,False
+13793668,pcas_legacy,G2,26,person,41,Douglas,False,Douglas,exact,1762,1769,100.0,Douglas,False
+13793668,pcas_legacy,G2,27,locality,43,Santa Catalina,False,Santa Catalina,cross_line,1823,1838,100.0,"Santa 
+Catalina",False
+13793668,pcas_legacy,G2,28,person,44,Trask,False,Trask,exact,1847,1852,100.0,Trask,False
+13793668,pcas_legacy,G2,29,locality,44,San Nicolas,False,San Nicolas,exact,1857,1868,100.0,San Nicolas,False
+13793668,pcas_legacy,G2,30,taxon,46,Lupini,False,Lupini,exact,1898,1904,100.0,Lupini,False
+13793674,pcas_legacy,G2,0,taxon,6,Opuntia prolifera,False,Opuntia prolifera,exact,145,162,100.0,Opuntia prolifera,False
+13793674,pcas_legacy,G2,1,person,6,Ange/m.,False,Engelm.,exact,163,170,100.0,Ange/m.,True
+13793674,pcas_legacy,G2,2,locality,8,Santa Catalina,False,Santa Catalina,exact,256,270,100.0,Santa Catalina,False
+13793674,pcas_legacy,G2,3,locality,8,San Clemente,False,San Clemente,exact,275,287,100.0,San Clemente,False
+13793674,pcas_legacy,G2,4,taxon,10,UMBELLIFER/,False,UMBELLIFERÆ,exact,291,302,100.0,UMBELLIFER/,True
+13793674,pcas_legacy,G2,5,taxon,12,Daucus pusillus,False,Daucus pusillus,exact,310,325,100.0,Daucus pusillus,False
+13793674,pcas_legacy,G2,6,person,12,M/ichx.,False,Michx.,exact,326,333,100.0,M/ichx.,True
+13793674,pcas_legacy,G2,7,locality,13,Caroline,False,Carolinæ,exact,372,380,100.0,Caroline,True
+13793674,pcas_legacy,G2,8,locality,16,San Nicolas,False,San Nicolas,exact,454,465,100.0,San Nicolas,False
+13793674,pcas_legacy,G2,9,person,17,Trask,False,Trask,exact,502,507,100.0,Trask,False
+13793674,pcas_legacy,G2,10,vernacular,19,Yerba del Vibora,False,Yerba del Vibora,exact,561,577,100.0,Yerba del Vibora,False
+13793674,pcas_legacy,G2,11,locality,19,Cali- fornia,False,California,cross_line,603,616,100.0,"Cali- 
+fornia",True
+13793674,pcas_legacy,G2,12,vernacular,21,rattlesnake,False,rattlesnake,exact,678,689,100.0,rattlesnake,False
+13793674,pcas_legacy,G2,13,taxon,23,Apiastrum angustifolium,False,Apiastrum angustifolium,exact,697,720,100.0,Apiastrum angustifolium,False
+13793674,pcas_legacy,G2,14,person,23,/Vuwtt.,False,Nutt.,exact,721,728,100.0,/Vuwtt.,True
+13793674,pcas_legacy,G2,15,person,23,Torr.,False,Torr.,exact,730,735,100.0,Torr.,False
+13793674,pcas_legacy,G2,16,person,23,Gr.,False,Gr.,exact,738,741,100.0,Gr.,False
+13793674,pcas_legacy,G2,17,locality,24,"San Diego, California",False,"San Diego, California",exact,766,787,100.0,"San Diego, California",False
+13793674,pcas_legacy,G2,18,locality,26,San Miguel,False,San Miguel,exact,807,817,100.0,San Miguel,False
+13793674,pcas_legacy,G2,19,locality,26,Santa Cruz,False,Santa Cruz,exact,819,829,100.0,Santa Cruz,False
+13793674,pcas_legacy,G2,20,locality,26,Santa Cat- alina,False,Santa Catalina,cross_line,835,852,100.0,"Santa Cat- 
+alina",True
+13793674,pcas_legacy,G2,21,locality,27,San Nicolas,False,San Nicolas,exact,857,868,100.0,San Nicolas,False
+13793674,pcas_legacy,G2,22,taxon,30,Sanicula Menziesii,False,Sanicula Menziesii,exact,930,948,100.0,Sanicula Menziesii,False
+13793674,pcas_legacy,G2,23,person,30,7.,False,H.,exact,949,951,100.0,7.,True
+13793674,pcas_legacy,G2,24,person,30,A.,False,A.,exact,954,956,100.0,A.,False
+13793674,pcas_legacy,G2,25,locality,31,California,False,California,exact,983,993,100.0,California,False
+13793674,pcas_legacy,G2,26,person,36,Trask,False,Trask,exact,1218,1223,100.0,Trask,False
+13793674,pcas_legacy,G2,27,locality,37,Santa Catalina,False,Santa Catalina,exact,1252,1266,100.0,Santa Catalina,False
+13793674,pcas_legacy,G2,28,taxon,39,Peucedanum insulare,False,Peucedanum insulare,exact,1274,1293,100.0,Peucedanum insulare,False
+13793680,pcas_legacy,G2,0,taxon,3,Lycium Californicum,False,Lycium Californicum,exact,58,77,100.0,Lycium Californicum,False
+13793680,pcas_legacy,G2,1,person,3,/Vuw/t.,False,Nutt.,exact,78,85,100.0,/Vuw/t.,True
+13793680,pcas_legacy,G2,2,locality,4,San Diego,False,San Diego,exact,132,141,100.0,San Diego,False
+13793680,pcas_legacy,G2,3,taxon,6,Opuntza,False,Opuntia,exact,188,195,100.0,Opuntza,True
+13793680,pcas_legacy,G2,4,locality,7,Santa Catalina,False,Santa Catalina,exact,214,228,100.0,Santa Catalina,False
+13793680,pcas_legacy,G2,5,locality,7,San Clemente,False,San Clemente,exact,233,245,100.0,San Clemente,False
+13793680,pcas_legacy,G2,6,taxon,9,SCROPHULARIACE/E,False,SCROPHULARIACEÆ,exact,249,265,100.0,SCROPHULARIACE/E,True
+13793680,pcas_legacy,G2,7,taxon,11,Orthocarpus purpurascens,False,Orthocarpus purpurascens,exact,274,298,100.0,Orthocarpus purpurascens,False
+13793680,pcas_legacy,G2,8,person,11,Benth.,False,Benth.,exact,299,305,100.0,Benth.,False
+13793680,pcas_legacy,G2,9,person,11,DC.,False,DC.,exact,310,313,100.0,DC.,False
+13793680,pcas_legacy,G2,10,locality,12,Nova California,False,Nova California,exact,342,357,100.0,Nova California,False
+13793680,pcas_legacy,G2,11,person,12,Douglas,False,Douglas,exact,359,366,100.0,Douglas,False
+13793680,pcas_legacy,G2,12,locality,14,Santa Cruz,False,Santa Cruz,exact,386,396,100.0,Santa Cruz,False
+13793680,pcas_legacy,G2,13,locality,14,Santa Catalina,False,Santa Catalina,exact,401,415,100.0,Santa Catalina,False
+13793680,pcas_legacy,G2,14,locality,15,San Nicolas,False,San Nicolas,exact,428,439,100.0,San Nicolas,False
+13793680,pcas_legacy,G2,15,taxon,19,PLANTAGINACE/E,False,PLANTAGINACEÆ,exact,595,609,100.0,PLANTAGINACE/E,True
+13793680,pcas_legacy,G2,16,taxon,21,Plantago insularis,False,Plantago insularis,exact,617,635,100.0,Plantago insularis,False
+13793680,pcas_legacy,G2,17,taxon,30,P. Patagonica,False,P. Patagonica,exact,1189,1202,100.0,P. Patagonica,False
+13793680,pcas_legacy,G2,18,taxon,35,P. Patagonica,False,P. Patagonica,exact,1313,1326,100.0,P. Patagonica,False
+13793680,pcas_legacy,G2,19,taxon,39,COMPOSITE,False,COMPOSITÆ,exact,1467,1476,100.0,COMPOSITE,True
+13793680,pcas_legacy,G2,20,taxon,41,Malacothrix indecora,False,Malacothrix indecora,exact,1484,1504,100.0,Malacothrix indecora,False
+13793680,pcas_legacy,G2,21,person,41,Greene,False,Greene,exact,1505,1511,100.0,Greene,False
+13793680,pcas_legacy,G2,22,locality,42,northern shore of Santa Cruz Island,False,northern shore of Santa Cruz Island,cross_line,1575,1611,100.0,"northern shore of 
+Santa Cruz Island",False

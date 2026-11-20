@@ -1,0 +1,19 @@
+{
+  "run_id": "20261120-0238_explore_G2_pcas",
+  "condition": "G2",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "max_tokens": 16000,
+  "versions": [
+    "pcas_legacy"
+  ],
+  "pages": "pcas",
+  "base_prompt_version": "p4-guide-v0.6",
+  "exploratory": true,
+  "requests": 8,
+  "usd_total": 0.3761,
+  "errors": 0,
+  "stop_reasons": {
+    "end_turn": 8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "20261120-0238_explore_V1_pcas",
+  "condition": "V1",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "max_tokens": 16000,
+  "versions": [
+    "image"
+  ],
+  "pages": "pcas",
+  "base_prompt_version": "p4-guide-v0.6",
+  "exploratory": true,
+  "requests": 8,
+  "usd_total": 0.3281,
+  "errors": 0,
+  "stop_reasons": {
+    "end_turn": 8
+  }
+}
