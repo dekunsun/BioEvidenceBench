@@ -1,0 +1,23 @@
+{
+  "run_id": "20261120-0039_explore_G2",
+  "condition": "G2",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "max_tokens": 16000,
+  "versions": [
+    "legacy",
+    "modern_tesseract",
+    "modern_deepseek-ocr2",
+    "modern_dots-mocr",
+    "expert"
+  ],
+  "pages": "test",
+  "base_prompt_version": "p4-guide-v0.6",
+  "exploratory": true,
+  "requests": 80,
+  "usd_total": 3.6576,
+  "errors": 0,
+  "stop_reasons": {
+    "end_turn": 80
+  }
+}
