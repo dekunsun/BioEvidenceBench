@@ -1,7 +1,8 @@
 # BioEvidenceBench
 
-An exploratory evaluation of LLM information extraction on 19th- and early 20th-century
-biodiversity literature from the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/).
+A system-level evaluation of **evidence-grounded scientific data extraction** from 19th- and early
+20th-century biodiversity literature in the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/).
+It is not an OCR benchmark (FineBooks already scores OCR models); OCR is one step of the pipeline it follows.
 It asks where the reliability of extracted scientific data is lost: in OCR, in extraction, in
 evidence verification, in entity resolution, or in human review. It also asks where the next
 unit of effort should go.
@@ -91,7 +92,7 @@ tables: `results/analysis_test_main/REPORT.md`, `results/linking_test/REPORT.md`
 | Agreement (5 pages, as delivered) | ALL_PRIMARY exact 0.90, overlap 0.95 (Butler 0.89 / 0.93, Reeve 0.90 / 0.96); lowest field: locality exact 0.75, mostly span edges. All 23 disagreements adjudicated "keep gold". `results/agreement_independent/` |
 | RQ1 OCR | Opus G1 value F1, legacy → modern → expert: **Reeve 0.64 → 0.98 → 0.98**, Butler 0.60 → 0.95 → 0.98. Pre-registered (Reeve): legacy → modern +0.34 [0.25, 0.46], *supports* (≥ 0.10); modern → expert +0.005 [−0.015, 0.03], *supports* (< 0.05). Butler is descriptive: +0.36 and +0.03 [0.01, 0.06]. Almost all legacy-OCR loss is misread text inside a correctly found span (lenient F1 0.93–0.97). Butler's legacy-OCR taxon F1 is 0.20 although its page CER is low. Removing Markdown changes little (−0.015 to 0) |
 | RQ2 baseline | On the expert text the LLM's recall is higher for taxon and person in both books and for Butler's localities (*supports*); Reeve's localities and institutions and Butler's dates are *inconclusive*. Taxon value F1: Butler 1.00 vs 0.64, Reeve 0.99 vs 0.54. The falsifier (rule ≥ LLM on taxa) did not occur. The gap is largest for person (+0.74 / +0.78 recall), not for institution |
-| RQ3 evidence | Requiring evidence cost no recall (G1 − G0 between −0.015 and +0.007, all *supports*). But neither condition produced any unsupported output (0 in G0 and G1, both models), so the expected reduction could not be observed |
+| RQ3 evidence | Requiring evidence cost no recall (G1 − G0 between −0.015 and +0.007, all *supports*). But neither condition produced any unsupported output (0 in G0 and G1, both models), so the expected reduction could not be observed. In both arms the value is taken from the source by code, so this compared two forms of verification, not verification against none; it does not show that evidence verification has no value (its value is traceability and audit cost, which these metrics do not measure) |
 | RQ4 review prioritisation | Models agreed on 99–100% of predictions, leaving ≤ 2 unflagged per book and version: *too few to compare*. Errors inside the "proposed auto-accept" set: expert 3 (Butler) / 4 (Reeve), modern OCR 6 / 5, **legacy OCR 50 / 75**. Agreement is not correctness |
 | E4-lite linking (Butler) | Pre-registered (Opus G1, expanded linker): of 34 gold-resolved names, 14 are lost at linking and 0 before it on the expert text (difference 0.41 [0.25, 0.60], *supports*); 13 vs 1 on modern OCR (0.35 [0.10, 0.55], *supports*). Link recall of a plain GBIF lookup is 0.59 even on the gold text: 8 matched only at genus, 3 wrong taxon, 3 no record. On legacy OCR, 0.12 |
 | Sensitivity | Treating the 12 rows decided by guide rules added after the prompt as optional changes ALL_PRIMARY value F1 by at most 0.004 (`results/analysis_test_sensitivity_v0.6/`) |
