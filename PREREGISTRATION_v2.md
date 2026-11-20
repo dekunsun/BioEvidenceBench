@@ -20,7 +20,7 @@ first-round sample pages, at least 300 characters, not BHL `Index` pages).
 
 | Item | Value |
 |---|---|
-| Pages | **Proposed: all 16 sealed pages (8 Butler, 8 Reeve).** Fallback if labelling time is short: the first 4 per book in `draw_order` (8 pages). With 4 pages per book most per-book intervals would span every threshold below, so the fallback is likely to give "inconclusive" verdicts. Gloria decides before freezing |
+| Pages | **All 16 sealed pages (8 Butler, 8 Reeve)** (Gloria, 2026-11-20). An 8-page fallback was considered and rejected: with 4 pages per book most per-book intervals would span every threshold |
 | Gold (entities) | New file `gold/gold_mentions_gloria_v2.csv`, labelled by Gloria alone on the expert text, delivered and archived unchanged in `gold/received/` before any comparison. Rules: ANNOTATION_GUIDE v0.10 **plus** the post-freeze rules in `GUIDE_ADDENDUM.md` as of 2026-11-20 (joint authorities are one person; a sub-unit and its parent institution are one span). Index pages are already out of the frame |
 | Gold (links) | New file `gold/gold_links_gloria_v2_names.csv`, Butler pages only, the short procedure used in round 1 (one row per distinct name; Avibase first; accepted name, not a key); keys found by `src/expand_links.py`. Reeve linking stays deferred, as in round 1 |
 | Second labeller | Optional: 2 pages labelled independently by a second person, agreement reported before scoring. Not required for any verdict |
@@ -101,7 +101,7 @@ answers are counted separately (2A finding 3).
 
 ## 7. Order of work
 
-1. Gloria reviews this draft and decides: 16 or 8 pages; second labeller yes or no; Gemini yes or no.
+1. Gloria reviews this draft. Decided: 16 pages. Still open: second labeller yes or no (default no); Gemini yes or no (default no).
 2. Gloria labels the entity gold (and Butler links) alone; files archived unchanged and committed.
 3. Code needed for sealed exploratory runs is added and tested on a dev page (section 8).
 4. `FREEZE_v2.json`: this file, the gold, code commit, prompt hashes. Commit at once.
@@ -129,4 +129,4 @@ answers are counted separately (2A finding 3).
 
 | Date | What changed | Why | Decided by |
 |---|---|---|---|
-| | | | |
+| 2026-11-20 (draft) | Pages: all 16 sealed pages, not 8. Mistral OCR stays out of H1 (version not reported by OpenRouter; not needed for any hypothesis) | Gloria |
