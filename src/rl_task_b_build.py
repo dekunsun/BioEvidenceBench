@@ -2,17 +2,25 @@
 books (Cuvier is never touched), report alignment and damage per book, and draw the alignment
 audit sample.
 
-    python src/rl_task_b_build.py               # align all pages, then statistics
-    python src/rl_task_b_build.py --stats-only  # statistics from the saved index
+    python src/rl_task_b_build.py               # stage 1 (align all pages, ~30 min) + stage 2
+    python src/rl_task_b_build.py --stats-only  # stage 2 only, from the saved units (seconds)
 
-Writes
-  data/cache/taskb/units/{train,dev,intest}.jsonl   all units (regenerable; not committed)
+Stage 1 aligns every content page of split v2 (`splits_v2.csv`) and writes all its lines, valid
+or not, to data/cache/taskb/units/all_units.jsonl. Stage 2 applies the split and the exclusion
+list and writes
+  data/cache/taskb/units/{train,dev,intest}.jsonl   usable units (regenerable; not committed)
+  data/cache/taskb/units/set_aside.jsonl            every line not used, with page, line and reason
   rl/env/task_b_ocr_repair/build/STATS.md            per-book statistics (committed)
-  rl/env/task_b_ocr_repair/build/stats_*.csv
+  rl/env/task_b_ocr_repair/build/stats_*.csv, set_aside_summary.csv
   rl/env/task_b_ocr_repair/build/audit_sample.csv    100 pairs for Claude's audit
   rl/env/task_b_ocr_repair/build/audit_gloria.xlsx   30 of them for Gloria, without Claude's verdicts
   rl/env/task_b_ocr_repair/build/piscium_long_s.csv  pages of Piscium querelae with and without ſ
 No model is called.
+
+Exclusions (Gloria, 2026-11-20): engraved imprints and plate captions whose OCR AND expert
+transcription are both unreliable are set aside from task B v1 (`exclusions.csv`, one row per
+line, with the reason). Plate captions that align reliably and whose reference reads normally stay.
+Badly damaged OCR alone is never a reason to exclude a line.
 """
 from __future__ import annotations
 
@@ -20,19 +28,24 @@ import hashlib
 import json
 import random
 import re
+import sys
 
 import pandas as pd
 
 import rl_task_b as T
 from common import CACHE, ROOT
 
-OUT = ROOT / "rl" / "env" / "task_b_ocr_repair" / "build"
+ENV = ROOT / "rl" / "env" / "task_b_ocr_repair"
+OUT = ENV / "build"
 UNITS = CACHE / "taskb" / "units"
-SEED = 20261120
-# Round 1 of the alignment audit used SEED on the build before the MUFI fix (kept in build/audit_round1/);
-# round 2 draws a fresh sample from the fixed build so the fix is not checked on the pairs that found it.
+SPLITS = ENV / "splits_v2.csv"
+EXCLUSIONS = ENV / "exclusions.csv"
+# Round 1 of the alignment audit used seed 20261120 on the build before the MUFI and case fixes
+# (kept in build/audit_round1/); round 2 draws a fresh sample from the fixed build so the fixes are
+# not checked on the pairs that found them.
 AUDIT_SEED = 20261121
 SPECIAL = re.compile(r"[æœÆŒſâêîôûàèìòùáéíóúäëïöüçß]")
+SPLIT_NAMES = ("train", "dev", "intest")
 
 
 def failure_flags(u: dict) -> list[str]:
@@ -53,6 +66,8 @@ def failure_flags(u: dict) -> list[str]:
         f.append("OCR merges words")
     if SPECIAL.search(u["target"]):
         f.append("special characters")
+    if u.get("n_case_only"):
+        f.append("case-only words")
     return f
 
 
@@ -73,83 +88,111 @@ def why_no_lines(pid: int) -> str:
     return "only lines under 15 characters or 2 words (caption)"
 
 
-def missing_pages(use: pd.DataFrame, d: pd.DataFrame) -> pd.DataFrame:
-    """Pages of the splits with no line in the index, with the reason."""
-    m = use[~use.PageID.isin(d.page_id)]
-    return pd.DataFrame([{"page_id": int(p), "book": b, "split": sp, "error": why_no_lines(int(p))}
-                         for p, b, sp in zip(m.PageID, m.book, m.split)], columns=["page_id", "book", "split", "error"])
+# ---------------------------------------------------------------- stage 1
+def align_all(pages: pd.DataFrame) -> None:
+    """Align every page and keep every line, valid or not (slow: about 30 minutes)."""
+    with (UNITS / "all_units.jsonl").open("w", encoding="utf-8") as fh:
+        for r in pages.itertuples():
+            pid = int(r.PageID)
+            try:
+                units = T.line_pairs(pid)
+                why = "" if units else why_no_lines(pid)
+            except Exception as e:                   # recorded, never silently dropped
+                units, why = [], "error " + repr(e)[:120]
+            if why:
+                fh.write(json.dumps({"page_id": pid, "no_lines": why}, ensure_ascii=False) + "\n")
+            for u in units:
+                fh.write(json.dumps(u, ensure_ascii=False) + "\n")
 
 
-def build(use: pd.DataFrame) -> None:
-    """Align every page and write the unit files plus an index of all lines (slow: about 30 minutes)."""
+# ---------------------------------------------------------------- stage 2
+def assemble(split: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    info = split.set_index("PageID")
+    excl = pd.read_csv(EXCLUSIONS) if EXCLUSIONS.exists() else pd.DataFrame(columns=["page_id", "line_no", "reason"])
+    excl_reason = {(int(a), int(b)): c for a, b, c in zip(excl.page_id, excl.line_no, excl.reason)}
     rows, missing = [], []
-    files = {s: (UNITS / f"{s}.jsonl").open("w", encoding="utf-8") for s in ("train", "dev", "intest")}
-    for r in use.itertuples():
-        try:
-            units = T.line_pairs(int(r.PageID))
-        except Exception as e:                       # no legacy OCR for this page, or no text
-            missing.append({"page_id": r.PageID, "book": r.book, "error": repr(e)[:120]})
+    files = {s: (UNITS / f"{s}.jsonl").open("w", encoding="utf-8") for s in SPLIT_NAMES}
+    aside = (UNITS / "set_aside.jsonl").open("w", encoding="utf-8")
+    for line in (UNITS / "all_units.jsonl").open(encoding="utf-8"):
+        u = json.loads(line)
+        pid = u["page_id"]
+        if pid not in info.index or info.at[pid, "split"] not in SPLIT_NAMES:
             continue
-        if not units:
-            missing.append({"page_id": r.PageID, "book": r.book, "error": why_no_lines(int(r.PageID))})
-        for u in units:
-            u.update({"book": r.book, "split": r.split, "block": r.block})
-            u["flags"] = failure_flags(u)
-            u["sim_bucket"] = bucket(u.get("similarity", 0.0)) if u.get("input") else "no text"
-            if u.get("valid"):
-                files[r.split].write(json.dumps(u, ensure_ascii=False) + "\n")
-            rows.append({k: u.get(k) for k in ("book", "split", "page_id", "line_no", "valid", "why_invalid",
-                                                "similarity", "sim_bucket", "coverage", "span_ratio", "n_words",
-                                                "n_damaged", "n_name_damaged", "input", "target")}
-                        | {"flags": "; ".join(u["flags"])})
-    for f in files.values():
+        book, sp, block = info.at[pid, "book"], info.at[pid, "split"], int(info.at[pid, "block"])
+        if "no_lines" in u:
+            missing.append({"page_id": pid, "book": book, "split": sp, "error": u["no_lines"]})
+            continue
+        u.update({"book": book, "split": sp, "block": block})
+        u["flags"] = failure_flags(u)
+        u["sim_bucket"] = bucket(u.get("similarity", 0.0)) if u.get("input") else "no text"
+        u["set_aside"] = excl_reason.get((pid, u["line_no"]), "") if u.get("valid") else u.get("why_invalid", "")
+        (files[sp] if u.get("valid") and not u["set_aside"] else aside).write(json.dumps(u, ensure_ascii=False) + "\n")
+        rows.append({k: u.get(k) for k in ("book", "split", "page_id", "line_no", "valid", "why_invalid", "set_aside",
+                                            "similarity", "sim_bucket", "coverage", "span_ratio", "n_words",
+                                            "n_damaged", "n_case_only", "n_name_damaged", "input", "target")}
+                    | {"flags": "; ".join(u["flags"])})
+    for f in [*files.values(), aside]:
         f.close()
-    pd.DataFrame(rows).to_csv(UNITS / "all_units_index.csv", index=False)
-    pd.DataFrame(missing, columns=["page_id", "book", "error"]).to_csv(UNITS / "missing_pages.csv", index=False)
+    d = pd.DataFrame(rows)
+    d["usable"] = d.valid.astype(bool) & (d.set_aside.fillna("") == "")
+    d.to_csv(UNITS / "all_units_index.csv", index=False)
+    return d, pd.DataFrame(missing, columns=["page_id", "book", "split", "error"])
+
+
+def reason_group(s: str) -> str:
+    if not s:
+        return ""
+    if s.startswith("excluded:"):
+        return s
+    parts = [re.sub(r" [\d.]+$", "", p) for p in s.split("; ")]
+    return " + ".join(sorted(set(parts)))
 
 
 def main() -> None:
-    import sys
-    splits = pd.read_csv(ROOT / "rl" / "env" / "task_b_ocr_repair" / "splits.csv")
-    use = splits[splits.split.isin(["train", "dev", "intest"])]
+    split = pd.read_csv(SPLITS)
     UNITS.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
-    if "--stats-only" not in sys.argv:              # --stats-only reuses the saved index
-        build(use)
-    d = pd.read_csv(UNITS / "all_units_index.csv")
-    missing = missing_pages(use, d)          # recomputed from the index (fast: texts are cached)
+    if "--stats-only" not in sys.argv:
+        align_all(split[split.split.isin(SPLIT_NAMES)])
+    d, missing = assemble(split)
 
-    v = d[d.valid == True]  # noqa: E712
+    v = d[d.usable]
     per_book = d.groupby("book").agg(pages=("page_id", "nunique"), lines=("line_no", "size"),
-                                     valid=("valid", "sum")).assign(valid_share=lambda x: (x.valid / x.lines).round(3))
+                                     valid=("valid", "sum"), usable=("usable", "sum")) \
+        .assign(usable_share=lambda x: (x.usable / x.lines).round(3))
     sims = pd.crosstab(d.book, d.sim_bucket, margins=True)
     dmg = pd.crosstab(v.book, v.n_damaged.map(damage_bin), normalize="index").round(3)
     dmg_n = pd.crosstab(v.book, v.n_damaged.map(damage_bin), margins=True)
-    names = v.groupby("book").agg(lines_with_damaged_name=("n_name_damaged", lambda s: int((s > 0).sum())))
-    # what lowering the similarity floor from 0.5 to 0.3 added
-    gain = d[(d.valid == True) & (d.similarity < 0.5)].groupby("book").size().rename("valid_only_at_0.3")  # noqa: E712
+    words = v.groupby("book").agg(words=("n_words", "sum"), damaged=("n_damaged", "sum"),
+                                  case_only=("n_case_only", "sum"),
+                                  lines_with_damaged_name=("n_name_damaged", lambda s: int((s > 0).sum())))
+    words["case_only_mismatch_rate"] = (words.case_only / words.words).round(4)
+    words["damaged_rate"] = (words.damaged / words.words).round(4)
+    gain = d[d.usable & (d.similarity < 0.5)].groupby("book").size().rename("usable_only_at_0.3")
     ex = d.assign(flag=d["flags"].fillna("").str.split("; ")).explode("flag").reset_index(drop=True)
     flags = pd.crosstab(ex.book, ex.flag).drop(columns="", errors="ignore")
-    per_split = pd.crosstab(v.book, v.split)
+    per_split = pd.crosstab(v.book, v.split, margins=True)
+    aside = d[~d.usable].assign(reason=lambda x: x.set_aside.fillna("").map(reason_group))
+    aside_sum = pd.crosstab(aside.reason, aside.book, margins=True)
     for name, t in [("per_book", per_book), ("similarity", sims), ("damage_share", dmg), ("damage_counts", dmg_n),
-                    ("names", names), ("threshold_gain", gain.to_frame()), ("flags", flags), ("splits", per_split)]:
+                    ("words", words), ("threshold_gain", gain.to_frame()), ("flags", flags), ("splits", per_split)]:
         t.to_csv(OUT / f"stats_{name}.csv")
+    aside_sum.to_csv(OUT / "set_aside_summary.csv")
     missing.to_csv(OUT / "missing_pages.csv", index=False)
 
     # Piscium: is the long s used consistently?
-    pis = splits[splits.book == "Piscium"].PageID.astype(int)
+    pis = split[split.book == "Piscium"].PageID.astype(int)
     pl = pd.DataFrame([{"page_id": p, "chars": len(T.expert_text(p)), "long_s": T.expert_text(p).count("ſ"),
                         "plain_s": T.expert_text(p).count("s")} for p in pis])
     pl.to_csv(OUT / "piscium_long_s.csv", index=False)
 
-    # audit sample: 100 pairs, low-confidence and special characters first, every book represented
+    # audit sample: 100 pairs over similarity buckets, every book represented, special characters first
     rng = random.Random(AUDIT_SEED)
     pool = d[d.input.fillna("") != ""].copy()
     want = {"0.3-0.5": 35, "<0.3": 10, "0.5-0.8": 30, "0.8-1.0": 25}
     picked = []
     for b, n in want.items():
-        sub = pool[pool.sim_bucket == b]
-        sub = sub.sort_values(["book", "page_id", "line_no"])
+        sub = pool[pool.sim_bucket == b].sort_values(["book", "page_id", "line_no"])
         books = sorted(sub.book.unique())
         per = max(1, n // max(1, len(books)))
         take = []
@@ -161,9 +204,9 @@ def main() -> None:
         rest = list(sub.index.difference(take))
         take += rng.sample(rest, max(0, min(n - len(take), len(rest))))
         picked += take[:n]
-    audit = pool.loc[picked, ["book", "split", "page_id", "line_no", "similarity", "sim_bucket", "valid",
-                              "flags", "input", "target"]].reset_index(drop=True)
-    audit.insert(0, "audit_id", [f"A{i + 1:03d}" for i in range(len(audit))])
+    audit = pool.loc[picked, ["book", "split", "page_id", "line_no", "similarity", "sim_bucket", "valid", "usable",
+                              "set_aside", "flags", "input", "target"]].reset_index(drop=True)
+    audit.insert(0, "audit_id", [f"B{i + 1:03d}" for i in range(len(audit))])
     for c in ("claude_verdict", "claude_failure_type", "claude_note"):
         audit[c] = ""
     audit.to_csv(OUT / "audit_sample.csv", index=False)
@@ -174,27 +217,36 @@ def main() -> None:
         ga[c] = ""
     ga.to_excel(OUT / "audit_gloria.xlsx", index=False)
 
-    digest = {s: hashlib.sha256((UNITS / f"{s}.jsonl").read_bytes()).hexdigest() for s in ("train", "dev", "intest")}
+    digest = {s: hashlib.sha256((UNITS / f"{s}.jsonl").read_bytes()).hexdigest() for s in SPLIT_NAMES}
+    why_missing = missing.error.str.replace(r" \(.*", "", regex=True).value_counts()
     lines = ["# Task B step 4: units, alignment and damage per book", "",
-             f"Built by `src/rl_task_b_build.py` with Reward v1.1 rules. Cuvier (held-out book) not touched; "
-             f"the 38 excluded pages not used. Pages that gave no line: {len(missing)} "
-             f"({', '.join(f'{k}: {n}' for k, n in missing.error.str.replace(r' \(.*', '', regex=True).value_counts().items()) if len(missing) else 'none'}; "
-             f"see `missing_pages.csv`).", "",
+             "Built by `src/rl_task_b_build.py` under Reward v1.2 rules (case-only words neutral, MUFI "
+             "ligatures folded, references with U+FFFD or unidentified private-use characters invalid) "
+             "and split v2 (`../SPLIT_V2.md`). Cuvier (held-out book) not touched; the 38 excluded pages "
+             f"not used. Content pages that gave no line: {len(missing)} "
+             f"({', '.join(f'{k}: {n}' for k, n in why_missing.items()) or 'none'}; `missing_pages.csv`).", "",
+             "**Coverage is not accuracy.** `usable` counts lines that passed the automatic checks; whether "
+             "they are paired correctly is measured by the audits (`audit_round1/`, `audit_sample.csv`).", "",
              "Unit files (not committed; regenerate with the script) and their SHA-256:", ""]
-    lines += [f"- `{s}.jsonl`: {int((v.split == s).sum())} valid units, `{h[:16]}…`" for s, h in digest.items()]
-    lines += ["", "## Alignment per book", "", per_book.to_markdown(), "",
-              "## Similarity buckets (all lines, valid or not)", "", sims.to_markdown(), "",
-              "Lines that are valid only because the similarity floor is 0.3, not 0.5:", "",
+    lines += [f"- `{s}.jsonl`: {int((v.split == s).sum())} usable units, `{h[:16]}…`" for s, h in digest.items()]
+    lines += ["", "## Lines per book", "", per_book.to_markdown(), "",
+              "## Lines not used, by reason", "",
+              "Every one is kept with page, line, input, target and reason in `set_aside.jsonl` (cache) "
+              "for a later hard-case set.", "", aside_sum.to_markdown(), "",
+              "## Similarity buckets (all lines; similarity ignores case)", "", sims.to_markdown(), "",
+              "Usable lines with similarity 0.3-0.5 (would be rejected under a 0.5 floor):", "",
               gain.to_frame().to_markdown(), "",
-              "## Damaged words per valid line (share)", "", dmg.to_markdown(), "",
+              "## Damaged and case-only words (usable lines)", "",
+              "Case-only words are neutral in Reward v1.2: not damaged, not penalised for case.", "",
+              words.to_markdown(), "",
+              "## Damaged words per usable line (share)", "", dmg.to_markdown(), "",
               "Counts:", "", dmg_n.to_markdown(), "",
-              "## Lines with a damaged scientific-name word", "", names.to_markdown(), "",
               "## Heuristic flags (all lines)", "", flags.to_markdown(), "",
-              "## Valid units per split", "", per_split.to_markdown(), "",
+              "## Usable units per split", "", per_split.to_markdown(), "",
               "## Long s in *Piscium querelae*", "",
-              f"{int((pl.long_s > 0).sum())} of {len(pl)} pages contain ſ; pages without ſ have median "
-              f"{int(pl[pl.long_s == 0].chars.median()) if (pl.long_s == 0).any() else 0} characters "
-              f"(pages with ſ: {int(pl[pl.long_s > 0].chars.median())}). See `piscium_long_s.csv`.", ""]
+              f"{int((pl.long_s > 0).sum())} of {len(pl)} pages contain ſ. The pages without it are blank "
+              "pages, the title page, a modern bookplate and an all-caps dedication (capital S has no long "
+              "form): the transcription uses ſ consistently. See `piscium_long_s.csv`.", ""]
     (OUT / "STATS.md").write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))
 

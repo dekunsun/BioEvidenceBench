@@ -1,8 +1,8 @@
-# Task B reward design (Reward v1.1)
+# Task B reward design (Reward v1.2)
 
 *Task B: repair one line of legacy OCR so it matches the expert transcription, changing only
 recognition errors. Implementation: `src/rl_task_b.py`. Fixed unit tests:
-`tests/test_rl_task_b.py` (28 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
+`tests/test_rl_task_b.py` (37 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
 first experimental setting, not validated optima; they are checked on development data before
 any training run.*
 
@@ -17,6 +17,8 @@ Sets per line, from **alignment A** (OCR input vs reference):
 - **D**: reference words the OCR got wrong (damaged); weight wᵢ = 3 for scientific-name candidates
   (gnfinder v1.4.0 on the expert page), 1 otherwise.
 - **C**: reference words the OCR got right.
+- **N** (v1.2): reference words the OCR has with the right letters in another case only (small
+  caps printed, `BULIMUS` in the transcription, `Bulimus` in the OCR). Neutral: see section 4a.
 
 From **alignment B** (model output vs reference):
 - a damaged word is **repaired** if the output has it exactly, as a whole word, at the aligned place,
@@ -88,12 +90,56 @@ pages; Trudy 2; Das Chitinskelett 1; Butler, Reeve, Cuvier 0. Before task B uses
 pages without ſ are checked: sparse pages, or an inconsistent transcription? If the transcription
 uses s where the print has ſ, the reference is not "corrected" from the print's date.
 
+## 4a. Case (v1.2, Gloria 2026-11-20)
+
+The transcriptions of Butler and Reeve write small-capital headings in capitals; the OCR reads them
+as Title case. Case-only differences were 14% of Reeve's damaged words and 8% of Butler's. They are
+a transcription convention, not recognition errors, and the OCR gives no evidence for them: a model
+rewarded for them would learn to guess capitals.
+
+| OCR | Reference | Treatment |
+|---|---|---|
+| `Bulimus nimbosus` | `BULIMUS NIMBOSUS` | both words neutral (N) |
+| `Bulimus nimbosus` | `BULIMUS nimbosus` | `BULIMUS` neutral, `nimbosus` correct |
+| `Bulimus nimbosus` | `BULIMUS nimbosns` | `BULIMUS` neutral, `nimbosns` damaged (real spelling) |
+| `Species` | `ſpecies` | damaged: not a case difference (long-s rule, section 4) |
+
+- **Neutral is not free.** A neutral word earns no repair credit, and any case of its letters is
+  accepted; changing its letters (`Bulimus` → `Bulinus`), deleting it or replacing it is a broken
+  word (−0.5); writing it twice is an inserted word (−0.25).
+- A **damaged** word whose OCR case pattern differs from the reference (UPPER vs Title or lower)
+  is repaired by the right letters in any case. Every other word is compared exactly, so changing
+  the case of a word the OCR had right is a broken word.
+- Comparison uses `lower_keep`: lower case one character for one, ſ never folded. `str.casefold()`
+  is not used anywhere because it turns ſ into s. The original characters are always kept.
+- Alignment ignores case (it only finds positions); pairing an expert line with OCR uses
+  case-insensitive similarity.
+- Reported separately, not in the reward: `case_only_words`, `case_accuracy` (share of neutral and
+  case-differing damaged words the output writes in the reference's exact case) and
+  `exact_repair_rate` (repaired / damaged, unweighted, neutral words not counted). The
+  case-only mismatch rate per book is in `build/STATS.md`.
+
+## 4b. References that cannot be targets (v1.2)
+
+- *Piscium querelae*'s transcription types ligatures as MUFI private-use code points. Those whose
+  reading is clear from the words they occur in are folded like U+FB00–FB06: U+EADA ſt, U+EBA2 ſi,
+  U+EBA6 ſſ, U+EBA7 ſſi, U+EEC5 ct (e.g. `e`+U+EADA = `eſt`, `fo`+U+EBA7+`libus` = `foſſilibus`).
+- A reference line that still holds U+FFFD (Greek in *Piscium*, ♂ and fractions in Butler's plate
+  captions) or an unidentified private-use character (U+EFA1, U+F4F9, U+F1AC, U+F519, U+F50E) is
+  invalid: no output can match it.
+- Engraved imprints and plate captions whose OCR and transcription are both unreliable are set
+  aside (`exclusions.csv`, with reasons). Readable plate captions stay, and heavy OCR damage alone
+  is never a reason to set a line aside: badly damaged lines with a reliable reference are the most
+  useful training items. Every line set aside is kept with its page, line and reason
+  (`set_aside.jsonl`, `build/set_aside_summary.csv`) as a later hard-case set.
+
 ## 5. Diagnostic fields (returned with every reward)
 
 `reward, reward_reading, format_valid, format_reason, integrity_valid, alignment_valid, clean_line,
 damaged_words, repaired_words, scientific_name_damaged, scientific_name_repairs, correct_words,
 preserved_correct_words, damaged_correct_words (B), extra_words (I), penalty,
-weighted_repair_rate, cer_diagnostic`. If training raises the reward while behaviour worsens, these
+weighted_repair_rate, cer_diagnostic, case_only_words, case_words, case_accuracy,
+exact_repair_rate`. If training raises the reward while behaviour worsens, these
 show whether names improved, ordinary words were sacrificed, or the scorer was exploited.
 
 ## 6. Rules fixed by unit tests
@@ -102,7 +148,11 @@ Each line of `tests/test_rl_task_b.py`: perfect = 1; OCR unchanged = 0 on damage
 clean lines; the worked example; fixed penalties for a broken and an inserted word; a duplicated
 word is not rewarded twice; a wrong repair is a substitution, not an insertion; OCR fragments kept
 are not penalised again; the right word written next to the damaged one is not a repair; eight
-format errors; the integrity check; ligature folding; æ kept; the long-s table; clipping at −1.
+format errors; the integrity check; ligature folding; æ kept; the long-s table; clipping at −1;
+v1.2: MUFI folding; unreadable references marked; case-only words neutral in any case; a neutral
+word changed, deleted or repeated is penalised; real spelling next to a case difference is damaged;
+ſ vs S is not a case difference; changing the case of a correct word is broken; a damaged small-caps
+word is repaired by its letters in any case.
 
 ## 7. Known limits
 
@@ -119,3 +169,4 @@ format errors; the integrity check; ligature folding; æ kept; the long-s table;
 |---|---|---|---|
 | v1.0 | 2026-11-20 | Weighted damaged-word repair minus λ·min(1, B/max(1,|D|)); clean lines 1 − B/|C| | Gloria (from an external review) |
 | v1.1 | 2026-11-20 | Fixed penalties 0.5 per broken word, 0.25 per inserted word, clipped to [−1, 1]; hard format gate; repair requires the damaged token to be gone; long s kept in the main reward plus a reading metric; ligature folding | Gloria |
+| v1.2 | 2026-11-20 | Case-only words neutral (letters must survive); case-free repair of small-caps words; case diagnostics; MUFI ligatures folded; references with U+FFFD or unidentified private-use characters invalid; unreliable imprints and captions set aside | Gloria (from the step 4 audit) |

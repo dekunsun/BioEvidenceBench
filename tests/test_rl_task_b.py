@@ -1,4 +1,4 @@
-"""Fixed unit tests for task B's Reward v1.1 (rl/env/task_b_ocr_repair/REWARD_DESIGN.md).
+"""Fixed unit tests for task B's Reward v1.2 (rl/env/task_b_ocr_repair/REWARD_DESIGN.md).
 
     python -m pytest tests/test_rl_task_b.py -q
 
@@ -147,3 +147,49 @@ def test_mufi_ligatures_are_folded_and_long_s_kept():
 def test_reference_with_an_unreadable_character_is_marked():
     assert T._UNREADABLE.search("GOLDEN ORIOLE \ufffd") and T._UNREADABLE.search("Sturnid\uefa1")
     assert not T._UNREADABLE.search("Linnæus ſpecies")
+
+
+# ---------------------------------------------------------------- case (Reward v1.2, Gloria 2026-11-20)
+SC_REF, SC_OCR = "BULIMUS NIMBOSUS testa", "Bulimus nimbosus testa"     # small caps read as Title
+
+
+def test_case_only_words_are_neutral_not_damaged():
+    unit = u(SC_REF, SC_OCR, [True, True, False])
+    assert unit["n_damaged"] == 0 and unit["n_case_only"] == 2
+    for out in (SC_OCR, SC_REF, "BULIMUS nimbosus testa"):        # any case of the letters
+        assert r(unit, out)["reward"] == 1.0
+
+
+def test_case_neutral_word_changed_to_another_word_is_broken():
+    unit = u(SC_REF, SC_OCR, [True, True, False])
+    d = r(unit, "Bulinus nimbosus testa")                         # Bulimus -> Bulinus
+    assert d["damaged_correct_words"] == 1 and d["reward"] == 0.5
+
+
+def test_case_neutral_word_deleted_or_repeated_is_penalised():
+    unit = u(SC_REF, SC_OCR, [True, True, False])
+    assert r(unit, "nimbosus testa")["reward"] == 0.5               # deleted: broken
+    assert r(unit, "Bulimus Bulimus nimbosus testa")["reward"] == 0.75   # repeated: inserted
+
+
+def test_real_spelling_difference_next_to_case_difference_is_damaged():
+    unit = u("BULIMUS nimbosns", "Bulimus nimbosus", [True, True])
+    assert unit["n_case_only"] == 1 and unit["n_damaged"] == 1 and unit["damaged"] == ["nimbosns"]
+
+
+def test_long_s_is_not_a_case_difference():
+    unit = u("ſpecies novæ", "Species novæ", [False, False])     # S lower-cases to s, never to ſ
+    assert unit["n_case_only"] == 0 and unit["n_damaged"] == 1
+    assert T.lower_keep("ſPECIES") == "ſpecies" and "ſ".casefold() == "s"   # why casefold is not used
+
+
+def test_changing_the_case_of_a_word_the_ocr_had_right_is_broken():
+    clean = "Bulimus nimbosus testa"
+    assert r(u(clean, clean, [False] * 3), "BULIMUS nimbosus testa")["reward"] == 0.5
+
+
+def test_damaged_small_caps_word_is_repaired_by_the_letters_in_any_case():
+    unit = u("NIMBOSUS testa", "nimbosns testa", [True, False])
+    d = r(unit, "nimbosus testa")
+    assert d["reward"] == 1.0 and d["case_accuracy"] == 0.0 and d["exact_repair_rate"] == 1.0
+    assert r(unit, "NIMBOSUS testa")["case_accuracy"] == 1.0

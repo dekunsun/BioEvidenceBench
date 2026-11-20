@@ -132,14 +132,29 @@ def _whole(s: str, a: int, b: int) -> bool:
     return not (left.isalnum() or right.isalnum())
 
 
+def lower_keep(s: str) -> str:
+    """Lower case, one character for one (offsets survive), and never folding ſ: str.casefold()
+    turns ſ into s and would erase the long-s distinction, so it is not used anywhere."""
+    return "".join(c.lower() if len(c.lower()) == 1 else c for c in s)
+
+
 def _akey(s: str) -> str:
-    """Alignment key: the long s may align with s (same length, so offsets survive). Used only to
-    FIND positions; scoring compares the real characters."""
-    return s.replace("ſ", "s")
+    """Alignment key: case is ignored and the long s may align with s (same length, so offsets
+    survive). Used only to FIND positions; scoring compares the real characters."""
+    return lower_keep(s).replace("ſ", "s")
 
 
 def _cmap(a: str, b: str) -> tuple:
     return tuple(range(len(a))) if a == b else char_map(_akey(a), _akey(b))
+
+
+def _case_pattern(w: str) -> str:
+    """'UPPER', 'Title' or 'lower' (ignoring non-letters): a word printed in small caps reads as
+    UPPER in the transcription and as Title or lower in the OCR."""
+    letters = [c for c in w if c.isalpha()]
+    if letters and all(c.isupper() for c in letters):
+        return "UPPER"
+    return "Title" if letters and letters[0].isupper() else "lower"
 
 
 def word_status(ref: str, other: str) -> tuple[list[dict], float]:
@@ -154,7 +169,12 @@ def word_status(ref: str, other: str) -> tuple[list[dict], float]:
         got = other[sp[0]:sp[1]] if sp else ""
         whole = bool(sp) and _whole(other, sp[0], sp[1])
         rows.append({"start": a, "end": b, "word": w, "aligned": got,
-                     "ok": whole and got == w, "ok_reading": whole and _akey(got) == _akey(w)})
+                     "ok": whole and got == w,
+                     "ok_reading": whole and got.replace("ſ", "s") == w.replace("ſ", "s"),
+                     # case-insensitive comparisons (Reward v1.2): ſ stays distinct from s
+                     "ok_case": whole and lower_keep(got) == lower_keep(w),
+                     "ok_case_reading": whole and _akey(got) == _akey(w),
+                     "case_differs": bool(got) and _case_pattern(got) != _case_pattern(w)})
     return rows, cov
 
 
@@ -175,11 +195,26 @@ def make_unit(target: str, inp: str, name_word_flags: list[bool] | None = None, 
     """A task item: reference line `target`, OCR input `inp`. Damage is decided by alignment A."""
     rows, _ = word_status(target, inp)
     flags = name_word_flags if name_word_flags is not None else [False] * len(rows)
+    kind = [word_kind(r) for r in rows]
+    kind_r = [word_kind(r, reading=True) for r in rows]
     return meta | {"target": target, "input": inp, "n_words": len(rows),
-                   "n_damaged": sum(not r["ok"] for r in rows),
-                   "n_damaged_reading": sum(not r["ok_reading"] for r in rows),
-                   "n_name_damaged": sum((not r["ok"]) and f for r, f in zip(rows, flags)),
-                   "damaged": [r["word"] for r in rows if not r["ok"]], "name_word_flags": flags}
+                   "n_damaged": kind.count("damaged"),
+                   "n_damaged_reading": kind_r.count("damaged"),
+                   "n_case_only": kind.count("case_only"),
+                   "n_name_damaged": sum(k == "damaged" and f for k, f in zip(kind, flags)),
+                   "damaged": [r["word"] for r, k in zip(rows, kind) if k == "damaged"],
+                   "case_only": [r["word"] for r, k in zip(rows, kind) if k == "case_only"],
+                   "name_word_flags": flags}
+
+
+def word_kind(row: dict, reading: bool = False) -> str:
+    """How the OCR has a reference word (Reward v1.2): 'correct' (exactly), 'case_only' (same
+    letters, only the case differs: neutral, neither damaged nor penalised for case) or 'damaged'."""
+    if row["ok_reading" if reading else "ok"]:
+        return "correct"
+    if row["ok_case_reading" if reading else "ok_case"]:
+        return "case_only"
+    return "damaged"
 
 
 def line_pairs(pid: int, min_chars: int = 15, min_words: int = 2) -> list[dict]:
@@ -212,7 +247,7 @@ def line_pairs(pid: int, min_chars: int = 15, min_words: int = 2) -> list[dict]:
         raw = leg[la:lb]
         inp = re.sub(r"\s*\n\s*", " ", raw).strip()
         span_ratio = (lb - la) / max(1, b - a)
-        sim = 1 - Levenshtein.normalized_distance(s, inp)
+        sim = 1 - Levenshtein.normalized_distance(lower_keep(s), lower_keep(inp))   # pairing ignores case
         rows = words(s)
         flags = [any(na <= a + ra and a + rb <= nb for na, nb in names) for ra, rb, _ in rows]
         why = []
@@ -257,13 +292,31 @@ def format_check(output, target: str) -> str:
 
 
 def _score(unit, legacy_rows, out_rows, out, key, name_weight):
-    """Repair rate, broken and inserted words under one comparison (`ok` or `ok_reading`)."""
+    """Repair rate, broken and inserted words under one comparison (`ok` or `ok_reading`).
+
+    Reward v1.2, case: a reference word the OCR has with the right letters but another case is
+    neutral: no repair credit, and any case in the output is accepted, but changing its letters,
+    deleting it or replacing it is a broken word. A damaged word whose OCR case pattern differs
+    (small caps read as Title) is repaired by the right letters in any case. Every other word is
+    compared exactly, so changing the case of a word the OCR had right is a broken word."""
+    nocase = "ok_case_reading" if key == "ok_reading" else "ok_case"
     w_tot = w_ok = 0.0
     repaired = name_rep = name_dmg = broken = preserved = 0
+    case_n = case_right = 0
     out_tokens = Counter(w for _, _, w in words(out))
     ref_tokens = Counter(w for _, _, w in words(unit["target"]))
     for leg_r, out_r, is_name in zip(legacy_rows, out_rows, unit["name_word_flags"]):
-        if not leg_r[key]:                                   # damaged in the OCR
+        kind = word_kind(leg_r, reading=key == "ok_reading")
+        if kind == "case_only" or (kind == "damaged" and leg_r["case_differs"]):
+            case_n += 1
+            case_right += bool(out_r[key])
+        if kind == "case_only":                              # neutral: letters must survive
+            if out_r[nocase]:
+                preserved += 1
+            else:
+                broken += 1
+            continue
+        if kind == "damaged":                                # damaged in the OCR
             w = name_weight if is_name else 1.0
             w_tot += w
             name_dmg += is_name
@@ -271,7 +324,8 @@ def _score(unit, legacy_rows, out_rows, out, key, name_weight):
             # to the wrong one keeps the damage in the text.
             kept_damage = (len(leg_r["aligned"]) > 1 and leg_r["aligned"] not in ref_tokens
                            and out_tokens.get(leg_r["aligned"], 0) > 0)
-            if out_r[key] and not kept_damage:
+            hit = out_r[nocase] if leg_r["case_differs"] else out_r[key]
+            if hit and not kept_damage:
                 w_ok += w
                 repaired += 1
                 name_rep += is_name
@@ -279,12 +333,12 @@ def _score(unit, legacy_rows, out_rows, out, key, name_weight):
             preserved += 1
         else:
             broken += 1
-    return w_tot, w_ok, repaired, name_rep, name_dmg, broken, preserved
+    return w_tot, w_ok, repaired, name_rep, name_dmg, broken, preserved, case_n, case_right
 
 
 def reward(unit: dict, output, name_weight: float = NAME_WEIGHT, p_broken: float = PENALTY_BROKEN,
            p_insert: float = PENALTY_INSERT) -> dict:
-    """Reward v1.1 with diagnostic fields (REWARD_DESIGN.md). Damaged line:
+    """Reward v1.2 with diagnostic fields (REWARD_DESIGN.md). Damaged line:
     clip(weighted repair rate - p_broken*B - p_insert*I, -1, 1); clean line: clip(1 - p_broken*B -
     p_insert*I, -1, 1). B = correct OCR words changed or deleted; I = inserted words (not counting
     insertions already in the OCR). Format, integrity or alignment failure: 0, flagged.
@@ -294,9 +348,11 @@ def reward(unit: dict, output, name_weight: float = NAME_WEIGHT, p_broken: float
     diag = {"reward": 0.0, "reward_reading": 0.0, "format_valid": not reason, "format_reason": reason,
             "integrity_valid": False, "alignment_valid": False, "clean_line": unit["n_damaged"] == 0,
             "damaged_words": unit["n_damaged"], "repaired_words": 0, "scientific_name_damaged": 0,
-            "scientific_name_repairs": 0, "correct_words": unit["n_words"] - unit["n_damaged"],
+            "scientific_name_repairs": 0, "correct_words": unit["n_words"] - unit["n_damaged"] - unit.get("n_case_only", 0),
             "preserved_correct_words": 0, "damaged_correct_words": 0, "extra_words": 0,
-            "penalty": 0.0, "weighted_repair_rate": None, "cer_diagnostic": None}
+            "penalty": 0.0, "weighted_repair_rate": None, "cer_diagnostic": None,
+            "case_only_words": unit.get("n_case_only", 0), "case_words": 0, "case_accuracy": None,
+            "exact_repair_rate": None}
     if reason:
         return diag
     out = nfc(output).strip()
@@ -313,8 +369,8 @@ def reward(unit: dict, output, name_weight: float = NAME_WEIGHT, p_broken: float
     n_ins = sum(added.values())
     diag["extra_words"] = n_ins
     for key, field in (("ok", "reward"), ("ok_reading", "reward_reading")):
-        w_tot, w_ok, rep, name_rep, name_dmg, broken, preserved = _score(unit, legacy_rows, out_rows, out,
-                                                                         key, name_weight)
+        (w_tot, w_ok, rep, name_rep, name_dmg, broken, preserved,
+         case_n, case_right) = _score(unit, legacy_rows, out_rows, out, key, name_weight)
         pen = p_broken * broken + p_insert * n_ins
         base = (w_ok / w_tot) if w_tot else 1.0
         diag[field] = round(max(-1.0, min(1.0, base - pen)), 4)
@@ -322,5 +378,10 @@ def reward(unit: dict, output, name_weight: float = NAME_WEIGHT, p_broken: float
             diag.update({"repaired_words": rep, "scientific_name_repairs": name_rep,
                          "scientific_name_damaged": name_dmg, "damaged_correct_words": broken,
                          "preserved_correct_words": preserved, "penalty": round(pen, 4),
-                         "weighted_repair_rate": round(base, 4) if w_tot else None})
+                         "weighted_repair_rate": round(base, 4) if w_tot else None,
+                         # diagnostics, not in the reward: exact case on the case-free words, and the
+                         # unweighted repair rate over damaged words (neutral words not counted)
+                         "case_words": case_n,
+                         "case_accuracy": round(case_right / case_n, 4) if case_n else None,
+                         "exact_repair_rate": round(rep / unit["n_damaged"], 4) if unit["n_damaged"] else None})
     return diag
