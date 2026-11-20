@@ -10,7 +10,9 @@ Library module (no main). Pieces:
                                        reference word present in `other` exactly (NFC), as a whole word?
                                        Used twice: alignment A (legacy slice vs reference: which words
                                        are damaged) and alignment B (model output vs reference).
-  reward(unit, output)                 Reward v1.0 plus the diagnostic fields.
+  make_unit(target, input, flags)      one task item from a reference line and its OCR input.
+  reward(unit, output)                 Reward v1.1 (rl/env/task_b_ocr_repair/REWARD_DESIGN.md) plus the
+                                       diagnostic fields, and the long-s reading metric.
 
 Text handling: NFC only, never NFKC (long s, ligatures and similar characters must survive);
 no case folding; punctuation is not a word and is not scored in v1.
@@ -39,7 +41,8 @@ from score import char_map, map_span
 TB = CACHE / "taskb"
 WORD = re.compile(r"[^\W_]+(?:['’\-‐][^\W_]+)*")
 NAME_WEIGHT = 3.0
-LAMBDA = 1.0
+PENALTY_BROKEN = 0.5      # per correct word changed or deleted (Reward v1.1, Gloria 2026-11-20)
+PENALTY_INSERT = 0.25     # per inserted word that matches no reference word
 GNFINDER = "/tmp/claude-0/-home-user/b6a70ceb-f87e-5d66-a2c3-ae166d1e15d1/scratchpad/gobin/gnfinder"
 
 
@@ -121,24 +124,36 @@ def _whole(s: str, a: int, b: int) -> bool:
     return not (left.isalnum() or right.isalnum())
 
 
+def _akey(s: str) -> str:
+    """Alignment key: the long s may align with s (same length, so offsets survive). Used only to
+    FIND positions; scoring compares the real characters."""
+    return s.replace("ſ", "s")
+
+
+def _cmap(a: str, b: str) -> tuple:
+    return tuple(range(len(a))) if a == b else char_map(_akey(a), _akey(b))
+
+
 def word_status(ref: str, other: str) -> tuple[list[dict], float]:
-    """For each word of `ref`: is it present exactly, as a whole word, at the aligned place in
-    `other`? Returns (rows, coverage) where coverage = share of ref characters with an aligned
-    position in `other`."""
-    cmap = char_map(ref, other) if ref != other else tuple(range(len(ref)))
+    """For each word of `ref`: is it present at the aligned place in `other`, as a whole word?
+    `ok` compares exactly (the main reward); `ok_reading` treats ſ and s as the same letter (the
+    reading metric). Returns (rows, coverage), coverage = share of ref characters aligned."""
+    cmap = _cmap(ref, other)
     cov = sum(1 for c in cmap if c >= 0) / max(1, len(cmap))
     rows = []
     for a, b, w in words(ref):
         sp = map_span(cmap, a, b)
         got = other[sp[0]:sp[1]] if sp else ""
-        ok = bool(sp) and got == w and _whole(other, sp[0], sp[1])
-        rows.append({"start": a, "end": b, "word": w, "aligned": got, "ok": ok})
+        whole = bool(sp) and _whole(other, sp[0], sp[1])
+        rows.append({"start": a, "end": b, "word": w, "aligned": got,
+                     "ok": whole and got == w, "ok_reading": whole and _akey(got) == _akey(w)})
     return rows, cov
 
 
 def inserted_words(text: str, ref: str) -> list[str]:
-    """Words of `text` whose characters align to no word character of `ref` (insertions)."""
-    cmap = char_map(text, ref) if text != ref else tuple(range(len(text)))
+    """Words of `text` whose characters align to no word character of `ref` (insertions). The
+    alignment is one-to-one, so a word written twice leaves the second copy as an insertion."""
+    cmap = _cmap(text, ref)
     out = []
     for a, b, w in words(text):
         sp = map_span(cmap, a, b)
@@ -148,12 +163,23 @@ def inserted_words(text: str, ref: str) -> list[str]:
 
 
 # ---------------------------------------------------------------- units
+def make_unit(target: str, inp: str, name_word_flags: list[bool] | None = None, **meta) -> dict:
+    """A task item: reference line `target`, OCR input `inp`. Damage is decided by alignment A."""
+    rows, _ = word_status(target, inp)
+    flags = name_word_flags if name_word_flags is not None else [False] * len(rows)
+    return meta | {"target": target, "input": inp, "n_words": len(rows),
+                   "n_damaged": sum(not r["ok"] for r in rows),
+                   "n_damaged_reading": sum(not r["ok_reading"] for r in rows),
+                   "n_name_damaged": sum((not r["ok"]) and f for r, f in zip(rows, flags)),
+                   "damaged": [r["word"] for r in rows if not r["ok"]], "name_word_flags": flags}
+
+
 def line_pairs(pid: int, min_chars: int = 15, min_words: int = 2) -> list[dict]:
     """One unit per expert line: target = the line; input = the legacy OCR aligned to it,
     widened to whole words, line breaks inside it turned into spaces. Quality stats decide
-    later whether the pair is usable (`valid`)."""
+    whether the pair is usable (`valid`)."""
     ref, leg = expert_text(pid), legacy_text(pid)
-    cmap = char_map(ref, leg)
+    cmap = _cmap(ref, leg)
     names = name_spans(pid)
     units, pos = [], 0
     for li, line in enumerate(ref.split("\n")):
@@ -179,8 +205,8 @@ def line_pairs(pid: int, min_chars: int = 15, min_words: int = 2) -> list[dict]:
         inp = re.sub(r"\s*\n\s*", " ", raw).strip()
         span_ratio = (lb - la) / max(1, b - a)
         sim = 1 - Levenshtein.normalized_distance(s, inp)
-        rows, _ = word_status(s, inp)
-        name_words = [any(na <= a + r["start"] and a + r["end"] <= nb for na, nb in names) for r in rows]
+        rows = words(s)
+        flags = [any(na <= a + ra and a + rb <= nb for na, nb in names) for ra, rb, _ in rows]
         why = []
         if cov < 0.9:
             why.append(f"coverage {cov:.2f}")
@@ -188,32 +214,83 @@ def line_pairs(pid: int, min_chars: int = 15, min_words: int = 2) -> list[dict]:
             why.append(f"span ratio {span_ratio:.2f}")
         if sim < 0.3:
             why.append(f"similarity {sim:.2f}")
-        units.append({"page_id": pid, "line_no": li + 1, "target": s, "input": inp,
-                      "input_had_linebreak": "\n" in raw.strip(), "coverage": round(cov, 3),
-                      "span_ratio": round(span_ratio, 3), "similarity": round(sim, 3),
-                      "n_words": len(rows), "n_damaged": sum(not r["ok"] for r in rows),
-                      "n_name_damaged": sum((not r["ok"]) and f for r, f in zip(rows, name_words)),
-                      "damaged": [r["word"] for r in rows if not r["ok"]],
-                      "name_word_flags": name_words,
-                      "valid": not why, "why_invalid": "; ".join(why)})
+        units.append(make_unit(s, inp, flags, page_id=pid, line_no=li + 1,
+                               input_had_linebreak="\n" in raw.strip(), coverage=round(cov, 3),
+                               span_ratio=round(span_ratio, 3), similarity=round(sim, 3),
+                               valid=not why, why_invalid="; ".join(why)))
     return units
 
 
 # ---------------------------------------------------------------- reward
-def reward(unit: dict, output, lam: float = LAMBDA, name_weight: float = NAME_WEIGHT) -> dict:
-    """Reward v1.0 (rl/PLAN_zh.md 6.3) with diagnostic fields. `unit` comes from line_pairs."""
-    diag = {"reward": 0.0, "format_valid": isinstance(output, str) and bool(output.strip()),
+_COMMENTARY = re.compile(r"^\s*(corrected|correction|repaired|fixed|here\s+is|here's|output|answer|"
+                         r"the\s+corrected|restored|line)\b[^\n]{0,40}?:\s*", re.I)
+_WRAPPERS = [("```", "```"), ("`", "`"), ("**", "**"), ("*", "*"), ('"', '"'), ("\u201c", "\u201d"), ("'", "'")]
+
+
+def format_check(output, target: str) -> str:
+    """'' if the output is a bare line of text; otherwise the reason it is not. The task asks for
+    the repaired line only, so commentary, Markdown or quotation wrappers, several lines and empty
+    answers are format errors (reward 0), not ordinary insertions."""
+    if not isinstance(output, str) or not output.strip():
+        return "empty"
+    out = output.strip()
+    if "\n" in out:
+        return "several lines"
+    m = _COMMENTARY.match(out)
+    if m and not _COMMENTARY.match(target):
+        return "commentary prefix"
+    for a, b in _WRAPPERS:
+        if len(out) > len(a) + len(b) and out.startswith(a) and out.endswith(b) \
+                and not (target.startswith(a) and target.endswith(b)):
+            return "wrapped in " + a
+    return ""
+
+
+def _score(unit, legacy_rows, out_rows, out, key, name_weight):
+    """Repair rate, broken and inserted words under one comparison (`ok` or `ok_reading`)."""
+    w_tot = w_ok = 0.0
+    repaired = name_rep = name_dmg = broken = preserved = 0
+    out_tokens = Counter(w for _, _, w in words(out))
+    ref_tokens = Counter(w for _, _, w in words(unit["target"]))
+    for leg_r, out_r, is_name in zip(legacy_rows, out_rows, unit["name_word_flags"]):
+        if not leg_r[key]:                                   # damaged in the OCR
+            w = name_weight if is_name else 1.0
+            w_tot += w
+            name_dmg += is_name
+            # A repair only counts if the damaged OCR token is gone: writing the right word next
+            # to the wrong one keeps the damage in the text.
+            kept_damage = (len(leg_r["aligned"]) > 1 and leg_r["aligned"] not in ref_tokens
+                           and out_tokens.get(leg_r["aligned"], 0) > 0)
+            if out_r[key] and not kept_damage:
+                w_ok += w
+                repaired += 1
+                name_rep += is_name
+        elif out_r[key]:
+            preserved += 1
+        else:
+            broken += 1
+    return w_tot, w_ok, repaired, name_rep, name_dmg, broken, preserved
+
+
+def reward(unit: dict, output, name_weight: float = NAME_WEIGHT, p_broken: float = PENALTY_BROKEN,
+           p_insert: float = PENALTY_INSERT) -> dict:
+    """Reward v1.1 with diagnostic fields (REWARD_DESIGN.md). Damaged line:
+    clip(weighted repair rate - p_broken*B - p_insert*I, -1, 1); clean line: clip(1 - p_broken*B -
+    p_insert*I, -1, 1). B = correct OCR words changed or deleted; I = inserted words (not counting
+    insertions already in the OCR). Format, integrity or alignment failure: 0, flagged.
+    `reward_reading` is the same with the long s and s treated as one letter."""
+    target = unit["target"]
+    reason = format_check(output, target)
+    diag = {"reward": 0.0, "reward_reading": 0.0, "format_valid": not reason, "format_reason": reason,
             "integrity_valid": False, "alignment_valid": False, "clean_line": unit["n_damaged"] == 0,
             "damaged_words": unit["n_damaged"], "repaired_words": 0, "scientific_name_damaged": 0,
             "scientific_name_repairs": 0, "correct_words": unit["n_words"] - unit["n_damaged"],
-            "preserved_correct_words": 0, "damaged_correct_words": 0, "extra_words": 0, "penalty": 0.0,
-            "weighted_repair_rate": None, "cer_diagnostic": None}
-    if not diag["format_valid"]:
+            "preserved_correct_words": 0, "damaged_correct_words": 0, "extra_words": 0,
+            "penalty": 0.0, "weighted_repair_rate": None, "cer_diagnostic": None}
+    if reason:
         return diag
     out = nfc(output).strip()
-    target = unit["target"]
-    ratio = len(out) / max(1, len(target))
-    diag["integrity_valid"] = "\n" not in out and 0.5 <= ratio <= 1.5
+    diag["integrity_valid"] = 0.5 <= len(out) / max(1, len(target)) <= 1.5
     diag["cer_diagnostic"] = round(Levenshtein.normalized_distance(out, target), 4)
     if not diag["integrity_valid"]:
         return diag
@@ -222,37 +299,18 @@ def reward(unit: dict, output, lam: float = LAMBDA, name_weight: float = NAME_WE
     diag["alignment_valid"] = cov >= 0.5
     if not diag["alignment_valid"]:
         return diag
-    flags = unit["name_word_flags"]
-    w_tot = w_ok = 0.0
-    broken = 0
-    for leg_r, out_r, is_name in zip(legacy_rows, out_rows, flags):
-        if not leg_r["ok"]:                              # damaged in the OCR
-            w = name_weight if is_name else 1.0
-            w_tot += w
-            diag["scientific_name_damaged"] += is_name
-            if out_r["ok"]:
-                w_ok += w
-                diag["repaired_words"] += 1
-                diag["scientific_name_repairs"] += is_name
-        else:                                            # correct in the OCR
-            if out_r["ok"]:
-                diag["preserved_correct_words"] += 1
-            else:
-                broken += 1
-    diag["damaged_correct_words"] = broken
-    # Words the model INSERTED: output words that align to no reference word at all (an added
-    # "Corrected:", an invented word). A wrong attempt at a word is a substitution, not an
-    # insertion: it already costs the repair credit and is not penalised twice. Insertions that
-    # were already in the OCR input are not counted, so returning the OCR unchanged scores
-    # exactly 0 on a damaged line.
     added = Counter(inserted_words(out, target)) - Counter(inserted_words(unit["input"], target))
-    diag["extra_words"] = sum(added.values())
-    broken += diag["extra_words"]
-    if diag["clean_line"]:
-        diag["penalty"] = round(min(1.0, broken / max(1, diag["correct_words"])), 4)
-        diag["reward"] = round(1.0 - diag["penalty"], 4)
-    else:
-        diag["weighted_repair_rate"] = round(w_ok / w_tot, 4)
-        diag["penalty"] = round(lam * min(1.0, broken / max(1, diag["damaged_words"])), 4)
-        diag["reward"] = round(diag["weighted_repair_rate"] - diag["penalty"], 4)
+    n_ins = sum(added.values())
+    diag["extra_words"] = n_ins
+    for key, field in (("ok", "reward"), ("ok_reading", "reward_reading")):
+        w_tot, w_ok, rep, name_rep, name_dmg, broken, preserved = _score(unit, legacy_rows, out_rows, out,
+                                                                         key, name_weight)
+        pen = p_broken * broken + p_insert * n_ins
+        base = (w_ok / w_tot) if w_tot else 1.0
+        diag[field] = round(max(-1.0, min(1.0, base - pen)), 4)
+        if key == "ok":
+            diag.update({"repaired_words": rep, "scientific_name_repairs": name_rep,
+                         "scientific_name_damaged": name_dmg, "damaged_correct_words": broken,
+                         "preserved_correct_words": preserved, "penalty": round(pen, 4),
+                         "weighted_repair_rate": round(base, 4) if w_tot else None})
     return diag

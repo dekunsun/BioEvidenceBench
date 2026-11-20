@@ -442,3 +442,4 @@ Claude API 计入 $100 预算（已用约 $43）。Gemini 的运行尽量在 202
 | 2026-11-20 | 2A | **完成第一轮**：68 个对抗案例；发现值对引语保真度不敏感（G0 模糊定位、G1 静默更正仍得满分，8 例）、引号未去除（3 例）、空回答等同于"什么都没找到"（3 例）。补丁版只剩空回答一项（需在环境层标记）。冻结的测试运行中这些情况出现 0 次，已报告的数字不变。详见 `rl/verifier_audit/adversarial/REPORT.md`、`rl/REWARD_AUDIT.md` | Claude 执行，待 Gloria 审 |
 | 2026-11-20 | 2A | 状态记为 "First-round audit completed; additional fidelity and parser checks pending"，下一阶段不等补充测试 | Gloria |
 | 2026-11-20 | 任务 B 第 1–3 步 | 按 Gloria 的顺序先做 Reeve 4 页试验：357 行中 356 行对齐；两次词对齐和 Reward v1.0（含诊断字段）；10 类零成本对抗检查，发现并修复 2 个奖励 bug。规则变更：排版连字（U+FB00–FB06）折叠为字母（æ、œ、ſ 保留）；相似度门槛 0.5 → 0.3；新增 extra_words（按对齐判定插入）。待定：扣分的归一化方式、长 s。见 `rl/env/task_b_ocr_repair/pilot/REPORT.md` | Claude 执行，待 Gloria 决定 |
+| 2026-11-20 | 任务 B 奖励 | **Reward v1.1**：每改坏一个原本正确的词扣 0.5，每插入一个词扣 0.25，截断到 [−1, 1]；格式硬门控（空回答、多行、说明性前缀、Markdown 或引号包裹）；必须去掉受损的 OCR 词才算修好；长 s 主奖励保留原字形，另报 ſ ≡ s 的阅读指标；对齐时允许 ſ 与 s 对应。28 个单元测试通过。见 `rl/env/task_b_ocr_repair/REWARD_DESIGN.md` | Gloria 决定，Claude 实现 |

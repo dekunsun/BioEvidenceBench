@@ -80,3 +80,12 @@ not an insertion.
 Build all training and development units for the five training books (Cuvier untouched), report
 per-book alignment and damage statistics, and audit 100 pairs across books, languages and error
 types (Claude), 30 of them also checked by Gloria.
+
+## Re-run under Reward v1.1 (same day)
+
+Gloria's decisions (fixed penalties 0.5 per broken word and 0.25 per inserted word, hard format
+gate, long s kept with a reading metric) are in `../REWARD_DESIGN.md`. The same checks now give:
+commentary prefix, empty and two-line answers 0 and flagged (format); OCR unchanged 0 on every
+damaged line; one correct word changed at most 0.5 when it hits a correct word (the 0.857 maximum is
+a line where the change hit a damaged word, which only loses that repair); lower-cased −1 to 0.57.
+`summary.txt` and `reward_checks.csv` hold the v1.1 numbers; the table above is v1.0.
