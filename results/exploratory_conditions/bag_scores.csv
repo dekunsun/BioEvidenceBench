@@ -57,3 +57,15 @@ G2 [haiku-5-5] · probe_swap,Butler,120,17,17,0.876,0.876,0.876
 G2 [haiku-5-5] · probe_swap,Reeve,175,22,38,0.888,0.822,0.854
 G2 [haiku-5-5] · probe_typo,Butler,130,8,7,0.942,0.949,0.945
 G2 [haiku-5-5] · probe_typo,Reeve,185,20,28,0.902,0.869,0.885
+G2 [gemini-4-carbon] · expert,Butler,133,5,4,0.964,0.971,0.967
+G2 [gemini-4-carbon] · expert,Reeve,210,4,3,0.981,0.986,0.984
+G2 [gemini-4-carbon] · legacy,Butler,131,7,6,0.949,0.956,0.953
+G2 [gemini-4-carbon] · legacy,Reeve,136,3,77,0.978,0.638,0.773
+G2 [gemini-4-carbon] · modern_deepseek-ocr2,Butler,115,23,22,0.833,0.839,0.836
+G2 [gemini-4-carbon] · modern_deepseek-ocr2,Reeve,197,17,16,0.921,0.925,0.923
+G2 [gemini-4-carbon] · modern_dots-mocr,Butler,132,5,5,0.964,0.964,0.964
+G2 [gemini-4-carbon] · modern_dots-mocr,Reeve,207,7,6,0.967,0.972,0.97
+G2 [gemini-4-carbon] · modern_tesseract,Butler,131,6,6,0.956,0.956,0.956
+G2 [gemini-4-carbon] · modern_tesseract,Reeve,204,10,9,0.953,0.958,0.956
+V1 [gemini-4-carbon] · image,Butler,133,5,4,0.964,0.971,0.967
+V1 [gemini-4-carbon] · image,Reeve,207,7,6,0.967,0.972,0.97
