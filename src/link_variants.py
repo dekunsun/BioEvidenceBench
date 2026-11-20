@@ -39,7 +39,8 @@ RUN = "20261119-2052_claude-opus-5-5_test_batch"
 VERSIONS = ["expert", "modern_dots-mocr", "legacy"]
 MODEL = "claude-opus-5-5"
 PRICE = {"claude-opus-5-5": (4.0, 20.0), "claude-sonnet-5-5": (2.0, 10.0),   # USD per MTok in / out
-         "claude-haiku-5-5": (0.10, 0.50), "claude-fable-5-2": (8.0, 40.0)}
+         "claude-haiku-5-5": (0.10, 0.50), "claude-fable-5-2": (8.0, 40.0),
+         "gemini-4-carbon": (2.0, 10.0)}   # sync promo price to 2026-11-30 (gemini_backend.PRICES)
 BOOK_TITLE = "Butler, Birds of Great Britain and Ireland, vol. 2 (1907)"
 
 LLM_SYSTEM = """You link taxon names printed in a historical natural-history book to the name in current use.
@@ -148,7 +149,24 @@ def llm_link(client, name: str, around: str, prev: str, cache: Cache, spend: lis
     user = (f"Book: {BOOK_TITLE}\n\nPrinted name (as read): {name}\n\n<previous_page_end>\n{prev}\n"
             f"</previous_page_end>\n\n<text_around_the_name>\n{around}\n</text_around_the_name>")
 
+    def call_gemini():
+        """Same system text, user text and schema; sync, schema enforced, thinking = model default."""
+        import gemini_backend as gb
+        from google.genai import types
+        resp = client.models.generate_content(model=model, contents=user, config=types.GenerateContentConfig(
+            system_instruction=LLM_SYSTEM, response_mime_type="application/json",
+            response_json_schema=LLM_SCHEMA, max_output_tokens=gb.MAX_OUTPUT_TOKENS))
+        d = resp.model_dump(mode="json", exclude_none=True)
+        u = gb.usage_from(d.get("usage_metadata"))
+        cands = d.get("candidates") or []
+        return {"answer": json.loads(gb._answer_text(d)), "input_tokens": u["input_tokens"],
+                "output_tokens": u["output_tokens"], "thoughts_tokens": u["thoughts_token_count"],
+                "stop_reason": cands[0].get("finish_reason") if cands else None,
+                "model": d.get("model_version") or model}
+
     def call():
+        if model.startswith("gemini"):
+            return call_gemini()
         m = client.messages.create(model=model, max_tokens=4000, system=LLM_SYSTEM,
                                    messages=[{"role": "user", "content": user}],
                                    output_config={"effort": "medium",
@@ -191,7 +209,10 @@ def main() -> None:
     plain = lt.GbifCache(ROOT / "results" / "linking_test" / "gbif_responses.jsonl")
     hint_cache, llm_cache = Cache(OUT / "gbif_hinted.jsonl"), Cache(OUT / "llm_calls.jsonl")
     client, spend = None, []
-    if not a.no_llm:
+    if not a.no_llm and a.model.startswith("gemini"):
+        import gemini_backend as gb
+        client = gb.make_client(os.environ["GEMINI_API_KEY"])
+    elif not a.no_llm:
         import anthropic
         client = anthropic.Anthropic(api_key=os.environ["EVAL_ANTHROPIC_API_KEY"], max_retries=4)
 
@@ -237,7 +258,7 @@ def main() -> None:
     (OUT / "REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     (OUT / "config.json").write_text(json.dumps({
         "written_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "run": RUN, "versions": VERSIONS,
-        "llm_model": a.model, "llm_effort": "medium", "llm_system": LLM_SYSTEM, "llm_schema": LLM_SCHEMA,
+        "llm_model": a.model, "llm_effort": None if a.model.startswith("gemini") else "medium", "llm_system": LLM_SYSTEM, "llm_schema": LLM_SCHEMA,
         "gbif_hinted_params": "name, kingdom=Animalia, verbose=true; single accepted Aves record at the form's rank",
         "new_llm_usd": round(sum(spend), 4)}, indent=2), encoding="utf-8")
     print("\n".join(lines))

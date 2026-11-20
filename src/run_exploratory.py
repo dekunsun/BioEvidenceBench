@@ -46,7 +46,8 @@ from score import load_gold, norm_value, score_run_detail
 MODEL = "claude-opus-5-5"
 # $ per million tokens (input, output), Claude API pricing 2026-11
 PRICES = {"claude-opus-5-5": (4.0, 20.0), "claude-sonnet-5-5": (2.0, 10.0), "claude-haiku-5-5": (0.10, 0.50),
-          "claude-fable-5-2": (8.0, 40.0)}
+          "claude-fable-5-2": (8.0, 40.0),
+          "gemini-4-carbon": (2.0, 10.0)}   # sync, promo price to 2026-11-30 (gemini_backend.PRICES)
 RESULTS = ROOT / "results"
 IMAGES = ROOT / "data" / "cache" / "images"
 _OPENING = SYSTEM.split("\n\n", 1)[0]
@@ -129,13 +130,17 @@ def load_pages(which: str) -> pd.DataFrame:
     return pd.read_csv(DATA / "sample_split.csv").query("split == 'test'")
 
 
-def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL, which: str = "test") -> None:
-    import anthropic
+def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL, which: str = "test",
+        limit_pages: int = 0) -> None:
     opening, task, schema, use_img, use_text = CONDS[cond]
     system = opening + "\n\n" + _DEFS
     pages = load_pages(which)
+    if limit_pages:                     # pilot: the first N pages of each book, in sample order
+        pages = pages.groupby("book", group_keys=False).head((limit_pages + 1) // 2).head(limit_pages)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
     short = "" if model == MODEL else "_" + model.removeprefix("claude-")
+    if limit_pages:
+        short += f"_pilot{limit_pages}"
     run_id = f"{stamp}_explore_{cond}{short}" + ("_pcas" if which == "pcas" else "")
     out = RESULTS / run_id
     (out / "prompts").mkdir(parents=True)
@@ -144,8 +149,55 @@ def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL, whic
     (out / "prompts" / "schema.json").write_text(json.dumps(schema, indent=2), encoding="utf-8")
     versions = versions if use_text else ["image"]
     jobs = [(int(p.PageID), p.book, v) for p in pages.itertuples() for v in versions]
-    client = anthropic.Anthropic(api_key=os.environ["EVAL_ANTHROPIC_API_KEY"], max_retries=4)
+    gemini = model.startswith("gemini")
+    if gemini:
+        import gemini_backend as gb
+        client = gb.make_client(os.environ["GEMINI_API_KEY"])
+    else:
+        import anthropic
+        client = anthropic.Anthropic(api_key=os.environ["EVAL_ANTHROPIC_API_KEY"], max_retries=4)
     spent = []
+
+    def one_gemini(job):
+        """Same prompt text, image and schema as the Claude path; sync generateContent with the JSON
+        schema enforced (the Batch API did not enforce it, gemini_backend.py). Thinking: model default."""
+        from google.genai import types
+        pid, book, v = job
+        if sum(spent) > max_usd:
+            return {"page_id": pid, "version": v, "error": "cap reached, not sent"}
+        parts = []
+        if use_img:
+            b = base64.b64decode(image_block(pid)["source"]["data"])
+            parts.append(types.Part.from_bytes(data=b, mime_type="image/jpeg"))
+        text = text_path(v, pid).read_text(encoding="utf-8") if use_text else ""
+        parts.append(types.Part.from_text(text=task.format(numbered_text=number_lines(text)) if use_text else task))
+        rec = {"page_id": pid, "book": book, "version": v, "condition": cond, "model": model,
+               "sent_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+        cfg = types.GenerateContentConfig(system_instruction=system, response_mime_type="application/json",
+                                          response_json_schema=schema, max_output_tokens=gb.MAX_OUTPUT_TOKENS)
+        for attempt in (1, 2):
+            try:
+                resp = client.models.generate_content(model=model, contents=[types.Content(role="user", parts=parts)],
+                                                      config=cfg)
+                d = resp.model_dump(mode="json", exclude_none=True)
+                usage = gb.usage_from(d.get("usage_metadata"))
+                usd = gb.cost_of(usage, model, batch=False)
+                spent.append(usd)
+                cands = d.get("candidates") or []
+                raw = gb._answer_text(d)
+                rec |= {"raw": raw, "stop_reason": cands[0].get("finish_reason") if cands else None,
+                        "usd": round(usd, 5), "attempts": attempt, "usage": usage,
+                        "model_version": d.get("model_version")}
+                rec.pop("error", None)
+                parsed, dev = gb.check_shape(json.loads(raw), schema)
+                rec["schema_deviation"] = dev
+                if parsed is None:
+                    raise ValueError(dev)
+                rec["parsed"] = parsed
+                return rec
+            except Exception as e:                     # one retry, as in the frozen runs
+                rec["error"] = repr(e)[:500]
+        return rec
 
     def one(job):
         pid, book, v = job
@@ -176,12 +228,16 @@ def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL, whic
         return rec
 
     with ThreadPoolExecutor(4) as ex:
-        recs = list(ex.map(one, jobs))
+        recs = list(ex.map(one_gemini if gemini else one, jobs))
     with (out / "outputs.jsonl").open("w", encoding="utf-8") as f:
         for r in recs:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
-    cfg = {"run_id": run_id, "condition": cond, "model": model, "effort": "medium", "max_tokens": 16000,
-           "versions": versions, "pages": which, "base_prompt_version": PROMPT_VERSION,
+    cfg = {"run_id": run_id, "condition": cond, "model": model,
+           "effort": None if gemini else "medium", "max_tokens": None if gemini else 16000,
+           "versions": versions, "pages": which, "limit_pages": limit_pages,
+           "base_prompt_version": PROMPT_VERSION,
+           "api": ("Gemini generateContent, sync, response_json_schema enforced, thinking = model default, "
+                   "max_output_tokens 32768" if gemini else "Anthropic Messages, sync, effort medium"),
            "exploratory": True, "requests": len(jobs), "usd_total": round(sum(spent), 4),
            "errors": sum(1 for r in recs if r.get("error") and not r.get("parsed")),
            "stop_reasons": dict(Counter(r.get("stop_reason") for r in recs))}
@@ -263,7 +319,7 @@ def score_all() -> None:
         rows += bag_scores(base[(base.version == v) & (base.condition == "G1")], gold, f"G1 · {v}")
     for d in sorted(RESULTS.glob("*_explore_*")):
         cfg = json.loads((d / "config.json").read_text())
-        if cfg.get("pages", "test") != "test":     # PCAS runs are scored by src/score_pcas.py
+        if cfg.get("pages", "test") != "test" or cfg.get("limit_pages"):   # PCAS: score_pcas.py; pilots skipped
             continue
         m = pd.read_csv(d / "test_mentions.csv")
         cond = cfg["condition"] + ("" if cfg["model"] == MODEL else f" [{cfg['model'].removeprefix('claude-')}]")
@@ -304,11 +360,12 @@ def main() -> None:
     ap.add_argument("--score", action="store_true")
     ap.add_argument("--model", default=MODEL, choices=list(PRICES))
     ap.add_argument("--pages", default="test", choices=["test", "pcas"])
+    ap.add_argument("--limit-pages", type=int, default=0, help="pilot on the first N pages (half per book)")
     a = ap.parse_args()
     if a.score:
         score_all()
     elif a.cond:
-        run(a.cond, a.versions.split(","), a.max_usd, a.model, a.pages)
+        run(a.cond, a.versions.split(","), a.max_usd, a.model, a.pages, a.limit_pages)
     else:
         sys.exit("--cond or --score")
 

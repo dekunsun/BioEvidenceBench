@@ -1,0 +1,1 @@
+Extract all mentions from the page in the image, in reading order. For each mention give its field and its value as printed.

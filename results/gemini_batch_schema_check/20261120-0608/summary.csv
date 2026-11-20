@@ -1,0 +1,7 @@
+mode,page_id,finish,follows_schema,deviation,top_level_type,prompt_tokens,thought_tokens,usd
+sync,8992582,STOP,True,,dict,2981,2632,0.0363
+sync,8992601,STOP,True,,dict,3016,0,0.0128
+sync,8992612,STOP,True,,dict,2687,804,0.0301
+batch,8992582,STOP,False,bare_array,list,2814,4656,0.0281
+batch,8992601,STOP,False,bare_array,list,2849,3437,0.0223
+batch,8992612,STOP,False,bare_array,list,2520,2727,0.022

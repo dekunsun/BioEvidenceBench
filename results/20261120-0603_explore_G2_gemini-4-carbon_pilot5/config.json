@@ -1,0 +1,21 @@
+{
+  "run_id": "20261120-0603_explore_G2_gemini-4-carbon_pilot5",
+  "condition": "G2",
+  "model": "gemini-4-carbon",
+  "effort": null,
+  "max_tokens": null,
+  "versions": [
+    "legacy"
+  ],
+  "pages": "test",
+  "limit_pages": 5,
+  "base_prompt_version": "p4-guide-v0.6",
+  "api": "Gemini generateContent, sync, response_json_schema enforced, thinking = model default, max_output_tokens 32768",
+  "exploratory": true,
+  "requests": 5,
+  "usd_total": 0.2763,
+  "errors": 0,
+  "stop_reasons": {
+    "STOP": 5
+  }
+}

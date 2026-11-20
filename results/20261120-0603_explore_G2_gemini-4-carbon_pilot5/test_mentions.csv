@@ -1,0 +1,125 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score,quote_value,repaired
+8992328,legacy,G2,0,locality,17,Kent,False,Kent,exact,433,437,100.0,Kent,False
+8992328,legacy,G2,1,vernacular,21,hawthorn,False,hawthorn,exact,623,631,100.0,hawthorn,False
+8992328,legacy,G2,2,vernacular,31,Red-backed Shrike,False,Red-backed Shrike,exact,899,916,100.0,Red-backed Shrike,False
+8992328,legacy,G2,3,locality,33,Maidstone,False,Maidstone,exact,960,969,100.0,Maidstone,False
+8992328,legacy,G2,4,vernacular,39,Greenfinch,False,Greenfinch,exact,1210,1220,100.0,Greenfinch,False
+8992328,legacy,G2,5,vernacular,45,Butcher-bird,False,Butcher-bird,exact,1378,1390,100.0,Butcher-bird,False
+8992328,legacy,G2,6,vernacular,47,Shrikes,False,Shrikes,exact,1479,1486,100.0,Shrikes,False
+8992328,legacy,G2,7,vernacular,55,lizards,False,lizards,exact,1793,1800,100.0,lizards,False
+8992328,legacy,G2,8,vernacular,55,mice,False,mice,exact,1806,1810,100.0,mice,False
+8992328,legacy,G2,9,vernacular,59,Red-backed Shrike,False,Red-backed Shrike,exact,1931,1948,100.0,Red-backed Shrike,False
+8992328,legacy,G2,10,person,65,Mathias Rausch,False,Mathias Rausch,cross_line,2144,2161,100.0,"Mathias 
+
+ Rausch",False
+8992328,legacy,G2,11,vernacular,69,Red-backed Shrike,False,Red-backed Shrike,exact,2282,2299,100.0,Red-backed Shrike,False
+8992328,legacy,G2,12,vernacular,69,Thorn-piercer,False,Thorn-piercer,exact,2303,2316,100.0,Thorn-piercer,False
+8992328,legacy,G2,13,taxon,71,Lanius collurio,False,Lanius collurio,exact,2321,2336,100.0,Lanius collurio,False
+8992328,legacy,G2,14,locality,75,Europe,False,Europe,exact,2481,2487,100.0,Europe,False
+8992328,legacy,G2,15,vernacular,77,Red-backed Shrikes,False,Red-backed Shrikes,exact,2608,2626,100.0,Red-backed Shrikes,False
+8992328,legacy,G2,16,vernacular,81,cockroaches,False,cockroaches,exact,2702,2713,100.0,cockroaches,False
+8992328,legacy,G2,17,person,91,H. A. Macpherson,False,H. A. Macpherson,exact,3003,3019,100.0,H. A. Macpherson,False
+8992328,legacy,G2,18,vernacular,93,Woodchat,False,Woodchat,exact,3099,3107,100.0,Woodchat,False
+8992328,legacy,G2,19,vernacular,93,Great Grey Shrikes,False,Great Grey Shrikes,exact,3113,3131,100.0,Great Grey Shrikes,False
+8992379,legacy,G2,0,locality,5,Berwickshire,False,Berwickshire,exact,36,48,100.0,Berwickshire,False
+8992379,legacy,G2,1,locality,5,Yorkshire,False,Yorkshire,exact,58,67,100.0,Yorkshire,False
+8992379,legacy,G2,2,locality,5,Scarborough,False,Scarborough,exact,96,107,100.0,Scarborough,False
+8992379,legacy,G2,3,date,5,"October 23rd, 1889",False,"October 23rd, 1889",cross_line,109,130,100.0,"October 
+
+ 23rd, 1889",False
+8992379,legacy,G2,4,date,7,1887,False,1887,exact,182,186,100.0,1887,False
+8992379,legacy,G2,5,locality,9,Wells,False,Wells,exact,223,228,100.0,Wells,False
+8992379,legacy,G2,6,date,9,1900,False,1900,exact,232,236,100.0,1900,False
+8992379,legacy,G2,7,date,9,1904,False,1904,exact,265,269,100.0,1904,False
+8992379,legacy,G2,8,date,11,1905,False,1905,exact,286,290,100.0,1905,False
+8992379,legacy,G2,9,date,11,1906,False,1906,exact,302,306,100.0,1906,False
+8992379,legacy,G2,10,locality,11,Norfolk,False,Norfolk,exact,317,324,100.0,Norfolk,False
+8992379,legacy,G2,11,locality,11,Yorkshire,False,Yorkshire,exact,346,355,100.0,Yorkshire,False
+8992379,legacy,G2,12,date,13,1907,False,1907,exact,362,366,100.0,1907,False
+8992379,legacy,G2,13,locality,13,Cheshire,False,Cheshire,exact,372,380,100.0,Cheshire,False
+8992379,legacy,G2,14,date,13,June 1903,False,June 1903,exact,397,406,100.0,June 1903,False
+8992379,legacy,G2,15,locality,13,Shetlands,False,Shetlands,exact,416,425,100.0,Shetlands,False
+8992379,legacy,G2,16,date,15,1906,False,1906,exact,465,469,100.0,1906,False
+8992379,legacy,G2,17,vernacular,15,Flycatcher,False,Flycatcher,exact,514,524,100.0,Flycatcher,False
+8992379,legacy,G2,18,vernacular,27,Robin,False,Robin,exact,896,901,100.0,Robin,False
+8992379,legacy,G2,19,person,27,Seebohm,False,Seebohm,exact,907,914,100.0,Seebohm,False
+8992379,legacy,G2,20,vernacular,29,Robins,False,Robins,exact,983,989,100.0,Robins,False
+8992379,legacy,G2,21,vernacular,31,Flycatchers,False,Flycatchers,exact,1001,1012,100.0,Flycatchers,False
+8992379,legacy,G2,22,vernacular,33,Red-breasted Flycatcher,False,Red-breasted Flycatcher,exact,1131,1154,100.0,Red-breasted Flycatcher,False
+8992379,legacy,G2,23,taxon,55,M. mituita,False,M. minuta,exact,1922,1932,100.0,M. mituita,True
+8992379,legacy,G2,24,taxon,57,M. leucura,False,M. leucura,exact,1993,2003,100.0,M. leucura,False
+8992379,legacy,G2,25,taxon,59,M. parva,False,M. parva,exact,2070,2078,100.0,M. parva,False
+8992379,legacy,G2,26,taxon,61,M. hyperythra,False,M. hyperythra,exact,2149,2162,100.0,M. hyperythra,False
+8992379,legacy,G2,27,taxon,69,Munia atricapilla,False,Munia atricapilla,cross_line,2420,2440,100.0,"Munia 
+
+ atricapilla",False
+8992379,legacy,G2,28,date,71,1887,False,1887,exact,2478,2482,100.0,1887,False
+8992379,legacy,G2,29,date,75,spring of 1896,False,spring of 1896,exact,2610,2624,100.0,spring of 1896,False
+8992379,legacy,G2,30,taxon,75,Quelea quelea,False,Quelea quelea,exact,2657,2670,100.0,Quelea quelea,False
+8992379,legacy,G2,31,taxon,77,Q. ri<sst,False,Q. russi,exact,2706,2715,100.0,Q. ri<sst,True
+8992379,legacy,G2,32,vernacular,79,Cardinal,False,Cardinal,exact,2794,2802,100.0,Cardinal,False
+8992379,legacy,G2,33,taxon,79,Paroaria ccrvicalis,False,Paroaria cervicalis,exact,2804,2823,100.0,Paroaria ccrvicalis,True
+8992379,legacy,G2,34,taxon,81,P. capiiata,False,P. capitata,exact,2861,2872,100.0,P. capiiata,True
+8992408,legacy,G2,0,person,15,H. A. Alacpherson,False,H. A. Macpherson,exact,294,311,100.0,H. A. Alacpherson,True
+8992408,legacy,G2,1,vernacular,17,Hawfinch,False,Hawfinch,exact,381,389,100.0,Hawfinch,False
+8992408,legacy,G2,2,person,19,Charles A. Witchell,False,Charles A. Witchell,exact,469,488,100.0,Charles A. Witchell,False
+8992408,legacy,G2,3,vernacular,21,Hawfinch,False,Hawfinch,exact,596,604,100.0,Hawfinch,False
+8992408,legacy,G2,4,person,23,H. A. Macpherson,False,H. A. Macpherson,exact,646,662,100.0,H. A. Macpherson,False
+8992408,legacy,G2,5,vernacular,31,Chaffinch,False,Chaffinch,exact,830,839,100.0,Chaffinch,False
+8992408,legacy,G2,6,person,33,Alexander von Home3'er,False,Alexander von Homeyer,exact,910,932,100.0,Alexander von Home3'er,True
+8992408,legacy,G2,7,vernacular,35,cherry-kernel biter,False,cherry-kernel biter,exact,983,1002,100.0,cherry-kernel biter,False
+8992408,legacy,G2,8,vernacular,41,Bullfinches,False,Bullfinches,exact,1142,1153,100.0,Bullfinches,False
+8992408,legacy,G2,9,vernacular,41,Gro.sbeaks,False,Grosbeaks,exact,1169,1179,100.0,Gro.sbeaks,True
+8992408,legacy,G2,10,vernacular,43,Grosbeaks,False,Grosbeaks,exact,1211,1220,100.0,Grosbeaks,False
+8992408,legacy,G2,11,person,45,Howard Saunders,False,Howard Saunders,exact,1296,1311,100.0,Howard Saunders,False
+8992408,legacy,G2,12,vernacular,47,Finches,False,Finches,exact,1374,1381,100.0,Finches,False
+8992408,legacy,G2,13,vernacular,47,Buntings,False,Buntings,exact,1390,1398,100.0,Buntings,False
+8992408,legacy,G2,14,vernacular,55,Finches,False,Finches,exact,1578,1585,100.0,Finches,False
+8992408,legacy,G2,15,taxon,55,Fyi>igiIIa,False,Fringilla,exact,1620,1630,100.0,Fyi>igiIIa,True
+8992408,legacy,G2,16,vernacular,57,Buntings,False,Buntings,exact,1668,1676,100.0,Buntings,False
+8992408,legacy,G2,17,taxon,59,I^ri)ioi/ln,False,Fringilla,exact,1734,1745,100.0,I^ri)ioi/ln,True
+8992408,legacy,G2,18,taxon,59,Piisser,False,Passer,exact,1765,1772,100.0,Piisser,True
+8992408,legacy,G2,19,taxon,61,Emberizina:,False,Emberizinæ,exact,1836,1847,100.0,Emberizina:,True
+8966790,legacy,G2,0,institution,17,Mus. Cuming,False,Mus. Cuming,exact,187,198,100.0,Mus. Cuming,False
+8966790,legacy,G2,1,taxon,21,BuLlMLS CiilLE.NSls,False,BULIMUS CHILENSIS,exact,205,224,100.0,BuLlMLS CiilLE.NSls,True
+8966790,legacy,G2,2,vernacular,33,Chili Bilimus,False,CHILI BULIMUS,exact,494,507,100.0,Chili Bilimus,True
+8966790,legacy,G2,3,person,49,Lesson,False,LESSON,exact,758,764,100.0,Lesson,False
+8966790,legacy,G2,4,taxon,53,Bulimics granulosus,False,Bulimus granulosus,exact,804,823,100.0,Bulimics granulosus,True
+8966790,legacy,G2,5,person,53,Broderip,False,Broderip,exact,825,833,100.0,Broderip,False
+8966790,legacy,G2,6,locality,55,Valparaiso,False,Valparaiso,exact,843,853,100.0,Valparaiso,False
+8966790,legacy,G2,7,locality,55,"Conception, Chili",False,"Conception, Chili",exact,858,875,100.0,"Conception, Chili",False
+8966790,legacy,G2,8,person,55,Cuming,False,Cuming,exact,878,884,100.0,Cuming,False
+8966790,legacy,G2,9,locality,67,mountains of Conception,False,mountains of Conception,exact,1135,1158,100.0,mountains of Conception,False
+8966790,legacy,G2,10,locality,69,Valparaiso,False,Valparaiso,exact,1216,1226,100.0,Valparaiso,False
+8966802,legacy,G2,0,vernacular,5,SLIGUTLY WRiNKLEP BiLiMLs,False,SLIGHTLY WRINKLED BULIMUS,exact,29,54,100.0,SLIGUTLY WRiNKLEP BiLiMLs,True
+8966802,legacy,G2,1,taxon,7,Pupa,False,Pupa,exact,99,103,100.0,Pupa,False
+8966802,legacy,G2,2,person,21,SowERBY,False,SOWERBY,exact,375,382,100.0,SowERBY,False
+8966802,legacy,G2,3,locality,25,Gallapagos Islands,False,Gallapagos Islands,exact,419,437,100.0,Gallapagos Islands,False
+8966802,legacy,G2,4,person,25,Cuming,False,Cuming,exact,440,446,100.0,Cuming,False
+8966802,legacy,G2,5,taxon,39,B. riigiferm,False,B. rugiferus,exact,610,622,100.0,B. riigiferm,True
+8966802,legacy,G2,6,taxon,39,Bancinii,False,Darwinii,exact,627,635,100.0,Bancinii,True
+8966802,legacy,G2,7,institution,47,Mus. Cuming,False,Mus. Cuming,exact,795,806,100.0,Mus. Cuming,False
+8966802,legacy,G2,8,taxon,51,lili.lMUS TURRlTUS,False,BULIMUS TURRITUS,exact,813,831,100.0,lili.lMUS TURRlTUS,True
+8966802,legacy,G2,9,vernacular,61,turreted Bulimus,False,turreted Bulimus,exact,1056,1072,100.0,turreted Bulimus,False
+8966802,legacy,G2,10,person,73,Broderip,False,Broderip,exact,1300,1308,100.0,Broderip,False
+8966802,legacy,G2,11,locality,77,"Tnixillo, Peni",False,"Truxillo, Peru",exact,1350,1364,100.0,"Tnixillo, Peni",True
+8966802,legacy,G2,12,person,77,Cuming,False,Cuming,exact,1386,1392,100.0,Cuming,False
+8966802,legacy,G2,13,institution,89,Mus. Cuming,False,Mus. Cuming,exact,1525,1536,100.0,Mus. Cuming,False
+8966802,legacy,G2,14,taxon,91,lUl.lMis sciLPTUKATUS,False,BULIMUS SCULPTURATUS,exact,1542,1563,100.0,lUl.lMis sciLPTUKATUS,True
+8966802,legacy,G2,15,vernacular,101,sculptured Bulimus,False,sculptured Bulimus,exact,1808,1826,100.0,sculptured Bulimus,False
+8966802,legacy,G2,16,person,113,I'FKUFER,False,PFEIFFER,exact,2095,2103,100.0,I'FKUFER,True
+8966802,legacy,G2,17,locality,115,Gallapagos Islands,False,Gallapagos Islands,exact,2144,2162,100.0,Gallapagos Islands,False
+8966802,legacy,G2,18,person,115,Darwin,False,Darwin,exact,2177,2183,100.0,Darwin,False
+8966802,legacy,G2,19,institution,119,Mus. Cuming,False,Mus. Cuming,exact,2203,2214,100.0,Mus. Cuming,False
+8966802,legacy,G2,20,taxon,123,lUl.mus C.4.LVUS,False,BULIMUS CALVUS,exact,2221,2237,100.0,lUl.mus C.4.LVUS,True
+8966802,legacy,G2,21,vernacular,133,bald Bulimus,False,bald Bulimus,exact,2454,2466,100.0,bald Bulimus,False
+8966802,legacy,G2,22,person,145,SowERBV,False,SOWERBY,exact,2680,2687,100.0,SowERBV,True
+8966802,legacy,G2,23,locality,149,"James' Island, Gallapagos",False,"James' Island, Gallapagos",exact,2727,2752,100.0,"James' Island, Gallapagos",False
+8966802,legacy,G2,24,person,151,Cuminc,False,Cuming,exact,2784,2790,100.0,Cuminc,True
+8966802,legacy,G2,25,taxon,157,Jc/ia/iiiella,False,Achatinella,exact,2831,2844,100.0,Jc/ia/iiiella,True
+8966802,legacy,G2,26,institution,165,Mus. Cuming,False,Mus. Cuming,exact,2888,2899,100.0,Mus. Cuming,False
+8966802,legacy,G2,27,taxon,169,Bulimus pustulosus,False,Bulimus pustulosus,exact,2906,2924,100.0,Bulimus pustulosus,False
+8966802,legacy,G2,28,vernacular,181,pustulose Bulimus,False,pustulose Bulimus,exact,3181,3198,100.0,pustulose Bulimus,False
+8966802,legacy,G2,29,person,195,BiioDEiup,False,BRODERIP,exact,3464,3473,100.0,BiioDEiup,True
+8966802,legacy,G2,30,locality,199,"Iluaseo, Chili",False,"Huasco, Chili",exact,3519,3533,100.0,"Iluaseo, Chili",True
+8966802,legacy,G2,31,person,201,Cuming,False,Cuming,exact,3573,3579,100.0,Cuming,False
