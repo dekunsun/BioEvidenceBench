@@ -43,7 +43,10 @@ from prompts import FIELDS, PROMPT_VERSION, SYSTEM, number_lines
 from run_extraction import text_path
 from score import load_gold, norm_value, score_run_detail
 
-MODEL, PRICE_IN, PRICE_OUT = "claude-opus-5-5", 4.0, 20.0
+MODEL = "claude-opus-5-5"
+# $ per million tokens (input, output), Claude API pricing 2026-11
+PRICES = {"claude-opus-5-5": (4.0, 20.0), "claude-sonnet-5-5": (2.0, 10.0), "claude-haiku-5-5": (0.10, 0.50),
+          "claude-fable-5-2": (8.0, 40.0)}
 RESULTS = ROOT / "results"
 IMAGES = ROOT / "data" / "cache" / "images"
 _OPENING = SYSTEM.split("\n\n", 1)[0]
@@ -105,13 +108,14 @@ def image_block(page_id: int) -> dict:
                                          "data": base64.b64encode(buf.getvalue()).decode()}}
 
 
-def run(cond: str, versions: list[str], max_usd: float) -> None:
+def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL) -> None:
     import anthropic
     opening, task, schema, use_img, use_text = CONDS[cond]
     system = opening + "\n\n" + _DEFS
     pages = pd.read_csv(DATA / "sample_split.csv").query("split == 'test'")
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
-    run_id = f"{stamp}_explore_{cond}"
+    short = "" if model == MODEL else "_" + model.removeprefix("claude-")
+    run_id = f"{stamp}_explore_{cond}{short}"
     out = RESULTS / run_id
     (out / "prompts").mkdir(parents=True)
     (out / "prompts" / "system.txt").write_text(system, encoding="utf-8")
@@ -131,16 +135,16 @@ def run(cond: str, versions: list[str], max_usd: float) -> None:
             content.append(image_block(pid))
         text = text_path(v, pid).read_text(encoding="utf-8") if use_text else ""
         content.append({"type": "text", "text": task.format(numbered_text=number_lines(text)) if use_text else task})
-        rec = {"page_id": pid, "book": book, "version": v, "condition": cond, "model": MODEL,
+        rec = {"page_id": pid, "book": book, "version": v, "condition": cond, "model": model,
                "sent_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         for attempt in (1, 2):
             try:
-                m = client.messages.create(model=MODEL, max_tokens=16000, system=system,
+                m = client.messages.create(model=model, max_tokens=16000, system=system,
                                            messages=[{"role": "user", "content": content}],
                                            output_config={"effort": "medium",
                                                           "format": {"type": "json_schema", "schema": schema}})
                 raw = "".join(b.text for b in m.content if b.type == "text")
-                usd = (m.usage.input_tokens * PRICE_IN + m.usage.output_tokens * PRICE_OUT) / 1e6
+                usd = (m.usage.input_tokens * PRICES[model][0] + m.usage.output_tokens * PRICES[model][1]) / 1e6
                 spent.append(usd)
                 rec |= {"raw": raw, "stop_reason": m.stop_reason, "usd": round(usd, 5), "attempts": attempt,
                         "usage": {"input_tokens": m.usage.input_tokens, "output_tokens": m.usage.output_tokens}}
@@ -155,7 +159,7 @@ def run(cond: str, versions: list[str], max_usd: float) -> None:
     with (out / "outputs.jsonl").open("w", encoding="utf-8") as f:
         for r in recs:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
-    cfg = {"run_id": run_id, "condition": cond, "model": MODEL, "effort": "medium", "max_tokens": 16000,
+    cfg = {"run_id": run_id, "condition": cond, "model": model, "effort": "medium", "max_tokens": 16000,
            "versions": versions, "pages": "test", "base_prompt_version": PROMPT_VERSION,
            "exploratory": True, "requests": len(jobs), "usd_total": round(sum(spent), 4),
            "errors": sum(1 for r in recs if r.get("error") and not r.get("parsed")),
@@ -231,10 +235,11 @@ def score_all() -> None:
         rows += bag_scores(base[(base.version == v) & (base.condition == "G1")], gold, f"G1 · {v}")
     for d in sorted(RESULTS.glob("*_explore_*")):
         m = pd.read_csv(d / "test_mentions.csv")
-        cond = json.loads((d / "config.json").read_text())["condition"]
+        cfg = json.loads((d / "config.json").read_text())
+        cond = cfg["condition"] + ("" if cfg["model"] == MODEL else f" [{cfg['model'].removeprefix('claude-')}]")
         for v, mv in m.groupby("version"):
             rows += bag_scores(mv, gold, f"{cond} · {v}")
-            if cond != "V1":
+            if not cond.startswith("V1"):
                 pos.append((d.name, cond, v, mv))
     bag = pd.DataFrame(rows)
     out = RESULTS / "exploratory_conditions"
@@ -267,11 +272,12 @@ def main() -> None:
     ap.add_argument("--versions", default="legacy")
     ap.add_argument("--max-usd", type=float, default=5.0)
     ap.add_argument("--score", action="store_true")
+    ap.add_argument("--model", default=MODEL, choices=list(PRICES))
     a = ap.parse_args()
     if a.score:
         score_all()
     elif a.cond:
-        run(a.cond, a.versions.split(","), a.max_usd)
+        run(a.cond, a.versions.split(","), a.max_usd, a.model)
     else:
         sys.exit("--cond or --score")
 

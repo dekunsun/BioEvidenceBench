@@ -37,7 +37,9 @@ from score import char_map, load_gold, map_span, page_text, score_run_detail
 OUT = ROOT / "results" / "linking_variants"
 RUN = "20261119-2052_claude-opus-5-5_test_batch"
 VERSIONS = ["expert", "modern_dots-mocr", "legacy"]
-MODEL, PRICES = "claude-opus-5-5", (4.0, 20.0)       # USD per MTok in / out (run_extraction.PRICES)
+MODEL = "claude-opus-5-5"
+PRICE = {"claude-opus-5-5": (4.0, 20.0), "claude-sonnet-5-5": (2.0, 10.0),   # USD per MTok in / out
+         "claude-haiku-5-5": (0.10, 0.50), "claude-fable-5-2": (8.0, 40.0)}
 BOOK_TITLE = "Butler, Birds of Great Britain and Ireland, vol. 2 (1907)"
 
 LLM_SYSTEM = """You link taxon names printed in a historical natural-history book to the name in current use.
@@ -135,12 +137,12 @@ def gbif_hinted(name: str, rank: str, cache: Cache) -> dict:
     return pick[0] if pick else r
 
 
-def llm_link(client, name: str, around: str, prev: str, cache: Cache, spend: list) -> dict:
+def llm_link(client, name: str, around: str, prev: str, cache: Cache, spend: list, model: str = MODEL) -> dict:
     user = (f"Book: {BOOK_TITLE}\n\nPrinted name (as read): {name}\n\n<previous_page_end>\n{prev}\n"
             f"</previous_page_end>\n\n<text_around_the_name>\n{around}\n</text_around_the_name>")
 
     def call():
-        m = client.messages.create(model=MODEL, max_tokens=4000, system=LLM_SYSTEM,
+        m = client.messages.create(model=model, max_tokens=4000, system=LLM_SYSTEM,
                                    messages=[{"role": "user", "content": user}],
                                    output_config={"effort": "medium",
                                                   "format": {"type": "json_schema", "schema": LLM_SCHEMA}})
@@ -148,11 +150,11 @@ def llm_link(client, name: str, around: str, prev: str, cache: Cache, spend: lis
         u = m.usage
         return {"answer": json.loads(text), "input_tokens": u.input_tokens, "output_tokens": u.output_tokens,
                 "stop_reason": m.stop_reason, "model": m.model}
-    key = json.dumps([name, around, prev], ensure_ascii=False)
+    key = json.dumps([name, around, prev] + ([] if model == MODEL else [model]), ensure_ascii=False)
     fresh = key not in cache.rows
     v = cache.get(key, call)
     if fresh:
-        spend.append((v["input_tokens"] * PRICES[0] + v["output_tokens"] * PRICES[1]) / 1e6)
+        spend.append((v["input_tokens"] * PRICE[model][0] + v["output_tokens"] * PRICE[model][1]) / 1e6)
     return v["answer"]
 
 
@@ -161,7 +163,12 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-llm", action="store_true")
     ap.add_argument("--max-usd", type=float, default=5.0)
+    ap.add_argument("--model", default=MODEL, choices=list(PRICE),
+                    help="LLM linker model; results for a non-default model go to results/linking_variants_<model>/")
     a = ap.parse_args()
+    global OUT
+    if a.model != MODEL:
+        OUT = OUT.with_name(OUT.name + "_" + a.model.removeprefix("claude-"))
     OUT.mkdir(parents=True, exist_ok=True)
     links = lt.load_links(ROOT / "gold" / "gold_links_gloria.csv")
     split = pd.read_csv(DATA / "sample_split.csv").query("split == 'test' and book == 'Butler'")
@@ -199,7 +206,7 @@ def main() -> None:
         if client is not None:
             if sum(spend) > a.max_usd:
                 raise SystemExit(f"Spend cap ${a.max_usd} reached.")
-            ans = llm_link(client, r["name"], around, prev, llm_cache, spend)
+            ans = llm_link(client, r["name"], around, prev, llm_cache, spend, a.model)
             q = (ans.get("accepted_name") or "").strip() if not ans.get("abstain") else ""
             rk = ans.get("rank") if ans.get("rank") not in (None, "unknown") else form_rank(q)
             preds["llm"] = (q, lt.summarise_response(gbif_hinted(q, rk, hint_cache)) if q
@@ -223,7 +230,7 @@ def main() -> None:
     (OUT / "REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     (OUT / "config.json").write_text(json.dumps({
         "written_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "run": RUN, "versions": VERSIONS,
-        "llm_model": MODEL, "llm_effort": "medium", "llm_system": LLM_SYSTEM, "llm_schema": LLM_SCHEMA,
+        "llm_model": a.model, "llm_effort": "medium", "llm_system": LLM_SYSTEM, "llm_schema": LLM_SCHEMA,
         "gbif_hinted_params": "name, kingdom=Animalia, verbose=true; single accepted Aves record at the form's rank",
         "new_llm_usd": round(sum(spend), 4)}, indent=2), encoding="utf-8")
     print("\n".join(lines))
