@@ -1,0 +1,86 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score,quote_value,repaired
+8967281,legacy,G2,0,taxon,9,TUEEITELLA,False,TURRITELLA,exact,35,45,100.0,TUEEITELLA,True
+8967281,legacy,G2,1,person,9,LuMorck,False,Lamarck,exact,47,54,100.0,LuMorck,True
+8967281,legacy,G2,2,taxon,37,Turritella,False,Turritella,exact,732,742,100.0,Turritella,False
+8967281,legacy,G2,3,taxon,53,Cerithium,False,Cerithium,exact,1236,1245,100.0,Cerithium,False
+8967281,legacy,G2,4,taxon,57,Turritella,False,Turritella,exact,1361,1371,100.0,Turritella,False
+8967281,legacy,G2,5,taxon,77,Turritella,False,Turritella,exact,1855,1865,100.0,Turritella,False
+8967281,legacy,G2,6,person,81,Lamarck,False,Lamarck,exact,1956,1963,100.0,Lamarck,False
+8967281,legacy,G2,7,person,83,Kiener,False,Kiener,exact,2016,2022,100.0,Kiener,False
+8967281,legacy,G2,8,person,85,Cuming,False,Cuming,exact,2100,2106,100.0,Cuming,False
+8967281,legacy,G2,9,person,85,Metcalfe,False,Metcalfe,exact,2112,2120,100.0,Metcalfe,False
+8967281,legacy,G2,10,person,87,Hanley,False,Hanley,exact,2130,2136,100.0,Hanley,False
+8967281,legacy,G2,11,person,87,Edward Belcher,False,Edward Belcher,exact,2143,2157,100.0,Edward Belcher,False
+8967281,legacy,G2,12,institution,87,British Museum,False,British Museum,exact,2163,2177,100.0,British Museum,False
+8967281,legacy,G2,13,institution,89,Banksian Collection,False,Banksian Collection,exact,2190,2209,100.0,Banksian Collection,False
+8967281,legacy,G2,14,institution,89,Linnsean Society,False,Linnæan Society,cross_line,2231,2250,100.0,"Linnsean 
+
+ Society",True
+8967281,legacy,G2,15,person,99,Lamarck,False,Lamarck,exact,2424,2431,100.0,Lamarck,False
+8967281,legacy,G2,16,person,99,Deshayes,False,Deshayes,exact,2433,2441,100.0,Deshayes,False
+8967281,legacy,G2,17,person,99,Kiener,False,Kiener,exact,2446,2452,100.0,Kiener,False
+8967281,legacy,G2,18,institution,103,Linnsan Society of London,False,Linnæan Society of London,exact,2558,2583,100.0,Linnsan Society of London,True
+8967281,legacy,G2,19,taxon,105,Turbo acutangulus,False,Turbo acutangulus,exact,2592,2609,100.0,Turbo acutangulus,False
+8967281,legacy,G2,20,person,105,Linn.-Bus,False,Linnæus,exact,2613,2622,100.0,Linn.-Bus,True
+8967281,legacy,G2,21,taxon,107,T. duplicat/is,False,T. duplicatus,exact,2663,2677,100.0,T. duplicat/is,True
+8967281,legacy,G2,22,person,109,Deshayes,False,Deshayes,exact,2721,2729,100.0,Deshayes,False
+8967281,legacy,G2,23,taxon,109,Turbo variega- tm,False,Turbo variegatus,cross_line,2755,2775,100.0,"Turbo variega- 
+
+ tm",True
+8967281,legacy,G2,24,taxon,121,Turbo iuibricaltis,False,Turbo imbricatus,exact,2913,2931,100.0,Turbo iuibricaltis,True
+8967281,legacy,G2,25,taxon,123,Turbo ungulinus,False,Turbo ungulinus,exact,3004,3019,100.0,Turbo ungulinus,False
+8967281,legacy,G2,26,person,125,Linnajus,False,Linnæus,exact,3026,3034,100.0,Linnajus,True
+8967281,legacy,G2,27,person,125,Lamarck,False,Lamarck,exact,3063,3070,100.0,Lamarck,False
+8967281,legacy,G2,28,taxon,125,Turritella fuscata,False,Turritella fuscata,cross_line,3073,3094,100.0,"Turritella 
+
+ fuscata",False
+8967281,legacy,G2,29,taxon,127,Turbo terebra,False,Turbo terebra,exact,3116,3129,100.0,Turbo terebra,False
+8967281,legacy,G2,30,person,127,"Linn,",False,Linn.,exact,3131,3136,100.0,"Linn,",False
+8967281,legacy,G2,31,person,129,Montagu,False,Montagu,exact,3183,3190,100.0,Montagu,False
+8967281,legacy,G2,32,taxon,131,T. cornea,False,T. cornea,exact,3221,3230,100.0,T. cornea,False
+8967281,legacy,G2,33,person,131,Lamarck,False,Lamarck,exact,3234,3241,100.0,Lamarck,False
+8967281,legacy,G2,34,taxon,135,Turritella brevialis,False,Turritella brevialis,exact,3251,3271,100.0,Turritella brevialis,False
+8967281,legacy,G2,35,person,135,Lamarck,False,Lamarck,exact,3275,3282,100.0,Lamarck,False
+8967281,legacy,G2,36,vernacular,135,LeMesal,False,Le Mesal,exact,3284,3291,100.0,LeMesal,True
+8967281,legacy,G2,37,person,135,Adaiison,False,Adanson,exact,3295,3303,100.0,Adaiison,True
+8967281,legacy,G2,38,person,137,Gray,False,Gray,exact,3361,3365,100.0,Gray,False
+8967281,legacy,G2,39,taxon,139,Mesalia,False,Mesalia,exact,3385,3392,100.0,Mesalia,False
+8967281,legacy,G2,40,taxon,141,Turritella lactea,False,Turritella lactea,exact,3427,3444,100.0,Turritella lactea,False
+8967281,legacy,G2,41,person,141,Moller,False,Moller,exact,3448,3454,100.0,Moller,False
+8967281,legacy,G2,42,institution,143,Cumingian collection,False,Cumingian collection,exact,3502,3522,100.0,Cumingian collection,False
+8967281,legacy,G2,43,person,145,Gray,False,Gray,exact,3569,3573,100.0,Gray,False
+8967281,legacy,G2,44,taxon,147,Eglisia,False,Eglisia,exact,3614,3621,100.0,Eglisia,False
+8967281,legacy,G2,45,taxon,147,Turritella spirata,False,Turritella spirata,exact,3638,3656,100.0,Turritella spirata,False
+8967281,legacy,G2,46,person,151,Cuming,False,Cuming,exact,3745,3751,100.0,Cuming,False
+8967281,legacy,G2,47,locality,151,Philippine Islands,False,Philippine Islands,exact,3766,3784,100.0,Philippine Islands,False
+8967281,legacy,G2,48,taxon,155,Turritella,False,Turritellæ,exact,3794,3804,100.0,Turritella,True
+8967281,legacy,G2,49,taxon,159,T. cornea,False,T. cornea,exact,3910,3919,100.0,T. cornea,False
+8967281,legacy,G2,50,locality,159,Shetland Islands,False,Shetland Islands,exact,3955,3971,100.0,Shetland Islands,False
+8967281,legacy,G2,51,person,161,M'Andrew,False,M'Andrew,exact,3982,3990,100.0,M'Andrew,False
+8967281,legacy,G2,52,locality,167,Mediterranean,False,Mediterranean,exact,4172,4185,100.0,Mediterranean,False
+8967281,legacy,G2,53,locality,169,Eastern Seas,False,Eastern Seas,exact,4222,4234,100.0,Eastern Seas,False
+8967281,legacy,G2,54,locality,169,shores of Central America,False,shores of Central America,exact,4243,4268,100.0,shores of Central America,False
+8967281,legacy,G2,55,locality,171,New Zealand,False,New Zealand,exact,4304,4315,100.0,New Zealand,False
+8967281,legacy,G2,56,locality,171,Australia,False,Australia,exact,4317,4326,100.0,Australia,False
+8967281,legacy,G2,57,locality,173,Van Pieman's Land,False,Van Dieman's Land,exact,4335,4352,100.0,Van Pieman's Land,True
+8967281,legacy,G2,58,institution,177,Mus. Cuming,False,Mus. Cuming,exact,4370,4381,100.0,Mus. Cuming,False
+8967281,legacy,G2,59,taxon,179,Turritella ingulina,False,Turritella ungulina,exact,4387,4406,100.0,Turritella ingulina,True
+8967281,legacy,G2,60,vernacular,189,nail-bkuised Turritella,False,nail-bruised Turritella,exact,4649,4672,100.0,nail-bkuised Turritella,True
+8967281,legacy,G2,61,taxon,199,Turbo ungulinus,False,Turbo ungulinus,exact,4896,4911,100.0,Turbo ungulinus,False
+8967281,legacy,G2,62,person,199,LinuKus,False,Linnæus,exact,4913,4920,100.0,LinuKus,True
+8967281,legacy,G2,63,taxon,203,Turritella fuscata,False,Turritella fuscata,exact,4959,4977,100.0,Turritella fuscata,False
+8967281,legacy,G2,64,person,203,Lamarck,False,Lamarck,exact,4979,4986,100.0,Lamarck,False
+8967281,legacy,G2,65,locality,205,"Senegal, Mouth of the Gambia, West Africa",False,"Senegal, Mouth of the Gambia, West Africa",exact,4996,5037,100.0,"Senegal, Mouth of the Gambia, West Africa",False
+8967281,legacy,G2,66,person,209,Linnseus,False,Linnæus,exact,5078,5086,100.0,Linnseus,True
+8967281,legacy,G2,67,taxon,211,Turbo ungulinus,False,Turbo ungulinus,exact,5110,5125,100.0,Turbo ungulinus,False
+8967281,legacy,G2,68,institution,213,Linnaeau Society of Loudon,False,Linnæan Society of London,exact,5167,5193,100.0,Linnaeau Society of Loudon,True
+8967281,legacy,G2,69,person,215,Hanley,False,Hanley,exact,5214,5220,100.0,Hanley,False
+8967281,legacy,G2,70,person,215,Lamarck,False,Lamarck,exact,5252,5259,100.0,Lamarck,False
+8967281,legacy,G2,71,taxon,215,T. fuscata,False,T. fuscata,cross_line,5262,5275,100.0,"T. 
+
+ fuscata",False
+8967281,legacy,G2,72,locality,217,Seas of Europe,False,Seas of Europe,exact,5292,5306,100.0,Seas of Europe,False
+8967281,legacy,G2,73,person,219,Pulteney,False,Pulteney,exact,5365,5373,100.0,Pulteney,False
+8967281,legacy,G2,74,person,221,Deshayes,False,Deshayes,exact,5394,5402,100.0,Deshayes,False
+8967281,legacy,G2,75,taxon,223,Turritella,False,Turritella,exact,5450,5460,100.0,Turritella,False
+8967281,legacy,G2,76,locality,223,Mediterranean,False,Mediterranean,exact,5483,5496,100.0,Mediterranean,False

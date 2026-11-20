@@ -131,7 +131,7 @@ def load_pages(which: str) -> pd.DataFrame:
 
 
 def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL, which: str = "test",
-        limit_pages: int = 0) -> None:
+        limit_pages: int = 0, page_ids: list[int] | None = None) -> None:
     opening, task, schema, use_img, use_text = CONDS[cond]
     system = opening + "\n\n" + _DEFS
     pages = load_pages(which)
@@ -141,6 +141,9 @@ def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL, whic
     short = "" if model == MODEL else "_" + model.removeprefix("claude-")
     if limit_pages:
         short += f"_pilot{limit_pages}"
+    if page_ids:                        # diagnostic resend of named pages; never scored
+        pages = pages[pages.PageID.isin(page_ids)]
+        short += "_diag"
     run_id = f"{stamp}_explore_{cond}{short}" + ("_pcas" if which == "pcas" else "")
     out = RESULTS / run_id
     (out / "prompts").mkdir(parents=True)
@@ -234,7 +237,7 @@ def run(cond: str, versions: list[str], max_usd: float, model: str = MODEL, whic
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     cfg = {"run_id": run_id, "condition": cond, "model": model,
            "effort": None if gemini else "medium", "max_tokens": None if gemini else 16000,
-           "versions": versions, "pages": which, "limit_pages": limit_pages,
+           "versions": versions, "pages": which, "limit_pages": limit_pages, "page_ids": page_ids,
            "base_prompt_version": PROMPT_VERSION,
            "api": ("Gemini generateContent, sync, response_json_schema enforced, thinking = model default, "
                    "max_output_tokens 32768" if gemini else "Anthropic Messages, sync, effort medium"),
@@ -319,7 +322,7 @@ def score_all() -> None:
         rows += bag_scores(base[(base.version == v) & (base.condition == "G1")], gold, f"G1 · {v}")
     for d in sorted(RESULTS.glob("*_explore_*")):
         cfg = json.loads((d / "config.json").read_text())
-        if cfg.get("pages", "test") != "test" or cfg.get("limit_pages"):   # PCAS: score_pcas.py; pilots skipped
+        if cfg.get("pages", "test") != "test" or cfg.get("limit_pages") or cfg.get("page_ids"):  # PCAS: score_pcas.py; pilots, diagnostics skipped
             continue
         m = pd.read_csv(d / "test_mentions.csv")
         cond = cfg["condition"] + ("" if cfg["model"] == MODEL else f" [{cfg['model'].removeprefix('claude-')}]")
@@ -361,11 +364,13 @@ def main() -> None:
     ap.add_argument("--model", default=MODEL, choices=list(PRICES))
     ap.add_argument("--pages", default="test", choices=["test", "pcas"])
     ap.add_argument("--limit-pages", type=int, default=0, help="pilot on the first N pages (half per book)")
+    ap.add_argument("--page-ids", default="", help="diagnostic: resend only these page ids (comma-separated); not scored")
     a = ap.parse_args()
     if a.score:
         score_all()
     elif a.cond:
-        run(a.cond, a.versions.split(","), a.max_usd, a.model, a.pages, a.limit_pages)
+        run(a.cond, a.versions.split(","), a.max_usd, a.model, a.pages, a.limit_pages,
+            [int(x) for x in a.page_ids.split(",") if x] or None)
     else:
         sys.exit("--cond or --score")
 
