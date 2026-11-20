@@ -68,15 +68,26 @@ def context(pid: int, s, e, raw: bool = False) -> str:
     return f"{left} [[{readable(mid)}]] {right}"
 
 
-def make(a) -> None:
-    opus, haiku = load(a.opus), load(a.haiku)
+def build_pool(opus_run: str, haiku_run: str) -> pd.DataFrame:
+    opus, haiku = load(opus_run), load(haiku_run)
     fo = flag_auto_accept(opus, haiku)
     fh = flag_auto_accept(haiku, opus)           # Haiku mentions that Opus has no counterpart for
     fo["junk"] = fo.value.map(ocr_junk)
     fo["stratum"] = ["A" if t == 0 and not j else "B" for t, j in zip(fo.tier, fo.junk)]
     c = fh[~fh.agree].copy()
     c["stratum"], c["junk"] = "C", c.value.map(ocr_junk)
-    pool = pd.concat([fo.assign(model="opus"), c.assign(model="haiku")], ignore_index=True)
+    return pd.concat([fo.assign(model="opus"), c.assign(model="haiku")], ignore_index=True)
+
+
+def page_types() -> dict:
+    gt = pd.read_parquet(ROOT / "data" / "cache" / "gt_english.parquet", columns=["PageID", "PageTypeName"])
+    return dict(zip(gt.PageID.astype(int), gt.PageTypeName.fillna("")))
+
+
+def make(a) -> None:
+    pool = build_pool(a.opus, a.haiku)
+    (OUT).mkdir(parents=True, exist_ok=True)
+    (OUT / "runs.txt").write_text(f"{a.opus}\n{a.haiku}\n", encoding="utf-8")
     sizes = pool.stratum.value_counts().to_dict()
     picks = []
     for s, n in SIZES.items():
@@ -154,27 +165,50 @@ def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
 
 
 def score() -> None:
+    """Precision per stratum and a whole-book estimate. Scope (Gloria, 2026-11-20, GUIDE_ADDENDUM.md):
+    pages BHL types as `Index` are out of scope, so outputs there are dropped before scoring and the
+    stratum sizes are recounted without them (a page-type filter would remove them before extraction).
+    `unsure` rows are left out. Both the all-pages and the in-scope tables are written."""
     filled = sorted((OUT / "received").glob("*.xlsx"))
     if not filled:
         sys.exit(f"Put the returned sheet in {OUT / 'received'} first.")
     s = pd.read_excel(filled[-1], sheet_name="check").fillna("")
     k = pd.read_csv(OUT / "spotcheck_key.csv")
+    types = page_types()
     d = s.merge(k[["item", "stratum", "model"]], on="item")
-    d = d[d.verdict.isin(VERDICTS.split(",")) & (d.verdict != "unsure")]
-    st = pd.read_csv(OUT / "strata.csv").set_index("stratum").mentions_in_book
-    rows = []
-    for g, x in d.groupby("stratum"):
-        ok = int((x.verdict == "correct").sum())
-        lo, hi = wilson(ok, len(x))
-        rows.append({"stratum": g, "checked": len(x), "correct": ok, "precision": round(ok / len(x), 3),
-                     "lo": lo, "hi": hi, "mentions_in_book": int(st[g]),
-                     **{v: int((x.verdict == v).sum()) for v in VERDICTS.split(",")[1:-1]}})
-    t = pd.DataFrame(rows)
-    ab = t[t.stratum.isin(["A", "B"])]
-    whole = (ab.precision * ab.mentions_in_book).sum() / ab.mentions_in_book.sum()
-    lines = ["# Whole-book spot-check (exploratory)", "", t.to_markdown(index=False), "",
-             f"Opus precision on the whole book, weighted by stratum size (A+B): {whole:.3f}. "
-             "Stratum C is what Haiku found and Opus did not: `correct` there are likely Opus misses.", ""]
+    d["index_page"] = d.page_id.map(lambda p: types.get(int(p)) == "Index")
+    opus_run, haiku_run = (OUT / "runs.txt").read_text().split()
+    pool = build_pool(opus_run, haiku_run)
+    pool["index_page"] = pool.page_id.map(lambda p: types.get(int(p)) == "Index")
+    lines = ["# Whole-book spot-check (exploratory)", "",
+             f"Checked by Gloria against the scans: {int((d.verdict != '').sum())} of {len(k)} shuffled rows "
+             f"(sheet `{filled[-1].name}`). `unsure` rows are left out of precision.", ""]
+    for label, keep_index in (("All pages (as sampled)", True), ("In scope: `Index` pages excluded", False)):
+        dd = d if keep_index else d[~d.index_page]
+        pp = pool if keep_index else pool[~pool.index_page]
+        size = pp.stratum.value_counts()
+        dd = dd[dd.verdict.isin(VERDICTS.split(",")) & (dd.verdict != "unsure")]
+        rows = []
+        for g, x in dd.groupby("stratum"):
+            ok = int((x.verdict == "correct").sum())
+            lo, hi = wilson(ok, len(x))
+            rows.append({"stratum": g, "checked": len(x), "correct": ok, "precision": round(ok / len(x), 3),
+                         "lo": lo, "hi": hi, "mentions_in_book": int(size.get(g, 0)),
+                         **{v: int((x.verdict == v).sum()) for v in VERDICTS.split(",")[1:-1]}})
+        t = pd.DataFrame(rows)
+        ab = t[t.stratum.isin(["A", "B"])]
+        whole = (ab.precision * ab.mentions_in_book).sum() / ab.mentions_in_book.sum()
+        unsure = int(((d if keep_index else d[~d.index_page]).verdict == "unsure").sum())
+        lines += [f"## {label}", "", t.to_markdown(index=False), "",
+                  f"Opus precision, weighted by stratum size (A+B): {whole:.3f}; `unsure` rows left out: {unsure}. "
+                  "Stratum C is what Haiku found and Opus did not: `correct` there are Opus misses.", ""]
+    n_idx = int(pool[(pool.model == "opus") & pool.index_page].shape[0])
+    lines += [f"Opus mentions on `Index` pages (removed by the scope rule): {n_idx} of "
+              f"{int((pool.model == 'opus').sum())} outside the sample.", ""]
+    secs = pd.to_numeric(s.review_seconds, errors="coerce").dropna()
+    if len(secs):
+        lines += [f"Review time, {len(secs)} timed rows: median {secs.median():.0f} s per item "
+                  f"(range {secs.min():.0f}-{secs.max():.0f}).", ""]
     (OUT / "REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))
 
