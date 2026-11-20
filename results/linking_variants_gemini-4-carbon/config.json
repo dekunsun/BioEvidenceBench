@@ -1,0 +1,49 @@
+{
+  "written_at": "2026-11-20T08:15:59+00:00",
+  "run": "20261119-2052_claude-opus-5-5_test_batch",
+  "versions": [
+    "expert",
+    "modern_dots-mocr",
+    "legacy"
+  ],
+  "llm_model": "gemini-4-carbon",
+  "llm_effort": null,
+  "llm_system": "You link taxon names printed in a historical natural-history book to the name in current use.\nYou get the name exactly as it was read from the page (it may contain OCR errors or be abbreviated),\nthe text around it and the end of the previous page, read the same way.\nReturn the scientific name that the printed name refers to as it is accepted today, at the rank\nprinted (a species name stays a species, a genus a genus, a family a family). If the printed name\nis an old synonym, give the currently accepted name. If the genus is abbreviated, work out the genus\nfrom the context. If you cannot tell which taxon is meant, abstain: a wrong name is worse than none.",
+  "llm_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "accepted_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "rank": {
+        "type": "string",
+        "enum": [
+          "species",
+          "subspecies",
+          "genus",
+          "subfamily",
+          "family",
+          "unknown"
+        ]
+      },
+      "abstain": {
+        "type": "boolean"
+      },
+      "note": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "accepted_name",
+      "rank",
+      "abstain",
+      "note"
+    ]
+  },
+  "gbif_hinted_params": "name, kingdom=Animalia, verbose=true; single accepted Aves record at the form's rank",
+  "new_llm_usd": 0.6961
+}

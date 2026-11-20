@@ -61,7 +61,7 @@ def main() -> None:
         rows.append({
             "Run": d.name, "Role": role(d.name, rec), "Model": model,
             "Provider": rec.get("provider") or ("anthropic" if str(model).startswith("claude") else
-                                               "google" if "gemini" in str(model) else "local"),
+                                               "gemini" if "gemini" in str(model) else "local"),
             "Mode": mode, "Effort": rec.get("effort", "—"),
             "Prompt": rec.get("prompt_version") or rec.get("base_prompt_version") or "—",
             "Condition": short(conds), "Text versions": short(vers),
