@@ -1,0 +1,413 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score
+8967282,modern_mistral-ocr-openrouter,G1,0,person,3,Kiener,False,Kiener,exact,38,44,100.0
+8967282,modern_mistral-ocr-openrouter,G1,1,person,3,Linnæus,False,Linnæus,exact,141,148,100.0
+8967282,modern_mistral-ocr-openrouter,G1,2,taxon,3,T. cornea,False,T. cornea,exact,199,208,100.0
+8967282,modern_mistral-ocr-openrouter,G1,3,person,3,Lamarck,False,Lamarck,exact,211,218,100.0
+8967282,modern_mistral-ocr-openrouter,G1,4,person,3,Deshayes,False,Deshayes,exact,223,231,100.0
+8967282,modern_mistral-ocr-openrouter,G1,5,taxon,3,T. ungulina,False,T. ungulina,exact,234,245,100.0
+8967282,modern_mistral-ocr-openrouter,G1,6,institution,5,Mus. Cuming,False,Mus. Cuming,exact,327,338,100.0
+8967282,modern_mistral-ocr-openrouter,G1,7,taxon,7,TURRITELLA DUPLICATA,False,TURRITELLA DUPLICATA,exact,344,364,100.0
+8967282,modern_mistral-ocr-openrouter,G1,8,vernacular,9,DUPLICATE TURRITELLA,False,DUPLICATE TURRITELLA,exact,678,698,100.0
+8967282,modern_mistral-ocr-openrouter,G1,9,person,11,LAMARCK,False,LAMARCK,exact,1052,1059,100.0
+8967282,modern_mistral-ocr-openrouter,G1,10,person,11,Deshayes,False,Deshayes,exact,1081,1089,100.0
+8967282,modern_mistral-ocr-openrouter,G1,11,taxon,12,Turbo duplicatus,False,Turbo duplicatus,exact,1116,1132,100.0
+8967282,modern_mistral-ocr-openrouter,G1,12,person,12,Linnæus,False,Linnæus,exact,1135,1142,100.0
+8967282,modern_mistral-ocr-openrouter,G1,13,taxon,13,Turbo acutangulus,False,Turbo acutangulus,exact,1156,1173,100.0
+8967282,modern_mistral-ocr-openrouter,G1,14,person,13,Linnæus,False,Linnæus,exact,1176,1183,100.0
+8967282,modern_mistral-ocr-openrouter,G1,15,taxon,14,Turbo replicatus,False,Turbo replicatus,exact,1202,1218,100.0
+8967282,modern_mistral-ocr-openrouter,G1,16,person,14,Linnæus,False,Linnæus,exact,1221,1228,100.0
+8967282,modern_mistral-ocr-openrouter,G1,17,locality,15,Eastern Seas,False,Eastern Seas,exact,1237,1249,100.0
+8967282,modern_mistral-ocr-openrouter,G1,18,taxon,17,Turbo acutangulus,False,Turbo acutangulus,exact,1257,1274,100.0
+8967282,modern_mistral-ocr-openrouter,G1,19,person,17,Linnæus,False,Linnæus,exact,1279,1286,100.0
+8967282,modern_mistral-ocr-openrouter,G1,20,taxon,17,Turbo duplicatus,False,Turbo duplicatus,exact,1314,1330,100.0
+8967282,modern_mistral-ocr-openrouter,G1,21,institution,17,Linnaean collection,False,Linnaean collection,exact,1393,1412,100.0
+8967282,modern_mistral-ocr-openrouter,G1,22,person,17,Deshayes,False,Deshayes,exact,1449,1457,100.0
+8967282,modern_mistral-ocr-openrouter,G1,23,person,17,Kiener,False,Kiener,exact,1497,1503,100.0
+8967282,modern_mistral-ocr-openrouter,G1,24,taxon,19,Turritella duplicata,False,Turritella duplicata,exact,1590,1610,100.0
+8967282,modern_mistral-ocr-openrouter,G1,25,person,19,Linnæus,False,Linnæus,exact,1854,1861,100.0
+8967282,modern_mistral-ocr-openrouter,G1,26,taxon,19,Turbo acutangulus,False,Turbo acutangulus,exact,1865,1882,100.0
+8967282,modern_mistral-ocr-openrouter,G1,27,institution,21,Mus. Cuming,False,Mus. Cuming,exact,2086,2097,100.0
+8967282,modern_mistral-ocr-openrouter,G1,28,taxon,23,TURRITELLA TERERRA,False,TURRITELLA TERERRA,exact,2103,2121,100.0
+8967282,modern_mistral-ocr-openrouter,G1,29,vernacular,25,AUGUR TURRITELLA,False,AUGUR TURRITELLA,exact,2338,2354,100.0
+8967282,modern_mistral-ocr-openrouter,G1,30,person,27,LAMARCK,False,LAMARCK,exact,2564,2571,100.0
+8967282,modern_mistral-ocr-openrouter,G1,31,person,27,Deshayes,False,Deshayes,exact,2593,2601,100.0
+8967282,modern_mistral-ocr-openrouter,G1,32,taxon,28,Turbo terebra,False,Turbo terebra,exact,2628,2641,100.0
+8967282,modern_mistral-ocr-openrouter,G1,33,person,28,Linnæus,False,Linnæus,exact,2644,2651,100.0
+8967282,modern_mistral-ocr-openrouter,G1,34,taxon,29,Turritella Archimedis,False,Turritella Archimedis,exact,2689,2710,100.0
+8967282,modern_mistral-ocr-openrouter,G1,35,person,29,Dillwyn,False,Dillwyn,exact,2713,2720,100.0
+8967282,modern_mistral-ocr-openrouter,G1,36,person,29,Mawe,False,Mawe,exact,2722,2726,100.0
+8967282,modern_mistral-ocr-openrouter,G1,37,locality,30,Philippine Islands,False,Philippine Islands,exact,2735,2753,100.0
+8967282,modern_mistral-ocr-openrouter,G1,38,person,30,Cuming,False,Cuming,exact,2755,2761,100.0
+8967282,modern_mistral-ocr-openrouter,G1,39,person,32,Martyn,False,Martyn,exact,2843,2849,100.0
+8967282,modern_mistral-ocr-openrouter,G1,40,person,32,Cuming,False,Cuming,exact,3182,3188,100.0
+8967282,modern_mistral-ocr-openrouter,G1,41,locality,32,Island of Negros,False,Island of Negros,exact,3222,3238,100.0
+8967282,modern_mistral-ocr-openrouter,G1,42,locality,32,Philippines,False,Philippines,exact,3251,3262,100.0
+8967282,modern_mistral-ocr-openrouter,G1,43,taxon,32,T. terebra,False,T. terebra,exact,3269,3279,100.0
+8967282,modern_mistral-ocr-openrouter,G1,44,taxon,32,T. Linnei,False,T. Linnei,exact,3329,3338,100.0
+8967282,modern_mistral-ocr-openrouter,G1,45,taxon,32,ungulinus,False,ungulinus,exact,3345,3354,100.0
+8967282,modern_mistral-ocr-openrouter,G1,46,person,32,Deshayes,False,Deshayes,exact,3357,3365,100.0
+8967282,modern_mistral-ocr-openrouter,G1,47,taxon,32,T. communis,False,T. communis,exact,3368,3379,100.0
+8967282,modern_mistral-ocr-openrouter,G1,48,person,32,Philippi,False,Philippi,exact,3382,3390,100.0
+8967282,modern_mistral-ocr-openrouter,G1,49,taxon,32,T. cornea,False,T. cornea,exact,3400,3409,100.0
+8967282,modern_mistral-ocr-openrouter,G1,50,person,32,Lamarck,False,Lamarck,exact,3414,3421,100.0
+8967282,modern_mistral-ocr-openrouter,G1,51,institution,34,Mus. Cuming,False,Mus. Cuming,exact,3439,3450,100.0
+8967282,modern_mistral-ocr-openrouter,G1,52,taxon,36,TURRITELLA ATTENUATA,False,TURRITELLA ATTENUATA,exact,3456,3476,100.0
+8967282,modern_mistral-ocr-openrouter,G1,53,vernacular,38,ATTENUATED TURRITELLA,False,ATTENUATED TURRITELLA,exact,3737,3758,100.0
+8967282,modern_mistral-ocr-openrouter,G1,54,taxon,40,Turritella acutangula,False,Turritella acutangula,exact,4031,4052,100.0
+8967282,modern_mistral-ocr-openrouter,G1,55,person,40,Deshayes,False,Deshayes,exact,4055,4063,100.0
+8967282,modern_mistral-ocr-openrouter,G1,56,taxon,40,Turbo acutangulus,False,Turbo acutangulus,exact,4106,4123,100.0
+8967282,modern_mistral-ocr-openrouter,G1,57,person,40,Linn.,False,Linn.,exact,4126,4131,100.0
+8967282,modern_mistral-ocr-openrouter,G1,58,person,43,Linnæus,False,Linnæus,exact,4183,4190,100.0
+8967282,modern_mistral-ocr-openrouter,G1,59,taxon,43,Turbo acutangulus,False,Turbo acutangulus,exact,4210,4227,100.0
+8967282,modern_mistral-ocr-openrouter,G1,60,taxon,43,T. duplicatus,False,T. duplicatus,exact,4284,4297,100.0
+8967345,modern_mistral-ocr-openrouter,G1,0,taxon,5,E B U R N A,False,E B U R N A,exact,25,36,100.0
+8967345,modern_mistral-ocr-openrouter,G1,1,person,11,Crabbe,False,Crabbe,exact,245,251,100.0
+8967281,modern_mistral-ocr-openrouter,G1,0,taxon,4,TURRITELLA,False,TURRITELLA,exact,28,38,100.0
+8967281,modern_mistral-ocr-openrouter,G1,1,person,4,Lamarck.,False,Lamarck.,exact,41,49,100.0
+8967281,modern_mistral-ocr-openrouter,G1,2,taxon,10,Turritella,False,Turritella,exact,683,693,100.0
+8967281,modern_mistral-ocr-openrouter,G1,3,taxon,10,Cerithium,False,Cerithium,exact,1162,1171,100.0
+8967281,modern_mistral-ocr-openrouter,G1,4,taxon,10,Turritella,False,Turritella,exact,1282,1292,100.0
+8967281,modern_mistral-ocr-openrouter,G1,5,taxon,12,Turritella,False,Turritella,exact,1748,1758,100.0
+8967281,modern_mistral-ocr-openrouter,G1,6,person,12,Lamarck,False,Lamarck,exact,1844,1851,100.0
+8967281,modern_mistral-ocr-openrouter,G1,7,locality,12,Paris,False,Paris,exact,1889,1894,100.0
+8967281,modern_mistral-ocr-openrouter,G1,8,person,12,Kiener,False,Kiener,exact,1901,1907,100.0
+8967281,modern_mistral-ocr-openrouter,G1,9,person,12,Cuming,False,Cuming,exact,1982,1988,100.0
+8967281,modern_mistral-ocr-openrouter,G1,10,person,12,Metcalfe,False,Metcalfe,exact,1994,2002,100.0
+8967281,modern_mistral-ocr-openrouter,G1,11,person,12,Hanley,False,Hanley,exact,2008,2014,100.0
+8967281,modern_mistral-ocr-openrouter,G1,12,person,12,Edward Belcher,False,Edward Belcher,exact,2021,2035,100.0
+8967281,modern_mistral-ocr-openrouter,G1,13,institution,12,British Museum,False,British Museum,exact,2041,2055,100.0
+8967281,modern_mistral-ocr-openrouter,G1,14,institution,12,Banksian Collection,False,Banksian Collection,exact,2065,2084,100.0
+8967281,modern_mistral-ocr-openrouter,G1,15,institution,12,Linnaean Society,False,Linnaean Society,exact,2106,2122,100.0
+8967281,modern_mistral-ocr-openrouter,G1,16,person,14,Lamarck,False,Lamarck,exact,2283,2290,100.0
+8967281,modern_mistral-ocr-openrouter,G1,17,person,14,Deshayes,False,Deshayes,exact,2292,2300,100.0
+8967281,modern_mistral-ocr-openrouter,G1,18,person,14,Kiener,False,Kiener,exact,2305,2311,100.0
+8967281,modern_mistral-ocr-openrouter,G1,19,institution,14,Linnaean Society of London,False,Linnaean Society of London,exact,2409,2435,100.0
+8967281,modern_mistral-ocr-openrouter,G1,20,taxon,14,Turbo acutangulus,False,Turbo acutangulus,exact,2442,2459,100.0
+8967281,modern_mistral-ocr-openrouter,G1,21,person,14,Linnaeus,False,Linnaeus,exact,2464,2472,100.0
+8967281,modern_mistral-ocr-openrouter,G1,22,taxon,14,T. duplicatus,False,T. duplicatus,exact,2511,2524,100.0
+8967281,modern_mistral-ocr-openrouter,G1,23,person,14,Deshayes,False,Deshayes,exact,2566,2574,100.0
+8967281,modern_mistral-ocr-openrouter,G1,24,taxon,14,Turbo variegatus,False,Turbo variegatus,exact,2600,2616,100.0
+8967281,modern_mistral-ocr-openrouter,G1,25,taxon,14,Turbo imbricatus,False,Turbo imbricatus,exact,2740,2756,100.0
+8967281,modern_mistral-ocr-openrouter,G1,26,taxon,14,Turbo ungulinus,False,Turbo ungulinus,exact,2828,2843,100.0
+8967281,modern_mistral-ocr-openrouter,G1,27,person,14,Linnaeus,False,Linnaeus,exact,2848,2856,100.0
+8967281,modern_mistral-ocr-openrouter,G1,28,person,14,Lamarck,False,Lamarck,exact,2885,2892,100.0
+8967281,modern_mistral-ocr-openrouter,G1,29,taxon,14,Turritella fuscata,False,Turritella fuscata,exact,2896,2914,100.0
+8967281,modern_mistral-ocr-openrouter,G1,30,taxon,14,Turbo terebra,False,Turbo terebra,exact,2938,2951,100.0
+8967281,modern_mistral-ocr-openrouter,G1,31,person,14,Linn.,False,Linn.,exact,2954,2959,100.0
+8967281,modern_mistral-ocr-openrouter,G1,32,person,14,Montagu,False,Montagu,exact,3003,3010,100.0
+8967281,modern_mistral-ocr-openrouter,G1,33,taxon,14,T. cornea,False,T. cornea,exact,3037,3046,100.0
+8967281,modern_mistral-ocr-openrouter,G1,34,person,14,Lamarck,False,Lamarck,exact,3051,3058,100.0
+8967281,modern_mistral-ocr-openrouter,G1,35,taxon,16,Turritella brevialis,False,Turritella brevialis,exact,3066,3086,100.0
+8967281,modern_mistral-ocr-openrouter,G1,36,person,16,Lamarck,False,Lamarck,exact,3091,3098,100.0
+8967281,modern_mistral-ocr-openrouter,G1,37,person,16,Adanson,False,Adanson,exact,3114,3121,100.0
+8967281,modern_mistral-ocr-openrouter,G1,38,person,16,Gray,False,Gray,exact,3175,3179,100.0
+8967281,modern_mistral-ocr-openrouter,G1,39,taxon,16,Mesalla,False,Mesalla,exact,3197,3204,100.0
+8967281,modern_mistral-ocr-openrouter,G1,40,taxon,16,Turritella lactea,False,Turritella lactea,exact,3238,3255,100.0
+8967281,modern_mistral-ocr-openrouter,G1,41,person,16,Möller,False,Möller,exact,3260,3266,100.0
+8967281,modern_mistral-ocr-openrouter,G1,42,institution,16,Cumingian collection,False,Cumingian collection,exact,3311,3331,100.0
+8967281,modern_mistral-ocr-openrouter,G1,43,person,16,Gray,False,Gray,exact,3373,3377,100.0
+8967281,modern_mistral-ocr-openrouter,G1,44,taxon,16,Eglisia,False,Eglisia,exact,3416,3423,100.0
+8967281,modern_mistral-ocr-openrouter,G1,45,taxon,16,Turritella spirata,False,Turritella spirata,exact,3442,3460,100.0
+8967281,modern_mistral-ocr-openrouter,G1,46,person,16,Cuming,False,Cuming,exact,3540,3546,100.0
+8967281,modern_mistral-ocr-openrouter,G1,47,locality,16,Philippine Islands,False,Philippine Islands,exact,3561,3579,100.0
+8967281,modern_mistral-ocr-openrouter,G1,48,taxon,18,Turritella,False,Turritella,exact,3587,3597,100.0
+8967281,modern_mistral-ocr-openrouter,G1,49,taxon,18,T. cornea,False,T. cornea,exact,3699,3708,100.0
+8967281,modern_mistral-ocr-openrouter,G1,50,locality,18,Shetland Islands,False,Shetland Islands,exact,3744,3760,100.0
+8967281,modern_mistral-ocr-openrouter,G1,51,person,18,M’Andrew,False,M’Andrew,exact,3768,3776,100.0
+8967281,modern_mistral-ocr-openrouter,G1,52,locality,18,Mediterranean,False,Mediterranean,exact,3949,3962,100.0
+8967281,modern_mistral-ocr-openrouter,G1,53,locality,18,Eastern Seas,False,Eastern Seas,exact,3996,4008,100.0
+8967281,modern_mistral-ocr-openrouter,G1,54,locality,18,shores of Central America,False,shores of Central America,exact,4017,4042,100.0
+8967281,modern_mistral-ocr-openrouter,G1,55,locality,18,New Zealand,False,New Zealand,exact,4075,4086,100.0
+8967281,modern_mistral-ocr-openrouter,G1,56,locality,18,Australia,False,Australia,exact,4088,4097,100.0
+8967281,modern_mistral-ocr-openrouter,G1,57,locality,18,Van Dieman’s Land,False,Van Dieman’s Land,exact,4103,4120,100.0
+8967281,modern_mistral-ocr-openrouter,G1,58,institution,20,Mus. Cuming,False,Mus. Cuming,exact,4137,4148,100.0
+8967281,modern_mistral-ocr-openrouter,G1,59,taxon,22,TURRITELLA UNGULINA,False,TURRITELLA UNGULINA,exact,4155,4174,100.0
+8967281,modern_mistral-ocr-openrouter,G1,60,vernacular,24,TRE NAIL-BRUISED TURRITELLA,False,TRE NAIL-BRUISED TURRITELLA,exact,4396,4423,100.0
+8967281,modern_mistral-ocr-openrouter,G1,61,taxon,26,Turbo ungulinus,False,Turbo ungulinus,exact,4634,4649,100.0
+8967281,modern_mistral-ocr-openrouter,G1,62,person,26,Linnaeus,False,Linnaeus,exact,4652,4660,100.0
+8967281,modern_mistral-ocr-openrouter,G1,63,taxon,28,Turritella fuscata,False,Turritella fuscata,exact,4698,4716,100.0
+8967281,modern_mistral-ocr-openrouter,G1,64,person,28,Lamarck,False,Lamarck,exact,4719,4726,100.0
+8967281,modern_mistral-ocr-openrouter,G1,65,locality,30,"Senegal, Mouth of the Gambia, West Africa",False,"Senegal, Mouth of the Gambia, West Africa",exact,4736,4777,100.0
+8967281,modern_mistral-ocr-openrouter,G1,66,person,32,Linnaeus,False,Linnaeus,exact,4815,4823,100.0
+8967281,modern_mistral-ocr-openrouter,G1,67,taxon,32,Turbo ungulinus,False,Turbo ungulinus,exact,4845,4860,100.0
+8967281,modern_mistral-ocr-openrouter,G1,68,institution,32,Linnaean Society of London,False,Linnaean Society of London,exact,4900,4926,100.0
+8967281,modern_mistral-ocr-openrouter,G1,69,person,32,Hanley,False,Hanley,exact,4943,4949,100.0
+8967281,modern_mistral-ocr-openrouter,G1,70,person,32,Lamarck,False,Lamarck,exact,4981,4988,100.0
+8967281,modern_mistral-ocr-openrouter,G1,71,taxon,32,T. fuscata,False,T. fuscata,exact,4992,5002,100.0
+8967281,modern_mistral-ocr-openrouter,G1,72,locality,32,Seas of Europe,False,Seas of Europe,exact,5019,5033,100.0
+8967281,modern_mistral-ocr-openrouter,G1,73,person,32,Pulteney,False,Pulteney,exact,5085,5093,100.0
+8967281,modern_mistral-ocr-openrouter,G1,74,person,32,Deshayes,False,Deshayes,exact,5111,5119,100.0
+8967281,modern_mistral-ocr-openrouter,G1,75,taxon,32,Turritella,False,Turritella,exact,5165,5175,100.0
+8967281,modern_mistral-ocr-openrouter,G1,76,locality,32,Mediterranean,False,Mediterranean,exact,5199,5212,100.0
+8992644,modern_mistral-ocr-openrouter,G1,0,vernacular,3,Willow-Warbler,False,Willow-Warbler,exact,38,52,100.0
+8992644,modern_mistral-ocr-openrouter,G1,1,locality,3,Shetlands,False,Shetlands,exact,101,110,100.0
+8992644,modern_mistral-ocr-openrouter,G1,2,date,3,"May, 1901",False,"May, 1901",exact,114,123,100.0
+8992644,modern_mistral-ocr-openrouter,G1,3,vernacular,5,Wood-Warbler,False,Wood-Warbler,exact,130,142,100.0
+8992644,modern_mistral-ocr-openrouter,G1,4,locality,5,Isle of Man,False,Isle of Man,exact,160,171,100.0
+8992644,modern_mistral-ocr-openrouter,G1,5,date,5,May 1901 and 1905,False,May 1901 and 1905,exact,176,193,100.0
+8992644,modern_mistral-ocr-openrouter,G1,6,taxon,9,TURDIDÆ,False,TURDIDÆ,exact,210,217,100.0
+8992644,modern_mistral-ocr-openrouter,G1,7,taxon,10,SYLVIINÆ,False,SYLVIINÆ,exact,233,241,100.0
+8992644,modern_mistral-ocr-openrouter,G1,8,vernacular,12,RUFOUS WARBLER,False,RUFOUS WARBLER,exact,252,266,100.0
+8992644,modern_mistral-ocr-openrouter,G1,9,taxon,13,Aedon galactodes,False,Aedon galactodes,exact,272,288,100.0
+8992644,modern_mistral-ocr-openrouter,G1,10,person,13,TEMM.,False,TEMM.,exact,290,295,100.0
+8992644,modern_mistral-ocr-openrouter,G1,11,locality,15,Sussex,False,Sussex,exact,337,343,100.0
+8992644,modern_mistral-ocr-openrouter,G1,12,locality,15,Devon,False,Devon,exact,348,353,100.0
+8992644,modern_mistral-ocr-openrouter,G1,13,taxon,19,TURDIDÆ,False,TURDIDÆ,exact,384,391,100.0
+8992644,modern_mistral-ocr-openrouter,G1,14,taxon,20,SYLVIINÆ,False,SYLVIINÆ,exact,407,415,100.0
+8992644,modern_mistral-ocr-openrouter,G1,15,vernacular,22,GREY-BACKED WARBLER,False,GREY-BACKED WARBLER,exact,426,445,100.0
+8992644,modern_mistral-ocr-openrouter,G1,16,taxon,23,Aedon familiaris,False,Aedon familiaris,exact,451,467,100.0
+8992644,modern_mistral-ocr-openrouter,G1,17,locality,25,"Hythe, Kent",False,"Hythe, Kent",exact,495,506,100.0
+8992644,modern_mistral-ocr-openrouter,G1,18,date,25,"July 15th, 1907",False,"July 15th, 1907",exact,511,526,100.0
+8992644,modern_mistral-ocr-openrouter,G1,19,taxon,29,TURDIDÆ,False,TURDIDÆ,exact,543,550,100.0
+8992644,modern_mistral-ocr-openrouter,G1,20,taxon,30,SYLVIINÆ,False,SYLVIINÆ,exact,566,574,100.0
+8992644,modern_mistral-ocr-openrouter,G1,21,vernacular,32,RADDE’S BUSH-WARBLER,False,RADDE’S BUSH-WARBLER,exact,581,601,100.0
+8992644,modern_mistral-ocr-openrouter,G1,22,taxon,33,Lusciniola schwarzi,False,Lusciniola schwarzi,exact,607,626,100.0
+8992644,modern_mistral-ocr-openrouter,G1,23,person,33,RADDE,False,RADDE,exact,628,633,100.0
+8992644,modern_mistral-ocr-openrouter,G1,24,date,35,"October, 1898",False,"October, 1898",exact,669,682,100.0
+8992644,modern_mistral-ocr-openrouter,G1,25,locality,35,Lincolnshire side of the Humber,False,Lincolnshire side of the Humber,exact,691,722,100.0
+8992644,modern_mistral-ocr-openrouter,G1,26,person,35,Haigh,False,Haigh,exact,731,736,100.0
+8966937,modern_mistral-ocr-openrouter,G1,0,institution,5,Mus. Cuming,False,Mus. Cuming,exact,63,74,100.0
+8966937,modern_mistral-ocr-openrouter,G1,1,taxon,7,BULIMUS ROSEATUS,False,BULIMUS ROSEATUS,exact,80,96,100.0
+8966937,modern_mistral-ocr-openrouter,G1,2,vernacular,9,ROSEATE BULIMUS,False,ROSEATE BULIMUS,exact,397,412,100.0
+8966937,modern_mistral-ocr-openrouter,G1,3,locality,11,Venezuela,False,Venezuela,exact,746,755,100.0
+8966937,modern_mistral-ocr-openrouter,G1,4,taxon,13,B. oreades,False,B. oreades,exact,849,859,100.0
+8966937,modern_mistral-ocr-openrouter,G1,5,institution,17,Mus. Cuming,False,Mus. Cuming,exact,886,897,100.0
+8966937,modern_mistral-ocr-openrouter,G1,6,taxon,19,BULIMUS FERIATUS,False,BULIMUS FERIATUS,exact,903,919,100.0
+8966937,modern_mistral-ocr-openrouter,G1,7,vernacular,21,UNEMPLOYED BULIMUS,False,UNEMPLOYED BULIMUS,exact,1221,1239,100.0
+8966937,modern_mistral-ocr-openrouter,G1,8,locality,23,Venezuela,False,Venezuela,exact,1566,1575,100.0
+8966937,modern_mistral-ocr-openrouter,G1,9,institution,29,Mus. Cuming,False,Mus. Cuming,exact,1675,1686,100.0
+8966937,modern_mistral-ocr-openrouter,G1,10,taxon,31,BULIMUS PERDIX,False,BULIMUS PERDIX,exact,1692,1706,100.0
+8966937,modern_mistral-ocr-openrouter,G1,11,vernacular,33,PARTRIDGE BULIMUS,False,PARTRIDGE BULIMUS,exact,2006,2023,100.0
+8966937,modern_mistral-ocr-openrouter,G1,12,person,35,PFEIFFER,False,PFEIFFER,exact,2317,2325,100.0
+8966937,modern_mistral-ocr-openrouter,G1,13,locality,37,New Granada,False,New Granada,exact,2360,2371,100.0
+8966937,modern_mistral-ocr-openrouter,G1,14,person,37,Funck,False,Funck,exact,2373,2378,100.0
+8966937,modern_mistral-ocr-openrouter,G1,15,taxon,39,B. perdix,False,B. perdix,exact,2775,2784,100.0
+8966937,modern_mistral-ocr-openrouter,G1,16,institution,43,Mus. Cuming,False,Mus. Cuming,exact,2961,2972,100.0
+8966937,modern_mistral-ocr-openrouter,G1,17,taxon,45,BULIMUS EURYOMPHALUS,False,BULIMUS EURYOMPHALUS,exact,2978,2998,100.0
+8966937,modern_mistral-ocr-openrouter,G1,18,vernacular,47,BROAD-PLAITED BULIMUS,False,BROAD-PLAITED BULIMUS,exact,3328,3349,100.0
+8966937,modern_mistral-ocr-openrouter,G1,19,locality,49,Venezuela,False,Venezuela,exact,3665,3674,100.0
+8966937,modern_mistral-ocr-openrouter,G1,20,person,49,Dyson,False,Dyson,exact,3676,3681,100.0
+8966937,modern_mistral-ocr-openrouter,G1,21,institution,55,Mus. Cuming,False,Mus. Cuming,exact,3771,3782,100.0
+8966937,modern_mistral-ocr-openrouter,G1,22,taxon,57,BULIMUS GLABER,False,BULIMUS GLABER,exact,3788,3802,100.0
+8992328,modern_mistral-ocr-openrouter,G1,0,locality,6,Kent,False,Kent,exact,412,416,100.0
+8992328,modern_mistral-ocr-openrouter,G1,1,vernacular,8,Red-backed Shrike,False,Red-backed Shrike,exact,861,878,100.0
+8992328,modern_mistral-ocr-openrouter,G1,2,locality,8,Maidstone,False,Maidstone,exact,917,926,100.0
+8992328,modern_mistral-ocr-openrouter,G1,3,vernacular,8,Greenfinch,False,Greenfinch,exact,1154,1164,100.0
+8992328,modern_mistral-ocr-openrouter,G1,4,vernacular,10,Butcher-bird,False,Butcher-bird,exact,1315,1327,100.0
+8992328,modern_mistral-ocr-openrouter,G1,5,vernacular,10,Shrikes,False,Shrikes,exact,1413,1420,100.0
+8992328,modern_mistral-ocr-openrouter,G1,6,vernacular,10,Red-backed Shrike,False,Red-backed Shrike,exact,1841,1858,100.0
+8992328,modern_mistral-ocr-openrouter,G1,7,person,12,Mathias Rausch,False,Mathias Rausch,exact,2052,2066,100.0
+8992328,modern_mistral-ocr-openrouter,G1,8,vernacular,12,Red-backed Shrike,False,Red-backed Shrike,exact,2184,2201,100.0
+8992328,modern_mistral-ocr-openrouter,G1,9,vernacular,12,Thorn-piercer,False,Thorn-piercer,exact,2205,2218,100.0
+8992328,modern_mistral-ocr-openrouter,G1,10,taxon,12,Lanius collurio,False,Lanius collurio,exact,2221,2236,100.0
+8992328,modern_mistral-ocr-openrouter,G1,11,locality,12,Europe,False,Europe,exact,2376,2382,100.0
+8992328,modern_mistral-ocr-openrouter,G1,12,vernacular,12,Red-backed Shrikes,False,Red-backed Shrikes,exact,2500,2518,100.0
+8992328,modern_mistral-ocr-openrouter,G1,13,vernacular,14,cockroaches,False,cockroaches,exact,2591,2602,100.0
+8992328,modern_mistral-ocr-openrouter,G1,14,person,16,H. A. Macpherson,False,H. A. Macpherson,exact,2880,2896,100.0
+8992328,modern_mistral-ocr-openrouter,G1,15,vernacular,16,Woodchat,False,Woodchat,exact,2973,2981,100.0
+8992328,modern_mistral-ocr-openrouter,G1,16,vernacular,16,Great Grey Shrikes,False,Great Grey Shrikes,exact,2987,3005,100.0
+8967333,modern_mistral-ocr-openrouter,G1,0,taxon,4,CASSIDARIA,False,CASSIDARIA,exact,24,34,100.0
+8967333,modern_mistral-ocr-openrouter,G1,1,person,11,Landsborough,False,Landsborough,exact,311,323,100.0
+8967290,modern_mistral-ocr-openrouter,G1,0,taxon,3,T. lentiginosa,False,T. lentiginosa,exact,377,391,100.0
+8967290,modern_mistral-ocr-openrouter,G1,1,taxon,3,T. goniositosa,False,T. goniositosa,exact,536,550,100.0
+8967290,modern_mistral-ocr-openrouter,G1,2,taxon,3,T. lentiginosa,False,T. lentiginosa,exact,750,764,100.0
+8992489,modern_mistral-ocr-openrouter,G1,0,taxon,2,FRINGILLIDÆ,False,FRINGILLIDÆ,exact,25,36,100.0
+8992489,modern_mistral-ocr-openrouter,G1,1,taxon,2,FRINGILLINÆ,False,FRINGILLINÆ,exact,48,59,100.0
+8992489,modern_mistral-ocr-openrouter,G1,2,vernacular,4,BRAMBLING,False,BRAMBLING,exact,68,77,100.0
+8992489,modern_mistral-ocr-openrouter,G1,3,taxon,6,Fringilla montifringilla,False,Fringilla montifringilla,exact,81,105,100.0
+8992489,modern_mistral-ocr-openrouter,G1,4,person,6,Linn.,False,Linn.,exact,108,113,100.0
+8992489,modern_mistral-ocr-openrouter,G1,5,person,8,Howard Saunders,False,Howard Saunders,exact,151,166,100.0
+8992489,modern_mistral-ocr-openrouter,G1,6,locality,8,Faroes,False,Faroes,exact,181,187,100.0
+8992489,modern_mistral-ocr-openrouter,G1,7,vernacular,8,Brambling,False,Brambling,exact,192,201,100.0
+8992489,modern_mistral-ocr-openrouter,G1,8,locality,8,Norway,False,Norway,exact,315,321,100.0
+8992489,modern_mistral-ocr-openrouter,G1,9,locality,8,valley of the Amur,False,valley of the Amur,exact,329,347,100.0
+8992489,modern_mistral-ocr-openrouter,G1,10,locality,8,Japan,False,Japan,exact,381,386,100.0
+8992489,modern_mistral-ocr-openrouter,G1,11,locality,8,China,False,China,exact,388,393,100.0
+8992489,modern_mistral-ocr-openrouter,G1,12,locality,8,Northern India,False,Northern India,exact,395,409,100.0
+8992489,modern_mistral-ocr-openrouter,G1,13,locality,8,Asia Minor,False,Asia Minor,exact,411,421,100.0
+8992489,modern_mistral-ocr-openrouter,G1,14,locality,8,Europe,False,Europe,exact,440,446,100.0
+8992489,modern_mistral-ocr-openrouter,G1,15,locality,8,African side of the Mediterranean,False,African side of the Mediterranean,exact,523,556,100.0
+8992489,modern_mistral-ocr-openrouter,G1,16,locality,8,Belgium,False,Belgium,exact,589,596,100.0
+8992489,modern_mistral-ocr-openrouter,G1,17,locality,8,Holland,False,Holland,exact,598,605,100.0
+8992489,modern_mistral-ocr-openrouter,G1,18,locality,8,Germany,False,Germany,exact,607,614,100.0
+8992489,modern_mistral-ocr-openrouter,G1,19,locality,8,Heligoland,False,Heligoland,exact,620,630,100.0
+8992489,modern_mistral-ocr-openrouter,G1,20,locality,8,Pyrenees,False,Pyrenees,exact,683,691,100.0
+8992489,modern_mistral-ocr-openrouter,G1,21,locality,8,Alps,False,Alps,exact,697,701,100.0
+8992489,modern_mistral-ocr-openrouter,G1,22,locality,8,Ardennes,False,Ardennes,exact,710,718,100.0
+8992489,modern_mistral-ocr-openrouter,G1,23,locality,10,Great Britain,False,Great Britain,exact,784,797,100.0
+8992489,modern_mistral-ocr-openrouter,G1,24,vernacular,10,Brambling,False,Brambling,exact,802,811,100.0
+8992489,modern_mistral-ocr-openrouter,G1,25,locality,10,Scotland,False,Scotland,exact,1055,1063,100.0
+8992489,modern_mistral-ocr-openrouter,G1,26,locality,10,England,False,England,exact,1072,1079,100.0
+8992489,modern_mistral-ocr-openrouter,G1,27,locality,10,Cornwall,False,Cornwall,exact,1091,1099,100.0
+8992489,modern_mistral-ocr-openrouter,G1,28,locality,10,west of England,False,west of England,exact,1105,1120,100.0
+8992489,modern_mistral-ocr-openrouter,G1,29,locality,10,south of Ireland,False,south of Ireland,exact,1130,1146,100.0
+8992643,modern_mistral-ocr-openrouter,G1,0,taxon,5,TURDIDÆ,False,TURDIDÆ,exact,27,34,100.0
+8992643,modern_mistral-ocr-openrouter,G1,1,taxon,5,SYLVIINÆ,False,SYLVIINÆ,exact,48,56,100.0
+8992643,modern_mistral-ocr-openrouter,G1,2,vernacular,8,PALLA S WILLOW-WARBLER,False,PALLA S WILLOW-WARBLER,exact,79,101,100.0
+8992643,modern_mistral-ocr-openrouter,G1,3,taxon,10,Phylloscopus proregulus,False,Phylloscopus proregulus,exact,105,128,100.0
+8992643,modern_mistral-ocr-openrouter,G1,4,locality,12,Norfolk,False,Norfolk,exact,181,188,100.0
+8992643,modern_mistral-ocr-openrouter,G1,5,date,12,"October, 1896",False,"October, 1896",exact,193,206,100.0
+8992643,modern_mistral-ocr-openrouter,G1,6,vernacular,16,Chiffchaffs,False,Chiffchaffs,exact,226,237,100.0
+8992643,modern_mistral-ocr-openrouter,G1,7,locality,16,Shetlands,False,Shetlands,exact,250,259,100.0
+8992643,modern_mistral-ocr-openrouter,G1,8,date,16,"April 15th and 24th, 1904",False,"April 15th and 24th, 1904",exact,268,293,100.0
+8992643,modern_mistral-ocr-openrouter,G1,9,date,16,May,False,May,exact,298,301,100.0
+8992643,modern_mistral-ocr-openrouter,G1,10,person,16,John S. Tulloch,False,John S. Tulloch,exact,339,354,100.0
+8992643,modern_mistral-ocr-openrouter,G1,11,locality,16,Lerwick,False,Lerwick,exact,358,365,100.0
+8992643,modern_mistral-ocr-openrouter,G1,12,date,16,May 27th,False,May 27th,exact,374,382,100.0
+8992643,modern_mistral-ocr-openrouter,G1,13,taxon,20,TURDIDÆ,False,TURDIDÆ,exact,431,438,100.0
+8992643,modern_mistral-ocr-openrouter,G1,14,taxon,20,SYLVIINÆ,False,SYLVIINÆ,exact,452,460,100.0
+8992643,modern_mistral-ocr-openrouter,G1,15,vernacular,23,SIBERIAN CHIFFCHAFF,False,SIBERIAN CHIFFCHAFF,exact,487,506,100.0
+8992643,modern_mistral-ocr-openrouter,G1,16,taxon,25,Phylloscopus tristis,False,Phylloscopus tristis,exact,510,530,100.0
+8992643,modern_mistral-ocr-openrouter,G1,17,person,25,BLYTH,False,BLYTH,exact,532,537,100.0
+8992643,modern_mistral-ocr-openrouter,G1,18,locality,27,Orkneys,False,Orkneys,exact,590,597,100.0
+8992643,modern_mistral-ocr-openrouter,G1,19,date,27,1902,False,1902,exact,601,605,100.0
+8992643,modern_mistral-ocr-openrouter,G1,20,taxon,31,TURDIDÆ,False,TURDIDÆ,exact,623,630,100.0
+8992643,modern_mistral-ocr-openrouter,G1,21,taxon,31,SYLVIINÆ,False,SYLVIINÆ,exact,644,652,100.0
+8992643,modern_mistral-ocr-openrouter,G1,22,vernacular,34,GREENISH WILLOW-WARBLER,False,GREENISH WILLOW-WARBLER,exact,679,702,100.0
+8992643,modern_mistral-ocr-openrouter,G1,23,taxon,36,Phylloscopus viridanus,False,Phylloscopus viridanus,exact,706,728,100.0
+8992643,modern_mistral-ocr-openrouter,G1,24,person,36,BLYTH,False,BLYTH,exact,730,735,100.0
+8992643,modern_mistral-ocr-openrouter,G1,25,locality,38,Lincolnshire,False,Lincolnshire,exact,765,777,100.0
+8992643,modern_mistral-ocr-openrouter,G1,26,date,38,"September 5th, 1896",False,"September 5th, 1896",exact,782,801,100.0
+8992643,modern_mistral-ocr-openrouter,G1,27,locality,38,Sule Skerry,False,Sule Skerry,exact,819,830,100.0
+8992643,modern_mistral-ocr-openrouter,G1,28,locality,38,Sutherlandshire,False,Sutherlandshire,exact,843,858,100.0
+8992643,modern_mistral-ocr-openrouter,G1,29,date,38,"September 5th, 1902",False,"September 5th, 1902",exact,864,883,100.0
+8992408,modern_mistral-ocr-openrouter,G1,0,person,4,H. A. Macpherson,False,H. A. Macpherson,exact,274,290,100.0
+8992408,modern_mistral-ocr-openrouter,G1,1,vernacular,4,Hawfinch,False,Hawfinch,exact,354,362,100.0
+8992408,modern_mistral-ocr-openrouter,G1,2,person,4,Charles A. Witchell,False,Charles A. Witchell,exact,435,454,100.0
+8992408,modern_mistral-ocr-openrouter,G1,3,vernacular,4,Hawfinch,False,Hawfinch,exact,556,564,100.0
+8992408,modern_mistral-ocr-openrouter,G1,4,person,4,H. A. Macpherson,False,H. A. Macpherson,exact,603,619,100.0
+8992408,modern_mistral-ocr-openrouter,G1,5,vernacular,6,Chaffinch,False,Chaffinch,exact,776,785,100.0
+8992408,modern_mistral-ocr-openrouter,G1,6,person,6,Alexander von Homeyer,False,Alexander von Homeyer,exact,852,873,100.0
+8992408,modern_mistral-ocr-openrouter,G1,7,vernacular,6,cherry-kernel biter,False,cherry-kernel biter,exact,921,940,100.0
+8992408,modern_mistral-ocr-openrouter,G1,8,vernacular,8,Bullfinches,False,Bullfinches,exact,1074,1085,100.0
+8992408,modern_mistral-ocr-openrouter,G1,9,vernacular,8,Grosbeaks,False,Grosbeaks,exact,1101,1110,100.0
+8992408,modern_mistral-ocr-openrouter,G1,10,vernacular,8,Grosbeaks,False,Grosbeaks,exact,1139,1148,100.0
+8992408,modern_mistral-ocr-openrouter,G1,11,person,8,Howard Saunders,False,Howard Saunders,exact,1218,1233,100.0
+8992408,modern_mistral-ocr-openrouter,G1,12,vernacular,8,Finches,False,Finches,exact,1292,1299,100.0
+8992408,modern_mistral-ocr-openrouter,G1,13,vernacular,8,Buntings,False,Buntings,exact,1308,1316,100.0
+8992408,modern_mistral-ocr-openrouter,G1,14,vernacular,10,Finches,False,Finches,exact,1486,1493,100.0
+8992408,modern_mistral-ocr-openrouter,G1,15,taxon,10,Fringilla,False,Fringilla,exact,1529,1538,100.0
+8992408,modern_mistral-ocr-openrouter,G1,16,vernacular,10,Buntings,False,Buntings,exact,1574,1582,100.0
+8992408,modern_mistral-ocr-openrouter,G1,17,taxon,10,Fringilla,False,Fringilla,exact,1637,1646,100.0
+8992408,modern_mistral-ocr-openrouter,G1,18,taxon,10,Passer,False,Passer,exact,1668,1674,100.0
+8992408,modern_mistral-ocr-openrouter,G1,19,taxon,10,Emberizinae,False,Emberizinae,exact,1737,1748,100.0
+8966790,modern_mistral-ocr-openrouter,G1,0,institution,5,Mus. Cuming,False,Mus. Cuming,exact,177,188,100.0
+8966790,modern_mistral-ocr-openrouter,G1,1,taxon,7,Bulimus Chilensis,False,Bulimus Chilensis,exact,194,211,100.0
+8966790,modern_mistral-ocr-openrouter,G1,2,vernacular,9,Chili Bulimus,False,Chili Bulimus,exact,458,471,100.0
+8966790,modern_mistral-ocr-openrouter,G1,3,person,11,Lesson,False,Lesson,exact,709,715,100.0
+8966790,modern_mistral-ocr-openrouter,G1,4,taxon,13,Bulimus granulosus,False,Bulimus granulosus,exact,755,773,100.0
+8966790,modern_mistral-ocr-openrouter,G1,5,person,13,Broderip,False,Broderip,exact,776,784,100.0
+8966790,modern_mistral-ocr-openrouter,G1,6,locality,15,Valparaiso,False,Valparaiso,exact,796,806,100.0
+8966790,modern_mistral-ocr-openrouter,G1,7,locality,15,"Conception, Chili",False,"Conception, Chili",exact,811,828,100.0
+8966790,modern_mistral-ocr-openrouter,G1,8,person,15,Cuming,False,Cuming,exact,830,836,100.0
+8966790,modern_mistral-ocr-openrouter,G1,9,locality,17,mountains of Conception,False,mountains of Conception,exact,1070,1093,100.0
+8966790,modern_mistral-ocr-openrouter,G1,10,locality,17,Valparaiso,False,Valparaiso,exact,1148,1158,100.0
+8992379,modern_mistral-ocr-openrouter,G1,0,locality,4,Berwickshire,False,Berwickshire,exact,32,44,100.0
+8992379,modern_mistral-ocr-openrouter,G1,1,locality,4,Yorkshire,False,Yorkshire,exact,54,63,100.0
+8992379,modern_mistral-ocr-openrouter,G1,2,locality,4,Scarborough,False,Scarborough,exact,92,103,100.0
+8992379,modern_mistral-ocr-openrouter,G1,3,date,4,"October 23rd, 1889",False,"October 23rd, 1889",exact,105,123,100.0
+8992379,modern_mistral-ocr-openrouter,G1,4,date,4,1887,False,1887,exact,175,179,100.0
+8992379,modern_mistral-ocr-openrouter,G1,5,locality,4,Wells,False,Wells,exact,213,218,100.0
+8992379,modern_mistral-ocr-openrouter,G1,6,date,4,1900,False,1900,exact,222,226,100.0
+8992379,modern_mistral-ocr-openrouter,G1,7,date,4,1904,False,1904,exact,255,259,100.0
+8992379,modern_mistral-ocr-openrouter,G1,8,date,4,1905,False,1905,exact,273,277,100.0
+8992379,modern_mistral-ocr-openrouter,G1,9,date,4,1906,False,1906,exact,289,293,100.0
+8992379,modern_mistral-ocr-openrouter,G1,10,locality,4,Norfolk,False,Norfolk,exact,304,311,100.0
+8992379,modern_mistral-ocr-openrouter,G1,11,locality,4,Yorkshire,False,Yorkshire,exact,332,341,100.0
+8992379,modern_mistral-ocr-openrouter,G1,12,date,4,1907,False,1907,exact,345,349,100.0
+8992379,modern_mistral-ocr-openrouter,G1,13,locality,4,Cheshire,False,Cheshire,exact,354,362,100.0
+8992379,modern_mistral-ocr-openrouter,G1,14,date,4,June 1903,False,June 1903,exact,379,388,100.0
+8992379,modern_mistral-ocr-openrouter,G1,15,locality,4,Shetlands,False,Shetlands,exact,397,406,100.0
+8992379,modern_mistral-ocr-openrouter,G1,16,date,4,1906,False,1906,exact,443,447,100.0
+8992379,modern_mistral-ocr-openrouter,G1,17,vernacular,4,Flycatcher,False,Flycatcher,exact,492,502,100.0
+8992379,modern_mistral-ocr-openrouter,G1,18,date,4,1863 to 1907,False,1863 to 1907,exact,699,711,100.0
+8992379,modern_mistral-ocr-openrouter,G1,19,vernacular,6,Robin,False,Robin,exact,858,863,100.0
+8992379,modern_mistral-ocr-openrouter,G1,20,person,6,Seebohm,False,Seebohm,exact,869,876,100.0
+8992379,modern_mistral-ocr-openrouter,G1,21,vernacular,6,Robins,False,Robins,exact,941,947,100.0
+8992379,modern_mistral-ocr-openrouter,G1,22,vernacular,6,Flycatchers,False,Flycatchers,exact,956,967,100.0
+8992379,modern_mistral-ocr-openrouter,G1,23,vernacular,6,Red-breasted Flycatcher,False,Red-breasted Flycatcher,exact,1079,1102,100.0
+8992379,modern_mistral-ocr-openrouter,G1,24,taxon,8,M. minuta,False,M. minuta,exact,1835,1844,100.0
+8992379,modern_mistral-ocr-openrouter,G1,25,taxon,8,M. leucura,False,M. leucura,exact,1904,1914,100.0
+8992379,modern_mistral-ocr-openrouter,G1,26,taxon,8,M. parva,False,M. parva,exact,1979,1987,100.0
+8992379,modern_mistral-ocr-openrouter,G1,27,taxon,8,M. hyperythra,False,M. hyperythra,exact,2056,2069,100.0
+8992379,modern_mistral-ocr-openrouter,G1,28,taxon,10,Munia atricapilla,False,Munia atricapilla,exact,2318,2335,100.0
+8992379,modern_mistral-ocr-openrouter,G1,29,date,10,1887,False,1887,exact,2374,2378,100.0
+8992379,modern_mistral-ocr-openrouter,G1,30,date,10,spring of 1896,False,spring of 1896,exact,2497,2511,100.0
+8992379,modern_mistral-ocr-openrouter,G1,31,taxon,10,Quelea quelea,False,Quelea quelea,exact,2545,2558,100.0
+8992379,modern_mistral-ocr-openrouter,G1,32,taxon,10,Q. russi,False,Q. russi,exact,2593,2601,100.0
+8992379,modern_mistral-ocr-openrouter,G1,33,vernacular,10,Cardinal,False,Cardinal,exact,2678,2686,100.0
+8992379,modern_mistral-ocr-openrouter,G1,34,taxon,10,Paroaria cervicalis,False,Paroaria cervicalis,exact,2689,2708,100.0
+8992379,modern_mistral-ocr-openrouter,G1,35,taxon,10,P. capitata,False,P. capitata,exact,2745,2756,100.0
+8966930,modern_mistral-ocr-openrouter,G1,0,institution,5,Mus. Cuming,False,Mus. Cuming,exact,177,188,100.0
+8966930,modern_mistral-ocr-openrouter,G1,1,taxon,7,Bulimus obtusatus,False,Bulimus obtusatus,exact,194,211,100.0
+8966930,modern_mistral-ocr-openrouter,G1,2,vernacular,9,Blunted Bulimus,False,Blunted Bulimus,exact,522,537,100.0
+8966930,modern_mistral-ocr-openrouter,G1,3,person,11,Pfeiffer,False,Pfeiffer,exact,889,897,100.0
+8966930,modern_mistral-ocr-openrouter,G1,4,taxon,13,Helix obtusata,False,Helix obtusata,exact,925,939,100.0
+8966930,modern_mistral-ocr-openrouter,G1,5,person,13,Gmelin,False,Gmelin,exact,941,947,100.0
+8966930,modern_mistral-ocr-openrouter,G1,6,taxon,15,Bulimus calcareus,False,Bulimus calcareus,exact,952,969,100.0
+8966930,modern_mistral-ocr-openrouter,G1,7,person,15,Bruguière,False,Bruguière,exact,971,980,100.0
+8966930,modern_mistral-ocr-openrouter,G1,8,person,15,Lamarck,False,Lamarck,exact,982,989,100.0
+8966930,modern_mistral-ocr-openrouter,G1,9,person,15,Deshayes,False,Deshayes,exact,991,999,100.0
+8966930,modern_mistral-ocr-openrouter,G1,10,locality,17,Madagascar,False,Madagascar,exact,1009,1019,100.0
+8966930,modern_mistral-ocr-openrouter,G1,11,person,17,Beck,False,Beck,exact,1021,1025,100.0
+8966930,modern_mistral-ocr-openrouter,G1,12,person,19,Lamarck,False,Lamarck,exact,1058,1065,100.0
+8966930,modern_mistral-ocr-openrouter,G1,13,taxon,19,Helix calcarea,False,Helix calcarea,exact,1123,1137,100.0
+8966930,modern_mistral-ocr-openrouter,G1,14,person,19,Born,False,Born,exact,1142,1146,100.0
+8966930,modern_mistral-ocr-openrouter,G1,15,institution,21,Mus. Cuming,False,Mus. Cuming,exact,1281,1292,100.0
+8966930,modern_mistral-ocr-openrouter,G1,16,taxon,23,Bulimus clavator,False,Bulimus clavator,exact,1298,1314,100.0
+8966930,modern_mistral-ocr-openrouter,G1,17,vernacular,25,Club-Bearer Bulimus,False,Club-Bearer Bulimus,exact,1602,1621,100.0
+8966930,modern_mistral-ocr-openrouter,G1,18,person,27,Petit,False,Petit,exact,1933,1938,100.0
+8966930,modern_mistral-ocr-openrouter,G1,19,locality,29,Madagascar,False,Madagascar,exact,1977,1987,100.0
+8966802,modern_mistral-ocr-openrouter,G1,0,vernacular,3,SLIGHTLY WRINKLED BULIMUS,False,SLIGHTLY WRINKLED BULIMUS,exact,26,51,100.0
+8966802,modern_mistral-ocr-openrouter,G1,1,taxon,3,Pupa,False,Pupa,exact,95,99,100.0
+8966802,modern_mistral-ocr-openrouter,G1,2,person,5,SOWERRY,False,SOWERRY,exact,347,354,100.0
+8966802,modern_mistral-ocr-openrouter,G1,3,locality,7,Gallapagos Islands,False,Gallapagos Islands,exact,391,409,100.0
+8966802,modern_mistral-ocr-openrouter,G1,4,person,7,Cuming,False,Cuming,exact,411,417,100.0
+8966802,modern_mistral-ocr-openrouter,G1,5,institution,13,Mus. Cuming,False,Mus. Cuming,exact,512,523,100.0
+8966802,modern_mistral-ocr-openrouter,G1,6,taxon,15,BULIMUS TURRITUS,False,BULIMUS TURRITUS,exact,531,547,100.0
+8966802,modern_mistral-ocr-openrouter,G1,7,vernacular,17,TURRETED BULIMUS,False,TURRETED BULIMUS,exact,785,801,100.0
+8966802,modern_mistral-ocr-openrouter,G1,8,person,19,BRODERIP,False,BRODERIP,exact,1015,1023,100.0
+8966802,modern_mistral-ocr-openrouter,G1,9,locality,21,"Truxillo, Peru",False,"Truxillo, Peru",exact,1063,1077,100.0
+8966802,modern_mistral-ocr-openrouter,G1,10,person,21,Cuming,False,Cuming,exact,1098,1104,100.0
+8966802,modern_mistral-ocr-openrouter,G1,11,institution,27,Mus. Cuming,False,Mus. Cuming,exact,1235,1246,100.0
+8966802,modern_mistral-ocr-openrouter,G1,12,taxon,29,BULIMUS SCULPTURATUS,False,BULIMUS SCULPTURATUS,exact,1254,1274,100.0
+8966802,modern_mistral-ocr-openrouter,G1,13,vernacular,31,SCULPTURED BULIMUS,False,SCULPTURED BULIMUS,exact,1533,1551,100.0
+8966802,modern_mistral-ocr-openrouter,G1,14,person,33,PFEIFFER,False,PFEIFFER,exact,1801,1809,100.0
+8966802,modern_mistral-ocr-openrouter,G1,15,locality,35,Gallapagos Islands,False,Gallapagos Islands,exact,1848,1866,100.0
+8966802,modern_mistral-ocr-openrouter,G1,16,person,35,Darwin,False,Darwin,exact,1880,1886,100.0
+8966802,modern_mistral-ocr-openrouter,G1,17,taxon,37,B. rugiferus,False,B. rugiferus,exact,1964,1976,100.0
+8966802,modern_mistral-ocr-openrouter,G1,18,taxon,37,Darwinii,False,Darwinii,exact,1983,1991,100.0
+8966802,modern_mistral-ocr-openrouter,G1,19,institution,41,Mus. Cuming,False,Mus. Cuming,exact,2148,2159,100.0
+8966802,modern_mistral-ocr-openrouter,G1,20,taxon,43,BULIMUS CALVUS,False,BULIMUS CALVUS,exact,2167,2181,100.0
+8966802,modern_mistral-ocr-openrouter,G1,21,vernacular,45,BALD BULIMUS,False,BALD BULIMUS,exact,2413,2425,100.0
+8966802,modern_mistral-ocr-openrouter,G1,22,person,47,SOWERRY,False,SOWERRY,exact,2625,2632,100.0
+8966802,modern_mistral-ocr-openrouter,G1,23,locality,49,"James’ Island, Gallapagos",False,"James’ Island, Gallapagos",exact,2671,2696,100.0
+8966802,modern_mistral-ocr-openrouter,G1,24,person,49,Cuming,False,Cuming,exact,2724,2730,100.0
+8966802,modern_mistral-ocr-openrouter,G1,25,taxon,51,Achatinella,False,Achatinella,exact,2780,2791,100.0
+8966802,modern_mistral-ocr-openrouter,G1,26,institution,55,Mus. Cuming,False,Mus. Cuming,exact,2832,2843,100.0
+8966802,modern_mistral-ocr-openrouter,G1,27,taxon,57,BULIMUS PUSTULOSUS,False,BULIMUS PUSTULOSUS,exact,2851,2869,100.0
+8966802,modern_mistral-ocr-openrouter,G1,28,vernacular,59,PUSTULOSE BULIMUS,False,PUSTULOSE BULIMUS,exact,3139,3156,100.0
+8966802,modern_mistral-ocr-openrouter,G1,29,person,61,BRODERIP,False,BRODERIP,exact,3401,3409,100.0
+8966802,modern_mistral-ocr-openrouter,G1,30,locality,63,"Huasco, Chili",False,"Huasco, Chili",exact,3449,3462,100.0
+8966802,modern_mistral-ocr-openrouter,G1,31,person,63,Cuming,False,Cuming,exact,3498,3504,100.0
+8992647,modern_mistral-ocr-openrouter,G1,0,taxon,3,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,21,32,100.0
+8992647,modern_mistral-ocr-openrouter,G1,1,vernacular,5,BLACK-HEADED WAGTAIL,False,BLACK-HEADED WAGTAIL,exact,41,61,100.0
+8992647,modern_mistral-ocr-openrouter,G1,2,taxon,7,Motacilla melanocephala,False,Motacilla melanocephala,exact,67,90,100.0
+8992647,modern_mistral-ocr-openrouter,G1,3,person,7,Licht.,False,Licht.,exact,93,99,100.0
+8992647,modern_mistral-ocr-openrouter,G1,4,locality,9,Willingdon,False,Willingdon,exact,122,132,100.0
+8992647,modern_mistral-ocr-openrouter,G1,5,date,9,"May 13th, 1906",False,"May 13th, 1906",exact,137,151,100.0
+8992647,modern_mistral-ocr-openrouter,G1,6,taxon,9,M. flava,False,M. flava,exact,175,183,100.0
+8992647,modern_mistral-ocr-openrouter,G1,7,taxon,13,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,223,234,100.0
+8992647,modern_mistral-ocr-openrouter,G1,8,vernacular,15,SYKES’ WAGTAIL,False,SYKES’ WAGTAIL,exact,239,253,100.0
+8992647,modern_mistral-ocr-openrouter,G1,9,taxon,17,Motacilla beema,False,Motacilla beema,exact,259,274,100.0
+8992647,modern_mistral-ocr-openrouter,G1,10,person,17,Sykes,False,Sykes,exact,277,282,100.0
+8992647,modern_mistral-ocr-openrouter,G1,11,locality,19,"Rottingdean, Sussex",False,"Rottingdean, Sussex",exact,308,327,100.0
+8992647,modern_mistral-ocr-openrouter,G1,12,date,19,"April 20th, 1898",False,"April 20th, 1898",exact,332,348,100.0
+8992647,modern_mistral-ocr-openrouter,G1,13,taxon,23,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,361,372,100.0
+8992647,modern_mistral-ocr-openrouter,G1,14,vernacular,25,ASHY-HEADED WAGTAIL,False,ASHY-HEADED WAGTAIL,exact,381,400,100.0
+8992647,modern_mistral-ocr-openrouter,G1,15,taxon,27,Motacilla cinereocapilla,False,Motacilla cinereocapilla,exact,406,430,100.0
+8992647,modern_mistral-ocr-openrouter,G1,16,person,27,Savi,False,Savi,exact,433,437,100.0
+8992647,modern_mistral-ocr-openrouter,G1,17,locality,29,Penzance,False,Penzance,exact,487,495,100.0
+8992647,modern_mistral-ocr-openrouter,G1,18,locality,29,"Sheringham, Norfolk",False,"Sheringham, Norfolk",exact,513,532,100.0
+8992647,modern_mistral-ocr-openrouter,G1,19,date,29,May?) 1842,False,May?) 1842,exact,537,547,100.0
+8992647,modern_mistral-ocr-openrouter,G1,20,taxon,31,M. flava,False,M. flava,exact,641,649,100.0
