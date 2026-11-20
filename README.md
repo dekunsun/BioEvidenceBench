@@ -104,6 +104,25 @@ entity resolution: a plain GBIF name lookup loses about four in ten names that e
 right. This is a pilot on 16 pages; it says where to look next, not a rule for BHL. The linker
 is deliberately naive, so a better linker could change the second half of that sentence.
 
+## Exploratory findings (after the frozen test run)
+
+*Decided after the test pages were unsealed, so none of this is a pre-registered result
+(`DEVIATIONS.md`). Same 16 test pages, frozen gold and scorer; Claude Opus 5.5 unless stated.*
+
+| Question | Finding | Where |
+|---|---|---|
+| Which OCR measure predicts extraction? | Over 22 OCR versions (21 FineBooks rows + legacy), value F1 tracks **gold-entity preservation** almost perfectly (Spearman 0.95 Butler, 1.00 Reeve); **page CER does not** (−0.07 / −0.62). Several OCR models with page CER under 0.5% keep only 57–80% of Butler's names intact. Extraction recall ≈ preservation (median gap +0.01): if the name survives the OCR, the model gets it | `results/ocr_ladder/` (`downstream.png`) |
+| Is linking really the bottleneck? | Mostly a property of the naive linker. An **LLM linker** (name + context → currently accepted name → GBIF) raises Butler link recall from 0.59 to **0.91** on the expert text and from 0.12 to **0.71** on legacy OCR; a GBIF lookup with an animal hint only reaches 0.62. Its remaining misses are taxonomic judgment calls (e.g. `Phylloscopus tristis` as a race of *P. collybita*) | `results/linking_variants/` |
+| Can an LLM repair stand in for re-OCR? | **Largely yes, for visible errors.** With a verbatim quote kept as evidence plus a separate repaired reading (G2), legacy OCR goes from 0.60 to **0.96** (Butler) and 0.64 to **0.91** (Reeve, with positions); Tesseract output from 0.68 to 0.96 / 0.94. 92% of the legacy values it changed became right. On the expert text it changed 4 values: 3 fixed the transcription's own typos (`nontifringilla`, `I898`, a broken word), 1 swapped a ligature | `results/exploratory_conditions/` |
+| …and where not? | **Fluent OCR errors are not repairable.** DeepSeek-OCR-2 writes plausible text (`Linnaeus` for `Linnæus`, `Turritella brevisis`, `Valparaíso`); repair only lifts it to 0.81 / 0.87. Garbled legacy OCR (`BiioDEiup`) is easier to fix than fluent misreadings | same |
+| Is a separate OCR step needed? | **Not for this task.** Reading the page image directly (V1) gives 0.96 / 0.98 value F1 (bag scoring), the same as modern OCR + extraction. Image + legacy OCR (V2) is no better than repair alone | same |
+| Which cheap signal helps review? | On legacy OCR, two mechanical checks (OCR-junk characters; no exact GBIF match for a taxon) flag 25% of outputs and catch 55% of the errors at 77% precision; model disagreement catches 7%. On modern OCR, errors are rare (3%) and no cheap signal finds them | `results/review_signals/` |
+
+Cost per page per pass (Opus 5.5, sync; batch halves it): plain extraction about $0.02, repair
+$0.05, image only $0.04. **Caveat that matters most here:** BHL and the IMPACT transcriptions are
+public, so repair and image reading may be helped by the model having seen these books; the PCAS
+case (`data/pcas/`, labels pending) is a first check on other material, but it is public too.
+
 ## Limitations (known in advance)
 
 - 16 test pages from two books: intervals will be wide, and nothing generalises to "BHL".
