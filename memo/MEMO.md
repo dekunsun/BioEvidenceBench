@@ -31,6 +31,13 @@ error distributions, and this pilot did not test them. The next unit of effort s
 what the pipeline extracts, and (4) sample-based review. A bigger or more expensive extraction model
 is the place *not* to spend.
 
+**Same accuracy is not the same evidence.** Modern OCR with quote-checked extraction, an LLM that
+repairs legacy OCR, and reading the page image all reach value F1 of about 0.91-0.98, but only the
+first gives every value a mechanical trail back to the page; the other two need a person to check
+repaired or unanchored values. Choose a route on audit cost per value as well as on F1. Requiring
+evidence did not change accuracy; that says the accuracy metric does not measure what evidence is
+for, not that evidence has no value.
+
 ## Where reliability is lost, step by step
 
 | Step | What we measured | How much is lost here | Can it be won back, and at what cost |
@@ -75,13 +82,16 @@ route here whose every value can be traced mechanically to the page.
 3. **Write the scope down before scaling.** Index pages, joint authorities (`H. & A.`), broad
    vernacular words and place-name boundaries change scores by up to ten points. Decide them once,
    with an adjudicator, and filter what is out of scope: after the spot-check, BHL `Index` pages were ruled out, a page-type filter that costs nothing.
-4. **Review by sampling, with evidence attached.** Prefer routes that keep a machine-checkable trail
-   (sliced values, verbatim quotes, OCR word boxes); a model's repaired reading or image transcription
-   needs a person for every changed or unanchored value. Keep line + verbatim quote on every value. On
+4. **Choose routes on evidence, not on F1 alone.** Prefer routes that keep a machine-checkable trail
+   (sliced values, verbatim quotes, OCR word boxes): same accuracy is not the same evidence. A model's
+   repaired reading or image transcription needs a person for every changed or unanchored value.
+   Measure evidence with audit metrics (share of values traceable to the page, reviewer time per
+   value, errors caught with and without evidence), because accuracy does not show its value.
+5. **Review by sampling, with evidence attached.** Keep line + verbatim quote on every value. On
    legacy OCR route review with cheap checks; on clean text estimate quality with a random sample and
    use a second model to find misses. Do not skip review because two models agree.
-5. **Do not buy a bigger extraction model.** Haiku 5.5 extracted 682 pages for $0.40 in 7.5 minutes;
-   Opus 5.5 cost $7.64 for a few points more. Spend the difference on steps 2-4.
+6. **Do not buy a bigger extraction model.** Haiku 5.5 extracted 682 pages for $0.40 in 7.5 minutes;
+   Opus 5.5 cost $7.64 for a few points more. Spend the difference on steps 2-5.
 
 ## Answer to the research question
 
