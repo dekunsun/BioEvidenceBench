@@ -1,55 +1,79 @@
 # Decision memo: where should the next investment in BHL data extraction go?
 
-*Draft for Gloria's review, 2026-11-20. From the frozen, pre-registered test run (`FREEZE.json`);
-numbers are per book with 95% page-bootstrap intervals. A pilot on 16 pages of two books.*
+*Draft for Gloria's review, 2026-11-20 (revised after the exploratory runs). The table "What the
+pre-registered test says" comes from the frozen run (`FREEZE.json`); "What the follow-up
+experiments add" was decided after unsealing and is exploratory (`DEVIATIONS.md`). Per book,
+95% page-bootstrap intervals. A pilot on 16 pages of two books.*
 
 **To:** a team deciding how to spend the next unit of effort on extracting structured data
 (names, people, places, institutions, dates) from historical biodiversity literature.
 **From:** Gloria Sun. **Evidence:** BioEvidenceBench V1: 16 locked test pages from Butler 1907
-(birds) and Reeve 1849 (shells), each read as legacy BHL OCR, modern OCR (dots.mocr) and an
-expert transcription; Claude Opus 5.5 and Gemini 4 Carbon; gold labelled before any model output.
+(birds) and Reeve 1849 (shells), each read as legacy BHL OCR, 21 modern OCR outputs, the page
+image and an expert transcription; Claude Opus 5.5 and Gemini 4 Carbon; gold labelled before
+any model output.
 
 ## Recommendation
 
-1. **Re-OCR first, then stop.** Modern OCR recovers almost everything legacy OCR loses;
-   expert transcription adds little on top. Do not fund transcription to get better extraction.
-2. **Put the next unit of effort into entity resolution.** Once the text is good, the largest
-   loss is linking extracted names to a taxonomic database: a plain GBIF lookup loses about
-   four in ten names that extraction got right.
-3. **Keep evidence (line + verbatim quote) on by default** as an audit trail: it cost no recall.
-   Do not expect it to fix anything by itself; there was nothing for it to fix here.
-4. **Do not use two-model agreement to skip review.** The models agree on nearly everything,
-   including their mistakes on bad OCR. Route review by text quality instead.
+1. **Don't buy more character accuracy; buy name accuracy.** Choose or tune OCR on how many
+   *entity names* it keeps intact on a small labelled sample, not on page CER: across 22 OCR
+   versions page CER barely predicts extraction, entity preservation predicts it almost exactly.
+2. **Re-OCR is not the only route to clean names.** On these books an LLM that keeps a verbatim
+   quote but also gives a repaired reading brings legacy OCR from 0.60 to 0.96 (Butler), and
+   reading the page image directly matches modern OCR + extraction (0.96 / 0.98). Pick between
+   re-OCR, repair and image reading on cost and on what else the text is for (search, display),
+   not on extraction accuracy. Prefer OCR whose errors are *visible*: garbled text is repairable,
+   fluent misreadings (`Linnaeus` for `Linnæus`) are not.
+3. **Fund LLM-assisted entity resolution, then a taxonomy policy.** A plain GBIF lookup loses
+   four in ten correct names; an LLM linker recovers most of them (0.59 → 0.91). What is left is
+   taxonomic judgment (which species concept, which checklist), a decision for curators, not an
+   engineering task.
+4. **Route human review by text quality, with mechanical checks; never skip it on model
+   agreement.** On legacy OCR two cheap checks catch half the errors in a quarter of the output;
+   two models agreeing catches 7%. On clean text errors are rare and need sampling, not flags.
+5. **Keep evidence on (line + verbatim quote; repaired values marked) as the audit trail.**
 
-## What the evidence says
+## What the pre-registered test says
 
-| Option | Finding | Verdict (pre-registered) |
+| Option | Finding | Verdict |
 |---|---|---|
 | Better OCR | Value F1 (Opus, with evidence), legacy → modern → expert: **Reeve 0.64 → 0.98 → 0.98**; Butler 0.60 → 0.95 → 0.98. Reeve: +0.34 [0.25, 0.46] from re-OCR, +0.005 [−0.015, 0.03] from expert transcription. On legacy OCR the models find the right place (lenient F1 0.93–0.97) but copy the misread text | supports |
 | Better extraction | On the expert text both LLMs are at 0.98 value F1. The rule baseline (gnfinder + regex) is far behind on names (taxon value F1 0.64 Butler, 0.54 Reeve) and people. The few extraction errors left are mostly scope: broad vernacular words (insects, moss, pine) added to the guide after the prompt was fixed | LLM beats rules: mostly supports |
 | Automated verification | Requiring a verbatim quote changed recall by −0.015 to +0.007. Neither condition produced any unsupported value, because values are always sliced from the source | no cost; no measurable benefit |
 | Prioritised review | 99–100% of predictions flagged as "both models agree": too few left to compare. Errors inside the flagged set: legacy OCR **50 (Butler) / 75 (Reeve)**, modern OCR 6 / 5, expert 3 / 4 | too few to compare; agreement is not correctness |
-| Entity resolution | Butler, 34 gold-resolved names: **14 lost at linking vs 0 before it** on the expert text (difference 0.41 [0.25, 0.60]); 13 vs 1 on modern OCR. Of the 14: 8 matched only at genus, 3 to the wrong taxon, 3 not found. What they are: old genera and synonyms (`Aedon`, `Lusciniola`, `Munia`), names now treated as races of another species (`Motacilla beema`, `M. melanocephala`, `M. cinereocapilla`), abbreviated genera whose full name is not on the page (`M. minuta`), a homonym (`Passer`) and one typo in the expert transcription (`nontifringilla`). Subfamily names were not scored (no such rank in the GBIF backbone) | supports |
+| Entity resolution (plain GBIF lookup) | Butler, 34 gold-resolved names: **14 lost at linking vs 0 before it** on the expert text (difference 0.41 [0.25, 0.60]); 13 vs 1 on modern OCR. The 14: old genera and synonyms (`Aedon`, `Lusciniola`, `Munia`), names now treated as races of another species (`Motacilla beema`), abbreviated genera whose full name is not on the page (`M. minuta`), a homonym (`Passer`), one typo in the expert transcription | supports |
 | Error analysis | Of 163 gold mentions wrong in some version, 151 are OCR-sensitive (130 only that), 17 extraction/reasoning, 32 ambiguous/mixed; of 20 extra outputs, 18 OCR-sensitive (tagged by Gloria; several tags allowed) | — |
 
-**Answer to the main question, for these two books:** OCR stops being the main bottleneck at
-modern-OCR quality (page CER around 1%); from there, entity resolution is the limiting step.
-There is no single CER threshold in this data; the jump is between legacy and modern OCR.
+## What the follow-up experiments add (exploratory)
+
+| Question | Finding |
+|---|---|
+| Which OCR measure predicts extraction? | 22 OCR versions: value F1 vs gold-entity preservation, Spearman **0.95 / 1.00**; vs page CER **−0.07 / −0.62**. Some OCR models with page CER under 0.5% keep only 57–80% of Butler's names |
+| Better linker | LLM linker: link recall **0.59 → 0.91** (expert), **0.12 → 0.71** (legacy OCR); GBIF with an animal hint: 0.62 |
+| LLM repair instead of re-OCR | Legacy OCR **0.60 → 0.96** (Butler), **0.64 → 0.91** (Reeve); 92% of changed values right; on the expert text 3 of its 4 changes fixed the transcription's own typos. Fluent OCR errors (DeepSeek-OCR-2) stay: 0.81 / 0.87 |
+| No OCR at all | Page image only: **0.96 / 0.98** (value-bag scoring) |
+| Review signals | Legacy OCR: OCR-junk + no exact GBIF match flag 25% of outputs, catch 55% of errors (precision 0.77); model disagreement 7% |
+
+**Answer to the main question, for these two books:** with an LLM in the loop, OCR stops being
+the bottleneck early: either modern OCR, an LLM repair of legacy OCR, or reading the image gets
+extraction to about 0.95. What then limits trustworthy data is (a) fluent OCR errors no one can
+see, (b) entity resolution, where the remaining errors are taxonomic judgment, and (c) the
+definition of what counts as a mention. There is no single CER threshold; entity preservation is
+the measure to watch.
 
 ## What this does not show
 
 - Two books and 16 pages: a direction for a pilot, not a rule for all of BHL. Book and OCR
   quality are confounded, so results are per book.
-- The linker is deliberately naive (name only, no hints). A better linker could close much of
-  the linking gap; that is the experiment to fund next, not a reason to skip it.
+- The follow-up experiments were designed after seeing the test results; they need a fresh test
+  set before they count as findings.
+- The books are public. Repair and image reading may be helped by the models having seen them.
+  Material outside the training data is the real test (the PCAS case is public too).
 - One gold labeller; a second labeller on 5 pages agreed at 0.90 (exact) / 0.95 (overlap).
 - No review-time study: review workload is counted in mentions, not minutes.
-- The texts are public and may be in the models' training data; values are sliced from the
-  input, so memorisation cannot silently correct a misread name.
 
 ## Cost
 
-API cost per page for all eight conditions (4 text versions × with/without evidence): Opus
-$0.09 (batch), Gemini $0.26 (sync, prices valid to 2026-11-30). Whole project about $15 of a
-$15–30 budget. The main cost was human: labelling 22 pages, Butler's name links and the error
-analysis.
+Per page per pass, Opus 5.5: plain extraction about $0.01 (batch) / $0.02 (sync), LLM repair
+$0.05, image only $0.04 (sync). Gemini 4 Carbon about $0.03 per request (sync). Whole project
+about $27 of API spend. The main cost was human: labelling 22 pages, Butler's name links and the
+error analysis.

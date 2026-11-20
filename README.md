@@ -96,13 +96,16 @@ tables: `results/analysis_test_main/REPORT.md`, `results/linking_test/REPORT.md`
 | E4-lite linking (Butler) | Pre-registered (Opus G1, expanded linker): of 34 gold-resolved names, 14 are lost at linking and 0 before it on the expert text (difference 0.41 [0.25, 0.60], *supports*); 13 vs 1 on modern OCR (0.35 [0.10, 0.55], *supports*). Link recall of a plain GBIF lookup is 0.59 even on the gold text: 8 matched only at genus, 3 wrong taxon, 3 no record. On legacy OCR, 0.12 |
 | Sensitivity | Treating the 12 rows decided by guide rules added after the prompt as optional changes ALL_PRIMARY value F1 by at most 0.004 (`results/analysis_test_sensitivity_v0.6/`) |
 | Error analysis | Opus G1, 163 gold mentions wrong in at least one version, tagged by Gloria (several tags allowed; group A preset as OCR-sensitive by definition, see `DEVIATIONS.md`): OCR-sensitive 151, extraction/reasoning 17, ambiguous/mixed 32; 130 are OCR-sensitive only. Extraction errors are mostly Butler vernaculars covered only by guide rules added after the prompt (hawthorn, moss, insects, pine); ambiguous cases are span edges, relative dates and ligature forms. The 20 extra outputs (model outputs with no gold mention behind them): OCR-sensitive 18, extraction/reasoning 4, ambiguous/mixed 20; 15 of them appear only on OCR text, mostly legacy OCR on Reeve page 8966937. `results/error_analysis_test/SUMMARY.md` |
-| Cost | Test runs: Opus $1.50 (batch), Gemini $4.11 (sync). Total API spend about $15.4 |
+| Cost | Test runs: Opus $1.50 (batch), Gemini $4.11 (sync). Total API spend about $15.4 for the pre-registered work; about $27 including the exploratory follow-ups |
 
 **Reading for the main question (for these two books, with this linker):** once modern OCR is
 used, extraction is within 0.03 of the expert transcription, and the largest remaining loss is at
 entity resolution: a plain GBIF name lookup loses about four in ten names that extraction got
 right. This is a pilot on 16 pages; it says where to look next, not a rule for BHL. The linker
 is deliberately naive, so a better linker could change the second half of that sentence.
+The exploratory follow-ups below do change it: an LLM linker recovers most of the linking loss, and an
+LLM repair of legacy OCR or reading the page image directly reaches about the same accuracy as modern
+OCR. What is left is fluent OCR errors, taxonomic judgment and the definition of a mention.
 
 ## Exploratory findings (after the frozen test run)
 
