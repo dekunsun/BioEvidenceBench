@@ -438,3 +438,4 @@ Claude API 计入 $100 预算（已用约 $43）。Gemini 的运行尽量在 202
 | 2026-11-20 | 第 0 步 | 核实其余 4 部书均可下载逐页旧 OCR（Cuvier、Trudy、Das Chitinskelett、Piscium querelae 各试一页，均返回文本；须按 UTF-8 解码） | Claude |
 | 2026-11-20 | 计划 | **第二版**，采纳外部评审建议：Reward v1.0（干净行保留奖励、完整性检查、2–5 个受损词的题目粒度、"分级离散"的表述）；gnfinder 在新任务上单独测量并比较 w = 1 / 3；两次词对齐、只做 NFC、对齐质量审计；按连续页块划分并加同书内测试，Cuvier 结果表述为"跨书且跨语言"；2B 拆为转录保真（并入 2A）和分类学身份；训练改为 Phase 1 核心，加 Base / SFT / GRPO / SFT→GRPO 对照，奖励消融先做 R-A 与 R-D；单轮函数接口；Phase 2 加有证据支撑的学名关联任务；分开记录 API、GPU 和人工成本 | Gloria 转来建议，Claude 评估后整合 |
 | 2026-11-20 | 计划 | 四项决定：封存 16 页（先标 8 页）；Cuvier 作留出书；模块六比较"现用 Opus 5.5"与"候选 Haiku 5.5"，标准中加格式符合率；外部审计仓库名 `benchmark-audits` | Gloria 授权 Claude 判断 |
+| 2026-11-20 | 第 0 步 | **完成**：封存 16 页（`rl/sealed/pages.csv`，抽样框 Butler 208 页、Reeve 259 页）；任务 B 划分（`rl/env/task_b_ocr_repair/splits.csv`）：Cuvier 516 页留出，训练 1,277 页、开发 167 页、同书内测试 167 页，排除 38 页（22 个样本页 + 16 个封存页）。详见 `rl/LOG.md` | Claude 执行，Gloria 同意开始 |
