@@ -20,7 +20,11 @@ import pandas as pd
 from common import ROOT
 from score import norm_value
 
-GOLD = ROOT / "gold" / "gold_mentions_pcas_gloria.csv"
+GOLDS = {"as labelled": ROOT / "gold" / "gold_mentions_pcas_gloria.csv",
+         # Gloria's decisions made AFTER seeing model outputs (gold/gold_changes_gloria.csv, 2026-11-20):
+         # titles out of person spans, narrow-to-wide chains as one span, one institution, a part-of-place
+         # phrase, and `Carolinæ` as printed. Both are reported; neither replaces the other.
+         "adjudicated": ROOT / "gold" / "gold_mentions_pcas_gloria_adjudicated.csv"}
 OUT = ROOT / "results" / "pcas"
 PRIMARY = ["taxon", "person", "locality", "institution", "date"]
 
@@ -53,33 +57,33 @@ def f1(tp, fp, fn):
 
 
 def main() -> None:
-    gold = pd.read_csv(GOLD, keep_default_na=False)
     rows, miss = [], []
-    for d in sorted((ROOT / "results").glob("*_explore_*_pcas")):
+    for (gname, gpath), d in ((g, d) for g in GOLDS.items()
+                              for d in sorted((ROOT / "results").glob("*_explore_*_pcas"))):
+        gold = pd.read_csv(gpath, keep_default_na=False)
         cfg = json.loads((d / "config.json").read_text())
         pred = pd.read_csv(d / "test_mentions.csv", keep_default_na=False)
         label = f"{cfg['condition']} · {cfg['versions'][0]}"
         for name, fields in (("ALL_PRIMARY", PRIMARY), *((f, [f]) for f in PRIMARY + ["vernacular"])):
             tp, fp, fn, m = bag(pred, gold, fields)
             p, r, F = f1(tp, fp, fn)
-            rows.append({"condition": label, "field": name, "gold": tp + fn, "tp": tp, "fp": fp, "fn": fn,
+            rows.append({"gold_version": gname, "condition": label, "field": name, "gold": tp + fn, "tp": tp, "fp": fp, "fn": fn,
                          "P": p, "R": r, "F1": F})
             if name == "ALL_PRIMARY" or name == "vernacular":
-                miss += [{"condition": label, **x} for x in m]
+                miss += [{"gold_version": gname, "condition": label, **x} for x in m]
         rows[-1]["usd"] = cfg["usd_total"]
     s = pd.DataFrame(rows)
     OUT.mkdir(parents=True, exist_ok=True)
     s.to_csv(OUT / "scores.csv", index=False)
     pd.DataFrame(miss).to_csv(OUT / "misses.csv", index=False)
-    piv = s.pivot_table(index="field", columns="condition", values="F1").reindex(["ALL_PRIMARY"] + PRIMARY + ["vernacular"])
-    n = s[s.condition == s.condition.iloc[0]].set_index("field").gold
-    piv.insert(0, "gold", n)
+    piv = s.pivot_table(index="field", columns=["gold_version", "condition"], values="F1"
+                        ).reindex(["ALL_PRIMARY"] + PRIMARY + ["vernacular"])
     lines = ["# PCAS botany external case (exploratory)", "",
              "Eastwood 1898, PCAS 3rd ser. Botany vol. 1, 8 pages (BHL item 48989). Gold by Gloria against the "
-             "scans (210 rows). Value-level (bag) F1, all pages pooled (8 pages: no interval). Opus 5.5. "
+             "scans (210 rows as labelled; 206 after her adjudication, made after model outputs were seen). Value-level (bag) F1, all pages pooled (8 pages: no interval). Opus 5.5. "
              "Not comparable with the main experiment's positional scores, and not pooled with it.", "",
              piv.to_markdown(), "",
-             s[s.field == "ALL_PRIMARY"][["condition", "tp", "fp", "fn", "P", "R", "F1"]].to_markdown(index=False), "",
+             s[s.field == "ALL_PRIMARY"][["gold_version", "condition", "tp", "fp", "fn", "P", "R", "F1"]].to_markdown(index=False), "",
              "Misses and extra outputs per condition: `misses.csv`.", ""]
     (OUT / "REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))
