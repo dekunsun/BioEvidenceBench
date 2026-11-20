@@ -1,0 +1,5 @@
+The image shows the printed page; the text below is an OCR of it. Extract all mentions. For each mention give its field, the number of the line where it appears, the quote (an exact copy from that line, as in a citation that is checked automatically; a mention broken across two lines is quoted whole, the line break written as one space and a printed hyphen kept) and the reading. Never include the line labels (such as "L07|") in a quote or a reading.
+
+<page>
+{numbered_text}
+</page>
