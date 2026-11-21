@@ -62,7 +62,6 @@ def build() -> None:
 
 def assemble(pod_out: Path) -> None:
     sys.path.insert(0, str(ROOT / "src"))
-    from ocr_ladder import folded  # noqa: F401  (same value normalisation helpers as the ladder)
     from score import char_map, map_span, norm_value
     rep = {r["item_id"]: r for r in map(json.loads, pod_out.open(encoding="utf-8"))}
     split = pd.read_csv(DATA / "sample_split.csv")
