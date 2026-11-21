@@ -1,0 +1,11 @@
+route,book,value_F1,lo,hi,value_P,value_R
+legacy,Butler,0.597,0.445,0.736,0.611,0.584
+modern_dots-mocr,Butler,0.952,0.923,0.979,0.956,0.949
+legacy,Reeve,0.638,0.521,0.719,0.638,0.638
+modern_dots-mocr,Reeve,0.977,0.954,0.997,0.972,0.981
+legacy_sft-repair,Butler,0.667,0.535,0.789,0.669,0.664
+legacy_sft-repair,Reeve,0.718,0.548,0.799,0.713,0.723
+opus_G2_on_legacy,Butler,0.956,0.924,0.982,,
+opus_G2_on_legacy,Reeve,0.906,0.788,0.954,,
+haiku_G2_on_legacy,Butler,0.873,0.77,0.945,,
+haiku_G2_on_legacy,Reeve,0.767,0.694,0.874,,

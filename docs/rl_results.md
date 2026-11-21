@@ -300,8 +300,20 @@ applies only the pre-registered decision rules and marks its practical criteria 
    probed on dev before any training.
 3. Rejection-sampling fine-tuning (keep the SFT model's answers that score 1, train on them) as a
    cheaper alternative to GRPO for the same purpose.
-4. Test the released checkpoint inside the extraction pipeline on the 16 locked pages: does repaired
-   legacy OCR raise value F1, and by how much compared with the API model's repair?
+4. ~~Test the released checkpoint inside the extraction pipeline.~~ Done (2026-11-21, exploratory, see
+   section 14).
+
+## 14. The released checkpoint inside the extraction pipeline (exploratory)
+
+Legacy OCR of the 22 sample pages repaired line by line by `sft_s2` (greedy, `repair_v3`, 924 lines,
+$0.07 on the GPU), then the frozen G1 extraction with Opus on the 16 test pages ($0.25). Value F1 rises
+from 0.60 to **0.67** (Butler) and 0.64 to **0.72** (Reeve); paired page bootstrap +0.07 [0.04, 0.10] and
++0.08 [0.02, 0.12]. That is about a fifth of the gap to dots.mocr (0.95 / 0.98) and far below Opus
+repairing while it extracts (G2, 0.96 / 0.91). Of 350 primary test mentions it fixed 31 and broke 6, all
+6 intact names turned into other plausible names (`B. oreades` → `B. ovoletes`, `LICHT.` → `LINN.`).
+A small line-level repair model is not a substitute for re-OCR; if used, the original line must be kept
+beside the repair. Rules fixed before the run: `results/sft_repair_pipeline/PLAN.md`; results:
+`results/sft_repair_pipeline/REPORT.md`.
 
 ## Files
 
@@ -329,4 +341,5 @@ applies only the pre-registered decision rules and marks its practical criteria 
 - **留出书**：在没见过的法语书 Cuvier 上，SFT 保留了约一半的提升（0.21）。
 - **奖励审计**：找到五个漏洞，其中两个（H4 行末断词续写、H5 横线字形）是 Gloria 人工审查时发现的，自动探针没有发现。训练过的模型都没有利用这些漏洞，但"照抄是安全的保底"（H1）直接决定了 GRPO 的结果。经 Gloria 确认的钻空子比例：原模型 2.2–3.4%（超过 2% 门槛），训练过的模型 0–0.45%。
 - **发布**：SFT 种子 2 作为研究用检查点公开（`rl-sft-ocr-repair-v1`），不可用于自动替换原文。GPU 总花费约 $5.86，上限 $20。
-- **下一步可以做的**：从已经能采样到正确修复的起点做 GRPO；奖励 v1.4；拒绝采样微调；把发布的检查点接进抽取流程，测它对抽取 F1 的实际作用。
+- **下一步可以做的**：从已经能采样到正确修复的起点做 GRPO；奖励 v1.4；拒绝采样微调。
+- **接进抽取流程（已做，探索性）**：先用发布的检查点逐行修复旧 OCR，再用冻结的 G1 让 Opus 提取，16 页测试页上 F1 从 0.60 升到 0.67（Butler）、0.64 升到 0.72（Reeve），配对自助法差值 +0.07 / +0.08；现代 OCR（dots.mocr）是 0.95 / 0.98，Opus 边提取边修复（G2）是 0.96 / 0.91。350 个主要字段提及里修好 31 个、改坏 6 个，改坏的都是原本正确的名字被换成别的看似合理的名字。小模型逐行修复不能代替重新 OCR；若要用，必须保留原行供核对（`results/sft_repair_pipeline/REPORT.md`）。

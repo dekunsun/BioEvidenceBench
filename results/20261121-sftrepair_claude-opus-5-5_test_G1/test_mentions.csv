@@ -1,0 +1,433 @@
+page_id,version,condition,i,field,line,model_text,had_line_label,value,status,start,end,score
+8967281,legacy_sft-repair,G1,0,taxon,9,TURRITELLA,False,TURRITELLA,exact,33,43,100.0
+8967281,legacy_sft-repair,G1,1,person,9,LUMORCK.,False,LUMORCK.,exact,45,53,100.0
+8967281,legacy_sft-repair,G1,2,taxon,37,Turritella,False,Turritella,exact,702,712,100.0
+8967281,legacy_sft-repair,G1,3,taxon,53,Cerithium,False,Cerithium,exact,1193,1202,100.0
+8967281,legacy_sft-repair,G1,4,taxon,57,Turritella,False,Turritella,exact,1312,1322,100.0
+8967281,legacy_sft-repair,G1,5,taxon,77,Turritella,False,Turritella,exact,1788,1798,100.0
+8967281,legacy_sft-repair,G1,6,person,81,Lamarck,False,Lamarck,exact,1885,1892,100.0
+8967281,legacy_sft-repair,G1,7,locality,81,Paris,False,Paris,exact,1930,1935,100.0
+8967281,legacy_sft-repair,G1,8,person,83,Kiener,False,Kiener,exact,1943,1949,100.0
+8967281,legacy_sft-repair,G1,9,person,85,Cuming,False,Cuming,exact,2025,2031,100.0
+8967281,legacy_sft-repair,G1,10,person,85,Metcalfe,False,Metcalfe,exact,2037,2045,100.0
+8967281,legacy_sft-repair,G1,11,person,87,Hanley,False,Hanley,exact,2052,2058,100.0
+8967281,legacy_sft-repair,G1,12,person,87,Edward Belcher,False,Edward Belcher,exact,2065,2079,100.0
+8967281,legacy_sft-repair,G1,13,institution,87,British Museum,False,British Museum,exact,2085,2099,100.0
+8967281,legacy_sft-repair,G1,14,institution,89,Banksian Collection,False,Banksian Collection,exact,2110,2129,100.0
+8967281,legacy_sft-repair,G1,15,institution,89,Linnæan Society,False,"Linnæan
+
+Society",cross_line,2151,2167,100.0
+8967281,legacy_sft-repair,G1,16,person,99,Lamarck,False,Lamarck,exact,2336,2343,100.0
+8967281,legacy_sft-repair,G1,17,person,99,Deshayes,False,Deshayes,exact,2345,2353,100.0
+8967281,legacy_sft-repair,G1,18,person,99,Kiener,False,Kiener,exact,2358,2364,100.0
+8967281,legacy_sft-repair,G1,19,institution,103,Linnsan Society of London,False,Linnsan Society of London,exact,2464,2489,100.0
+8967281,legacy_sft-repair,G1,20,taxon,105,Turbo acutangulus,False,Turbo acutangulus,exact,2496,2513,100.0
+8967281,legacy_sft-repair,G1,21,person,105,Linnæus,False,Linnæus,exact,2517,2524,100.0
+8967281,legacy_sft-repair,G1,22,taxon,107,T. duplicatus,False,T. duplicatus,exact,2563,2576,100.0
+8967281,legacy_sft-repair,G1,23,person,109,Deshayes,False,Deshayes,exact,2618,2626,100.0
+8967281,legacy_sft-repair,G1,24,taxon,109,Turbo varians,False,Turbo varians,exact,2651,2664,100.0
+8967281,legacy_sft-repair,G1,25,taxon,121,Turbo abbreviatus,False,Turbo abbreviatus,exact,2800,2817,100.0
+8967281,legacy_sft-repair,G1,26,taxon,123,Turbo ungulinus,False,Turbo ungulinus,exact,2888,2903,100.0
+8967281,legacy_sft-repair,G1,27,person,125,Linnæus,False,Linnæus,exact,2908,2915,100.0
+8967281,legacy_sft-repair,G1,28,person,125,Lamarck,False,Lamarck,exact,2944,2951,100.0
+8967281,legacy_sft-repair,G1,29,taxon,125,Turritella fuscata,False,"Turritella
+
+fuscata",cross_line,2954,2973,100.0
+8967281,legacy_sft-repair,G1,30,taxon,127,Turbo terebra,False,Turbo terebra,exact,2995,3008,100.0
+8967281,legacy_sft-repair,G1,31,person,127,Linnæus,False,Linnæus,exact,3010,3017,100.0
+8967281,legacy_sft-repair,G1,32,person,129,Montagu,False,Montagu,exact,3062,3069,100.0
+8967281,legacy_sft-repair,G1,33,taxon,131,T. cornea,False,T. cornea,exact,3096,3105,100.0
+8967281,legacy_sft-repair,G1,34,person,131,Lamarck,False,Lamarck,exact,3109,3116,100.0
+8967281,legacy_sft-repair,G1,35,taxon,135,Turritella brevialis,False,Turritella brevialis,exact,3125,3145,100.0
+8967281,legacy_sft-repair,G1,36,person,135,Lamarck,False,Lamarck,exact,3149,3156,100.0
+8967281,legacy_sft-repair,G1,37,vernacular,135,Mescale,False,Mescale,exact,3161,3168,100.0
+8967281,legacy_sft-repair,G1,38,person,135,Adaiison,False,Adaiison,exact,3172,3180,100.0
+8967281,legacy_sft-repair,G1,39,person,137,Gray,False,Gray,exact,3234,3238,100.0
+8967281,legacy_sft-repair,G1,40,taxon,139,Mesalia,False,Mesalia,exact,3256,3263,100.0
+8967281,legacy_sft-repair,G1,41,taxon,141,Turritella lactea,False,Turritella lactea,exact,3296,3313,100.0
+8967281,legacy_sft-repair,G1,42,person,141,Moller,False,Moller,exact,3317,3323,100.0
+8967281,legacy_sft-repair,G1,43,institution,143,Cumingian collection,False,Cumingian collection,exact,3369,3389,100.0
+8967281,legacy_sft-repair,G1,44,person,145,Gray,False,Gray,exact,3434,3438,100.0
+8967281,legacy_sft-repair,G1,45,taxon,147,Eglisia,False,Eglisia,exact,3477,3484,100.0
+8967281,legacy_sft-repair,G1,46,taxon,147,Turritella spirata,False,Turritella spirata,exact,3501,3519,100.0
+8967281,legacy_sft-repair,G1,47,person,151,Cuming,False,Cuming,exact,3602,3608,100.0
+8967281,legacy_sft-repair,G1,48,locality,151,Philippine Islands,False,Philippine Islands,exact,3623,3641,100.0
+8967281,legacy_sft-repair,G1,49,taxon,155,Turritella,False,Turritella,exact,3650,3660,100.0
+8967281,legacy_sft-repair,G1,50,taxon,159,T. cornea,False,T. cornea,exact,3762,3771,100.0
+8967281,legacy_sft-repair,G1,51,locality,159,Shetland Islands,False,Shetland Islands,exact,3805,3821,100.0
+8967281,legacy_sft-repair,G1,52,person,161,M'Andrew,False,M'Andrew,exact,3830,3838,100.0
+8967281,legacy_sft-repair,G1,53,locality,167,Mediterranean,False,Mediterranean,exact,4014,4027,100.0
+8967281,legacy_sft-repair,G1,54,locality,169,Eastern Seas,False,Eastern Seas,exact,4062,4074,100.0
+8967281,legacy_sft-repair,G1,55,locality,169,shores of Central America,False,shores of Central America,exact,4083,4108,100.0
+8967281,legacy_sft-repair,G1,56,locality,171,New Zealand,False,New Zealand,exact,4142,4153,100.0
+8967281,legacy_sft-repair,G1,57,locality,171,Australia,False,Australia,exact,4155,4164,100.0
+8967281,legacy_sft-repair,G1,58,locality,173,Van Pieman's Land,False,Van Pieman's Land,exact,4171,4188,100.0
+8967281,legacy_sft-repair,G1,59,institution,177,Mus. Cuming,False,Mus. Cuming,exact,4205,4216,100.0
+8967281,legacy_sft-repair,G1,60,taxon,179,TURRITELLA INGULINA,False,TURRITELLA INGULINA,exact,4220,4239,100.0
+8967281,legacy_sft-repair,G1,61,vernacular,189,NAIL-BURSE TURRITELLA,False,NAIL-BURSE TURRITELLA,exact,4468,4489,100.0
+8967281,legacy_sft-repair,G1,62,taxon,199,Turbo ungulinus,False,Turbo ungulinus,exact,4702,4717,100.0
+8967281,legacy_sft-repair,G1,63,person,199,Linnæus,False,Linnæus,exact,4719,4726,100.0
+8967281,legacy_sft-repair,G1,64,taxon,203,Turritella fuscata,False,Turritella fuscata,exact,4764,4782,100.0
+8967281,legacy_sft-repair,G1,65,person,203,Lamarck,False,Lamarck,exact,4784,4791,100.0
+8967281,legacy_sft-repair,G1,66,locality,205,"Senegal, Mouth of the Gambia, West Africa",False,"Senegal, Mouth of the Gambia, West Africa",exact,4799,4840,100.0
+8967281,legacy_sft-repair,G1,67,person,209,Linnæus,False,Linnæus,exact,4880,4887,100.0
+8967281,legacy_sft-repair,G1,68,taxon,211,Turbo ungulinus,False,Turbo ungulinus,exact,4909,4924,100.0
+8967281,legacy_sft-repair,G1,69,institution,213,Linnaeau Society of Loudon,False,Linnaeau Society of Loudon,exact,4964,4990,100.0
+8967281,legacy_sft-repair,G1,70,person,215,Hanley,False,Hanley,exact,5008,5014,100.0
+8967281,legacy_sft-repair,G1,71,person,215,Lamarck,False,Lamarck,exact,5046,5053,100.0
+8967281,legacy_sft-repair,G1,72,taxon,215,T. fuscata,False,"T.
+
+fuscata",cross_line,5056,5067,100.0
+8967281,legacy_sft-repair,G1,73,locality,217,Seas of Europe,False,Seas of Europe,exact,5084,5098,100.0
+8967281,legacy_sft-repair,G1,74,person,219,Pulteney,False,Pulteney,exact,5152,5160,100.0
+8967281,legacy_sft-repair,G1,75,person,221,Deshayes,False,Deshayes,exact,5179,5187,100.0
+8967281,legacy_sft-repair,G1,76,taxon,223,Turritella,False,Turritella,exact,5233,5243,100.0
+8967281,legacy_sft-repair,G1,77,locality,223,Mediterranean,False,Mediterranean,exact,5266,5279,100.0
+8992643,legacy_sft-repair,G1,0,taxon,5,TURRICAR,False,TURRICAR,exact,25,33,100.0
+8992643,legacy_sft-repair,G1,1,taxon,5,TURRICAR,False,TURRICAR,exact,52,60,100.0
+8992643,legacy_sft-repair,G1,2,vernacular,9,PALLAS' WILLOW-WBDRB,False,PALLAS' WILLOW-WBDRB,exact,65,85,100.0
+8992643,legacy_sft-repair,G1,3,taxon,13,Plekoopus gracilis,False,Plekoopus gracilis,exact,90,108,100.0
+8992643,legacy_sft-repair,G1,4,locality,15,Norfolk,False,Norfolk,exact,158,165,100.0
+8992643,legacy_sft-repair,G1,5,date,15,"October, 1896",False,"October, 1896",exact,170,183,100.0
+8992643,legacy_sft-repair,G1,6,vernacular,23,Chiffchaffs,False,Chiffchaffs,exact,205,216,100.0
+8992643,legacy_sft-repair,G1,7,locality,23,Shetlands,False,Shetlands,exact,229,238,100.0
+8992643,legacy_sft-repair,G1,8,date,23,"April 15th and 24th, 1904",False,"April 15th and 24th,
+
+1904",cross_line,247,273,100.0
+8992643,legacy_sft-repair,G1,9,date,25,May,False,May,exact,278,281,100.0
+8992643,legacy_sft-repair,G1,10,person,25,John S. Thulloch,False,John S. Thulloch,exact,319,335,100.0
+8992643,legacy_sft-repair,G1,11,locality,27,Lerwick,False,Lerwick,exact,340,347,100.0
+8992643,legacy_sft-repair,G1,12,date,27,May 27th,False,May 27th,exact,356,364,100.0
+8992643,legacy_sft-repair,G1,13,taxon,31,TURRIDÆ,False,TURRIDÆ,exact,407,414,100.0
+8992643,legacy_sft-repair,G1,14,taxon,31,SYRIZANÆ,False,SYRIZANÆ,exact,427,435,100.0
+8992643,legacy_sft-repair,G1,15,vernacular,35,SIBERIAN CHIFFCHAFF,False,SIBERIAN CHIFFCHAFF,exact,444,463,100.0
+8992643,legacy_sft-repair,G1,16,taxon,39,Plethopis tristis,False,Plethopis tristis,exact,468,485,100.0
+8992643,legacy_sft-repair,G1,17,person,39,BLYTH,False,BLYTH,exact,487,492,100.0
+8992643,legacy_sft-repair,G1,18,locality,41,Orkneys,False,Orkneys,exact,544,551,100.0
+8992643,legacy_sft-repair,G1,19,date,41,1902,False,1902,exact,555,559,100.0
+8992643,legacy_sft-repair,G1,20,taxon,49,TURDILÆ,False,TURDILÆ,exact,577,584,100.0
+8992643,legacy_sft-repair,G1,21,taxon,49,SYRIMUS,False,SYRIMUS,exact,596,603,100.0
+8992643,legacy_sft-repair,G1,22,vernacular,53,GREENISH WILLOW-WB,False,GREENISH WILLOW-WB,exact,612,630,100.0
+8992643,legacy_sft-repair,G1,23,taxon,57,Phylloscopis virginea,False,Phylloscopis virginea,exact,635,656,100.0
+8992643,legacy_sft-repair,G1,24,person,57,BLATH,False,BLATH,exact,658,663,100.0
+8992643,legacy_sft-repair,G1,25,locality,65,Lincolnshire,False,Lincolnshire,exact,699,711,100.0
+8992643,legacy_sft-repair,G1,26,date,65,"September 5th, 1896",False,"September 5th, 1896",exact,716,735,100.0
+8992643,legacy_sft-repair,G1,27,locality,67,Sule Skerry,False,Sule Skerry,exact,754,765,100.0
+8992643,legacy_sft-repair,G1,28,locality,67,Siitherlandshire,False,Siitherlandshire,exact,778,794,100.0
+8992643,legacy_sft-repair,G1,29,date,67,"September 5th, 1902",False,"September 5th, 1902",exact,800,819,100.0
+8966930,legacy_sft-repair,G1,0,person,13,Lamarck,False,Lamarck,exact,195,202,100.0
+8966930,legacy_sft-repair,G1,1,taxon,15,Helix calcarea,False,Helix calcarea,exact,262,276,100.0
+8966930,legacy_sft-repair,G1,2,person,17,BORN,False,BORN,exact,281,285,100.0
+8966930,legacy_sft-repair,G1,3,institution,25,Mus. Cuming,False,Mus. Cuming,exact,422,433,100.0
+8966930,legacy_sft-repair,G1,4,taxon,29,BULIMUS OBTUSATUS,False,BULIMUS OBTUSATUS,exact,439,456,100.0
+8966930,legacy_sft-repair,G1,5,vernacular,43,BLUTNED BULIMUS,False,BLUTNED BULIMUS,exact,771,786,100.0
+8966930,legacy_sft-repair,G1,6,person,59,PFEIFFER,False,PFEIFFER,exact,1144,1152,100.0
+8966930,legacy_sft-repair,G1,7,taxon,61,Helix obtusuta,False,Helix obtusuta,exact,1175,1189,100.0
+8966930,legacy_sft-repair,G1,8,person,61,Gmelin,False,Gmelin,exact,1191,1197,100.0
+8966930,legacy_sft-repair,G1,9,taxon,63,Bulimus calcareus,False,Bulimus calcareus,exact,1200,1217,100.0
+8966930,legacy_sft-repair,G1,10,person,63,Bruguière,False,Bruguière,exact,1219,1228,100.0
+8966930,legacy_sft-repair,G1,11,person,63,Lamarck,False,Lamarck,exact,1230,1237,100.0
+8966930,legacy_sft-repair,G1,12,person,63,Deshayes,False,Deshayes,exact,1239,1247,100.0
+8966930,legacy_sft-repair,G1,13,locality,67,Madagascar,False,Madagascar,exact,1257,1267,100.0
+8966930,legacy_sft-repair,G1,14,person,67,Beck,False,Beck,exact,1269,1273,100.0
+8966930,legacy_sft-repair,G1,15,institution,71,Mus. Cuming,False,Mus. Cuming,exact,1292,1303,100.0
+8966930,legacy_sft-repair,G1,16,taxon,75,BULIMUS CLAVATOR,False,BULIMUS CLAVATOR,exact,1309,1325,100.0
+8966930,legacy_sft-repair,G1,17,vernacular,89,CLUB-BEARER BULIMUS,False,CLUB-BEARER BULIMUS,exact,1617,1636,100.0
+8966930,legacy_sft-repair,G1,18,person,105,Petit,False,Petit,exact,1957,1962,100.0
+8966930,legacy_sft-repair,G1,19,locality,109,Madagascar,False,Madagascar,exact,2000,2010,100.0
+8966802,legacy_sft-repair,G1,0,vernacular,5,SLIGHTLY WRINKLE-SPINUS BULIMUS,False,SLIGHTLY WRINKLE-SPINUS BULIMUS,exact,25,56,100.0
+8966802,legacy_sft-repair,G1,1,taxon,7,Pupa,False,Pupa,exact,99,103,100.0
+8966802,legacy_sft-repair,G1,2,person,21,SOVERBY,False,SOVERBY,exact,362,369,100.0
+8966802,legacy_sft-repair,G1,3,locality,25,Gallapagos Islands,False,Gallapagos Islands,exact,403,421,100.0
+8966802,legacy_sft-repair,G1,4,person,25,Cuming,False,Cuming,exact,423,429,100.0
+8966802,legacy_sft-repair,G1,5,taxon,39,B. rugifer,False,B. rugifer,exact,586,596,100.0
+8966802,legacy_sft-repair,G1,6,taxon,39,Bancii,False,Bancii,exact,601,607,100.0
+8966802,legacy_sft-repair,G1,7,institution,47,Mus. Cuming,False,Mus. Cuming,exact,760,771,100.0
+8966802,legacy_sft-repair,G1,8,taxon,51,BULIMUS TURRITUS,False,BULIMUS TURRITUS,exact,777,793,100.0
+8966802,legacy_sft-repair,G1,9,vernacular,61,TURRETED BULIMUS,False,TURRETED BULIMUS,exact,1003,1019,100.0
+8966802,legacy_sft-repair,G1,10,person,73,BRODERIP,False,BRODERIP,exact,1238,1246,100.0
+8966802,legacy_sft-repair,G1,11,locality,77,"Trinidad, Peninsou",False,"Trinidad, Peninsou",exact,1287,1305,100.0
+8966802,legacy_sft-repair,G1,12,person,77,Cuming,False,Cuming,exact,1326,1332,100.0
+8966802,legacy_sft-repair,G1,13,institution,89,Mus. Cuming,False,Mus. Cuming,exact,1462,1473,100.0
+8966802,legacy_sft-repair,G1,14,taxon,91,BULIMUS SCAPTUKATUS,False,BULIMUS SCAPTUKATUS,exact,1477,1496,100.0
+8966802,legacy_sft-repair,G1,15,taxon,99,Bulimus,False,Bulimus,exact,1711,1718,100.0
+8966802,legacy_sft-repair,G1,16,vernacular,101,SCULPTURED BULIMUS,False,SCULPTURED BULIMUS,exact,1732,1750,100.0
+8966802,legacy_sft-repair,G1,17,person,113,FRANKFURT,False,FRANKFURT,exact,2005,2014,100.0
+8966802,legacy_sft-repair,G1,18,locality,115,Gallapagos Islands,False,Gallapagos Islands,exact,2053,2071,100.0
+8966802,legacy_sft-repair,G1,19,person,115,Darwin,False,Darwin,exact,2086,2092,100.0
+8966802,legacy_sft-repair,G1,20,institution,119,Mus. Cuming,False,Mus. Cuming,exact,2111,2122,100.0
+8966802,legacy_sft-repair,G1,21,taxon,123,BULIMUS C.4. LIVUS,False,BULIMUS C.4. LIVUS,exact,2128,2146,100.0
+8966802,legacy_sft-repair,G1,22,vernacular,133,BOLD BULIMUS,False,BOLD BULIMUS,exact,2354,2366,100.0
+8966802,legacy_sft-repair,G1,23,person,145,SOWERS,False,SOWERS,exact,2571,2577,100.0
+8966802,legacy_sft-repair,G1,24,locality,149,"James' Island, Gallapagos",False,"James' Island, Gallapagos",exact,2617,2642,100.0
+8966802,legacy_sft-repair,G1,25,person,151,Cuminc,False,Cuminc,exact,2671,2677,100.0
+8966802,legacy_sft-repair,G1,26,institution,165,Mus. Cuming,False,Mus. Cuming,exact,2764,2775,100.0
+8966802,legacy_sft-repair,G1,27,taxon,169,BULIMUS PUSTULOSUS,False,BULIMUS PUSTULOSUS,exact,2781,2799,100.0
+8966802,legacy_sft-repair,G1,28,vernacular,181,PUSTULOSE BULIMUS,False,PUSTULOSE BULIMUS,exact,3048,3065,100.0
+8966802,legacy_sft-repair,G1,29,person,195,BIODEIPI,False,BIODEIPI,exact,3316,3324,100.0
+8966802,legacy_sft-repair,G1,30,locality,199,"Bulaseo, Chili",False,"Bulaseo, Chili",exact,3365,3379,100.0
+8966802,legacy_sft-repair,G1,31,person,201,Cuming,False,Cuming,exact,3416,3422,100.0
+8966937,legacy_sft-repair,G1,0,institution,5,Mus. Cuming,False,Mus. Cuming,exact,45,56,100.0
+8966937,legacy_sft-repair,G1,1,taxon,9,BULIMUS ROSEATUS,False,BULIMUS ROSEATUS,exact,62,78,100.0
+8966937,legacy_sft-repair,G1,2,vernacular,23,ROSEATE BULIMUS,False,ROSEATE BULIMUS,exact,374,389,100.0
+8966937,legacy_sft-repair,G1,3,locality,39,Venezuela,False,Venezuela,exact,730,739,100.0
+8966937,legacy_sft-repair,G1,4,taxon,47,B. ovoletes,False,B. ovoletes,exact,837,848,100.0
+8966937,legacy_sft-repair,G1,5,vernacular,51,PARTICULAR BULIMUS,False,PARTICULAR BULIMUS,exact,857,875,100.0
+8966937,legacy_sft-repair,G1,6,person,63,PFEIFFER,False,PFEIFFER,exact,1171,1179,100.0
+8966937,legacy_sft-repair,G1,7,locality,65,New Granada,False,New Granada,exact,1210,1221,100.0
+8966937,legacy_sft-repair,G1,8,person,65,Funck,False,Funck,exact,1223,1228,100.0
+8966937,legacy_sft-repair,G1,9,taxon,83,B. perdix,False,B. perdix,exact,1634,1643,100.0
+8966937,legacy_sft-repair,G1,10,institution,91,Mus. Cuming,False,Mus. Cuming,exact,1813,1824,100.0
+8966937,legacy_sft-repair,G1,11,taxon,95,BULIMUS FERIATUS,False,BULIMUS FERIATUS,exact,1830,1846,100.0
+8966937,legacy_sft-repair,G1,12,vernacular,109,UNEMPLOYED BULIMUS,False,UNEMPLOYED BULIMUS,exact,2147,2165,100.0
+8966937,legacy_sft-repair,G1,13,locality,125,Venezuela,False,Venezuela,exact,2498,2507,100.0
+8966937,legacy_sft-repair,G1,14,institution,135,Mus. Cuming,False,Mus. Cuming,exact,2603,2614,100.0
+8966937,legacy_sft-repair,G1,15,taxon,137,BULIMUS PERDIX,False,BULIMUS PERDIX,exact,2618,2632,100.0
+8966937,legacy_sft-repair,G1,16,institution,151,Mus. Cuming,False,Mus. Cuming,exact,2944,2955,100.0
+8966937,legacy_sft-repair,G1,17,taxon,155,BULIMUS EGYIMPHALUS,False,BULIMUS EGYIMPHALUS,exact,2961,2980,100.0
+8966937,legacy_sft-repair,G1,18,vernacular,169,BROAD-PLEATED BULIMUS,False,BROAD-PLEATED BULIMUS,exact,3309,3330,100.0
+8966937,legacy_sft-repair,G1,19,locality,183,Venezuela,False,Venezuela,exact,3648,3657,100.0
+8966937,legacy_sft-repair,G1,20,person,183,Dyson,False,Dyson,exact,3659,3664,100.0
+8966937,legacy_sft-repair,G1,21,institution,193,Mus. Cuming,False,Mus. Cuming,exact,3750,3761,100.0
+8966937,legacy_sft-repair,G1,22,taxon,195,BULIMUS GLABER,False,BULIMUS GLABER,exact,3765,3779,100.0
+8967290,legacy_sft-repair,G1,0,taxon,17,T. elongatus,False,T. elongatus,exact,386,398,100.0
+8967290,legacy_sft-repair,G1,1,taxon,25,T. goniostoma,False,T. goniostoma,exact,546,559,100.0
+8967290,legacy_sft-repair,G1,2,taxon,33,B. letiliginosa,False,B. letiliginosa,exact,763,778,100.0
+8992644,legacy_sft-repair,G1,0,vernacular,5,Willow-Warbler,False,Willow-Warbler,exact,41,55,100.0
+8992644,legacy_sft-repair,G1,1,locality,7,Shetland Islands,False,Shetland Islands,exact,105,121,100.0
+8992644,legacy_sft-repair,G1,2,date,7,"May, 1901",False,"May, 1901",exact,125,134,100.0
+8992644,legacy_sft-repair,G1,3,vernacular,11,Wood-Warbler,False,Wood-Warbler,exact,143,155,100.0
+8992644,legacy_sft-repair,G1,4,locality,11,Isle of Man,False,Isle of Man,exact,173,184,100.0
+8992644,legacy_sft-repair,G1,5,date,11,May 1901,False,May 1901,exact,189,197,100.0
+8992644,legacy_sft-repair,G1,6,date,11,1905,False,1905,exact,202,206,100.0
+8992644,legacy_sft-repair,G1,7,taxon,15,Fringilla rustica,False,Fringilla rustica,exact,211,228,100.0
+8992644,legacy_sft-repair,G1,8,person,15,E. Simeoni,False,E. Simeoni,exact,230,240,100.0
+8992644,legacy_sft-repair,G1,9,vernacular,19,RUFOUS WARbler,False,RUFOUS WARbler,exact,251,265,100.0
+8992644,legacy_sft-repair,G1,10,taxon,23,Acanthis rufusum,False,Acanthis rufusum,exact,270,286,100.0
+8992644,legacy_sft-repair,G1,11,person,23,TEMM.,False,TEMM.,exact,288,293,100.0
+8992644,legacy_sft-repair,G1,12,locality,25,Sussex,False,Sussex,exact,330,336,100.0
+8992644,legacy_sft-repair,G1,13,locality,25,Devon,False,Devon,exact,341,346,100.0
+8992644,legacy_sft-repair,G1,14,taxon,33,TURRIDÆ,False,TURRIDÆ,exact,377,384,100.0
+8992644,legacy_sft-repair,G1,15,taxon,33,SIMIALLYSYLLINUM,False,SIMIALLYSYLLINUM,exact,386,402,100.0
+8992644,legacy_sft-repair,G1,16,vernacular,37,GREY-BACKED WARbler,False,GREY-BACKED WARbler,exact,411,430,100.0
+8992644,legacy_sft-repair,G1,17,taxon,41,Acanthis vernarius,False,Acanthis vernarius,exact,435,453,100.0
+8992644,legacy_sft-repair,G1,18,locality,43,"Hythe, Kent",False,"Hythe, Kent",exact,473,484,100.0
+8992644,legacy_sft-repair,G1,19,date,43,"July 15th, 1907",False,"July 15th, 1907",exact,489,504,100.0
+8992644,legacy_sft-repair,G1,20,taxon,51,TURRITELLA,False,TURRITELLA,exact,521,531,100.0
+8992644,legacy_sft-repair,G1,21,taxon,51,SYNOPSIS,False,SYNOPSIS,exact,543,551,100.0
+8992644,legacy_sft-repair,G1,22,vernacular,55,Radcis Bush-Warbler,False,Radcis Bush-Warbler,exact,556,575,100.0
+8992644,legacy_sft-repair,G1,23,taxon,59,Lusciniola schwarzi,False,Lusciniola schwarzi,exact,580,599,100.0
+8992644,legacy_sft-repair,G1,24,person,59,RADDE.,False,RADDE.,exact,601,607,100.0
+8992644,legacy_sft-repair,G1,25,date,63,"October, 1898",False,"October, 1898",exact,638,651,100.0
+8992644,legacy_sft-repair,G1,26,locality,63,Lincolnshire side of the Humber,False,"Lincolnshire side of the
+
+Humber",cross_line,660,692,100.0
+8992644,legacy_sft-repair,G1,27,person,65,Hailidge,False,Hailidge,exact,701,709,100.0
+8967282,legacy_sft-repair,G1,0,person,5,Kiener,False,Kiener,exact,41,47,100.0
+8967282,legacy_sft-repair,G1,1,person,9,Linnæus,False,Linnæus,exact,144,151,100.0
+8967282,legacy_sft-repair,G1,2,taxon,11,T. cornea,False,T. cornea,exact,202,211,100.0
+8967282,legacy_sft-repair,G1,3,person,11,Lamarck,False,Lamarck,exact,213,220,100.0
+8967282,legacy_sft-repair,G1,4,person,11,Deshayes,False,Deshayes,exact,225,233,100.0
+8967282,legacy_sft-repair,G1,5,taxon,11,T. ungulinus,False,T. ungulinus,exact,235,247,100.0
+8967282,legacy_sft-repair,G1,6,person,13,Lamarck,False,Lamarck,exact,274,281,100.0
+8967282,legacy_sft-repair,G1,7,person,13,Deshayes,False,Deshayes,exact,286,294,100.0
+8967282,legacy_sft-repair,G1,8,taxon,13,T. ungulinus,False,T. ungulinus,exact,296,308,100.0
+8967282,legacy_sft-repair,G1,9,institution,17,Mus. Cuming,False,Mus. Cuming,exact,331,342,100.0
+8967282,legacy_sft-repair,G1,10,taxon,19,TURRITELLA DUPLICATA,False,TURRITELLA DUPLICATA,exact,346,366,100.0
+8967282,legacy_sft-repair,G1,11,vernacular,33,DUPLICATE TURRITELLA,False,DUPLICATE TURRITELLA,exact,677,697,100.0
+8967282,legacy_sft-repair,G1,12,person,49,LAMARCK,False,LAMARCK,exact,1059,1066,100.0
+8967282,legacy_sft-repair,G1,13,person,49,Deshayes,False,Deshayes,exact,1085,1093,100.0
+8967282,legacy_sft-repair,G1,14,taxon,51,Turbo dubicatâ,False,Turbo dubicatâ,exact,1120,1134,100.0
+8967282,legacy_sft-repair,G1,15,person,51,Linnæus,False,Linnæus,exact,1136,1143,100.0
+8967282,legacy_sft-repair,G1,16,taxon,53,Turbo acutangulus,False,Turbo acutangulus,exact,1157,1174,100.0
+8967282,legacy_sft-repair,G1,17,person,53,Linnæus,False,Linnæus,exact,1176,1183,100.0
+8967282,legacy_sft-repair,G1,18,taxon,55,Turbo repuginatus,False,Turbo repuginatus,exact,1202,1219,100.0
+8967282,legacy_sft-repair,G1,19,person,55,Linnæus,False,Linnæus,exact,1221,1228,100.0
+8967282,legacy_sft-repair,G1,20,locality,57,Eastern Seas,False,Eastern Seas,exact,1236,1248,100.0
+8967282,legacy_sft-repair,G1,21,taxon,61,Turbo armatus,False,Turbo armatus,exact,1257,1270,100.0
+8967282,legacy_sft-repair,G1,22,person,61,Limacius,False,Limacius,exact,1274,1282,100.0
+8967282,legacy_sft-repair,G1,23,taxon,63,Turbo dubicatus,False,Turbo dubicatus,exact,1311,1326,100.0
+8967282,legacy_sft-repair,G1,24,institution,65,Linnæan collection,False,Linnæan collection,exact,1389,1407,100.0
+8967282,legacy_sft-repair,G1,25,person,67,Deshayes,False,Deshayes,exact,1445,1453,100.0
+8967282,legacy_sft-repair,G1,26,person,69,Kiener,False,Kiener,exact,1494,1500,100.0
+8967282,legacy_sft-repair,G1,27,taxon,75,Turritella dubia,False,Turritella dubia,exact,1591,1607,100.0
+8967282,legacy_sft-repair,G1,28,person,85,Linnæus,False,Linnæus,exact,1855,1862,100.0
+8967282,legacy_sft-repair,G1,29,taxon,85,Turbo acutangulus,False,Turbo acutangulus,exact,1865,1882,100.0
+8967282,legacy_sft-repair,G1,30,institution,95,Mus. Cuming,False,Mus. Cuming,exact,2088,2099,100.0
+8967282,legacy_sft-repair,G1,31,taxon,99,TURRITELLA TEREBUA,False,TURRITELLA TEREBUA,exact,2105,2123,100.0
+8967282,legacy_sft-repair,G1,32,vernacular,111,BULIMUS TURRITELLA,False,BULIMUS TURRITELLA,exact,2318,2336,100.0
+8967282,legacy_sft-repair,G1,33,person,123,LAMARCK,False,LAMARCK,exact,2547,2554,100.0
+8967282,legacy_sft-repair,G1,34,person,123,Deshayes,False,Deshayes,exact,2574,2582,100.0
+8967282,legacy_sft-repair,G1,35,taxon,125,Turbo terebra,False,Turbo terebra,exact,2609,2622,100.0
+8967282,legacy_sft-repair,G1,36,person,125,Linnæus,False,Linnæus,exact,2624,2631,100.0
+8967282,legacy_sft-repair,G1,37,taxon,131,Trittella Archimedes,False,Trittella Archimedes,exact,2672,2692,100.0
+8967282,legacy_sft-repair,G1,38,person,131,Dillwyn,False,Dillwyn,exact,2694,2701,100.0
+8967282,legacy_sft-repair,G1,39,person,131,Mawe,False,Mawe,exact,2703,2707,100.0
+8967282,legacy_sft-repair,G1,40,locality,133,Piullippine Islands,False,Piullippine Islands,exact,2715,2734,100.0
+8967282,legacy_sft-repair,G1,41,person,133,Cuming,False,Cuming,exact,2736,2742,100.0
+8967282,legacy_sft-repair,G1,42,person,139,Martyll,False,Martyll,exact,2827,2834,100.0
+8967282,legacy_sft-repair,G1,43,person,151,Cuming,False,Cuming,exact,3173,3179,100.0
+8967282,legacy_sft-repair,G1,44,locality,153,Island of Negros,False,Island of Negros,exact,3214,3230,100.0
+8967282,legacy_sft-repair,G1,45,locality,153,Philippines,False,Philippines,exact,3243,3254,100.0
+8967282,legacy_sft-repair,G1,46,taxon,155,T. terebra,False,T. terebra,exact,3261,3271,100.0
+8967282,legacy_sft-repair,G1,47,person,157,Deshayes,False,Deshayes,exact,3346,3354,100.0
+8967282,legacy_sft-repair,G1,48,taxon,157,T. communœ,False,T. communœ,exact,3356,3366,100.0
+8967282,legacy_sft-repair,G1,49,person,159,Philippi,False,Philippi,exact,3369,3377,100.0
+8967282,legacy_sft-repair,G1,50,taxon,159,T. cornea,False,T. cornea,exact,3386,3395,100.0
+8967282,legacy_sft-repair,G1,51,person,159,Lamarck,False,Lamarck,exact,3399,3406,100.0
+8967282,legacy_sft-repair,G1,52,institution,163,Mus. Cuming,False,Mus. Cuming,exact,3423,3434,100.0
+8967282,legacy_sft-repair,G1,53,taxon,167,TURRITELLA ATTENUATA,False,TURRITELLA ATTENUATA,exact,3440,3460,100.0
+8967282,legacy_sft-repair,G1,54,vernacular,177,ATTENUATED TURRITELLA,False,ATTENUATED TURRITELLA,exact,3712,3733,100.0
+8967282,legacy_sft-repair,G1,55,taxon,189,Turritella acutangula,False,Turritella acutangula,exact,4009,4030,100.0
+8967282,legacy_sft-repair,G1,56,person,189,Deshayes,False,Deshayes,exact,4032,4040,100.0
+8967282,legacy_sft-repair,G1,57,taxon,191,Turbo acutangulus,False,Turbo acutangulus,exact,4081,4098,100.0
+8967282,legacy_sft-repair,G1,58,person,191,Linn.,False,Linn.,exact,4100,4105,100.0
+8967282,legacy_sft-repair,G1,59,person,199,Linnæus,False,Linnæus,exact,4156,4163,100.0
+8967282,legacy_sft-repair,G1,60,taxon,201,Turbo cutangulus,False,Turbo cutangulus,exact,4188,4204,100.0
+8967282,legacy_sft-repair,G1,61,taxon,203,T. duplicatus,False,T. duplicatus,exact,4260,4273,100.0
+8992408,legacy_sft-repair,G1,0,person,15,H. A. Alcockerson,False,H. A. Alcockerson,exact,284,301,100.0
+8992408,legacy_sft-repair,G1,1,vernacular,17,Hawfinch,False,Hawfinch,exact,371,379,100.0
+8992408,legacy_sft-repair,G1,2,person,19,Charles A. Witchell,False,Charles A. Witchell,exact,453,472,100.0
+8992408,legacy_sft-repair,G1,3,vernacular,21,Hawfinch,False,Hawfinch,exact,577,585,100.0
+8992408,legacy_sft-repair,G1,4,person,23,H. A. Macpherson,False,H. A. Macpherson,exact,625,641,100.0
+8992408,legacy_sft-repair,G1,5,vernacular,31,Chaffinch,False,Chaffinch,exact,803,812,100.0
+8992408,legacy_sft-repair,G1,6,person,33,Alexander von Homeer,False,Alexander von Homeer,exact,880,900,100.0
+8992408,legacy_sft-repair,G1,7,vernacular,35,cherry-kernel biter,False,cherry-kernel biter,exact,949,968,100.0
+8992408,legacy_sft-repair,G1,8,vernacular,41,Bullfinches,False,Bullfinches,exact,1105,1116,100.0
+8992408,legacy_sft-repair,G1,9,vernacular,41,Grosbeaks,False,Grosbeaks,exact,1132,1141,100.0
+8992408,legacy_sft-repair,G1,10,vernacular,43,Grosbeaks,False,Grosbeaks,exact,1171,1180,100.0
+8992408,legacy_sft-repair,G1,11,person,45,Howard Saunders,False,Howard Saunders,exact,1251,1266,100.0
+8992408,legacy_sft-repair,G1,12,vernacular,47,Finches,False,Finches,exact,1326,1333,100.0
+8992408,legacy_sft-repair,G1,13,vernacular,47,Buntings,False,Buntings,exact,1342,1350,100.0
+8992408,legacy_sft-repair,G1,14,vernacular,55,Finches,False,Finches,exact,1524,1531,100.0
+8992408,legacy_sft-repair,G1,15,taxon,55,Fringilla,False,Fringilla,exact,1566,1575,100.0
+8992408,legacy_sft-repair,G1,16,vernacular,57,Buntings,False,Buntings,exact,1611,1619,100.0
+8992408,legacy_sft-repair,G1,17,taxon,59,Pless,False,Pless,exact,1704,1709,100.0
+8992408,legacy_sft-repair,G1,18,taxon,61,Emberizina,False,Emberizina,exact,1771,1781,100.0
+8967345,legacy_sft-repair,G1,0,taxon,9,E B U R N A,False,E B U R N A,exact,29,40,100.0
+8967345,legacy_sft-repair,G1,1,person,29,Cavaf,False,Cavaf,exact,263,268,100.0
+8967333,legacy_sft-repair,G1,0,taxon,9,CASSIDARIA,False,CASSIDARIA,exact,29,39,100.0
+8967333,legacy_sft-repair,G1,1,person,33,Landsborough,False,Landsborough,exact,334,346,100.0
+8992489,legacy_sft-repair,G1,0,taxon,5,FR I X(UL L ID,False,FR I X(UL L ID,exact,32,46,100.0
+8992489,legacy_sft-repair,G1,1,taxon,5,FRIXGIL L IN^E,False,FRIXGIL L IN^E,exact,64,78,100.0
+8992489,legacy_sft-repair,G1,2,vernacular,9,Bramblixg,False,Bramblixg,exact,87,96,100.0
+8992489,legacy_sft-repair,G1,3,taxon,13,Fringilla rufa,False,Fringilla rufa,exact,101,115,100.0
+8992489,legacy_sft-repair,G1,4,person,13,LINN.,False,LINN.,exact,117,122,100.0
+8992489,legacy_sft-repair,G1,5,person,17,Howard vSauiiders,False,Howard vSauiiders,exact,165,182,100.0
+8992489,legacy_sft-repair,G1,6,locality,17,Faroes,False,Faroes,exact,199,205,100.0
+8992489,legacy_sft-repair,G1,7,vernacular,19,Brambling,False,Brambling,exact,211,220,100.0
+8992489,legacy_sft-repair,G1,8,locality,21,Norway,False,Norway,exact,336,342,100.0
+8992489,legacy_sft-repair,G1,9,locality,23,valley of the Amur,False,valley of the Amur,exact,351,369,100.0
+8992489,legacy_sft-repair,G1,10,locality,23,Japan,False,Japan,exact,403,408,100.0
+8992489,legacy_sft-repair,G1,11,locality,23,China,False,China,exact,410,415,100.0
+8992489,legacy_sft-repair,G1,12,locality,23,Northern India,False,"Northern
+
+India",cross_line,417,432,100.0
+8992489,legacy_sft-repair,G1,13,locality,25,Asia Minor,False,Asia Minor,exact,434,444,100.0
+8992489,legacy_sft-repair,G1,14,locality,25,Europe,False,Europe,exact,463,469,100.0
+8992489,legacy_sft-repair,G1,15,locality,27,Alemannian forest,False,Alemannian forest,exact,567,584,100.0
+8992489,legacy_sft-repair,G1,16,locality,29,Belgium,False,Belgium,exact,618,625,100.0
+8992489,legacy_sft-repair,G1,17,locality,29,Holland,False,Holland,exact,627,634,100.0
+8992489,legacy_sft-repair,G1,18,locality,29,Germany,False,Germany,exact,636,643,100.0
+8992489,legacy_sft-repair,G1,19,locality,29,Heligoland,False,Heligoland,exact,649,659,100.0
+8992489,legacy_sft-repair,G1,20,locality,31,Prœnees,False,Prœnees,exact,715,722,100.0
+8992489,legacy_sft-repair,G1,21,locality,31,Alps,False,Alps,exact,728,732,100.0
+8992489,legacy_sft-repair,G1,22,locality,31,Ardennes,False,Ardennes,exact,741,749,100.0
+8992489,legacy_sft-repair,G1,23,locality,37,Great Britain,False,Great Britain,exact,818,831,100.0
+8992489,legacy_sft-repair,G1,24,vernacular,37,Brambling,False,Brambling,exact,836,845,100.0
+8992489,legacy_sft-repair,G1,25,locality,43,Scotland,False,Scotland,exact,1092,1100,100.0
+8992489,legacy_sft-repair,G1,26,locality,43,England,False,England,exact,1109,1116,100.0
+8992489,legacy_sft-repair,G1,27,locality,45,Cornwall,False,Cornwall,exact,1129,1137,100.0
+8992489,legacy_sft-repair,G1,28,locality,45,west of England,False,west of England,exact,1143,1158,100.0
+8992489,legacy_sft-repair,G1,29,locality,45,south of Ireland,False,south of Ireland,exact,1168,1184,100.0
+8992379,legacy_sft-repair,G1,0,locality,5,Berwickshire,False,Berwickshire,exact,34,46,100.0
+8992379,legacy_sft-repair,G1,1,locality,5,Yorkshire,False,Yorkshire,exact,56,65,100.0
+8992379,legacy_sft-repair,G1,2,locality,5,Scarborough,False,Scarborough,exact,94,105,100.0
+8992379,legacy_sft-repair,G1,3,date,5,"October 23rd, 1889",False,"October
+
+23rd, 1889",cross_line,107,126,100.0
+8992379,legacy_sft-repair,G1,4,date,7,1887,False,1887,exact,178,182,100.0
+8992379,legacy_sft-repair,G1,5,locality,9,Wells,False,Wells,exact,217,222,100.0
+8992379,legacy_sft-repair,G1,6,date,9,1900,False,1900,exact,226,230,100.0
+8992379,legacy_sft-repair,G1,7,date,9,1904,False,1904,exact,259,263,100.0
+8992379,legacy_sft-repair,G1,8,date,11,1905,False,1905,exact,278,282,100.0
+8992379,legacy_sft-repair,G1,9,date,11,1906,False,1906,exact,294,298,100.0
+8992379,legacy_sft-repair,G1,10,locality,11,Norfolk,False,Norfolk,exact,309,316,100.0
+8992379,legacy_sft-repair,G1,11,locality,11,Yorkshire,False,Yorkshire,exact,337,346,100.0
+8992379,legacy_sft-repair,G1,12,date,13,1907,False,1907,exact,351,355,100.0
+8992379,legacy_sft-repair,G1,13,locality,13,Cheshire,False,Cheshire,exact,360,368,100.0
+8992379,legacy_sft-repair,G1,14,date,13,June 1903,False,June 1903,exact,385,394,100.0
+8992379,legacy_sft-repair,G1,15,locality,13,Shetlands,False,Shetlands,exact,403,412,100.0
+8992379,legacy_sft-repair,G1,16,date,15,1906,False,1906,exact,450,454,100.0
+8992379,legacy_sft-repair,G1,17,vernacular,15,Flycatcher,False,Flycatcher,exact,499,509,100.0
+8992379,legacy_sft-repair,G1,18,vernacular,27,Robin,False,Robin,exact,871,876,100.0
+8992379,legacy_sft-repair,G1,19,person,27,Seebohm,False,Seebohm,exact,882,889,100.0
+8992379,legacy_sft-repair,G1,20,vernacular,29,Robins,False,Robins,exact,955,961,100.0
+8992379,legacy_sft-repair,G1,21,vernacular,31,Flycatchers,False,Flycatchers,exact,971,982,100.0
+8992379,legacy_sft-repair,G1,22,vernacular,33,Red-breasted Flycatcher,False,Red-breasted Flycatcher,exact,1096,1119,100.0
+8992379,legacy_sft-repair,G1,23,taxon,55,M. mitoита,False,M. mitoита,exact,1863,1873,100.0
+8992379,legacy_sft-repair,G1,24,taxon,57,M. leucura,False,M. leucura,exact,1932,1942,100.0
+8992379,legacy_sft-repair,G1,25,taxon,59,M. parva,False,M. parva,exact,2006,2014,100.0
+8992379,legacy_sft-repair,G1,26,taxon,61,M. hyperythra,False,M. hyperythra,exact,2081,2094,100.0
+8992379,legacy_sft-repair,G1,27,taxon,69,Munia atricapilla,False,"Munia
+
+atricapilla",cross_line,2346,2364,100.0
+8992379,legacy_sft-repair,G1,28,date,71,1887,False,1887,exact,2402,2406,100.0
+8992379,legacy_sft-repair,G1,29,date,75,spring of 1896,False,spring of 1896,exact,2529,2543,100.0
+8992379,legacy_sft-repair,G1,30,taxon,75,Quelea quelea,False,Quelea quelea,exact,2576,2589,100.0
+8992379,legacy_sft-repair,G1,31,taxon,77,Q. ribst,False,Q. ribst,exact,2623,2631,100.0
+8992379,legacy_sft-repair,G1,32,vernacular,79,Cardinal,False,Cardinal,exact,2708,2716,100.0
+8992379,legacy_sft-repair,G1,33,taxon,79,Paroaria cœricalis,False,Paroaria cœricalis,exact,2718,2736,100.0
+8992379,legacy_sft-repair,G1,34,taxon,81,P. cœricalis,False,P. cœricalis,exact,2772,2784,100.0
+8992647,legacy_sft-repair,G1,0,taxon,5,MOTACILIDÆ,False,MOTACILIDÆ,exact,23,33,100.0
+8992647,legacy_sft-repair,G1,1,vernacular,9,BLACK-HEADED WAGTAIL,False,BLACK-HEADED WAGTAIL,exact,42,62,100.0
+8992647,legacy_sft-repair,G1,2,taxon,13,Motacilla vulpocciphala,False,Motacilla vulpocciphala,exact,67,90,100.0
+8992647,legacy_sft-repair,G1,3,person,13,LINN.,False,LINN.,exact,92,97,100.0
+8992647,legacy_sft-repair,G1,4,locality,21,Willingdon,False,Willingdon,exact,125,135,100.0
+8992647,legacy_sft-repair,G1,5,date,21,"Ma. Britt, 1906",False,"Ma. Britt, 1906",exact,140,155,100.0
+8992647,legacy_sft-repair,G1,6,taxon,23,M. flaxa,False,M. flaxa,exact,179,187,100.0
+8992647,legacy_sft-repair,G1,7,vernacular,31,SYRACUSE WAGTAIL,False,SYRACUSE WAGTAIL,exact,245,261,100.0
+8992647,legacy_sft-repair,G1,8,taxon,35,Motacilla bema,False,Motacilla bema,exact,266,280,100.0
+8992647,legacy_sft-repair,G1,9,person,35,SykeS,False,SykeS,exact,282,287,100.0
+8992647,legacy_sft-repair,G1,10,locality,37,"Rottingdean, Sussex",False,"Rottingdean, Sussex",exact,311,330,100.0
+8992647,legacy_sft-repair,G1,11,date,37,"April 20th, 1898",False,"April 20th, 1898",exact,335,351,100.0
+8992647,legacy_sft-repair,G1,12,taxon,45,MOTACILLIDÆ,False,MOTACILLIDÆ,exact,368,379,100.0
+8992647,legacy_sft-repair,G1,13,vernacular,49,AVIAN-HEADED WAGTAIL,False,AVIAN-HEADED WAGTAIL,exact,388,408,100.0
+8992647,legacy_sft-repair,G1,14,taxon,53,Motacilla cinereocapilla,False,Motacilla cinereocapilla,exact,413,437,100.0
+8992647,legacy_sft-repair,G1,15,person,53,SAVI,False,SAVI,exact,439,443,100.0
+8992647,legacy_sft-repair,G1,16,locality,61,PENZANCE,False,PENZANCE,exact,500,508,100.0
+8992647,legacy_sft-repair,G1,17,locality,63,"Sheringham, Norfolk",False,"Sheringham, Norfolk",exact,527,546,100.0
+8992647,legacy_sft-repair,G1,18,date,63,1842,False,1842,exact,557,561,100.0
+8992647,legacy_sft-repair,G1,19,taxon,69,M. glauca,False,M. glauca,exact,659,668,100.0
+8966790,legacy_sft-repair,G1,0,institution,17,Mus. Cuming,False,Mus. Cuming,exact,184,195,100.0
+8966790,legacy_sft-repair,G1,1,taxon,21,BULIMUS CILENSIS,False,BULIMUS CILENSIS,exact,201,217,100.0
+8966790,legacy_sft-repair,G1,2,vernacular,33,CHILIPHOSIS,False,CHILIPHOSIS,exact,457,468,100.0
+8966790,legacy_sft-repair,G1,3,person,49,Lesson,False,Lesson,exact,708,714,100.0
+8966790,legacy_sft-repair,G1,4,taxon,53,Bulimus granulosus,False,Bulimus granulosus,exact,753,771,100.0
+8966790,legacy_sft-repair,G1,5,person,53,Broderip,False,Broderip,exact,773,781,100.0
+8966790,legacy_sft-repair,G1,6,locality,55,Valparaiso,False,Valparaiso,exact,789,799,100.0
+8966790,legacy_sft-repair,G1,7,locality,55,"Conception, Chili",False,"Conception, Chili",exact,804,821,100.0
+8966790,legacy_sft-repair,G1,8,person,55,Cuming,False,Cuming,exact,823,829,100.0
+8966790,legacy_sft-repair,G1,9,locality,67,mountains of Conception,False,mountains of Conception,exact,1073,1096,100.0
+8966790,legacy_sft-repair,G1,10,locality,69,Valparaiso,False,Valparaiso,exact,1152,1162,100.0
+8992328,legacy_sft-repair,G1,0,locality,17,Kent,False,Kent,exact,417,421,100.0
+8992328,legacy_sft-repair,G1,1,vernacular,31,Red-backed Shrike,False,Red-backed Shrike,exact,874,891,100.0
+8992328,legacy_sft-repair,G1,2,locality,33,Maidstone,False,Maidstone,exact,932,941,100.0
+8992328,legacy_sft-repair,G1,3,vernacular,39,Greenfinch,False,Greenfinch,exact,1172,1182,100.0
+8992328,legacy_sft-repair,G1,4,vernacular,45,Butcher-bird,False,Butcher-bird,exact,1336,1348,100.0
+8992328,legacy_sft-repair,G1,5,vernacular,47,Shrikes,False,Shrikes,exact,1435,1442,100.0
+8992328,legacy_sft-repair,G1,6,vernacular,55,lizards,False,lizards,exact,1740,1747,100.0
+8992328,legacy_sft-repair,G1,7,vernacular,55,mice,False,mice,exact,1753,1757,100.0
+8992328,legacy_sft-repair,G1,8,vernacular,59,Red-backed Shrike,False,Red-backed Shrike,exact,1872,1889,100.0
+8992328,legacy_sft-repair,G1,9,person,65,Mathias Rausch,False,"Mathias
+
+Rausch",cross_line,2082,2097,100.0
+8992328,legacy_sft-repair,G1,10,vernacular,69,Red-backed Shrike,False,Red-backed Shrike,exact,2216,2233,100.0
+8992328,legacy_sft-repair,G1,11,vernacular,69,Thorn-piercer,False,Thorn-piercer,exact,2237,2250,100.0
+8992328,legacy_sft-repair,G1,12,taxon,71,Lanius collurio,False,Lanius collurio,exact,2253,2268,100.0
+8992328,legacy_sft-repair,G1,13,locality,75,Europe,False,Europe,exact,2409,2415,100.0
+8992328,legacy_sft-repair,G1,14,vernacular,77,Red-backed Shrikes,False,Red-backed Shrikes,exact,2534,2552,100.0
+8992328,legacy_sft-repair,G1,15,vernacular,81,cockroaches,False,cockroaches,exact,2627,2638,100.0
+8992328,legacy_sft-repair,G1,16,person,91,H. A. Macpherson,False,H. A. Macpherson,exact,2921,2937,100.0
+8992328,legacy_sft-repair,G1,17,vernacular,93,Woodchat,False,Woodchat,exact,3015,3023,100.0
+8992328,legacy_sft-repair,G1,18,vernacular,93,Great Grey Shrikes,False,Great Grey Shrikes,exact,3029,3047,100.0

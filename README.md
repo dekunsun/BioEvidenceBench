@@ -180,7 +180,7 @@ If old OCR is where names are lost, could a small, cheap model fix the text itse
 - **On an unseen French book**, the supervised model kept about half its gain (21% of damaged words repaired).
 - **The automatic score had loopholes.** Automated attacks found three; reading answers by hand found two more, for example finishing a word split at the end of a line scored as a perfect answer.
 
-The trained model is [published for research](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1), **not** for automatically replacing library text: it still changes about 2 in every 100 correct words. Full results: [training follow-up](docs/rl_results.md).
+The trained model is [published for research](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1), **not** for automatically replacing library text: it still changes about 2 in every 100 correct words. Put in front of the extraction step, it raised value F1 on legacy OCR only from 0.60 to 0.67 (Butler) and 0.64 to 0.72 (Reeve), against about 0.95 with modern OCR, and it turned a few correct names into other names ([details](results/sft_repair_pipeline/REPORT.md)). Full results: [training follow-up](docs/rl_results.md).
 
 **What this means:** for a careful editing task, examples of the right answer did the teaching. A reward that never penalizes doing nothing taught the model to do nothing.
 

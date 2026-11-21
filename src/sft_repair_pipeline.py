@@ -135,7 +135,9 @@ def report(n_boot: int = 10000) -> None:
         keep = lambda x: x[(x.condition == "G1") & (x.field == "ALL_PRIMARY")
                            & x.version.isin(["legacy", "modern_dots-mocr", VERSION])]
         parts.append(keep(s))
-        pages.append(keep(bp))
+        bp = bp[(bp.condition == "G1") & bp.field.isin(["taxon", "person", "locality", "institution", "date"])
+                & bp.version.isin(["legacy", VERSION])]
+        pages.append(bp.groupby(["book", "version", "page_id"], as_index=False)[["value_tp", "value_fp", "value_fn"]].sum())
     s, bp = pd.concat(parts), pd.concat(pages)
     rows = [{"route": v, "book": r.book, "value_F1": r.value_F1, "lo": r.value_F1_lo, "hi": r.value_F1_hi,
              "value_P": r.value_P, "value_R": r.value_R}
