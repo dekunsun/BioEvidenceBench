@@ -2,7 +2,7 @@
 
 *Task B: repair one line of legacy OCR so it matches the expert transcription, changing only
 recognition errors. Implementation: `src/rl_task_b.py`. Fixed unit tests:
-`tests/test_rl_task_b.py` (59 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
+`tests/test_rl_task_b.py` (61 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
 first experimental setting, not validated optima; they are checked on development data before
 any training run.*
 
@@ -142,8 +142,11 @@ rewarded for them would learn to guess capitals.
   (`set_aside.jsonl`, `build/set_aside_summary.csv`) as a later hard-case set.
 - **OCR deletions** (a damaged word with no OCR text at all; Gloria, 2026-11-21). Judged only from
   what the model is shown, never from whether a model failed:
-  - *recoverable deletion*: the word stands in the OCR lines shown before and after, or it is the
-    line's number in an explicit sequence (n−1 before, n+1 after). Kept and marked
+  - A deletion means no letter or digit at all in the OCR between the neighbouring aligned words; a
+    word read wrong (`1` as `l`) is a substitution and is scored as damage, not set aside.
+  - Context is the nearest line above and below on the same page that has OCR text.
+  - *recoverable deletion*: the word (3 characters or more, not a number) stands in those context
+    lines, or it is the line's number in an explicit sequence (n−1 before, n+1 after). Kept and marked
     (`recoverable_deletion`); reported separately. Repairing deletions is part of OCR repair.
   - *unrecoverable*: anything else (a Reeve index page number lost with its column). Set aside: the
     reward must not encourage the model to supply historical text from general knowledge.

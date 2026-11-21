@@ -37,3 +37,10 @@ what models get right; only a check against the scans can confirm them.
 (`minùs`, `admodùm`, `aliásque`, `pallidè`, `variegatâ`), hard abbreviations (`Pso`, `Prtg`), wrong
 guesses on badly damaged Latin, and changes to words the OCR had right (`A der Nerv` → `4 der Nerv`).
 These are the items a trained model could improve on.
+
+## Correction found afterwards (2026-11-21)
+
+The context lines in these prompts were the expert lines numbered one above and one below. The
+transcription numbers blank lines and short captions too, so for some items a context line was
+`(none)` although the page had text there. `with_context` now takes the nearest line with OCR text;
+the runs above are kept as they were sent. The pilot had the same setting.

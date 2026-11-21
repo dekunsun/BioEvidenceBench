@@ -1,6 +1,6 @@
-book,OCR merges words,OCR splits words,case-only words,crosses OCR line break,hyphen at line end,missing text,span length off,special characters
-Butler,307,494,224,129,248,431,136,230
-Chitinskelett,83,502,20,5,306,59,26,1590
-Piscium,483,119,6,6,441,89,36,1016
-Reeve,1030,1166,2096,179,2553,1391,345,4874
-Trudy,1331,1789,45,535,3067,2488,573,6929
+book,OCR merges words,OCR splits words,case-only words,crosses OCR line break,hyphen at line end,missing text,recoverable deletion,span length off,special characters
+Butler,307,494,225,129,248,431,0,136,230
+Chitinskelett,83,502,20,5,306,59,0,26,1590
+Piscium,483,119,6,6,441,89,0,36,1016
+Reeve,1026,1167,2097,179,2553,1391,0,345,4874
+Trudy,1331,1789,45,535,3067,2488,1,573,6929

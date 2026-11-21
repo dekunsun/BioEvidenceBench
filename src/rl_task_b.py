@@ -108,9 +108,19 @@ LEADERS = re.compile(r"(?:\.\s?){4,}|(?:-\s+){3,}-|(?:\.\.\s+){2,}\.\.|…{2,}|(
 
 
 def missing_damaged_words(target: str, inp: str) -> list[str]:
-    """Damaged reference words for which the OCR has no text at all (deletions)."""
+    """Damaged reference words the OCR deleted: no letter or digit at all in the OCR between the
+    words aligned before and after it. (The aligner pairs only identical characters, so a word read
+    wrong, `1` as `l`, also has no aligned text; it is a substitution, not a deletion.)"""
     rows, _ = word_status(target, inp)
-    return [r["word"] for r in rows if word_kind(r) == "damaged" and not r["aligned"].strip()]
+    out = []
+    for i, r in enumerate(rows):
+        if word_kind(r) != "damaged" or r["aligned"].strip():
+            continue
+        left = max((x["span"][1] for x in rows[:i] if x["span"]), default=0)
+        right = min((x["span"][0] for x in rows[i + 1:] if x["span"]), default=len(inp))
+        if not any(c.isalnum() for c in inp[left:right]):
+            out.append(r["word"])
+    return out
 
 
 def _leading_number(s: str):
@@ -120,8 +130,8 @@ def _leading_number(s: str):
 
 def classify_deletions(target: str, inp: str, prev: str, nxt: str) -> tuple[list[str], list[str]]:
     """Split OCR deletions into (recoverable, unrecoverable), using only what the model is shown:
-    the line and the OCR lines before and after it (Gloria, 2026-11-21). Recoverable: the word
-    stands in the context lines, or it is the line's number in an explicit sequence (the line
+    the line and the OCR lines before and after it (Gloria, 2026-11-21). Recoverable: the word (3
+    characters or more, not a number) stands in the context lines, or it is the line's number in an explicit sequence (the line
     before starts with n-1 and the line after with n+1). Lines with an unrecoverable deletion are
     set aside; recoverable deletions stay and are marked. Whether a model failed is never used."""
     ctx_words = {w for _, _, w in words(nfc(prev or "") + " " + nfc(nxt or ""))}
@@ -129,7 +139,8 @@ def classify_deletions(target: str, inp: str, prev: str, nxt: str) -> tuple[list
     for w in missing_damaged_words(target, inp):
         seq = w.isdigit() and _leading_number(target) == int(w) and \
             _leading_number(prev) == int(w) - 1 and _leading_number(nxt) == int(w) + 1
-        (rec if w in ctx_words or seq else unrec).append(w)
+        # a word of 1-2 characters found in the context is usually a coincidence, not evidence
+        (rec if (len(w) >= 3 and not w.isdigit() and w in ctx_words) or seq else unrec).append(w)
     return rec, unrec
 
 
@@ -243,7 +254,7 @@ def word_status(ref: str, other: str) -> tuple[list[dict], float]:
         sp = map_span(cmap, a, b)
         got = other[sp[0]:sp[1]] if sp else ""
         whole = bool(sp) and _whole(other, sp[0], sp[1])
-        rows.append({"start": a, "end": b, "word": w, "aligned": got,
+        rows.append({"start": a, "end": b, "word": w, "aligned": got, "span": sp,
                      "ok": whole and got == w,
                      "ok_reading": whole and got.replace("ſ", "s") == w.replace("ſ", "s"),
                      # case-insensitive comparisons (Reward v1.2): ſ stays distinct from s

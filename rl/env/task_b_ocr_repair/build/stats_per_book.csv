@@ -1,6 +1,6 @@
-book,pages,lines,valid,usable,usable_share
-Butler,235,6975,6381,6381,0.915
-Chitinskelett,73,2498,2429,2426,0.971
-Piscium,43,1153,970,969,0.84
-Reeve,418,18532,16974,16973,0.916
-Trudy,480,15925,12955,12955,0.814
+book,pages,lines,valid,usable,usable_share,recoverable_deletion
+Butler,235,6975,6381,6380,0.915,0
+Chitinskelett,73,2498,2396,2392,0.958,0
+Piscium,43,1153,970,968,0.84,0
+Reeve,418,18532,16879,16878,0.911,0
+Trudy,480,15925,12826,12818,0.805,1

@@ -67,12 +67,15 @@ def damage_class(n: int) -> str:
 
 def with_context(us: list[dict], idx: pd.DataFrame) -> list[dict]:
     """Add the OCR of the neighbouring expert lines (valid or not) as context."""
+    # Nearest line above / below with OCR text (blank lines and short captions skipped). The
+    # trials of 2026-11-21 used line_no +/- 1, which was often a blank line: "(none)".
     out = []
     for u in sorted(us, key=lambda u: (u["page_id"], u["line_no"])):
-        ctx = idx[idx.page_id == u["page_id"]].set_index("line_no").input.fillna("")
+        pg = idx[(idx.page_id == u["page_id"]) & (idx.input.fillna("").str.strip() != "")].sort_values("line_no")
+        before, after = pg[pg.line_no < u["line_no"]].input, pg[pg.line_no > u["line_no"]].input
         u = dict(u)
-        u["prev"] = ctx.get(u["line_no"] - 1, "") or "(none)"
-        u["next"] = ctx.get(u["line_no"] + 1, "") or "(none)"
+        u["prev"] = before.iloc[-1] if len(before) else "(none)"
+        u["next"] = after.iloc[0] if len(after) else "(none)"
         u["item_id"] = f"{u['page_id']}-{u['line_no']}"
         u["damage_class"] = damage_class(u["n_damaged"])
         out.append(u)

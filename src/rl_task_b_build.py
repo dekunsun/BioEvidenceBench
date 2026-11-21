@@ -121,8 +121,17 @@ def assemble(split: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     files = {s: (UNITS / f"{s}.jsonl").open("w", encoding="utf-8") for s in SPLIT_NAMES}
     aside = (UNITS / "set_aside.jsonl").open("w", encoding="utf-8")
     all_u = [json.loads(line) for line in (UNITS / "all_units.jsonl").open(encoding="utf-8")]
-    # the OCR of the neighbouring expert lines: what the model is shown as context
-    ocr_of = {(u["page_id"], u["line_no"]): u.get("input", "") for u in all_u if "line_no" in u}
+    # Context = the OCR of the nearest expert line above and below on the same page that has OCR
+    # text (blank lines and short captions are skipped): what the model is shown.
+    by_page: dict[int, list[tuple[int, str]]] = {}
+    for x in all_u:
+        if "line_no" in x and (x.get("input") or "").strip():
+            by_page.setdefault(x["page_id"], []).append((x["line_no"], x["input"]))
+    def context(pid: int, ln: int) -> tuple[str, str]:
+        lines = sorted(by_page.get(pid, []))
+        before = [t for n, t in lines if n < ln]
+        after = [t for n, t in lines if n > ln]
+        return (before[-1] if before else "", after[0] if after else "")
     for u in all_u:
         pid = u["page_id"]
         if pid not in info.index or info.at[pid, "split"] not in SPLIT_NAMES:
@@ -140,8 +149,7 @@ def assemble(split: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
             u.update(valid=False, why_invalid="index/contents line with leader dots")
         u["recoverable_deletion"] = []
         if u.get("valid"):     # deletions: kept if the shown context supports them (Gloria, 2026-11-21)
-            rec, unrec = T.classify_deletions(u["target"], u["input"], ocr_of.get((pid, u["line_no"] - 1), ""),
-                                              ocr_of.get((pid, u["line_no"] + 1), ""))
+            rec, unrec = T.classify_deletions(u["target"], u["input"], *context(pid, u["line_no"]))
             u["recoverable_deletion"] = rec
             if rec:
                 u["flags"].append("recoverable deletion")

@@ -35,5 +35,7 @@ similarity + span ratio,2,0,0,8,11,21
 similarity + span ratio + unreadable character in reference,2,0,0,0,0,2
 similarity + unreadable character in reference,6,0,0,7,1,14
 span ratio,0,1,2,5,15,23
+"suspected reference typo, pending check",1,1,1,0,8,11
 unreadable character in reference,13,6,91,14,30,154
-All,594,72,184,1559,2970,5379
+unrecoverable deletion (word not in OCR or context),0,33,0,95,129,257
+All,595,106,185,1654,3107,5647

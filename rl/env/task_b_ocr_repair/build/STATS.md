@@ -6,19 +6,19 @@ Built by `src/rl_task_b_build.py` under Reward v1.2 rules (case-only words neutr
 
 Unit files (not committed; regenerate with the script) and their SHA-256:
 
-- `train.jsonl`: 32060 usable units, `7cefbfa0a24012da…`
-- `dev.jsonl`: 3894 usable units, `9afa77c5fb187392…`
-- `intest.jsonl`: 3750 usable units, `879e356b7407770c…`
+- `train.jsonl`: 31909 usable units, `d032f8d4a3129141…`
+- `dev.jsonl`: 3784 usable units, `65024b62bcaec50a…`
+- `intest.jsonl`: 3743 usable units, `3c502cc252db95b2…`
 
 ## Lines per book
 
-| book          |   pages |   lines |   valid |   usable |   usable_share |
-|:--------------|--------:|--------:|--------:|---------:|---------------:|
-| Butler        |     235 |    6975 |    6381 |     6381 |          0.915 |
-| Chitinskelett |      73 |    2498 |    2429 |     2426 |          0.971 |
-| Piscium       |      43 |    1153 |     970 |      969 |          0.84  |
-| Reeve         |     418 |   18532 |   16974 |    16973 |          0.916 |
-| Trudy         |     480 |   15925 |   12955 |    12955 |          0.814 |
+| book          |   pages |   lines |   valid |   usable |   usable_share |   recoverable_deletion |
+|:--------------|--------:|--------:|--------:|---------:|---------------:|-----------------------:|
+| Butler        |     235 |    6975 |    6381 |     6380 |          0.915 |                      0 |
+| Chitinskelett |      73 |    2498 |    2396 |     2392 |          0.958 |                      0 |
+| Piscium       |      43 |    1153 |     970 |      968 |          0.84  |                      0 |
+| Reeve         |     418 |   18532 |   16879 |    16878 |          0.911 |                      0 |
+| Trudy         |     480 |   15925 |   12826 |    12818 |          0.805 |                      1 |
 
 ## Lines not used, by reason
 
@@ -62,19 +62,21 @@ Every one is kept with page, line, input, target and reason in `set_aside.jsonl`
 | similarity + span ratio + unreadable character in reference                                      |        2 |               0 |         0 |       0 |       0 |     2 |
 | similarity + unreadable character in reference                                                   |        6 |               0 |         0 |       7 |       1 |    14 |
 | span ratio                                                                                       |        0 |               1 |         2 |       5 |      15 |    23 |
+| suspected reference typo, pending check                                                          |        1 |               1 |         1 |       0 |       8 |    11 |
 | unreadable character in reference                                                                |       13 |               6 |        91 |      14 |      30 |   154 |
-| All                                                                                              |      594 |              72 |       184 |    1559 |    2970 |  5379 |
+| unrecoverable deletion (word not in OCR or context)                                              |        0 |              33 |         0 |      95 |     129 |   257 |
+| All                                                                                              |      595 |             106 |       185 |    1654 |    3107 |  5647 |
 
 ## Similarity buckets (all lines; similarity ignores case)
 
 | book          |   0.3-0.5 |   0.5-0.8 |   0.8-1.0 |   <0.3 |   no text |   All |
 |:--------------|----------:|----------:|----------:|-------:|----------:|------:|
-| Butler        |       115 |       485 |      6309 |     65 |         1 |  6975 |
+| Butler        |       115 |       482 |      6312 |     65 |         1 |  6975 |
 | Chitinskelett |        17 |        81 |      2353 |     27 |        20 |  2498 |
 | Piscium       |         9 |       167 |       911 |     37 |        29 |  1153 |
-| Reeve         |       301 |      1776 |     15992 |    322 |       141 | 18532 |
+| Reeve         |       301 |      1775 |     15993 |    322 |       141 | 18532 |
 | Trudy         |       808 |       746 |     13284 |   1060 |        27 | 15925 |
-| All           |      1250 |      3255 |     38849 |   1511 |       218 | 45083 |
+| All           |      1250 |      3251 |     38853 |   1511 |       218 | 45083 |
 
 Usable lines with similarity 0.3-0.5 (would be rejected under a 0.5 floor):
 
@@ -92,53 +94,53 @@ Case-only words are neutral in Reward v1.2: not damaged, not penalised for case.
 
 | book          |   words |   damaged |   damaged_reading |   case_only |   lines_with_damaged_name |   case_only_mismatch_rate |   damaged_rate |   damaged_rate_reading |
 |:--------------|--------:|----------:|------------------:|------------:|--------------------------:|--------------------------:|---------------:|-----------------------:|
-| Butler        |   80263 |      2944 |              2944 |         424 |                       120 |                    0.0053 |         0.0367 |                 0.0367 |
-| Chitinskelett |   29151 |      1908 |              1908 |          21 |                        88 |                    0.0007 |         0.0655 |                 0.0655 |
-| Piscium       |    6656 |      3419 |              3419 |           5 |                       103 |                    0.0008 |         0.5137 |                 0.5137 |
-| Reeve         |  112773 |     23194 |             23194 |        3812 |                      1011 |                    0.0338 |         0.2057 |                 0.2057 |
-| Trudy         |  107740 |      3830 |              3830 |          41 |                       222 |                    0.0004 |         0.0355 |                 0.0355 |
+| Butler        |   80247 |      2897 |              2897 |         445 |                       120 |                    0.0055 |         0.0361 |                 0.0361 |
+| Chitinskelett |   28879 |      1837 |              1837 |          17 |                        87 |                    0.0006 |         0.0636 |                 0.0636 |
+| Piscium       |    6649 |      3416 |              3416 |           5 |                       103 |                    0.0008 |         0.5138 |                 0.5138 |
+| Reeve         |  112325 |     22965 |             22965 |        3866 |                      1006 |                    0.0344 |         0.2045 |                 0.2045 |
+| Trudy         |  106639 |      3586 |              3586 |          39 |                       206 |                    0.0004 |         0.0336 |                 0.0336 |
 
 ## Damaged words per usable line (share)
 
 | book          |     0 |     1 |   2-5 |    >5 |
 |:--------------|------:|------:|------:|------:|
-| Butler        | 0.675 | 0.231 | 0.092 | 0.002 |
-| Chitinskelett | 0.556 | 0.263 | 0.169 | 0.011 |
+| Butler        | 0.681 | 0.228 | 0.09  | 0.002 |
+| Chitinskelett | 0.564 | 0.263 | 0.161 | 0.011 |
 | Piscium       | 0.03  | 0.103 | 0.713 | 0.154 |
-| Reeve         | 0.415 | 0.241 | 0.327 | 0.017 |
-| Trudy         | 0.783 | 0.164 | 0.052 | 0.001 |
+| Reeve         | 0.42  | 0.238 | 0.325 | 0.017 |
+| Trudy         | 0.791 | 0.16  | 0.048 | 0.001 |
 
 Counts:
 
 | book          |     0 |    1 |   2-5 |   >5 |   All |
 |:--------------|------:|-----:|------:|-----:|------:|
-| Butler        |  4310 | 1475 |   584 |   12 |  6381 |
-| Chitinskelett |  1350 |  638 |   411 |   27 |  2426 |
-| Piscium       |    29 |  100 |   691 |  149 |   969 |
-| Reeve         |  7049 | 4097 |  5543 |  284 | 16973 |
-| Trudy         | 10145 | 2119 |   673 |   18 | 12955 |
-| All           | 22883 | 8429 |  7902 |  490 | 39704 |
+| Butler        |  4342 | 1452 |   574 |   12 |  6380 |
+| Chitinskelett |  1350 |  629 |   386 |   27 |  2392 |
+| Piscium       |    29 |  100 |   690 |  149 |   968 |
+| Reeve         |  7087 | 4024 |  5484 |  283 | 16878 |
+| Trudy         | 10144 | 2045 |   616 |   13 | 12818 |
+| All           | 22952 | 8250 |  7750 |  484 | 39436 |
 
 ## Heuristic flags (all lines)
 
-| book          |   OCR merges words |   OCR splits words |   case-only words |   crosses OCR line break |   hyphen at line end |   missing text |   span length off |   special characters |
-|:--------------|-------------------:|-------------------:|------------------:|-------------------------:|---------------------:|---------------:|------------------:|---------------------:|
-| Butler        |                307 |                494 |               224 |                      129 |                  248 |            431 |               136 |                  230 |
-| Chitinskelett |                 83 |                502 |                20 |                        5 |                  306 |             59 |                26 |                 1590 |
-| Piscium       |                483 |                119 |                 6 |                        6 |                  441 |             89 |                36 |                 1016 |
-| Reeve         |               1030 |               1166 |              2096 |                      179 |                 2553 |           1391 |               345 |                 4874 |
-| Trudy         |               1331 |               1789 |                45 |                      535 |                 3067 |           2488 |               573 |                 6929 |
+| book          |   OCR merges words |   OCR splits words |   case-only words |   crosses OCR line break |   hyphen at line end |   missing text |   recoverable deletion |   span length off |   special characters |
+|:--------------|-------------------:|-------------------:|------------------:|-------------------------:|---------------------:|---------------:|-----------------------:|------------------:|---------------------:|
+| Butler        |                307 |                494 |               225 |                      129 |                  248 |            431 |                      0 |               136 |                  230 |
+| Chitinskelett |                 83 |                502 |                20 |                        5 |                  306 |             59 |                      0 |                26 |                 1590 |
+| Piscium       |                483 |                119 |                 6 |                        6 |                  441 |             89 |                      0 |                36 |                 1016 |
+| Reeve         |               1026 |               1167 |              2097 |                      179 |                 2553 |           1391 |                      0 |               345 |                 4874 |
+| Trudy         |               1331 |               1789 |                45 |                      535 |                 3067 |           2488 |                      1 |               573 |                 6929 |
 
 ## Usable units per split
 
 | book          |   dev |   intest |   train |   All |
 |:--------------|------:|---------:|--------:|------:|
-| Butler        |   607 |      571 |    5203 |  6381 |
-| Chitinskelett |   314 |      383 |    1729 |  2426 |
-| Piscium       |   209 |      156 |     604 |   969 |
-| Reeve         |  1279 |     1578 |   14116 | 16973 |
-| Trudy         |  1485 |     1062 |   10408 | 12955 |
-| All           |  3894 |     3750 |   32060 | 39704 |
+| Butler        |   606 |      571 |    5203 |  6380 |
+| Chitinskelett |   293 |      383 |    1716 |  2392 |
+| Piscium       |   208 |      156 |     604 |   968 |
+| Reeve         |  1203 |     1574 |   14101 | 16878 |
+| Trudy         |  1474 |     1059 |   10285 | 12818 |
+| All           |  3784 |     3743 |   31909 | 39436 |
 
 ## Long s in *Piscium querelae*
 

@@ -252,3 +252,12 @@ def test_fraction_answer_scores_as_the_reference():
 ])
 def test_deletions_are_split_by_evidence_in_the_shown_context(target, inp, prev, nxt, rec, unrec):
     assert T.classify_deletions(target, inp, prev, nxt) == (rec, unrec)
+
+
+def test_a_word_read_wrong_is_a_substitution_not_a_deletion():
+    assert T.missing_damaged_words("pl. 5. f. 1.", "pi. 5. f.l.") == []
+    assert T.missing_damaged_words("104. Hypomecus albitarsis", ". Hypomecus albitarsis") == ["104"]
+
+
+def test_a_one_letter_word_in_the_context_is_not_evidence():
+    assert T.classify_deletions("Z. 8 v. u. l. selten", "Z. u. 1. selten", "Z. 3 v. u. st.", "") == ([], ["8", "v"])
