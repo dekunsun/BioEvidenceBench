@@ -71,7 +71,15 @@ Eastwood 1898, *Proc. Cal. Acad. Sci.* 3rd ser. Botany vol. 1, 8 pages (BHL item
 
 The main experiment's pattern holds on botany: legacy OCR costs most on names, and repair or reading the image recovers it. New here: joint botanical authorities (`H. & A.`, `Torr. & Gr.`) are one person span (Gloria's rule, `GUIDE_ADDENDUM.md`), and the model splits them into two, a domain-specific error the bird and shell books did not show. Public text again, so contamination is not excluded. `src/score_pcas.py`, `results/pcas/`.
 
-## 4. First findings from the data (descriptive, two books only)
+## 4. RL post-training (separate study, module 7)
+
+Task: repair one line of legacy OCR into the expert transcription, scored word by word (not
+extraction F1). Qwen3-0.6B, pre-registered locked test of 500 in-book lines and 500 lines of an unseen
+French book. SFT raises damaged-word repair from 0.04 to 0.40–0.41 (Cuvier 0.21); GRPO from the base
+model learns to copy the OCR (0.006 / 0.034); GRPO after SFT adds no repair (Δ −0.004) and +0.3 points
+of preservation. The SFT checkpoint is released for research. Full results: [RL results](rl_results.md).
+
+## 5. First findings from the data (descriptive, two books only)
 
 - All 989 English GT pages join to the BHL `page` table by `PageID` (0 unmatched).
 - Legacy OCR CER is much higher in Reeve than in Butler. Case-insensitive, on pages with 200 or

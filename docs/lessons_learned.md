@@ -86,3 +86,16 @@ That is two cases, not a rule.
 | The decisive test is a control on the identical request | When a model behaves oddly, resend the same request by another path (sync instead of batch, the standard model instead of the variant, paid instead of free) before interpreting it |
 | The call path is part of the configuration | Freeze the call mode with the model; record SDK version, endpoint and tier; do not mix modes within one comparison |
 | Diagnostics can disturb what they measure | In LiveLab, a second test started four minutes after the first ran inside the first one's failure window; space diagnostics out and change one thing at a time |
+
+## F. Training a model on a verifiable reward (RL module, 2026-11-21)
+
+| What happened | Lesson | What to do next time |
+| --- | --- | --- |
+| GRPO from the base model learned to return the OCR unchanged: copying never scores below 0, and the base model's edits were right 4% of the time | A reward that never penalises doing nothing makes doing nothing the safe optimum for a weak policy | Before training, score "copy the input" and "edit at random" under the reward; if copying is the best reachable policy, change the reward or the starting model first |
+| Groups with no reward difference rose from about 50% to 95% while the training reward rose | A falling learning signal can mean success or collapse; the reward alone cannot tell which | Log every completion with its step and reward, and watch the copy share, entropy and a dev metric beside the reward |
+| GRPO after SFT raised the training reward from 0.54 to 0.65 with no repair gain on dev or test | Training reward is not the measure of success | Fix the success metrics and decision rules before training, and judge only on held-out lines |
+| 41% of the untrained model's answers ran on into the next line, because the prompt put the next line just before the answer | The input layout can be the real cause of a "model" failure | Read the answers that fail before tuning anything; put the item to act on last and mark its boundary |
+| The automated probes found three reward holes; Gloria's manual reading found two more (finishing a line-end hyphenated word scored 1.0; dash glyphs scored inconsistently) | Constructed attacks only find what you thought of | Have a person read high-reward answers blind to the model; keep each hole as a failing test until it is fixed |
+| bf16 weights would have rounded away most updates at lr 1e-6 | Precision is part of the experiment | Train with float32 master weights, or check that updates survive at the chosen learning rate |
+| TRL gives vLLM the same sampling seed in every run | Two "seeds" can be nearly the same run | Check what a seed actually changes; vary data order or sampling explicitly |
+| Name-word counts were first reported per answer (×4), not per word | Counts and rates need the same unit check as code | Recompute every count from the test file itself before writing it down |

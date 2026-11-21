@@ -324,7 +324,7 @@ check to scripts running on cloud machines (seen 2026-11-18).
 
 - [Stories from the project](docs/stories/), in Chinese and English: one abbreviated bird name that matched two species, typos in the gold-standard transcription, and API calls that reported success while failing.
 
-- [RL post-training on the same books](rl/TRAINING_REPORT.md): an OCR line-repair environment with a
+- [RL post-training on the same books](docs/rl_results.md) ([training report](rl/TRAINING_REPORT.md)): an OCR line-repair environment with a
   verifiable reward, SFT and GRPO on Qwen3-0.6B under a pre-registered test, a reward audit, and a
   release decision. SFT raises damaged-word repair from 0.04 to 0.40; GRPO learns to copy the OCR and
   adds nothing after SFT. Research checkpoint: [release `rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) (not for

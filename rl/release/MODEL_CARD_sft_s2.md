@@ -36,10 +36,10 @@ Evaluation decoding: temperature 0.7, top-p 0.8, top-k 20, at most 128 new token
 |---|---|---|---|---|
 | In-book test, 500 lines | **0.410** (untrained 0.037) | 0.36 (0.01) | 0.982 (0.921) | 0.7% |
 | More in-book test lines, 3,226 | 0.510 (0.038) | 0.44 (0.03) | 0.988 (0.948) | 0.2% |
-| Unseen book, French (Cuvier 1835), 500 lines | 0.212 (0.047) | 0.38 on 20 words, descriptive (0.05) | 0.982 (0.921) | 0.2% |
+| Unseen book, French (Cuvier 1835), 500 lines | 0.212 (0.047) | 0.38 on 10 words, descriptive (0.05) | 0.982 (0.921) | 0.2% |
 
 Repair and preservation gains over the untrained model have 95% intervals well above zero on both
-test books (paired bootstrap over page blocks); the name gain on Cuvier rests on 20 words. The training data and the test lines come from different pages; Cuvier was never used for
+test books (paired bootstrap over page blocks); the name gain on Cuvier rests on 10 words. The training data and the test lines come from different pages; Cuvier was never used for
 training or development.
 
 ## Known problems

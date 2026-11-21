@@ -16,8 +16,8 @@ run. Every model and checkpoint was fixed on dev; nothing was chosen after this 
 | D. SFT→GRPO s1 / s2 | 0.394 / 0.406 | 0.42 / 0.33 | 0.986 / 0.987 | 0.2 / 0.4% | 0.200 / 0.209 | 0.20 / 0.33 | 0.983 / 0.985 |
 | C-CER (P1) s1 | 0.027 | 0 | 0.993 | 0.3% | 0.032 | 0 | 0.995 |
 
-\* Cuvier has 20 damaged name words in its 500 lines (7 lines): name recovery there is descriptive.
-In-book has 88 damaged name words. Larger confirmation (3,226 more in-book lines): repair B 0.527 /
+\* Cuvier has 10 damaged name words in its 500 lines (7 lines): name recovery there is descriptive.
+In-book has 22 damaged name words (corrected 2026-11-21: first written as 20 and 88, counting each word once per answer). Larger confirmation (3,226 more in-book lines): repair B 0.527 /
 0.510, D 0.525 / 0.508, Base 0.038; names B 0.47 / 0.44, D 0.47 / 0.46.
 
 ## 2. Pre-registered decisions (paired Δ, 95% interval over split-v2 blocks; Cuvier over pages)
