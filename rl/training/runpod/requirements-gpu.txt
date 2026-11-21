@@ -1,0 +1,15 @@
+# Module 7b GPU pod. Versions resolved together with pip on 2026-11-21 (`pip install --dry-run
+# "trl[vllm]==1.18.2"`); pip freeze of every run is saved with its results.
+trl[vllm]==1.18.2
+vllm==0.33.0
+torch==2.14.0
+transformers==5.20.2
+accelerate==1.16.0
+datasets==5.2.0
+# scoring (src/rl_task_b.py, src/score.py), same versions as the development environment
+duckdb==2.0.0
+rapidfuzz==3.14.6
+pandas==3.0.5
+numpy==2.5.3
+scipy==1.18.1
+requests==2.34.2

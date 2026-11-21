@@ -65,8 +65,11 @@ budgets; equal steps are not called equal compute.
   (TRL's `GRPOConfig` has `chat_template_kwargs`, `SFTConfig` has no such option, so trainer-side
   rendering could differ). SFT targets are that prompt + the expert line + the end-of-turn token.
   Same checkpoint, tokenizer and prompt for every condition.
-- **Checked, not assumed**: each run saves one rendered prompt verbatim and its SHA-256; stage 1
-  checks what the template inserts after the assistant turn and that Base outputs contain no `<think>`.
+- **Checked, not assumed**: each run saves one rendered prompt verbatim and its SHA-256. Checked on
+  CPU with the model's tokenizer (2026-11-21): with `enable_thinking=False` the template ends the
+  prompt with `<|im_start|>assistant\n<think>\n\n</think>\n\n`, an empty thinking block inside the
+  prompt, not in the answer; the default (thinking on) ends at `<|im_start|>assistant\n`. A rendered
+  prompt is about 260 tokens. Stage 1 checks that Base answers contain no `<think>`.
 - **Gated in the reward**: Reward v1.3 scores any `<think>` / `</think>` tag as a format error;
   the share is logged at every step and evaluation.
 - `max_completion_length` 128 tokens; truncated answers counted.
