@@ -168,6 +168,9 @@ case "$STAGE" in
   publish)   # 7d: publish the research checkpoint (rl/release/publish_release.py); no GPU work
     run_job "cd '$REPO' && (python3 -m venv /opt/pv || python3 -m virtualenv /opt/pv) && /opt/pv/bin/pip install -q requests && /opt/pv/bin/python rl/release/publish_release.py --out '$WS'"
     ;;
+  relnotes)   # 7d: correct the published release notes (rl/release/update_release_notes.py); no GPU work
+    run_job "cd '$REPO' && (python3 -m venv /opt/pv || python3 -m virtualenv /opt/pv) && /opt/pv/bin/pip install -q requests && /opt/pv/bin/python rl/release/update_release_notes.py --out '$WS'"
+    ;;
   test4)   # stage 4: frozen models on the locked test sets (TEST_PROTOCOL.md)
     run_job "$SETUP && cd rl/training && $VENV/bin/python stage4_test.py --out '$WS'"
     ;;
