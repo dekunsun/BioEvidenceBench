@@ -107,12 +107,29 @@ than pages. A rough extrapolation to BHL's 64 million pages (LLM calls only, the
 length, not verified elsewhere): about $40,000 with Haiku, $700,000 with Opus. The real cost in the
 pilot was people: labelling, linking, review.
 
+### Can a cheap model do the repair? (training follow-up)
+
+A separate study trained a small open model (Qwen3-0.6B) to repair legacy OCR line by line, with a
+pre-registered locked test ([RL results](rl_results.md)).
+
+| Question | Answer | Evidence |
+| --- | --- | --- |
+| Does supervised training on expert transcriptions work? | Partly | Damaged words repaired 4% → 40% on held-out lines of the training books, 21% on an unseen French book; names 1% → 36–44% |
+| Does reinforcement learning (GRPO) add anything? | No | From the base model it learns to copy the OCR; after supervised training it repairs no more words and only breaks about a quarter fewer correct ones |
+| Can it replace the API repair step? | Not yet | It still changes about 1.8% of correct words; whether its output raises extraction F1 is untested |
+| What did it cost? | Little | About $5.86 of GPU for every run, failures included; one supervised run about $0.10 |
+
+Product reading: for this task the money goes into expert examples, not reward engineering; and a
+reward must be checked for what "do nothing" scores before any training. The supervised checkpoint
+is [published as a research model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1), not for automatic replacement of library text.
+
 ### Not known yet
 
 - Other languages, layouts, print eras, tables, plates and handwriting.
 - Mollusc name linking (deferred), a review-time study, audit metrics for evidence.
 - Whether repair and image reading hold on material outside the models' training data.
-- NHM's chosen OCR (Mistral OCR 3) under the name-preservation test.
+- NHM's exact OCR setting. Mistral OCR through OpenRouter (version not reported) was tested: value F1 0.95 Butler, 0.92 Reeve (exploratory).
+- Whether the small repair model helps extraction inside the pipeline.
 
 ---
 
@@ -191,9 +208,23 @@ pilot was people: labelling, linking, review.
 
 抽取用 Haiku，关联用 Opus 或 Fable：关联按不同的名字调用，次数远少于页数。粗算到 BHL 全部 6400 万页（只算 LLM 调用，按这两本书的页长，未在其他书上核实）：Haiku 约 4 万美元，Opus 约 70 万美元。这次试点真正的成本是人：标注、学名关联、审核。
 
+**便宜的小模型能不能做修复？（训练后续研究）**
+
+另一项研究训练了一个开源小模型（Qwen3-0.6B）逐行修复旧 OCR，测试集事先锁定、只跑一次（[RL 结果](rl_results.md)）。
+
+| 问题 | 答案 | 依据 |
+| --- | --- | --- |
+| 用专家转录做监督训练有用吗？ | 部分有用 | 训练书的未见行上，受损词修复率 4% → 40%；没见过的法语书上 21%；学名 1% → 36–44% |
+| 强化学习（GRPO）能再加分吗？ | 不能 | 从原模型出发学会了照抄 OCR；在监督训练之后也没有多修一个词，只是改坏的正确词少了约四分之一 |
+| 能替代 API 修复这一步吗？ | 暂时不能 | 仍会改坏约 1.8% 的正确词；修复后能否提高抽取 F1 还没测 |
+| 花了多少钱？ | 很少 | GPU 共约 $5.86，包括失败的运行；一次监督训练约 $0.10 |
+
+产品上的读法：这个任务的钱应该花在专家示范上，而不是奖励设计上；用奖励训练前，先算"什么都不改"能得多少分。监督训练的检查点已[作为研究模型公开](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)，不能用于自动替换原文。
+
 **还不知道的**
 
 - 其他语言、版式、印刷年代、表格、图版和手写材料。
 - 贝类学名关联（已推迟）、审核时间研究、衡量证据价值的审核指标。
 - 读正和读图在模型没见过的材料上是否还成立。
-- NHM 选用的 OCR（Mistral OCR 3）在学名保留测试下的表现。
+- NHM 实际使用的 OCR 设置。通过 OpenRouter 调用的 Mistral OCR（未报告版本）已测：值 F1 Butler 0.95、Reeve 0.92（探索性）。
+- 小修复模型放进流程后能否提高抽取效果。

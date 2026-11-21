@@ -33,7 +33,10 @@ error rate did not (−0.07 and −0.62). Four Claude models differed by at most
 image) reached similar F1 but left very different evidence for an auditor. On these books, OCR was the
 first bottleneck and modern OCR removed most of it; after that, trust was limited by entity resolution and
 by the definition of what counts as a datum, not by the extraction model. We do not claim this for other
-languages, layouts, print eras, tables or handwriting.
+languages, layouts, print eras, tables or handwriting. **[separate study]** In a pre-registered training
+study on the same expert-transcribed collection, supervised fine-tuning taught a small open model
+(Qwen3-0.6B) to repair 40% of damaged words in legacy OCR lines (4% untrained); reinforcement learning with
+a verifiable reward (GRPO) taught it to copy the OCR, and added nothing after supervised training.
 
 ---
 
@@ -354,6 +357,34 @@ totals rose to 0.80, 0.94 and 0.94. Every adjudication moved the gold towards th
 made after seeing model output, so both versions are reported. Joint botanical authorities (`H. & A.`) are
 one person under the labeller's rule; the model splits them.
 
+### 6.10 Training a small repair model (separate pre-registered study)
+
+If legacy OCR is where names are lost, a cheap model that repairs it line by line could sit before
+extraction. We built a line-repair environment from five IMPACT books (one expert line, the legacy OCR
+aligned to it and the OCR lines around it; split by contiguous pages; a sixth book, Cuvier 1835 in
+French, held out) and a word-level verifiable reward for GRPO [13] (damaged reference words written exactly, scientific
+names weighted ×3, −0.5 per correct word broken, −0.25 per word inserted, hard format and length gates).
+Design, decision rules and the locked test (500 in-book lines, 500 Cuvier lines) were fixed before
+scoring; development choices were made on dev lines and logged. On Qwen3-0.6B [15], two seeds per condition:
+
+| Condition | Damaged words repaired, in-book | Correct words kept | Cuvier |
+| --- | --- | --- | --- |
+| Untrained | 0.04 | 0.92 | 0.05 |
+| Supervised fine-tuning (SFT) | 0.40 / 0.41 | 0.98 | 0.21 |
+| GRPO from the untrained model | 0.006 / 0.034 | 0.99–1.00 | 0.002 / 0.011 |
+| SFT, then GRPO | 0.39 / 0.41 | 0.99 | 0.20 / 0.21 |
+
+GRPO from the untrained model learned to return the OCR unchanged (85–93% of its training answers, groups
+without reward variance 90–95%): copying a damaged line never scores below zero, and the untrained model's
+edits were right 4% of the time. A dense reward (1 − CER) did not change this. After SFT, GRPO repaired no
+more words (difference −0.004, intervals spanning zero on three test sets) and broke about a quarter fewer
+correct ones. SFT's gain came mostly from lines the untrained model never solved in eight attempts; GRPO
+after SFT raised pass@1 by under a point and left pass@8 unchanged, as Yue et al. describe [14]. A reward
+audit found five holes; two (finishing a word split at the line end; inconsistent dash glyphs) were found
+only by reading answers by hand, and no trained model exploited them. The SFT checkpoint is released as a
+research model ([`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)); details in [RL results](rl_results.md).
+GPU cost was about US$5.86.
+
 ---
 
 ## 7. Discussion
@@ -397,7 +428,9 @@ than one end-to-end F1. We would welcome running these tests on open gold sets a
 Keep investing in OCR, accepted on name survival per kind of material; fund entity resolution as its own
 workstream, with a curator-owned taxonomy policy; write the scope before scaling; review by sampling, with
 evidence attached; and do not buy a bigger extraction model: Haiku 5.5 was within a few points of Opus 5.5
-at about a fifteenth of the cost.
+at about a fifteenth of the cost. If a cheap repair model is wanted, spend on expert examples: in the
+training study, supervised fine-tuning taught the repair and reinforcement learning from a word-level reward
+did not.
 
 ---
 
@@ -414,6 +447,8 @@ at about a fifteenth of the cost.
 - **Exploratory work** was designed after unsealing and needs a fresh test.
 - **Linking** was scored on birds only (34 names); molluscs, with heavier synonymy, were deferred.
 - **Review time** comes from 9 timed spot-check items, not a review-time study.
+- **The training study** used one 0.6B model, one reward family and two seeds, and measured line repair, not
+  extraction; whether the repaired text raises extraction F1 is untested.
 - **AI assistance.** The pipeline, scorer and documents were built with an AI coding assistant (Claude
   Code), and Claude models are among those evaluated. The assistant never created or pre-filled gold
   labels and did not review test labels for omissions; every labelling decision was made by the labeller
@@ -437,8 +472,9 @@ Repository: [github.com/dekunsun/BioEvidenceBench](https://github.com/dekunsun/B
 [Results](results.md) · [evaluation settings, one row per run](eval_settings.md) ·
 [product summary and decision memo](product.md) · [lessons learned](lessons_learned.md) ·
 [annotation guide](../ANNOTATION_GUIDE.md) · [pre-registration](../PREREGISTRATION.md) ·
-[deviations](../DEVIATIONS.md). Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata:
-CC0. Total API spend for the project was about US$50.
+[deviations](../DEVIATIONS.md) · [training study](rl_results.md) and [released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1).
+Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata: CC0. Total API spend for the
+project was about US$50; GPU spend for the training study about US$6.
 
 ## Acknowledgements
 
@@ -468,3 +504,8 @@ teams for open data.
     Digital Discovery. https://pubs.rsc.org/en/content/articlelanding/2024/dd/d4dd00074a (arXiv:2403.06949)
 11. Global Names Architecture. gnfinder v1.4.0. https://github.com/gnames/gnfinder
 12. GBIF. Species API (v1). https://techdocs.gbif.org/en/openapi/v1/species
+13. Shao Z et al. (2024). DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models
+    (GRPO). arXiv:2402.03300. Implementation used: Hugging Face TRL 1.18.2, `GRPOTrainer`.
+14. Yue Y et al. (2025). Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the
+    Base Model? arXiv:2504.13837.
+15. Qwen Team. Qwen3-0.6B (model card, Apache 2.0). https://huggingface.co/Qwen/Qwen3-0.6B
