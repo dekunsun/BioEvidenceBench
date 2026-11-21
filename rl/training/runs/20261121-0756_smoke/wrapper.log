@@ -1,0 +1,4 @@
+[07:56:23] run 20261121-0756_smoke: stage=smoke max=60 min at $0.89/h on pod 2x7lnpl3r3izv2
+[07:56:23] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID 2x7lnpl3r3izv2
+[07:56:24] read check: Error: Unauthorized 
+[08:09:23] outcome=success minutes=13
