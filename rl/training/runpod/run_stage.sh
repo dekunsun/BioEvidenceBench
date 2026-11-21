@@ -161,6 +161,10 @@ case "$STAGE" in
     export RUN_ID
     run_job "$SETUP && $VENV/bin/python rl/training/stage3_p0.py all --seed ${STAGE#p0s} --out '$WS' --ckpt-root /workspace/ckpt --price '$PRICE'"
     ;;
+  p1cer)   # P1 reward ablation: GRPO from base with 1 - CER as the reward, seed 1 (Gloria, 2026-11-21)
+    export RUN_ID
+    run_job "$SETUP && $VENV/bin/python rl/training/stage3_p0.py all --seed 1 --conditions grpo_cer --out '$WS' --ckpt-root /workspace/ckpt --price '$PRICE'"
+    ;;
   test4)   # stage 4: frozen models on the locked test sets (TEST_PROTOCOL.md)
     run_job "$SETUP && cd rl/training && $VENV/bin/python stage4_test.py --out '$WS'"
     ;;

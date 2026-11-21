@@ -128,6 +128,15 @@ def cmd_sft(args) -> None:
                                           "rendered_prompt_0": ds[0]["prompt"]}, indent=1))
 
 
+def reward_cer(item: dict, answer: str) -> float:
+    """P1 reward ablation R-A (METRICS.md 2): 1 - CER of the raw answer against the expert line,
+    CER = edit distance / reference length, clipped to [0, 1]; no format, integrity or alignment gate
+    (everything else as in C). Same normalisation as Reward v1.3 (NFC and the presentation folds)."""
+    import rapidfuzz.distance.Levenshtein as Lev
+    out, ref = C.T.nfc(answer or "").strip(), item["target"]
+    return 1.0 - min(1.0, Lev.distance(out, ref) / max(1, len(ref)))
+
+
 def cmd_grpo(args) -> None:
     from datasets import Dataset
     from transformers import AutoTokenizer
@@ -143,9 +152,11 @@ def cmd_grpo(args) -> None:
         for i, c in enumerate(completions):
             it = {k: kw[k][i] for k in keep}
             s = C.score_answer(it, c)
-            out.append(s["reward"])
+            r = s["reward"] if args.reward == "v13" else reward_cer(it, c)
+            out.append(r)
             clog.write(json.dumps({"step": trainer_state.global_step if trainer_state else None,
-                                   "item_id": it["item_id"], "completion": c, "reward": s["reward"],
+                                   "item_id": it["item_id"], "completion": c, "reward": r,
+                                   "reward_v13": s["reward"],
                                    "format_reason": s["format_reason"], "repaired": s["repaired"],
                                    "broken": s["broken"], "copy": c.strip() == it["input"].strip()},
                                   ensure_ascii=False) + "\n")
@@ -164,6 +175,7 @@ def cmd_grpo(args) -> None:
     clog.close()
     Path(args.out).write_text(json.dumps({"seconds": round(time.time() - t0, 1), "log_history": tr.state.log_history,
                                           "per_device": args.per_device, "vllm_util": args.vllm_util,
+                                          "reward": args.reward,
                                           "rendered_prompt_0": ds[0]["prompt"]}, indent=1))
 
 
@@ -252,7 +264,8 @@ def cmd_all(args) -> None:
         e["wall_seconds"] = round(time.time() - t0, 1)
         return e
 
-    def train_and_choose(cond: str, kind: str, init: str, base: dict, steps: int = STEPS) -> Path | None:
+    def train_and_choose(cond: str, kind: str, init: str, base: dict, steps: int = STEPS,
+                         reward: str = "v13") -> Path | None:
         cdir = ck / f"{cond}_s{s}"
         t0 = time.time()
         cmd = [PY, __file__, kind, "--seed", str(s), "--init", init, "--ckpt", str(cdir),
@@ -260,7 +273,7 @@ def cmd_all(args) -> None:
         if kind == "sft":
             cmd += ["--steps", str(steps)]
         if kind == "grpo":
-            cmd += ["--completions", str(out / f"{cond}_s{s}_completions.jsonl.gz")]
+            cmd += ["--completions", str(out / f"{cond}_s{s}_completions.jsonl.gz"), "--reward", reward]
             code = run(cmd + ["--per-device", "16", "--vllm-util", "0.3"], joblog)
             if code != 0 and "out of memory" in joblog.read_text()[-20000:].lower():
                 log(f"{cond}: out of memory, retrying with 8 per device and vLLM at 0.25")
@@ -318,8 +331,12 @@ def cmd_all(args) -> None:
     conds = args.conditions.split(",")
     summary["sft_steps"] = args.sft_steps
     summary["conditions_run"] = conds
-    sft = train_and_choose("sft", "sft", C.MODEL_ID, base, args.sft_steps)
-    chosen["sft"] = sft
+    sft = None
+    if "sft" in conds or "sft_grpo" in conds:
+        sft = train_and_choose("sft", "sft", C.MODEL_ID, base, args.sft_steps)
+        chosen["sft"] = sft
+    if "grpo_cer" in conds:       # P1 reward ablation: C with R-A = 1 - CER (Gloria, 2026-11-21)
+        chosen["grpo_cer"] = train_and_choose("grpo_cer", "grpo", C.MODEL_ID, base, reward="cer")
     if "grpo" in conds:
         chosen["grpo"] = train_and_choose("grpo", "grpo", C.MODEL_ID, base)
     if sft is not None and "sft_grpo" in conds:
@@ -350,7 +367,7 @@ def main() -> None:
     a.add_argument("--ckpt-root", default="/workspace/ckpt")
     a.add_argument("--price", type=float, default=0.89)
     a.add_argument("--sft-steps", type=int, default=STEPS)
-    a.add_argument("--conditions", default="sft,grpo,sft_grpo", help="sft is always run (D starts from it)")
+    a.add_argument("--conditions", default="sft,grpo,sft_grpo", help="sft runs when sft or sft_grpo is listed")
     e = sub.add_parser("eval")
     e.add_argument("--model", required=True)
     e.add_argument("--label", required=True)
@@ -369,6 +386,7 @@ def main() -> None:
             t.add_argument("--completions", required=True)
             t.add_argument("--per-device", type=int, default=16)
             t.add_argument("--vllm-util", type=float, default=0.3)
+            t.add_argument("--reward", choices=("v13", "cer"), default="v13")
     args = ap.parse_args()
     {"all": cmd_all, "eval": cmd_eval, "sft": cmd_sft, "grpo": cmd_grpo}[args.cmd](args)
 

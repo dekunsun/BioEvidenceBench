@@ -22,6 +22,15 @@ of stage 3: B = SFT 600 steps (re-run `sft600s1/2`), C = GRPO from base (`p0s1/2
 the 600-step B (`sft600s1/2`), seeds 1 and 2. **GRPO condition for the larger confirmation**: the one
 of C and D with the higher mean dev repair rate (post-processed) over its two seeds.
 
+**P1 (Gloria, 2026-11-21, decided before any test result): reward ablation only.** C-CER = GRPO from
+base with R-A = 1 − CER as the reward (no gates; everything else as C), seed 1 (`p1cer`), chosen on
+dev with the same rule, tested on `p0_test_inbook` and `p0_test_cuvier`, compared with C seed 1 and
+with A. The data ablation (no name oversampling) and the name-weight ablation (P2) are **dropped**:
+C learns no names even with oversampling and weight 3 (dev, both seeds), so removing either cannot
+show a difference. Question C-CER answers: is GRPO's collapse to copying caused by the shape of
+Reward v1.3 (copying a damaged line scores 0, a broken word −0.5), or by a start model that rarely
+samples a correct repair?
+
 ## 3. Decoding and scoring
 
 Prompt `repair_v3`, thinking off, one renderer (`common_7b.render_prompt`). Evaluation decoding
@@ -50,6 +59,7 @@ reported next to it as a sensitivity check, never as the decision.
 | Preservation (non-inferiority, margin 1 point) | Δ preservation | pass if lower bound > −0.01; fail if upper bound < −0.01; else inconclusive |
 | Names without harm to ordinary words | Δ name recovery > 0 and preservation passes | |
 | Descriptive | B − A, D − A | |
+| P1: does a dense reward escape copying? | C-CER − C (seed 1), C-CER − A | descriptive (one seed) |
 
 Diagnostics, not success criteria: mean Reward v1.3, pass@1 / pass@8 (7c), CER, case accuracy.
 

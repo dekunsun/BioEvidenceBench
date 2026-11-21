@@ -45,3 +45,9 @@ def test_gated_answer_keeps_nothing():
     it = C.load_items(S.DATA / "p0_dev_names.jsonl")[0]
     s = C.score_answer(it, "Corrected line: " + it["target"])
     assert s["gated"] and s["preserved"] == 0 and not s["gated_post"] and s["repaired_post"] == it["n_damaged"]
+
+
+def test_reward_cer_ablation():
+    it = C.load_items(S.DATA / "p0_dev_names.jsonl")[0]
+    assert S.reward_cer(it, it["target"]) == 1.0 and S.reward_cer(it, "") == 0.0
+    assert 0 < S.reward_cer(it, it["input"]) < 1

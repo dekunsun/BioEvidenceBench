@@ -208,3 +208,6 @@ Gloria: "用 v3，先重建训练数据，再跑阶段 3". Code `rl/training/sta
   is frozen before stage 4.
 - **Revision before the locked test (Gloria, 2026-11-21, "加到600步")**: SFT 600 steps (two passes), because
   dev repair was still rising at step 300 in both seeds; B and D re-run, C kept. Same checkpoint rule.
+- **P1 decided before the locked test (Gloria, 2026-11-21, "按你的建议")**: only the reward ablation
+  (C with R-A = 1 − CER, seed 1). The data and name-weight ablations are dropped: C learns no names with
+  oversampling and weight 3, so taking either away cannot show a difference (TEST_PROTOCOL.md section 2).
