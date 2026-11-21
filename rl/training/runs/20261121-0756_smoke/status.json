@@ -1,0 +1,10 @@
+{
+  "run_id": "20261121-0756_smoke",
+  "stage": "smoke",
+  "outcome": "success",
+  "minutes": 13.0,
+  "usd_estimate": 0.1928,
+  "usd_per_hour": 0.89,
+  "pod_id": "2x7lnpl3r3izv2",
+  "gpu": "NVIDIA+GeForce+RTX+4090"
+}
