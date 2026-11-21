@@ -21,10 +21,10 @@ Suspected reference typos stay set aside until Gloria's check (`reference_errata
 | Condition | What it is |
 |---|---|
 | Copy | return the OCR unchanged (no model) |
-| A. Base | Qwen3-0.6B, the instruct model (Gloria), with the task prompt, no training; thinking mode off |
-| A′. Base + format clean-up | A's outputs passed through a fixed, deterministic clean-up (keep the first non-empty line; strip a commentary prefix and wrapping quotes or Markdown). No GPU: re-scores A's outputs |
+| A. Base | Qwen3-0.6B, the instruct model (Gloria), with the task prompt, no training; thinking off (2a) |
+| A′. Base + format clean-up | A's outputs passed through a fixed, deterministic clean-up (drop a `<think>…</think>` block; keep the first non-empty line; strip a commentary prefix and wrapping quotes or Markdown). No GPU: re-scores A's outputs |
 | B. SFT | supervised on (OCR → expert line) pairs |
-| C. GRPO | Reward v1.2 only |
+| C. GRPO | Reward v1.3 only |
 | D. SFT → GRPO | B, then C's training |
 | Ablation (reward) | C with R-A = 1 − CER as the reward (2 seeds) |
 | Secondary ablation (data) | C without oversampling name lines (1 seed; Gloria) |
@@ -32,6 +32,32 @@ Suspected reference typos stay set aside until Gloria's check (`reference_errata
 
 Seeds: 3 for C and D, 2 for the ablation, 2 for B. Same number of training steps for C and D's
 GRPO phase (about 300–500, fixed after the pilot, before the final runs).
+
+## 2a. Prompts and decoding (thinking mode off everywhere)
+
+Qwen3 has thinking on by default; the model card calls `enable_thinking=False` "a hard switch to
+strictly disable the model's thinking behavior". A thinking block costs tokens and breaks the
+one-line answer, so:
+
+- **One prompt renderer for every stage.** Every prompt (Base, SFT data, GRPO rollouts, evaluation)
+  is rendered once by the same function with `tokenizer.apply_chat_template(..., add_generation_prompt=True,
+  enable_thinking=False)` and passed on as a plain string. The trainers' own template options are not
+  relied on (TRL's `GRPOConfig` has `chat_template_kwargs`; `SFTConfig` has no such option, so
+  rendering in each trainer could differ between SFT and GRPO). SFT targets are that rendered prompt +
+  the expert line + end-of-turn token, so SFT trains on exactly the prompt GRPO and evaluation see.
+- **Checked, not assumed.** Each run saves one rendered prompt verbatim in its config and its SHA-256;
+  the pilot checks what the template puts after the assistant turn (the card does not say whether an
+  empty thinking block is inserted) and that Base outputs on 50 dev lines contain no `<think>`.
+- **Gated in the reward.** Reward v1.3 scores any answer with a `<think>` or `</think>` tag as a
+  format error (0), even on one line. The share of such answers is logged in every training step and
+  evaluation.
+- **Short answers.** `max_completion_length` 128 tokens (an expert line is under about 60 tokens);
+  truncated answers are counted.
+- **Decoding.** Evaluation uses the model card's non-thinking settings, fixed for every condition:
+  temperature 0.7, top-p 0.8, top-k 20, min-p 0; pass@1 averaged over 4 samples per line. GRPO
+  rollouts use temperature 1.0 with no top-p / top-k cut, chosen for within-group variance; the pilot
+  measures `frac_reward_zero_std` on dev and may change only the rollout temperature, before the
+  final runs.
 
 ## 3. Primary metrics (reported per book and pooled, in-book and Cuvier separately)
 
@@ -48,7 +74,7 @@ only, and each condition's gain over Base is split into (a) outputs that went fr
 to valid and (b) better repairs among outputs that were already valid. A′ shows how much of the gap a
 fixed clean-up closes without any training.
 
-Diagnostics, not success criteria: mean reward (Reward v1.2), CER, case accuracy, `reward_reading`
+Diagnostics, not success criteria: mean reward (Reward v1.3), CER, case accuracy, `reward_reading`
 (ſ ≡ s), recoverable-deletion repair rate.
 
 **The training reward is never the measure of success.** A condition counts as better only on the
@@ -78,7 +104,7 @@ counts as consistent only if every seed points the same way; seed spread is show
 |---|---|---|
 | Did GRPO improve repair? | C vs Base, A′, Copy; D vs B | one 0.6B model; five training books; Cuvier tests one further book and language |
 | Was it only format? | gain split (format-invalid → valid vs better repairs); C vs A′ on format-valid outputs | the clean-up rule is one fixed rule, not the best possible |
-| Reward design? | C (Reward v1.2) vs ablation R-A (1 − CER), 2 seeds each; name weight w = 1, 1 seed if run | 2 seeds give a direction, not a firm result; R-A vs R-D changes several things at once (word unit, weights, penalties) |
+| Reward design? | C (Reward v1.3) vs ablation R-A (1 − CER), 2 seeds each; name weight w = 1, 1 seed if run | 2 seeds give a direction, not a firm result; R-A vs R-D changes several things at once (word unit, weights, penalties) |
 | Training data selection? | C vs C without name oversampling, 1 seed | 1 seed: a lead only |
 | Learned, or more stable? | pass@k before vs pass@1 after (7c) | Yue et al. 2025 show RL can mostly re-rank what the base model can already sample |
 - A null result is reported as a result (plan 7b).

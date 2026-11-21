@@ -369,6 +369,8 @@ def format_check(output, target: str) -> str:
     if not isinstance(output, str) or not output.strip():
         return "empty"
     out = output.strip()
+    if re.search(r"</?think\b", out, re.I):        # Qwen3 thinking block, even on one line (v1.3)
+        return "thinking tags"
     if "\n" in out:
         return "several lines"
     m = _COMMENTARY.match(out)
@@ -428,7 +430,7 @@ def _score(unit, legacy_rows, out_rows, out, key, name_weight):
 
 def reward(unit: dict, output, name_weight: float = NAME_WEIGHT, p_broken: float = PENALTY_BROKEN,
            p_insert: float = PENALTY_INSERT) -> dict:
-    """Reward v1.2 with diagnostic fields (REWARD_DESIGN.md). Damaged line:
+    """Reward v1.3 with diagnostic fields (REWARD_DESIGN.md). Damaged line:
     clip(weighted repair rate - p_broken*B - p_insert*I, -1, 1); clean line: clip(1 - p_broken*B -
     p_insert*I, -1, 1). B = correct OCR words changed or deleted; I = inserted words (not counting
     insertions already in the OCR). Format, integrity or alignment failure: 0, flagged.

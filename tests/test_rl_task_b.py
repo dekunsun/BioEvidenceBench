@@ -101,6 +101,8 @@ def test_writing_the_right_word_next_to_the_damaged_one_is_not_a_repair():
     ("*" + REF + "*", "wrapped in *"),
     ("```" + REF + "```", "wrapped in ```"),
     ('"' + REF + '"', 'wrapped in "'),
+    ("<think>parua is parva</think> " + REF, "thinking tags"),
+    ("<think>\n\n</think>\n\n" + REF, "thinking tags"),
 ])
 def test_format_errors_score_zero_and_are_flagged(out, reason):
     d = r(u(), out)

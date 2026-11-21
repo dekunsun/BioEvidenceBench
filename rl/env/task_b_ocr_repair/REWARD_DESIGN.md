@@ -1,8 +1,8 @@
-# Task B reward design (Reward v1.2)
+# Task B reward design (Reward v1.3)
 
 *Task B: repair one line of legacy OCR so it matches the expert transcription, changing only
 recognition errors. Implementation: `src/rl_task_b.py`. Fixed unit tests:
-`tests/test_rl_task_b.py` (61 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
+`tests/test_rl_task_b.py` (63 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
 first experimental setting, not validated optima; they are checked on development data before
 any training run.*
 
@@ -61,7 +61,7 @@ in specirnens`; `parva` weight 3, `specimens` weight 1):
 
 | Gate | Rule | Field |
 |---|---|---|
-| Format | empty; several lines; a commentary prefix (`Corrected line:`, `Here is …:`, `Output:` …); the whole line wrapped in Markdown or quotation marks (`*…*`, `` `…` ``, ```` ```…``` ````, `"…"`) unless the reference itself is | `format_valid`, `format_reason` |
+| Format | empty; a `<think>` or `</think>` tag anywhere (v1.3: Qwen3's thinking block, even on one line); several lines; a commentary prefix (`Corrected line:`, `Here is …:`, `Output:` …); the whole line wrapped in Markdown or quotation marks (`*…*`, `` `…` ``, ```` ```…``` ````, `"…"`) unless the reference itself is | `format_valid`, `format_reason` |
 | Integrity | output length outside 0.5–1.5 × the reference | `integrity_valid` |
 | Alignment | under 50% of reference characters align to the output | `alignment_valid` |
 
@@ -193,3 +193,4 @@ word is repaired by its letters in any case.
 | v1.0 | 2026-11-20 | Weighted damaged-word repair minus λ·min(1, B/max(1,|D|)); clean lines 1 − B/|C| | Gloria (from an external review) |
 | v1.1 | 2026-11-20 | Fixed penalties 0.5 per broken word, 0.25 per inserted word, clipped to [−1, 1]; hard format gate; repair requires the damaged token to be gone; long s kept in the main reward plus a reading metric; ligature folding | Gloria |
 | v1.2 | 2026-11-20/21 | Typographic apostrophes folded; U+2010 inside words; fractions accepted where the reference has the same form; unrecoverable deletions set aside, recoverable ones marked; suspected reference typos set aside pending check (21st, after the step 5 trials); case-only words neutral (letters must survive); case-free repair of small-caps words; case diagnostics; MUFI ligatures folded; references with U+FFFD or unidentified private-use characters invalid; unreliable imprints and captions set aside | Gloria (from the step 4 audit) |
+| v1.3 | 2026-11-21 | Format gate also rejects `<think>` / `</think>` tags anywhere in the answer (Qwen3 thinking mode), before any training run | Gloria raised the thinking-mode risk; Claude added the gate |
