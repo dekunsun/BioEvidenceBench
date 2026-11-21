@@ -7,7 +7,7 @@ Built by `src/rl_task_b_build.py` under Reward v1.2 rules (case-only words neutr
 Unit files (not committed; regenerate with the script) and their SHA-256:
 
 - `train.jsonl`: 31909 usable units, `d032f8d4a3129141…`
-- `dev.jsonl`: 3784 usable units, `65024b62bcaec50a…`
+- `dev.jsonl`: 3787 usable units, `a072b28944e92b6b…`
 - `intest.jsonl`: 3743 usable units, `3c502cc252db95b2…`
 
 ## Lines per book
@@ -18,7 +18,7 @@ Unit files (not committed; regenerate with the script) and their SHA-256:
 | Chitinskelett |      73 |    2498 |    2396 |     2392 |          0.958 |                      0 |
 | Piscium       |      43 |    1153 |     970 |      968 |          0.84  |                      0 |
 | Reeve         |     418 |   18532 |   16879 |    16878 |          0.911 |                      0 |
-| Trudy         |     480 |   15925 |   12826 |    12818 |          0.805 |                      1 |
+| Trudy         |     480 |   15925 |   12826 |    12821 |          0.805 |                      1 |
 
 ## Lines not used, by reason
 
@@ -57,15 +57,15 @@ Every one is kept with page, line, input, target and reason in `set_aside.jsonl`
 | mixed-script word in reference                                                                   |        0 |               1 |         0 |       0 |      59 |    60 |
 | mixed-script word in reference + unreadable character in reference                               |        0 |               0 |         0 |       0 |       3 |     3 |
 | no aligned legacy text                                                                           |        1 |              20 |        27 |     134 |      27 |   209 |
+| reference typo, confirmed                                                                        |        1 |               1 |         1 |       0 |       5 |     8 |
 | similarity                                                                                       |        9 |               1 |         1 |      61 |      42 |   114 |
 | similarity + span ratio                                                                          |        2 |               0 |         0 |       8 |      11 |    21 |
 | similarity + span ratio + unreadable character in reference                                      |        2 |               0 |         0 |       0 |       0 |     2 |
 | similarity + unreadable character in reference                                                   |        6 |               0 |         0 |       7 |       1 |    14 |
 | span ratio                                                                                       |        0 |               1 |         2 |       5 |      15 |    23 |
-| suspected reference typo, pending check                                                          |        1 |               1 |         1 |       0 |       8 |    11 |
 | unreadable character in reference                                                                |       13 |               6 |        91 |      14 |      30 |   154 |
 | unrecoverable deletion (word not in OCR or context)                                              |        0 |              33 |         0 |      95 |     129 |   257 |
-| All                                                                                              |      595 |             106 |       185 |    1654 |    3107 |  5647 |
+| All                                                                                              |      595 |             106 |       185 |    1654 |    3104 |  5644 |
 
 ## Similarity buckets (all lines; similarity ignores case)
 
@@ -98,7 +98,7 @@ Case-only words are neutral in Reward v1.2: not damaged, not penalised for case.
 | Chitinskelett |   28879 |      1837 |              1837 |          17 |                        87 |                    0.0006 |         0.0636 |                 0.0636 |
 | Piscium       |    6649 |      3416 |              3416 |           5 |                       103 |                    0.0008 |         0.5138 |                 0.5138 |
 | Reeve         |  112325 |     22965 |             22965 |        3866 |                      1006 |                    0.0344 |         0.2045 |                 0.2045 |
-| Trudy         |  106639 |      3586 |              3586 |          39 |                       206 |                    0.0004 |         0.0336 |                 0.0336 |
+| Trudy         |  106668 |      3590 |              3590 |          39 |                       206 |                    0.0004 |         0.0337 |                 0.0337 |
 
 ## Damaged words per usable line (share)
 
@@ -118,8 +118,8 @@ Counts:
 | Chitinskelett |  1350 |  629 |   386 |   27 |  2392 |
 | Piscium       |    29 |  100 |   690 |  149 |   968 |
 | Reeve         |  7087 | 4024 |  5484 |  283 | 16878 |
-| Trudy         | 10144 | 2045 |   616 |   13 | 12818 |
-| All           | 22952 | 8250 |  7750 |  484 | 39436 |
+| Trudy         | 10145 | 2045 |   618 |   13 | 12821 |
+| All           | 22953 | 8250 |  7752 |  484 | 39439 |
 
 ## Heuristic flags (all lines)
 
@@ -139,8 +139,8 @@ Counts:
 | Chitinskelett |   293 |      383 |    1716 |  2392 |
 | Piscium       |   208 |      156 |     604 |   968 |
 | Reeve         |  1203 |     1574 |   14101 | 16878 |
-| Trudy         |  1474 |     1059 |   10285 | 12818 |
-| All           |  3784 |     3743 |   31909 | 39436 |
+| Trudy         |  1477 |     1059 |   10285 | 12821 |
+| All           |  3787 |     3743 |   31909 | 39439 |
 
 ## Long s in *Piscium querelae*
 

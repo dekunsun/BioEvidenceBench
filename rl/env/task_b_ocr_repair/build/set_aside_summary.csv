@@ -30,12 +30,12 @@ index/contents line with leader dots + unreadable character in reference,0,0,0,0
 mixed-script word in reference,0,1,0,0,59,60
 mixed-script word in reference + unreadable character in reference,0,0,0,0,3,3
 no aligned legacy text,1,20,27,134,27,209
+"reference typo, confirmed",1,1,1,0,5,8
 similarity,9,1,1,61,42,114
 similarity + span ratio,2,0,0,8,11,21
 similarity + span ratio + unreadable character in reference,2,0,0,0,0,2
 similarity + unreadable character in reference,6,0,0,7,1,14
 span ratio,0,1,2,5,15,23
-"suspected reference typo, pending check",1,1,1,0,8,11
 unreadable character in reference,13,6,91,14,30,154
 unrecoverable deletion (word not in OCR or context),0,33,0,95,129,257
-All,595,106,185,1654,3107,5647
+All,595,106,185,1654,3104,5644
