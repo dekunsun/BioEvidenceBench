@@ -63,10 +63,37 @@ def score_answer(item: dict, answer: str) -> dict:
     raw = T.reward(item, answer)
     clean = T.format_cleanup(answer)
     post = T.reward(item, clean)
-    return {"reward": raw["reward"], "format_valid": raw["format_valid"], "format_reason": raw["format_reason"],
-            "repaired": raw["repaired_words"], "broken": raw["damaged_correct_words"], "extra": raw["extra_words"],
-            "reward_post": post["reward"], "repaired_post": post["repaired_words"],
-            "broken_post": post["damaged_correct_words"], "has_think": "<think" in (answer or "").lower()}
+    out = {"reward": raw["reward"], "format_valid": raw["format_valid"], "format_reason": raw["format_reason"],
+           "repaired": raw["repaired_words"], "broken": raw["damaged_correct_words"], "extra": raw["extra_words"],
+           "reward_post": post["reward"], "repaired_post": post["repaired_words"],
+           "broken_post": post["damaged_correct_words"], "has_think": "<think" in (answer or "").lower()}
+    for tag, d in (("", raw), ("_post", post)):   # fields for the primary metrics (METRICS.md section 3)
+        out["gated" + tag] = not (d["format_valid"] and d["integrity_valid"] and d["alignment_valid"])
+        out["name_repaired" + tag] = d["scientific_name_repairs"]
+        out["preserved" + tag] = d["preserved_correct_words"]
+    return out
+
+
+def primary_metrics(items: list[dict], rows: list[dict]) -> dict:
+    """Pooled (micro) primary metrics over answers `rows` (each has `item_id` and score_answer fields):
+    damaged-word repair rate, scientific-name exact recovery, correct-word preservation, format
+    failure rate, mean reward, pass rate; raw and post-processed. Gated answers repair and keep
+    nothing (their words count in the denominators)."""
+    by_id = {it["item_id"]: it for it in items}
+    dmg = sum(by_id[r["item_id"]]["n_damaged"] for r in rows)
+    names = sum(by_id[r["item_id"]].get("n_name_damaged") or 0 for r in rows)
+    # words the OCR had right, case-only differences included (copying the OCR keeps all of them)
+    correct = sum(by_id[r["item_id"]]["n_words"] - by_id[r["item_id"]]["n_damaged"] for r in rows)
+    n = len(rows)
+    out = {"answers": n, "damaged_words": dmg, "name_words": names, "correct_words": correct}
+    for tag in ("", "_post"):
+        out["repair_rate" + tag] = round(sum(r["repaired" + tag] for r in rows) / dmg, 4) if dmg else None
+        out["name_recovery" + tag] = round(sum(r["name_repaired" + tag] for r in rows) / names, 4) if names else None
+        out["preservation" + tag] = round(sum(r["preserved" + tag] for r in rows) / correct, 4) if correct else None
+        out["format_failure" + tag] = round(sum(r["gated" + tag] for r in rows) / n, 4) if n else None
+        out["mean_reward" + tag] = round(sum(r["reward" + tag] for r in rows) / n, 4) if n else None
+        out["pass_rate" + tag] = round(sum(r["reward" + tag] == 1.0 for r in rows) / n, 4) if n else None
+    return out
 
 
 def load_items(path: Path) -> list[dict]:

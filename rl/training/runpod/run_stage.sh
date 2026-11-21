@@ -6,7 +6,8 @@
 #
 # Stages: stoptest (sleeps 60 s: tests saving, uploading and self-termination; first launch),
 #         calibrate (stage 1, rl/training/stage1_calibrate.py),
-#         smoke (stage 2, rl/training/stage2_smoke.py: short SFT and GRPO, throughput and cost).
+#         smoke (stage 2, rl/training/stage2_smoke.py: short SFT and GRPO, throughput and cost),
+#         p0s1 / p0s2 (stage 3, rl/training/stage3_p0.py, one seed per pod).
 #
 # What it guarantees (Gloria, 2026-11-21):
 # - A watchdog ends the stage after <max_minutes>, whatever the job is doing.
@@ -155,6 +156,10 @@ case "$STAGE" in
     ;;
   smoke)
     run_job "$SETUP && $VENV/bin/python rl/training/stage2_smoke.py --out '$WS' --price '$PRICE'"
+    ;;
+  p0s1|p0s2)   # stage 3, one seed per pod: Base, SFT, GRPO, SFT->GRPO; checkpoints to a draft release
+    export RUN_ID
+    run_job "$SETUP && $VENV/bin/python rl/training/stage3_p0.py all --seed ${STAGE#p0s} --out '$WS' --ckpt-root /workspace/ckpt --price '$PRICE'"
     ;;
   *) log "unknown stage ${STAGE}"; exit 2 ;;
 esac

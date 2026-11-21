@@ -183,3 +183,26 @@ right after, and the reverse).
 
 reward mean and std, `frac_reward_zero_std`, KL, completion length, `<think>` and truncation
 shares, the reward's diagnostic fields, tokens, rollouts, optimizer steps, GPU hours and cost.
+
+## 9. Stage 3 settings (development choices, fixed before the P0 runs, 2026-11-21)
+
+Gloria: "用 v3，先重建训练数据，再跑阶段 3". Code `rl/training/stage3_p0.py`, data `rl/training/make_data_p0.py`
+(`rl/training/data/P0_DATA.md`).
+
+- **Training mix**: 4,800 lines = 300 steps × 16, every block of 16 = 8 damaged-name lines, 3 clean
+  (19%), 5 other damaged; the 1,280 distinct name lines appear once or twice. B, C and D use this file.
+- **Steps**: SFT 300 (one pass, 16 lines per step, lr 1e-5); GRPO 300 (16 prompts × 8 answers, lr 1e-6,
+  the stage-2 settings, rollout T 1.0). Master weights float32 with bf16 autocast: pure bf16 weights
+  would round away most updates at these learning rates (stages 1–2 used bf16 weights).
+- **Seeds**: training seed and a seed-specific order of the 16-line blocks (GRPO reads blocks in order
+  so the mix holds at every step; TRL gives vLLM the same sampling seed in every run, so without a
+  different order two seeds would be nearly the same run).
+- **Checkpoints**: every 50 steps; each answers 500 dev lines (100 per book) and 85 further dev
+  name lines with the evaluation decoding, 4 answers per line. **Rule**: highest post-processed
+  repair rate on the 500 dev lines among checkpoints whose post-processed preservation is at least
+  Base's minus 0.01; ties to the earlier step; if none qualifies, the highest preservation (flagged).
+  D starts from B's chosen checkpoint of the same seed.
+- **Storage**: chosen checkpoints in bf16 as assets of a draft GitHub release (too large for git);
+  the pod checks it can upload before training. Every GRPO completion is logged with step and reward.
+- No test line is read in stage 3. The locked test protocol (500 in-book lines, 500 Cuvier lines)
+  is frozen before stage 4.
