@@ -103,11 +103,11 @@ def train_items(seed: int) -> list[dict]:
     return [it for b in blocks for it in b]
 
 
-def common_args(out: Path, seed: int) -> dict:
+def common_args(out: Path, seed: int, steps: int = STEPS) -> dict:
     import torch
     return dict(output_dir=str(out), report_to="none", save_strategy="steps", save_steps=SAVE_EVERY,
                 save_only_model=True, logging_steps=5, bf16=True, seed=seed, gradient_checkpointing=True,
-                max_steps=STEPS, model_init_kwargs={"dtype": torch.float32})
+                max_steps=steps, model_init_kwargs={"dtype": torch.float32})
 
 
 def cmd_sft(args) -> None:
@@ -119,7 +119,7 @@ def cmd_sft(args) -> None:
     ds = Dataset.from_list([{"prompt": C.render_prompt(tok, it), "completion": it["target"] + tok.eos_token}
                             for it in items])
     cfg = SFTConfig(per_device_train_batch_size=16, learning_rate=1e-5, max_length=512, completion_only_loss=True,
-                    **common_args(Path(args.ckpt), args.seed))
+                    **common_args(Path(args.ckpt), args.seed, args.steps))
     tr = SFTTrainer(model=args.init, args=cfg, train_dataset=ds, processing_class=tok)
     t0 = time.time()
     tr.train()
@@ -251,11 +251,13 @@ def cmd_all(args) -> None:
         e["wall_seconds"] = round(time.time() - t0, 1)
         return e
 
-    def train_and_choose(cond: str, kind: str, init: str, base: dict) -> Path | None:
+    def train_and_choose(cond: str, kind: str, init: str, base: dict, steps: int = STEPS) -> Path | None:
         cdir = ck / f"{cond}_s{s}"
         t0 = time.time()
         cmd = [PY, __file__, kind, "--seed", str(s), "--init", init, "--ckpt", str(cdir),
                "--out", str(out / f"{cond}_s{s}_train.json")]
+        if kind == "sft":
+            cmd += ["--steps", str(steps)]
         if kind == "grpo":
             cmd += ["--completions", str(out / f"{cond}_s{s}_completions.jsonl.gz")]
             code = run(cmd + ["--per-device", "16", "--vllm-util", "0.3"], joblog)
@@ -265,14 +267,15 @@ def cmd_all(args) -> None:
                 code = run(cmd + ["--per-device", "8", "--vllm-util", "0.25"], joblog)
         else:
             code = run(cmd, joblog)
-        info = {"kind": kind, "init": init, "train_exit": code, "train_wall_seconds": round(time.time() - t0, 1)}
+        info = {"kind": kind, "init": init, "steps": steps, "train_exit": code,
+                "train_wall_seconds": round(time.time() - t0, 1)}
         summary["conditions"][cond] = info
         save()
         if code != 0:
             log(f"{cond} training failed ({code})")
             return None
         evals = {}
-        for step in range(SAVE_EVERY, STEPS + 1, SAVE_EVERY):
+        for step in range(SAVE_EVERY, steps + 1, SAVE_EVERY):
             e = evaluate(str(cdir / f"checkpoint-{step}"), f"{cond}_s{s}_step{step}")
             if e:
                 evals[step] = e
@@ -284,7 +287,7 @@ def cmd_all(args) -> None:
         info["chosen"] = choose(evals, base)
         chosen = cdir / f"checkpoint-{info['chosen']['step']}"
         best = to_bf16(chosen, ck / f"{cond}_s{s}_chosen_bf16")
-        for st in range(SAVE_EVERY, STEPS + 1, SAVE_EVERY):          # free the disk
+        for st in range(SAVE_EVERY, steps + 1, SAVE_EVERY):          # free the disk
             if st != info["chosen"]["step"]:
                 shutil.rmtree(cdir / f"checkpoint-{st}", ignore_errors=True)
         log(f"{cond}: chose step {info['chosen']}")
@@ -311,10 +314,14 @@ def cmd_all(args) -> None:
     if not base:
         sys.exit("base evaluation failed")
     chosen = {}
-    sft = train_and_choose("sft", "sft", C.MODEL_ID, base)
+    conds = args.conditions.split(",")
+    summary["sft_steps"] = args.sft_steps
+    summary["conditions_run"] = conds
+    sft = train_and_choose("sft", "sft", C.MODEL_ID, base, args.sft_steps)
     chosen["sft"] = sft
-    chosen["grpo"] = train_and_choose("grpo", "grpo", C.MODEL_ID, base)
-    if sft is not None:
+    if "grpo" in conds:
+        chosen["grpo"] = train_and_choose("grpo", "grpo", C.MODEL_ID, base)
+    if sft is not None and "sft_grpo" in conds:
         chosen["sft_grpo"] = train_and_choose("sft_grpo", "grpo", str(sft), base)
 
     tars = []
@@ -328,7 +335,7 @@ def cmd_all(args) -> None:
     summary["checkpoint_upload"] = upload_assets(rel, tars) if tars else {"ok": False, "error": "no checkpoints"}
     save()
     log(f"done: {json.dumps(summary['checkpoint_upload'])}")
-    failed = [c for c in ("sft", "grpo", "sft_grpo") if chosen.get(c) is None]
+    failed = [c for c in conds if chosen.get(c) is None]
     if failed or not summary["checkpoint_upload"]["ok"]:
         sys.exit(f"incomplete: failed {failed}, upload ok {summary['checkpoint_upload']['ok']}")
 
@@ -341,6 +348,8 @@ def main() -> None:
     a.add_argument("--out", required=True)
     a.add_argument("--ckpt-root", default="/workspace/ckpt")
     a.add_argument("--price", type=float, default=0.89)
+    a.add_argument("--sft-steps", type=int, default=STEPS)
+    a.add_argument("--conditions", default="sft,grpo,sft_grpo", help="sft is always run (D starts from it)")
     e = sub.add_parser("eval")
     e.add_argument("--model", required=True)
     e.add_argument("--label", required=True)
@@ -351,6 +360,8 @@ def main() -> None:
         t.add_argument("--init", required=True)
         t.add_argument("--ckpt", required=True)
         t.add_argument("--out", required=True)
+        if name == "sft":
+            t.add_argument("--steps", type=int, default=STEPS)
         if name == "grpo":
             t.add_argument("--completions", required=True)
             t.add_argument("--per-device", type=int, default=16)

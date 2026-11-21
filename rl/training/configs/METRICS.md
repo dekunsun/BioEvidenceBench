@@ -206,3 +206,5 @@ Gloria: "用 v3，先重建训练数据，再跑阶段 3". Code `rl/training/sta
   the pod checks it can upload before training. Every GRPO completion is logged with step and reward.
 - No test line is read in stage 3. The locked test protocol (500 in-book lines, 500 Cuvier lines)
   is frozen before stage 4.
+- **Revision before the locked test (Gloria, 2026-11-21, "加到600步")**: SFT 600 steps (two passes), because
+  dev repair was still rising at step 300 in both seeds; B and D re-run, C kept. Same checkpoint rule.
