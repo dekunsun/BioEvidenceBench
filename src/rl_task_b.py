@@ -66,6 +66,13 @@ _UNREADABLE = re.compile("[\ufffd\ue000-\uf8ff]")
 _LATIN, _CYRILLIC = re.compile(r"[A-Za-zÀ-ÿĀ-ſ]"), re.compile(r"[\u0400-\u04ff]")
 
 
+# Index and contents lines with leader dots (`Crested Tit .. .. .. i 162`, `Sow.... XI. 59`,
+# `Inductella Stgr. . . . . *`, `Lesser Whitethroat ..35-37 ii 1`): the OCR drops the leaders and page references or reads the next
+# column into the line. Set aside from task B v1 (Gloria, 2026-11-21). A plain ellipsis of three
+# dots in running text (`Gestaltungsverhältnisse . . . an sich`) does not match.
+LEADERS = re.compile(r"(?:\.\s?){4,}|(?:-\s+){3,}-|(?:\.\.\s+){2,}\.\.|…{2,}|(?:\.\s?){2,}\s*(?:\*\s*)+$|(?<!\.)\.\.(?!\.)")
+
+
 def mixed_script_words(s: str) -> list[str]:
     return [w for w in re.findall(r"\w+", s) if _LATIN.search(w) and _CYRILLIC.search(w)]
 
@@ -269,6 +276,8 @@ def line_pairs(pid: int, min_chars: int = 15, min_words: int = 2) -> list[dict]:
             why.append("unreadable character in reference")
         if mixed_script_words(s):
             why.append("mixed-script word in reference")
+        if LEADERS.search(s):
+            why.append("index/contents line with leader dots")
         units.append(make_unit(s, inp, flags, page_id=pid, line_no=li + 1,
                                input_had_linebreak="\n" in raw.strip(), coverage=round(cov, 3),
                                span_ratio=round(span_ratio, 3), similarity=round(sim, 3),

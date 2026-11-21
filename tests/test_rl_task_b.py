@@ -198,3 +198,19 @@ def test_damaged_small_caps_word_is_repaired_by_the_letters_in_any_case():
 def test_mixed_latin_cyrillic_word_in_reference_is_found():
     assert T.mixed_script_words("ein gemeinsсhaftliсher Gang") == ["gemeinsсhaftliсher"]   # Cyrillic с
     assert T.mixed_script_words("Русское энтомологическое общество, Horae") == []
+
+
+@pytest.mark.parametrize("line, hit", [
+    ("Crested Tit .. .. .. .. i 162", True),
+    ("pyramidalis (Helix), Sow.... XI. 59", True),
+    ("Alauda arvensis - - - - 183", True),
+    ("3. Inductella Stgr. . . . . *", True),
+    ("a. v. Caucasica Stgr. . . *", True),
+    ("Lesser Whitethroat ..35-37 ii 1", True),
+    ("leucophæus (Helix), Sow. .. X. 50", True),
+    ("and so on... the rest", False),
+    ("daß „die im Chitinskelett vorliegenden Gestaltungsverhältnisse . . . an sich nicht den", False),
+    ("1) Straus-Dürkheim 1. c. p. 166, pl. 3, fig. 5", False),
+])
+def test_leader_dot_lines_are_found(line, hit):
+    assert bool(T.LEADERS.search(line)) == hit

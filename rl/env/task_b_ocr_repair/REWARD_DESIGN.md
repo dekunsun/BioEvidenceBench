@@ -2,7 +2,7 @@
 
 *Task B: repair one line of legacy OCR so it matches the expert transcription, changing only
 recognition errors. Implementation: `src/rl_task_b.py`. Fixed unit tests:
-`tests/test_rl_task_b.py` (37 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
+`tests/test_rl_task_b.py` (48 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
 first experimental setting, not validated optima; they are checked on development data before
 any training run.*
 
@@ -132,6 +132,9 @@ rewarded for them would learn to guess capitals.
   is never a reason to set a line aside: badly damaged lines with a reliable reference are the most
   useful training items. Every line set aside is kept with its page, line and reason
   (`set_aside.jsonl`, `build/set_aside_summary.csv`) as a later hard-case set.
+- Also set aside: lines with a word mixing Latin and Cyrillic letters (Trudy's transcription), and
+  index and contents lines with leader dots (Gloria, 2026-11-21; `LEADERS` in `src/rl_task_b.py`),
+  whose OCR drops the page references or reads the next column.
 
 ## 5. Diagnostic fields (returned with every reward)
 

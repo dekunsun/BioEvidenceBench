@@ -12,6 +12,7 @@ excluded: engraved plate credit; reference typo (Soweby) and OCR unreadable,0,0,
 excluded: engraved plate imprint; OCR unreadable and reference doubtful,0,1,0,0,0,1
 excluded: engraved plate imprint; reference garbled (Sehweizerbaresche Vertagsbuchhardlung),0,1,0,0,0,1
 excluded: engraved plate imprint; reference garbled (Wirtre FrankturtrM),0,1,0,0,0,1
+index/contents line with leader dots,106,1,0,40,219,366
 mixed-script word in reference,0,1,0,0,59,60
 no aligned legacy text,1,20,27,134,27,209
 similarity,17,1,1,77,118,214
@@ -20,4 +21,4 @@ similarity + span ratio + unreadable character in reference,2,0,0,0,0,2
 similarity + unreadable character in reference,6,0,0,7,1,14
 span ratio,4,1,2,9,30,46
 unreadable character in reference,13,6,91,14,34,158
-All,488,71,184,1519,2751,5013
+All,594,72,184,1559,2970,5379

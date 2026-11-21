@@ -125,8 +125,10 @@ def assemble(split: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         u.update({"book": book, "split": sp, "block": block})
         u["flags"] = failure_flags(u)
         u["sim_bucket"] = bucket(u.get("similarity", 0.0)) if u.get("input") else "no text"
-        if u.get("valid") and T.mixed_script_words(u["target"]):   # rule added after stage 1 ran
+        if u.get("valid") and T.mixed_script_words(u["target"]):   # rules added after stage 1 ran
             u.update(valid=False, why_invalid="mixed-script word in reference")
+        if u.get("valid") and T.LEADERS.search(u["target"]):
+            u.update(valid=False, why_invalid="index/contents line with leader dots")
         u["set_aside"] = excl_reason.get((pid, u["line_no"]), "") if u.get("valid") else u.get("why_invalid", "")
         (files[sp] if u.get("valid") and not u["set_aside"] else aside).write(json.dumps(u, ensure_ascii=False) + "\n")
         rows.append({k: u.get(k) for k in ("book", "split", "page_id", "line_no", "valid", "why_invalid", "set_aside",
@@ -246,7 +248,7 @@ def main() -> None:
     lines = ["# Task B step 4: units, alignment and damage per book", "",
              "Built by `src/rl_task_b_build.py` under Reward v1.2 rules (case-only words neutral, MUFI "
              "ligatures folded, references with U+FFFD or unidentified private-use characters invalid, lines with a mixed "
-             "Latin/Cyrillic word set aside) "
+             "Latin/Cyrillic word or leader dots set aside) "
              "and split v2 (`../SPLIT_V2.md`). Cuvier (held-out book) not touched; the 38 excluded pages "
              f"not used. Content pages that gave no line: {len(missing)} "
              f"({', '.join(f'{k}: {n}' for k, n in why_missing.items()) or 'none'}; `missing_pages.csv`).", "",

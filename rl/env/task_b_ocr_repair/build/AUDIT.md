@@ -47,9 +47,12 @@ so the true rate could be several times higher. Gloria's 30 pairs are the indepe
 
 ## What remains
 
-- **Index and contents lines with leader dots** (`.. .. ..`, `- - - -`): the OCR drops the leaders
-  and page numbers or reads the next column (round 2: B004, B006, B051). 287 usable lines (Trudy 180,
-  Butler 77, Reeve 29, Chitinskelett 1). Not set aside yet: decision for Gloria.
+- **Index and contents lines with leader dots** (`.. .. ..`, `- - - -`, `Stgr. . . *`): the OCR
+  drops the leaders and page numbers or reads the next column (round 2: B004, B006, B051). **Set
+  aside** (Gloria, 2026-11-21): 366 lines (Trudy 219, Butler 106, Reeve 40, Chitinskelett 1, the last
+  a quotation that opens with an ellipsis, the one false positive found). Of round 2's 52 accepted
+  pairs, the 49 still usable are 47 `yes`, 1 `partly` (B052, OCR lacks the abbreviation `Sp`) and
+  1 `no` (B020). Usable lines now: 39,704 (dev 3,894 / intest 3,750 / train 32,060).
 - **Accepted wrong pairs in 0.3–0.5** come from reading order (columns, neighbouring lines): 2 of 33
   audited across both rounds.
 - **Unidentified private-use characters** (U+EFA1 in `c?rulescente` and `Sturnid?`, æ or œ;
