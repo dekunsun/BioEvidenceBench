@@ -65,3 +65,26 @@ Training times: SFT 3–4 min, each GRPO run 29–32 min.
 What these do not show: anything about test lines or Cuvier (stage 4), whether differences are
 outside noise (paired page-block bootstrap is for the locked test), or why D's preservation gain
 comes with no repair gain (7c: edit behaviour, error types, pass@k).
+
+## Re-run with SFT 600 steps, and the P1 reward ablation (dev, 2026-11-21 20:07–21:10 UTC)
+
+Gloria: "按你的建议，加到600步，跑4" and "按你的建议" (P1 = reward ablation only). Runs
+`20261121-2007_sft600s1` (56 min, $0.82), `20261121-2008_sft600s2` (61 min, $0.91),
+`20261121-2022_p1cer` (44 min, $0.65). C is the stage-3 run above.
+
+| Condition | Seed | Step chosen | Repair rate | Name recovery (85 lines) | Preservation |
+|---|---|---|---|---|---|
+| B. SFT 600 | 1 | 600 | 0.358 | 0.370 | 0.976 |
+| B. SFT 600 | 2 | 400 | 0.361 | 0.342 | 0.981 |
+| D. SFT 600 → GRPO | 1 | 50 | 0.353 | 0.361 | 0.982 |
+| D. SFT 600 → GRPO | 2 | 50 | 0.347 | 0.340 | 0.983 |
+| C-CER (GRPO, reward 1 − CER) | 1 | 250 | 0.047 | 0.000 | 0.997 |
+
+- SFT gains about 3–4 points of repair from steps 300 to 400–600, then flattens.
+- D again picks its first checkpoint (step 50) and stays at or slightly below its SFT start: GRPO
+  after SFT keeps preservation slightly higher and does not add repair on dev.
+- **C-CER also collapses toward copying**: copying 81% (steps 0–49) → 90% (50–99) → 70% (250–299),
+  groups without signal 20% → 90% → 74%, entropy 0.16 → 0.01–0.03; dev repair 0.047 (C seed 1:
+  0.012), names 0. A dense reward that gives partial credit did not let GRPO find repairs the
+  base model rarely samples. Copying a damaged line scores about 0.85 under 1 − CER, so copying is
+  again close to the best the policy can reach without better samples.
