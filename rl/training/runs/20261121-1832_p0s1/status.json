@@ -1,0 +1,10 @@
+{
+  "run_id": "20261121-1832_p0s1",
+  "stage": "p0s1",
+  "outcome": "success",
+  "minutes": 87.27,
+  "usd_estimate": 1.2945,
+  "usd_per_hour": 0.89,
+  "pod_id": "qd3og7gr5zwra9",
+  "gpu": "NVIDIA+GeForce+RTX+4090"
+}
