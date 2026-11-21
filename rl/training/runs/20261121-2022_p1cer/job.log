@@ -1,0 +1,13 @@
+[20:27:51] create draft release: HTTP 201
+[20:27:52] run: /workspace/repo/rl/training/stage3_p0.py eval --model Qwen/Qwen3-0.6B --label base_s1 --out /workspace/rl_runs/20261121-2022_p1cer/base_s1
+[20:29:14] run: /workspace/repo/rl/training/stage3_p0.py grpo --seed 1 --init Qwen/Qwen3-0.6B --ckpt /workspace/ckpt/grpo_cer_s1 --out /workspace/rl_runs/20261121-2022_p1cer/grpo_cer_s1_train.json --completions /workspace/rl_runs/20261121-2022_p1cer/grpo_cer_s1_completions.jsonl.gz --reward cer --per-device 16 --vllm-util 0.3
+[21:01:17] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/grpo_cer_s1/checkpoint-50 --label grpo_cer_s1_step50 --out /workspace/rl_runs/20261121-2022_p1cer/grpo_cer_s1_step50
+[21:01:59] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/grpo_cer_s1/checkpoint-100 --label grpo_cer_s1_step100 --out /workspace/rl_runs/20261121-2022_p1cer/grpo_cer_s1_step100
+[21:02:43] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/grpo_cer_s1/checkpoint-150 --label grpo_cer_s1_step150 --out /workspace/rl_runs/20261121-2022_p1cer/grpo_cer_s1_step150
+[21:03:26] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/grpo_cer_s1/checkpoint-200 --label grpo_cer_s1_step200 --out /workspace/rl_runs/20261121-2022_p1cer/grpo_cer_s1_step200
+[21:04:09] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/grpo_cer_s1/checkpoint-250 --label grpo_cer_s1_step250 --out /workspace/rl_runs/20261121-2022_p1cer/grpo_cer_s1_step250
+[21:04:52] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/grpo_cer_s1/checkpoint-300 --label grpo_cer_s1_step300 --out /workspace/rl_runs/20261121-2022_p1cer/grpo_cer_s1_step300
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  33%|███▎      | 102/310 [00:00<00:00, 1003.41it/s]Loading weights:  65%|██████▌   | 203/310 [00:00<00:00, 672.01it/s] Loading weights:  89%|████████▉ | 277/310 [00:00<00:00, 670.18it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 632.92it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.55it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.54it/s]
+[21:05:45] grpo_cer: chose step {'step': 250, 'flag': '', 'preservation_floor': 0.9154}
+[21:06:38] done: {"ok": true, "release_id": 453961714, "assets": [{"name": "grpo_cer_s1.tar", "size": 1203578880, "id": 776872376}]}

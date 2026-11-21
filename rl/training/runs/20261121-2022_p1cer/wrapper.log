@@ -1,0 +1,4 @@
+[20:22:53] run 20261121-2022_p1cer: stage=p1cer max=120 min at $0.89/h on pod awgun3io0791lq
+[20:22:53] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID awgun3io0791lq
+[20:22:54] read check: Error: Unauthorized 
+[21:06:39] outcome=success minutes=43
