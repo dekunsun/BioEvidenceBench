@@ -110,7 +110,7 @@ An OCR system may have an excellent **character error rate (CER)** and still dam
 
 ![Low overall character error can coexist with poor preservation of scientific names](docs/assets/overview/fig05_name_preservation.png)
 
-**Exploratory result:** across **22 OCR versions** of the sampled pages, preservation of annotated names tracked downstream extraction much more closely than page-level CER. The Spearman correlations between name preservation and extraction value F1 were **0.95 (Butler)** and **1.00 (Reeve)**; the corresponding correlations with page CER were **−0.07** and **−0.62**. Several OCR models with **under 0.5% page CER** still preserved only **57–80% of Butler's names** intact.
+**Exploratory result:** across **23 OCR versions** of the sampled pages (21 FineBooks models, Mistral OCR and the library's legacy OCR), preservation of annotated names tracked downstream extraction much more closely than page-level CER. The Spearman correlations between name preservation and extraction value F1 were **0.95 (Butler)** and **1.00 (Reeve)**; the corresponding correlations with page CER were **−0.11** and **−0.61**. Several OCR models with **under 0.5% page CER** still preserved only **57–79% of Butler's names** intact.
 
 The practical point is about evaluation design: a library interested in biodiversity data should test **whether names survive transcription**, not only how many characters were misread across the whole page.
 
@@ -122,7 +122,7 @@ A historical book can print a name correctly; the AI can extract it correctly; a
 
 ![Twenty of thirty-four historical bird-name references linked successfully in a direct lookup](docs/assets/overview/fig03_linking.png)
 
-**Pre-registered result:** on expert text, **34 eligible bird-name mentions** were correct before linking. A simple, context-free [GBIF](https://www.gbif.org/) name lookup linked **20** to the correct taxon but failed on **14** — a linking recall of **0.59**. The 14 cases comprised **8 genus-only matches, 3 wrong taxa, and 3 without a record**.
+**Pre-registered result:** on expert text, **34 eligible bird-name mentions** were correct before linking. A simple [GBIF](https://www.gbif.org/) name lookup (no surrounding context; an abbreviated genus such as the `M.` in `M. minuta` was first written out from earlier on the page) linked **20** to the correct taxon but failed on **14** — a linking recall of **0.59**. The 14 cases comprised **8 genus-only matches, 3 wrong taxa, and 3 without a record**.
 
 A later **exploratory** approach first used an LLM to interpret a historical name in context, then looked up its proposed modern name. It raised linking recall on the same material to **0.91**. This is a useful lead, **not a new independent test result**; unresolved taxonomy still requires a domain expert.
 

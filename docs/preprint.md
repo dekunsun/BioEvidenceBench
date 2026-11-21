@@ -26,9 +26,9 @@ never rewrites the source. **[pre-registered]** On legacy OCR, value-level F1 wa
 0.64 (Reeve); on modern OCR 0.95 and 0.98; on the expert transcription 0.98 for both. A plain GBIF name
 lookup then lost 14 of 34 correctly extracted bird names, against 0 lost before linking. Requiring a
 verbatim quote cost no accuracy, and agreement between two LLMs from different providers did not imply
-correctness. **[exploratory]** Across 22 OCR versions of the same pages, the share of gold names that
+correctness. **[exploratory]** Across 23 OCR versions of the same pages, the share of gold names that
 survived OCR intact predicted extraction almost exactly (Spearman 0.95 and 1.00), while page character
-error rate did not (−0.07 and −0.62). Four Claude models differed by at most 0.05 in extraction F1 but by
+error rate did not (−0.11 and −0.61). Four Claude models differed by at most 0.05 in extraction F1 but by
 0.15 in linking recall. Three routes past bad OCR (modern OCR, LLM repair of legacy OCR, reading the page
 image) reached similar F1 but left very different evidence for an auditor. On these books, OCR was the
 first bottleneck and modern OCR removed most of it; after that, trust was limited by entity resolution and
@@ -276,9 +276,9 @@ frozen gold and scorer, and needs a fresh test set before it counts as a finding
 
 ### 6.1 Name preservation, not page error rate
 
-All 21 FineBooks OCR rows whose outputs may be sent to an API, plus legacy OCR, were run through the frozen
-G1 condition. Value F1 tracked the share of gold names that survived OCR intact (Spearman 0.95 Butler, 1.00
-Reeve) and not page CER (−0.07, −0.62). Several OCR models with page CER under 0.5% kept only 57–80% of
+All 21 FineBooks OCR rows whose outputs may be sent to an API, Mistral OCR (through OpenRouter) and legacy
+OCR were run through the frozen G1 condition. Value F1 tracked the share of gold names that survived OCR intact (Spearman 0.95 Butler, 1.00
+Reeve) and not page CER (−0.11, −0.61). Several OCR models with page CER under 0.5% kept only 57–79% of
 Butler's names intact. Extraction recall was close to preservation (median gap +0.01): if the name
 survives OCR, the model gets it.
 
