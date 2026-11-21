@@ -1,0 +1,4 @@
+[18:32:13] run 20261121-1832_p0s2: stage=p0s2 max=180 min at $0.89/h on pod 4nzlvpbpg8qg1m
+[18:32:13] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID 4nzlvpbpg8qg1m
+[18:32:14] read check: Error: Unauthorized 
+[19:46:00] outcome=success minutes=73
