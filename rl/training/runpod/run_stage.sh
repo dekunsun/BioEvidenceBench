@@ -135,6 +135,11 @@ run_job() {   # the job runs in its own process group so the watchdog can end al
 # Dependencies go into a fresh virtual environment, never the image's system Python: the second
 # stage-1 launch failed because pip could not uninstall the image's Debian-installed PyJWT.
 VENV=/opt/rlvenv
+# The third stage-1 launch failed when vLLM's FlashInfer sampler tried to compile kernels on the fly
+# and found no `ninja`: use PyTorch's sampler instead, and put the venv (which now has ninja) first
+# on PATH in case anything else compiles.
+export VLLM_USE_FLASHINFER_SAMPLER=0
+export PATH="$VENV/bin:$PATH"
 SETUP="cd '$REPO' && (python3 -m venv $VENV || (python3 -m pip install -q virtualenv && python3 -m virtualenv $VENV)) && \
        $VENV/bin/pip install -q --upgrade pip && $VENV/bin/pip install -q -r rl/training/runpod/requirements-gpu.txt"
 

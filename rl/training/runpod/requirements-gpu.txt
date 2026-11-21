@@ -13,3 +13,4 @@ rapidfuzz
 pandas
 scipy
 requests
+ninja
