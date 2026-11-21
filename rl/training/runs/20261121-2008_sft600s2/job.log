@@ -1,0 +1,29 @@
+[20:12:02] create draft release: HTTP 201
+[20:12:03] run: /workspace/repo/rl/training/stage3_p0.py eval --model Qwen/Qwen3-0.6B --label base_s2 --out /workspace/rl_runs/20261121-2008_sft600s2/base_s2
+[20:15:52] run: /workspace/repo/rl/training/stage3_p0.py sft --seed 2 --init Qwen/Qwen3-0.6B --ckpt /workspace/ckpt/sft_s2 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_train.json --steps 600
+[20:22:34] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-50 --label sft_s2_step50 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step50
+[20:23:19] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-100 --label sft_s2_step100 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step100
+[20:24:01] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-150 --label sft_s2_step150 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step150
+[20:24:44] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-200 --label sft_s2_step200 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step200
+[20:25:26] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-250 --label sft_s2_step250 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step250
+[20:26:10] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-300 --label sft_s2_step300 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step300
+[20:26:52] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-350 --label sft_s2_step350 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step350
+[20:27:34] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-400 --label sft_s2_step400 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step400
+[20:28:18] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-450 --label sft_s2_step450 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step450
+[20:28:59] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-500 --label sft_s2_step500 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step500
+[20:29:40] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-550 --label sft_s2_step550 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step550
+[20:30:22] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_s2/checkpoint-600 --label sft_s2_step600 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_s2_step600
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  29%|██▊       | 89/310 [00:00<00:00, 888.63it/s]Loading weights:  57%|█████▋    | 178/310 [00:00<00:00, 886.83it/s]Loading weights:  86%|████████▌ | 267/310 [00:00<00:00, 875.87it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 801.57it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.53it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.53it/s]
+[20:31:20] sft: chose step {'step': 400, 'flag': '', 'preservation_floor': 0.9154}
+[20:31:20] run: /workspace/repo/rl/training/stage3_p0.py grpo --seed 2 --init /workspace/ckpt/sft_s2_chosen_bf16 --ckpt /workspace/ckpt/sft_grpo_s2 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_grpo_s2_train.json --completions /workspace/rl_runs/20261121-2008_sft600s2/sft_grpo_s2_completions.jsonl.gz --per-device 16 --vllm-util 0.3
+[21:03:54] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_grpo_s2/checkpoint-50 --label sft_grpo_s2_step50 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_grpo_s2_step50
+[21:04:34] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_grpo_s2/checkpoint-100 --label sft_grpo_s2_step100 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_grpo_s2_step100
+[21:05:13] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_grpo_s2/checkpoint-150 --label sft_grpo_s2_step150 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_grpo_s2_step150
+[21:05:52] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_grpo_s2/checkpoint-200 --label sft_grpo_s2_step200 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_grpo_s2_step200
+[21:06:30] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_grpo_s2/checkpoint-250 --label sft_grpo_s2_step250 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_grpo_s2_step250
+[21:07:09] run: /workspace/repo/rl/training/stage3_p0.py eval --model /workspace/ckpt/sft_grpo_s2/checkpoint-300 --label sft_grpo_s2_step300 --out /workspace/rl_runs/20261121-2008_sft600s2/sft_grpo_s2_step300
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  36%|███▋      | 113/310 [00:00<00:00, 683.53it/s]Loading weights:  62%|██████▏   | 192/310 [00:00<00:00, 728.37it/s]Loading weights:  90%|█████████ | 280/310 [00:00<00:00, 783.23it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 823.55it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  4.44it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  4.44it/s]
+[21:07:51] sft_grpo: chose step {'step': 50, 'flag': '', 'preservation_floor': 0.9154}
+[21:09:31] done: {"ok": true, "release_id": 453953257, "assets": [{"name": "sft_s2.tar", "size": 1203578880, "id": 776877455}, {"name": "sft_grpo_s2.tar", "size": 1203578880, "id": 776879369}]}
