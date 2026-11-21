@@ -148,19 +148,20 @@ def main() -> None:
         # paired comparisons of section 5, per seed
         T = tables[set_name]
         comps = []
-        for s in (1, 2):
-            for x, y in ((f"grpo_s{s}", "base"), (f"sft_grpo_s{s}", f"sft_s{s}"), (f"sft_s{s}", "base"),
-                         (f"sft_grpo_s{s}", "base")):
-                if x not in T or y not in T:
-                    continue
-                for metric in METRIC_PARTS:
-                    for post in (False, True):
-                        r = paired(T[x], T[y], blocks, metric, post, rng)
-                        pg = paired(T[x], T[y], pages, metric, post, rng)       # sensitivity only
-                        comps.append({"set": set_name, "x": x, "y": y, "metric": metric,
-                                      "scored": "post-processed" if post else "raw", **r,
-                                      "non_inferiority": noninferiority(r) if metric == "preservation" else "",
-                                      "page_lo": pg["lo"], "page_hi": pg["hi"], "pages": pg["blocks"]})
+        pairs = [(x, y) for s in (1, 2) for x, y in ((f"grpo_s{s}", "base"), (f"sft_grpo_s{s}", f"sft_s{s}"),
+                                                     (f"sft_s{s}", "base"), (f"sft_grpo_s{s}", "base"))]
+        pairs += [("grpo_cer_s1", "grpo_s1"), ("grpo_cer_s1", "base")]          # P1, one seed
+        for x, y in pairs:
+            if x not in T or y not in T:
+                continue
+            for metric in METRIC_PARTS:
+                for post in (False, True):
+                    r = paired(T[x], T[y], blocks, metric, post, rng)
+                    pg = paired(T[x], T[y], pages, metric, post, rng)       # sensitivity only
+                    comps.append({"set": set_name, "x": x, "y": y, "metric": metric,
+                                  "scored": "post-processed" if post else "raw", **r,
+                                  "non_inferiority": noninferiority(r) if metric == "preservation" else "",
+                                  "page_lo": pg["lo"], "page_hi": pg["hi"], "pages": pg["blocks"]})
         pd.DataFrame(comps).to_csv(out / f"paired_{set_name}.csv", index=False)
     pd.DataFrame(summary).to_csv(out / "metrics.csv", index=False)
     pd.DataFrame(pass8).to_csv(out / "pass8.csv", index=False)
