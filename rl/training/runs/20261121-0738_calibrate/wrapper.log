@@ -1,0 +1,4 @@
+[07:38:34] run 20261121-0738_calibrate: stage=calibrate max=30 min at $0.89/h on pod lk9uafnla5hixs
+[07:38:34] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID lk9uafnla5hixs
+[07:38:34] read check: Error: Unauthorized 
+[07:42:56] outcome=error (exit 1) minutes=4

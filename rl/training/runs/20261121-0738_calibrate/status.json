@@ -1,0 +1,10 @@
+{
+  "run_id": "20261121-0738_calibrate",
+  "stage": "calibrate",
+  "outcome": "error (exit 1)",
+  "minutes": 4.37,
+  "usd_estimate": 0.0648,
+  "usd_per_hour": 0.89,
+  "pod_id": "lk9uafnla5hixs",
+  "gpu": "NVIDIA+GeForce+RTX+4090"
+}

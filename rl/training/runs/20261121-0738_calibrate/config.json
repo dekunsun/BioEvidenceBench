@@ -1,0 +1,24 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "k": 8,
+  "max_tokens": 128,
+  "seed": 20261121,
+  "settings": {
+    "rollout_T1.0": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": -1
+    },
+    "card_nonthinking": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20
+    }
+  },
+  "n_items": 184,
+  "items_sha256": "71af79051eabf66deba86f11c8fbb1f5752ebf8b85895abaedbec18492c55d28",
+  "prompt_file_sha256": "09ee5e886bd53810be000f2f4e156ba23cd5f5291a3b1ed47f1066dd1117d662",
+  "rendered_prompt_0": "<|im_start|>system\nYou repair one line of OCR text from a scanned historical natural-history book.\n\nChange only what the OCR misread. Keep everything else exactly as the book prints it: its\nspelling, abbreviations, punctuation, accents, ligature letters such as æ and œ, the long s (ſ)\nand old or unusual word forms. Do not modernise, translate, expand abbreviations or add words.\nA hyphen at the end of the line stays. A word printed letter-spaced for emphasis\n(`B e i s p i e l`) is written without the spaces (`Beispiel`). If a word cannot be read with\ncertainty, give your best reading of what is printed.\n\nReply with the repaired line only: one line of text, no quotation marks, no commentary.<|im_end|>\n<|im_start|>user\nBook: Conchologia iconica, vol. 5 (1849; Latin and English)\n\nPrevious line (OCR, context only):\nwhat cylindrical, rather compressly umbilicated,\n\nLine to repair (OCR):\nwhorls eight in number, slightly convex, beneath the\n\nNext line (OCR, context only):\nlens striated and indented in a wrinkled manner, colu-<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "rendered_prompt_0_sha256": "b74e8f97350796044747f82dcae0bb4582a422ced9c8a091e638ff64640444e7",
+  "dry_run": false
+}
