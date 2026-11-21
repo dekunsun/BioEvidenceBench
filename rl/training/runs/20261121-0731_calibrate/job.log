@@ -1,0 +1,6 @@
+error: uninstall-no-record-file
+
+× Cannot uninstall PyJWT 2.7.0
+╰─> The package's contents are unknown: no RECORD file was found for PyJWT.
+
+hint: The package was installed by debian. You should check if it can uninstall the package.
