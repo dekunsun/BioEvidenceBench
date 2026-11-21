@@ -1,0 +1,48 @@
+{
+ "tag": "rl-sft-ocr-repair-v1",
+ "commit": "c994ade32023c944ee47c44699b47ab915fe687f",
+ "size": 1203578880,
+ "sha256": "bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c",
+ "members": [
+  [
+   "sft_s2",
+   0,
+   "dir"
+  ],
+  [
+   "sft_s2/chat_template.jinja",
+   4168,
+   "file"
+  ],
+  [
+   "sft_s2/config.json",
+   1420,
+   "file"
+  ],
+  [
+   "sft_s2/generation_config.json",
+   214,
+   "file"
+  ],
+  [
+   "sft_s2/model.safetensors",
+   1192135096,
+   "file"
+  ],
+  [
+   "sft_s2/tokenizer.json",
+   11422650,
+   "file"
+  ],
+  [
+   "sft_s2/tokenizer_config.json",
+   694,
+   "file"
+  ]
+ ],
+ "release_id": 454034654,
+ "asset_digest": "sha256:bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c",
+ "html_url": "https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1",
+ "asset_url": "https://github.com/dekunsun/BioEvidenceBench/releases/download/untagged-53fc80103dec7442de50/sft_s2.tar",
+ "message": "published"
+}

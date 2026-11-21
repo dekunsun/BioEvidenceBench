@@ -1,0 +1,4 @@
+[22:39:02] run 20261121-2239_publish: stage=publish max=20 min at $0.22/h on pod 6z0t735dz5sg8r
+[22:39:02] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID 6z0t735dz5sg8r
+[22:39:03] read check: Error: Unauthorized 
+[22:41:05] outcome=success minutes=2

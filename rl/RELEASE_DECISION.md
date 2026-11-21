@@ -70,8 +70,8 @@ SFT keeps only half its gain and repairs no ligature.
 | Check | Result | How |
 |---|---|---|
 | The file is the checkpoint that was tested | **Pass** | `stage4_models.json` (frozen) names asset 776877455, 1,203,578,880 bytes; the stage-4 pod downloaded that asset and checked its size before evaluating |
-| SHA-256 of the file | **Open (Gloria)** | drafts are not readable through the API from this session; GitHub shows each asset's SHA-256 on the release page: copy it into the release notes |
-| Contents: model files only, no secret | **Pass from the code; folder not opened** | the tar is built from a folder written only by `save_pretrained` (model, tokenizer) (`stage3_p0.to_bf16`); the GitHub token was only an environment variable on the pod and is never written to disk |
+| SHA-256 of the file | **Pass** | computed on the pod from the downloaded draft asset: `bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c`; GitHub's digest of the re-uploaded file is the same |
+| Contents: model files only, no secret | **Pass** | members listed on the pod: `sft_s2/` with `chat_template.jinja`, `config.json`, `generation_config.json`, `model.safetensors`, `tokenizer.json`, `tokenizer_config.json`, nothing else; the GitHub token was only an environment variable on the pod and is never written to disk |
 | Base model licence | **Pass** | `Qwen/Qwen3-0.6B`: Apache 2.0 (Hugging Face card, checked 2026-11-21) |
 | Data licences and rights | **Pass** | `finebooks/bhl-impact-gt` CC-BY 3.0 (attribution in the card); BHL `CopyrightStatus` of all six items: not in copyright / public domain |
 | Personal or sensitive data | **Pass** | 19th- and early-20th-century printed natural history; no Cal Academy or private data |
@@ -93,3 +93,8 @@ runs `rl/release/publish_release.py` with the repository token from RunPod Secre
 
 The private drafts are left unchanged, so the D, C and C-CER checkpoints stay unpublished.
 Result: `rl/release/publish_result.json`.
+
+**Published 2026-11-21 22:41 UTC**: [https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1), asset `sft_s2.tar` (1,203,578,880 bytes,
+SHA-256 `bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c`), tag at commit `c994ade`. Pod `20261121-2239_publish`, 3 minutes on an RTX 3090
+(about $0.03; RunPod balance unchanged at 18.84 at the time of writing). The private drafts were not
+changed.

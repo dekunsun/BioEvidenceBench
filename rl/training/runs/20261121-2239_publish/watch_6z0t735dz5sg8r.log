@@ -1,0 +1,5 @@
+[22:38:43] 0 min: {"data":{"pod":{"id":"6z0t735dz5sg8r","desiredStatus":"RUNNING"}}}
+[22:39:29] 0 min: {"data":{"pod":{"id":"6z0t735dz5sg8r","desiredStatus":"RUNNING"}}}
+[22:40:15] 1 min: {"data":{"pod":{"id":"6z0t735dz5sg8r","desiredStatus":"RUNNING"}}}
+[22:41:00] 2 min: {"data":{"pod":{"id":"6z0t735dz5sg8r","desiredStatus":"RUNNING"}}}
+[22:41:46] 3 min: {"data":{"pod":null}}

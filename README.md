@@ -324,6 +324,12 @@ check to scripts running on cloud machines (seen 2026-11-18).
 
 - [Stories from the project](docs/stories/), in Chinese and English: one abbreviated bird name that matched two species, typos in the gold-standard transcription, and API calls that reported success while failing.
 
+- [RL post-training on the same books](rl/TRAINING_REPORT.md): an OCR line-repair environment with a
+  verifiable reward, SFT and GRPO on Qwen3-0.6B under a pre-registered test, a reward audit, and a
+  release decision. SFT raises damaged-word repair from 0.04 to 0.40; GRPO learns to copy the OCR and
+  adds nothing after SFT. Research checkpoint: [release `rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) (not for
+  automatic replacement of library text).
+
 ## 13. Not yet verified
 
 - FineBooks' reported claim that modern OCR output lacks word-level coordinates and so cannot
@@ -352,7 +358,8 @@ tests/         unit tests for the helpers
 pre-registered test run with two LLMs from different providers and a rule baseline, sealed until
 the freeze; error analysis tagged by the labeller; the exploratory follow-ups ([results](docs/results.md)); the
 whole-book run with a 60-item spot-check; the PCAS botany case; the decision memo in English and
-Chinese.
+Chinese; the RL module (task B environment, SFT and GRPO, locked test, reward audit, released research
+checkpoint).
 
 **Not done:** mollusc name linking (Reeve's 56 names, deferred); other languages, layouts, eras,
 tables, plates and handwriting; a review-time study; audit metrics for evidence (traceable share,

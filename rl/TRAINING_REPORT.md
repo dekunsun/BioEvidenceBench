@@ -22,6 +22,8 @@ section 14). Gloria's reward-hacking review and her reading of 43 lines are in s
   from lines the base model never solved in 8 tries. On a cross-language book (Cuvier, French),
   SFT keeps about half its gain.
 - Cost: **$5.83 of GPU** (RunPod RTX 4090, $20 cap), all runs and failures included.
+- **Released** (Gloria, 7d): the SFT seed-2 checkpoint as a research checkpoint, [`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1),
+  `sft_s2.tar`, SHA-256 `bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c`; not for automatic replacement of library text (`rl/RELEASE_DECISION.md`).
 
 ## 1. Setup
 
