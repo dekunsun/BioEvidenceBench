@@ -1,0 +1,10 @@
+{
+  "run_id": "20261121-0748_calibrate",
+  "stage": "calibrate",
+  "outcome": "success",
+  "minutes": 5.73,
+  "usd_estimate": 0.085,
+  "usd_per_hour": 0.89,
+  "pod_id": "4s356k246nw6pm",
+  "gpu": "NVIDIA+GeForce+RTX+4090"
+}

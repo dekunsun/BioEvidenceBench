@@ -1,0 +1,37 @@
+{
+  "rollout_T1.0": {
+    "items_with_signal": 0.571,
+    "mean_reward_raw": -0.0654,
+    "mean_reward_post": -0.0737,
+    "pass_rate_raw": 0.038,
+    "pass_rate_post": 0.0394,
+    "format_invalid_share": 0.0251,
+    "format_failure_kinds": {
+      "several lines": 35,
+      "commentary prefix": 2
+    },
+    "think_share": 0.0,
+    "truncated_share": 0.0048,
+    "generation_seconds": 118.3,
+    "out_tokens_total": 44131
+  },
+  "card_nonthinking": {
+    "items_with_signal": 0.179,
+    "mean_reward_raw": -0.0184,
+    "mean_reward_post": -0.0201,
+    "pass_rate_raw": 0.0496,
+    "pass_rate_post": 0.0496,
+    "format_invalid_share": 0.0143,
+    "format_failure_kinds": {
+      "several lines": 21
+    },
+    "think_share": 0.0,
+    "truncated_share": 0.0027,
+    "generation_seconds": 3.1,
+    "out_tokens_total": 43106
+  },
+  "gate": {
+    "rule": "items_with_signal at rollout_T1.0 >= 0.2",
+    "passed": true
+  }
+}
