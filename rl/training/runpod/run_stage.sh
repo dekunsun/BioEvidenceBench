@@ -150,6 +150,9 @@ case "$STAGE" in
   calibrate)
     run_job "$SETUP && $VENV/bin/python rl/training/stage1_calibrate.py --out '$WS'"
     ;;
+  promptcmp)
+    run_job "$SETUP && $VENV/bin/python rl/training/stage1_calibrate.py --out '$WS' --prompts repair_v2,repair_v3"
+    ;;
   smoke)
     run_job "$SETUP && $VENV/bin/python rl/training/stage2_smoke.py --out '$WS' --price '$PRICE'"
     ;;

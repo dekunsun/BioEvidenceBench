@@ -17,7 +17,9 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import rl_task_b as T  # noqa: E402
 
-PROMPT_FILE = ROOT / "rl" / "env" / "task_b_ocr_repair" / "prompts" / "repair_v2.txt"
+PROMPTS = ROOT / "rl" / "env" / "task_b_ocr_repair" / "prompts"
+PROMPT_VERSION = "repair_v2"          # changed only by a logged dev-set decision
+PROMPT_FILE = PROMPTS / f"{PROMPT_VERSION}.txt"
 MODEL_ID = "Qwen/Qwen3-0.6B"          # the post-trained instruct model (Gloria, 2026-11-21)
 BOOKS = {"Butler": ("Birds of Great Britain and Ireland, vol. 2", 1907, "English"),
          "Reeve": ("Conchologia iconica, vol. 5", 1849, "Latin and English"),
@@ -27,8 +29,8 @@ BOOKS = {"Butler": ("Birds of Great Britain and Ireland, vol. 2", 1907, "English
          "Piscium": ("Piscium querelae et vindiciae", 1708, "Latin")}
 
 
-def prompt_messages(item: dict) -> list[dict]:
-    text = PROMPT_FILE.read_text(encoding="utf-8")
+def prompt_messages(item: dict, version: str = PROMPT_VERSION) -> list[dict]:
+    text = (PROMPTS / f"{version}.txt").read_text(encoding="utf-8")
     system = text.split("=== system ===\n", 1)[1].split("=== user ===\n", 1)[0].strip()
     user = text.split("=== user ===\n", 1)[1].strip()
     title, year, lang = BOOKS[item["book"]]
@@ -37,10 +39,23 @@ def prompt_messages(item: dict) -> list[dict]:
                                                     line=item["input"], next=item["next"])}]
 
 
-def render_prompt(tokenizer, item: dict) -> str:
+def render_prompt(tokenizer, item: dict, version: str = PROMPT_VERSION) -> str:
     """The rendered prompt string, thinking off. Every stage calls this and nothing else."""
-    return tokenizer.apply_chat_template(prompt_messages(item), tokenize=False, add_generation_prompt=True,
+    return tokenizer.apply_chat_template(prompt_messages(item, version), tokenize=False, add_generation_prompt=True,
                                          enable_thinking=False)
+
+
+def run_on(item: dict, answer: str) -> str:
+    """How an answer relates to the line boundary (diagnostic): 'within' the line's length, or longer
+    and containing the next line, the previous line, both, or other text."""
+    import re
+    norm = lambda s: re.sub(r"\s+", " ", s or "").strip().lower()
+    o = norm(answer)
+    if len(o) <= 1.5 * len(item["target"]):
+        return "within"
+    nx, pv = norm(item["next"])[:15], norm(item["prev"])[:15]
+    has_n, has_p = bool(nx) and nx in o, bool(pv) and pv in o
+    return "next" if has_n and not has_p else "previous" if has_p and not has_n else "both" if has_n else "other"
 
 
 def score_answer(item: dict, answer: str) -> dict:

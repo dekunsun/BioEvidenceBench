@@ -37,7 +37,7 @@ def generate_vllm(prompts, setting):
     return [[(c.text, c.finish_reason == "length", len(c.token_ids)) for c in o.outputs] for o in outs]
 
 
-def generate_fake(items, setting):
+def generate_fake(items, setting):  # noqa: D401
     """CPU check of everything after generation: copy, repair, wrap, think or ramble at random."""
     rng = random.Random(SEED)
     kinds = [lambda it: it["input"], lambda it: it["target"], lambda it: "Corrected line: " + it["target"],
@@ -50,29 +50,37 @@ def main() -> None:
     ap.add_argument("--out", required=True)
     ap.add_argument("--items", default=str(C.ROOT / "rl" / "training" / "data" / "stage1_dev200.jsonl"))
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--prompts", default=C.PROMPT_VERSION,
+                    help="comma-separated prompt versions, compared in one run on the same items and seed")
     args = ap.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     items = C.load_items(Path(args.items))
     assert all(it["split"] == "dev" for it in items), "stage 1 reads dev items only"
 
+    versions = args.prompts.split(",")
     if args.dry_run:
-        prompts, template = [it["input"] for it in items], "(dry run: no tokenizer)"
+        rendered = {v: [it["input"] for it in items] for v in versions}
     else:
         from transformers import AutoTokenizer
         tok = AutoTokenizer.from_pretrained(C.MODEL_ID)
-        prompts = [C.render_prompt(tok, it) for it in items]
-        template = prompts[0]
+        rendered = {v: [C.render_prompt(tok, it, v) for it in items] for v in versions}
+    template = {v: rendered[v][0] for v in versions}
     config = {"model": C.MODEL_ID, "k": K, "max_tokens": MAX_TOKENS, "seed": SEED, "settings": SETTINGS,
               "n_items": len(items), "items_sha256": hashlib.sha256(Path(args.items).read_bytes()).hexdigest(),
-              "prompt_file_sha256": hashlib.sha256(C.PROMPT_FILE.read_bytes()).hexdigest(),
+              "prompt_versions": versions,
+              "prompt_file_sha256": {v: hashlib.sha256((C.PROMPTS / f"{v}.txt").read_bytes()).hexdigest() for v in versions},
               "rendered_prompt_0": template,
-              "rendered_prompt_0_sha256": hashlib.sha256(template.encode()).hexdigest(),
               "dry_run": args.dry_run}
     (out / "config.json").write_text(json.dumps(config, indent=2, ensure_ascii=False), encoding="utf-8")
+    for v in versions:                       # the full prompt files, kept with the run (Gloria, 2026-11-21)
+        (out / f"prompt_{v}.txt").write_text((C.PROMPTS / f"{v}.txt").read_text(encoding="utf-8"), encoding="utf-8")
 
     summary, rows = {}, []
-    for name, setting in SETTINGS.items():
+    for version in versions:
+      for sname, setting in SETTINGS.items():
+        name = sname if len(versions) == 1 else f"{version}|{sname}"
+        prompts = rendered[version]
         t0 = time.time()
         gens = generate_fake(items, setting) if args.dry_run else generate_vllm(prompts, setting)
         secs = time.time() - t0
@@ -82,8 +90,9 @@ def main() -> None:
             for k, (text, truncated, ntok) in enumerate(answers):
                 s = C.score_answer(it, text)
                 scores.append(s["reward"])
-                rows.append({"setting": name, "item_id": it["item_id"], "book": it["book"], "sample": k,
-                             "damage_class": it["damage_class"], "truncated": truncated, "out_tokens": ntok,
+                rows.append({"setting": name, "prompt": version, "item_id": it["item_id"], "book": it["book"],
+                             "sample": k, "damage_class": it["damage_class"], "truncated": truncated,
+                             "out_tokens": ntok, "run_on": C.run_on(it, text), "has_line_tag": "<line" in text,
                              "answer": text, **s})
             n_signal += len(set(scores)) > 1
         sub = [r for r in rows if r["setting"] == name]
@@ -101,11 +110,15 @@ def main() -> None:
             "format_failure_kinds": kinds,
             "think_share": round(sum(r["has_think"] for r in sub) / len(sub), 4),
             "truncated_share": round(sum(r["truncated"] for r in sub) / len(sub), 4),
+            "run_on_share": round(sum(r["run_on"] != "within" for r in sub) / len(sub), 4),
+            "run_on_kinds": {k: sum(r["run_on"] == k for r in sub) for k in ("next", "previous", "both", "other")},
+            "line_tag_share": round(sum(r["has_line_tag"] for r in sub) / len(sub), 4),
             "generation_seconds": round(secs, 1),
             "out_tokens_total": sum(r["out_tokens"] for r in sub),
         }
+    first = "rollout_T1.0" if len(versions) == 1 else f"{versions[0]}|rollout_T1.0"
     summary["gate"] = {"rule": f"items_with_signal at rollout_T1.0 >= {GATE}",
-                       "passed": summary["rollout_T1.0"]["items_with_signal"] >= GATE}
+                       "passed": summary[first]["items_with_signal"] >= GATE}
     with (out / "answers.jsonl").open("w", encoding="utf-8") as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
