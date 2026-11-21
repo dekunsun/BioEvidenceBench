@@ -1,0 +1,716 @@
+model,item_id,sample,book,page_id,damage_class,n_damaged,usd,output_tokens,stop_reason,error,reward,reward_reading,format_valid,format_reason,integrity_valid,alignment_valid,repaired_words,damaged_correct_words,extra_words,case_accuracy,exact_repair_rate,scientific_name_damaged,scientific_name_repairs,output
+claude-haiku-5-5,8992478-5,0,Butler,8992478,2-5,4,4.5e-05,29,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"quote which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-haiku-5-5,8992478-5,1,Butler,8992478,2-5,4,4.5e-05,29,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"quote which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-haiku-5-5,8992478-5,2,Butler,8992478,2-5,4,4.5e-05,29,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"quote which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-haiku-5-5,8992478-5,3,Butler,8992478,2-5,4,4.5e-05,29,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"quote which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-haiku-5-5,8992478-5,4,Butler,8992478,2-5,4,4.5e-05,29,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"quote which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-haiku-5-5,8992478-5,5,Butler,8992478,2-5,4,4.5e-05,29,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"quote which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-haiku-5-5,8992478-5,6,Butler,8992478,2-5,4,4.5e-05,29,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"quote which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-haiku-5-5,8992478-5,7,Butler,8992478,2-5,4,4.6e-05,30,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"quote which the late Mr. Witchell renders ""tell,"" must be that which sounds to me"
+claude-haiku-5-5,8992478-8,0,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared: a caught"
+claude-haiku-5-5,8992478-8,1,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared: a caught"
+claude-haiku-5-5,8992478-8,2,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared: a caught"
+claude-haiku-5-5,8992478-8,3,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared: a caught"
+claude-haiku-5-5,8992478-8,4,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared: a caught"
+claude-haiku-5-5,8992478-8,5,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared: a caught"
+claude-haiku-5-5,8992478-8,6,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared: a caught"
+claude-haiku-5-5,8992478-8,7,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared: a caught"
+claude-haiku-5-5,8992478-10,0,Butler,8992478,2-5,2,5.1e-05,29,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"haud-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-haiku-5-5,8992478-10,1,Butler,8992478,2-5,2,5.1e-05,29,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"haud-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-haiku-5-5,8992478-10,2,Butler,8992478,2-5,2,5.1e-05,29,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"haud-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-haiku-5-5,8992478-10,3,Butler,8992478,2-5,2,5.1e-05,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-haiku-5-5,8992478-10,4,Butler,8992478,2-5,2,5.1e-05,29,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"haud-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-haiku-5-5,8992478-10,5,Butler,8992478,2-5,2,5.1e-05,29,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"haud-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-haiku-5-5,8992478-10,6,Butler,8992478,2-5,2,5.1e-05,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-haiku-5-5,8992478-10,7,Butler,8992478,2-5,2,5.1e-05,29,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"haud-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-haiku-5-5,8992478-12,0,Butler,8992478,1,1,4.9e-05,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-haiku-5-5,8992478-12,1,Butler,8992478,1,1,4.9e-05,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-haiku-5-5,8992478-12,2,Butler,8992478,1,1,4.9e-05,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-haiku-5-5,8992478-12,3,Butler,8992478,1,1,4.9e-05,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-haiku-5-5,8992478-12,4,Butler,8992478,1,1,4.9e-05,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-haiku-5-5,8992478-12,5,Butler,8992478,1,1,4.9e-05,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-haiku-5-5,8992478-12,6,Butler,8992478,1,1,4.9e-05,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-haiku-5-5,8992478-12,7,Butler,8992478,1,1,4.9e-05,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-haiku-5-5,8992478-19,0,Butler,8992478,2-5,2,4.7e-05,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-haiku-5-5,8992478-19,1,Butler,8992478,2-5,2,4.7e-05,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-haiku-5-5,8992478-19,2,Butler,8992478,2-5,2,4.7e-05,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-haiku-5-5,8992478-19,3,Butler,8992478,2-5,2,4.7e-05,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-haiku-5-5,8992478-19,4,Butler,8992478,2-5,2,4.7e-05,25,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London; where, if one examines each flock that one passes in a half-hour's"
+claude-haiku-5-5,8992478-19,5,Butler,8992478,2-5,2,4.7e-05,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-haiku-5-5,8992478-19,6,Butler,8992478,2-5,2,4.7e-05,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-haiku-5-5,8992478-19,7,Butler,8992478,2-5,2,4.7e-05,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-haiku-5-5,8992478-34,0,Butler,8992478,clean,0,5.2e-05,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-haiku-5-5,8992478-34,1,Butler,8992478,clean,0,5.2e-05,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-haiku-5-5,8992478-34,2,Butler,8992478,clean,0,5.2e-05,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-haiku-5-5,8992478-34,3,Butler,8992478,clean,0,5.2e-05,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-haiku-5-5,8992478-34,4,Butler,8992478,clean,0,5.2e-05,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-haiku-5-5,8992478-34,5,Butler,8992478,clean,0,5.2e-05,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-haiku-5-5,8992478-34,6,Butler,8992478,clean,0,5.2e-05,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-haiku-5-5,8992478-34,7,Butler,8992478,clean,0,5.2e-05,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-haiku-5-5,8992478-36,0,Butler,8992478,clean,0,5.4e-05,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-haiku-5-5,8992478-36,1,Butler,8992478,clean,0,5.4e-05,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-haiku-5-5,8992478-36,2,Butler,8992478,clean,0,5.4e-05,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-haiku-5-5,8992478-36,3,Butler,8992478,clean,0,5.4e-05,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-haiku-5-5,8992478-36,4,Butler,8992478,clean,0,5.4e-05,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-haiku-5-5,8992478-36,5,Butler,8992478,clean,0,5.4e-05,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-haiku-5-5,8992478-36,6,Butler,8992478,clean,0,5.4e-05,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-haiku-5-5,8992478-36,7,Butler,8992478,clean,0,5.4e-05,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-haiku-5-5,8992478-37,0,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas; it is, however, abundant in Turkestan,"
+claude-haiku-5-5,8992478-37,1,Butler,8992478,clean,0,4.8e-05,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-haiku-5-5,8992478-37,2,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas; it is, however, abundant in Turkestan,"
+claude-haiku-5-5,8992478-37,3,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas; it is, however, abundant in Turkestan,"
+claude-haiku-5-5,8992478-37,4,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas; it is, however, abundant in Turkestan,"
+claude-haiku-5-5,8992478-37,5,Butler,8992478,clean,0,4.8e-05,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-haiku-5-5,8992478-37,6,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas; it is, however, abundant in Turkestan,"
+claude-haiku-5-5,8992478-37,7,Butler,8992478,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas; it is, however, abundant in Turkestan,"
+claude-haiku-5-5,9739676-8,0,Chitinskelett,9739676,2-5,2,6.7e-05,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-haiku-5-5,9739676-8,1,Chitinskelett,9739676,2-5,2,6.7e-05,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-haiku-5-5,9739676-8,2,Chitinskelett,9739676,2-5,2,6.7e-05,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-haiku-5-5,9739676-8,3,Chitinskelett,9739676,2-5,2,6.7e-05,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-haiku-5-5,9739676-8,4,Chitinskelett,9739676,2-5,2,6.7e-05,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-haiku-5-5,9739676-8,5,Chitinskelett,9739676,2-5,2,6.7e-05,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-haiku-5-5,9739676-8,6,Chitinskelett,9739676,2-5,2,6.7e-05,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-haiku-5-5,9739676-8,7,Chitinskelett,9739676,2-5,2,6.7e-05,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-haiku-5-5,9739676-17,0,Chitinskelett,9739676,clean,0,6.5e-05,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-haiku-5-5,9739676-17,1,Chitinskelett,9739676,clean,0,6.5e-05,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-haiku-5-5,9739676-17,2,Chitinskelett,9739676,clean,0,6.5e-05,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-haiku-5-5,9739676-17,3,Chitinskelett,9739676,clean,0,6.5e-05,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-haiku-5-5,9739676-17,4,Chitinskelett,9739676,clean,0,6.5e-05,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-haiku-5-5,9739676-17,5,Chitinskelett,9739676,clean,0,6.5e-05,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-haiku-5-5,9739676-17,6,Chitinskelett,9739676,clean,0,6.5e-05,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-haiku-5-5,9739676-17,7,Chitinskelett,9739676,clean,0,6.5e-05,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-haiku-5-5,9739676-20,0,Chitinskelett,9739676,2-5,2,6.9e-05,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-haiku-5-5,9739676-20,1,Chitinskelett,9739676,2-5,2,6.9e-05,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-haiku-5-5,9739676-20,2,Chitinskelett,9739676,2-5,2,6.9e-05,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-haiku-5-5,9739676-20,3,Chitinskelett,9739676,2-5,2,6.9e-05,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-haiku-5-5,9739676-20,4,Chitinskelett,9739676,2-5,2,6.9e-05,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-haiku-5-5,9739676-20,5,Chitinskelett,9739676,2-5,2,6.9e-05,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-haiku-5-5,9739676-20,6,Chitinskelett,9739676,2-5,2,6.9e-05,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-haiku-5-5,9739676-20,7,Chitinskelett,9739676,2-5,2,6.9e-05,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-haiku-5-5,9739676-21,0,Chitinskelett,9739676,2-5,2,6.6e-05,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-haiku-5-5,9739676-21,1,Chitinskelett,9739676,2-5,2,6.6e-05,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-haiku-5-5,9739676-21,2,Chitinskelett,9739676,2-5,2,6.6e-05,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-haiku-5-5,9739676-21,3,Chitinskelett,9739676,2-5,2,6.6e-05,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-haiku-5-5,9739676-21,4,Chitinskelett,9739676,2-5,2,6.6e-05,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-haiku-5-5,9739676-21,5,Chitinskelett,9739676,2-5,2,6.6e-05,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-haiku-5-5,9739676-21,6,Chitinskelett,9739676,2-5,2,6.6e-05,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-haiku-5-5,9739676-21,7,Chitinskelett,9739676,2-5,2,6.6e-05,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-haiku-5-5,9739676-28,0,Chitinskelett,9739676,2-5,2,6.4e-05,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-haiku-5-5,9739676-28,1,Chitinskelett,9739676,2-5,2,6.4e-05,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-haiku-5-5,9739676-28,2,Chitinskelett,9739676,2-5,2,6.4e-05,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-haiku-5-5,9739676-28,3,Chitinskelett,9739676,2-5,2,6.4e-05,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-haiku-5-5,9739676-28,4,Chitinskelett,9739676,2-5,2,6.4e-05,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-haiku-5-5,9739676-28,5,Chitinskelett,9739676,2-5,2,6.4e-05,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-haiku-5-5,9739676-28,6,Chitinskelett,9739676,2-5,2,6.4e-05,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-haiku-5-5,9739676-28,7,Chitinskelett,9739676,2-5,2,6.4e-05,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-haiku-5-5,9739676-31,0,Chitinskelett,9739676,clean,0,6e-05,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-haiku-5-5,9739676-31,1,Chitinskelett,9739676,clean,0,6e-05,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-haiku-5-5,9739676-31,2,Chitinskelett,9739676,clean,0,6e-05,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-haiku-5-5,9739676-31,3,Chitinskelett,9739676,clean,0,6e-05,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-haiku-5-5,9739676-31,4,Chitinskelett,9739676,clean,0,6e-05,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-haiku-5-5,9739676-31,5,Chitinskelett,9739676,clean,0,6e-05,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-haiku-5-5,9739676-31,6,Chitinskelett,9739676,clean,0,6e-05,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-haiku-5-5,9739676-31,7,Chitinskelett,9739676,clean,0,6e-05,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-haiku-5-5,9739676-35,0,Chitinskelett,9739676,clean,0,5.6e-05,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-haiku-5-5,9739676-35,1,Chitinskelett,9739676,clean,0,5.6e-05,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-haiku-5-5,9739676-35,2,Chitinskelett,9739676,clean,0,5.6e-05,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-haiku-5-5,9739676-35,3,Chitinskelett,9739676,clean,0,5.6e-05,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-haiku-5-5,9739676-35,4,Chitinskelett,9739676,clean,0,5.6e-05,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-haiku-5-5,9739676-35,5,Chitinskelett,9739676,clean,0,5.6e-05,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-haiku-5-5,9739676-35,6,Chitinskelett,9739676,clean,0,5.6e-05,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-haiku-5-5,9739676-35,7,Chitinskelett,9739676,clean,0,5.6e-05,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-haiku-5-5,9739676-38,0,Chitinskelett,9739676,clean,0,6.2e-05,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-haiku-5-5,9739676-38,1,Chitinskelett,9739676,clean,0,6.2e-05,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-haiku-5-5,9739676-38,2,Chitinskelett,9739676,clean,0,6.2e-05,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-haiku-5-5,9739676-38,3,Chitinskelett,9739676,clean,0,6.2e-05,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-haiku-5-5,9739676-38,4,Chitinskelett,9739676,clean,0,6.2e-05,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-haiku-5-5,9739676-38,5,Chitinskelett,9739676,clean,0,6.2e-05,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-haiku-5-5,9739676-38,6,Chitinskelett,9739676,clean,0,6.2e-05,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-haiku-5-5,9739676-38,7,Chitinskelett,9739676,clean,0,6.2e-05,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-haiku-5-5,9684334-6,0,Piscium,9684334,2-5,4,4.9e-05,27,end_turn,,-0.5,0.25,True,,True,True,0,1,0,,0.0,0,0,"tatis habens, striis seu incisuris in utrumque latus divisis,"
+claude-haiku-5-5,9684334-6,1,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,-0.5,0.25,True,,True,True,0,1,0,,0.0,0,0,"tatis habens, striis seu incisuris in utrumque latus distinctis,"
+claude-haiku-5-5,9684334-6,2,Piscium,9684334,2-5,4,4.9e-05,27,end_turn,,-0.5,0.25,True,,True,True,0,1,0,,0.0,0,0,"tatis habens, striis seu incisuris in utrumque latus divisis,"
+claude-haiku-5-5,9684334-6,3,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,-0.5,0.25,True,,True,True,0,1,0,,0.0,0,0,"tatis habens, striis seu incisuris in utrumque latus distinctis,"
+claude-haiku-5-5,9684334-6,4,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,-0.5,0.25,True,,True,True,0,1,0,,0.0,0,0,"tatis habens, striis seu incisuris in utrumque latus dedudis,"
+claude-haiku-5-5,9684334-6,5,Piscium,9684334,2-5,4,0.000156,242,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"tatis habens, striis seu incisuris in utrumque latus dehiscens,
+
+Wait, I must reproduce the line with only OCR corrections, keeping its form. The line: ""tatis hahens.flriis feu incifuris in utrumque latus didudiSy""
+
+Corrected: ""tatis habens. striis seu incisuris in utrumque latus diductis,""
+
+Hmm, ""didudiSy"" likely ""diductis"" — the ſ long s and ""y"" ambiguity: ""didudiSy"" could be ""dehiscens"" no. Best reading: ""didu­ctiſ"" → ""diductis"" with ""y"" from ""ÿ""? I'll give: ""tatis habens. striis seu incisuris in utrumque latus diductis"""
+claude-haiku-5-5,9684334-6,6,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,-0.5,0.0,True,,True,True,0,1,0,,0.0,0,0,"tatis habens. Striis seu incisuris in utrumque latus divisis,"
+claude-haiku-5-5,9684334-6,7,Piscium,9684334,2-5,4,4.9e-05,27,end_turn,,-0.5,0.25,True,,True,True,0,1,0,,0.0,0,0,"tatis habens, striis seu incisuris in utrumque latus divisis,"
+claude-haiku-5-5,9684334-7,0,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ac intervenientibus eminentiis medullam spinalem piscis, vel"
+claude-haiku-5-5,9684334-7,1,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ac intervenientibus eminentiis medullam spinalem piscis, vel"
+claude-haiku-5-5,9684334-7,2,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ac intervenientibus eminentiis medullam spinalem piscis, vel"
+claude-haiku-5-5,9684334-7,3,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ac intervenientibus eminentiis medullam spinalem piscis, vel"
+claude-haiku-5-5,9684334-7,4,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ac intervenientibus eminentiis medullam spinalem piscis, vel"
+claude-haiku-5-5,9684334-7,5,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ac intervenientibus eminentiis medullam spinalem piscis, vel"
+claude-haiku-5-5,9684334-7,6,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ac intervenientibus eminentiis medullam spinalem piscis, vel"
+claude-haiku-5-5,9684334-7,7,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ac intervenientibus eminentiis medullam spinalem piscis, vel"
+claude-haiku-5-5,9684334-8,0,Piscium,9684334,2-5,4,4.8e-05,27,end_turn,,0.3333,0.3333,True,,True,True,2,0,0,,0.5,1,0,"tale quid imitatur. Alibi affert Corona lapidea, quae"
+claude-haiku-5-5,9684334-8,1,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quae"
+claude-haiku-5-5,9684334-8,2,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quae"
+claude-haiku-5-5,9684334-8,3,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quae"
+claude-haiku-5-5,9684334-8,4,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quae"
+claude-haiku-5-5,9684334-8,5,Piscium,9684334,2-5,4,4.8e-05,27,end_turn,,0.3333,0.3333,True,,True,True,2,0,0,,0.5,1,0,"tale quid imitatur. Alibi affert Corona lapidea, quae"
+claude-haiku-5-5,9684334-8,6,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quae"
+claude-haiku-5-5,9684334-8,7,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quae"
+claude-haiku-5-5,9684334-9,0,Piscium,9684334,>5,6,4.6e-05,25,end_turn,,0.5,0.8333,True,,True,True,3,0,0,,0.5,0,0,ejusdem mihi videntur structuræ cum nostro fossili
+claude-haiku-5-5,9684334-9,1,Piscium,9684334,>5,6,4.6e-05,25,end_turn,,0.5,0.8333,True,,True,True,3,0,0,,0.5,0,0,ejusdem mihi videntur structuræ cum nostro fossili
+claude-haiku-5-5,9684334-9,2,Piscium,9684334,>5,6,4.6e-05,25,end_turn,,0.5,0.8333,True,,True,True,3,0,0,,0.5,0,0,ejusdem mihi videntur structuræ cum nostro fossili
+claude-haiku-5-5,9684334-9,3,Piscium,9684334,>5,6,4.6e-05,25,end_turn,,0.5,0.8333,True,,True,True,3,0,0,,0.5,0,0,ejusdem mihi videntur structuræ cum nostro fossili
+claude-haiku-5-5,9684334-9,4,Piscium,9684334,>5,6,4.6e-05,25,end_turn,,0.5,0.8333,True,,True,True,3,0,0,,0.5,0,0,ejusdem mihi videntur structuræ cum nostro fossili
+claude-haiku-5-5,9684334-9,5,Piscium,9684334,>5,6,4.6e-05,25,end_turn,,0.5,0.8333,True,,True,True,3,0,0,,0.5,0,0,ejusdem mihi videntur structuræ cum nostro fossili
+claude-haiku-5-5,9684334-9,6,Piscium,9684334,>5,6,4.6e-05,25,end_turn,,0.5,0.8333,True,,True,True,3,0,0,,0.5,0,0,ejusdem mihi videntur structuræ cum nostro fossili
+claude-haiku-5-5,9684334-9,7,Piscium,9684334,>5,6,4.6e-05,25,end_turn,,0.5,0.8333,True,,True,True,3,0,0,,0.5,0,0,ejusdem mihi videntur structuræ cum nostro fossili
+claude-haiku-5-5,9684334-13,0,Piscium,9684334,2-5,5,5.8e-05,43,end_turn,,0.3,0.3,True,,True,True,4,0,2,0.5,0.8,0,0,Seu Caryophyllo-Lapideo Wagneri Ephem. Germ. Ann. III. p. 370.
+claude-haiku-5-5,9684334-13,1,Piscium,9684334,2-5,5,5.5e-05,37,end_turn,,0.6,0.6,True,,True,True,3,0,0,0.5,0.6,0,0,Seu Caryophyllo Lapideo Wttigneri Epb. Germ. Ann. III.
+claude-haiku-5-5,9684334-13,2,Piscium,9684334,2-5,5,5.5e-05,37,end_turn,,0.6,0.6,True,,True,True,3,0,0,0.5,0.6,0,0,Seu Caryophyllo Lapideo Wttigneri Epb. Germ. Ann. III.
+claude-haiku-5-5,9684334-13,3,Piscium,9684334,2-5,5,5.7e-05,42,end_turn,,0.3,0.3,True,,True,True,4,0,2,0.5,0.8,0,0,Seu Caryophyllo Lapideo Wagneri Ephem. Germ. Ann. III. p. 370.
+claude-haiku-5-5,9684334-13,4,Piscium,9684334,2-5,5,5.6e-05,39,end_turn,,0.6,0.6,True,,True,True,3,0,0,0.5,0.6,0,0,Seu Caryophyllo-Lapideo Wttigneri Ephem. Germ. Ann. III.
+claude-haiku-5-5,9684334-13,5,Piscium,9684334,2-5,5,0.0001,127,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"Seu Caryophyllo-Lapideo Wagneri Ephem. Germ. Ann. III. p. 370. Specim. Lithogr. Helv. p. 10.
+
+Wait, the line should contain only the OCR line's content. Repairing just the given line:
+
+Seu Caryophyllo-Lapideo Wagneri Ephem. Germ. Ann. III."
+claude-haiku-5-5,9684334-13,6,Piscium,9684334,2-5,5,5.5e-05,37,end_turn,,0.6,0.6,True,,True,True,3,0,0,0.5,0.6,0,0,Seu Caryophyllo Lapideo Wttigneri Epb. Germ. Ann. III.
+claude-haiku-5-5,9684334-13,7,Piscium,9684334,2-5,5,5.6e-05,39,end_turn,,0.6,0.6,True,,True,True,3,0,0,0.5,0.6,0,0,Seu Caryophyllo-Lapideo Wittigeri Ephem. Germ. Ann. III.
+claude-haiku-5-5,9684334-17,0,Piscium,9684334,2-5,4,4.5e-05,24,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"Trutta Diluviana in Marmore fubflavo, ex"
+claude-haiku-5-5,9684334-17,1,Piscium,9684334,2-5,4,4.5e-05,23,end_turn,,0.8333,1.0,True,,True,True,3,0,0,,0.75,1,1,"Trutta Diluviana in Marmore subflavo, ex"
+claude-haiku-5-5,9684334-17,2,Piscium,9684334,2-5,4,4.5e-05,24,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"Trutta Diluviana in Marmore fubflavo, ex"
+claude-haiku-5-5,9684334-17,3,Piscium,9684334,2-5,4,4.5e-05,24,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"Trutta Diluviana in Marmore fubflavo, ex"
+claude-haiku-5-5,9684334-17,4,Piscium,9684334,2-5,4,4.5e-05,23,end_turn,,0.8333,1.0,True,,True,True,3,0,0,,0.75,1,1,"Trutta Diluviana in Marmore subflavo, ex"
+claude-haiku-5-5,9684334-17,5,Piscium,9684334,2-5,4,4.5e-05,24,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"Trutta Diluviana in Marmore fubflavo, ex"
+claude-haiku-5-5,9684334-17,6,Piscium,9684334,2-5,4,4.5e-05,24,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"Trutta Diluviana in Marmore fubflavo, ex"
+claude-haiku-5-5,9684334-17,7,Piscium,9684334,2-5,4,4.5e-05,23,end_turn,,0.8333,1.0,True,,True,True,3,0,0,,0.75,1,1,"Trutta Diluviana in Marmore subflavo, ex"
+claude-haiku-5-5,9684334-24,0,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.75,1.0,True,,True,True,3,0,0,,0.75,0,0,"ficantis Naturæ schemate, peculiari Lapidum Figura-"
+claude-haiku-5-5,9684334-24,1,Piscium,9684334,2-5,4,4.8e-05,27,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ficantis Naturae schemate, peculiari Lapidum Figura-"
+claude-haiku-5-5,9684334-24,2,Piscium,9684334,2-5,4,4.8e-05,27,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ficantis Naturae schemate, peculiari Lapidum Figura-"
+claude-haiku-5-5,9684334-24,3,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.75,1.0,True,,True,True,3,0,0,,0.75,0,0,"ficantis Naturæ schemate, peculiari Lapidum Figura-"
+claude-haiku-5-5,9684334-24,4,Piscium,9684334,2-5,4,4.8e-05,27,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ficantis Naturae schemate, peculiari Lapidum Figura-"
+claude-haiku-5-5,9684334-24,5,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.75,1.0,True,,True,True,3,0,0,,0.75,0,0,"ficantis Naturæ schemate, peculiari Lapidum Figura-"
+claude-haiku-5-5,9684334-24,6,Piscium,9684334,2-5,4,4.9e-05,28,end_turn,,0.75,1.0,True,,True,True,3,0,0,,0.75,0,0,"ficantis Naturæ schemate, peculiari Lapidum Figura-"
+claude-haiku-5-5,9684334-24,7,Piscium,9684334,2-5,4,4.9e-05,29,end_turn,,0.5,0.75,True,,True,True,2,0,0,,0.5,0,0,"ficantis Naturæ schemate, peculiari Lapidum Figurarum"
+claude-haiku-5-5,9684334-32,0,Piscium,9684334,2-5,2,4.4e-05,24,end_turn,,0.0,1.0,True,,True,True,0,0,0,,0.0,0,0,Agmen Piscium Diluvianorum claudit Piscis
+claude-haiku-5-5,9684334-32,1,Piscium,9684334,2-5,2,4.4e-05,24,end_turn,,0.0,1.0,True,,True,True,0,0,0,,0.0,0,0,Agmen Piscium Diluvianorum claudit Piscis
+claude-haiku-5-5,9684334-32,2,Piscium,9684334,2-5,2,4.4e-05,24,end_turn,,0.0,1.0,True,,True,True,0,0,0,,0.0,0,0,Agmen Piscium Diluvianorum claudit Piscis
+claude-haiku-5-5,9684334-32,3,Piscium,9684334,2-5,2,4.4e-05,24,end_turn,,0.0,1.0,True,,True,True,0,0,0,,0.0,0,0,Agmen Piscium Diluvianorum claudit Piscis
+claude-haiku-5-5,9684334-32,4,Piscium,9684334,2-5,2,4.4e-05,24,end_turn,,0.0,1.0,True,,True,True,0,0,0,,0.0,0,0,Agmen Piscium Diluvianorum claudit Piscis
+claude-haiku-5-5,9684334-32,5,Piscium,9684334,2-5,2,4.5e-05,26,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-haiku-5-5,9684334-32,6,Piscium,9684334,2-5,2,4.5e-05,26,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-haiku-5-5,9684334-32,7,Piscium,9684334,2-5,2,4.4e-05,24,end_turn,,0.0,1.0,True,,True,True,0,0,0,,0.0,0,0,Agmen Piscium Diluvianorum claudit Piscis
+claude-haiku-5-5,8967011-7,0,Reeve,8967011,2-5,2,5.1e-05,36,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-haiku-5-5,8967011-7,1,Reeve,8967011,2-5,2,5.1e-05,36,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-haiku-5-5,8967011-7,2,Reeve,8967011,2-5,2,5.1e-05,36,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-haiku-5-5,8967011-7,3,Reeve,8967011,2-5,2,5.1e-05,36,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-haiku-5-5,8967011-7,4,Reeve,8967011,2-5,2,5.1e-05,36,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-haiku-5-5,8967011-7,5,Reeve,8967011,2-5,2,5.1e-05,36,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-haiku-5-5,8967011-7,6,Reeve,8967011,2-5,2,5.1e-05,36,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-haiku-5-5,8967011-7,7,Reeve,8967011,2-5,2,5e-05,34,end_turn,,0.0,0.0,True,,True,True,0,0,0,1.0,0.0,0,0,"BULIMUS RHODOLARYNX. Bul. testā acuminato-ovatā,"
+claude-haiku-5-5,8967011-19,0,Reeve,8967011,2-5,2,4.4e-05,21,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"lens, with slightly raised oblique striæ and engraved"
+claude-haiku-5-5,8967011-19,1,Reeve,8967011,2-5,2,4.3e-05,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-haiku-5-5,8967011-19,2,Reeve,8967011,2-5,2,4.3e-05,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-haiku-5-5,8967011-19,3,Reeve,8967011,2-5,2,4.4e-05,21,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"lens, with slightly raised oblique striæ and engraved"
+claude-haiku-5-5,8967011-19,4,Reeve,8967011,2-5,2,4.3e-05,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-haiku-5-5,8967011-19,5,Reeve,8967011,2-5,2,4.4e-05,21,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"lens, with slightly raised oblique striæ and engraved"
+claude-haiku-5-5,8967011-19,6,Reeve,8967011,2-5,2,4.3e-05,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-haiku-5-5,8967011-19,7,Reeve,8967011,2-5,2,4.4e-05,21,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"lens, with slightly raised oblique striæ and engraved"
+claude-haiku-5-5,8967011-32,0,Reeve,8967011,2-5,4,5.1e-05,35,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,1.0,0.75,1,1,"BULIMUS DECOLLATUS. Bul. testâ acuminato-oblongâ,"
+claude-haiku-5-5,8967011-32,1,Reeve,8967011,2-5,4,5.1e-05,35,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,1.0,0.75,1,1,"BULIMUS DECOLLATUS. Bul. testâ acuminato-oblongâ,"
+claude-haiku-5-5,8967011-32,2,Reeve,8967011,2-5,4,5.1e-05,35,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,1.0,0.75,1,1,"BULIMUS DECOLLATUS. Bul. testâ acuminato-oblongâ,"
+claude-haiku-5-5,8967011-32,3,Reeve,8967011,2-5,4,5.1e-05,35,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,1.0,0.75,1,1,"BULIMUS DECOLLATUS. Bul. testâ acuminato-oblongâ,"
+claude-haiku-5-5,8967011-32,4,Reeve,8967011,2-5,4,5.1e-05,35,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,1.0,0.75,1,1,"BULIMUS DECOLLATUS. Bul. testâ acuminato-oblongâ,"
+claude-haiku-5-5,8967011-32,5,Reeve,8967011,2-5,4,5.1e-05,35,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,1.0,0.75,1,1,"BULIMUS DECOLLATUS. Bul. testâ acuminato-oblongâ,"
+claude-haiku-5-5,8967011-32,6,Reeve,8967011,2-5,4,5.1e-05,35,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,1.0,0.75,1,1,"BULIMUS DECOLLATUS. Bul. testâ acuminato-oblongâ,"
+claude-haiku-5-5,8967011-32,7,Reeve,8967011,2-5,4,5.1e-05,35,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,1.0,0.75,1,1,"BULIMUS DECOLLATUS. Bul. testâ acuminato-oblongâ,"
+claude-haiku-5-5,8967011-38,0,Reeve,8967011,2-5,2,4e-05,17,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"tim decussatis, peculiariter notata."
+claude-haiku-5-5,8967011-38,1,Reeve,8967011,2-5,2,4.1e-05,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-haiku-5-5,8967011-38,2,Reeve,8967011,2-5,2,4e-05,17,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"tim decussatis, peculiariter notata."
+claude-haiku-5-5,8967011-38,3,Reeve,8967011,2-5,2,4.1e-05,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-haiku-5-5,8967011-38,4,Reeve,8967011,2-5,2,4.1e-05,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-haiku-5-5,8967011-38,5,Reeve,8967011,2-5,2,4e-05,17,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"tim decussatis, peculiariter notata."
+claude-haiku-5-5,8967011-38,6,Reeve,8967011,2-5,2,4.1e-05,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-haiku-5-5,8967011-38,7,Reeve,8967011,2-5,2,4.1e-05,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-haiku-5-5,8967011-82,0,Reeve,8967011,2-5,4,9.7e-05,127,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"verms oblique ventricosâ, inflatâ, anfractibus septem,
+
+Note: the OCR ""verms"" likely should read ""ventri"" fragment... but the line as printed in the Latin description of Conchologia iconica reads with the species-description style. Best reading of the line with OCR errors corrected:
+
+verms oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-haiku-5-5,8967011-82,1,Reeve,8967011,2-5,4,0.000128,189,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"verms oblique ventricosâ, inflatâ, anfractibus septem,
+
+Hmm, careful: the OCR shows ""ventricosd"" and ""inflatd"" with the accent-less d pattern used in the previous line (""tenuiculd"", ""compresse""). The printed form likely uses ""ventricosâ"" or ""ventricosa""; the pattern of the book in the context line is ""d"" for ""ā"" abbreviation marks. I'll keep the OCR's own letters, changing only misreads.
+
+verms oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-haiku-5-5,8967011-82,2,Reeve,8967011,2-5,4,4.7e-05,26,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"verms oblique ventricosā, inflatā, anfractibus septem,"
+claude-haiku-5-5,8967011-82,3,Reeve,8967011,2-5,4,4.8e-05,28,end_turn,,0.5,0.5,True,,True,True,2,0,0,,0.5,0,0,"verus oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-haiku-5-5,8967011-82,4,Reeve,8967011,2-5,4,9.2e-05,116,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"verms oblique ventricosâ, inflatâ, anfractibus septem,
+
+Note: the OCR ""verms"" most likely reads ""vermis""/""verms"" in the original Latin description; I have kept the word as printed except for the accented final vowels, which the OCR rendered as plain ""d"" for the diacritic-marked ""â"" form used throughout this description."
+claude-haiku-5-5,8967011-82,5,Reeve,8967011,2-5,4,0.000111,154,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"verms oblique ventricosâ, inflatâ, anfractibus septem,
+
+Note: the OCR ""verms"" most likely corresponds to ""versus""/""ventricosa"" context; the Latin fragment reads ""...oblique ventricosā, inflatā, anfractibus septem,"" with the first word likely ""vertice"" or similar, but the printed text is best read as given. Repaired line:
+
+verms oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-haiku-5-5,8967011-82,6,Reeve,8967011,2-5,4,0.000106,145,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"verms oblique ventricosâ, inflatâ, anfractibus septem,
+
+Note: the OCR ""verms"" most likely should read ""versus"" in the Latin description... but the printed text in such Latin diagnoses uses ""ventricosâ"" with a circumflex-like accent as typical of this book's style. Given the instruction to change only what was misread, the best reading is:
+
+verms oblique ventricosd, inflatd, anfractibus septem,"
+claude-haiku-5-5,8967011-82,7,Reeve,8967011,2-5,4,0.000207,347,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"verme oblique ventricosâ, inflatâ, anfractibus septem,
+
+Wait—I should keep only what the OCR misread. The OCR ""verms"" likely ""ventre""? The Latin pattern in the previous line uses ""tenuiculâ"" with circumflex-like accents, and ""compresse umbilicatâ"". So the line likely reads ""ventricosâ, inflatâ, anfractibus septem"" with ""oblique"" and ""verms"" being a misread. Given ""tenuiculd"" OCR'd for ""tenuiculâ"", the accent is rendered as ""d"". So ""verms"" is likely ""ventre"" or ""vermis""... The phrase ""oblique ventricosd"" — ""verms"" probably ""ventre"" is not right; ""ventricosâ"" is in the line. I'll keep ""verms"" as best reading: it likely is ""turbinate""? Best guess is ""verms"" → ""versus""? Honestly, I'll give a minimal repair: keep as printed but normalize accent.
+
+verms oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-haiku-5-5,8967011-86,0,Reeve,8967011,clean,0,4.7e-05,27,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo; fulvescente-"
+claude-haiku-5-5,8967011-86,1,Reeve,8967011,clean,0,4.7e-05,27,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo; fulvescente-"
+claude-haiku-5-5,8967011-86,2,Reeve,8967011,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo ; fulvescente-"
+claude-haiku-5-5,8967011-86,3,Reeve,8967011,clean,0,4.7e-05,27,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo; fulvescente-"
+claude-haiku-5-5,8967011-86,4,Reeve,8967011,clean,0,4.7e-05,27,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo; fulvescente-"
+claude-haiku-5-5,8967011-86,5,Reeve,8967011,clean,0,4.8e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo ; fulvescente-"
+claude-haiku-5-5,8967011-86,6,Reeve,8967011,clean,0,4.7e-05,27,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo; fulvescente-"
+claude-haiku-5-5,8967011-86,7,Reeve,8967011,clean,0,4.7e-05,27,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo; fulvescente-"
+claude-haiku-5-5,8967011-87,0,Reeve,8967011,2-5,2,4.6e-05,25,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lacted, apicem versus cærulescente, lineis castaneis"
+claude-haiku-5-5,8967011-87,1,Reeve,8967011,2-5,2,4.6e-05,25,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lacted, apicem versus cæruleascente, lineis castaneis"
+claude-haiku-5-5,8967011-87,2,Reeve,8967011,2-5,2,4.6e-05,25,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lacted, apicem versus cærulescente, lineis castaneis"
+claude-haiku-5-5,8967011-87,3,Reeve,8967011,2-5,2,4.6e-05,25,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lacted, apicem versus cærulescente, lineis castaneis"
+claude-haiku-5-5,8967011-87,4,Reeve,8967011,2-5,2,4.6e-05,25,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lacteo, apicem versus caerulescente, lineis castaneis"
+claude-haiku-5-5,8967011-87,5,Reeve,8967011,2-5,2,4.6e-05,25,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lacted, apicem versus cærulescente, lineis castaneis"
+claude-haiku-5-5,8967011-87,6,Reeve,8967011,2-5,2,4.6e-05,25,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lacted, apicem versus cærulescente, lineis castaneis"
+claude-haiku-5-5,8967011-87,7,Reeve,8967011,2-5,2,4.6e-05,25,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lacteo, apicem versus caerulescente, lineis castaneis"
+claude-haiku-5-5,8967011-98,0,Reeve,8967011,clean,0,4.4e-05,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-haiku-5-5,8967011-98,1,Reeve,8967011,clean,0,4.4e-05,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-haiku-5-5,8967011-98,2,Reeve,8967011,clean,0,4.4e-05,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-haiku-5-5,8967011-98,3,Reeve,8967011,clean,0,4.4e-05,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-haiku-5-5,8967011-98,4,Reeve,8967011,clean,0,4.4e-05,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-haiku-5-5,8967011-98,5,Reeve,8967011,clean,0,4.4e-05,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-haiku-5-5,8967011-98,6,Reeve,8967011,clean,0,4.4e-05,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-haiku-5-5,8967011-98,7,Reeve,8967011,clean,0,4.4e-05,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-haiku-5-5,12341902-10,0,Trudy,12341902,clean,0,0.000108,140,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"Fig. 7. Hорniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+
+Correcting the OCR: the first word should be ""Horniger"" (Latin-letter German), so the Cyrillic ""Н"" and ""о"" in ""Hорniger"" are misreadings.
+
+Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-"
+claude-haiku-5-5,12341902-10,1,Trudy,12341902,clean,0,5.9e-05,41,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,Fig. 7. Hörniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-haiku-5-5,12341902-10,2,Trudy,12341902,clean,0,5.9e-05,41,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-haiku-5-5,12341902-10,3,Trudy,12341902,clean,0,5.9e-05,41,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-haiku-5-5,12341902-10,4,Trudy,12341902,clean,0,5.9e-05,41,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-haiku-5-5,12341902-10,5,Trudy,12341902,clean,0,5.9e-05,41,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-haiku-5-5,12341902-10,6,Trudy,12341902,clean,0,5.9e-05,41,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,Fig. 7. Hörniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-haiku-5-5,12341902-10,7,Trudy,12341902,clean,0,5.9e-05,41,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-haiku-5-5,12341902-11,0,Trudy,12341902,2-5,2,6e-05,37,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-haiku-5-5,12341902-11,1,Trudy,12341902,2-5,2,6e-05,37,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-haiku-5-5,12341902-11,2,Trudy,12341902,2-5,2,6e-05,37,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-haiku-5-5,12341902-11,3,Trudy,12341902,2-5,2,6e-05,37,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-haiku-5-5,12341902-11,4,Trudy,12341902,2-5,2,6e-05,37,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-haiku-5-5,12341902-11,5,Trudy,12341902,2-5,2,6e-05,37,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-haiku-5-5,12341902-11,6,Trudy,12341902,2-5,2,6e-05,37,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-haiku-5-5,12341902-11,7,Trudy,12341902,2-5,2,6e-05,37,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-haiku-5-5,12341902-21,0,Trudy,12341902,1,1,5.1e-05,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-haiku-5-5,12341902-21,1,Trudy,12341902,1,1,5.1e-05,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-haiku-5-5,12341902-21,2,Trudy,12341902,1,1,5.1e-05,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-haiku-5-5,12341902-21,3,Trudy,12341902,1,1,5.1e-05,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-haiku-5-5,12341902-21,4,Trudy,12341902,1,1,5.1e-05,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-haiku-5-5,12341902-21,5,Trudy,12341902,1,1,5.1e-05,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-haiku-5-5,12341902-21,6,Trudy,12341902,1,1,5.1e-05,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-haiku-5-5,12341902-21,7,Trudy,12341902,1,1,5.1e-05,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-haiku-5-5,12341902-22,0,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-haiku-5-5,12341902-22,1,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-haiku-5-5,12341902-22,2,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-haiku-5-5,12341902-22,3,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-haiku-5-5,12341902-22,4,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-haiku-5-5,12341902-22,5,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-haiku-5-5,12341902-22,6,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-haiku-5-5,12341902-22,7,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-haiku-5-5,12341902-23,0,Trudy,12341902,1,1,0.000211,345,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"{тей der Anatomie der Speicheldrüsen dieser Insekten und ins-
+
+Wait—the line begins with a Cyrillic-looking garble ""{тей"" which is an OCR misreading of a German word ending the previous line's continuation: ""Bezug auf die"" ... Actually the context ""in Be-"" continues with ""ziehung"" or ""tracht"", and the line should begin with the rest of the word. The likely reading is ""Beziehung auf die Anatomie..."" — the garbled ""{тей"" best corresponds to ""Bezug"" ... The sensible repair: ""{тей"" → ""ziehung"" is not safe; the most plausible is ""tei"" → ""ten""? Given the hyphen-split ""Be-"" and the next line's content, the word is ""Beziehung"" split as ""Be-"" / ""ziehung""; the OCR ""{тей"" reads as ""ziehung""-like fragment ""тей"" ≈ ""teil"" (""Teil"").
+
+Repaired line:
+Teil der Anatomie der Speicheldrüsen dieser Insekten und ins-"
+claude-haiku-5-5,12341902-23,1,Trudy,12341902,1,1,0.000164,251,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"{тей der Anatomie der Speicheldrüsen dieser Insekten und ins-
+
+Wait—the leading ""{тей"" is clearly an OCR misreading of a German word ending the preceding line's continuation (""Be-"" then ""trächtigen""? ). Based on context, the line continues ""Bezug auf die"" style phrasing; the most plausible reading is ""Bezug auf"" split. The fragment ""{тей"" likely corresponds to ""ziehung auf"" or similar, but the Cyrillic ""т"" and ""е"" with ""й"" suggests ""Zeit"" / ""Beziehung""... Best reading in German: ""stehung"" is unsupported, so I give:
+
+Bezug auf der Anatomie der Speicheldrüsen dieser Insekten und ins-"
+claude-haiku-5-5,12341902-23,2,Trudy,12341902,1,1,0.000167,257,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"{тей der Anatomie der Speicheldrüsen dieser Insekten und ins-
+
+Hmm, the leading ""{тей"" is clearly an OCR corruption of a German word ending the line before ""der Anatomie"". The previous line ends with ""in Be-"", so this line should begin with the continuation ""ziehung auf die"" or similar. The most natural reading: ""Beziehung auf die"" → but ""{тей"" suggests ""стей""? Best reading: ""Rücksicht auf die"" ... Given ""Be-"" then ""ziehung"", the start should be ""ziehung auf die Anatomie""? The text after is ""der Anatomie"", so the missing words are likely ""ziehung auf die"".
+
+ziehung auf die Anatomie der Speicheldrüsen dieser Insekten und ins-"
+claude-haiku-5-5,12341902-23,3,Trudy,12341902,1,1,0.000154,231,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"{тей der Anatomie der Speicheldrüsen dieser Insekten und ins-
+
+Wait—the line begins with a Cyrillic fragment ""тей"" which is OCR noise for a German word ending. The likely original is ""Bezug auf"" ... but the fragment ""тей"" suggests ""Bezie-"" hyphen? Best reading: the word split across lines from the previous line ""in Be-"" so the continuation is ""ziehung auf"". The OCR ""тей"" likely misread ""ziehung"" fragment... Keeping minimal change: replace Cyrillic lookalikes.
+
+Restored line:
+
+Ziehung auf der Anatomie der Speicheldrüsen dieser Insekten und ins-"
+claude-haiku-5-5,12341902-23,4,Trudy,12341902,1,1,0.00023,383,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"{тей der Anatomie der Speicheldrüsen dieser Insekten und ins-
+
+Wait, the leading ""{тей"" is clearly an OCR corruption of a German word fragment ending the previous line's continuation: ""Bezug auf die"" ... Given the line begins ""Hier will ich einige Resultate dieser Untersuchungen in Be-"", the continuation is ""Beziehung auf"", but the visible fragment ""тей"" most likely reads ""tei"" as in ""Bezie-hung""? The fragment ""{тей"" resembles Cyrillic-looking letters for ""tei"", as in ""Bereiche"" or ""Betei""... The most plausible German word ending in ""-tei"" after ""Be-"" is ""Beteiligung"" is unlikely; better: ""Bezug""? Best reading: ""Beziehung"" would need ""ziehung"". The fragment fits ""ung auf"" poorly. Given ""тей der Anatomie"", the word is likely ""Teil"" ... ""Bereiche"" no.
+
+Most plausible: ""Betreff"" no. I'll give the repaired line as best reading:
+
+Teil der Anatomie der Speicheldrüsen dieser Insekten und ins-"
+claude-haiku-5-5,12341902-23,5,Trudy,12341902,1,1,0.000143,210,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"{тей der Anatomie der Speicheldrüsen dieser Insekten und ins-
+
+Wait—the leading ""{тей"" is clearly an OCR corruption of a German word split across the line break; the line continues ""Be-"" → ""tracht..."" Actually the previous line ends ""in Be-"", so this line should begin ""trachtung"" or similar. The fragment ""{тей"" most likely reads ""Bezug"" ... but the best reading consistent with ""Hier will ich einige Resultate ... in Betreff der Anatomie"" is ""Betreff"".
+
+Betreff der Anatomie der Speicheldrüsen dieser Insekten und ins-"
+claude-haiku-5-5,12341902-23,6,Trudy,12341902,1,1,0.000185,293,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"{тей der Anatomie der Speicheldrüsen dieser Insekten und ins-
+
+Wait—the leading ""{тей"" is a misread of the word ""Bezug"" or similar? The line continues German text: ""Hier will ich einige Resultate dieser Untersuchungen in Be-"" then ""ziehung auf..."" Actually the next word fragment following ""Be-"" would be ""zug"" ... The line begins with ""{тей"", which most likely is OCR noise for ""Bezug"" … but the Russian-looking ""тей"" suggests ""Bezie"" misread, the first part of ""Beziehung"" ... Hmm, the previous line ends ""in Be-"", so this line should start with the continuation ""ziehung auf die"" — ""{тей"" reads as a garbled ""ziehung auf"".
+
+Corrected line:
+
+ziehung auf der Anatomie der Speicheldrüsen dieser Insekten und ins-"
+claude-haiku-5-5,12341902-23,7,Trudy,12341902,1,1,0.000151,225,end_turn,,0.0,0.0,False,several lines,False,False,0,0,0,,,0,0,"{тей der Anatomie der Speicheldrüsen dieser Insekten und ins-
+
+Wait—the line begins with a Cyrillic character that is an OCR error for a German word fragment. The context (""in Be-"" then ""...tей der Anatomie"") suggests ""Beziehung"" split as ""Be-"" / ""ziehung"" ... so the line should begin ""ziehung auf der Anatomie"". The OCR ""тей"" most likely reads ""ziehung"" misread; but the closest plausible reading of ""тей"" is ""ziehung"" with garbled letters. Best reading: ""ziehung"".
+
+ziehung der Anatomie der Speicheldrüsen dieser Insekten und ins-"
+claude-haiku-5-5,12341902-31,0,Trudy,12341902,clean,0,5.5e-05,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-haiku-5-5,12341902-31,1,Trudy,12341902,clean,0,5.5e-05,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-haiku-5-5,12341902-31,2,Trudy,12341902,clean,0,5.5e-05,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-haiku-5-5,12341902-31,3,Trudy,12341902,clean,0,5.5e-05,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-haiku-5-5,12341902-31,4,Trudy,12341902,clean,0,5.5e-05,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-haiku-5-5,12341902-31,5,Trudy,12341902,clean,0,5.5e-05,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-haiku-5-5,12341902-31,6,Trudy,12341902,clean,0,5.5e-05,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-haiku-5-5,12341902-31,7,Trudy,12341902,clean,0,5.5e-05,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-haiku-5-5,12341902-34,0,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-haiku-5-5,12341902-34,1,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-haiku-5-5,12341902-34,2,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-haiku-5-5,12341902-34,3,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-haiku-5-5,12341902-34,4,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-haiku-5-5,12341902-34,5,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-haiku-5-5,12341902-34,6,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-haiku-5-5,12341902-34,7,Trudy,12341902,clean,0,5.3e-05,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-haiku-5-5,12341902-37,0,Trudy,12341902,clean,0,5.7e-05,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-haiku-5-5,12341902-37,1,Trudy,12341902,clean,0,5.7e-05,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-haiku-5-5,12341902-37,2,Trudy,12341902,clean,0,5.7e-05,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-haiku-5-5,12341902-37,3,Trudy,12341902,clean,0,5.7e-05,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-haiku-5-5,12341902-37,4,Trudy,12341902,clean,0,5.7e-05,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-haiku-5-5,12341902-37,5,Trudy,12341902,clean,0,5.7e-05,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-haiku-5-5,12341902-37,6,Trudy,12341902,clean,0,5.7e-05,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-haiku-5-5,12341902-37,7,Trudy,12341902,clean,0,5.7e-05,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-opus-5-5,8992478-5,0,Butler,8992478,2-5,4,0.001796,28,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"note which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-opus-5-5,8992478-5,1,Butler,8992478,2-5,4,0.001796,28,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"note which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-opus-5-5,8992478-5,2,Butler,8992478,2-5,4,0.001796,28,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"note which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-opus-5-5,8992478-5,3,Butler,8992478,2-5,4,0.001796,28,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"note which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-opus-5-5,8992478-5,4,Butler,8992478,2-5,4,0.001796,28,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"note which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-opus-5-5,8992478-5,5,Butler,8992478,2-5,4,0.001796,28,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"note which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-opus-5-5,8992478-5,6,Butler,8992478,2-5,4,0.001796,28,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"note which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-opus-5-5,8992478-5,7,Butler,8992478,2-5,4,0.001796,28,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"note which the late Mr. Witchell renders tell, must be that which sounds to me"
+claude-opus-5-5,8992478-8,0,Butler,8992478,clean,0,0.001904,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared : a caught"
+claude-opus-5-5,8992478-8,1,Butler,8992478,clean,0,0.001904,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared : a caught"
+claude-opus-5-5,8992478-8,2,Butler,8992478,clean,0,0.001904,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared : a caught"
+claude-opus-5-5,8992478-8,3,Butler,8992478,clean,0,0.001904,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared : a caught"
+claude-opus-5-5,8992478-8,4,Butler,8992478,clean,0,0.001904,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared : a caught"
+claude-opus-5-5,8992478-8,5,Butler,8992478,clean,0,0.001904,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared : a caught"
+claude-opus-5-5,8992478-8,6,Butler,8992478,clean,0,0.001904,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared : a caught"
+claude-opus-5-5,8992478-8,7,Butler,8992478,clean,0,0.001904,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"This species is of no interest as a cage-bird, unless hand-reared : a caught"
+claude-opus-5-5,8992478-10,0,Butler,8992478,2-5,2,0.002032,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-opus-5-5,8992478-10,1,Butler,8992478,2-5,2,0.002032,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-opus-5-5,8992478-10,2,Butler,8992478,2-5,2,0.002032,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-opus-5-5,8992478-10,3,Butler,8992478,2-5,2,0.002032,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-opus-5-5,8992478-10,4,Butler,8992478,2-5,2,0.002032,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-opus-5-5,8992478-10,5,Butler,8992478,2-5,2,0.002032,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-opus-5-5,8992478-10,6,Butler,8992478,2-5,2,0.002032,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-opus-5-5,8992478-10,7,Butler,8992478,2-5,2,0.002032,29,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"hand-reared it has been known to learn and sing the songs of the Goldfinch,"
+claude-opus-5-5,8992478-12,0,Butler,8992478,1,1,0.001956,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-opus-5-5,8992478-12,1,Butler,8992478,1,1,0.001956,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-opus-5-5,8992478-12,2,Butler,8992478,1,1,0.001956,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-opus-5-5,8992478-12,3,Butler,8992478,1,1,0.001956,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-opus-5-5,8992478-12,4,Butler,8992478,1,1,0.001956,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-opus-5-5,8992478-12,5,Butler,8992478,1,1,0.001956,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-opus-5-5,8992478-12,6,Butler,8992478,1,1,0.001956,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-opus-5-5,8992478-12,7,Butler,8992478,1,1,0.001956,28,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"Canary's song perfectly, but seemed ashamed of its performance, for it always"
+claude-opus-5-5,8992478-19,0,Butler,8992478,2-5,2,0.001892,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-opus-5-5,8992478-19,1,Butler,8992478,2-5,2,0.001892,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-opus-5-5,8992478-19,2,Butler,8992478,2-5,2,0.001892,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-opus-5-5,8992478-19,3,Butler,8992478,2-5,2,0.001892,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-opus-5-5,8992478-19,4,Butler,8992478,2-5,2,0.001892,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-opus-5-5,8992478-19,5,Butler,8992478,2-5,2,0.001892,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-opus-5-5,8992478-19,6,Butler,8992478,2-5,2,0.001892,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-opus-5-5,8992478-19,7,Butler,8992478,2-5,2,0.001892,26,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"in London ; where, if one examines each flock that one passes in a half-hour's"
+claude-opus-5-5,8992478-34,0,Butler,8992478,clean,0,0.002084,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-opus-5-5,8992478-34,1,Butler,8992478,clean,0,0.002084,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-opus-5-5,8992478-34,2,Butler,8992478,clean,0,0.002084,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-opus-5-5,8992478-34,3,Butler,8992478,clean,0,0.002084,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-opus-5-5,8992478-34,4,Butler,8992478,clean,0,0.002084,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-opus-5-5,8992478-34,5,Butler,8992478,clean,0,0.002084,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-opus-5-5,8992478-34,6,Butler,8992478,clean,0,0.002084,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-opus-5-5,8992478-34,7,Butler,8992478,clean,0,0.002084,34,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"the Atlantic to the Pacific up to and, in Europe, slightly beyond the Arctic"
+claude-opus-5-5,8992478-36,0,Butler,8992478,clean,0,0.002148,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-opus-5-5,8992478-36,1,Butler,8992478,clean,0,0.002148,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-opus-5-5,8992478-36,2,Butler,8992478,clean,0,0.002148,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-opus-5-5,8992478-36,3,Butler,8992478,clean,0,0.002148,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-opus-5-5,8992478-36,4,Butler,8992478,clean,0,0.002148,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-opus-5-5,8992478-36,5,Butler,8992478,clean,0,0.002148,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-opus-5-5,8992478-36,6,Butler,8992478,clean,0,0.002148,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-opus-5-5,8992478-36,7,Butler,8992478,clean,0,0.002148,36,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"from Greece, Asia Minor, Palestine, Central and Southern Persia, Baluchistan,"
+claude-opus-5-5,8992478-37,0,Butler,8992478,clean,0,0.00192,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-opus-5-5,8992478-37,1,Butler,8992478,clean,0,0.00192,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-opus-5-5,8992478-37,2,Butler,8992478,clean,0,0.00192,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-opus-5-5,8992478-37,3,Butler,8992478,clean,0,0.00192,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-opus-5-5,8992478-37,4,Butler,8992478,clean,0,0.00192,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-opus-5-5,8992478-37,5,Butler,8992478,clean,0,0.00192,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-opus-5-5,8992478-37,6,Butler,8992478,clean,0,0.00192,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-opus-5-5,8992478-37,7,Butler,8992478,clean,0,0.00192,29,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"and India south of the Himalayas ; it is, however, abundant in Turkestan,"
+claude-opus-5-5,9739676-8,0,Chitinskelett,9739676,2-5,2,0.002676,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-opus-5-5,9739676-8,1,Chitinskelett,9739676,2-5,2,0.002676,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-opus-5-5,9739676-8,2,Chitinskelett,9739676,2-5,2,0.002676,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-opus-5-5,9739676-8,3,Chitinskelett,9739676,2-5,2,0.002676,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-opus-5-5,9739676-8,4,Chitinskelett,9739676,2-5,2,0.002676,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-opus-5-5,9739676-8,5,Chitinskelett,9739676,2-5,2,0.002676,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-opus-5-5,9739676-8,6,Chitinskelett,9739676,2-5,2,0.002676,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-opus-5-5,9739676-8,7,Chitinskelett,9739676,2-5,2,0.002676,50,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,2,2,"teren, welche noch freie Anhänge tragen (Carabidae, Staphylinidae, Hydrophilidae, Mylabridae,"
+claude-opus-5-5,9739676-17,0,Chitinskelett,9739676,clean,0,0.002616,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-opus-5-5,9739676-17,1,Chitinskelett,9739676,clean,0,0.002616,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-opus-5-5,9739676-17,2,Chitinskelett,9739676,clean,0,0.002616,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-opus-5-5,9739676-17,3,Chitinskelett,9739676,clean,0,0.002616,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-opus-5-5,9739676-17,4,Chitinskelett,9739676,clean,0,0.002616,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-opus-5-5,9739676-17,5,Chitinskelett,9739676,clean,0,0.002616,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-opus-5-5,9739676-17,6,Chitinskelett,9739676,clean,0,0.002616,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-opus-5-5,9739676-17,7,Chitinskelett,9739676,clean,0,0.002616,48,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Auffassung dieses Stabes als eine sekundäre Bildung, womit ihm ein weiteres Interesse abgesprochen"
+claude-opus-5-5,9739676-20,0,Chitinskelett,9739676,2-5,2,0.002764,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-opus-5-5,9739676-20,1,Chitinskelett,9739676,2-5,2,0.002764,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-opus-5-5,9739676-20,2,Chitinskelett,9739676,2-5,2,0.002764,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-opus-5-5,9739676-20,3,Chitinskelett,9739676,2-5,2,0.002764,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-opus-5-5,9739676-20,4,Chitinskelett,9739676,2-5,2,0.002764,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-opus-5-5,9739676-20,5,Chitinskelett,9739676,2-5,2,0.002764,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-opus-5-5,9739676-20,6,Chitinskelett,9739676,2-5,2,0.002764,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-opus-5-5,9739676-20,7,Chitinskelett,9739676,2-5,2,0.002764,54,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"bildet (H e i d e r, R i l e y u. a.). In diesem Falle wäre der Chitinstab also dem hinteren Tentorialaste"
+claude-opus-5-5,9739676-21,0,Chitinskelett,9739676,2-5,2,0.00264,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-opus-5-5,9739676-21,1,Chitinskelett,9739676,2-5,2,0.00264,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-opus-5-5,9739676-21,2,Chitinskelett,9739676,2-5,2,0.00466,150,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-opus-5-5,9739676-21,3,Chitinskelett,9739676,2-5,2,0.00264,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-opus-5-5,9739676-21,4,Chitinskelett,9739676,2-5,2,0.00428,131,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-opus-5-5,9739676-21,5,Chitinskelett,9739676,2-5,2,0.00264,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-opus-5-5,9739676-21,6,Chitinskelett,9739676,2-5,2,0.00264,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"homodynam und dürfte wie dieser (C o m s t o c k und K o c h i), den Pleuralapodemen der Thorakal-"
+claude-opus-5-5,9739676-21,7,Chitinskelett,9739676,2-5,2,0.00264,49,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,homodynam und dürfte wie dieser (C o m s t o c k und K o c h i) den Pleuralapodemen der Thorakal-
+claude-opus-5-5,9739676-28,0,Chitinskelett,9739676,2-5,2,0.002556,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-opus-5-5,9739676-28,1,Chitinskelett,9739676,2-5,2,0.002556,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-opus-5-5,9739676-28,2,Chitinskelett,9739676,2-5,2,0.002556,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-opus-5-5,9739676-28,3,Chitinskelett,9739676,2-5,2,0.002556,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-opus-5-5,9739676-28,4,Chitinskelett,9739676,2-5,2,0.002556,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-opus-5-5,9739676-28,5,Chitinskelett,9739676,2-5,2,0.002556,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-opus-5-5,9739676-28,6,Chitinskelett,9739676,2-5,2,0.002556,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-opus-5-5,9739676-28,7,Chitinskelett,9739676,2-5,2,0.002556,50,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dort erfuhren, deckt sich aber nicht völlig mit derjenigen, welche ihnen B e r l e s e zu teil werden"
+claude-opus-5-5,9739676-31,0,Chitinskelett,9739676,clean,0,0.002392,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-opus-5-5,9739676-31,1,Chitinskelett,9739676,clean,0,0.002392,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-opus-5-5,9739676-31,2,Chitinskelett,9739676,clean,0,0.002392,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-opus-5-5,9739676-31,3,Chitinskelett,9739676,clean,0,0.002392,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-opus-5-5,9739676-31,4,Chitinskelett,9739676,clean,0,0.002392,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-opus-5-5,9739676-31,5,Chitinskelett,9739676,clean,0,0.002392,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-opus-5-5,9739676-31,6,Chitinskelett,9739676,clean,0,0.002392,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-opus-5-5,9739676-31,7,Chitinskelett,9739676,clean,0,0.002392,46,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"Daran, daß die mit Cardo und Stipes bezeichneten Sklerite den gleichnamigen höherer Insekten"
+claude-opus-5-5,9739676-35,0,Chitinskelett,9739676,clean,0,0.002256,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-opus-5-5,9739676-35,1,Chitinskelett,9739676,clean,0,0.002256,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-opus-5-5,9739676-35,2,Chitinskelett,9739676,clean,0,0.002256,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-opus-5-5,9739676-35,3,Chitinskelett,9739676,clean,0,0.002256,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-opus-5-5,9739676-35,4,Chitinskelett,9739676,clean,0,0.002256,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-opus-5-5,9739676-35,5,Chitinskelett,9739676,clean,0,0.002256,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-opus-5-5,9739676-35,6,Chitinskelett,9739676,clean,0,0.002256,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-opus-5-5,9739676-35,7,Chitinskelett,9739676,clean,0,0.002256,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"der Lacinia auf; die Galea dagegen erblickt er in dem dritten, äußeren Anhange."
+claude-opus-5-5,9739676-38,0,Chitinskelett,9739676,clean,0,0.002488,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-opus-5-5,9739676-38,1,Chitinskelett,9739676,clean,0,0.002488,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-opus-5-5,9739676-38,2,Chitinskelett,9739676,clean,0,0.002488,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-opus-5-5,9739676-38,3,Chitinskelett,9739676,clean,0,0.002488,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-opus-5-5,9739676-38,4,Chitinskelett,9739676,clean,0,0.002488,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-opus-5-5,9739676-38,5,Chitinskelett,9739676,clean,0,0.002488,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-opus-5-5,9739676-38,6,Chitinskelett,9739676,clean,0,0.002488,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-opus-5-5,9739676-38,7,Chitinskelett,9739676,clean,0,0.002488,43,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"an der unversehrt isolierten Maxille kaum erkennen, ob der am meisten lateral stehende Anhang am"
+claude-opus-5-5,9684334-6,0,Piscium,9684334,2-5,4,0.002064,33,end_turn,,0.5,0.5,True,,True,True,4,1,0,,1.0,0,0,"tatis habens, ſtriis ſeu inciſuris in utrumque latus diductis,"
+claude-opus-5-5,9684334-6,1,Piscium,9684334,2-5,4,0.006264,243,end_turn,,0.5,0.5,True,,True,True,4,1,0,,1.0,0,0,"tatis habens, ſtriis ſeu inciſuris in utrumque latus diductis,"
+claude-opus-5-5,9684334-6,2,Piscium,9684334,2-5,4,0.006144,237,end_turn,,0.5,0.5,True,,True,True,4,1,0,,1.0,0,0,"tatis habens, ſtriis ſeu inciſuris in utrumque latus diductis,"
+claude-opus-5-5,9684334-6,3,Piscium,9684334,2-5,4,0.002064,33,end_turn,,0.5,0.5,True,,True,True,4,1,0,,1.0,0,0,"tatis habens, ſtriis ſeu inciſuris in utrumque latus diductis,"
+claude-opus-5-5,9684334-6,4,Piscium,9684334,2-5,4,0.004624,161,end_turn,,0.5,0.5,True,,True,True,4,1,0,,1.0,0,0,"tatis habens, ſtriis ſeu inciſuris in utrumque latus diductis,"
+claude-opus-5-5,9684334-6,5,Piscium,9684334,2-5,4,0.002064,33,end_turn,,0.5,0.5,True,,True,True,4,1,0,,1.0,0,0,"tatis habens, ſtriis ſeu inciſuris in utrumque latus diductis,"
+claude-opus-5-5,9684334-6,6,Piscium,9684334,2-5,4,0.002064,33,end_turn,,0.5,0.5,True,,True,True,4,1,0,,1.0,0,0,"tatis habens, ſtriis ſeu inciſuris in utrumque latus diductis,"
+claude-opus-5-5,9684334-6,7,Piscium,9684334,2-5,4,0.002044,32,end_turn,,0.5,0.5,True,,True,True,4,1,0,,1.0,0,0,"tatis habens ſtriis ſeu inciſuris in utrumque latus diductis,"
+claude-opus-5-5,9684334-7,0,Piscium,9684334,2-5,4,0.002016,31,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,ac intervenientibus eminentiis medullam ſpinalem Piſcis vel
+claude-opus-5-5,9684334-7,1,Piscium,9684334,2-5,4,0.002036,32,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ac intervenientibus eminentiis medullam ſpinalem Piſcis, vel"
+claude-opus-5-5,9684334-7,2,Piscium,9684334,2-5,4,0.002016,31,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,ac intervenientibus eminentiis medullam ſpinalem Piſcis vel
+claude-opus-5-5,9684334-7,3,Piscium,9684334,2-5,4,0.002016,31,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,ac intervenientibus eminentiis medullam ſpinalem Piſcis vel
+claude-opus-5-5,9684334-7,4,Piscium,9684334,2-5,4,0.002036,32,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ac intervenientibus eminentiis medullam ſpinalem Piſcis, vel"
+claude-opus-5-5,9684334-7,5,Piscium,9684334,2-5,4,0.002016,31,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,ac intervenientibus eminentiis medullam ſpinalem Piſcis vel
+claude-opus-5-5,9684334-7,6,Piscium,9684334,2-5,4,0.002016,31,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,ac intervenientibus eminentiis medullam ſpinalem Piſcis vel
+claude-opus-5-5,9684334-7,7,Piscium,9684334,2-5,4,0.002016,31,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,ac intervenientibus eminentiis medullam ſpinalem Piſcis vel
+claude-opus-5-5,9684334-8,0,Piscium,9684334,2-5,4,0.001964,29,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quæ"
+claude-opus-5-5,9684334-8,1,Piscium,9684334,2-5,4,0.001964,29,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quæ"
+claude-opus-5-5,9684334-8,2,Piscium,9684334,2-5,4,0.001944,28,end_turn,,0.5,0.5,True,,True,True,3,0,0,,0.75,1,0,"tale quid imitatur. Alibi affert Corna lapidea, quæ"
+claude-opus-5-5,9684334-8,3,Piscium,9684334,2-5,4,0.001964,29,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quæ"
+claude-opus-5-5,9684334-8,4,Piscium,9684334,2-5,4,0.001964,29,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quæ"
+claude-opus-5-5,9684334-8,5,Piscium,9684334,2-5,4,0.001944,28,end_turn,,0.8333,0.8333,True,,True,True,3,0,0,,0.75,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quae"
+claude-opus-5-5,9684334-8,6,Piscium,9684334,2-5,4,0.001964,29,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"tale quid imitatur. Alibi affert Cornua lapidea, quæ"
+claude-opus-5-5,9684334-8,7,Piscium,9684334,2-5,4,0.001944,28,end_turn,,0.5,0.5,True,,True,True,3,0,0,,0.75,1,0,"tale quid imitatur. Alibi affert Corna lapidea, quæ"
+claude-opus-5-5,9684334-9,0,Piscium,9684334,>5,6,0.001956,30,end_turn,,0.8333,0.8333,True,,True,True,5,0,0,,0.8333,0,0,ejusdem mihi videntur ſtructuræ cum noſtro foſſili
+claude-opus-5-5,9684334-9,1,Piscium,9684334,>5,6,0.001956,30,end_turn,,0.8333,0.8333,True,,True,True,5,0,0,,0.8333,0,0,ejusdem mihi videntur ſtructuræ cum noſtro foſſili
+claude-opus-5-5,9684334-9,2,Piscium,9684334,>5,6,0.001956,30,end_turn,,0.8333,0.8333,True,,True,True,5,0,0,,0.8333,0,0,ejusdem mihi videntur ſtructuræ cum noſtro foſſili
+claude-opus-5-5,9684334-9,3,Piscium,9684334,>5,6,0.001956,30,end_turn,,0.8333,0.8333,True,,True,True,5,0,0,,0.8333,0,0,ejusdem mihi videntur ſtructuræ cum noſtro foſſili
+claude-opus-5-5,9684334-9,4,Piscium,9684334,>5,6,0.001956,30,end_turn,,0.8333,0.8333,True,,True,True,5,0,0,,0.8333,0,0,ejusdem mihi videntur ſtructuræ cum noſtro foſſili
+claude-opus-5-5,9684334-9,5,Piscium,9684334,>5,6,0.001956,30,end_turn,,0.8333,0.8333,True,,True,True,5,0,0,,0.8333,0,0,ejusdem mihi videntur ſtructuræ cum noſtro foſſili
+claude-opus-5-5,9684334-9,6,Piscium,9684334,>5,6,0.001956,30,end_turn,,0.8333,0.8333,True,,True,True,5,0,0,,0.8333,0,0,ejusdem mihi videntur ſtructuræ cum noſtro foſſili
+claude-opus-5-5,9684334-9,7,Piscium,9684334,>5,6,0.001956,30,end_turn,,0.8333,0.8333,True,,True,True,5,0,0,,0.8333,0,0,ejusdem mihi videntur ſtructuræ cum noſtro foſſili
+claude-opus-5-5,9684334-13,0,Piscium,9684334,2-5,5,0.002168,36,end_turn,,1.0,1.0,True,,True,True,5,0,0,1.0,1.0,0,0,Seu Caryophyllo Lapideo Wagneri Eph. Germ. Ann. III.
+claude-opus-5-5,9684334-13,1,Piscium,9684334,2-5,5,0.002168,36,end_turn,,1.0,1.0,True,,True,True,5,0,0,1.0,1.0,0,0,Seu Caryophyllo Lapideo Wagneri Eph. Germ. Ann. III.
+claude-opus-5-5,9684334-13,2,Piscium,9684334,2-5,5,0.002168,36,end_turn,,1.0,1.0,True,,True,True,5,0,0,1.0,1.0,0,0,Seu Caryophyllo Lapideo Wagneri Eph. Germ. Ann. III.
+claude-opus-5-5,9684334-13,3,Piscium,9684334,2-5,5,0.002168,36,end_turn,,1.0,1.0,True,,True,True,5,0,0,1.0,1.0,0,0,Seu Caryophyllo Lapideo Wagneri Eph. Germ. Ann. III.
+claude-opus-5-5,9684334-13,4,Piscium,9684334,2-5,5,0.002168,36,end_turn,,1.0,1.0,True,,True,True,5,0,0,1.0,1.0,0,0,Seu Caryophyllo Lapideo Wagneri Eph. Germ. Ann. III.
+claude-opus-5-5,9684334-13,5,Piscium,9684334,2-5,5,0.002168,36,end_turn,,1.0,1.0,True,,True,True,5,0,0,1.0,1.0,0,0,Seu Caryophyllo Lapideo Wagneri Eph. Germ. Ann. III.
+claude-opus-5-5,9684334-13,6,Piscium,9684334,2-5,5,0.002168,36,end_turn,,1.0,1.0,True,,True,True,5,0,0,1.0,1.0,0,0,Seu Caryophyllo Lapideo Wagneri Eph. Germ. Ann. III.
+claude-opus-5-5,9684334-13,7,Piscium,9684334,2-5,5,0.002168,36,end_turn,,1.0,1.0,True,,True,True,5,0,0,1.0,1.0,0,0,Seu Caryophyllo Lapideo Wagneri Eph. Germ. Ann. III.
+claude-opus-5-5,9684334-17,0,Piscium,9684334,2-5,4,0.003032,85,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"Trutta Diluviana in Marmore ſubflavo, ex"
+claude-opus-5-5,9684334-17,1,Piscium,9684334,2-5,4,0.004072,137,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"Trutta Diluviana in Marmore ſubflavo, ex"
+claude-opus-5-5,9684334-17,2,Piscium,9684334,2-5,4,0.002972,82,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"Trutta Diluviana in Marmore ſubflavo, ex"
+claude-opus-5-5,9684334-17,3,Piscium,9684334,2-5,4,0.003852,126,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"Trutta Diluviana in Marmore ſubflavo, ex"
+claude-opus-5-5,9684334-17,4,Piscium,9684334,2-5,4,0.003592,113,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"Trutta Diluviana in Marmore ſubflavo, ex"
+claude-opus-5-5,9684334-17,5,Piscium,9684334,2-5,4,0.003012,84,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"Trutta Diluviana in Marmore ſubflavo, ex"
+claude-opus-5-5,9684334-17,6,Piscium,9684334,2-5,4,0.003472,107,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"Trutta Diluviana in Marmore ſubflavo, ex"
+claude-opus-5-5,9684334-17,7,Piscium,9684334,2-5,4,0.003912,129,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,1,1,"Trutta Diluviana in Marmore ſubflavo, ex"
+claude-opus-5-5,9684334-24,0,Piscium,9684334,2-5,4,0.001996,30,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ficantis Naturæ ſchemate, peculiari Lapidum Figura-"
+claude-opus-5-5,9684334-24,1,Piscium,9684334,2-5,4,0.001996,30,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ficantis Naturæ ſchemate, peculiari Lapidum Figura-"
+claude-opus-5-5,9684334-24,2,Piscium,9684334,2-5,4,0.001996,30,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ficantis Naturæ ſchemate, peculiari Lapidum Figura-"
+claude-opus-5-5,9684334-24,3,Piscium,9684334,2-5,4,0.001996,30,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ficantis Naturæ ſchemate, peculiari Lapidum Figura-"
+claude-opus-5-5,9684334-24,4,Piscium,9684334,2-5,4,0.001996,30,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ficantis Naturæ ſchemate, peculiari Lapidum Figura-"
+claude-opus-5-5,9684334-24,5,Piscium,9684334,2-5,4,0.001996,30,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ficantis Naturæ ſchemate, peculiari Lapidum Figura-"
+claude-opus-5-5,9684334-24,6,Piscium,9684334,2-5,4,0.001996,30,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ficantis Naturæ ſchemate, peculiari Lapidum Figura-"
+claude-opus-5-5,9684334-24,7,Piscium,9684334,2-5,4,0.001996,30,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"ficantis Naturæ ſchemate, peculiari Lapidum Figura-"
+claude-opus-5-5,9684334-32,0,Piscium,9684334,2-5,2,0.003204,96,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-opus-5-5,9684334-32,1,Piscium,9684334,2-5,2,0.003164,94,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-opus-5-5,9684334-32,2,Piscium,9684334,2-5,2,0.002604,66,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-opus-5-5,9684334-32,3,Piscium,9684334,2-5,2,0.003524,112,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-opus-5-5,9684334-32,4,Piscium,9684334,2-5,2,0.003184,95,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-opus-5-5,9684334-32,5,Piscium,9684334,2-5,2,0.003264,99,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-opus-5-5,9684334-32,6,Piscium,9684334,2-5,2,0.002804,76,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-opus-5-5,9684334-32,7,Piscium,9684334,2-5,2,0.001804,26,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,Agmen Piſcium Diluvianorum claudit Piſcis
+claude-opus-5-5,8967011-7,0,Reeve,8967011,2-5,2,0.007012,284,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-opus-5-5,8967011-7,1,Reeve,8967011,2-5,2,0.002072,37,end_turn,,1.0,1.0,True,,True,True,2,0,0,0.0,1.0,0,0,"BuLiMUs RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-opus-5-5,8967011-7,2,Reeve,8967011,2-5,2,0.002072,37,end_turn,,1.0,1.0,True,,True,True,2,0,0,0.0,1.0,0,0,"BuLiMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-opus-5-5,8967011-7,3,Reeve,8967011,2-5,2,0.002072,37,end_turn,,1.0,1.0,True,,True,True,2,0,0,0.0,1.0,0,0,"BuLiMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-opus-5-5,8967011-7,4,Reeve,8967011,2-5,2,0.006172,242,end_turn,,0.5,0.5,True,,True,True,2,1,0,0.0,1.0,0,0,"Bulimus rhodolarynx. Bul. testâ acuminato-ovatâ,"
+claude-opus-5-5,8967011-7,5,Reeve,8967011,2-5,2,0.002072,37,end_turn,,1.0,1.0,True,,True,True,2,0,0,0.0,1.0,0,0,"BuLIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-opus-5-5,8967011-7,6,Reeve,8967011,2-5,2,0.006012,234,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-opus-5-5,8967011-7,7,Reeve,8967011,2-5,2,0.004152,141,end_turn,,1.0,1.0,True,,True,True,2,0,0,1.0,1.0,0,0,"BULIMUS RHODOLARYNX. Bul. testâ acuminato-ovatâ,"
+claude-opus-5-5,8967011-19,0,Reeve,8967011,2-5,2,0.001724,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-opus-5-5,8967011-19,1,Reeve,8967011,2-5,2,0.001724,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-opus-5-5,8967011-19,2,Reeve,8967011,2-5,2,0.001724,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-opus-5-5,8967011-19,3,Reeve,8967011,2-5,2,0.001724,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-opus-5-5,8967011-19,4,Reeve,8967011,2-5,2,0.001724,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-opus-5-5,8967011-19,5,Reeve,8967011,2-5,2,0.001724,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-opus-5-5,8967011-19,6,Reeve,8967011,2-5,2,0.001724,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-opus-5-5,8967011-19,7,Reeve,8967011,2-5,2,0.001724,20,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"lens, with slightly raised oblique striae and engraved"
+claude-opus-5-5,8967011-32,0,Reeve,8967011,2-5,4,0.00202,35,end_turn,,1.0,1.0,True,,True,True,4,0,0,1.0,1.0,1,1,"BULIMUS DECUSSATUS. Bul. testâ acuminato-oblongâ,"
+claude-opus-5-5,8967011-32,1,Reeve,8967011,2-5,4,0.00202,35,end_turn,,1.0,1.0,True,,True,True,4,0,0,1.0,1.0,1,1,"BULIMUS DECUSSATUS. Bul. testâ acuminato-oblongâ,"
+claude-opus-5-5,8967011-32,2,Reeve,8967011,2-5,4,0.00202,35,end_turn,,1.0,1.0,True,,True,True,4,0,0,1.0,1.0,1,1,"BULIMUS DECUSSATUS. Bul. testâ acuminato-oblongâ,"
+claude-opus-5-5,8967011-32,3,Reeve,8967011,2-5,4,0.00202,35,end_turn,,1.0,1.0,True,,True,True,4,0,0,1.0,1.0,1,1,"BULIMUS DECUSSATUS. Bul. testâ acuminato-oblongâ,"
+claude-opus-5-5,8967011-32,4,Reeve,8967011,2-5,4,0.00202,35,end_turn,,1.0,1.0,True,,True,True,4,0,0,1.0,1.0,1,1,"BULIMUS DECUSSATUS. Bul. testâ acuminato-oblongâ,"
+claude-opus-5-5,8967011-32,5,Reeve,8967011,2-5,4,0.00202,35,end_turn,,1.0,1.0,True,,True,True,4,0,0,1.0,1.0,1,1,"BULIMUS DECUSSATUS. Bul. testâ acuminato-oblongâ,"
+claude-opus-5-5,8967011-32,6,Reeve,8967011,2-5,4,0.00202,35,end_turn,,1.0,1.0,True,,True,True,4,0,0,1.0,1.0,1,1,"BULIMUS DECUSSATUS. Bul. testâ acuminato-oblongâ,"
+claude-opus-5-5,8967011-32,7,Reeve,8967011,2-5,4,0.00202,35,end_turn,,1.0,1.0,True,,True,True,4,0,0,1.0,1.0,1,1,"BULIMUS DECUSSATUS. Bul. testâ acuminato-oblongâ,"
+claude-opus-5-5,8967011-38,0,Reeve,8967011,2-5,2,0.001656,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-opus-5-5,8967011-38,1,Reeve,8967011,2-5,2,0.001656,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-opus-5-5,8967011-38,2,Reeve,8967011,2-5,2,0.001656,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-opus-5-5,8967011-38,3,Reeve,8967011,2-5,2,0.001656,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-opus-5-5,8967011-38,4,Reeve,8967011,2-5,2,0.001656,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-opus-5-5,8967011-38,5,Reeve,8967011,2-5,2,0.001656,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-opus-5-5,8967011-38,6,Reeve,8967011,2-5,2,0.001656,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-opus-5-5,8967011-38,7,Reeve,8967011,2-5,2,0.001656,19,end_turn,,1.0,1.0,True,,True,True,2,0,0,,1.0,0,0,"tim decussatis, peculiariter notatâ."
+claude-opus-5-5,8967011-82,0,Reeve,8967011,2-5,4,0.003676,116,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"versus obliquè ventricosâ, inflatâ, anfractibus septem,"
+claude-opus-5-5,8967011-82,1,Reeve,8967011,2-5,4,0.001916,28,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"versus oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-opus-5-5,8967011-82,2,Reeve,8967011,2-5,4,0.003556,110,end_turn,,1.0,1.0,True,,True,True,4,0,0,,1.0,0,0,"versus obliquè ventricosâ, inflatâ, anfractibus septem,"
+claude-opus-5-5,8967011-82,3,Reeve,8967011,2-5,4,0.005076,186,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"versus oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-opus-5-5,8967011-82,4,Reeve,8967011,2-5,4,0.004956,180,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"versus oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-opus-5-5,8967011-82,5,Reeve,8967011,2-5,4,0.001916,28,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"versus oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-opus-5-5,8967011-82,6,Reeve,8967011,2-5,4,0.005656,215,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"versus oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-opus-5-5,8967011-82,7,Reeve,8967011,2-5,4,0.006636,264,end_turn,,0.75,0.75,True,,True,True,3,0,0,,0.75,0,0,"versus oblique ventricosâ, inflatâ, anfractibus septem,"
+claude-opus-5-5,8967011-86,0,Reeve,8967011,clean,0,0.001908,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo ; fulvescente-"
+claude-opus-5-5,8967011-86,1,Reeve,8967011,clean,0,0.001888,27,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo; fulvescente-"
+claude-opus-5-5,8967011-86,2,Reeve,8967011,clean,0,0.001908,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo ; fulvescente-"
+claude-opus-5-5,8967011-86,3,Reeve,8967011,clean,0,0.001908,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo ; fulvescente-"
+claude-opus-5-5,8967011-86,4,Reeve,8967011,clean,0,0.001908,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo ; fulvescente-"
+claude-opus-5-5,8967011-86,5,Reeve,8967011,clean,0,0.001908,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo ; fulvescente-"
+claude-opus-5-5,8967011-86,6,Reeve,8967011,clean,0,0.001888,27,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo; fulvescente-"
+claude-opus-5-5,8967011-86,7,Reeve,8967011,clean,0,0.001908,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"suborbiculari, labro effuso, non reflexo ; fulvescente-"
+claude-opus-5-5,8967011-87,0,Reeve,8967011,2-5,2,0.001832,24,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lactea, apicem versus cærulescente, lineis castaneis"
+claude-opus-5-5,8967011-87,1,Reeve,8967011,2-5,2,0.001832,24,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lactea, apicem versus cærulescente, lineis castaneis"
+claude-opus-5-5,8967011-87,2,Reeve,8967011,2-5,2,0.001832,24,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lactea, apicem versus cærulescente, lineis castaneis"
+claude-opus-5-5,8967011-87,3,Reeve,8967011,2-5,2,0.001832,24,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lactea, apicem versus cærulescente, lineis castaneis"
+claude-opus-5-5,8967011-87,4,Reeve,8967011,2-5,2,0.001832,24,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lactea, apicem versus cærulescente, lineis castaneis"
+claude-opus-5-5,8967011-87,5,Reeve,8967011,2-5,2,0.001832,24,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lactea, apicem versus cærulescente, lineis castaneis"
+claude-opus-5-5,8967011-87,6,Reeve,8967011,2-5,2,0.001832,24,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lactea, apicem versus cærulescente, lineis castaneis"
+claude-opus-5-5,8967011-87,7,Reeve,8967011,2-5,2,0.001832,24,end_turn,,0.0,0.0,True,,True,True,0,0,0,,0.0,0,0,"lactea, apicem versus cærulescente, lineis castaneis"
+claude-opus-5-5,8967011-98,0,Reeve,8967011,clean,0,0.001764,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-opus-5-5,8967011-98,1,Reeve,8967011,clean,0,0.001764,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-opus-5-5,8967011-98,2,Reeve,8967011,clean,0,0.001764,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-opus-5-5,8967011-98,3,Reeve,8967011,clean,0,0.001764,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-opus-5-5,8967011-98,4,Reeve,8967011,clean,0,0.001764,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-opus-5-5,8967011-98,5,Reeve,8967011,clean,0,0.001764,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-opus-5-5,8967011-98,6,Reeve,8967011,clean,0,0.001764,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-opus-5-5,8967011-98,7,Reeve,8967011,clean,0,0.001764,22,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"broadly vertically reflected, aperture obliquely sub-"
+claude-opus-5-5,12341902-10,0,Trudy,12341902,clean,0,0.004228,135,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-opus-5-5,12341902-10,1,Trudy,12341902,clean,0,0.002348,41,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,Fig. 7. Horniger Theil der Ligula mit den Speichelsäcken von Aeschna gran-
+claude-opus-5-5,12341902-10,2,Trudy,12341902,clean,0,0.002328,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-opus-5-5,12341902-10,3,Trudy,12341902,clean,0,0.004348,141,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-opus-5-5,12341902-10,4,Trudy,12341902,clean,0,0.002328,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-opus-5-5,12341902-10,5,Trudy,12341902,clean,0,0.002348,41,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,Fig. 7. Horniger Theil der Ligula mit den Speichelsäcken von Aeschna gran-
+claude-opus-5-5,12341902-10,6,Trudy,12341902,clean,0,0.002348,41,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,Fig. 7. Horniger Theil der Ligula mit den Speichelsäcken von Aeschna gran-
+claude-opus-5-5,12341902-10,7,Trudy,12341902,clean,0,0.002328,40,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Fig. 7. Horniger Theil der ligula mit den Speichelsäcken von Aeschna gran-
+claude-opus-5-5,12341902-11,0,Trudy,12341902,2-5,2,0.004588,147,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-opus-5-5,12341902-11,1,Trudy,12341902,2-5,2,0.004288,132,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-opus-5-5,12341902-11,2,Trudy,12341902,2-5,2,0.004008,118,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-opus-5-5,12341902-11,3,Trudy,12341902,2-5,2,0.003948,115,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-opus-5-5,12341902-11,4,Trudy,12341902,2-5,2,0.004528,144,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-opus-5-5,12341902-11,5,Trudy,12341902,2-5,2,0.003648,100,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-opus-5-5,12341902-11,6,Trudy,12341902,2-5,2,0.004008,118,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-opus-5-5,12341902-11,7,Trudy,12341902,2-5,2,0.004768,156,end_turn,,0.5,0.5,True,,True,True,1,0,0,,0.5,0,0,"dis L., Imago; a — Ausmündung der Speichelsäcke, b — dünneres Stück"
+claude-opus-5-5,12341902-21,0,Trudy,12341902,1,1,0.00206,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-opus-5-5,12341902-21,1,Trudy,12341902,1,1,0.00206,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-opus-5-5,12341902-21,2,Trudy,12341902,1,1,0.00206,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-opus-5-5,12341902-21,3,Trudy,12341902,1,1,0.00206,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-opus-5-5,12341902-21,4,Trudy,12341902,1,1,0.00206,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-opus-5-5,12341902-21,5,Trudy,12341902,1,1,0.00206,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-opus-5-5,12341902-21,6,Trudy,12341902,1,1,0.00206,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-opus-5-5,12341902-21,7,Trudy,12341902,1,1,0.00206,26,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,1,1,"Periplaneta orientalis, P. americana und Blatta germanica."
+claude-opus-5-5,12341902-22,0,Trudy,12341902,clean,0,0.002104,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-opus-5-5,12341902-22,1,Trudy,12341902,clean,0,0.002104,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-opus-5-5,12341902-22,2,Trudy,12341902,clean,0,0.002104,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-opus-5-5,12341902-22,3,Trudy,12341902,clean,0,0.002104,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-opus-5-5,12341902-22,4,Trudy,12341902,clean,0,0.002104,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-opus-5-5,12341902-22,5,Trudy,12341902,clean,0,0.002104,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-opus-5-5,12341902-22,6,Trudy,12341902,clean,0,0.002104,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-opus-5-5,12341902-22,7,Trudy,12341902,clean,0,0.002104,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,Hier will ich einige Resultate dieser Untersuchungen in Be-
+claude-opus-5-5,12341902-23,0,Trudy,12341902,1,1,0.002932,70,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,0,0,treff der Anatomie der Speicheldrüsen dieser Insekten und ins-
+claude-opus-5-5,12341902-23,1,Trudy,12341902,1,1,0.002152,31,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,0,0,treff der Anatomie der Speicheldrüsen dieser Insekten und ins-
+claude-opus-5-5,12341902-23,2,Trudy,12341902,1,1,0.002932,70,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,0,0,treff der Anatomie der Speicheldrüsen dieser Insekten und ins-
+claude-opus-5-5,12341902-23,3,Trudy,12341902,1,1,0.003112,79,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,0,0,treff der Anatomie der Speicheldrüsen dieser Insekten und ins-
+claude-opus-5-5,12341902-23,4,Trudy,12341902,1,1,0.002152,31,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,0,0,treff der Anatomie der Speicheldrüsen dieser Insekten und ins-
+claude-opus-5-5,12341902-23,5,Trudy,12341902,1,1,0.002152,31,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,0,0,treff der Anatomie der Speicheldrüsen dieser Insekten und ins-
+claude-opus-5-5,12341902-23,6,Trudy,12341902,1,1,0.003032,75,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,0,0,treff der Anatomie der Speicheldrüsen dieser Insekten und ins-
+claude-opus-5-5,12341902-23,7,Trudy,12341902,1,1,0.003352,91,end_turn,,1.0,1.0,True,,True,True,1,0,0,,1.0,0,0,treff der Anatomie der Speicheldrüsen dieser Insekten und ins-
+claude-opus-5-5,12341902-31,0,Trudy,12341902,clean,0,0.0022,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-opus-5-5,12341902-31,1,Trudy,12341902,clean,0,0.0022,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-opus-5-5,12341902-31,2,Trudy,12341902,clean,0,0.0022,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-opus-5-5,12341902-31,3,Trudy,12341902,clean,0,0.0022,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-opus-5-5,12341902-31,4,Trudy,12341902,clean,0,0.0022,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-opus-5-5,12341902-31,5,Trudy,12341902,clean,0,0.0022,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-opus-5-5,12341902-31,6,Trudy,12341902,clean,0,0.0022,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-opus-5-5,12341902-31,7,Trudy,12341902,clean,0,0.0022,31,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"(fig. 1. A) und aus einem länglichen, halbdurchsichtigen"
+claude-opus-5-5,12341902-34,0,Trudy,12341902,clean,0,0.002108,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-opus-5-5,12341902-34,1,Trudy,12341902,clean,0,0.002108,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-opus-5-5,12341902-34,2,Trudy,12341902,clean,0,0.002108,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-opus-5-5,12341902-34,3,Trudy,12341902,clean,0,0.002108,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-opus-5-5,12341902-34,4,Trudy,12341902,clean,0,0.002108,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-opus-5-5,12341902-34,5,Trudy,12341902,clean,0,0.002108,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-opus-5-5,12341902-34,6,Trudy,12341902,clean,0,0.002108,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-opus-5-5,12341902-34,7,Trudy,12341902,clean,0,0.002108,28,end_turn,,1.0,1.0,True,,True,True,0,0,0,,,0,0,"kleidet, welche an seinem blinden hinteren Ende etwas höher"
+claude-opus-5-5,12341902-37,0,Trudy,12341902,clean,0,0.002276,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-opus-5-5,12341902-37,1,Trudy,12341902,clean,0,0.002276,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-opus-5-5,12341902-37,2,Trudy,12341902,clean,0,0.002276,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-opus-5-5,12341902-37,3,Trudy,12341902,clean,0,0.002276,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-opus-5-5,12341902-37,4,Trudy,12341902,clean,0,0.002276,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-opus-5-5,12341902-37,5,Trudy,12341902,clean,0,0.002276,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-opus-5-5,12341902-37,6,Trudy,12341902,clean,0,0.002276,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
+claude-opus-5-5,12341902-37,7,Trudy,12341902,clean,0,0.002276,34,end_turn,,0.5,0.5,True,,True,True,0,1,0,,,0,0,heit besitzt. Zahlreiche kleinere Ausführungsgänge des acinö-
