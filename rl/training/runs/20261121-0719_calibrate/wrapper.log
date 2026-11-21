@@ -1,0 +1,2 @@
+[07:19:41] run 20261121-0719_calibrate: stage=calibrate max=30 min at $0.89/h on pod 75nja45caj9wlf
+[07:20:02] outcome=error (exit 1) minutes=0
