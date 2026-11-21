@@ -1,0 +1,10 @@
+{
+  "run_id": "20261121-0708_stoptest",
+  "stage": "stoptest",
+  "outcome": "success",
+  "minutes": 1.05,
+  "usd_estimate": 0.0156,
+  "usd_per_hour": 0.89,
+  "pod_id": "ngazbopgxcomk4",
+  "gpu": "NVIDIA+GeForce+RTX+4090"
+}
