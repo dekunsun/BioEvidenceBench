@@ -1,0 +1,17 @@
+set,model,edit_rate,broken_per_answer,inserted_per_answer,edit_precision
+p0_test_inbook,base,0.497,0.361,0.51,0.042
+p0_test_inbook,sft_s1,0.61,0.127,-0.007,0.41
+p0_test_inbook,sft_s2,0.618,0.132,0.084,0.426
+p0_test_inbook,grpo_s1,0.07,0.036,0.004,0.048
+p0_test_inbook,grpo_s2,0.166,0.028,0.246,0.175
+p0_test_inbook,sft_grpo_s1,0.6,0.098,-0.006,0.427
+p0_test_inbook,sft_grpo_s2,0.602,0.099,0.034,0.441
+p0_test_inbook,grpo_cer_s1,0.263,0.028,0.154,0.092
+p0_test_cuvier,base,0.454,0.326,0.29,0.048
+p0_test_cuvier,sft_s1,0.35,0.14,-0.014,0.187
+p0_test_cuvier,sft_s2,0.336,0.13,0.022,0.189
+p0_test_cuvier,grpo_s1,0.028,0.006,0.0,0.045
+p0_test_cuvier,grpo_s2,0.072,0.01,-0.001,0.083
+p0_test_cuvier,sft_grpo_s1,0.32,0.116,-0.016,0.188
+p0_test_cuvier,sft_grpo_s2,0.318,0.101,-0.01,0.211
+p0_test_cuvier,grpo_cer_s1,0.14,0.041,-0.002,0.106
