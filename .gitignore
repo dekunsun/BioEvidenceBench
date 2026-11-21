@@ -17,3 +17,6 @@ adept_repro/.assets/
 adept_repro/outputs/logs/*.log
 results/vision_boxes/*.png
 results/*.log
+
+# live watcher logs of running pods (copied into rl/training/runs/<run_id>/ when the run ends)
+rl/training/runpod/watch_*.log
