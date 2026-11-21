@@ -192,6 +192,19 @@ def main() -> None:
                         "plain_s": T.expert_text(p).count("s")} for p in pis])
     pl.to_csv(OUT / "piscium_long_s.csv", index=False)
 
+    if audit_is_recorded():
+        print("audit_sample.csv already holds verdicts: the audit is a record and is not redrawn")
+    else:
+        draw_audit(d)
+    write_stats(split, d, missing, v, per_book, sims, dmg, dmg_n, words, gain, flags, per_split, aside_sum, pl)
+
+
+def audit_is_recorded() -> bool:
+    f = OUT / "audit_sample.csv"
+    return f.exists() and pd.read_csv(f).claude_verdict.fillna("").astype(str).str.len().gt(0).any()
+
+
+def draw_audit(d: pd.DataFrame) -> None:
     # audit sample: 100 pairs over similarity buckets (low-confidence buckets weighted up), every book
     # represented, drawn uniformly within book x bucket. Pairs audited in round 1 are left out, so
     # round 2 is an independent check of the fixed build. (Round 1 drew from a fixed window with
@@ -243,6 +256,9 @@ def main() -> None:
         ga.to_excel(xw, sheet_name="pairs", index=False)
         howto.to_excel(xw, sheet_name="说明", index=False)
 
+
+
+def write_stats(split, d, missing, v, per_book, sims, dmg, dmg_n, words, gain, flags, per_split, aside_sum, pl) -> None:
     digest = {s: hashlib.sha256((UNITS / f"{s}.jsonl").read_bytes()).hexdigest() for s in SPLIT_NAMES}
     why_missing = missing.error.str.replace(r" \(.*", "", regex=True).value_counts()
     lines = ["# Task B step 4: units, alignment and damage per book", "",
