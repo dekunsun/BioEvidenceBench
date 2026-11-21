@@ -80,12 +80,16 @@ SFT keeps only half its gain and repairs no ligature.
 | Known evaluation weaknesses disclosed | **Pass** | reward holes H1–H5 and the dash-glyph share in the card |
 | Contamination disclosed | **Pass** | in the card |
 
-## 6. Publishing steps (Gloria, on github.com; publishing is outward-facing, so it is done by hand)
+## 6. Publishing (Gloria, 2026-11-21: "你直接发就可以")
 
-1. Open the draft *rl 7b checkpoints 20261121-2008_sft600s2* (Releases → Drafts).
-2. Delete the assets `sft_grpo_s2.tar` and `release_probe.txt`; keep `sft_s2.tar`.
-3. Tag: `rl-sft-ocr-repair-v1`, target commit `c994ade32023c944ee47c44699b47ab915fe687f`.
-4. Title: *OCR line repair: Qwen3-0.6B + SFT (research checkpoint, not for automatic replacement)*.
-5. Notes: paste `rl/release/MODEL_CARD_sft_s2.md`; add the SHA-256 shown next to `sft_s2.tar`.
-6. Not a pre-release, not "latest" if GitHub asks; publish. Then send the link, and the README and
-   `TRAINING_REPORT.md` will point to it.
+Claude publishes. This session has no tool that edits releases, so a short RunPod pod (no GPU work)
+runs `rl/release/publish_release.py` with the repository token from RunPod Secrets. The script:
+1. downloads `sft_s2.tar` and checks its size against the frozen model list;
+2. computes the SHA-256 and lists the files inside, and stops if any file is not a model or
+   tokenizer file;
+3. creates a new release `rl-sft-ocr-repair-v1` at the training commit `c994ade`, with the model
+   card and the SHA-256 as notes;
+4. uploads the same file, checks GitHub's digest against the SHA-256, then publishes.
+
+The private drafts are left unchanged, so the D, C and C-CER checkpoints stay unpublished.
+Result: `rl/release/publish_result.json`.

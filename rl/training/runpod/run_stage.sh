@@ -165,6 +165,9 @@ case "$STAGE" in
     export RUN_ID
     run_job "$SETUP && $VENV/bin/python rl/training/stage3_p0.py all --seed 1 --conditions grpo_cer --out '$WS' --ckpt-root /workspace/ckpt --price '$PRICE'"
     ;;
+  publish)   # 7d: publish the research checkpoint (rl/release/publish_release.py); no GPU work
+    run_job "cd '$REPO' && (python3 -m venv /opt/pv || python3 -m virtualenv /opt/pv) && /opt/pv/bin/pip install -q requests && /opt/pv/bin/python rl/release/publish_release.py --out '$WS'"
+    ;;
   test4)   # stage 4: frozen models on the locked test sets (TEST_PROTOCOL.md)
     run_job "$SETUP && cd rl/training && $VENV/bin/python stage4_test.py --out '$WS'"
     ;;
