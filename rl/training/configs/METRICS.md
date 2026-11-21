@@ -2,7 +2,7 @@
 
 *Drafted by Claude 2026-11-21 from `rl/PLAN_zh.md` 7b–7c and the step 4–5 results. Nothing here is
 final until Gloria approves it; once approved, it is committed and not changed before the test
-evaluation. Items marked **[DECIDE]** need her choice. GPU budget: $10 hard cap in total.*
+evaluation. Items marked **[DECIDE]** need her choice. GPU budget: $20 hard cap in total, RunPod only.*
 
 ## 1. Data
 
