@@ -1,0 +1,4 @@
+[21:12:31] run 20261121-2112_test4: stage=test4 max=120 min at $0.89/h on pod 32yf3x7nkkqup9
+[21:12:31] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID 32yf3x7nkkqup9
+[21:12:31] read check: Error: Unauthorized 
+[21:29:05] outcome=success minutes=16

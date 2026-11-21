@@ -1,0 +1,165 @@
+{
+ "config": {
+  "k": 8,
+  "decoding": {
+   "temperature": 0.7,
+   "top_p": 0.8,
+   "top_k": 20,
+   "min_p": 0.0
+  },
+  "seed": 20261121,
+  "prompt": "repair_v3",
+  "larger_confirmation_grpo_condition": "sft_grpo",
+  "dev_mean_repair_post": {
+   "grpo": 0.0341,
+   "sft_grpo": 0.35
+  },
+  "models": [
+   {
+    "label": "base",
+    "condition": "A",
+    "sets": [
+     "p0_test_inbook",
+     "p0_test_cuvier",
+     "p0_test_inbook_rest"
+    ]
+   },
+   {
+    "label": "sft_s1",
+    "condition": "B",
+    "seed": 1,
+    "run": "20261121-2007_sft600s1",
+    "dev_step": 600,
+    "asset_name": "sft_s1.tar",
+    "asset_id": 776862293,
+    "size": 1203578880,
+    "sets": [
+     "p0_test_inbook",
+     "p0_test_cuvier",
+     "p0_test_inbook_rest"
+    ]
+   },
+   {
+    "label": "sft_s2",
+    "condition": "B",
+    "seed": 2,
+    "run": "20261121-2008_sft600s2",
+    "dev_step": 400,
+    "asset_name": "sft_s2.tar",
+    "asset_id": 776877455,
+    "size": 1203578880,
+    "sets": [
+     "p0_test_inbook",
+     "p0_test_cuvier",
+     "p0_test_inbook_rest"
+    ]
+   },
+   {
+    "label": "grpo_s1",
+    "condition": "C",
+    "seed": 1,
+    "run": "20261121-1832_p0s1",
+    "dev_step": 300,
+    "asset_name": "grpo_s1.tar",
+    "asset_id": 776706382,
+    "size": 1203578880,
+    "sets": [
+     "p0_test_inbook",
+     "p0_test_cuvier"
+    ]
+   },
+   {
+    "label": "grpo_s2",
+    "condition": "C",
+    "seed": 2,
+    "run": "20261121-1832_p0s2",
+    "dev_step": 300,
+    "asset_name": "grpo_s2.tar",
+    "asset_id": 776673928,
+    "size": 1203578880,
+    "sets": [
+     "p0_test_inbook",
+     "p0_test_cuvier"
+    ]
+   },
+   {
+    "label": "sft_grpo_s1",
+    "condition": "D",
+    "seed": 1,
+    "run": "20261121-2007_sft600s1",
+    "dev_step": 50,
+    "asset_name": "sft_grpo_s1.tar",
+    "asset_id": 776864258,
+    "size": 1203578880,
+    "sets": [
+     "p0_test_inbook",
+     "p0_test_cuvier",
+     "p0_test_inbook_rest"
+    ]
+   },
+   {
+    "label": "sft_grpo_s2",
+    "condition": "D",
+    "seed": 2,
+    "run": "20261121-2008_sft600s2",
+    "dev_step": 50,
+    "asset_name": "sft_grpo_s2.tar",
+    "asset_id": 776879369,
+    "size": 1203578880,
+    "sets": [
+     "p0_test_inbook",
+     "p0_test_cuvier",
+     "p0_test_inbook_rest"
+    ]
+   },
+   {
+    "label": "grpo_cer_s1",
+    "condition": "C-CER (P1)",
+    "seed": 1,
+    "run": "20261121-2022_p1cer",
+    "dev_step": 250,
+    "asset_name": "grpo_cer_s1.tar",
+    "asset_id": 776872376,
+    "size": 1203578880,
+    "sets": [
+     "p0_test_inbook",
+     "p0_test_cuvier"
+    ]
+   }
+  ]
+ },
+ "models": {
+  "base": {
+   "exit": 0,
+   "seconds": 101.7
+  },
+  "sft_s1": {
+   "exit": 0,
+   "seconds": 124.9
+  },
+  "sft_s2": {
+   "exit": 0,
+   "seconds": 126.8
+  },
+  "grpo_s1": {
+   "exit": 0,
+   "seconds": 77.2
+  },
+  "grpo_s2": {
+   "exit": 0,
+   "seconds": 80.1
+  },
+  "sft_grpo_s1": {
+   "exit": 0,
+   "seconds": 126.5
+  },
+  "sft_grpo_s2": {
+   "exit": 0,
+   "seconds": 124.9
+  },
+  "grpo_cer_s1": {
+   "exit": 0,
+   "seconds": 78.2
+  }
+ }
+}
