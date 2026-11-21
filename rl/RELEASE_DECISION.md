@@ -1,6 +1,6 @@
 # Release decision: module 7b checkpoints (7d)
 
-*Draft by Claude, 2026-11-21, for Gloria's decision. Evidence: `rl/TRAINING_REPORT.md`,
+*Drafted by Claude, decided by Gloria on 2026-11-21 (section 4). Evidence: `rl/TRAINING_REPORT.md`,
 `rl/training/runs/STAGE4_TEST_REPORT.md`, `rl/training/results_7c/ATTRIBUTION_7C.md`,
 `rl/REWARD_AUDIT.md` part 2. Nothing here changes a test result or a checkpoint.*
 
@@ -56,3 +56,36 @@ SFT keeps only half its gain and repairs no ligature.
 | Make the weights public | **Gloria's decision** (the draft releases are private). If yes: a model card with the task, data licences (BHL / IMPACT, CC-BY 3.0; Qwen3 Apache 2.0), the test numbers, the regressions above and "not for automatic replacement" | Publishing is outward-facing |
 | Keep investing in GRPO on this setup | **No** | Two seeds, two rewards, and an SFT start all show no repair gain; the cause (the policy rarely samples correct repairs; copying is a safe floor) is understood |
 | Any further training | Optional, one small experiment (about $2–3 of the remaining about $14): Reward v1.4 (dash glyphs unified, H4 fixed), GRPO from B with pass@8 measured first; or rejection-sampling fine-tuning as the cheaper alternative. Only with a new dev-only plan and a new locked test | Tests the one open question (does GRPO help when the group already contains repairs?) without reopening this round |
+
+## 4. Decision (Gloria, 2026-11-21: "按你的建议，同意选择 B Seed 2；同意在完成发布前检查后公开研究权重；暂时不再开展新的 GPU 训练实验")
+
+1. **Checkpoint: B, SFT seed 2** (`sft_s2.tar`, draft release `rl-ckpt-20261121-2008_sft600s2`). No
+   production use.
+2. **Publish the weights as a research checkpoint after the pre-release checks below.**
+3. **No new GPU training for now.** Reward v1.4 stays planned, not built. GPU spend stays at $5.83 of $20.
+   The other draft releases (C, D, C-CER and D seed 1) stay private drafts.
+
+## 5. Pre-release checks
+
+| Check | Result | How |
+|---|---|---|
+| The file is the checkpoint that was tested | **Pass** | `stage4_models.json` (frozen) names asset 776877455, 1,203,578,880 bytes; the stage-4 pod downloaded that asset and checked its size before evaluating |
+| SHA-256 of the file | **Open (Gloria)** | drafts are not readable through the API from this session; GitHub shows each asset's SHA-256 on the release page: copy it into the release notes |
+| Contents: model files only, no secret | **Pass from the code; folder not opened** | the tar is built from a folder written only by `save_pretrained` (model, tokenizer) (`stage3_p0.to_bf16`); the GitHub token was only an environment variable on the pod and is never written to disk |
+| Base model licence | **Pass** | `Qwen/Qwen3-0.6B`: Apache 2.0 (Hugging Face card, checked 2026-11-21) |
+| Data licences and rights | **Pass** | `finebooks/bhl-impact-gt` CC-BY 3.0 (attribution in the card); BHL `CopyrightStatus` of all six items: not in copyright / public domain |
+| Personal or sensitive data | **Pass** | 19th- and early-20th-century printed natural history; no Cal Academy or private data |
+| Model card with intended use, results, regressions, out-of-scope use | **Pass** | `rl/release/MODEL_CARD_sft_s2.md` |
+| Results reproducible from the repository | **Pass** | code commit `c994ade`, run folder, data hashes, prompt file, decoding in the card |
+| Known evaluation weaknesses disclosed | **Pass** | reward holes H1–H5 and the dash-glyph share in the card |
+| Contamination disclosed | **Pass** | in the card |
+
+## 6. Publishing steps (Gloria, on github.com; publishing is outward-facing, so it is done by hand)
+
+1. Open the draft *rl 7b checkpoints 20261121-2008_sft600s2* (Releases → Drafts).
+2. Delete the assets `sft_grpo_s2.tar` and `release_probe.txt`; keep `sft_s2.tar`.
+3. Tag: `rl-sft-ocr-repair-v1`, target commit `c994ade32023c944ee47c44699b47ab915fe687f`.
+4. Title: *OCR line repair: Qwen3-0.6B + SFT (research checkpoint, not for automatic replacement)*.
+5. Notes: paste `rl/release/MODEL_CARD_sft_s2.md`; add the SHA-256 shown next to `sft_s2.tar`.
+6. Not a pre-release, not "latest" if GitHub asks; publish. Then send the link, and the README and
+   `TRAINING_REPORT.md` will point to it.
