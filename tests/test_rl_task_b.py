@@ -214,3 +214,8 @@ def test_mixed_latin_cyrillic_word_in_reference_is_found():
 ])
 def test_leader_dot_lines_are_found(line, hit):
     assert bool(T.LEADERS.search(line)) == hit
+
+
+def test_typographic_apostrophes_are_folded():
+    unit = u(T.nfc("the Canary’s song"), "the Canary's song", [False] * 3)   # texts are normalised on load
+    assert T.nfc("Canary’s ‘song’") == "Canary's 'song'" and unit["n_damaged"] == 0

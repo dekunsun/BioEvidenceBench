@@ -2,7 +2,7 @@
 
 *Task B: repair one line of legacy OCR so it matches the expert transcription, changing only
 recognition errors. Implementation: `src/rl_task_b.py`. Fixed unit tests:
-`tests/test_rl_task_b.py` (48 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
+`tests/test_rl_task_b.py` (49 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
 first experimental setting, not validated optima; they are checked on development data before
 any training run.*
 
@@ -72,6 +72,8 @@ Ordinary extra words are not format errors: they cost 0.25 each.
 - **NFC only, never NFKC.**
 - **Typographic ligatures folded** (U+FB00–FB06: ﬀ ﬁ ﬂ ﬃ ﬄ ﬅ ﬆ → letters) in every text. They are
   glyphs, not spelling: the transcription types `ﬁnest` where OCR writes `finest`.
+- **Typographic apostrophes folded** (U+2019 ’ and U+2018 ‘ → `'`; Gloria, 2026-11-21, after the
+  step 5 pilot): the transcription types `Canary’s` where the OCR reads `Canary's`.
 - **Spelling letters kept**: æ and œ (`Linnaeus` for `Linnæus` is a broken word), and the long s ſ.
 - **Long s, two measures.** The main reward keeps the transcription's glyph (`species` for `ſpecies`
   is wrong). `reward_reading` is the same reward with ſ and s treated as one letter, to show how much
@@ -172,4 +174,4 @@ word is repaired by its letters in any case.
 |---|---|---|---|
 | v1.0 | 2026-11-20 | Weighted damaged-word repair minus λ·min(1, B/max(1,|D|)); clean lines 1 − B/|C| | Gloria (from an external review) |
 | v1.1 | 2026-11-20 | Fixed penalties 0.5 per broken word, 0.25 per inserted word, clipped to [−1, 1]; hard format gate; repair requires the damaged token to be gone; long s kept in the main reward plus a reading metric; ligature folding | Gloria |
-| v1.2 | 2026-11-20 | Case-only words neutral (letters must survive); case-free repair of small-caps words; case diagnostics; MUFI ligatures folded; references with U+FFFD or unidentified private-use characters invalid; unreliable imprints and captions set aside | Gloria (from the step 4 audit) |
+| v1.2 | 2026-11-20/21 | Typographic apostrophes folded (21st, after the step 5 pilot); case-only words neutral (letters must survive); case-free repair of small-caps words; case diagnostics; MUFI ligatures folded; references with U+FFFD or unidentified private-use characters invalid; unreliable imprints and captions set aside | Gloria (from the step 4 audit) |

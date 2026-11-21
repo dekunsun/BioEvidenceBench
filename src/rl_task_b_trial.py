@@ -1,6 +1,7 @@
 """Task B step 5: model trial and within-group reward variance (plan 6.7, 6.8).
 
-    python src/rl_task_b_trial.py --pages pilot5 --max-usd 4            # the 5-page pilot
+    python src/rl_task_b_trial.py --pages pilot5 --prompt repair_v1 --max-usd 4   # the 5-page pilot
+    python src/rl_task_b_trial.py --pages dev200 --max-usd 6                     # 200 dev items
     python src/rl_task_b_trial.py --report <run_id>                     # re-score and re-report
 
 For each item (one OCR line, with the OCR lines before and after it as context) each model is
@@ -38,9 +39,12 @@ from common import CACHE, ROOT
 ENV = ROOT / "rl" / "env" / "task_b_ocr_repair"
 TRIAL = ENV / "trial"
 UNITS = CACHE / "taskb" / "units"
-PROMPT = ENV / "prompts" / "repair_v1.txt"
-PROMPT_VERSION = "repair_v1"
+PROMPTS = ENV / "prompts"
+# repair_v1: the 5-page pilot. repair_v2 (Gloria, 2026-11-21): adds that letter-spaced words are
+# written without the spaces, the transcription's convention.
+PROMPT_VERSION = "repair_v2"
 SEED = 20261121
+PILOT_PAGES = (8967011, 8992478, 9684334, 9739676, 12341902)   # the 5-page pilot (prompt repair_v1)
 PRICES = {"claude-opus-5-5": (4.00, 20.00), "claude-haiku-5-5": (0.10, 0.50)}   # USD per M tokens in/out
 BOOKS = {"Butler": ("Birds of Great Britain and Ireland, vol. 2", 1907, "English"),
          "Reeve": ("Conchologia iconica, vol. 5", 1849, "Latin and English"),
@@ -50,8 +54,8 @@ BOOKS = {"Butler": ("Birds of Great Britain and Ireland, vol. 2", 1907, "English
          "Piscium": ("Piscium querelae et vindiciae", 1708, "Latin")}
 
 
-def load_prompt() -> tuple[str, str]:
-    text = PROMPT.read_text(encoding="utf-8")
+def load_prompt(version: str = PROMPT_VERSION) -> tuple[str, str]:
+    text = (PROMPTS / f"{version}.txt").read_text(encoding="utf-8")
     system = text.split("=== system ===\n", 1)[1].split("=== user ===\n", 1)[0].strip()
     user = text.split("=== user ===\n", 1)[1].strip()
     return system, user
@@ -59,6 +63,41 @@ def load_prompt() -> tuple[str, str]:
 
 def damage_class(n: int) -> str:
     return "clean" if n == 0 else "1" if n == 1 else "2-5" if n <= 5 else ">5"
+
+
+def with_context(us: list[dict], idx: pd.DataFrame) -> list[dict]:
+    """Add the OCR of the neighbouring expert lines (valid or not) as context."""
+    out = []
+    for u in sorted(us, key=lambda u: (u["page_id"], u["line_no"])):
+        ctx = idx[idx.page_id == u["page_id"]].set_index("line_no").input.fillna("")
+        u = dict(u)
+        u["prev"] = ctx.get(u["line_no"] - 1, "") or "(none)"
+        u["next"] = ctx.get(u["line_no"] + 1, "") or "(none)"
+        u["item_id"] = f"{u['page_id']}-{u['line_no']}"
+        u["damage_class"] = damage_class(u["n_damaged"])
+        out.append(u)
+    return out
+
+
+def select_dev200(per_book: int = 40, clean: int = 8, exclude_pages: tuple = PILOT_PAGES) -> list[dict]:
+    """40 dev items per training book, pilot pages left out: 32 damaged (2-5 damaged words first,
+    then 1, then more than 5) and 8 clean (20%), drawn with a fixed seed; a book with too few of
+    one kind is filled from the other."""
+    units = [json.loads(line) for line in (UNITS / "dev.jsonl").open(encoding="utf-8")]
+    assert all(u["split"] == "dev" for u in units)
+    idx = pd.read_csv(UNITS / "all_units_index.csv")
+    rng = random.Random(f"{SEED}-dev200")
+    items = []
+    for book in sorted(BOOKS):
+        us = [u for u in units if u["book"] == book and u["page_id"] not in exclude_pages]
+        cls = {c: [u for u in us if damage_class(u["n_damaged"]) == c] for c in ("2-5", "1", ">5", "clean")}
+        for c in cls:
+            rng.shuffle(cls[c])
+        n_dmg = per_book - min(clean, len(cls["clean"]))
+        dmg = (cls["2-5"] + cls["1"] + cls[">5"])[:n_dmg]
+        cl = cls["clean"][:per_book - len(dmg)]
+        items += with_context(dmg + cl, idx)
+    return items
 
 
 def select_items(n_pages: int = 5, per_page: int = 8) -> list[dict]:
@@ -93,18 +132,19 @@ def select_items(n_pages: int = 5, per_page: int = 8) -> list[dict]:
 
 def run(args) -> str:
     import anthropic
-    system, user_tpl = load_prompt()
-    items = select_items()
+    system, user_tpl = load_prompt(args.prompt)
+    items = select_items() if args.pages == "pilot5" else select_dev200()
     run_id = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M") + f"_taskb_trial_{args.pages}"
     out = TRIAL / run_id
     out.mkdir(parents=True, exist_ok=True)
-    (out / "prompt.txt").write_text(PROMPT.read_text(encoding="utf-8"), encoding="utf-8")
+    prompt_file = PROMPTS / f"{args.prompt}.txt"
+    (out / "prompt.txt").write_text(prompt_file.read_text(encoding="utf-8"), encoding="utf-8")
     with (out / "items.jsonl").open("w", encoding="utf-8") as f:
         for it in items:
             f.write(json.dumps(it, ensure_ascii=False) + "\n")
     config = {"run_id": run_id, "models": args.models, "k": args.k, "effort": "low", "temperature": "not sent (default 1.0)",
-              "thinking": "model default (adaptive)", "max_tokens": 2000, "prompt_version": PROMPT_VERSION,
-              "prompt_sha256": hashlib.sha256(PROMPT.read_bytes()).hexdigest(),
+              "thinking": "model default (adaptive)", "max_tokens": 2000, "prompt_version": args.prompt,
+              "prompt_sha256": hashlib.sha256(prompt_file.read_bytes()).hexdigest(),
               "dev_units_sha256": hashlib.sha256((UNITS / "dev.jsonl").read_bytes()).hexdigest(),
               "reward": "Reward v1.2 (rl/env/task_b_ocr_repair/REWARD_DESIGN.md)", "seed": SEED,
               "pages": sorted({it["page_id"] for it in items}), "n_items": len(items), "max_usd": args.max_usd,
@@ -204,14 +244,20 @@ def report(run_id: str) -> None:
              (reasons.to_frame("n").to_markdown() if len(reasons) else "No format failures."), "",
              "## Within-group signal per model", "", tab(["model"]).to_markdown(), "",
              "## By damage class", "", tab(["model", "damage_class"]).to_markdown(), "",
-             "## By book", "", tab(["model", "book"]).to_markdown(), ""]
+             "## By book", "", tab(["model", "book"]).to_markdown(), "",
+             "## Pass-rate distribution (share of items)", "",
+             pd.crosstab(g.model, pd.cut(g.pass_rate, [-0.01, 0, 0.1, 0.9, 0.99, 1.0],
+                                         labels=["0", "(0, 0.1]", "(0.1, 0.9]", "(0.9, 1)", "1"]),
+                         normalize="index").round(3).to_markdown(), "",
+             "Items with a pass rate in (0.1, 0.9] are the plan's mid-difficulty band (plan 9).", ""]
     (out / "REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--pages", default="pilot5", choices=["pilot5"])
+    ap.add_argument("--pages", default="pilot5", choices=["pilot5", "dev200"])
+    ap.add_argument("--prompt", default=PROMPT_VERSION)
     ap.add_argument("--models", nargs="+", default=["claude-haiku-5-5", "claude-opus-5-5"])
     ap.add_argument("--k", type=int, default=8)
     ap.add_argument("--max-usd", type=float, default=4.0)
@@ -222,7 +268,7 @@ def main() -> None:
         report(args.report)
         return
     if args.dry_run:
-        for it in select_items():
+        for it in (select_items() if args.pages == "pilot5" else select_dev200()):
             print(it["item_id"], it["book"], it["damage_class"], "|", it["input"][:70], "|", it["target"][:70])
         return
     report(run(args))

@@ -54,8 +54,11 @@ GNFINDER = "/tmp/claude-0/-home-user/b6a70ceb-f87e-5d66-a2c3-ae166d1e15d1/scratc
 # points (Medieval Unicode Font Initiative). Readings were taken from the words they occur in
 # (e.g. e+U+EADA = "eſt", fo+U+EBA7+libus = "foſſilibus"), 2026-11-20, step 4 audit.
 _MUFI = {"\ueada": "ſt", "\ueba2": "ſi", "\ueba6": "ſſ", "\ueba7": "ſſi", "\ueec5": "ct"}
+# Typographic apostrophes (U+2019, U+2018) are a glyph, not spelling: the transcription types
+# `Canary’s` where the OCR reads `Canary's`. Folded to ' (Gloria, 2026-11-21, after the step 5 pilot).
+_APOSTROPHES = {"\u2019": "'", "\u2018": "'"}
 _PRESENTATION = str.maketrans({"\ufb00": "ff", "\ufb01": "fi", "\ufb02": "fl", "\ufb03": "ffi",
-                               "\ufb04": "ffl", "\ufb05": "ſt", "\ufb06": "st"} | _MUFI)
+                               "\ufb04": "ffl", "\ufb05": "ſt", "\ufb06": "st"} | _MUFI | _APOSTROPHES)
 # A reference line that still holds U+FFFD (a glyph the transcription could not encode: Greek in
 # Piscium, sex symbols and fractions in Butler's plate captions) or an unidentified private-use
 # character cannot be a target: no output can match it. Such lines are marked invalid.
