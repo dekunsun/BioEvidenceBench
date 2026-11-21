@@ -1,0 +1,20 @@
+,v13,v13,v13,cer,cer,cer,high_v13,high_v13,high_v13,identical,identical,identical
+line,clean,"damaged, name","damaged, no name",clean,"damaged, name","damaged, no name",clean,"damaged, name","damaged, no name",clean,"damaged, name","damaged, no name"
+probe,,,,,,,,,,,,
+honest: expert line,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+copy the OCR,1.0,0.0,0.0,0.983,0.808,0.898,1.0,0.0,0.0,0.705,0.0,0.0
+empty,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"fix ordinary words only, leave names damaged",1.0,0.198,0.83,0.983,0.872,0.976,1.0,0.0,0.752,0.705,0.0,0.533
+fix names only,1.0,0.682,0.0,0.983,0.884,0.898,1.0,0.551,0.0,0.705,0.224,0.0
+"expert line, damaged words deleted",1.0,-0.031,-0.039,1.0,0.561,0.643,1.0,0.0,0.0,1.0,0.0,0.0
+"OCR, damaged words deleted",1.0,-0.02,-0.041,0.983,0.526,0.633,1.0,0.0,0.0,0.705,0.0,0.0
+expert line + one invented word,0.75,0.75,0.75,0.927,0.914,0.917,1.0,1.0,1.0,0.0,0.0,0.0
+expert line + two invented words,0.5,0.5,0.5,0.872,0.849,0.855,0.0,0.0,0.0,0.0,0.0,0.0
+"expert line, punctuation removed",0.869,0.909,0.893,0.955,0.939,0.945,0.813,0.908,0.854,0.046,0.02,0.053
+"expert line, all lower case",0.249,0.078,0.249,0.958,0.826,0.957,0.336,0.133,0.39,0.328,0.01,0.346
+"expert line, modernised (ſ→s, æ→ae, œ→oe)",1.0,0.931,0.746,1.0,0.988,0.977,1.0,0.918,0.646,1.0,0.857,0.606
+"expert line, one correct word misspelt",0.515,0.545,0.507,0.964,0.957,0.96,0.029,0.347,0.199,0.029,0.01,0.028
+expert line + next line (two lines),0.0,0.0,0.0,0.077,0.044,0.1,0.0,0.0,0.0,0.0,0.0,0.0
+"expert line + next line (run-on, one line)",0.02,0.02,0.03,0.077,0.044,0.1,0.025,0.02,0.041,0.0,0.0,0.0
+expert line written twice,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+commentary prefix,0.0,0.0,0.0,0.708,0.655,0.668,0.0,0.0,0.0,0.0,0.0,0.0

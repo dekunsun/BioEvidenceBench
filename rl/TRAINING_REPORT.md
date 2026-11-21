@@ -120,7 +120,7 @@ Details: `rl/training/results_7c/ATTRIBUTION_7C.md`.
   was found that earns more than the correct answer (no severe loophole).
 - **Reading 43 test lines** (`rl/training/results_7c/reading_sheet_gloria.xlsx`, Base wrong / D
   right and the reverse). *Gloria's reading: pending.*
-- `rl/REWARD_AUDIT.md` part 2 (task B) is still to be written; the two weaknesses above go into it.
+- `rl/REWARD_AUDIT.md` part 2 (task B, 2026-11-21): probes on dev plus the test answers. No probe beats the honest answer; three holes: copying is a safe floor (H1, decided the GRPO result), one inserted word costs only 0.25 (H2, rare), punctuation unscored (H3, 7–12% of answers score 1.0 with different punctuation). Fixes are for a v1.4 tested on dev, not applied to this round.
 
 ## 7. Development decisions and deviations (all on dev or before the test; none after it)
 
