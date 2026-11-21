@@ -5,7 +5,8 @@
 #   e.g. bash run_stage.sh stoptest 5 0.34
 #
 # Stages: stoptest (sleeps 60 s: tests saving, uploading and self-termination; first launch),
-#         calibrate (stage 1, rl/training/stage1_calibrate.py).
+#         calibrate (stage 1, rl/training/stage1_calibrate.py),
+#         smoke (stage 2, rl/training/stage2_smoke.py: short SFT and GRPO, throughput and cost).
 #
 # What it guarantees (Gloria, 2026-11-21):
 # - A watchdog ends the stage after <max_minutes>, whatever the job is doing.
@@ -131,6 +132,10 @@ case "$STAGE" in
   calibrate)
     run_job "cd '$REPO' && pip install -q -r rl/training/runpod/requirements-gpu.txt && \
              python rl/training/stage1_calibrate.py --out '$WS'"
+    ;;
+  smoke)
+    run_job "cd '$REPO' && pip install -q -r rl/training/runpod/requirements-gpu.txt && \
+             python rl/training/stage2_smoke.py --out '$WS' --price '$PRICE'"
     ;;
   *) log "unknown stage ${STAGE}"; exit 2 ;;
 esac
