@@ -219,3 +219,36 @@ def test_leader_dot_lines_are_found(line, hit):
 def test_typographic_apostrophes_are_folded():
     unit = u(T.nfc("the Canary’s song"), "the Canary's song", [False] * 3)   # texts are normalised on load
     assert T.nfc("Canary’s ‘song’") == "Canary's 'song'" and unit["n_damaged"] == 0
+
+
+def test_typographic_hyphen_inside_a_word_equals_hyphen_but_line_end_hyphen_stays():
+    assert T.nfc("THE HOUSE‐SPARROW") == "THE HOUSE-SPARROW"
+    assert T.nfc("in Be‐") == "in Be‐"
+
+
+@pytest.mark.parametrize("answer, reference, accepted", [
+    ("Vorderflügel 3½‴ lang", "Vorderflügel 31/2‴ lang", "Vorderflügel 31/2‴ lang"),
+    ("bei ²/₃ der Länge", "bei 2/3 der Länge", "bei 2/3 der Länge"),
+    ("bei ⅔ der Länge", "bei 2/5 der Länge", "bei ⅔ der Länge"),        # a different value: not equal
+    ("3½ inches", "3 1/2 inches", "3 1/2 inches"),
+])
+def test_fractions_are_accepted_only_where_the_reference_has_that_form(answer, reference, accepted):
+    assert T.accept_fractions(answer, reference) == accepted
+
+
+def test_fractions_are_not_converted_in_texts():
+    assert T.nfc("3½") == "3½"
+
+
+def test_fraction_answer_scores_as_the_reference():
+    unit = u("Vorderflügel 31/2‴ lang", "Vorderflügel 315” lang", [False] * 4)
+    assert r(unit, "Vorderflügel 3½‴ lang")["reward"] == 1.0
+
+
+@pytest.mark.parametrize("target, inp, prev, nxt, rec, unrec", [
+    ("Euboicus, Reeve LXXIX. 584", "Euboious, Reeve LXXIX.", "evanescens, Brod. XIII. 72", "", [], ["584"]),
+    ("7. Pariana Cl. *", "Pariana Cl. *", "6. Ononaria Hb. *", "8. Cerusella Hb. *", ["7"], []),
+    ("Sca = Subcoxa des Stylopod.", "= Subcoxa des Slylupod.", "Sca Subcoxa", "", ["Sca"], []),
+])
+def test_deletions_are_split_by_evidence_in_the_shown_context(target, inp, prev, nxt, rec, unrec):
+    assert T.classify_deletions(target, inp, prev, nxt) == (rec, unrec)

@@ -57,6 +57,37 @@ _MUFI = {"\ueada": "ſt", "\ueba2": "ſi", "\ueba6": "ſſ", "\ueba7": "ſſi", 
 # Typographic apostrophes (U+2019, U+2018) are a glyph, not spelling: the transcription types
 # `Canary’s` where the OCR reads `Canary's`. Folded to ' (Gloria, 2026-11-21, after the step 5 pilot).
 _APOSTROPHES = {"\u2019": "'", "\u2018": "'"}
+# Typographic hyphens U+2010, U+2011 INSIDE a word (`HOUSE‐SPARROW`) equal `-` (Gloria, 2026-11-21,
+# after the 200-item trial). A hyphen at the end of a line is left as it is.
+_HYPHEN_IN_WORD = re.compile(r"(?<=[^\W_])[\u2010\u2011](?=[^\W_])")
+# Fractions (Gloria, 2026-11-21): NOT converted in any text. When an ANSWER writes a fraction as a
+# fraction character (`3½`, `⅔`) or with superscript and subscript digits (`²/₃`), it is accepted
+# as the reference's `31/2` or `2/3` only if the reference has exactly that form; see
+# `accept_fractions`. Other numbers and units are never made equal.
+_VULGAR = {"½": "1/2", "⅓": "1/3", "⅔": "2/3", "¼": "1/4", "¾": "3/4", "⅕": "1/5", "⅖": "2/5", "⅗": "3/5",
+           "⅘": "4/5", "⅙": "1/6", "⅚": "5/6", "⅛": "1/8", "⅜": "3/8", "⅝": "5/8", "⅞": "7/8", "⅐": "1/7",
+           "⅑": "1/9", "⅒": "1/10"}
+_SUP, _SUB = "⁰¹²³⁴⁵⁶⁷⁸⁹", "₀₁₂₃₄₅₆₇₈₉"
+_TO_DIGITS = str.maketrans(_SUP + _SUB, "0123456789" * 2)
+_FRACTION_IN_ANSWER = re.compile(
+    r"(\d+[ ]?)?(?:([" + "".join(_VULGAR) + r"])|([" + _SUP + r"]+)[/\u2044]([" + _SUB + r"]+))")
+
+
+def accept_fractions(answer: str, reference: str) -> str:
+    """Write each fraction in the answer the way the reference does, if and only if the reference
+    contains that very form, whole number included (`3½` -> `31/2` or `3 1/2`, `²/₃` -> `2/3`).
+    Applied to the answer only; the reference and the OCR are never changed."""
+    def sub(m):
+        whole = (m.group(1) or "").strip()
+        frac = _VULGAR[m.group(2)] if m.group(2) else \
+            m.group(3).translate(_TO_DIGITS) + "/" + m.group(4).translate(_TO_DIGITS)
+        for form in ((whole + frac, whole + " " + frac) if whole else (frac,)):
+            if re.search(r"(?<!\d)" + re.escape(form) + r"(?!\d)", reference):
+                return form
+        return m.group(0)
+    return _FRACTION_IN_ANSWER.sub(sub, answer)
+
+
 _PRESENTATION = str.maketrans({"\ufb00": "ff", "\ufb01": "fi", "\ufb02": "fl", "\ufb03": "ffi",
                                "\ufb04": "ffl", "\ufb05": "ſt", "\ufb06": "st"} | _MUFI | _APOSTROPHES)
 # A reference line that still holds U+FFFD (a glyph the transcription could not encode: Greek in
@@ -76,12 +107,38 @@ _LATIN, _CYRILLIC = re.compile(r"[A-Za-zÀ-ÿĀ-ſ]"), re.compile(r"[\u0400-\u04
 LEADERS = re.compile(r"(?:\.\s?){4,}|(?:-\s+){3,}-|(?:\.\.\s+){2,}\.\.|…{2,}|(?:\.\s?){2,}\s*(?:\*\s*)+$|(?<!\.)\.\.(?!\.)")
 
 
+def missing_damaged_words(target: str, inp: str) -> list[str]:
+    """Damaged reference words for which the OCR has no text at all (deletions)."""
+    rows, _ = word_status(target, inp)
+    return [r["word"] for r in rows if word_kind(r) == "damaged" and not r["aligned"].strip()]
+
+
+def _leading_number(s: str):
+    m = re.match(r"\s*(\d+)\b", s or "")
+    return int(m.group(1)) if m else None
+
+
+def classify_deletions(target: str, inp: str, prev: str, nxt: str) -> tuple[list[str], list[str]]:
+    """Split OCR deletions into (recoverable, unrecoverable), using only what the model is shown:
+    the line and the OCR lines before and after it (Gloria, 2026-11-21). Recoverable: the word
+    stands in the context lines, or it is the line's number in an explicit sequence (the line
+    before starts with n-1 and the line after with n+1). Lines with an unrecoverable deletion are
+    set aside; recoverable deletions stay and are marked. Whether a model failed is never used."""
+    ctx_words = {w for _, _, w in words(nfc(prev or "") + " " + nfc(nxt or ""))}
+    rec, unrec = [], []
+    for w in missing_damaged_words(target, inp):
+        seq = w.isdigit() and _leading_number(target) == int(w) and \
+            _leading_number(prev) == int(w) - 1 and _leading_number(nxt) == int(w) + 1
+        (rec if w in ctx_words or seq else unrec).append(w)
+    return rec, unrec
+
+
 def mixed_script_words(s: str) -> list[str]:
     return [w for w in re.findall(r"\w+", s) if _LATIN.search(w) and _CYRILLIC.search(w)]
 
 
 def nfc(s: str) -> str:
-    return unicodedata.normalize("NFC", s or "").translate(_PRESENTATION)
+    return _HYPHEN_IN_WORD.sub("-", unicodedata.normalize("NFC", s or "").translate(_PRESENTATION))
 
 
 # ---------------------------------------------------------------- texts
@@ -377,7 +434,7 @@ def reward(unit: dict, output, name_weight: float = NAME_WEIGHT, p_broken: float
             "exact_repair_rate": None}
     if reason:
         return diag
-    out = nfc(output).strip()
+    out = accept_fractions(nfc(output).strip(), target)
     diag["integrity_valid"] = 0.5 <= len(out) / max(1, len(target)) <= 1.5
     diag["cer_diagnostic"] = round(Levenshtein.normalized_distance(out, target), 4)
     if not diag["integrity_valid"]:

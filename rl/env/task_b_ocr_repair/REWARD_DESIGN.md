@@ -2,7 +2,7 @@
 
 *Task B: repair one line of legacy OCR so it matches the expert transcription, changing only
 recognition errors. Implementation: `src/rl_task_b.py`. Fixed unit tests:
-`tests/test_rl_task_b.py` (49 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
+`tests/test_rl_task_b.py` (59 tests). Decisions: Gloria, 2026-11-20. The coefficients are a
 first experimental setting, not validated optima; they are checked on development data before
 any training run.*
 
@@ -74,6 +74,12 @@ Ordinary extra words are not format errors: they cost 0.25 each.
   glyphs, not spelling: the transcription types `ﬁnest` where OCR writes `finest`.
 - **Typographic apostrophes folded** (U+2019 ’ and U+2018 ‘ → `'`; Gloria, 2026-11-21, after the
   step 5 pilot): the transcription types `Canary’s` where the OCR reads `Canary's`.
+- **Typographic hyphen inside a word** (U+2010, U+2011 between letters, `HOUSE‐SPARROW`) equals `-`
+  (Gloria, 2026-11-21). A hyphen at the end of a line is left as it is.
+- **Fractions are not converted in any text.** When scoring, an answer's fraction character or
+  superscript/subscript form (`3½`, `⅔`, `²/₃`) is accepted as the reference's `31/2` or `2/3` only if
+  the reference has exactly that form, whole number included (`accept_fractions`). A different value
+  is never made equal (Gloria, 2026-11-21: accept clearly equivalent forms; no global conversion).
 - **Spelling letters kept**: æ and œ (`Linnaeus` for `Linnæus` is a broken word), and the long s ſ.
 - **Long s, two measures.** The main reward keeps the transcription's glyph (`species` for `ſpecies`
   is wrong). `reward_reading` is the same reward with ſ and s treated as one letter, to show how much
@@ -134,6 +140,15 @@ rewarded for them would learn to guess capitals.
   is never a reason to set a line aside: badly damaged lines with a reliable reference are the most
   useful training items. Every line set aside is kept with its page, line and reason
   (`set_aside.jsonl`, `build/set_aside_summary.csv`) as a later hard-case set.
+- **OCR deletions** (a damaged word with no OCR text at all; Gloria, 2026-11-21). Judged only from
+  what the model is shown, never from whether a model failed:
+  - *recoverable deletion*: the word stands in the OCR lines shown before and after, or it is the
+    line's number in an explicit sequence (n−1 before, n+1 after). Kept and marked
+    (`recoverable_deletion`); reported separately. Repairing deletions is part of OCR repair.
+  - *unrecoverable*: anything else (a Reeve index page number lost with its column). Set aside: the
+    reward must not encourage the model to supply historical text from general knowledge.
+- **Suspected reference typos** (`reference_errata.csv`): set aside until Gloria has checked each
+  against the scan; `confirmed` stays set aside, `not_typo` comes back.
 - Also set aside: lines with a word mixing Latin and Cyrillic letters (Trudy's transcription), and
   index and contents lines with leader dots (Gloria, 2026-11-21; `LEADERS` in `src/rl_task_b.py`),
   whose OCR drops the page references or reads the next column.
@@ -174,4 +189,4 @@ word is repaired by its letters in any case.
 |---|---|---|---|
 | v1.0 | 2026-11-20 | Weighted damaged-word repair minus λ·min(1, B/max(1,|D|)); clean lines 1 − B/|C| | Gloria (from an external review) |
 | v1.1 | 2026-11-20 | Fixed penalties 0.5 per broken word, 0.25 per inserted word, clipped to [−1, 1]; hard format gate; repair requires the damaged token to be gone; long s kept in the main reward plus a reading metric; ligature folding | Gloria |
-| v1.2 | 2026-11-20/21 | Typographic apostrophes folded (21st, after the step 5 pilot); case-only words neutral (letters must survive); case-free repair of small-caps words; case diagnostics; MUFI ligatures folded; references with U+FFFD or unidentified private-use characters invalid; unreliable imprints and captions set aside | Gloria (from the step 4 audit) |
+| v1.2 | 2026-11-20/21 | Typographic apostrophes folded; U+2010 inside words; fractions accepted where the reference has the same form; unrecoverable deletions set aside, recoverable ones marked; suspected reference typos set aside pending check (21st, after the step 5 trials); case-only words neutral (letters must survive); case-free repair of small-caps words; case diagnostics; MUFI ligatures folded; references with U+FFFD or unidentified private-use characters invalid; unreliable imprints and captions set aside | Gloria (from the step 4 audit) |

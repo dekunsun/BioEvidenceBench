@@ -40,6 +40,7 @@ OUT = ENV / "build"
 UNITS = CACHE / "taskb" / "units"
 SPLITS = ENV / "splits_v2.csv"
 EXCLUSIONS = ENV / "exclusions.csv"
+ERRATA = ENV / "reference_errata.csv"    # suspected typos in the transcription, checked by Gloria
 # Round 1 of the alignment audit used seed 20261120 on the build before the MUFI and case fixes
 # (kept in build/audit_round1/); round 2 draws a fresh sample from the fixed build so the fixes are
 # not checked on the pairs that found them.
@@ -110,11 +111,19 @@ def assemble(split: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     info = split.set_index("PageID")
     excl = pd.read_csv(EXCLUSIONS) if EXCLUSIONS.exists() else pd.DataFrame(columns=["page_id", "line_no", "reason"])
     excl_reason = {(int(a), int(b)): c for a, b, c in zip(excl.page_id, excl.line_no, excl.reason)}
+    # Suspected reference typos are set aside until Gloria has checked them against the scan; a
+    # confirmed typo stays set aside, a rejected one comes back (status `not_typo`).
+    err = pd.read_csv(ERRATA) if ERRATA.exists() else pd.DataFrame(columns=["page_id", "line_no", "status"])
+    err_reason = {(int(a), int(b)): ("reference typo, confirmed" if st == "confirmed" else
+                                     "suspected reference typo, pending check")
+                  for a, b, st in zip(err.page_id, err.line_no, err.status) if st != "not_typo"}
     rows, missing = [], []
     files = {s: (UNITS / f"{s}.jsonl").open("w", encoding="utf-8") for s in SPLIT_NAMES}
     aside = (UNITS / "set_aside.jsonl").open("w", encoding="utf-8")
-    for line in (UNITS / "all_units.jsonl").open(encoding="utf-8"):
-        u = json.loads(line)
+    all_u = [json.loads(line) for line in (UNITS / "all_units.jsonl").open(encoding="utf-8")]
+    # the OCR of the neighbouring expert lines: what the model is shown as context
+    ocr_of = {(u["page_id"], u["line_no"]): u.get("input", "") for u in all_u if "line_no" in u}
+    for u in all_u:
         pid = u["page_id"]
         if pid not in info.index or info.at[pid, "split"] not in SPLIT_NAMES:
             continue
@@ -129,11 +138,22 @@ def assemble(split: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
             u.update(valid=False, why_invalid="mixed-script word in reference")
         if u.get("valid") and T.LEADERS.search(u["target"]):
             u.update(valid=False, why_invalid="index/contents line with leader dots")
-        u["set_aside"] = excl_reason.get((pid, u["line_no"]), "") if u.get("valid") else u.get("why_invalid", "")
+        u["recoverable_deletion"] = []
+        if u.get("valid"):     # deletions: kept if the shown context supports them (Gloria, 2026-11-21)
+            rec, unrec = T.classify_deletions(u["target"], u["input"], ocr_of.get((pid, u["line_no"] - 1), ""),
+                                              ocr_of.get((pid, u["line_no"] + 1), ""))
+            u["recoverable_deletion"] = rec
+            if rec:
+                u["flags"].append("recoverable deletion")
+            if unrec:
+                u.update(valid=False, why_invalid="unrecoverable deletion (word not in OCR or context)")
+        key = (pid, u["line_no"])
+        u["set_aside"] = (excl_reason.get(key, "") or err_reason.get(key, "")) if u.get("valid") else u.get("why_invalid", "")
         (files[sp] if u.get("valid") and not u["set_aside"] else aside).write(json.dumps(u, ensure_ascii=False) + "\n")
         rows.append({k: u.get(k) for k in ("book", "split", "page_id", "line_no", "valid", "why_invalid", "set_aside",
                                             "similarity", "sim_bucket", "coverage", "span_ratio", "n_words",
                                             "n_damaged", "n_damaged_reading", "n_case_only", "n_name_damaged", "input", "target")}
+                    | {"recoverable_deletion": "; ".join(u.get("recoverable_deletion", []))}
                     | {"flags": "; ".join(u["flags"])})
     for f in [*files.values(), aside]:
         f.close()
@@ -178,6 +198,8 @@ def main() -> None:
     ex = d.assign(flag=d["flags"].fillna("").str.split("; ")).explode("flag").reset_index(drop=True)
     flags = pd.crosstab(ex.book, ex.flag).drop(columns="", errors="ignore")
     per_split = pd.crosstab(v.book, v.split, margins=True)
+    per_book["recoverable_deletion"] = v.groupby("book").recoverable_deletion.apply(
+        lambda x: int(x.fillna("").astype(str).str.len().gt(0).sum()))
     aside = d[~d.usable].assign(reason=lambda x: x.set_aside.fillna("").map(reason_group))
     aside_sum = pd.crosstab(aside.reason, aside.book, margins=True)
     for name, t in [("per_book", per_book), ("similarity", sims), ("damage_share", dmg), ("damage_counts", dmg_n),
