@@ -43,7 +43,10 @@ rejected, including all 11 Trudy column-list lines in the sample.
 **Weighted by where usable lines are** (0.8–1.0: 95.8%, 0.5–0.8: 3.6%, 0.3–0.5: 0.6%), about 0.6% of
 usable lines are not clean and 0.06% are wrong pairs. This estimate rests on 0 errors in 50 audited
 pairs in the 0.8–1.0 bucket over both rounds: the 95% upper bound for that bucket alone is about 6%,
-so the true rate could be several times higher. Gloria's 30 pairs are the independent check.
+so the true rate could be several times higher. Gloria's 30 pairs are the independent check:
+see `AGREEMENT.md` (28 independent pairs: same-line agreement 27 / 28, kappa 0.90; three labels 22 / 28,
+kappa 0.57, five of the six differences being one definition of `partly`; none of the 13 pairs the
+build uses was marked `no` by either).
 
 ## What remains
 
