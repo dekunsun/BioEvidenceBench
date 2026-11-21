@@ -73,7 +73,7 @@ json.dump({"run_id": run_id, "stage": stage, "outcome": outcome, "minutes": roun
 PY
   log "outcome=${outcome} minutes=$((secs / 60))"
   nvidia-smi > "$WS/nvidia-smi.txt" 2>&1
-  pip freeze > "$WS/pip-freeze.txt" 2>&1
+  if [ -x /opt/rlvenv/bin/pip ]; then /opt/rlvenv/bin/pip freeze; else pip freeze; fi > "$WS/pip-freeze.txt" 2>&1
 
   local uploaded=0
   if [ -d "$REPO/.git" ] && [ -n "${GITHUB_TOKEN:-}" ]; then
@@ -132,17 +132,21 @@ run_job() {   # the job runs in its own process group so the watchdog can end al
   wait "$JOB_PID"
 }
 
+# Dependencies go into a fresh virtual environment, never the image's system Python: the second
+# stage-1 launch failed because pip could not uninstall the image's Debian-installed PyJWT.
+VENV=/opt/rlvenv
+SETUP="cd '$REPO' && (python3 -m venv $VENV || (python3 -m pip install -q virtualenv && python3 -m virtualenv $VENV)) && \
+       $VENV/bin/pip install -q --upgrade pip && $VENV/bin/pip install -q -r rl/training/runpod/requirements-gpu.txt"
+
 case "$STAGE" in
   stoptest)
     run_job "nvidia-smi; sleep 60; echo stoptest-done > '$WS/result.txt'"
     ;;
   calibrate)
-    run_job "cd '$REPO' && pip install -q -r rl/training/runpod/requirements-gpu.txt && \
-             python rl/training/stage1_calibrate.py --out '$WS'"
+    run_job "$SETUP && $VENV/bin/python rl/training/stage1_calibrate.py --out '$WS'"
     ;;
   smoke)
-    run_job "cd '$REPO' && pip install -q -r rl/training/runpod/requirements-gpu.txt && \
-             python rl/training/stage2_smoke.py --out '$WS' --price '$PRICE'"
+    run_job "$SETUP && $VENV/bin/python rl/training/stage2_smoke.py --out '$WS' --price '$PRICE'"
     ;;
   *) log "unknown stage ${STAGE}"; exit 2 ;;
 esac

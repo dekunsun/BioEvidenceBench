@@ -1,0 +1,4 @@
+[07:31:51] run 20261121-0731_calibrate: stage=calibrate max=30 min at $0.89/h on pod l1r75k24zjtjrz
+[07:31:51] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID l1r75k24zjtjrz
+[07:31:52] read check: Error: statuscode 401 
+[07:34:48] outcome=error (exit 1) minutes=2
