@@ -114,9 +114,63 @@ def assemble(pod_out: Path) -> None:
     print(stats)
 
 
+RUN = "20261121-sftrepair_claude-opus-5-5_test_G1"
+FROZEN = "20261119-2052_claude-opus-5-5_test_batch"       # G1 on legacy and dots.mocr (frozen test run)
+GOLD = ROOT / "gold" / "gold_mentions_gloria_test.csv"
+
+
+def _f1(tp, fp, fn) -> float:
+    return 2 * tp / max(1, 2 * tp + fp + fn)
+
+
+def report(n_boot: int = 10000) -> None:
+    """Value F1 (ALL_PRIMARY, G1) of the repaired text against legacy and dots.mocr, plus a paired page
+    bootstrap of repaired - legacy per book; Opus G2 on legacy is copied from results/exploratory_conditions."""
+    import numpy as np
+    from score import score_run_detail
+    parts, pages = [], []
+    for run in (FROZEN, RUN):
+        d = score_run_detail(run, GOLD, "test")
+        s, bp = d["summary"], d["by_page"]
+        keep = lambda x: x[(x.condition == "G1") & (x.field == "ALL_PRIMARY")
+                           & x.version.isin(["legacy", "modern_dots-mocr", VERSION])]
+        parts.append(keep(s))
+        pages.append(keep(bp))
+    s, bp = pd.concat(parts), pd.concat(pages)
+    rows = [{"route": v, "book": r.book, "value_F1": r.value_F1, "lo": r.value_F1_lo, "hi": r.value_F1_hi,
+             "value_P": r.value_P, "value_R": r.value_R}
+            for v, r in ((r.version, r) for r in s.itertuples())]
+    g2 = pd.read_csv(ROOT / "results" / "exploratory_conditions" / "position_scores.csv")
+    for r in g2[g2.condition.isin(["G2 · legacy", "G2 [haiku-5-5] · legacy"])].itertuples():
+        rows.append({"route": "opus_G2_on_legacy" if "haiku" not in r.condition else "haiku_G2_on_legacy",
+                     "book": r.book, "value_F1": r.value_F1, "lo": r.value_F1_lo, "hi": r.value_F1_hi})
+    tab = pd.DataFrame(rows)
+    rng = np.random.default_rng(20261121)
+    diffs = []
+    for book, g in bp.groupby("book"):
+        a = g[g.version == "legacy"].set_index("page_id")[["value_tp", "value_fp", "value_fn"]]
+        b = g[g.version == VERSION].set_index("page_id")[["value_tp", "value_fp", "value_fn"]].loc[a.index]
+        A, B = a.to_numpy(), b.to_numpy()
+        point = _f1(*B.sum(0)) - _f1(*A.sum(0))
+        boots = []
+        for _ in range(n_boot):
+            i = rng.integers(0, len(A), len(A))
+            boots.append(_f1(*B[i].sum(0)) - _f1(*A[i].sum(0)))
+        lo, hi = np.percentile(boots, [2.5, 97.5])
+        diffs.append({"book": book, "pages": len(A), "repaired_minus_legacy": round(point, 3),
+                      "lo": round(lo, 3), "hi": round(hi, 3)})
+    dif = pd.DataFrame(diffs)
+    tab.round(3).to_csv(OUT / "extraction.csv", index=False)
+    dif.to_csv(OUT / "extraction_diff.csv", index=False)
+    print(tab.round(3).to_string(index=False))
+    print(dif.to_string(index=False))
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "build":
         build()
     elif cmd == "assemble":
         assemble(Path(sys.argv[2]))
+    elif cmd == "report":
+        report()

@@ -1,0 +1,5 @@
+version,book,median_page_cer,names_and_values_preserved,taxa_preserved
+legacy (BHL),Butler,0.0331,0.675,0.25
+legacy (BHL),Reeve,0.0798,0.6714,0.5051
+legacy + SFT repair,Butler,0.0295,0.71,0.2679
+legacy + SFT repair,Reeve,0.068,0.7385,0.5657

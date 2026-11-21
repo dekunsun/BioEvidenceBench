@@ -1,0 +1,1316 @@
+version,page_id,book,split,field,gold_text,text_at_place,preserved
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy (BHL),8992582,Butler,dev,locality,Continent,Continent,True
+legacy (BHL),8992582,Butler,dev,locality,England,England,True
+legacy (BHL),8992582,Butler,dev,locality,cliﬀs of Dover,cliffs of Dover,True
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy (BHL),8992582,Butler,dev,person,Lilford,Lilford,True
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy (BHL),8992582,Butler,dev,locality,Lilford,Lilford,True
+legacy (BHL),8992582,Butler,dev,vernacular,Barn Owl,Barn Owl,True
+legacy (BHL),8992582,Butler,dev,vernacular,Daws,Daws,True
+legacy (BHL),8992582,Butler,dev,vernacular,chickens,chickens,True
+legacy (BHL),8992582,Butler,dev,vernacular,pheasants,pheasants,True
+legacy (BHL),8992582,Butler,dev,vernacular,partridges,partridges,True
+legacy (BHL),8992582,Butler,dev,vernacular,Owls,Owls,True
+legacy (BHL),8992582,Butler,dev,vernacular,Barn Owl,Barn Owl,True
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaws,Jackdaws,True
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy (BHL),8992582,Butler,dev,vernacular,House-Sparrow,House-Sparrow,True
+legacy (BHL),8992582,Butler,dev,vernacular,Daw,Daw,True
+legacy (BHL),8992582,Butler,dev,person,Seebohm,Seebohm,True
+legacy (BHL),8992582,Butler,dev,vernacular,Gulls,Gulls,True
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy (BHL),8992582,Butler,dev,vernacular,Rook,Rook,True
+legacy (BHL),8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy + SFT repair,8992582,Butler,dev,locality,Continent,Continent,True
+legacy + SFT repair,8992582,Butler,dev,locality,England,England,True
+legacy + SFT repair,8992582,Butler,dev,locality,cliﬀs of Dover,cliffs of Dover,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy + SFT repair,8992582,Butler,dev,person,Lilford,Lilford,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy + SFT repair,8992582,Butler,dev,locality,Lilford,Lilford,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Barn Owl,Barn Owl,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Daws,Daws,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,chickens,chickens,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,pheasants,pheasants,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,partridges,partridges,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Owls,Owls,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Barn Owl,Barn Owl,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaws,Jackdaws,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,House-Sparrow,House-Sparrow,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Daw,Daffod,False
+legacy + SFT repair,8992582,Butler,dev,person,Seebohm,Seebohm,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Gulls,Gulls,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Rook,Rook,True
+legacy + SFT repair,8992582,Butler,dev,vernacular,Jackdaw,Jackdaw,True
+legacy (BHL),8992601,Butler,dev,person,Stevenson,Stevenson,True
+legacy (BHL),8992601,Butler,dev,person,St. John,St. John,True
+legacy (BHL),8992601,Butler,dev,vernacular,grouse,grouse,True
+legacy (BHL),8992601,Butler,dev,vernacular,partridges,partridges,True
+legacy (BHL),8992601,Butler,dev,vernacular,hares,hares,True
+legacy (BHL),8992601,Butler,dev,vernacular,wild duck,wild duck,True
+legacy (BHL),8992601,Butler,dev,vernacular,pheasant,pheasant,True
+legacy (BHL),8992601,Butler,dev,vernacular,Hooded Crow,Hooded Crow,True
+legacy (BHL),8992601,Butler,dev,vernacular,Peewits,Peewits,True
+legacy (BHL),8992601,Butler,dev,vernacular,Gulls,Gulls,True
+legacy (BHL),8992601,Butler,dev,vernacular,Redshanks,Redshanks,True
+legacy (BHL),8992601,Butler,dev,vernacular,Crow,Crow,True
+legacy (BHL),8992601,Butler,dev,vernacular,hoody,hoody,True
+legacy (BHL),8992601,Butler,dev,vernacular,ducks,ducks,True
+legacy (BHL),8992601,Butler,dev,vernacular,eagle,eagle,True
+legacy (BHL),8992601,Butler,dev,vernacular,peregrine falcon,peregrine falcon,True
+legacy (BHL),8992601,Butler,dev,vernacular,osprey,osprc}',False
+legacy (BHL),8992601,Butler,dev,vernacular,Hoodies,Hoodies,True
+legacy (BHL),8992601,Butler,dev,date,12th to the 30th of October,12th to the 30th of October,True
+legacy (BHL),8992601,Butler,dev,person,T. H. Nelson,T. H. Nelson,True
+legacy (BHL),8992601,Butler,dev,person,F. Pilling,F. Pilling,True
+legacy (BHL),8992601,Butler,dev,vernacular,Hoodies,Hoodies,True
+legacy (BHL),8992601,Butler,dev,person,Seebohm,Seebohm,True
+legacy (BHL),8992601,Butler,dev,person,Gätke,Gatke,False
+legacy (BHL),8992601,Butler,dev,locality,Heligoland,Heligoland,True
+legacy (BHL),8992601,Butler,dev,locality,Weser,Weser,True
+legacy (BHL),8992601,Butler,dev,locality,Bremerhaven,Bremerhaven,True
+legacy (BHL),8992601,Butler,dev,person,Gätke,Gatke,False
+legacy + SFT repair,8992601,Butler,dev,person,Stevenson,Stevenson,True
+legacy + SFT repair,8992601,Butler,dev,person,St. John,V. John,False
+legacy + SFT repair,8992601,Butler,dev,vernacular,grouse,grouse,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,partridges,partridges,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,hares,hares,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,wild duck,wild duck,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,pheasant,pheasant,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,Hooded Crow,Hooded Crow,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,Peewits,Peewits,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,Gulls,Gulls,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,Redshanks,Redshanks,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,Crow,Crow,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,hoody,hoody,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,ducks,ducks,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,eagle,eagle,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,peregrine falcon,peregrine falcon,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,osprey,osprea,False
+legacy + SFT repair,8992601,Butler,dev,vernacular,Hoodies,Hoodies,True
+legacy + SFT repair,8992601,Butler,dev,date,12th to the 30th of October,12th to the 30th of October,True
+legacy + SFT repair,8992601,Butler,dev,person,T. H. Nelson,T. H. Nelson,True
+legacy + SFT repair,8992601,Butler,dev,person,F. Pilling,F. Pilling,True
+legacy + SFT repair,8992601,Butler,dev,vernacular,Hoodies,Hoodies,True
+legacy + SFT repair,8992601,Butler,dev,person,Seebohm,Seebohm,True
+legacy + SFT repair,8992601,Butler,dev,person,Gätke,Gatke,False
+legacy + SFT repair,8992601,Butler,dev,locality,Heligoland,Heligoland,True
+legacy + SFT repair,8992601,Butler,dev,locality,Weser,Weser,True
+legacy + SFT repair,8992601,Butler,dev,locality,Bremerhaven,Bremerhaven,True
+legacy + SFT repair,8992601,Butler,dev,person,Gätke,Gatke,False
+legacy (BHL),8992612,Butler,dev,taxon,Alaudidæ,Aluudida,False
+legacy (BHL),8992612,Butler,dev,locality,Old World,Old World,True
+legacy (BHL),8992612,Butler,dev,locality,North America,North America,True
+legacy (BHL),8992612,Butler,dev,person,Jerdon,Jerdon,True
+legacy (BHL),8992612,Butler,dev,locality,Malayana,Iala3-ana,False
+legacy (BHL),8992612,Butler,dev,locality,Australia,Australia,True
+legacy (BHL),8992612,Butler,dev,taxon,ALAUDIDÆ,ALAUDID.E,False
+legacy (BHL),8992612,Butler,dev,vernacular,SKY-LARK,Sky-Lark,True
+legacy (BHL),8992612,Butler,dev,taxon,Alauda arvensis,Alauda iDVCiisis,False
+legacy (BHL),8992612,Butler,dev,person,LINN.,LiNN.,True
+legacy (BHL),8992612,Butler,dev,locality,Europe,Europe,True
+legacy (BHL),8992612,Butler,dev,locality,Scandinavia,Scandinavia,True
+legacy (BHL),8992612,Butler,dev,locality,North Africa,North Africa,True
+legacy (BHL),8992612,Butler,dev,locality,slopes of the Atlas Mountains,slopes of the Atlas Mountains,True
+legacy (BHL),8992612,Butler,dev,locality,Russia,Russia,True
+legacy (BHL),8992612,Butler,dev,locality,Siberia,Siberia,True
+legacy (BHL),8992612,Butler,dev,locality,Japan,Japan,True
+legacy (BHL),8992612,Butler,dev,locality,"valley of the
+Amoor","valley of the 
+
+ Amoor",True
+legacy (BHL),8992612,Butler,dev,locality,South-east Mongolia,South-east IMongolia,False
+legacy (BHL),8992612,Butler,dev,locality,Turkestan,Turkestan,True
+legacy (BHL),8992612,Butler,dev,locality,Persia,Persia,True
+legacy (BHL),8992612,Butler,dev,locality,China,China,True
+legacy (BHL),8992612,Butler,dev,locality,North-west India,North-west India,True
+legacy (BHL),8992612,Butler,dev,locality,Afghanistan,Afghanistan,True
+legacy (BHL),8992612,Butler,dev,locality,Persia,Persia,True
+legacy (BHL),8992612,Butler,dev,locality,Asia Minor,Asia Minor,True
+legacy (BHL),8992612,Butler,dev,locality,Palestine,Palestine,True
+legacy (BHL),8992612,Butler,dev,locality,Egypt,Egypt,True
+legacy (BHL),8992612,Butler,dev,locality,Madeira,Madeira,True
+legacy (BHL),8992612,Butler,dev,locality,Greenland,Greenland,True
+legacy (BHL),8992612,Butler,dev,locality,United States,United States,True
+legacy (BHL),8992612,Butler,dev,locality,New Zealand,New Zealand,True
+legacy (BHL),8992612,Butler,dev,locality,Australia,Australia,True
+legacy (BHL),8992612,Butler,dev,locality,Great Britain,Great Britain,True
+legacy (BHL),8992612,Butler,dev,locality,Ireland,Ireland,True
+legacy (BHL),8992612,Butler,dev,vernacular,Sky-Lark,Sky-Lark,True
+legacy (BHL),8992612,Butler,dev,vernacular,Sky-Lark,Sky-Lark,True
+legacy (BHL),8992612,Butler,dev,taxon,A. dulcivox,A. dulcivox,True
+legacy (BHL),8992612,Butler,dev,taxon,A. japonica,A. japonica,True
+legacy (BHL),8992612,Butler,dev,taxon,A. cantarella,A. caiitarclla,False
+legacy (BHL),8992612,Butler,dev,taxon,A. liopus,A. liopus,True
+legacy (BHL),8992612,Butler,dev,taxon,"A. blak-
+istoni","A. blak- 
+
+ istoni",True
+legacy (BHL),8992612,Butler,dev,taxon,A. gulgula,A. giilgiila,False
+legacy (BHL),8992612,Butler,dev,taxon,A. australis,A. australis,True
+legacy (BHL),8992612,Butler,dev,taxon,A. cœlivox,A. axlivox,False
+legacy (BHL),8992612,Butler,dev,taxon,A. wattersi,A. ivai/crsi,False
+legacy (BHL),8992612,Butler,dev,taxon,A. sala,A. sala,True
+legacy (BHL),8992612,Butler,dev,vernacular,Sky-Lark,Sky-Lark,True
+legacy (BHL),8992612,Butler,dev,locality,Bermudas,Bermudas,True
+legacy (BHL),8992612,Butler,dev,date,1850,1S50,False
+legacy + SFT repair,8992612,Butler,dev,taxon,Alaudidæ,Alauda,False
+legacy + SFT repair,8992612,Butler,dev,locality,Old World,Old World,True
+legacy + SFT repair,8992612,Butler,dev,locality,North America,North America,True
+legacy + SFT repair,8992612,Butler,dev,person,Jerdon,Jerdon,True
+legacy + SFT repair,8992612,Butler,dev,locality,Malayana,Malacana,False
+legacy + SFT repair,8992612,Butler,dev,locality,Australia,Australia,True
+legacy + SFT repair,8992612,Butler,dev,taxon,ALAUDIDÆ,ALAUDIDÆ,True
+legacy + SFT repair,8992612,Butler,dev,vernacular,SKY-LARK,Sky-Lark,True
+legacy + SFT repair,8992612,Butler,dev,taxon,Alauda arvensis,Alauda arborea,False
+legacy + SFT repair,8992612,Butler,dev,person,LINN.,LINN.,True
+legacy + SFT repair,8992612,Butler,dev,locality,Europe,Europe,True
+legacy + SFT repair,8992612,Butler,dev,locality,Scandinavia,Scandinavia,True
+legacy + SFT repair,8992612,Butler,dev,locality,North Africa,North Africa,True
+legacy + SFT repair,8992612,Butler,dev,locality,slopes of the Atlas Mountains,slopes of the Atlas Mountains,True
+legacy + SFT repair,8992612,Butler,dev,locality,Russia,Russia,True
+legacy + SFT repair,8992612,Butler,dev,locality,Siberia,Siberia,True
+legacy + SFT repair,8992612,Butler,dev,locality,Japan,Japan,True
+legacy + SFT repair,8992612,Butler,dev,locality,"valley of the
+Amoor","valley of the
+
+Ammur",False
+legacy + SFT repair,8992612,Butler,dev,locality,South-east Mongolia,South-east Mongolia,True
+legacy + SFT repair,8992612,Butler,dev,locality,Turkestan,Turkestan,True
+legacy + SFT repair,8992612,Butler,dev,locality,Persia,Persia,True
+legacy + SFT repair,8992612,Butler,dev,locality,China,China,True
+legacy + SFT repair,8992612,Butler,dev,locality,North-west India,North-west India,True
+legacy + SFT repair,8992612,Butler,dev,locality,Afghanistan,Afghanistan,True
+legacy + SFT repair,8992612,Butler,dev,locality,Persia,Persia,True
+legacy + SFT repair,8992612,Butler,dev,locality,Asia Minor,Asia Minor,True
+legacy + SFT repair,8992612,Butler,dev,locality,Palestine,Palestine,True
+legacy + SFT repair,8992612,Butler,dev,locality,Egypt,Egypt,True
+legacy + SFT repair,8992612,Butler,dev,locality,Madeira,Madeira,True
+legacy + SFT repair,8992612,Butler,dev,locality,Greenland,Greenland,True
+legacy + SFT repair,8992612,Butler,dev,locality,United States,United States,True
+legacy + SFT repair,8992612,Butler,dev,locality,New Zealand,New Zealand,True
+legacy + SFT repair,8992612,Butler,dev,locality,Australia,Australia,True
+legacy + SFT repair,8992612,Butler,dev,locality,Great Britain,Great Britain,True
+legacy + SFT repair,8992612,Butler,dev,locality,Ireland,Ireland,True
+legacy + SFT repair,8992612,Butler,dev,vernacular,Sky-Lark,Sky-Lark,True
+legacy + SFT repair,8992612,Butler,dev,vernacular,Sky-Lark,Sky-Lark,True
+legacy + SFT repair,8992612,Butler,dev,taxon,A. dulcivox,A. dulcivorus,False
+legacy + SFT repair,8992612,Butler,dev,taxon,A. japonica,A. japonica,True
+legacy + SFT repair,8992612,Butler,dev,taxon,A. cantarella,A. caryocla,False
+legacy + SFT repair,8992612,Butler,dev,taxon,A. liopus,A. lutescens,False
+legacy + SFT repair,8992612,Butler,dev,taxon,"A. blak-
+istoni","A. blak-
+
+istoni",True
+legacy + SFT repair,8992612,Butler,dev,taxon,A. gulgula,A. gilvina,False
+legacy + SFT repair,8992612,Butler,dev,taxon,A. australis,A. australis,True
+legacy + SFT repair,8992612,Butler,dev,taxon,A. cœlivox,A. albidus,False
+legacy + SFT repair,8992612,Butler,dev,taxon,A. wattersi,A. sylvaticus,False
+legacy + SFT repair,8992612,Butler,dev,taxon,A. sala,A. sala,True
+legacy + SFT repair,8992612,Butler,dev,vernacular,Sky-Lark,Sky-Lark,True
+legacy + SFT repair,8992612,Butler,dev,locality,Bermudas,Bermudas,True
+legacy + SFT repair,8992612,Butler,dev,date,1850,1850,True
+legacy (BHL),8967047,Reeve,dev,institution,Mus. Taylor,"Mus, Taylor",False
+legacy (BHL),8967047,Reeve,dev,taxon,BULIMUS BIVITTATUS,^ULiMUS BiviTTATUs,False
+legacy (BHL),8967047,Reeve,dev,vernacular,TWO-FILLETED BULIMUS,two-filleted Bulijids,False
+legacy (BHL),8967047,Reeve,dev,person,SOWERBY,SowERBY,True
+legacy (BHL),8967047,Reeve,dev,locality,Brazil,Brazil,True
+legacy (BHL),8967047,Reeve,dev,taxon,B. auris-leporis,B. auris-h'poris,False
+legacy (BHL),8967047,Reeve,dev,institution,Mus. Taylor,Mus. Taylor,True
+legacy (BHL),8967047,Reeve,dev,taxon,BULIMUS MULIEBRIS,BuLIMVS MULIEBUIS,False
+legacy (BHL),8967047,Reeve,dev,vernacular,EFFEMINATE BULIMUS,effeminate Bulimus,True
+legacy (BHL),8967047,Reeve,dev,locality,New Granada,New Granada,True
+legacy (BHL),8967047,Reeve,dev,institution,Mus. Cuming,Mus. Cuuiiug,False
+legacy (BHL),8967047,Reeve,dev,taxon,BULIMUS BOLIVIANUS,BuLiJlus Boliviands,False
+legacy (BHL),8967047,Reeve,dev,vernacular,BOLIVIAN BULIMUS,Bolivian Bulimus,True
+legacy (BHL),8967047,Reeve,dev,person,PFEIFFER,Pfeiffer,True
+legacy (BHL),8967047,Reeve,dev,locality,"Merida, Andes of Bolivia","Merida, Andes of Bolivia",True
+legacy (BHL),8967047,Reeve,dev,person,Pfeiﬀer,Pfeiffer,True
+legacy (BHL),8967047,Reeve,dev,taxon,"B. annu-
+latus","B. annu- 
+
+ latus",True
+legacy (BHL),8967047,Reeve,dev,institution,Mus. Taylor,Mus. Taylor,True
+legacy (BHL),8967047,Reeve,dev,taxon,BULIMUS PATRICIUS,iuLTMrs PATRTOius,False
+legacy (BHL),8967047,Reeve,dev,vernacular,PATRICIAN BULIMUS,patrician Buluius,False
+legacy (BHL),8967047,Reeve,dev,locality,New Granada,New Granada,True
+legacy (BHL),8967047,Reeve,dev,institution,Mus. Taylor,Mus. Taylor,True
+legacy (BHL),8967047,Reeve,dev,taxon,BULIMUS SPECTATUS,Bulimus speotatus,False
+legacy (BHL),8967047,Reeve,dev,vernacular,CHOICE BULIMUS,choice Bulimus,True
+legacy + SFT repair,8967047,Reeve,dev,institution,Mus. Taylor,"Mus, Taylor",False
+legacy + SFT repair,8967047,Reeve,dev,taxon,BULIMUS BIVITTATUS,BULIMUS BULIMATUS,False
+legacy + SFT repair,8967047,Reeve,dev,vernacular,TWO-FILLETED BULIMUS,TWO-FILLED BULIMUS,False
+legacy + SFT repair,8967047,Reeve,dev,person,SOWERBY,SOVERBY,False
+legacy + SFT repair,8967047,Reeve,dev,locality,Brazil,Brazil,True
+legacy + SFT repair,8967047,Reeve,dev,taxon,B. auris-leporis,B. auris-vulporis,False
+legacy + SFT repair,8967047,Reeve,dev,institution,Mus. Taylor,Mus. Taylor,True
+legacy + SFT repair,8967047,Reeve,dev,taxon,BULIMUS MULIEBRIS,BULIMUS MULIEBUS,False
+legacy + SFT repair,8967047,Reeve,dev,vernacular,EFFEMINATE BULIMUS,EFFEMINATE BULIMUS,True
+legacy + SFT repair,8967047,Reeve,dev,locality,New Granada,New Granada,True
+legacy + SFT repair,8967047,Reeve,dev,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8967047,Reeve,dev,taxon,BULIMUS BOLIVIANUS,BULIMUS BOLIVANDS,False
+legacy + SFT repair,8967047,Reeve,dev,vernacular,BOLIVIAN BULIMUS,BOLIVIAN BULIMUS,True
+legacy + SFT repair,8967047,Reeve,dev,person,PFEIFFER,PFEIFFER,True
+legacy + SFT repair,8967047,Reeve,dev,locality,"Merida, Andes of Bolivia","Merida, Andes of Bolivia",True
+legacy + SFT repair,8967047,Reeve,dev,person,Pfeiﬀer,Pfeiffer,True
+legacy + SFT repair,8967047,Reeve,dev,taxon,"B. annu-
+latus","B. anu-
+
+latus",False
+legacy + SFT repair,8967047,Reeve,dev,institution,Mus. Taylor,Mus. Taylor,True
+legacy + SFT repair,8967047,Reeve,dev,taxon,BULIMUS PATRICIUS,BULIMUS PATRIOUS,False
+legacy + SFT repair,8967047,Reeve,dev,vernacular,PATRICIAN BULIMUS,PATRICIAN BULIMUS,True
+legacy + SFT repair,8967047,Reeve,dev,locality,New Granada,New Granada,True
+legacy + SFT repair,8967047,Reeve,dev,institution,Mus. Taylor,Mus. Taylor,True
+legacy + SFT repair,8967047,Reeve,dev,taxon,BULIMUS SPECTATUS,BULIMUS SPOTATUS,False
+legacy + SFT repair,8967047,Reeve,dev,vernacular,CHOICE BULIMUS,CHOICE BULIMUS,True
+legacy (BHL),8967060,Reeve,dev,vernacular,VERY SMALL BULIMUS,very small Bdlimus,False
+legacy (BHL),8967060,Reeve,dev,person,ADAMS,Adams,True
+legacy (BHL),8967060,Reeve,dev,locality,Jamaica,Jamaica,True
+legacy (BHL),8967060,Reeve,dev,taxon,B. minimus,B. minimus,True
+legacy (BHL),8967060,Reeve,dev,institution,Mus. Adams,Mus. Adams,True
+legacy (BHL),8967060,Reeve,dev,taxon,BULIMUS PAUPERCULUS,BuLiMUs PAUPEECCLUs,False
+legacy (BHL),8967060,Reeve,dev,vernacular,MEAN-LOOKING BULIMUS,MEAN-LOOKING Bdlimus,False
+legacy (BHL),8967060,Reeve,dev,person,ADAMS,Abams,False
+legacy (BHL),8967060,Reeve,dev,locality,Jamaica,Jamaica,True
+legacy (BHL),8967060,Reeve,dev,taxon,Bulimi,Bulimi,True
+legacy (BHL),8967060,Reeve,dev,taxon,Achatinœ,Achalina,False
+legacy (BHL),8967060,Reeve,dev,locality,"Ja‐
+maica","Ja- 
+
+ maica",True
+legacy (BHL),8967060,Reeve,dev,institution,Mus. Benson,Mus. Benson,True
+legacy (BHL),8967060,Reeve,dev,taxon,BULIMUS TUTULUS,BULIMUS TUTULUS,True
+legacy (BHL),8967060,Reeve,dev,vernacular,LITTLE TUFT BULIMUS,LITTLE TUFT BuLiMUS,True
+legacy (BHL),8967060,Reeve,dev,person,BENSON,Benson,True
+legacy (BHL),8967060,Reeve,dev,locality,"Humeerpore, Bundelkhund, India","Humeerpore, Bmidelkhund, ludia",False
+legacy (BHL),8967060,Reeve,dev,person,Benson,Benson,True
+legacy + SFT repair,8967060,Reeve,dev,vernacular,VERY SMALL BULIMUS,VERY SMALL BULIMUS,True
+legacy + SFT repair,8967060,Reeve,dev,person,ADAMS,Adams,True
+legacy + SFT repair,8967060,Reeve,dev,locality,Jamaica,Jamaica,True
+legacy + SFT repair,8967060,Reeve,dev,taxon,B. minimus,B. minimus,True
+legacy + SFT repair,8967060,Reeve,dev,institution,Mus. Adams,Mus. Adams,True
+legacy + SFT repair,8967060,Reeve,dev,taxon,BULIMUS PAUPERCULUS,BULIMUS PAUPEECCLUS,False
+legacy + SFT repair,8967060,Reeve,dev,vernacular,MEAN-LOOKING BULIMUS,MEAN-LOOKING BULIMUS,True
+legacy + SFT repair,8967060,Reeve,dev,person,ADAMS,Abams,False
+legacy + SFT repair,8967060,Reeve,dev,locality,Jamaica,Jamaica,True
+legacy + SFT repair,8967060,Reeve,dev,taxon,Bulimi,Bulimi,True
+legacy + SFT repair,8967060,Reeve,dev,taxon,Achatinœ,Achalina,False
+legacy + SFT repair,8967060,Reeve,dev,locality,"Ja‐
+maica","Ja‐
+
+macina",False
+legacy + SFT repair,8967060,Reeve,dev,institution,Mus. Benson,Mus. Benson,True
+legacy + SFT repair,8967060,Reeve,dev,taxon,BULIMUS TUTULUS,BULIMUS TUTULUS,True
+legacy + SFT repair,8967060,Reeve,dev,vernacular,LITTLE TUFT BULIMUS,LITTLE TUFT BULIMUS,True
+legacy + SFT repair,8967060,Reeve,dev,person,BENSON,Benson,True
+legacy + SFT repair,8967060,Reeve,dev,locality,"Humeerpore, Bundelkhund, India","Humeerpore, Birmingund, ludia",False
+legacy + SFT repair,8967060,Reeve,dev,person,Benson,Benson,True
+legacy (BHL),8967147,Reeve,dev,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8967147,Reeve,dev,taxon,ACHATINA PHILIPPIANA,AcHATiNA Philippiana,True
+legacy (BHL),8967147,Reeve,dev,vernacular,PHILIPPI’S ACHATINA,Philippi's Achatina,True
+legacy (BHL),8967147,Reeve,dev,person,PFEIFFER,Pfeiffer,True
+legacy (BHL),8967147,Reeve,dev,taxon,Glandina,OlamUna,False
+legacy (BHL),8967147,Reeve,dev,locality,Jamaica,Jamaica,True
+legacy (BHL),8967147,Reeve,dev,person,Gosse,Gosse,True
+legacy (BHL),8967147,Reeve,dev,institution,Mus. Dennison,Mus. Dennison,True
+legacy (BHL),8967147,Reeve,dev,taxon,ACHATINA MONILIFERA,Achatina monilifera,True
+legacy (BHL),8967147,Reeve,dev,vernacular,NECKLACE‐BOUND ACHATINA,necklace-bound Achatina,True
+legacy (BHL),8967147,Reeve,dev,person,PFEIFFER,Pfeiffer,True
+legacy (BHL),8967147,Reeve,dev,taxon,Glandina,Olandina,False
+legacy (BHL),8967147,Reeve,dev,locality,"Coban, Vera Cruz, Central America","Coban, Vera Cruz, Central America",True
+legacy (BHL),8967147,Reeve,dev,person,Lattre,Lattre,True
+legacy (BHL),8967147,Reeve,dev,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8967147,Reeve,dev,taxon,ACHATINA OLEACEA,Achatina oleacea,True
+legacy (BHL),8967147,Reeve,dev,vernacular,OLIVE-SHAPED ACHATINA,olive-shaped Achatina,True
+legacy (BHL),8967147,Reeve,dev,taxon,Helix (Cochlicopa) oleacea,Helix (Cochlicopa) oleacea,True
+legacy (BHL),8967147,Reeve,dev,person,Férussac,Femssac,False
+legacy (BHL),8967147,Reeve,dev,taxon,Glandina oleacea,Glandina oleacea,True
+legacy (BHL),8967147,Reeve,dev,person,Beck,Beck,True
+legacy (BHL),8967147,Reeve,dev,locality,Cuba,Cuba,True
+legacy (BHL),8967147,Reeve,dev,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8967147,Reeve,dev,taxon,ACHATINA LEUCOZONIAS,Achatina leicozonias,False
+legacy (BHL),8967147,Reeve,dev,vernacular,WHITE‐ZONED ACHATINA,white-zoned Achatina,True
+legacy (BHL),8967147,Reeve,dev,person,SOWERBY,SowERBY,True
+legacy (BHL),8967147,Reeve,dev,taxon,Voluta leucozonias,Valuta leucozonias,False
+legacy (BHL),8967147,Reeve,dev,person,Walch,Walch,True
+legacy (BHL),8967147,Reeve,dev,taxon,Achatina albolineata,Achatina albolineata,True
+legacy (BHL),8967147,Reeve,dev,person,Lamarck,Lamarck,True
+legacy (BHL),8967147,Reeve,dev,taxon,"Helix (Cochlicopa,) leucozonias","Helix {Cochlicopa,) leucozonias",False
+legacy (BHL),8967147,Reeve,dev,person,Férussac,Ferussac,False
+legacy (BHL),8967147,Reeve,dev,taxon,Polyphemus leucozonias,Polyphemus leucozonias,True
+legacy (BHL),8967147,Reeve,dev,person,Jan,Jan,True
+legacy (BHL),8967147,Reeve,dev,taxon,Glandina leucozonias,Glmidina leucozonias,False
+legacy (BHL),8967147,Reeve,dev,person,Beck,Beck,True
+legacy (BHL),8967147,Reeve,dev,locality,Martinique,Martinique,True
+legacy (BHL),8967147,Reeve,dev,person,Walch,Walch,True
+legacy (BHL),8967147,Reeve,dev,person,Gmelin,Gmelin,True
+legacy (BHL),8967147,Reeve,dev,person,Dillwyn,Dillwyn,True
+legacy + SFT repair,8967147,Reeve,dev,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,ACHATINA PHILIPPIANA,ACHATINA PHILIPPIANA,True
+legacy + SFT repair,8967147,Reeve,dev,vernacular,PHILIPPI’S ACHATINA,PHILIPPI'S ACHATINA,True
+legacy + SFT repair,8967147,Reeve,dev,person,PFEIFFER,PFEIFFER,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,Glandina,Olmunda,False
+legacy + SFT repair,8967147,Reeve,dev,locality,Jamaica,Jamaica,True
+legacy + SFT repair,8967147,Reeve,dev,person,Gosse,Gosse,True
+legacy + SFT repair,8967147,Reeve,dev,institution,Mus. Dennison,Mus. Dennison,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,ACHATINA MONILIFERA,ACHATINA MONILIFERA,True
+legacy + SFT repair,8967147,Reeve,dev,vernacular,NECKLACE‐BOUND ACHATINA,NECKLACE-BOUND ACHATINA,True
+legacy + SFT repair,8967147,Reeve,dev,person,PFEIFFER,PFEIFFER,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,Glandina,Olandina,False
+legacy + SFT repair,8967147,Reeve,dev,locality,"Coban, Vera Cruz, Central America","Coban, Vera Cruz, Central America",True
+legacy + SFT repair,8967147,Reeve,dev,person,Lattre,Lattre,True
+legacy + SFT repair,8967147,Reeve,dev,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,ACHATINA OLEACEA,ACHATINA OLEACEA,True
+legacy + SFT repair,8967147,Reeve,dev,vernacular,OLIVE-SHAPED ACHATINA,OLIVE-SHAPED ACHATINA,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,Helix (Cochlicopa) oleacea,Helix (Cochlicopa) oleacea,True
+legacy + SFT repair,8967147,Reeve,dev,person,Férussac,Férussac,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,Glandina oleacea,Glandina oleacea,True
+legacy + SFT repair,8967147,Reeve,dev,person,Beck,Beck,True
+legacy + SFT repair,8967147,Reeve,dev,locality,Cuba,Cuba,True
+legacy + SFT repair,8967147,Reeve,dev,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,ACHATINA LEUCOZONIAS,ACHATINA LEICOCZONIAS,False
+legacy + SFT repair,8967147,Reeve,dev,vernacular,WHITE‐ZONED ACHATINA,WHITE-ZONE ACHATINA,False
+legacy + SFT repair,8967147,Reeve,dev,person,SOWERBY,SOWERBY,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,Voluta leucozonias,Valuta leucozonias,False
+legacy + SFT repair,8967147,Reeve,dev,person,Walch,Walch,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,Achatina albolineata,Achatina albolineata,True
+legacy + SFT repair,8967147,Reeve,dev,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,"Helix (Cochlicopa,) leucozonias","Helix (Cochlicopa,) leucozonias",True
+legacy + SFT repair,8967147,Reeve,dev,person,Férussac,Férussac,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,Polyphemus leucozonias,Polyphemus leucozonias,True
+legacy + SFT repair,8967147,Reeve,dev,person,Jan,Jan,True
+legacy + SFT repair,8967147,Reeve,dev,taxon,Glandina leucozonias,Glandina leucozonias,True
+legacy + SFT repair,8967147,Reeve,dev,person,Beck,Beck,True
+legacy + SFT repair,8967147,Reeve,dev,locality,Martinique,Martinique,True
+legacy + SFT repair,8967147,Reeve,dev,person,Walch,Walch,True
+legacy + SFT repair,8967147,Reeve,dev,person,Gmelin,Gmelin,True
+legacy + SFT repair,8967147,Reeve,dev,person,Dillwyn,Dillwyn,True
+legacy (BHL),8992328,Butler,test,locality,Kent,Kent,True
+legacy (BHL),8992328,Butler,test,vernacular,hawthorn,hawthorn,True
+legacy (BHL),8992328,Butler,test,vernacular,Red-backed Shrike,Red-backed Shrike,True
+legacy (BHL),8992328,Butler,test,locality,Maidstone,Maidstone,True
+legacy (BHL),8992328,Butler,test,vernacular,Greenﬁnch,Greenfinch,True
+legacy (BHL),8992328,Butler,test,vernacular,moss,moss,True
+legacy (BHL),8992328,Butler,test,vernacular,Butcher-bird,Butcher-bird,True
+legacy (BHL),8992328,Butler,test,vernacular,Shrikes,Shrikes,True
+legacy (BHL),8992328,Butler,test,vernacular,insects,insects,True
+legacy (BHL),8992328,Butler,test,vernacular,lizards,lizards,True
+legacy (BHL),8992328,Butler,test,vernacular,mice,mice,True
+legacy (BHL),8992328,Butler,test,vernacular,Red-backed Shrike,Red-backed Shrike,True
+legacy (BHL),8992328,Butler,test,person,"Mathias
+Rausch","Mathias 
+
+ Rausch",True
+legacy (BHL),8992328,Butler,test,vernacular,Red-backed Shrike,Red-backed Shrike,True
+legacy (BHL),8992328,Butler,test,vernacular,Thorn-piercer,Thorn-piercer,True
+legacy (BHL),8992328,Butler,test,taxon,Lanius collurio,Lanius collurio,True
+legacy (BHL),8992328,Butler,test,locality,Europe,Europe,True
+legacy (BHL),8992328,Butler,test,vernacular,Red-backed Shrikes,Red-backed Shrikes,True
+legacy (BHL),8992328,Butler,test,vernacular,cockroaches,cockroaches,True
+legacy (BHL),8992328,Butler,test,person,H. A. Macpherson,H. A. Macpherson,True
+legacy (BHL),8992328,Butler,test,vernacular,Woodchat,Woodchat,True
+legacy (BHL),8992328,Butler,test,vernacular,Great Grey Shrikes,Great Grey Shrikes,True
+legacy (BHL),8992328,Butler,test,vernacular,insects,insects,True
+legacy + SFT repair,8992328,Butler,test,locality,Kent,Kent,True
+legacy + SFT repair,8992328,Butler,test,vernacular,hawthorn,hawthorn,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Red-backed Shrike,Red-backed Shrike,True
+legacy + SFT repair,8992328,Butler,test,locality,Maidstone,Maidstone,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Greenﬁnch,Greenfinch,True
+legacy + SFT repair,8992328,Butler,test,vernacular,moss,moss,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Butcher-bird,Butcher-bird,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Shrikes,Shrikes,True
+legacy + SFT repair,8992328,Butler,test,vernacular,insects,insects,True
+legacy + SFT repair,8992328,Butler,test,vernacular,lizards,lizards,True
+legacy + SFT repair,8992328,Butler,test,vernacular,mice,mice,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Red-backed Shrike,Red-backed Shrike,True
+legacy + SFT repair,8992328,Butler,test,person,"Mathias
+Rausch","Mathias
+
+Rausch",True
+legacy + SFT repair,8992328,Butler,test,vernacular,Red-backed Shrike,Red-backed Shrike,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Thorn-piercer,Thorn-piercer,True
+legacy + SFT repair,8992328,Butler,test,taxon,Lanius collurio,Lanius collurio,True
+legacy + SFT repair,8992328,Butler,test,locality,Europe,Europe,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Red-backed Shrikes,Red-backed Shrikes,True
+legacy + SFT repair,8992328,Butler,test,vernacular,cockroaches,cockroaches,True
+legacy + SFT repair,8992328,Butler,test,person,H. A. Macpherson,H. A. Macpherson,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Woodchat,Woodchat,True
+legacy + SFT repair,8992328,Butler,test,vernacular,Great Grey Shrikes,Great Grey Shrikes,True
+legacy + SFT repair,8992328,Butler,test,vernacular,insects,insects,True
+legacy (BHL),8992379,Butler,test,locality,Berwickshire,Berwickshire,True
+legacy (BHL),8992379,Butler,test,locality,Yorkshire,Yorkshire,True
+legacy (BHL),8992379,Butler,test,locality,Scarborough,Scarborough,True
+legacy (BHL),8992379,Butler,test,date,"October
+23rd, 1889","October 
+
+ 23rd, 1889",True
+legacy (BHL),8992379,Butler,test,date,1887,1887,True
+legacy (BHL),8992379,Butler,test,locality,Wells,Wells,True
+legacy (BHL),8992379,Butler,test,date,1900,1900,True
+legacy (BHL),8992379,Butler,test,date,1904,1904,True
+legacy (BHL),8992379,Butler,test,date,1905,1905,True
+legacy (BHL),8992379,Butler,test,date,1906,1906,True
+legacy (BHL),8992379,Butler,test,locality,Norfolk,Norfolk,True
+legacy (BHL),8992379,Butler,test,locality,Yorkshire,Yorkshire,True
+legacy (BHL),8992379,Butler,test,date,1907,1907,True
+legacy (BHL),8992379,Butler,test,locality,Cheshire,Cheshire,True
+legacy (BHL),8992379,Butler,test,date,June 1903,June 1903,True
+legacy (BHL),8992379,Butler,test,locality,Shetlands,Shetlands,True
+legacy (BHL),8992379,Butler,test,date,1906,1906,True
+legacy (BHL),8992379,Butler,test,vernacular,Flycatcher,Flycatcher,True
+legacy (BHL),8992379,Butler,test,vernacular,Robin,Robin,True
+legacy (BHL),8992379,Butler,test,person,Seebohm,Seebohm,True
+legacy (BHL),8992379,Butler,test,vernacular,Robins,Robins,True
+legacy (BHL),8992379,Butler,test,vernacular,Flycatchers,Flycatchers,True
+legacy (BHL),8992379,Butler,test,vernacular,Red-breasted Flycatcher,Red-breasted Flycatcher,True
+legacy (BHL),8992379,Butler,test,taxon,M. minuta,M. mituita,False
+legacy (BHL),8992379,Butler,test,taxon,M. leucura,M. leucura,True
+legacy (BHL),8992379,Butler,test,taxon,M. parva,M. parva,True
+legacy (BHL),8992379,Butler,test,taxon,M. hyperythra,M. hyperythra,True
+legacy (BHL),8992379,Butler,test,taxon,"Munia
+atricapilla","Munia 
+
+ atricapilla",True
+legacy (BHL),8992379,Butler,test,date,1887,1887,True
+legacy (BHL),8992379,Butler,test,date,spring of 1896,spring of 1896,True
+legacy (BHL),8992379,Butler,test,taxon,Quelea quelea,Quelea quelea,True
+legacy (BHL),8992379,Butler,test,taxon,Q. russi,Q. ri<sst,False
+legacy (BHL),8992379,Butler,test,vernacular,Cardinal,Cardinal,True
+legacy (BHL),8992379,Butler,test,taxon,Paroaria cervicalis,Paroaria ccrvicalis,False
+legacy (BHL),8992379,Butler,test,taxon,P. capitata,P. capiiata,False
+legacy + SFT repair,8992379,Butler,test,locality,Berwickshire,Berwickshire,True
+legacy + SFT repair,8992379,Butler,test,locality,Yorkshire,Yorkshire,True
+legacy + SFT repair,8992379,Butler,test,locality,Scarborough,Scarborough,True
+legacy + SFT repair,8992379,Butler,test,date,"October
+23rd, 1889","October
+
+23rd, 1889",True
+legacy + SFT repair,8992379,Butler,test,date,1887,1887,True
+legacy + SFT repair,8992379,Butler,test,locality,Wells,Wells,True
+legacy + SFT repair,8992379,Butler,test,date,1900,1900,True
+legacy + SFT repair,8992379,Butler,test,date,1904,1904,True
+legacy + SFT repair,8992379,Butler,test,date,1905,1905,True
+legacy + SFT repair,8992379,Butler,test,date,1906,1906,True
+legacy + SFT repair,8992379,Butler,test,locality,Norfolk,Norfolk,True
+legacy + SFT repair,8992379,Butler,test,locality,Yorkshire,Yorkshire,True
+legacy + SFT repair,8992379,Butler,test,date,1907,1907,True
+legacy + SFT repair,8992379,Butler,test,locality,Cheshire,Cheshire,True
+legacy + SFT repair,8992379,Butler,test,date,June 1903,June 1903,True
+legacy + SFT repair,8992379,Butler,test,locality,Shetlands,Shetlands,True
+legacy + SFT repair,8992379,Butler,test,date,1906,1906,True
+legacy + SFT repair,8992379,Butler,test,vernacular,Flycatcher,Flycatcher,True
+legacy + SFT repair,8992379,Butler,test,vernacular,Robin,Robin,True
+legacy + SFT repair,8992379,Butler,test,person,Seebohm,Seebohm,True
+legacy + SFT repair,8992379,Butler,test,vernacular,Robins,Robins,True
+legacy + SFT repair,8992379,Butler,test,vernacular,Flycatchers,Flycatchers,True
+legacy + SFT repair,8992379,Butler,test,vernacular,Red-breasted Flycatcher,Red-breasted Flycatcher,True
+legacy + SFT repair,8992379,Butler,test,taxon,M. minuta,M. mitoита,False
+legacy + SFT repair,8992379,Butler,test,taxon,M. leucura,M. leucura,True
+legacy + SFT repair,8992379,Butler,test,taxon,M. parva,M. parva,True
+legacy + SFT repair,8992379,Butler,test,taxon,M. hyperythra,M. hyperythra,True
+legacy + SFT repair,8992379,Butler,test,taxon,"Munia
+atricapilla","Munia
+
+atricapilla",True
+legacy + SFT repair,8992379,Butler,test,date,1887,1887,True
+legacy + SFT repair,8992379,Butler,test,date,spring of 1896,spring of 1896,True
+legacy + SFT repair,8992379,Butler,test,taxon,Quelea quelea,Quelea quelea,True
+legacy + SFT repair,8992379,Butler,test,taxon,Q. russi,Q. ribst,False
+legacy + SFT repair,8992379,Butler,test,vernacular,Cardinal,Cardinal,True
+legacy + SFT repair,8992379,Butler,test,taxon,Paroaria cervicalis,Paroaria cœricalis,False
+legacy + SFT repair,8992379,Butler,test,taxon,P. capitata,P. cœricalis,False
+legacy (BHL),8992408,Butler,test,person,H. A. Macpherson,H. A. Alacpherson,False
+legacy (BHL),8992408,Butler,test,vernacular,Hawﬁnch,Hawfinch,True
+legacy (BHL),8992408,Butler,test,person,Charles A. Witchell,Charles A. Witchell,True
+legacy (BHL),8992408,Butler,test,vernacular,Hawﬁnch,Hawfinch,True
+legacy (BHL),8992408,Butler,test,person,H. A. Macpherson,H. A. Macpherson,True
+legacy (BHL),8992408,Butler,test,vernacular,Chaﬃnch,Chaffinch,True
+legacy (BHL),8992408,Butler,test,person,Alexander von Homeyer,Alexander von Home3'er,False
+legacy (BHL),8992408,Butler,test,vernacular,cherry-kernel biter,cherry-kernel biter,True
+legacy (BHL),8992408,Butler,test,vernacular,Bullﬁnches,Bullfinches,True
+legacy (BHL),8992408,Butler,test,vernacular,Grosbeaks,Gro.sbeaks,False
+legacy (BHL),8992408,Butler,test,vernacular,Grosbeaks,Grosbeaks,True
+legacy (BHL),8992408,Butler,test,person,Howard Saunders,Howard Saunders,True
+legacy (BHL),8992408,Butler,test,vernacular,Finches,Finches,True
+legacy (BHL),8992408,Butler,test,vernacular,Buntings,Buntings,True
+legacy (BHL),8992408,Butler,test,vernacular,Finches,Finches,True
+legacy (BHL),8992408,Butler,test,taxon,Fringilla,Fyi>igiIIa,False
+legacy (BHL),8992408,Butler,test,vernacular,Buntings,Buntings,True
+legacy (BHL),8992408,Butler,test,taxon,Fringilla,^ri)ioi/ln,False
+legacy (BHL),8992408,Butler,test,taxon,Passer,Piisser,False
+legacy (BHL),8992408,Butler,test,taxon,Emberizinœ,Emberizina,False
+legacy + SFT repair,8992408,Butler,test,person,H. A. Macpherson,H. A. Alcockerson,False
+legacy + SFT repair,8992408,Butler,test,vernacular,Hawﬁnch,Hawfinch,True
+legacy + SFT repair,8992408,Butler,test,person,Charles A. Witchell,Charles A. Witchell,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Hawﬁnch,Hawfinch,True
+legacy + SFT repair,8992408,Butler,test,person,H. A. Macpherson,H. A. Macpherson,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Chaﬃnch,Chaffinch,True
+legacy + SFT repair,8992408,Butler,test,person,Alexander von Homeyer,Alexander von Homeer,False
+legacy + SFT repair,8992408,Butler,test,vernacular,cherry-kernel biter,cherry-kernel biter,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Bullﬁnches,Bullfinches,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Grosbeaks,Grosbeaks,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Grosbeaks,Grosbeaks,True
+legacy + SFT repair,8992408,Butler,test,person,Howard Saunders,Howard Saunders,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Finches,Finches,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Buntings,Buntings,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Finches,Finches,True
+legacy + SFT repair,8992408,Butler,test,taxon,Fringilla,Fringilla,True
+legacy + SFT repair,8992408,Butler,test,vernacular,Buntings,Buntings,True
+legacy + SFT repair,8992408,Butler,test,taxon,Fringilla,the genus,False
+legacy + SFT repair,8992408,Butler,test,taxon,Passer,Pless,False
+legacy + SFT repair,8992408,Butler,test,taxon,Emberizinœ,Emberizina,False
+legacy (BHL),8992489,Butler,test,taxon,FRINGILLIDÆ,FR I X(UL L ID. ¥,False
+legacy (BHL),8992489,Butler,test,taxon,FRINGILLINÆ,FRIXGIL L IN^E,False
+legacy (BHL),8992489,Butler,test,vernacular,BRAMBLING,Bramblixg,False
+legacy (BHL),8992489,Butler,test,taxon,Fringilla nontifringilla,Frinoii/d iiii>iitijriii<^illii,False
+legacy (BHL),8992489,Butler,test,person,LINN.,LiNX.,False
+legacy (BHL),8992489,Butler,test,person,Howard Saunders,Howard vSauiiders,False
+legacy (BHL),8992489,Butler,test,locality,Faroes,Faroes,True
+legacy (BHL),8992489,Butler,test,vernacular,Brambling,Brambliug,False
+legacy (BHL),8992489,Butler,test,vernacular,pine,pine,True
+legacy (BHL),8992489,Butler,test,vernacular,birch,birch,True
+legacy (BHL),8992489,Butler,test,locality,Norway,Norway,True
+legacy (BHL),8992489,Butler,test,locality,valley of the Amur,valle}' of the Amur,False
+legacy (BHL),8992489,Butler,test,locality,Japan,Japan,True
+legacy (BHL),8992489,Butler,test,locality,China,China,True
+legacy (BHL),8992489,Butler,test,locality,"Northern
+India","Northern 
+
+ India",True
+legacy (BHL),8992489,Butler,test,locality,Asia Minor,Asia Minor,True
+legacy (BHL),8992489,Butler,test,locality,Europe,Europe,True
+legacy (BHL),8992489,Butler,test,locality,African side of the Mediterranean,African side of the Alediterraueau,False
+legacy (BHL),8992489,Butler,test,locality,Belgium,Belgium,True
+legacy (BHL),8992489,Butler,test,locality,Holland,Holland,True
+legacy (BHL),8992489,Butler,test,locality,Germany,Germany,True
+legacy (BHL),8992489,Butler,test,locality,Heligoland,Heligoland,True
+legacy (BHL),8992489,Butler,test,locality,Pyrenees,P3'renees,False
+legacy (BHL),8992489,Butler,test,locality,Alps,Alps,True
+legacy (BHL),8992489,Butler,test,locality,Ardennes,Ardennes,True
+legacy (BHL),8992489,Butler,test,locality,Great Britain,Great Britain,True
+legacy (BHL),8992489,Butler,test,vernacular,Brambling,Brambling,True
+legacy (BHL),8992489,Butler,test,locality,Scotland,Scotland,True
+legacy (BHL),8992489,Butler,test,locality,England,England,True
+legacy (BHL),8992489,Butler,test,locality,Cornwall,Cornwall,True
+legacy (BHL),8992489,Butler,test,locality,west of England,west of England,True
+legacy (BHL),8992489,Butler,test,locality,south of Ireland,south of Ireland,True
+legacy + SFT repair,8992489,Butler,test,taxon,FRINGILLIDÆ,FR I X(UL L ID. ¥,False
+legacy + SFT repair,8992489,Butler,test,taxon,FRINGILLINÆ,FRIXGIL L IN^E,False
+legacy + SFT repair,8992489,Butler,test,vernacular,BRAMBLING,Bramblixg,False
+legacy + SFT repair,8992489,Butler,test,taxon,Fringilla nontifringilla,Fringilla rufa,False
+legacy + SFT repair,8992489,Butler,test,person,LINN.,LINN.,True
+legacy + SFT repair,8992489,Butler,test,person,Howard Saunders,Howard vSauiiders,False
+legacy + SFT repair,8992489,Butler,test,locality,Faroes,Faroes,True
+legacy + SFT repair,8992489,Butler,test,vernacular,Brambling,Brambling,True
+legacy + SFT repair,8992489,Butler,test,vernacular,pine,pine,True
+legacy + SFT repair,8992489,Butler,test,vernacular,birch,birch,True
+legacy + SFT repair,8992489,Butler,test,locality,Norway,Norway,True
+legacy + SFT repair,8992489,Butler,test,locality,valley of the Amur,valley of the Amur,True
+legacy + SFT repair,8992489,Butler,test,locality,Japan,Japan,True
+legacy + SFT repair,8992489,Butler,test,locality,China,China,True
+legacy + SFT repair,8992489,Butler,test,locality,"Northern
+India","Northern
+
+India",True
+legacy + SFT repair,8992489,Butler,test,locality,Asia Minor,Asia Minor,True
+legacy + SFT repair,8992489,Butler,test,locality,Europe,Europe,True
+legacy + SFT repair,8992489,Butler,test,locality,African side of the Mediterranean,African side of the Alemannian forest,False
+legacy + SFT repair,8992489,Butler,test,locality,Belgium,Belgium,True
+legacy + SFT repair,8992489,Butler,test,locality,Holland,Holland,True
+legacy + SFT repair,8992489,Butler,test,locality,Germany,Germany,True
+legacy + SFT repair,8992489,Butler,test,locality,Heligoland,Heligoland,True
+legacy + SFT repair,8992489,Butler,test,locality,Pyrenees,Prœnees,False
+legacy + SFT repair,8992489,Butler,test,locality,Alps,Alps,True
+legacy + SFT repair,8992489,Butler,test,locality,Ardennes,Ardennes,True
+legacy + SFT repair,8992489,Butler,test,locality,Great Britain,Great Britain,True
+legacy + SFT repair,8992489,Butler,test,vernacular,Brambling,Brambling,True
+legacy + SFT repair,8992489,Butler,test,locality,Scotland,Scotland,True
+legacy + SFT repair,8992489,Butler,test,locality,England,England,True
+legacy + SFT repair,8992489,Butler,test,locality,Cornwall,Cornwall,True
+legacy + SFT repair,8992489,Butler,test,locality,west of England,west of England,True
+legacy + SFT repair,8992489,Butler,test,locality,south of Ireland,south of Ireland,True
+legacy (BHL),8992643,Butler,test,taxon,TURDIDÆ,Ti 7^ DILL -E,False
+legacy (BHL),8992643,Butler,test,taxon,SYLVIINÆ,SYL J 7IA\ E,False
+legacy (BHL),8992643,Butler,test,vernacular,PALLAS' WILLOW-WARBLER,PallAvS' Willow- Warbler,False
+legacy (BHL),8992643,Butler,test,taxon,Phylloscopus proregulus,Phy/Iosiopus f^ivrcgit/iis,False
+legacy (BHL),8992643,Butler,test,locality,Norfolk,Norfolk,True
+legacy (BHL),8992643,Butler,test,date,"October, 1896","October, 1896",True
+legacy (BHL),8992643,Butler,test,vernacular,Chiﬀchaﬀs,Chiffchaffs,True
+legacy (BHL),8992643,Butler,test,locality,Shetlands,Shetlands,True
+legacy (BHL),8992643,Butler,test,date,"April 15th and 24th,
+1904","April i5tli and 24th, 
+
+ 1904",False
+legacy (BHL),8992643,Butler,test,date,May of the same year,May of the same 3'ear,False
+legacy (BHL),8992643,Butler,test,person,John S. Tulloch,John S. Tnlloch,False
+legacy (BHL),8992643,Butler,test,locality,Lerwick,Lerwick,True
+legacy (BHL),8992643,Butler,test,date,May 27th,Ma}^ 27th,False
+legacy (BHL),8992643,Butler,test,vernacular,cat,cat,True
+legacy (BHL),8992643,Butler,test,taxon,TURDIDÆ,TURDID.F,False
+legacy (BHL),8992643,Butler,test,taxon,SYLVIINÆ,SYL I IIN.E,False
+legacy (BHL),8992643,Butler,test,vernacular,SIBERIAN CHIFFCHAFF,Siberian Chiffchaff,True
+legacy (BHL),8992643,Butler,test,taxon,Phylloscopus tristis,Phy//oscop!is tristis,False
+legacy (BHL),8992643,Butler,test,person,BLYTH,BlyTH,True
+legacy (BHL),8992643,Butler,test,locality,Orkneys,Orkneys,True
+legacy (BHL),8992643,Butler,test,date,1902,1902,True
+legacy (BHL),8992643,Butler,test,taxon,TURDIDÆ,TURDIL)^,False
+legacy (BHL),8992643,Butler,test,taxon,SYLVIINÆ,SYL I 'IIN.E,False
+legacy (BHL),8992643,Butler,test,vernacular,GREENISH WILLOW-WARBLER,Greenish Willow- Warbler,False
+legacy (BHL),8992643,Butler,test,taxon,Phylloscopus viridanus,Phylloscopiis viridaiius,False
+legacy (BHL),8992643,Butler,test,person,BLYTH,Blvth,False
+legacy (BHL),8992643,Butler,test,locality,Lincolnshire,Lincolnshire,True
+legacy (BHL),8992643,Butler,test,date,"September 5th, 1896","September 5th, 1896",True
+legacy (BHL),8992643,Butler,test,locality,Sule Skerry Lighthouse (Sutherlandshire),Sule Skerry Lighthouse (Siitherlandshire),False
+legacy (BHL),8992643,Butler,test,date,"September 5th, 1902","September 5th, 1902",True
+legacy + SFT repair,8992643,Butler,test,taxon,TURDIDÆ,TURRICAR,False
+legacy + SFT repair,8992643,Butler,test,taxon,SYLVIINÆ,SYLL. TURRICAR,False
+legacy + SFT repair,8992643,Butler,test,vernacular,PALLAS' WILLOW-WARBLER,"PALLAS' WILLOW-WBDRB.
+
+",False
+legacy + SFT repair,8992643,Butler,test,taxon,Phylloscopus proregulus,Plekoopus gracilis,False
+legacy + SFT repair,8992643,Butler,test,locality,Norfolk,Norfolk,True
+legacy + SFT repair,8992643,Butler,test,date,"October, 1896","October, 1896",True
+legacy + SFT repair,8992643,Butler,test,vernacular,Chiﬀchaﬀs,Chiffchaffs,True
+legacy + SFT repair,8992643,Butler,test,locality,Shetlands,Shetlands,True
+legacy + SFT repair,8992643,Butler,test,date,"April 15th and 24th,
+1904","April 15th and 24th,
+
+1904",True
+legacy + SFT repair,8992643,Butler,test,date,May of the same year,May of the same year,True
+legacy + SFT repair,8992643,Butler,test,person,John S. Tulloch,John S. Thulloch,False
+legacy + SFT repair,8992643,Butler,test,locality,Lerwick,Lerwick,True
+legacy + SFT repair,8992643,Butler,test,date,May 27th,May 27th,True
+legacy + SFT repair,8992643,Butler,test,vernacular,cat,cat,True
+legacy + SFT repair,8992643,Butler,test,taxon,TURDIDÆ,TURRIDÆ,False
+legacy + SFT repair,8992643,Butler,test,taxon,SYLVIINÆ,SYRIZANÆ,False
+legacy + SFT repair,8992643,Butler,test,vernacular,SIBERIAN CHIFFCHAFF,SIBERIAN CHIFFCHAFF,True
+legacy + SFT repair,8992643,Butler,test,taxon,Phylloscopus tristis,"
+
+Plethopis tristis",False
+legacy + SFT repair,8992643,Butler,test,person,BLYTH,BLYTH,True
+legacy + SFT repair,8992643,Butler,test,locality,Orkneys,Orkneys,True
+legacy + SFT repair,8992643,Butler,test,date,1902,1902,True
+legacy + SFT repair,8992643,Butler,test,taxon,TURDIDÆ,TURDILÆ,False
+legacy + SFT repair,8992643,Butler,test,taxon,SYLVIINÆ,SYRIMUS,False
+legacy + SFT repair,8992643,Butler,test,vernacular,GREENISH WILLOW-WARBLER,"GREENISH WILLOW-WB.
+
+",False
+legacy + SFT repair,8992643,Butler,test,taxon,Phylloscopus viridanus,Phylloscopis virginea,False
+legacy + SFT repair,8992643,Butler,test,person,BLYTH,BLATH,False
+legacy + SFT repair,8992643,Butler,test,locality,Lincolnshire,Lincolnshire,True
+legacy + SFT repair,8992643,Butler,test,date,"September 5th, 1896","September 5th, 1896",True
+legacy + SFT repair,8992643,Butler,test,locality,Sule Skerry Lighthouse (Sutherlandshire),Sule Skerry Lighthouse (Siitherlandshire),False
+legacy + SFT repair,8992643,Butler,test,date,"September 5th, 1902","September 5th, 1902",True
+legacy (BHL),8992644,Butler,test,vernacular,Willow-Warbler,Willow-Warbler,True
+legacy (BHL),8992644,Butler,test,locality,Shetlands,Shetlauds,False
+legacy (BHL),8992644,Butler,test,date,"May, 1901","May, 1901",True
+legacy (BHL),8992644,Butler,test,vernacular,Wood-Warbler,Wood- Warbler,False
+legacy (BHL),8992644,Butler,test,locality,Isle of Man,Isle of Man,True
+legacy (BHL),8992644,Butler,test,date,May 1901,May 1901,True
+legacy (BHL),8992644,Butler,test,date,1905,1905,True
+legacy (BHL),8992644,Butler,test,taxon,TURDIDÆ,TL ^RDID. E,False
+legacy (BHL),8992644,Butler,test,taxon,SYLVIINÆ,S J Z J VLV. E.,False
+legacy (BHL),8992644,Butler,test,vernacular,RUFOUS WARBLER,Rufous Warbler,True
+legacy (BHL),8992644,Butler,test,taxon,Aedon galactodes,Aidon (^alcnimAs,False
+legacy (BHL),8992644,Butler,test,person,TEMM.,Temm.,True
+legacy (BHL),8992644,Butler,test,locality,Sussex,Sussex,True
+legacy (BHL),8992644,Butler,test,locality,Devon,Devon,True
+legacy (BHL),8992644,Butler,test,taxon,TURDIDÆ,TURDID.E,False
+legacy (BHL),8992644,Butler,test,taxon,SYLVIINÆ,SYL I IIN^E,False
+legacy (BHL),8992644,Butler,test,vernacular,GREY-BACKED WARBLER,Grey-Backed Warbler,True
+legacy (BHL),8992644,Butler,test,taxon,Aedon familiaris,Acdoii fnmiliaris,False
+legacy (BHL),8992644,Butler,test,locality,"Hythe, Kent","Hythe, Kent",True
+legacy (BHL),8992644,Butler,test,date,"July 15th, 1907","July 15th, 1907",True
+legacy (BHL),8992644,Butler,test,taxon,TURDIDÆ,TURD ID ^,False
+legacy (BHL),8992644,Butler,test,taxon,SYLVIINÆ,SYL I IIN^,False
+legacy (BHL),8992644,Butler,test,vernacular,RADDE'S BUSH-WARBLER,Radde's Bush-Warbler,True
+legacy (BHL),8992644,Butler,test,taxon,Lusciniola schwarzi,Lusciniola sckwarzi,False
+legacy (BHL),8992644,Butler,test,person,RADDE,Radde,True
+legacy (BHL),8992644,Butler,test,date,"October, 1898","October, 1898",True
+legacy (BHL),8992644,Butler,test,locality,"Lincolnshire side of the
+Humber","Lincolnshire side of the 
+
+ Humber",True
+legacy (BHL),8992644,Butler,test,person,Haigh,Haigli,False
+legacy + SFT repair,8992644,Butler,test,vernacular,Willow-Warbler,Willow-Warbler,True
+legacy + SFT repair,8992644,Butler,test,locality,Shetlands,Shetland Is,False
+legacy + SFT repair,8992644,Butler,test,date,"May, 1901","May, 1901",True
+legacy + SFT repair,8992644,Butler,test,vernacular,Wood-Warbler,Wood-Warbler,True
+legacy + SFT repair,8992644,Butler,test,locality,Isle of Man,Isle of Man,True
+legacy + SFT repair,8992644,Butler,test,date,May 1901,May 1901,True
+legacy + SFT repair,8992644,Butler,test,date,1905,1905,True
+legacy + SFT repair,8992644,Butler,test,taxon,TURDIDÆ,rustica,False
+legacy + SFT repair,8992644,Butler,test,taxon,SYLVIINÆ,"S.
+
+",False
+legacy + SFT repair,8992644,Butler,test,vernacular,RUFOUS WARBLER,RUFOUS WARbler,True
+legacy + SFT repair,8992644,Butler,test,taxon,Aedon galactodes,Acanthis rufusum,False
+legacy + SFT repair,8992644,Butler,test,person,TEMM.,TEMM.,True
+legacy + SFT repair,8992644,Butler,test,locality,Sussex,Sussex,True
+legacy + SFT repair,8992644,Butler,test,locality,Devon,Devon,True
+legacy + SFT repair,8992644,Butler,test,taxon,TURDIDÆ,TURRIDÆ,False
+legacy + SFT repair,8992644,Butler,test,taxon,SYLVIINÆ,SYLLINUM,False
+legacy + SFT repair,8992644,Butler,test,vernacular,GREY-BACKED WARBLER,GREY-BACKED WARbler,True
+legacy + SFT repair,8992644,Butler,test,taxon,Aedon familiaris,Acanthis vernarius,False
+legacy + SFT repair,8992644,Butler,test,locality,"Hythe, Kent","Hythe, Kent",True
+legacy + SFT repair,8992644,Butler,test,date,"July 15th, 1907","July 15th, 1907",True
+legacy + SFT repair,8992644,Butler,test,taxon,TURDIDÆ,TURRITELLA,False
+legacy + SFT repair,8992644,Butler,test,taxon,SYLVIINÆ,SYNOPSIS,False
+legacy + SFT repair,8992644,Butler,test,vernacular,RADDE'S BUSH-WARBLER,Radcis Bush-Warbler,False
+legacy + SFT repair,8992644,Butler,test,taxon,Lusciniola schwarzi,Lusciniola schwarzi,True
+legacy + SFT repair,8992644,Butler,test,person,RADDE,RADDE,True
+legacy + SFT repair,8992644,Butler,test,date,"October, 1898","October, 1898",True
+legacy + SFT repair,8992644,Butler,test,locality,"Lincolnshire side of the
+Humber","Lincolnshire side of the
+
+Humber",True
+legacy + SFT repair,8992644,Butler,test,person,Haigh,Hailidge,False
+legacy (BHL),8992647,Butler,test,taxon,MOTACILLIDÆ,MO TA CIL L ID^,False
+legacy (BHL),8992647,Butler,test,vernacular,BLACK‐HEADED WAGTAIL,Black-Headed Wagtail,True
+legacy (BHL),8992647,Butler,test,taxon,Motacilla melanocephala,Motacilla vulauoccphala,False
+legacy (BHL),8992647,Butler,test,person,LICHT.,LiCHT.,True
+legacy (BHL),8992647,Butler,test,locality,Willingdon,Willingdon,True
+legacy (BHL),8992647,Butler,test,date,"May 13th, 1906","Ma}- ijtli, 1906",False
+legacy (BHL),8992647,Butler,test,taxon,M. ﬂava,M. flaz'a,False
+legacy (BHL),8992647,Butler,test,taxon,MOTACILLIDÆ,MO TA CILL ID. F,False
+legacy (BHL),8992647,Butler,test,vernacular,SYKES’ WAGTAIL,SykEvS' Wagtail,False
+legacy (BHL),8992647,Butler,test,taxon,Motacilla beema,Motacilla beema,True
+legacy (BHL),8992647,Butler,test,person,SYKES,SykeS,True
+legacy (BHL),8992647,Butler,test,locality,"Rottingdean, Sussex","Rottingdean, Sussex",True
+legacy (BHL),8992647,Butler,test,date,"April 20th, I898","April 2otli, 1898",False
+legacy (BHL),8992647,Butler,test,taxon,MOTACILLIDÆ,MO TA CILLlDzE,False
+legacy (BHL),8992647,Butler,test,vernacular,ASHY‐HEADED WAGTAIL,AvShy-Headed Wagtail,False
+legacy (BHL),8992647,Butler,test,taxon,Motacilla cinereocapilla,Motacilla cinereocapilla,True
+legacy (BHL),8992647,Butler,test,person,SAVI,Sa\'I,False
+legacy (BHL),8992647,Butler,test,locality,Penzance,Penzance,True
+legacy (BHL),8992647,Butler,test,locality,"Sheringham, Norfolk","Sheringham, Norfolk",True
+legacy (BHL),8992647,Butler,test,date,1842,1842,True
+legacy (BHL),8992647,Butler,test,taxon,M. ﬂava,M. /lava,False
+legacy + SFT repair,8992647,Butler,test,taxon,MOTACILLIDÆ,MOTACILIDÆ,False
+legacy + SFT repair,8992647,Butler,test,vernacular,BLACK‐HEADED WAGTAIL,BLACK-HEADED WAGTAIL,True
+legacy + SFT repair,8992647,Butler,test,taxon,Motacilla melanocephala,Motacilla vulpocciphala,False
+legacy + SFT repair,8992647,Butler,test,person,LICHT.,LINN.,False
+legacy + SFT repair,8992647,Butler,test,locality,Willingdon,Willingdon,True
+legacy + SFT repair,8992647,Butler,test,date,"May 13th, 1906","Ma. Britt, 1906",False
+legacy + SFT repair,8992647,Butler,test,taxon,M. ﬂava,M. flaxa,False
+legacy + SFT repair,8992647,Butler,test,taxon,MOTACILLIDÆ,MO TACILLID. F,False
+legacy + SFT repair,8992647,Butler,test,vernacular,SYKES’ WAGTAIL,SYRACUSE WAGTAIL,False
+legacy + SFT repair,8992647,Butler,test,taxon,Motacilla beema,Motacilla bema,False
+legacy + SFT repair,8992647,Butler,test,person,SYKES,SykeS,True
+legacy + SFT repair,8992647,Butler,test,locality,"Rottingdean, Sussex","Rottingdean, Sussex",True
+legacy + SFT repair,8992647,Butler,test,date,"April 20th, I898","April 20th, 1898",True
+legacy + SFT repair,8992647,Butler,test,taxon,MOTACILLIDÆ,MOTACILLIDÆ,True
+legacy + SFT repair,8992647,Butler,test,vernacular,ASHY‐HEADED WAGTAIL,AVIAN-HEADED WAGTAIL,False
+legacy + SFT repair,8992647,Butler,test,taxon,Motacilla cinereocapilla,Motacilla cinereocapilla,True
+legacy + SFT repair,8992647,Butler,test,person,SAVI,SAVI,True
+legacy + SFT repair,8992647,Butler,test,locality,Penzance,PENZANCE,True
+legacy + SFT repair,8992647,Butler,test,locality,"Sheringham, Norfolk","Sheringham, Norfolk",True
+legacy + SFT repair,8992647,Butler,test,date,1842,1842,True
+legacy + SFT repair,8992647,Butler,test,taxon,M. ﬂava,M. glauca,False
+legacy (BHL),8966790,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966790,Reeve,test,taxon,BULIMUS CHILENSIS,BuLlMLS CiilLE.NSls,False
+legacy (BHL),8966790,Reeve,test,vernacular,CHILI BULIMUS,Chili Bilimus,False
+legacy (BHL),8966790,Reeve,test,person,LESSON,Lesson,True
+legacy (BHL),8966790,Reeve,test,taxon,Bulimus granulosus,Bulimics granulosus,False
+legacy (BHL),8966790,Reeve,test,person,Broderip,Broderip,True
+legacy (BHL),8966790,Reeve,test,locality,Valparaiso,Valparaiso,True
+legacy (BHL),8966790,Reeve,test,locality,"Conception, Chili","Conception, Chili",True
+legacy (BHL),8966790,Reeve,test,person,Cuming,Cuming,True
+legacy (BHL),8966790,Reeve,test,vernacular,peas,peas,True
+legacy (BHL),8966790,Reeve,test,locality,mountains of Conception,mountains of Conception,True
+legacy (BHL),8966790,Reeve,test,locality,Valparaiso,Valparaiso,True
+legacy + SFT repair,8966790,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966790,Reeve,test,taxon,BULIMUS CHILENSIS,BULIMUS CILENSIS,False
+legacy + SFT repair,8966790,Reeve,test,vernacular,CHILI BULIMUS,CHILIPHOSIS,False
+legacy + SFT repair,8966790,Reeve,test,person,LESSON,Lesson,True
+legacy + SFT repair,8966790,Reeve,test,taxon,Bulimus granulosus,Bulimus granulosus,True
+legacy + SFT repair,8966790,Reeve,test,person,Broderip,Broderip,True
+legacy + SFT repair,8966790,Reeve,test,locality,Valparaiso,Valparaiso,True
+legacy + SFT repair,8966790,Reeve,test,locality,"Conception, Chili","Conception, Chili",True
+legacy + SFT repair,8966790,Reeve,test,person,Cuming,Cuming,True
+legacy + SFT repair,8966790,Reeve,test,vernacular,peas,peas,True
+legacy + SFT repair,8966790,Reeve,test,locality,mountains of Conception,mountains of Conception,True
+legacy + SFT repair,8966790,Reeve,test,locality,Valparaiso,Valparaiso,True
+legacy (BHL),8966802,Reeve,test,vernacular,SLIGHTLY WRINKLED BULIMUS,SLIGUTLY WRiNKLEP BiLiMLs,False
+legacy (BHL),8966802,Reeve,test,person,SOWERBY,SowERBY,True
+legacy (BHL),8966802,Reeve,test,locality,Gallapagos Islands,Gallapagos Islands,True
+legacy (BHL),8966802,Reeve,test,person,Cuming,Cuming,True
+legacy (BHL),8966802,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966802,Reeve,test,taxon,BULIMUS TURRITUS,"
+
+lili.lMUS TURRlTUS",False
+legacy (BHL),8966802,Reeve,test,vernacular,TURRETED BULIMUS,turreted Bulimus,True
+legacy (BHL),8966802,Reeve,test,person,BRODERIP,Broderip,True
+legacy (BHL),8966802,Reeve,test,locality,"Truxillo, Peru","Tnixillo, Peni",False
+legacy (BHL),8966802,Reeve,test,person,Cuming,Cuming,True
+legacy (BHL),8966802,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966802,Reeve,test,taxon,BULIMUS SCULPTURATUS,lUl.lMis sciLPTUKATUS,False
+legacy (BHL),8966802,Reeve,test,vernacular,SCULPTURED BULIMUS,sculptured Bulimus,True
+legacy (BHL),8966802,Reeve,test,person,PFEIFFER,'FKUFER,False
+legacy (BHL),8966802,Reeve,test,locality,Gallapagos Islands,Gallapagos Islands,True
+legacy (BHL),8966802,Reeve,test,person,Darwin,Darwin,True
+legacy (BHL),8966802,Reeve,test,taxon,B. rugiferus,,False
+legacy (BHL),8966802,Reeve,test,taxon,Darwinii,,False
+legacy (BHL),8966802,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966802,Reeve,test,taxon,BULIMUS CALVUS,lUl.mus C.4.LVUS,False
+legacy (BHL),8966802,Reeve,test,vernacular,BALD BULIMUS,bald Bulimus,True
+legacy (BHL),8966802,Reeve,test,person,SOWERBY,SowERBV,False
+legacy (BHL),8966802,Reeve,test,locality,"James' Island, Gallapagos","James' Island, Gallapagos",True
+legacy (BHL),8966802,Reeve,test,vernacular,grass,grass,True
+legacy (BHL),8966802,Reeve,test,person,Cuming,Cuminc;,False
+legacy (BHL),8966802,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966802,Reeve,test,taxon,BULIMUS PUSTULOSUS,Bulimus pustulosus,True
+legacy (BHL),8966802,Reeve,test,vernacular,PUSTULOSE BULIMUS,pustulose Bulimus,True
+legacy (BHL),8966802,Reeve,test,person,BRODERIP,BiioDEiup,False
+legacy (BHL),8966802,Reeve,test,locality,"Huasco, Chili","luaseo, Chili",False
+legacy (BHL),8966802,Reeve,test,person,Cuming,Cuming,True
+legacy + SFT repair,8966802,Reeve,test,vernacular,SLIGHTLY WRINKLED BULIMUS,SLIGHTLY WRINKLE-SPINUS BULIMUS,False
+legacy + SFT repair,8966802,Reeve,test,person,SOWERBY,SOVERBY,False
+legacy + SFT repair,8966802,Reeve,test,locality,Gallapagos Islands,Gallapagos Islands,True
+legacy + SFT repair,8966802,Reeve,test,person,Cuming,Cuming,True
+legacy + SFT repair,8966802,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966802,Reeve,test,taxon,BULIMUS TURRITUS,BULIMUS TURRITUS,True
+legacy + SFT repair,8966802,Reeve,test,vernacular,TURRETED BULIMUS,TURRETED BULIMUS,True
+legacy + SFT repair,8966802,Reeve,test,person,BRODERIP,BRODERIP,True
+legacy + SFT repair,8966802,Reeve,test,locality,"Truxillo, Peru","Trinidad, Peninsou",False
+legacy + SFT repair,8966802,Reeve,test,person,Cuming,Cuming,True
+legacy + SFT repair,8966802,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966802,Reeve,test,taxon,BULIMUS SCULPTURATUS,BULIMUS SCAPTUKATUS,False
+legacy + SFT repair,8966802,Reeve,test,vernacular,SCULPTURED BULIMUS,SCULPTURED BULIMUS,True
+legacy + SFT repair,8966802,Reeve,test,person,PFEIFFER,FRANKFUR,False
+legacy + SFT repair,8966802,Reeve,test,locality,Gallapagos Islands,Gallapagos Islands,True
+legacy + SFT repair,8966802,Reeve,test,person,Darwin,,False
+legacy + SFT repair,8966802,Reeve,test,taxon,B. rugiferus,,False
+legacy + SFT repair,8966802,Reeve,test,taxon,Darwinii,arwin.,False
+legacy + SFT repair,8966802,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966802,Reeve,test,taxon,BULIMUS CALVUS,BULIMUS C.4. LIVUS,False
+legacy + SFT repair,8966802,Reeve,test,vernacular,BALD BULIMUS,BOLD BULIMUS,False
+legacy + SFT repair,8966802,Reeve,test,person,SOWERBY,SOWERS,False
+legacy + SFT repair,8966802,Reeve,test,locality,"James' Island, Gallapagos","James' Island, Gallapagos",True
+legacy + SFT repair,8966802,Reeve,test,vernacular,grass,grass,True
+legacy + SFT repair,8966802,Reeve,test,person,Cuming,Cuminc;,False
+legacy + SFT repair,8966802,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966802,Reeve,test,taxon,BULIMUS PUSTULOSUS,BULIMUS PUSTULOSUS,True
+legacy + SFT repair,8966802,Reeve,test,vernacular,PUSTULOSE BULIMUS,PUSTULOSE BULIMUS,True
+legacy + SFT repair,8966802,Reeve,test,person,BRODERIP,BIODEIP,False
+legacy + SFT repair,8966802,Reeve,test,locality,"Huasco, Chili","Bulaseo, Chili",False
+legacy + SFT repair,8966802,Reeve,test,person,Cuming,Cuming,True
+legacy (BHL),8966930,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966930,Reeve,test,taxon,BULIMUS OBTUSATUS,BuLiMUS OBTUSATUS,True
+legacy (BHL),8966930,Reeve,test,vernacular,BLUNTED BULIMUS,blunted Bulimus,True
+legacy (BHL),8966930,Reeve,test,person,PFEIFFER,Pfeiffek,False
+legacy (BHL),8966930,Reeve,test,taxon,Helix obtusata,Helix obtusuta,False
+legacy (BHL),8966930,Reeve,test,person,Gmelin,Gmelin,True
+legacy (BHL),8966930,Reeve,test,taxon,Bulimus calcareus,Bulimus calcareus,True
+legacy (BHL),8966930,Reeve,test,person,Bruguière,Bruguiiire,False
+legacy (BHL),8966930,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8966930,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8966930,Reeve,test,locality,Madagascar,Madagascar,True
+legacy (BHL),8966930,Reeve,test,person,Beck,Beck,True
+legacy (BHL),8966930,Reeve,test,person,Lamarck,,False
+legacy (BHL),8966930,Reeve,test,taxon,Helix calcarea,,False
+legacy (BHL),8966930,Reeve,test,person,Born,,False
+legacy (BHL),8966930,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966930,Reeve,test,taxon,BULIMUS CLAVATOR,Bulimus clavator,True
+legacy (BHL),8966930,Reeve,test,vernacular,CLUB‐BEARER BULIMUS,club-beaeer Bulimus,False
+legacy (BHL),8966930,Reeve,test,person,PETIT,Petit,True
+legacy (BHL),8966930,Reeve,test,locality,Madagascar,Madagascar,True
+legacy + SFT repair,8966930,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966930,Reeve,test,taxon,BULIMUS OBTUSATUS,BULIMUS OBTUSATUS,True
+legacy + SFT repair,8966930,Reeve,test,vernacular,BLUNTED BULIMUS,BLUTNED BULIMUS,False
+legacy + SFT repair,8966930,Reeve,test,person,PFEIFFER,PFEIFFER,True
+legacy + SFT repair,8966930,Reeve,test,taxon,Helix obtusata,Helix obtusuta,False
+legacy + SFT repair,8966930,Reeve,test,person,Gmelin,Gmelin,True
+legacy + SFT repair,8966930,Reeve,test,taxon,Bulimus calcareus,Bulimus calcareus,True
+legacy + SFT repair,8966930,Reeve,test,person,Bruguière,Bruguière,True
+legacy + SFT repair,8966930,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8966930,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8966930,Reeve,test,locality,Madagascar,Madagascar,True
+legacy + SFT repair,8966930,Reeve,test,person,Beck,Beck,True
+legacy + SFT repair,8966930,Reeve,test,person,Lamarck,,False
+legacy + SFT repair,8966930,Reeve,test,taxon,Helix calcarea,,False
+legacy + SFT repair,8966930,Reeve,test,person,Born,,False
+legacy + SFT repair,8966930,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966930,Reeve,test,taxon,BULIMUS CLAVATOR,BULIMUS CLAVATOR,True
+legacy + SFT repair,8966930,Reeve,test,vernacular,CLUB‐BEARER BULIMUS,CLUB-BEARER BULIMUS,True
+legacy + SFT repair,8966930,Reeve,test,person,PETIT,Petit,True
+legacy + SFT repair,8966930,Reeve,test,locality,Madagascar,Madagascar,True
+legacy (BHL),8966937,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966937,Reeve,test,taxon,BULIMUS ROSEATUS,BuLiJius ROSEATUS,False
+legacy (BHL),8966937,Reeve,test,vernacular,ROSEATE BULIMUS,roseate Bulimus,True
+legacy (BHL),8966937,Reeve,test,locality,Venezuela,Venezuela,True
+legacy (BHL),8966937,Reeve,test,taxon,B. oreades,B. oreades,True
+legacy (BHL),8966937,Reeve,test,institution,Mus. Cuming,mus. Shell ovate,False
+legacy (BHL),8966937,Reeve,test,taxon,BULIMUS FERIATUS,"blong, rathei",False
+legacy (BHL),8966937,Reeve,test,vernacular,UNEMPLOYED BULIMUS,and the three followin,False
+legacy (BHL),8966937,Reeve,test,locality,Venezuela,remely re,False
+legacy (BHL),8966937,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966937,Reeve,test,taxon,BULIMUS PERDIX,Bulimus feriatus,False
+legacy (BHL),8966937,Reeve,test,vernacular,PARTRIDGE BULIMUS,unemployed Bulimus,False
+legacy (BHL),8966937,Reeve,test,person,PFEIFFER, few squar,False
+legacy (BHL),8966937,Reeve,test,locality,New Granada,a conspi,False
+legacy (BHL),8966937,Reeve,test,person,Funck,"ous 
+",False
+legacy (BHL),8966937,Reeve,test,taxon,B. perdix,a reflex,False
+legacy (BHL),8966937,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966937,Reeve,test,taxon,BULIMUS EURYOMPHALUS,Bulimus euuyomphalus,False
+legacy (BHL),8966937,Reeve,test,vernacular,BROAD‐PLAITED BULIMUS,broad-plaited Bulimus,True
+legacy (BHL),8966937,Reeve,test,locality,Venezuela,Venezuela,True
+legacy (BHL),8966937,Reeve,test,person,Dyson,Dyson,True
+legacy (BHL),8966937,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8966937,Reeve,test,taxon,BULIMUS GLABER,Bulimus glaber,True
+legacy + SFT repair,8966937,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966937,Reeve,test,taxon,BULIMUS ROSEATUS,BULIMUS ROSEATUS,True
+legacy + SFT repair,8966937,Reeve,test,vernacular,ROSEATE BULIMUS,ROSEATE BULIMUS,True
+legacy + SFT repair,8966937,Reeve,test,locality,Venezuela,Venezuela,True
+legacy + SFT repair,8966937,Reeve,test,taxon,B. oreades,B. ovoletes,False
+legacy + SFT repair,8966937,Reeve,test,institution,Mus. Cuming,CULAR ,False
+legacy + SFT repair,8966937,Reeve,test,taxon,BULIMUS FERIATUS,BULIMUS. Shell ovatel,False
+legacy + SFT repair,8966937,Reeve,test,vernacular,UNEMPLOYED BULIMUS,and the three followin,False
+legacy + SFT repair,8966937,Reeve,test,locality,Venezuela,remely regula,False
+legacy + SFT repair,8966937,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966937,Reeve,test,taxon,BULIMUS PERDIX,BULIMUS FERIATUS,False
+legacy + SFT repair,8966937,Reeve,test,vernacular,PARTRIDGE BULIMUS,UNEMPLOYED BULIMUS,False
+legacy + SFT repair,8966937,Reeve,test,person,PFEIFFER, few squar,False
+legacy + SFT repair,8966937,Reeve,test,locality,New Granada,a conspi,False
+legacy + SFT repair,8966937,Reeve,test,person,Funck,ous,False
+legacy + SFT repair,8966937,Reeve,test,taxon,B. perdix,", labra r",False
+legacy + SFT repair,8966937,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966937,Reeve,test,taxon,BULIMUS EURYOMPHALUS,BULIMUS EGYIMPHALUS,False
+legacy + SFT repair,8966937,Reeve,test,vernacular,BROAD‐PLAITED BULIMUS,BROAD-PLEATED BULIMUS,False
+legacy + SFT repair,8966937,Reeve,test,locality,Venezuela,Venezuela,True
+legacy + SFT repair,8966937,Reeve,test,person,Dyson,Dyson,True
+legacy + SFT repair,8966937,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8966937,Reeve,test,taxon,BULIMUS GLABER,BULIMUS GLABER,True
+legacy (BHL),8967281,Reeve,test,taxon,TURRITELLA,TUEEITELLA,False
+legacy (BHL),8967281,Reeve,test,person,Lamarck,LuMorck,False
+legacy (BHL),8967281,Reeve,test,taxon,Turritella,Turritella,True
+legacy (BHL),8967281,Reeve,test,taxon,Cerithium,Cerithium,True
+legacy (BHL),8967281,Reeve,test,taxon,Turritella,Turritella,True
+legacy (BHL),8967281,Reeve,test,taxon,Turritella,Turritella,True
+legacy (BHL),8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967281,Reeve,test,person,Kiener,Kiener,True
+legacy (BHL),8967281,Reeve,test,person,Cuming,Cuming,True
+legacy (BHL),8967281,Reeve,test,person,Metcalfe,Metcalfe,True
+legacy (BHL),8967281,Reeve,test,person,Hanley,Hanley,True
+legacy (BHL),8967281,Reeve,test,person,Edward Belcher,Edward Belcher,True
+legacy (BHL),8967281,Reeve,test,institution,British Museum,British Museum,True
+legacy (BHL),8967281,Reeve,test,institution,Banksian Collection,Banksian Collection,True
+legacy (BHL),8967281,Reeve,test,institution,"Linnæan
+Society","Linnsean 
+
+ Society",False
+legacy (BHL),8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967281,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967281,Reeve,test,person,Kiener,Kiener,True
+legacy (BHL),8967281,Reeve,test,institution,Linnæan Society of London,Linnsan Society of London,False
+legacy (BHL),8967281,Reeve,test,taxon,Turbo acutangulus,Turbo acutangulus,True
+legacy (BHL),8967281,Reeve,test,person,Linnæus,Linn.-Bus,False
+legacy (BHL),8967281,Reeve,test,taxon,T. duplicatus,T. duplicat/is,False
+legacy (BHL),8967281,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967281,Reeve,test,taxon,"Turbo variega-
+tus","Turbo variega- 
+
+ tm",False
+legacy (BHL),8967281,Reeve,test,taxon,Turbo imbricatus,Turbo iuibricaltis,False
+legacy (BHL),8967281,Reeve,test,taxon,Turbo ungulinus,Turbo ungulinus,True
+legacy (BHL),8967281,Reeve,test,person,Linnæus,Linnajus,False
+legacy (BHL),8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967281,Reeve,test,taxon,"Turritella
+fuscata","Turritella 
+
+ fuscata",True
+legacy (BHL),8967281,Reeve,test,taxon,Turbo terebra,Turbo terebra,True
+legacy (BHL),8967281,Reeve,test,person,Linn.,"Linn,",True
+legacy (BHL),8967281,Reeve,test,person,Montagu,Montagu,True
+legacy (BHL),8967281,Reeve,test,taxon,T. cornea,T. cornea,True
+legacy (BHL),8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967281,Reeve,test,taxon,Turritella brevialis,Turritella brevialis,True
+legacy (BHL),8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967281,Reeve,test,vernacular,LeMesal,LeMesal,True
+legacy (BHL),8967281,Reeve,test,person,Adanson,Adaiison,False
+legacy (BHL),8967281,Reeve,test,person,Gray,Gray,True
+legacy (BHL),8967281,Reeve,test,taxon,MESALIA,Mesalia,True
+legacy (BHL),8967281,Reeve,test,taxon,Turritella lactea,Turritella lactea,True
+legacy (BHL),8967281,Reeve,test,person,Möller,Moller,False
+legacy (BHL),8967281,Reeve,test,institution,Cumingian collection,Cumingian collection,True
+legacy (BHL),8967281,Reeve,test,person,Gray,Gray,True
+legacy (BHL),8967281,Reeve,test,taxon,EGLISIA,Eglisia,True
+legacy (BHL),8967281,Reeve,test,taxon,Turritella spirata,Turritella spirata,True
+legacy (BHL),8967281,Reeve,test,person,Cuming,Cuming,True
+legacy (BHL),8967281,Reeve,test,locality,Philippine Islands,Philippine Islands,True
+legacy (BHL),8967281,Reeve,test,taxon,Turritellœ,Turritella,False
+legacy (BHL),8967281,Reeve,test,taxon,T. cornea,T. cornea,True
+legacy (BHL),8967281,Reeve,test,locality,Shetland Islands,Shetland Islands,True
+legacy (BHL),8967281,Reeve,test,person,M’Andrew,M'Andrew,True
+legacy (BHL),8967281,Reeve,test,locality,Mediterranean,Mediterranean,True
+legacy (BHL),8967281,Reeve,test,locality,Eastern Seas,Eastern Seas,True
+legacy (BHL),8967281,Reeve,test,locality,shores of Central America,shores of Central America,True
+legacy (BHL),8967281,Reeve,test,locality,New Zealand,New Zealand,True
+legacy (BHL),8967281,Reeve,test,locality,Australia,Australia,True
+legacy (BHL),8967281,Reeve,test,locality,Van Dieman’s Land,Van Pieman's Land,False
+legacy (BHL),8967281,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8967281,Reeve,test,taxon,TURRITELLA UNGULINA,Turritella ingulina,False
+legacy (BHL),8967281,Reeve,test,vernacular,NAIL‐BRUISED TURRITELLA,nail-bkuised Turritella,False
+legacy (BHL),8967281,Reeve,test,taxon,Turbo ungulinus,Turbo ungulinus,True
+legacy (BHL),8967281,Reeve,test,person,Linnæus,LinuKus,False
+legacy (BHL),8967281,Reeve,test,taxon,Turritella fuscata,Turritella fuscata,True
+legacy (BHL),8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967281,Reeve,test,locality,Senegal,Senegal,True
+legacy (BHL),8967281,Reeve,test,locality,"Mouth of the Gambia, West Africa","Mouth of the Gambia, West Africa",True
+legacy (BHL),8967281,Reeve,test,person,Linnæus,Linnseus,False
+legacy (BHL),8967281,Reeve,test,taxon,Turbo ungulinus,Turbo ungulinus,True
+legacy (BHL),8967281,Reeve,test,institution,Linnæan Society of London,Linnaeau Society of Loudon,False
+legacy (BHL),8967281,Reeve,test,person,Hanley,Hanley,True
+legacy (BHL),8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967281,Reeve,test,taxon,"T.
+fuscata","T. 
+
+ fuscata",True
+legacy (BHL),8967281,Reeve,test,locality,Seas of Europe,Seas of Europe,True
+legacy (BHL),8967281,Reeve,test,person,Pulteney,Pulteney,True
+legacy (BHL),8967281,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967281,Reeve,test,taxon,Turritella,Turritella,True
+legacy (BHL),8967281,Reeve,test,locality,Mediterranean,Mediterranean,True
+legacy + SFT repair,8967281,Reeve,test,taxon,TURRITELLA,TURRITELLA,True
+legacy + SFT repair,8967281,Reeve,test,person,Lamarck,LUMORCK,False
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritella,Turritella,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Cerithium,Cerithium,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritella,Turritella,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritella,Turritella,True
+legacy + SFT repair,8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967281,Reeve,test,person,Kiener,Kiener,True
+legacy + SFT repair,8967281,Reeve,test,person,Cuming,Cuming,True
+legacy + SFT repair,8967281,Reeve,test,person,Metcalfe,Metcalfe,True
+legacy + SFT repair,8967281,Reeve,test,person,Hanley,Hanley,True
+legacy + SFT repair,8967281,Reeve,test,person,Edward Belcher,Edward Belcher,True
+legacy + SFT repair,8967281,Reeve,test,institution,British Museum,British Museum,True
+legacy + SFT repair,8967281,Reeve,test,institution,Banksian Collection,Banksian Collection,True
+legacy + SFT repair,8967281,Reeve,test,institution,"Linnæan
+Society","Linnæan
+
+Society",True
+legacy + SFT repair,8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967281,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967281,Reeve,test,person,Kiener,Kiener,True
+legacy + SFT repair,8967281,Reeve,test,institution,Linnæan Society of London,Linnsan Society of London,False
+legacy + SFT repair,8967281,Reeve,test,taxon,Turbo acutangulus,Turbo acutangulus,True
+legacy + SFT repair,8967281,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967281,Reeve,test,taxon,T. duplicatus,T. duplicatus,True
+legacy + SFT repair,8967281,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967281,Reeve,test,taxon,"Turbo variega-
+tus","Turbo varians‐
+
+",False
+legacy + SFT repair,8967281,Reeve,test,taxon,Turbo imbricatus,Turbo abbreviatus,False
+legacy + SFT repair,8967281,Reeve,test,taxon,Turbo ungulinus,Turbo ungulinus,True
+legacy + SFT repair,8967281,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967281,Reeve,test,taxon,"Turritella
+fuscata","Turritella
+
+fuscata",True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turbo terebra,Turbo terebra,True
+legacy + SFT repair,8967281,Reeve,test,person,Linn.,Linnæus,False
+legacy + SFT repair,8967281,Reeve,test,person,Montagu,Montagu,True
+legacy + SFT repair,8967281,Reeve,test,taxon,T. cornea,T. cornea,True
+legacy + SFT repair,8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritella brevialis,Turritella brevialis,True
+legacy + SFT repair,8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967281,Reeve,test,vernacular,LeMesal,Le Mescal,False
+legacy + SFT repair,8967281,Reeve,test,person,Adanson,Adaiison,False
+legacy + SFT repair,8967281,Reeve,test,person,Gray,Gray,True
+legacy + SFT repair,8967281,Reeve,test,taxon,MESALIA,Mesalia,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritella lactea,Turritella lactea,True
+legacy + SFT repair,8967281,Reeve,test,person,Möller,Moller,False
+legacy + SFT repair,8967281,Reeve,test,institution,Cumingian collection,Cumingian collection,True
+legacy + SFT repair,8967281,Reeve,test,person,Gray,Gray,True
+legacy + SFT repair,8967281,Reeve,test,taxon,EGLISIA,Eglisia,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritella spirata,Turritella spirata,True
+legacy + SFT repair,8967281,Reeve,test,person,Cuming,Cuming,True
+legacy + SFT repair,8967281,Reeve,test,locality,Philippine Islands,Philippine Islands,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritellœ,Turritella,False
+legacy + SFT repair,8967281,Reeve,test,taxon,T. cornea,T. cornea,True
+legacy + SFT repair,8967281,Reeve,test,locality,Shetland Islands,Shetland Islands,True
+legacy + SFT repair,8967281,Reeve,test,person,M’Andrew,M'Andrew,True
+legacy + SFT repair,8967281,Reeve,test,locality,Mediterranean,Mediterranean,True
+legacy + SFT repair,8967281,Reeve,test,locality,Eastern Seas,Eastern Seas,True
+legacy + SFT repair,8967281,Reeve,test,locality,shores of Central America,shores of Central America,True
+legacy + SFT repair,8967281,Reeve,test,locality,New Zealand,New Zealand,True
+legacy + SFT repair,8967281,Reeve,test,locality,Australia,Australia,True
+legacy + SFT repair,8967281,Reeve,test,locality,Van Dieman’s Land,Van Pieman's Land,False
+legacy + SFT repair,8967281,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8967281,Reeve,test,taxon,TURRITELLA UNGULINA,TURRITELLA INGULINA,False
+legacy + SFT repair,8967281,Reeve,test,vernacular,NAIL‐BRUISED TURRITELLA,NAIL-BURSE TURRITELLA,False
+legacy + SFT repair,8967281,Reeve,test,taxon,Turbo ungulinus,Turbo ungulinus,True
+legacy + SFT repair,8967281,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritella fuscata,Turritella fuscata,True
+legacy + SFT repair,8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967281,Reeve,test,locality,Senegal,Senegal,True
+legacy + SFT repair,8967281,Reeve,test,locality,"Mouth of the Gambia, West Africa","Mouth of the Gambia, West Africa",True
+legacy + SFT repair,8967281,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turbo ungulinus,Turbo ungulinus,True
+legacy + SFT repair,8967281,Reeve,test,institution,Linnæan Society of London,Linnaeau Society of Loudon,False
+legacy + SFT repair,8967281,Reeve,test,person,Hanley,Hanley,True
+legacy + SFT repair,8967281,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967281,Reeve,test,taxon,"T.
+fuscata","T.
+
+fuscata",True
+legacy + SFT repair,8967281,Reeve,test,locality,Seas of Europe,Seas of Europe,True
+legacy + SFT repair,8967281,Reeve,test,person,Pulteney,Pulteney,True
+legacy + SFT repair,8967281,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967281,Reeve,test,taxon,Turritella,Turritella,True
+legacy + SFT repair,8967281,Reeve,test,locality,Mediterranean,Mediterranean,True
+legacy (BHL),8967282,Reeve,test,person,Kiener,Kiener,True
+legacy (BHL),8967282,Reeve,test,person,Linnæus,Linnffius,False
+legacy (BHL),8967282,Reeve,test,taxon,T. cornea,T. cornea,True
+legacy (BHL),8967282,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967282,Reeve,test,taxon,T. ungulina,T. unguUua,False
+legacy (BHL),8967282,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8967282,Reeve,test,taxon,TURRITELLA DUPLICATA,TURIUTF.LLA DUPLICATA,False
+legacy (BHL),8967282,Reeve,test,vernacular,DUPLICATE TURRITELLA,duplicate Turritella,True
+legacy (BHL),8967282,Reeve,test,person,LAMARCK,Lamarck,True
+legacy (BHL),8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967282,Reeve,test,taxon,Turbo duplicatus,Turbo dupUcatm,False
+legacy (BHL),8967282,Reeve,test,person,Linnæus,LiuniBus,False
+legacy (BHL),8967282,Reeve,test,taxon,Turbo acutangulus,Turbo acutangulus,True
+legacy (BHL),8967282,Reeve,test,person,Linnæus,Linnseus,False
+legacy (BHL),8967282,Reeve,test,taxon,Turbo replicatus,Turbo repUcatus,False
+legacy (BHL),8967282,Reeve,test,person,Linnæus,Linnseus,False
+legacy (BHL),8967282,Reeve,test,locality,Eastern Seas,Eastern Seas,True
+legacy (BHL),8967282,Reeve,test,taxon,Turbo acutangulus,Turbo acutmigulus,False
+legacy (BHL),8967282,Reeve,test,person,Linnæus,Liimajus,False
+legacy (BHL),8967282,Reeve,test,taxon,Turbo duplicatus,Turbo dupUcatus,False
+legacy (BHL),8967282,Reeve,test,institution,Linnæan collection,Linnfean collection,False
+legacy (BHL),8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967282,Reeve,test,person,Kiener,Kiener,True
+legacy (BHL),8967282,Reeve,test,taxon,Turritella duplicata,Turr'UeUa dupUcata,False
+legacy (BHL),8967282,Reeve,test,person,Linnæus,Linnieus,False
+legacy (BHL),8967282,Reeve,test,taxon,Turbo acutangulus,Turbo acutangulus,True
+legacy (BHL),8967282,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8967282,Reeve,test,taxon,TURRITELLA TEREBRA,TurRITELLA TEREBUA,False
+legacy (BHL),8967282,Reeve,test,vernacular,AUGUR TURRITELLA,avgur Turritklla,False
+legacy (BHL),8967282,Reeve,test,person,LAMARCK,Lamarck,True
+legacy (BHL),8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967282,Reeve,test,taxon,Turbo terebra,Turbo terebra,True
+legacy (BHL),8967282,Reeve,test,person,Linnæus,Linnfens,False
+legacy (BHL),8967282,Reeve,test,taxon,Turritella Archimedis,Tnrritella Archimedis,False
+legacy (BHL),8967282,Reeve,test,person,Dillwyn,Dillwyn,True
+legacy (BHL),8967282,Reeve,test,person,Mawe,Mawe,True
+legacy (BHL),8967282,Reeve,test,locality,Philippine Islands,Piulippine Islands,False
+legacy (BHL),8967282,Reeve,test,person,Cuming,Cuming,True
+legacy (BHL),8967282,Reeve,test,person,Martyn,Martyii,False
+legacy (BHL),8967282,Reeve,test,person,Cuming,Cuming,True
+legacy (BHL),8967282,Reeve,test,locality,Island of Negros,Island of Negros,True
+legacy (BHL),8967282,Reeve,test,locality,Philippines,Philippines,True
+legacy (BHL),8967282,Reeve,test,taxon,T. terebra,T. terebra,True
+legacy (BHL),8967282,Reeve,test,taxon,T. Linnei,f. ii«M«',False
+legacy (BHL),8967282,Reeve,test,taxon,ungulinus,ungulinus,True
+legacy (BHL),8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967282,Reeve,test,taxon,T. communis,"T.commmm, ",False
+legacy (BHL),8967282,Reeve,test,person,Philippi,Philippi,True
+legacy (BHL),8967282,Reeve,test,taxon,T. cornea,T. cornea,True
+legacy (BHL),8967282,Reeve,test,person,Lamarck,Lamarck,True
+legacy (BHL),8967282,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy (BHL),8967282,Reeve,test,taxon,TURRITELLA ATTENUATA,Turritella attenuata,True
+legacy (BHL),8967282,Reeve,test,vernacular,ATTENUATED TURRITELLA,attenuated Turritella,True
+legacy (BHL),8967282,Reeve,test,taxon,Turritella acutangula,Turritella acutangula,True
+legacy (BHL),8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy (BHL),8967282,Reeve,test,taxon,Turbo acutangulus,Turbo acutangulus,True
+legacy (BHL),8967282,Reeve,test,person,Linn.,Linn.,True
+legacy (BHL),8967282,Reeve,test,person,Linnæus,Linnaeus,False
+legacy (BHL),8967282,Reeve,test,taxon,Turbo acutangulus,Turbo cfcutangulus,False
+legacy (BHL),8967282,Reeve,test,taxon,T. duplicatus,T. duplicatus,True
+legacy + SFT repair,8967282,Reeve,test,person,Kiener,Kiener,True
+legacy + SFT repair,8967282,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967282,Reeve,test,taxon,T. cornea,T. cornea,True
+legacy + SFT repair,8967282,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967282,Reeve,test,taxon,T. ungulina,T. ungulinus,False
+legacy + SFT repair,8967282,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8967282,Reeve,test,taxon,TURRITELLA DUPLICATA,TURRITELLA DUPLICATA,True
+legacy + SFT repair,8967282,Reeve,test,vernacular,DUPLICATE TURRITELLA,DUPLICATE TURRITELLA,True
+legacy + SFT repair,8967282,Reeve,test,person,LAMARCK,LAMARCK,True
+legacy + SFT repair,8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo duplicatus,Turbo dubicatâ,False
+legacy + SFT repair,8967282,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo acutangulus,Turbo acutangulus,True
+legacy + SFT repair,8967282,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo replicatus,Turbo repuginatus,False
+legacy + SFT repair,8967282,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967282,Reeve,test,locality,Eastern Seas,Eastern Seas,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo acutangulus,Turbo armatus,False
+legacy + SFT repair,8967282,Reeve,test,person,Linnæus,Limacius,False
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo duplicatus,Turbo dubicatus,False
+legacy + SFT repair,8967282,Reeve,test,institution,Linnæan collection,Linnæan collection,True
+legacy + SFT repair,8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967282,Reeve,test,person,Kiener,Kiener,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turritella duplicata,Turritella dubia,False
+legacy + SFT repair,8967282,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo acutangulus,Turbo acutangulus,True
+legacy + SFT repair,8967282,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8967282,Reeve,test,taxon,TURRITELLA TEREBRA,TURRITELLA TEREBUA,False
+legacy + SFT repair,8967282,Reeve,test,vernacular,AUGUR TURRITELLA,BULIMUS TURRITELLA,False
+legacy + SFT repair,8967282,Reeve,test,person,LAMARCK,LAMARCK,True
+legacy + SFT repair,8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo terebra,Turbo terebra,True
+legacy + SFT repair,8967282,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turritella Archimedis,Trittella Archimedes,False
+legacy + SFT repair,8967282,Reeve,test,person,Dillwyn,Dillwyn,True
+legacy + SFT repair,8967282,Reeve,test,person,Mawe,Mawe,True
+legacy + SFT repair,8967282,Reeve,test,locality,Philippine Islands,Piullippine Islands,False
+legacy + SFT repair,8967282,Reeve,test,person,Cuming,Cuming,True
+legacy + SFT repair,8967282,Reeve,test,person,Martyn,Martyll,False
+legacy + SFT repair,8967282,Reeve,test,person,Cuming,Cuming,True
+legacy + SFT repair,8967282,Reeve,test,locality,Island of Negros,Island of Negros,True
+legacy + SFT repair,8967282,Reeve,test,locality,Philippines,Philippines,True
+legacy + SFT repair,8967282,Reeve,test,taxon,T. terebra,T. terebra,True
+legacy + SFT repair,8967282,Reeve,test,taxon,T. Linnei,f. pl. 165,False
+legacy + SFT repair,8967282,Reeve,test,taxon,ungulinus,ungulinus,True
+legacy + SFT repair,8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967282,Reeve,test,taxon,T. communis,T. communœ,False
+legacy + SFT repair,8967282,Reeve,test,person,Philippi,Philippi,True
+legacy + SFT repair,8967282,Reeve,test,taxon,T. cornea,T. cornea,True
+legacy + SFT repair,8967282,Reeve,test,person,Lamarck,Lamarck,True
+legacy + SFT repair,8967282,Reeve,test,institution,Mus. Cuming,Mus. Cuming,True
+legacy + SFT repair,8967282,Reeve,test,taxon,TURRITELLA ATTENUATA,TURRITELLA ATTENUATA,True
+legacy + SFT repair,8967282,Reeve,test,vernacular,ATTENUATED TURRITELLA,ATTENUATED TURRITELLA,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turritella acutangula,Turritella acutangula,True
+legacy + SFT repair,8967282,Reeve,test,person,Deshayes,Deshayes,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo acutangulus,Turbo acutangulus,True
+legacy + SFT repair,8967282,Reeve,test,person,Linn.,Linn.,True
+legacy + SFT repair,8967282,Reeve,test,person,Linnæus,Linnæus,True
+legacy + SFT repair,8967282,Reeve,test,taxon,Turbo acutangulus,Turbo cutangulus,False
+legacy + SFT repair,8967282,Reeve,test,taxon,T. duplicatus,T. duplicatus,True
+legacy (BHL),8967290,Reeve,test,taxon,T. lentiginosa,T. lentiijhwsn ,False
+legacy (BHL),8967290,Reeve,test,taxon,T. goniostoma,T. goniostoma,True
+legacy (BHL),8967290,Reeve,test,taxon,T. lentiginosa,T. letiliginosa,False
+legacy + SFT repair,8967290,Reeve,test,taxon,T. lentiginosa,T. elongatus,False
+legacy + SFT repair,8967290,Reeve,test,taxon,T. goniostoma,T. goniostoma,True
+legacy + SFT repair,8967290,Reeve,test,taxon,T. lentiginosa,B. letiliginosa,False
+legacy (BHL),8967333,Reeve,test,taxon,CASSIDARIA,CASSIDARIA,True
+legacy (BHL),8967333,Reeve,test,person,Landsborough,Landsborough,True
+legacy + SFT repair,8967333,Reeve,test,taxon,CASSIDARIA,CASSIDARIA,True
+legacy + SFT repair,8967333,Reeve,test,person,Landsborough,Landsborough,True
+legacy (BHL),8967345,Reeve,test,taxon,EBURNA,E B U R N A,False
+legacy (BHL),8967345,Reeve,test,person,Crabbe,"CVaWf 
+
+
+",False
+legacy + SFT repair,8967345,Reeve,test,taxon,EBURNA,E B U R N A,False
+legacy + SFT repair,8967345,Reeve,test,person,Crabbe,"Cavaf.
+
+
+",False

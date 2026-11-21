@@ -1,0 +1,8 @@
+{
+ "checkpoint_sha256": "bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c",
+ "lines": 991,
+ "repaired_lines": 924,
+ "fallback": 6,
+ "generation_seconds": 4.6,
+ "decoding": "greedy, max 128 tokens, prompt repair_v3"
+}

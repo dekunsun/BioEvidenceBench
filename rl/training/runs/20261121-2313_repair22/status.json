@@ -1,0 +1,10 @@
+{
+  "run_id": "20261121-2313_repair22",
+  "stage": "repair22",
+  "outcome": "success",
+  "minutes": 4.78,
+  "usd_estimate": 0.071,
+  "usd_per_hour": 0.89,
+  "pod_id": "la6lor8flqhkvn",
+  "gpu": "NVIDIA+GeForce+RTX+4090"
+}

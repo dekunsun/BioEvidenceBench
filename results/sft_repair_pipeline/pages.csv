@@ -1,0 +1,45 @@
+version,page_id,book,split,page_cer
+legacy (BHL),8992582,Butler,dev,0.0089
+legacy + SFT repair,8992582,Butler,dev,0.0024
+legacy (BHL),8992601,Butler,dev,0.0201
+legacy + SFT repair,8992601,Butler,dev,0.0094
+legacy (BHL),8992612,Butler,dev,0.0292
+legacy + SFT repair,8992612,Butler,dev,0.0341
+legacy (BHL),8967047,Reeve,dev,0.1225
+legacy + SFT repair,8967047,Reeve,dev,0.0888
+legacy (BHL),8967060,Reeve,dev,0.0588
+legacy + SFT repair,8967060,Reeve,dev,0.0296
+legacy (BHL),8967147,Reeve,dev,0.0568
+legacy + SFT repair,8967147,Reeve,dev,0.0314
+legacy (BHL),8992328,Butler,test,0.0067
+legacy + SFT repair,8992328,Butler,test,0.007
+legacy (BHL),8992379,Butler,test,0.0115
+legacy + SFT repair,8992379,Butler,test,0.0094
+legacy (BHL),8992408,Butler,test,0.0369
+legacy + SFT repair,8992408,Butler,test,0.0257
+legacy (BHL),8992489,Butler,test,0.0474
+legacy + SFT repair,8992489,Butler,test,0.0333
+legacy (BHL),8992643,Butler,test,0.1234
+legacy + SFT repair,8992643,Butler,test,0.1221
+legacy (BHL),8992644,Butler,test,0.1371
+legacy + SFT repair,8992644,Butler,test,0.1587
+legacy (BHL),8992647,Butler,test,0.0784
+legacy + SFT repair,8992647,Butler,test,0.0672
+legacy (BHL),8966790,Reeve,test,0.1002
+legacy + SFT repair,8966790,Reeve,test,0.0962
+legacy (BHL),8966802,Reeve,test,0.2353
+legacy + SFT repair,8966802,Reeve,test,0.2104
+legacy (BHL),8966930,Reeve,test,0.275
+legacy + SFT repair,8966930,Reeve,test,0.254
+legacy (BHL),8966937,Reeve,test,0.4374
+legacy + SFT repair,8966937,Reeve,test,0.4182
+legacy (BHL),8967281,Reeve,test,0.0316
+legacy + SFT repair,8967281,Reeve,test,0.025
+legacy (BHL),8967282,Reeve,test,0.074
+legacy + SFT repair,8967282,Reeve,test,0.0708
+legacy (BHL),8967290,Reeve,test,0.0262
+legacy + SFT repair,8967290,Reeve,test,0.0171
+legacy (BHL),8967333,Reeve,test,0.0155
+legacy + SFT repair,8967333,Reeve,test,0.0093
+legacy (BHL),8967345,Reeve,test,0.0857
+legacy + SFT repair,8967345,Reeve,test,0.0653
