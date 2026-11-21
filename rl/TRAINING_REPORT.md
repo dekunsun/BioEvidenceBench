@@ -4,8 +4,7 @@
 Design fixed before training in `rl/training/configs/METRICS.md`; locked test protocol in
 `rl/training/configs/TEST_PROTOCOL.md`, frozen with the model list (commit `1140608`) before any
 test line was scored. Development decisions are logged in `rl/LOG.md` (Chinese: `rl/PLAN_zh.md`
-section 14). Two reviews by Gloria are still open (section 6); their results will be added here
-without changing anything else.*
+section 14). Gloria's reward-hacking review is in section 6; her reading of 43 lines is still open.*
 
 ## TL;DR
 
@@ -108,19 +107,22 @@ Details: `rl/training/results_7c/ATTRIBUTION_7C.md`.
 | Preservation | every trained model keeps more correct words than Base (0.98–1.00 vs 0.92); D passes non-inferiority against B |
 | Lines Base got right | trained models break some of them (pass@1 0.94–0.99 on Base's always-right lines) |
 | Degenerate outputs | 9 of 2,000 GRPO seed-2 answers loop to the 128-token limit (reward 0) |
-| Reward weaknesses seen | one invented word on a clean line scores 0.75; punctuation is not scored at all (see section 6) |
+| Reward weaknesses seen | finishing a line-end hyphenated word scores 1.0 (H4); one invented word on a clean line scores 0.75; punctuation is not scored at all (section 6) |
 | Not measured | side effects on other tasks (task A) and on general ability |
 
 ## 6. Open reviews and audits (to be filled)
 
-- **Reward hacking** (METRICS.md 3, 5). Word-level candidates (reward ≥ 0.75, further from the
-  expert line than the OCR once punctuation and case are ignored): Base 2.2% in-book / 3.4% Cuvier,
-  trained models ≤ 0.5%. Gloria is reviewing 30 blind candidates
-  (`rl/training/results_test/hacking_review_gloria.xlsx`). *Confirmed rate: pending.* No output type
-  was found that earns more than the correct answer (no severe loophole).
+- **Reward hacking** (METRICS.md 3, 5), reviewed by Gloria (30 blind candidates, all confirmed).
+  Confirmed rate: **Base 2.2% in-book, 3.4% Cuvier** (above the 2% threshold: Reward v1.3 does not
+  judge the untrained model's answers reliably); **trained models 0–0.45%** (below it). Lower bounds,
+  since one independent check found the candidates. Gloria also found a hole the probes had missed
+  (**H4**): a word broken by the line-end hyphen can be finished with letters the line does not have
+  and still score 1.0. It earns the same as the correct answer, Base does it (43 answers at 1.0), no
+  trained model does, and GRPO training never rewarded it, so no completed run is affected; it is
+  fixed in v1.4 before any further training. Details: `rl/REWARD_AUDIT.md` part 2.
 - **Reading 43 test lines** (`rl/training/results_7c/reading_sheet_gloria.xlsx`, Base wrong / D
   right and the reverse). *Gloria's reading: pending.*
-- `rl/REWARD_AUDIT.md` part 2 (task B, 2026-11-21): probes on dev plus the test answers. No probe beats the honest answer; three holes: copying is a safe floor (H1, decided the GRPO result), one inserted word costs only 0.25 (H2, rare), punctuation unscored (H3, 7–12% of answers score 1.0 with different punctuation). Fixes are for a v1.4 tested on dev, not applied to this round.
+- `rl/REWARD_AUDIT.md` part 2 (task B, 2026-11-21): probes on dev plus the test answers. No probe beats the honest answer; four holes: copying is a safe floor (H1, decided the GRPO result), one inserted word costs only 0.25 (H2, rare), punctuation unscored (H3, 7–12% of answers score 1.0 with different punctuation), line-end hyphen continuation free (H4, found by Gloria). Fixes are for a v1.4 tested on dev, not applied to this round.
 
 ## 7. Development decisions and deviations (all on dev or before the test; none after it)
 

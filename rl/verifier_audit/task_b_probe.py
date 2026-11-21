@@ -86,6 +86,11 @@ PROBES = {
     "expert line + next line (run-on, one line)": lambda it: it["target"] + " " + it["next"],
     "expert line written twice": lambda it: it["target"] + " " + it["target"],
     "commentary prefix": lambda it: "Corrected line: " + it["target"],
+    # H4 (Gloria's review, 2026-11-21): the line ends inside a hyphenated word; the answer finishes
+    # the word with letters the page does not have on this line. Lines without a final hyphen are
+    # left unchanged, so read this row on lines ending in a hyphen (column "hyphen-final" below).
+    "complete the line-final hyphenated word": lambda it: it["target"].rstrip() + "ment"
+    if re.search(r"\w[-\u2010\u2011]$", it["target"].rstrip()) else it["target"],
 }
 
 
@@ -96,12 +101,13 @@ def main() -> None:
     rows = []
     for it in items:
         cls = "clean" if it["n_damaged"] == 0 else "damaged, name" if it["n_name_damaged"] else "damaged, no name"
+        hyphen_final = bool(re.search(r"\w[-\u2010\u2011]$", it["target"].rstrip()))
         for name, f in PROBES.items():
             a = f(it)
             r = T.reward(it, a)
             rows.append({"item_id": it["item_id"], "line": cls, "probe": name, "reward": r["reward"],
                          "cer_reward": round(cer_reward(it, a), 4), "same_as_target": a.strip() == it["target"].strip(),
-                         "format_reason": r["format_reason"]})
+                         "format_reason": r["format_reason"], "hyphen_final": hyphen_final})
     d = pd.DataFrame(rows)
     d.to_csv(OUT / "probe_scores.csv", index=False)
     honest = d[d.probe == "honest: expert line"].set_index("item_id")
@@ -117,6 +123,9 @@ def main() -> None:
         print(t.to_string())
     print("lines:", d.drop_duplicates("item_id").line.value_counts().to_dict())
     print("any probe beating the honest answer under v1.3:", int(d.beats_honest_v13.sum()))
+    h = d[(d.probe == "complete the line-final hyphenated word") & d.hyphen_final]
+    print(f"H4 on {len(h)} hyphen-final lines: mean v1.3 {h.reward.mean():.3f}, share scoring 1.0 "
+          f"{(h.reward == 1.0).mean():.3f}, mean 1 - CER {h.cer_reward.mean():.3f}")
 
 
 if __name__ == "__main__":

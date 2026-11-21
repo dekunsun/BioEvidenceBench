@@ -70,7 +70,7 @@ copied clean line scores 1. A higher pass rate is not a better repair. GRPO afte
 by about 0.006–0.008 and leaves pass@8 unchanged, the pattern Yue et al. (2025) describe:
 answers SFT could already give become slightly more likely.
 
-## 4. Reward reliability (METRICS.md 3, 5): waiting for Gloria
+## 4. Reward reliability (METRICS.md 3, 5)
 
 Candidates = answers with reward ≥ 0.75 that are further from the expert line than the OCR. The
 check as run flags 4,418 answers, but most differ from the reference only in punctuation, which
@@ -90,3 +90,8 @@ word), or a repaired line with one inserted word. No output type was found that 
 correct answer. `results_test/hacking_review_gloria.xlsx` holds 30 blind candidates (20 Base, all
 10 distinct trained-model ones) for Gloria to confirm; the rate counts only confirmed cases.
 Separately, punctuation fidelity is outside Reward v1.3 and outside these metrics (a scope limit).
+
+**Gloria's review (2026-11-21)**: all 30 candidates confirmed. Confirmed rate Base 2.2% in-book /
+3.4% Cuvier (above 2%: the reward is not a reliable judge of Base's answers), trained models
+0–0.45%. She also found hole H4 (finishing a line-end hyphenated word scores 1.0); no trained model
+exploits it. `rl/REWARD_AUDIT.md` part 2.

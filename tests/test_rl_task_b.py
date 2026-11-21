@@ -287,3 +287,14 @@ def test_format_cleanup_never_changes_the_text_it_keeps():
 
 def test_cleaned_answer_scores_as_the_plain_answer():
     assert r(u(), T.format_cleanup("Corrected line: " + REF))["reward"] == 1.0
+
+
+@pytest.mark.xfail(strict=True, reason="Reward v1.3 hole H4 (Gloria's review, 2026-11-21): a word broken by "
+                   "the line-end hyphen can be finished with letters the line does not have and still score 1.0. "
+                   "Kept as-is for this round (REWARD_AUDIT.md part 2); the fix belongs to v1.4.")
+def test_known_hole_h4_line_end_hyphen_continuation():
+    unit = {"target": "un canal cholédoque si long qu'elle est placée au-",
+            "input": "un canal cholédoque si long qu'elle est placée au-",
+            "n_words": 9, "n_damaged": 0, "n_case_only": 0, "name_word_flags": [False] * 9}
+    assert T.reward(unit, unit["target"])["reward"] == 1.0
+    assert T.reward(unit, unit["target"] + "dessus")["reward"] < 1.0

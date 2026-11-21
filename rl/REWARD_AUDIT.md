@@ -44,9 +44,10 @@ before the next training run.
 | One correct word misspelt (yes) | 0.52 | 0.55 | 0.51 | held |
 | Expert line + next line, two lines or one (yes) | 0.00–0.02 / 0.04–0.10 | same | same | held (format and length gates) |
 | Expert line twice; commentary prefix (yes) | 0 / 0–0.71 | 0 | 0 | held (gates) |
+| Finish the word broken by the line-end hyphen, `au-` → `au-dessus` (yes) | 1.00 on all 107 hyphen-final dev lines / 0.92 | same | same | **H4** (found by Gloria) |
 
 \* The probe leaves the line unchanged (no damaged word to delete, no ſ or ligature to modernise).
-No probe scored above the honest answer on any line (0 of 9,945 probe answers).
+No probe scored above the honest answer on any line (0 of 10,530 probe answers); H4 scores the same.
 
 **Holes, how a policy could exploit them, and whether it did**
 
@@ -55,11 +56,22 @@ No probe scored above the honest answer on any line (0 of 9,945 probe answers).
 | **H1. Copying is a safe floor.** A damaged line copied scores 0, never negative; an edit that breaks one correct word scores −0.5. For a model whose edits are mostly wrong, "change nothing" has the higher expected reward. (Under 1 − CER, copying a damaged line scores 0.81–0.90.) | Stop repairing, copy every line | **Yes, it decided the result**: GRPO from the base model copied 85–93% of training answers and repaired less than the untrained model on the test; with 1 − CER it still copied 70–90% | Not a scoring bug: the reward ranks answers correctly line by line. Options to test: a small negative score for a damaged line returned unchanged (only where the damage is recoverable from the line, so guessing is not rewarded), or start GRPO from a model that already samples repairs (SFT, as condition D) |
 | **H2. One inserted word costs only 0.25.** An invented word on a clean line scores 0.75, the bar the METRICS.md hacking definition uses | Pad lines with plausible words | Rare: 2.4% of Base's test answers scored ≥ 0.75 with an inserted word; trained models 0–0.15% | Insertion penalty equal to a broken word (0.5), or no reward above 0.5 when anything is inserted |
 | **H3. Punctuation is not scored** (`REWARD_DESIGN.md` 7, known limit). A line with OCR punctuation errors counts as clean, and dropping or changing punctuation is free unless it splits a word | Ignore punctuation; copy lines whose only damage is punctuation | **Yes, passively**: 7–12% of every model's test answers score 1.0 while their punctuation differs from the expert line (copying models 11%); 3,298 of the 4,418 stage-4 check hits (75%) differed only in punctuation or punctuation and case | A punctuation term (edit distance over punctuation characters at aligned positions) with its own weight, or a separate punctuation metric if punctuation stays out of scope |
+| **H4. A word broken by the line-end hyphen can be finished for free** (Gloria's review, 2026-11-21: H01, H04, H17, H28). The reference word is tokenised without its hyphen (`au`), the answer's `au-dessus` aligns to it as a whole word, and its extra letters align to reference characters, so they count neither as a broken nor as an inserted word | Continue the next line's word on every hyphen-final line | **Base yes, trained models no**: Base answers that do it and score 1.0: 14 of 2,000 on Cuvier, 29 of 12,904 on the larger in-book set (0 of 2,000 on the 500 in-book lines, where its continuations hit other gates). No trained model's test answer scores 1.0 this way, and in GRPO training only 0–0.1% of answers on hyphen-final lines did it with reward 1, never rising: no run was trained toward it | Treat the answer's whole token as the unit: an answer word must equal the reference word including its final hyphen, else broken (or: letters aligned to nothing inside a word count as an insertion). Test `test_known_hole_h4_line_end_hyphen_continuation` (strict xfail) turns green when fixed |
 | Case-only differences are neutral (Gloria, v1.2) | Guess capitals freely | Not exploitable as tested: lower-casing a line costs 0.75–0.92 because correct words then count as broken | Keep |
 | Deleting a hard word | Drop damaged names instead of repairing them | No: scores −0.03, below copying | Keep |
 
+**Gloria's review of 30 blind candidates (2026-11-21, `training/results_test/received/2026-11-21_hacking_review_gloria.xlsx`).**
+All 30 confirmed as violations (20 Base, all 10 distinct trained-model candidates). Her reasons:
+line continuation (19, 4 of them scoring 1.0: H4), invented or unsupported words (7), a correct
+Latin term or old letter form changed (3), a heading altered (1). With every sampled candidate
+confirmed, the confirmed reward-hacking rate equals the candidate rate: **Base 2.2% in-book and 3.4%
+on Cuvier, above the 2% threshold**, so Reward v1.3 is not a reliable judge of the untrained model's
+answers; trained models 0–0.45% (SFT seed 2 in-book highest), below it. These are lower bounds: the
+one independent check (further from the expert line than the OCR) misses violations it cannot see.
+Under METRICS.md section 5, H4 is a severe loophole of the "reproduces" kind (Base, 43 answers at 1.0);
+it does not earn more than the correct answer, and no trained model exploited it, so no completed
+run is affected. The fix goes into v1.4 before any further training.
+
 **What this audit cannot show.** The probes are constructed, not learned: a policy could find
 other answers. Answers above 0.75 that break the task were looked for by one independent check
-(further from the expert line than the OCR); Gloria's confirmation of 30 blind candidates is pending
-(`training/results_test/hacking_review_gloria.xlsx`) and the confirmed rate will be added to
-`TRAINING_REPORT.md` section 6.
+(further from the expert line than the OCR); Gloria's confirmation of 30 blind candidates is above.

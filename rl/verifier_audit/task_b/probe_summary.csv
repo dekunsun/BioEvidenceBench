@@ -18,3 +18,4 @@ expert line + next line (two lines),0.0,0.0,0.0,0.077,0.044,0.1,0.0,0.0,0.0,0.0,
 "expert line + next line (run-on, one line)",0.02,0.02,0.03,0.077,0.044,0.1,0.025,0.02,0.041,0.0,0.0,0.0
 expert line written twice,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 commentary prefix,0.0,0.0,0.0,0.708,0.655,0.668,0.0,0.0,0.0,0.0,0.0,0.0
+complete the line-final hyphenated word,1.0,1.0,1.0,0.991,0.981,0.983,1.0,1.0,1.0,0.884,0.765,0.772
