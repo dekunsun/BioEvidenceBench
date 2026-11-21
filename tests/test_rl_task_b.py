@@ -193,3 +193,8 @@ def test_damaged_small_caps_word_is_repaired_by_the_letters_in_any_case():
     d = r(unit, "nimbosus testa")
     assert d["reward"] == 1.0 and d["case_accuracy"] == 0.0 and d["exact_repair_rate"] == 1.0
     assert r(unit, "NIMBOSUS testa")["case_accuracy"] == 1.0
+
+
+def test_mixed_latin_cyrillic_word_in_reference_is_found():
+    assert T.mixed_script_words("ein gemeinsсhaftliсher Gang") == ["gemeinsсhaftliсher"]   # Cyrillic с
+    assert T.mixed_script_words("Русское энтомологическое общество, Horae") == []

@@ -1,0 +1,23 @@
+reason,Butler,Chitinskelett,Piscium,Reeve,Trudy,All
+coverage,303,10,21,864,1356,2554
+coverage + similarity,5,3,4,76,574,662
+coverage + similarity + span ratio,12,22,32,141,338,545
+coverage + similarity + span ratio + unreadable character in reference,3,0,2,7,4,16
+coverage + similarity + unreadable character in reference,5,1,0,1,4,11
+coverage + span ratio,98,3,0,168,180,449
+coverage + span ratio + unreadable character in reference,2,0,0,0,0,2
+coverage + unreadable character in reference,2,0,3,0,5,10
+excluded: engraved plate caption; reference typos (Pinaa / Sinisra) and OCR unreadable,0,0,1,0,0,1
+excluded: engraved plate credit; reference typo (Soweby) and OCR unreadable,0,0,0,1,0,1
+excluded: engraved plate imprint; OCR unreadable and reference doubtful,0,1,0,0,0,1
+excluded: engraved plate imprint; reference garbled (Sehweizerbaresche Vertagsbuchhardlung),0,1,0,0,0,1
+excluded: engraved plate imprint; reference garbled (Wirtre FrankturtrM),0,1,0,0,0,1
+mixed-script word in reference,0,1,0,0,59,60
+no aligned legacy text,1,20,27,134,27,209
+similarity,17,1,1,77,118,214
+similarity + span ratio,15,0,0,20,21,56
+similarity + span ratio + unreadable character in reference,2,0,0,0,0,2
+similarity + unreadable character in reference,6,0,0,7,1,14
+span ratio,4,1,2,9,30,46
+unreadable character in reference,13,6,91,14,34,158
+All,488,71,184,1519,2751,5013

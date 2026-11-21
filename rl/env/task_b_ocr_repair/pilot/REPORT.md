@@ -89,3 +89,10 @@ commentary prefix, empty and two-line answers 0 and flagged (format); OCR unchan
 damaged line; one correct word changed at most 0.5 when it hits a correct word (the 0.857 maximum is
 a line where the change hit a damaged word, which only loses that repair); lower-cased −1 to 0.57.
 `summary.txt` and `reward_checks.csv` hold the v1.1 numbers; the table above is v1.0.
+
+## Re-run under Reward v1.2 (2026-11-21)
+
+Case-only words neutral, MUFI ligatures folded, unreadable references invalid. On these four Reeve
+pages 353 of 357 lines are valid: three lines hold U+EFA1 in `c?rulescente` (æ or œ, unidentified)
+and are set aside. Returning the OCR unchanged scores 0 on every damaged line; its one 1.0 is a line
+whose only difference was case, now a clean line. `summary.txt` and `reward_checks.csv` hold v1.2.

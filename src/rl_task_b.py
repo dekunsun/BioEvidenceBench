@@ -60,6 +60,14 @@ _PRESENTATION = str.maketrans({"\ufb00": "ff", "\ufb01": "fi", "\ufb02": "fl", "
 # Piscium, sex symbols and fractions in Butler's plate captions) or an unidentified private-use
 # character cannot be a target: no output can match it. Such lines are marked invalid.
 _UNREADABLE = re.compile("[\ufffd\ue000-\uf8ff]")
+# A word mixing Latin and Cyrillic letters (Trudy's transcription: `gemeinsсhaftliсher` with a
+# Cyrillic с) is a keyboard slip in the reference; an output with the right Latin letters would be
+# marked wrong. Such lines are not rewritten but set aside (reason recorded).
+_LATIN, _CYRILLIC = re.compile(r"[A-Za-zÀ-ÿĀ-ſ]"), re.compile(r"[\u0400-\u04ff]")
+
+
+def mixed_script_words(s: str) -> list[str]:
+    return [w for w in re.findall(r"\w+", s) if _LATIN.search(w) and _CYRILLIC.search(w)]
 
 
 def nfc(s: str) -> str:
@@ -259,6 +267,8 @@ def line_pairs(pid: int, min_chars: int = 15, min_words: int = 2) -> list[dict]:
             why.append(f"similarity {sim:.2f}")
         if _UNREADABLE.search(s):
             why.append("unreadable character in reference")
+        if mixed_script_words(s):
+            why.append("mixed-script word in reference")
         units.append(make_unit(s, inp, flags, page_id=pid, line_no=li + 1,
                                input_had_linebreak="\n" in raw.strip(), coverage=round(cov, 3),
                                span_ratio=round(span_ratio, 3), similarity=round(sim, 3),

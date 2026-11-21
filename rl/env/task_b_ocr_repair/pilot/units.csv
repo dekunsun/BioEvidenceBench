@@ -18,7 +18,7 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966754,24,True,,1.0,1.0,1.0,9,0,0,The beautiful forms and varieties of shells produced by,The beautiful forms and varieties of shells produced by
 8966754,25,True,,1.0,1.019,0.964,7,1,0,"those aii'-breathing mollusks, which, under the generic","those air-breathing mollusks, which, under the generic"
 8966754,26,True,,0.982,0.982,0.964,7,1,1,"appellation of BuUmus, constitute an important division","appellation of Bulimus, constitute an important division"
-8966754,27,True,,1.0,1.019,0.868,10,2,0,"of the gi-eat tribe of Snails, have become objects of","of the great tribe of SNAILS, have become objects of"
+8966754,27,True,,1.0,1.019,0.962,10,1,0,"of the gi-eat tribe of Snails, have become objects of","of the great tribe of SNAILS, have become objects of"
 8966754,28,True,,1.0,1.0,1.0,9,0,0,"especial interest to the conchologist, owing to the zeal","especial interest to the conchologist, owing to the zeal"
 8966754,29,True,,1.0,1.0,1.0,8,0,0,with which a few enterprising scientific travellers have,with which a few enterprising scientific travellers have
 8966754,30,True,,1.0,1.0,1.0,9,0,0,lately penetrated into tropical countries in pursuit of them.,lately penetrated into tropical countries in pursuit of them.
@@ -90,7 +90,7 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966754,99,True,,1.0,1.0,1.0,10,0,0,regularity as the textile marking of a Volute or Cone.,regularity as the textile marking of a Volute or Cone.
 8966754,100,True,,1.0,1.0,1.0,8,0,0,This phenomenon is easily detected by immersing the,This phenomenon is easily detected by immersing the
 8966754,101,True,,1.0,1.0,1.0,10,0,0,"shell in water, when the light portion or upper porous","shell in water, when the light portion or upper porous"
-8966753,1,True,,1.0,1.059,0.722,3,1,0,BULIMUS.— Plate I.,BULIMUS.—PLATE I.
+8966753,1,True,,1.0,1.059,0.944,3,0,0,BULIMUS.— Plate I.,BULIMUS.—PLATE I.
 8966753,3,True,,1.0,1.0,0.981,8,1,0,"laver of epidermis becomes saturated, and the ground","layer of epidermis becomes saturated, and the ground"
 8966753,4,True,,1.0,1.0,1.0,11,0,0,colour of the shell is seen through it; as the moisture,colour of the shell is seen through it; as the moisture
 8966753,5,True,,1.0,1.0,1.0,7,0,0,"evaporates, the epidermis resumes its light appearance.","evaporates, the epidermis resumes its light appearance."
@@ -190,7 +190,7 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966753,105,True,,1.0,1.0,1.0,9,0,0,"most of the islands of the Eastern Archipelago, few","most of the islands of the Eastern Archipelago, few"
 8966753,106,True,,1.0,1.0,1.0,10,0,0,species appear to inhabit the great territories of India and,species appear to inhabit the great territories of India and
 8966753,107,True,,1.0,1.019,0.926,10,2,0,"Cliina, Ou the coast of Borneo a beautiful species was",China. On the coast of Borneo a beautiful species was
-8966752,1,True,,1.0,1.0,0.706,3,1,0,BULIMUS.-Plate I.,BULIMUS.—PLATE I.
+8966752,1,True,,1.0,1.0,0.941,3,0,0,BULIMUS.-Plate I.,BULIMUS.—PLATE I.
 8966752,3,True,,1.0,1.0,1.0,10,0,0,"recently discovered by Mr. Adams, of H.M.S. Samarang,","recently discovered by Mr. Adams, of H.M.S. Samarang,"
 8966752,4,True,,1.0,1.0,1.0,12,0,0,"by the accidental falling of a huge tree, in a woody islet","by the accidental falling of a huge tree, in a woody islet"
 8966752,5,True,,1.0,1.0,1.0,7,0,0,"situated between Banguey and Balambangan, but they","situated between Banguey and Balambangan, but they"
@@ -217,18 +217,18 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966752,26,True,,1.0,1.0,1.0,9,0,0,and possessing all the elements favourable to the growth,and possessing all the elements favourable to the growth
 8966752,27,True,,0.969,0.969,0.938,5,1,0,and beauty of arboreal moUusks.,and beauty of arboreal mollusks.
 8966752,29,True,,1.0,1.0,1.0,4,0,0,Species 1. (Mus. Cuming.),Species 1. (Mus. Cuming.)
-8966752,31,True,,1.0,1.061,0.615,6,5,2,"BuLiMUs jiac;rostom.\. Bid. testa ovali, ventricosd,","BULIMUS MACROSTOMA. Bul. testâ ovali, ventricosâ,"
+8966752,31,True,,1.0,1.061,0.827,6,4,1,"BuLiMUs jiac;rostom.\. Bid. testa ovali, ventricosd,","BULIMUS MACROSTOMA. Bul. testâ ovali, ventricosâ,"
 8966752,32,True,,0.982,1.071,0.567,5,5,0,"yjirn sii/jfiUrerin/ri., mifradihis setiis, convexo-tumicUs,","spirâ subabbreviatâ, anfractibus senis, convexo-tumidis,"
 8966752,33,True,,0.981,1.148,0.557,6,5,0,rniirriitrirr xtrhilis^ ciilniiielld basi siibcontorta ; pnr-,"concentricè striatis, columellâ basi subcontortâ; pur-"
 8966752,34,True,,1.0,1.204,0.538,6,3,0,"piirvd-fii^iii. ,'jiiiln-ifiiili' Injdrophand, in anfractu ultimo","pureo-fuscâ, epidermide hydrophanâ, in anfractu ultimo"
-8966752,35,True,,1.0,1.231,0.484,6,6,0,"iiiiizniKiIti, iiiihdii ,■ niii'iiurd cmruleacente-alhd, lahro","unizonatâ, indutâ; aperturâ crulescente-albâ, labro"
-8966752,38,True,,1.0,1.0,0.638,6,3,1,"The wide-mouth Bulimus. Shell oval, ventricose,","THE WIDE-MOUTH BULIMUS. Shell oval, ventricose,"
+8966752,35,False,unreadable character in reference,1.0,1.231,0.484,6,6,0,"iiiiizniKiIti, iiiihdii ,■ niii'iiurd cmruleacente-alhd, lahro","unizonatâ, indutâ; aperturâ crulescente-albâ, labro"
+8966752,38,True,,1.0,1.0,1.0,6,0,0,"The wide-mouth Bulimus. Shell oval, ventricose,","THE WIDE-MOUTH BULIMUS. Shell oval, ventricose,"
 8966752,39,True,,0.98,0.98,0.898,7,2,0,"spu'c sUghtly abbreviated, whorls six in number,","spire slightly abbreviated, whorls six in number,"
 8966752,40,True,,1.0,1.0,1.0,5,0,0,"convexly tumid, concentrically striated, columella","convexly tumid, concentrically striated, columella"
 8966752,41,True,,1.0,1.02,0.962,7,0,0,"slightly twisted at the base ; purple-brown, covered","slightly twisted at the base, purple-brown, covered"
 8966752,42,True,,1.0,1.0,1.0,8,0,0,"with a hydrophauous epidermis, marked with a single","with a hydrophauous epidermis, marked with a single"
 8966752,43,True,,1.0,1.02,0.981,9,0,0,"zone on the last whorl ; aperture blueish white, lip","zone on the last whorl; aperture blueish white, lip"
-8966752,46,True,,0.975,0.975,0.775,7,2,0,"Pfeiffer, Pro. Zool. Soc, 1843, p. 152.","PFEIFFER, Pro. Zool. Soc., 1842, p. 152."
+8966752,46,True,,0.975,0.975,0.95,7,1,0,"Pfeiffer, Pro. Zool. Soc, 1843, p. 152.","PFEIFFER, Pro. Zool. Soc., 1842, p. 152."
 8966752,48,True,,1.0,1.0,1.0,8,0,0,"Hab. Sual, Province of Pangasinan, Island of Luzon,","Hab. Sual, Province of Pangasinan, Island of Luzon,"
 8966752,49,True,,1.0,1.024,0.976,6,0,0,Philippines (on leaves of trees) ; Cuming.,Philippines (on leaves of trees); Cuming.
 8966752,51,True,,1.0,1.019,0.945,8,2,1,"TJiis species approaches the B. rnfogaster, it partakes","This species approaches the B. rufogaster, it partakes"
@@ -239,18 +239,18 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966752,57,True,,1.0,1.0,1.0,9,0,0,the general form of the shell is eminently distinguished,the general form of the shell is eminently distinguished
 8966752,58,True,,0.97,0.97,0.939,5,1,0,by its swoUen egg-shaped growth.,by its swollen egg-shaped growth.
 8966752,60,True,,1.0,1.0,0.949,8,2,0,Species 3. (Pig. a and b. Mus. Cuming.),Species 2. (Fig. a and b. Mus. Cuming.)
-8966752,62,True,,1.0,1.019,0.585,5,5,1,"Bulimus pythogastee. Bui. testa subpyraviidali-ovatd,","BULIMUS PYTHOGASTER. Bul. testâ subpyramidali-ovatâ,"
+8966752,62,True,,1.0,1.019,0.887,5,4,0,"Bulimus pythogastee. Bui. testa subpyraviidali-ovatd,","BULIMUS PYTHOGASTER. Bul. testâ subpyramidali-ovatâ,"
 8966752,63,True,,0.981,0.981,0.962,5,1,0,"anfractibm senis, plano-convexis, ultimo ventricoso,","anfractibus senis, plano-convexis, ultimo ventricoso,"
 8966752,64,True,,1.0,1.058,0.673,5,4,0,"cohwielld recta ; piirpureo-niyrirnide, rpiJi'miide in-","columellâ rectâ; purpureo-nigricante, epidermide in-"
 8966752,65,True,,1.0,1.212,0.603,5,4,0,"terdniii simplici, interd mil loiiijilinViiiiiViti'r atriijatd,","terdum simplici, interdum longitudinaliter strigatâ,"
-8966752,66,True,,0.981,1.038,0.63,5,5,0,"npertiird ctenilesceitte-albd, columt/ld nmnrro-purpu-","aperturâ crulescente-albâ, columellâ rosaceo-purpu-"
-8966752,69,True,,1.0,1.0,0.667,6,3,1,The oriental Bulimus. Shell somewhat pyramidally,THE ORIENTAL BULIMUS. Shell somewhat pyramidally
+8966752,66,False,unreadable character in reference,0.981,1.038,0.63,5,5,0,"npertiird ctenilesceitte-albd, columt/ld nmnrro-purpu-","aperturâ crulescente-albâ, columellâ rosaceo-purpu-"
+8966752,69,True,,1.0,1.0,1.0,6,0,0,The oriental Bulimus. Shell somewhat pyramidally,THE ORIENTAL BULIMUS. Shell somewhat pyramidally
 8966752,70,True,,1.0,1.0,1.0,9,0,0,"ovate, whorls six in number, flatly convex, the last","ovate, whorls six in number, flatly convex, the last"
 8966752,71,True,,1.0,1.019,0.963,5,0,0,"ventricose, columella straight ; purple-black, epider-","ventricose, columella straight; purple-black, epider‐"
 8966752,72,True,,1.0,1.0,1.0,7,0,0,"mis sometimes simple, sometimes arranged in longi-","mis sometimes simple, sometimes arranged in longi-"
 8966752,73,True,,1.0,1.04,0.923,6,2,0,"tudinal streaks, apertui'e blueish wliite, columella","tudinal streaks, aperture blueish white, columella"
 8966752,74,True,,1.0,1.067,0.875,2,1,0,pinkish piu-ple.,pinkish purple.
-8966752,76,True,,1.0,1.0,0.792,9,2,0,"Ferussac, Lamarck, Anim. sans vert, vol.viii. p. 33G.","FERUSSAC, Lamarck, Anim. sans vert. vol.viii. p. 226."
+8966752,76,True,,1.0,1.0,0.925,9,1,0,"Ferussac, Lamarck, Anim. sans vert, vol.viii. p. 33G.","FERUSSAC, Lamarck, Anim. sans vert. vol.viii. p. 226."
 8966752,78,True,,1.0,1.034,0.933,11,2,0,"Hub. Fig. /I, Island of Ticao ; Fig. b, Mount Isarog, Island","Hab. Fig. a, Island of Ticao; Fig. b, Mount Isarog, Island"
 8966752,79,True,,1.0,1.02,0.981,8,0,0,"of Luzon, Philippines (on leaves of trees) ; Cuming.","of Luzon, Philippines (on leaves of trees); Cuming."
 8966752,81,True,,0.983,1.0,0.845,8,3,2,The examples ofB.pi/iko//nster selected for representation,The examples of B. pythogaster selected for representation
@@ -266,20 +266,20 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966752,91,True,,1.0,1.017,0.966,7,1,0,"soft and velvety, uniformly distributed thi'oughout without","soft and velvety, uniformly distributed throughout without"
 8966752,92,True,,1.0,1.0,1.0,4,0,0,any description of pattern.,any description of pattern.
 8966752,94,True,,1.0,1.0,1.0,4,0,0,Species 3. (Mus. Cuming.),Species 3. (Mus. Cuming.)
-8966752,96,True,,1.0,1.019,0.611,6,6,2,"Bulimus lignarius. Bid. testa ovato-conoided, veiitri-","BULIMUS LIGNARIUS. Bul. testâ ovato-conoideâ, ventri-"
+8966752,96,True,,1.0,1.019,0.889,6,4,0,"Bulimus lignarius. Bid. testa ovato-conoided, veiitri-","BULIMUS LIGNARIUS. Bul. testâ ovato-conoideâ, ventri-"
 8966752,97,True,,0.962,1.038,0.796,5,4,0,"cosisslmd, anfractibm senis, tmiiido-convexis ; colit-","cosissimâ, anfractibus senis, tumido-convexis; colu‐"
 8966752,98,True,,1.0,1.02,0.904,5,3,0,"melld recta; purpureo-nigricante, €pid4'rmide lineis","mellâ rectâ; purpureo-nigricante, epidermide lineis"
 8966752,99,True,,0.981,0.981,0.926,7,1,0,"fasciiMjne in anfractu ultimo, et interdum penultimo,","fasciisque in anfractu, ultimo, et interdum penultimo,"
-8966752,100,True,,0.962,0.962,0.774,6,6,0,"Hotatd; aperturd caridescente-albd, columeUd Uvido-","notatâ; aperturâ crulescente-albâ, columellâ livido-"
-8966752,103,True,,1.0,1.0,0.725,8,3,1,"The wooden Bulimus. Shell ovately conoid, very ven-","THE WOODEN BULIMUS. Shell ovately conoid, very ven-"
+8966752,100,False,unreadable character in reference,0.962,0.962,0.774,6,6,0,"Hotatd; aperturd caridescente-albd, columeUd Uvido-","notatâ; aperturâ crulescente-albâ, columellâ livido-"
+8966752,103,True,,1.0,1.0,1.0,8,0,0,"The wooden Bulimus. Shell ovately conoid, very ven-","THE WOODEN BULIMUS. Shell ovately conoid, very ven-"
 8966752,104,True,,1.0,1.038,0.944,8,1,0,"tricose, whorls six in number, timiidly convex ; colu-","tricose, whorls six in number, tumidly convex; colu-"
 8966752,105,True,,0.98,1.02,0.904,6,2,0,"meUa straight ; purple-black, epidei-mis marked with","mella straight; purple-black, epidermis marked with"
 8966752,106,True,,1.0,1.0,1.0,10,0,0,bands or lines on the last and sometimes the penul-,bands or lines on the last and sometimes the penul-
 8966752,107,True,,1.0,1.019,0.981,6,0,0,"timate whorl ; aperture blueish-white, columella livid","timate whorl; aperture blueish-white, columella livid"
-8966752,110,True,,0.969,0.969,0.719,5,2,0,"Pfeiffer, Pro. Zool. Soc, 1843.","PFEIFFER, Pro. Zool. Soc., 1842."
+8966752,110,True,,0.969,0.969,0.938,5,1,0,"Pfeiffer, Pro. Zool. Soc, 1843.","PFEIFFER, Pro. Zool. Soc., 1842."
 8966752,112,True,,1.0,1.0,0.981,8,1,0,"Hah. Gattarang, Province of Cagayan, Island of Luzon,","Hab. Gattarang, Province of Cagayan, Island of Luzon,"
 8966752,113,True,,1.0,1.024,0.976,6,0,0,Philippines (on leaves of trees) ; Cuming.,Philippines (on leaves of trees); Cuming.
-8966751,1,True,,1.0,1.118,0.444,3,3,0,BULBIL'S.— Plate L,BULIMUS.—PLATE I.
+8966751,1,True,,1.0,1.118,0.667,3,2,0,BULBIL'S.— Plate L,BULIMUS.—PLATE I.
 8966751,3,True,,1.0,1.0,1.0,10,0,0,"This is the largest of the Philippine species, and that","This is the largest of the Philippine species, and that"
 8966751,4,True,,1.0,1.0,1.0,9,0,0,of the most ventricose proportions. The columella is of,of the most ventricose proportions. The columella is of
 8966751,5,True,,1.0,1.0,1.0,9,0,0,"a livid blueish purple, and the epidermal pattern consists","a livid blueish purple, and the epidermal pattern consists"
@@ -288,13 +288,13 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966751,8,True,,1.0,1.0,1.0,10,0,0,"specimen figured, in which the bands are confined to the","specimen figured, in which the bands are confined to the"
 8966751,9,True,,1.0,1.0,1.0,7,0,0,"last whorl, is rather an exceptional variety.","last whorl, is rather an exceptional variety."
 8966751,11,True,,1.0,1.0,1.0,4,0,0,Species 4. (Mus. Cuming.),Species 4. (Mus. Cuming.)
-8966751,13,True,,0.98,0.98,0.824,6,4,1,"BuLiMUS RUFOGASTER. Bid. testd ovato-comided, sub-","BULIMUS RUFOGASTER. Bul. testâ ovato-conoideâ, sub‐"
+8966751,13,True,,0.98,0.98,0.863,6,3,0,"BuLiMUS RUFOGASTER. Bid. testd ovato-comided, sub-","BULIMUS RUFOGASTER. Bul. testâ ovato-conoideâ, sub‐"
 8966751,14,True,,1.0,1.055,0.828,6,5,0,"veiitricosd, anfractibtis senis, convexin, columella suli-","ventricosâ, anfractibus senis, convexis, columellâ sub‐"
 8966751,15,True,,1.0,1.02,0.941,4,2,0,"intortd ; nigricante-purpured, interdum rufescente,","intortâ; nigricante-purpureâ, interdum rufescente,"
 8966751,16,True,,1.0,1.018,0.929,6,1,0,"epidermide basin versus ttnifasciatd, strigis longitudi-","epidermide basin versus unifasciatâ, strigis longitudi‐"
 8966751,17,True,,1.0,1.0,0.964,7,2,0,"naliius nigricantibus, prope ad suturas latiorihus, no-","nalibus nigricantibus, prope ad suturas latioribus, no-"
 8966751,18,True,,1.0,1.0,0.898,4,4,0,"tatd, aperturd columelldgue cwrulescente-albidis.","tatâ, aperturâ columellâque cœrulescente-albidis."
-8966751,20,True,,1.0,1.0,0.766,7,3,1,"The red Bclimus. Shell ovately conoid, somewhat","THE RED BULIMUS. Shell ovately conoid, somewhat"
+8966751,20,True,,1.0,1.0,0.979,7,1,1,"The red Bclimus. Shell ovately conoid, somewhat","THE RED BULIMUS. Shell ovately conoid, somewhat"
 8966751,21,True,,1.0,1.0,1.0,7,0,0,"ventricose, whorls six in number, convex, columella","ventricose, whorls six in number, convex, columella"
 8966751,22,True,,1.0,1.0,1.0,6,0,0,"somewhat twisted; blackish purple, sometimes reddish,","somewhat twisted; blackish purple, sometimes reddish,"
 8966751,23,True,,1.0,1.0,1.0,8,0,0,epidermis marked towards the base with a single,epidermis marked towards the base with a single
@@ -309,19 +309,19 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966751,35,True,,1.0,1.0,1.0,8,0,0,"short, interrupted streaks around the sutures. This last","short, interrupted streaks around the sutures. This last"
 8966751,36,True,,1.0,1.0,1.0,10,0,0,mentioned design I have not observed in any other species.,mentioned design I have not observed in any other species.
 8966751,38,True,,1.0,1.0,1.0,4,0,0,Species 5. (Mus. Cuming.),Species 5. (Mus. Cuming.)
-8966751,40,True,,1.0,1.0,0.72,5,4,1,"IkLiMUs PuiLiPPiNENSis. Bul. testd ovnto-conoidcd,","BULIMUS PHILIPPINENSIS. Bul. testâ ovato-conoideâ,"
+8966751,40,True,,1.0,1.0,0.86,5,4,1,"IkLiMUs PuiLiPPiNENSis. Bul. testd ovnto-conoidcd,","BULIMUS PHILIPPINENSIS. Bul. testâ ovato-conoideâ,"
 8966751,41,True,,0.981,0.981,0.907,6,3,0,"ba.u subplanulatd, anfractibm senis, convexis, ultimo","basi subplanulatâ, anfractibus senis, convexis, ultimo"
 8966751,42,True,,1.0,1.02,0.904,6,4,0,basin versus subobscure angulaio ; columella leviler,basin versus subobscurè angulato; columellâ leviter
 8966751,43,True,,1.0,1.0,0.929,6,3,0,"intortd; nigricanie-fuscd, epidermide in strigis oblique","intortâ; nigricante-fuscâ, epidermide in strigis obliquè"
 8966751,44,True,,0.982,0.982,0.857,5,3,0,"concentricis, aperturd candescente-albd, columella pal-","concentricis, aperturâ cœrulescente-albâ, columellâ pal‐"
 8966751,45,True,,1.0,1.0,0.963,2,1,0,lida rosaceo-purpurascente.,lidè rosaceo-purpurascente.
-8966751,47,True,,1.0,1.039,0.642,7,3,1,"TiiK Philiim'Ine Bulimcs. Shell ovately conoid, some-","THE PHILIPPINE BULIMUS. Shell ovately conoid, some‐"
+8966751,47,True,,1.0,1.039,0.849,7,3,1,"TiiK Philiim'Ine Bulimcs. Shell ovately conoid, some-","THE PHILIPPINE BULIMUS. Shell ovately conoid, some‐"
 8966751,48,True,,1.0,1.041,0.98,9,0,0,"what flattened at the base, whorls six in number.","what flattened at the base, whorls six in number,"
 8966751,50,True,,1.0,1.0,1.0,7,0,0,"convex, last whorl somewhat obscurely angled towards","convex, last whorl somewhat obscurely angled towards"
 8966751,51,True,,1.0,1.038,0.964,6,0,0,"the base ; columella slightly twisted ; blackish-brown,","the base; columella slightly twisted; blackish-brown,"
 8966751,52,True,,1.0,1.0,0.961,6,1,0,"epidennis disposed in obliquely concentric streaks,","epidermis disposed in obliquely concentric streaks,"
 8966751,53,True,,1.0,1.019,0.964,7,1,0,"aperture blueish wliite, columella pale pinkish purple.","aperture blueish white, columella pale pinkish purple."
-8966751,55,True,,0.969,0.969,0.75,5,1,0,"Pfeiffer, Pro. Zool. Soc, 1846.","PFEIFFER, Pro. Zool. Soc., 1846."
+8966751,55,True,,0.969,0.969,0.969,5,0,0,"Pfeiffer, Pro. Zool. Soc, 1846.","PFEIFFER, Pro. Zool. Soc., 1846."
 8966751,57,True,,1.0,1.019,0.963,8,1,0,"JIab. Islands of Luzon and Marinduque, Philippines (on","Hab. Islands of Luzon and Marinduque, Philippines (on"
 8966751,58,True,,1.0,1.069,0.903,5,1,0,the leaves of trees) ; Ciuning.,the leaves of trees); Cuming.
 8966751,60,True,,1.0,1.019,0.962,9,1,0,There is little to distingiiish this species from the,There is little to distinguish this species from the
@@ -331,18 +331,18 @@ page_id,line_no,valid,why_invalid,coverage,span_ratio,similarity,n_words,n_damag
 8966751,64,True,,1.0,1.0,1.0,9,0,0,the typical varieties above figured of that species present,the typical varieties above figured of that species present
 8966751,65,True,,1.0,1.0,1.0,7,0,0,almost as great a difference of form.,almost as great a difference of form.
 8966751,67,False,coverage 0.64,0.64,0.64,0.56,4,2,0,(Mus. Cuming.),Species 6. (Mus. Cuming.)
-8966751,69,True,,1.0,1.019,0.796,6,4,0,"BULIMUS Reevii. Bul. testd oblongo-ovatd, aiifraciibux","BULIMUS REEVII. Bul. testâ oblongo-ovatâ, anfractibus"
+8966751,69,True,,1.0,1.019,0.889,6,3,0,"BULIMUS Reevii. Bul. testd oblongo-ovatd, aiifraciibux","BULIMUS REEVII. Bul. testâ oblongo-ovatâ, anfractibus"
 8966751,70,True,,1.0,1.036,0.931,6,2,0,"senis, tumidiusculis, ultimo ventricoso, ejf'uso ; intense","senis, tumidiusculis, ultimo ventricoso, effuso; intensè"
 8966751,71,True,,0.966,0.983,0.847,6,5,0,"ustulato-fuscd, epidermide infaseiis insignibm laliuscidis","ustulato-fuscâ,epidermide in fasciis insignibus latiusculis"
 8966751,72,True,,0.982,0.982,0.895,5,2,0,"remotis lineisque subtilibus, aperturd candescente-albd,","remotis lineisque subtilibus, aperturâ cœrulescente-albâ,"
 8966751,73,True,,0.98,0.98,0.863,5,2,0,"cohmieUd vix intortd, peritremate livido-purpuras-","columellâ vix intortâ, peritremate livido-purpuras-"
-8966751,76,True,,1.0,1.0,0.76,8,3,1,"Reeve's Bulimus. Shell oblong-ovate, whorls six in","REEVE′S BULIMUS. Shell oblong-ovate, whorls six in"
+8966751,76,True,,1.0,1.0,0.98,8,0,0,"Reeve's Bulimus. Shell oblong-ovate, whorls six in","REEVE′S BULIMUS. Shell oblong-ovate, whorls six in"
 8966751,77,True,,1.0,1.02,0.96,7,1,0,"nimiber, rather swollen, last whorl ventricose and","number, rather swollen, last whorl ventricose and"
 8966751,78,True,,1.0,1.0,1.0,7,0,0,"effused; rich burnt-brown, with the epidermis in","effused; rich burnt-brown, with the epidermis in"
 8966751,79,True,,1.0,1.0,0.961,8,1,0,"remarkable rather broad bands and fine lines, apcr-","remarkable rather broad bands and fine lines, aper‐"
 8966751,80,True,,1.0,1.038,0.907,7,2,0,"tui-e blueish white, columella sc;u-cely twisted, and,","ture blueish white, columella scarcely twisted, and,"
 8966751,81,True,,0.98,0.98,0.922,9,2,0,"together with the pcritreme, of a h^id purple hue.","together with the peritreme, of a livid purple hue."
-8966751,83,True,,1.0,1.0,0.808,4,1,0,"Cuming, MSS., Mus. Cuming.","CUMING, MSS., Mus. Cuming."
+8966751,83,True,,1.0,1.0,1.0,4,0,0,"Cuming, MSS., Mus. Cuming.","CUMING, MSS., Mus. Cuming."
 8966751,85,True,,1.0,1.022,0.894,7,2,0,"Helix Reevii, Broderip, Pro. Zool. Soe., lS-11.","Helix Reevii, Broderip, Pro. Zool. Soc., 1841."
 8966751,87,True,,1.0,1.0,0.94,8,1,0,"IM. Luhban, Province of Tayabas, Island of Luzon,","Hab. Luhban, Province of Tayabas, Island of Luzon,"
 8966751,88,True,,1.0,1.022,0.978,7,0,0,Philippines (on the leaves of trees) ; Cuming.,Philippines (on the leaves of trees); Cuming.

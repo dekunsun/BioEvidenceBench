@@ -125,11 +125,13 @@ def assemble(split: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         u.update({"book": book, "split": sp, "block": block})
         u["flags"] = failure_flags(u)
         u["sim_bucket"] = bucket(u.get("similarity", 0.0)) if u.get("input") else "no text"
+        if u.get("valid") and T.mixed_script_words(u["target"]):   # rule added after stage 1 ran
+            u.update(valid=False, why_invalid="mixed-script word in reference")
         u["set_aside"] = excl_reason.get((pid, u["line_no"]), "") if u.get("valid") else u.get("why_invalid", "")
         (files[sp] if u.get("valid") and not u["set_aside"] else aside).write(json.dumps(u, ensure_ascii=False) + "\n")
         rows.append({k: u.get(k) for k in ("book", "split", "page_id", "line_no", "valid", "why_invalid", "set_aside",
                                             "similarity", "sim_bucket", "coverage", "span_ratio", "n_words",
-                                            "n_damaged", "n_case_only", "n_name_damaged", "input", "target")}
+                                            "n_damaged", "n_damaged_reading", "n_case_only", "n_name_damaged", "input", "target")}
                     | {"flags": "; ".join(u["flags"])})
     for f in [*files.values(), aside]:
         f.close()
@@ -164,10 +166,12 @@ def main() -> None:
     dmg = pd.crosstab(v.book, v.n_damaged.map(damage_bin), normalize="index").round(3)
     dmg_n = pd.crosstab(v.book, v.n_damaged.map(damage_bin), margins=True)
     words = v.groupby("book").agg(words=("n_words", "sum"), damaged=("n_damaged", "sum"),
+                                  damaged_reading=("n_damaged_reading", "sum"),
                                   case_only=("n_case_only", "sum"),
                                   lines_with_damaged_name=("n_name_damaged", lambda s: int((s > 0).sum())))
     words["case_only_mismatch_rate"] = (words.case_only / words.words).round(4)
     words["damaged_rate"] = (words.damaged / words.words).round(4)
+    words["damaged_rate_reading"] = (words.damaged_reading / words.words).round(4)   # ſ ≡ s
     gain = d[d.usable & (d.similarity < 0.5)].groupby("book").size().rename("usable_only_at_0.3")
     ex = d.assign(flag=d["flags"].fillna("").str.split("; ")).explode("flag").reset_index(drop=True)
     flags = pd.crosstab(ex.book, ex.flag).drop(columns="", errors="ignore")
@@ -186,9 +190,14 @@ def main() -> None:
                         "plain_s": T.expert_text(p).count("s")} for p in pis])
     pl.to_csv(OUT / "piscium_long_s.csv", index=False)
 
-    # audit sample: 100 pairs over similarity buckets, every book represented, special characters first
+    # audit sample: 100 pairs over similarity buckets (low-confidence buckets weighted up), every book
+    # represented, drawn uniformly within book x bucket. Pairs audited in round 1 are left out, so
+    # round 2 is an independent check of the fixed build. (Round 1 drew from a fixed window with
+    # special characters first, which made the two rounds overlap by 34 pairs.)
     rng = random.Random(AUDIT_SEED)
-    pool = d[d.input.fillna("") != ""].copy()
+    r1_path = OUT / "audit_round1" / "audit_sample_round1_claude.csv"
+    r1 = set(zip(*pd.read_csv(r1_path)[["page_id", "line_no"]].values.T)) if r1_path.exists() else set()
+    pool = d[(d.input.fillna("") != "") & ~pd.Series(list(zip(d.page_id, d.line_no)), index=d.index).isin(r1)].copy()
     want = {"0.3-0.5": 35, "<0.3": 10, "0.5-0.8": 30, "0.8-1.0": 25}
     picked = []
     for b, n in want.items():
@@ -197,31 +206,47 @@ def main() -> None:
         per = max(1, n // max(1, len(books)))
         take = []
         for bk in books:
-            s2 = sub[sub.book == bk]
-            spec = s2[s2["flags"].fillna("").str.contains("special")]
-            cand = list(spec.index) + list(s2.index.difference(spec.index))
-            take += rng.sample(cand[:max(per * 3, per)], min(per, len(cand)))
+            cand = list(sub[sub.book == bk].index)
+            take += rng.sample(cand, min(per, len(cand)))
         rest = list(sub.index.difference(take))
         take += rng.sample(rest, max(0, min(n - len(take), len(rest))))
         picked += take[:n]
     audit = pool.loc[picked, ["book", "split", "page_id", "line_no", "similarity", "sim_bucket", "valid", "usable",
                               "set_aside", "flags", "input", "target"]].reset_index(drop=True)
     audit.insert(0, "audit_id", [f"B{i + 1:03d}" for i in range(len(audit))])
-    for c in ("claude_verdict", "claude_failure_type", "claude_note"):
+    vcols = ("claude_verdict", "claude_failure_type", "claude_note")
+    for c in vcols:
         audit[c] = ""
-    audit.to_csv(OUT / "audit_sample.csv", index=False)
+    old_path = OUT / "audit_sample.csv"
+    if old_path.exists():                  # keep verdicts already written for the same sample
+        old = pd.read_csv(old_path)
+        if list(zip(old.page_id, old.line_no)) == list(zip(audit.page_id, audit.line_no)):
+            for c in vcols:
+                if c in old:
+                    audit[c] = old[c].fillna("").values
+    audit.to_csv(old_path, index=False)
     g_ids = rng.sample(list(audit.index), 30)
     ga = audit.loc[sorted(g_ids), ["audit_id", "book", "page_id", "line_no", "input", "target"]].copy()
     ga["page_url"] = ga.page_id.map(lambda p: f"https://www.biodiversitylibrary.org/page/{p}")
     for c in ("aligned_correctly (yes/no/partly)", "failure_type", "note"):
         ga[c] = ""
-    ga.to_excel(OUT / "audit_gloria.xlsx", index=False)
+    howto = pd.DataFrame({"说明": [
+        "每行是一对：target = 专家转录的一行；input = 对齐程序找到的旧 OCR 片段。",
+        "请判断：input 是不是 target 这一行的 OCR（同一处文字），而不是 OCR 好不好。",
+        "yes = 同一行（OCR 错得再多也算 yes）；partly = 只对上一部分（缺词、多了相邻行或另一栏的词）；no = 不是同一行。",
+        "failure_type 可写：wrong line / column / missing words / extra words / leaders (点线和页码) / reference error (专家转录本身有错) / other。",
+        "需要时点 page_url 看 BHL 原页扫描。可以只看拿不准的行。",
+        "这 30 对里有一半是程序接受的、一半是拒绝的；表里不显示程序的决定和 Claude 的判断，请独立判断。"]})
+    with pd.ExcelWriter(OUT / "audit_gloria.xlsx") as xw:
+        ga.to_excel(xw, sheet_name="pairs", index=False)
+        howto.to_excel(xw, sheet_name="说明", index=False)
 
     digest = {s: hashlib.sha256((UNITS / f"{s}.jsonl").read_bytes()).hexdigest() for s in SPLIT_NAMES}
     why_missing = missing.error.str.replace(r" \(.*", "", regex=True).value_counts()
     lines = ["# Task B step 4: units, alignment and damage per book", "",
              "Built by `src/rl_task_b_build.py` under Reward v1.2 rules (case-only words neutral, MUFI "
-             "ligatures folded, references with U+FFFD or unidentified private-use characters invalid) "
+             "ligatures folded, references with U+FFFD or unidentified private-use characters invalid, lines with a mixed "
+             "Latin/Cyrillic word set aside) "
              "and split v2 (`../SPLIT_V2.md`). Cuvier (held-out book) not touched; the 38 excluded pages "
              f"not used. Content pages that gave no line: {len(missing)} "
              f"({', '.join(f'{k}: {n}' for k, n in why_missing.items()) or 'none'}; `missing_pages.csv`).", "",

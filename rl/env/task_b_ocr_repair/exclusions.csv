@@ -1,0 +1,6 @@
+page_id,line_no,reason,example,decided
+9739732,9,excluded: engraved plate imprint; OCR unreadable and reference doubtful,G. Star Reisacher Stuttgart. | OCR '^Ikjair RiuacAv iOt&fitf,Gloria's rule 2026-11-20; line chosen by Claude
+9739736,7,excluded: engraved plate imprint; reference garbled (Sehweizerbaresche Vertagsbuchhardlung),E. Sehweizerbaresche Vertagsbuchhardlung ... | OCR tSiHvttttTbartiche ...,Gloria's rule 2026-11-20; line chosen by Claude
+9739736,9,excluded: engraved plate imprint; reference garbled (Wirtre FrankturtrM),Werner u Wirtre FrankturtrM. | OCR Werntr it matte /taittfiat^M,Gloria's rule 2026-11-20; line chosen by Claude
+8967146,13,excluded: engraved plate credit; reference typo (Soweby) and OCR unreadable,Soweby del.et lith. | OCR i^owyi-by.dcJ cL lith.,Gloria's rule 2026-11-20; line chosen by Claude
+9684337,9,excluded: engraved plate caption; reference typos (Pinaa / Sinisra) and OCR unreadable,G. Pinaa ventralis Sinisra. H. dextra. | OCR Cr eJinna a^entralts ...,Gloria's rule 2026-11-20; line chosen by Claude

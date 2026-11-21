@@ -1,373 +1,365 @@
-page_id,line_no,attack,expect,n_damaged,n_name_damaged,reward,reward_reading,format_valid,format_reason,integrity_valid,alignment_valid,clean_line,damaged_words,repaired_words,scientific_name_damaged,scientific_name_repairs,correct_words,preserved_correct_words,damaged_correct_words,extra_words,penalty,weighted_repair_rate,cer_diagnostic
-8966752,74,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,1,1,0,0,0.0,1.0,0.0
-8966752,74,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,1,1,0,0,0.0,0.0,0.125
-8966752,74,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,1,0,0,0,0.0,,
-8966752,74,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,1,0,0,0,0.0,,
-8966752,74,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,1,0,0,0,0.0,,
-8966752,74,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,1,0,1,0,0.5,1.0,0.0625
-8966752,74,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,1,1,0,0,0.0,0.0,0.125
-8966751,52,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,5,5,0,0,0.0,1.0,0.0
-8966751,52,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,5,5,0,0,0.0,0.0,0.0392
-8966751,52,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,5,0,0,0,0.0,,
-8966751,52,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,5,0,0,0,0.0,,
-8966751,52,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,5,0,0,0,0.0,,
-8966751,52,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,5,5,0,0,0.0,0.0,0.0192
-8966751,52,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,5,5,0,0,0.0,0.0,0.0392
-8966751,7,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,7,7,0,0,0.0,1.0,0.0
-8966751,7,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.0566
-8966751,7,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966751,7,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966751,7,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966751,7,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,6,1,0,0.5,1.0,0.0192
-8966751,7,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.0385
-8966752,35,perfect,1.0,6,0,1.0,1.0,True,,True,True,False,6,6,0,0,0,0,0,0,0.0,1.0,0.0
-8966752,35,identity (return the OCR),"0 if damaged, 1 if clean",6,0,0.0,0.0,True,,True,True,False,6,0,0,0,0,0,0,0,0.0,0.0,0.5161
-8966752,35,empty,"0, format invalid",6,0,0.0,0.0,False,empty,False,False,False,6,0,0,0,0,0,0,0,0.0,,
-8966752,35,two lines,"0, integrity invalid",6,0,0.0,0.0,False,several lines,False,False,False,6,0,0,0,0,0,0,0,0.0,,
-8966752,35,commentary prefix,below 1 (extra words),6,0,0.0,0.0,False,commentary prefix,False,False,False,6,0,0,0,0,0,0,0,0.0,,
-8966752,35,one correct word changed,below 1 (a correct word broken),6,0,0.8333,0.8333,True,,True,True,False,6,5,0,0,0,0,0,0,0.0,0.8333,0.0189
-8966752,35,only names repaired,repair rate of the name words only,6,0,0.1667,0.1667,True,,True,True,False,6,1,0,0,0,0,0,0,0.0,0.1667,0.4667
-8966753,86,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,9,9,0,0,0.0,1.0,0.0
-8966753,86,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0351
-8966753,86,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,86,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,86,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,86,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,9,8,1,0,0.5,1.0,0.0172
-8966753,86,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0351
-8966753,24,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,10,10,0,0,0.0,1.0,0.0
-8966753,24,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,10,10,0,0,0.0,0.0,0.0357
-8966753,24,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,10,0,0,0,0.0,,
-8966753,24,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,10,0,0,0,0.0,,
-8966753,24,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,10,0,0,0,0.0,,
-8966753,24,lower-cased,below 1 unless the line is already lower case,1,0,0.5,0.5,True,,True,True,False,1,1,0,0,10,9,1,0,0.5,1.0,0.0182
-8966753,24,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,10,9,1,0,0.5,1.0,0.0179
-8966753,24,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,10,10,0,0,0.0,0.0,0.0357
-8966754,82,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,8,8,0,0,0.0,1.0,0.0
-8966754,82,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.037
-8966754,82,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966754,82,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966754,82,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966754,82,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0185
-8966754,82,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.037
-8966752,62,perfect,1.0,5,1,1.0,1.0,True,,True,True,False,5,5,1,1,0,0,0,0,0.0,1.0,0.0
-8966752,62,identity (return the OCR),"0 if damaged, 1 if clean",5,1,0.0,0.0,True,,True,True,False,5,0,1,0,0,0,0,0,0.0,0.0,0.4151
-8966752,62,empty,"0, format invalid",5,1,0.0,0.0,False,empty,False,False,False,5,0,0,0,0,0,0,0,0.0,,
-8966752,62,two lines,"0, integrity invalid",5,1,0.0,0.0,False,several lines,False,False,False,5,0,0,0,0,0,0,0,0.0,,
-8966752,62,commentary prefix,below 1 (extra words),5,1,0.0,0.0,False,commentary prefix,False,False,False,5,0,0,0,0,0,0,0,0.0,,
-8966752,62,lower-cased,below 1 unless the line is already lower case,5,1,0.2857,0.2857,True,,True,True,False,5,2,1,0,0,0,0,0,0.0,0.2857,0.3654
-8966752,62,one correct word changed,below 1 (a correct word broken),5,1,0.8571,0.8571,True,,True,True,False,5,4,1,1,0,0,0,0,0.0,0.8571,0.0189
-8966752,62,names left unrepaired,repair rate without the name words,5,1,0.5714,0.5714,True,,True,True,False,5,4,1,0,0,0,0,0,0.0,0.5714,0.1154
-8966752,62,only names repaired,repair rate of the name words only,5,1,0.4286,0.4286,True,,True,True,False,5,1,1,1,0,0,0,0,0.0,0.4286,0.3019
-8966754,65,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,9,9,0,0,0.0,1.0,0.0
-8966754,65,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0351
-8966754,65,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966754,65,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966754,65,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966754,65,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,9,8,1,0,0.5,1.0,0.0175
-8966754,65,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0351
-8966752,64,perfect,1.0,4,0,1.0,1.0,True,,True,True,False,4,4,0,0,1,1,0,0,0.0,1.0,0.0
-8966752,64,identity (return the OCR),"0 if damaged, 1 if clean",4,0,0.0,0.0,True,,True,True,False,4,0,0,0,1,1,0,0,0.0,0.0,0.3273
-8966752,64,empty,"0, format invalid",4,0,0.0,0.0,False,empty,False,False,False,4,0,0,0,1,0,0,0,0.0,,
-8966752,64,two lines,"0, integrity invalid",4,0,0.0,0.0,False,several lines,False,False,False,4,0,0,0,1,0,0,0,0.0,,
-8966752,64,commentary prefix,below 1 (extra words),4,0,0.0,0.0,False,commentary prefix,False,False,False,4,0,0,0,1,0,0,0,0.0,,
-8966752,64,one correct word changed,below 1 (a correct word broken),4,0,0.75,0.75,True,,True,True,False,4,3,0,0,1,1,0,0,0.0,0.75,0.0189
-8966752,64,only names repaired,repair rate of the name words only,4,0,0.0,0.0,True,,True,True,False,4,0,0,0,1,1,0,0,0.0,0.0,0.3273
-8966754,81,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,6,6,0,0,0.0,1.0,0.0
-8966754,81,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.037
-8966754,81,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966754,81,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966754,81,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966754,81,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.0185
-8966754,81,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.037
-8966754,76,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,7,7,0,0,0.0,1.0,0.0
-8966754,76,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0385
-8966754,76,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966754,76,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966754,76,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966754,76,lower-cased,below 1 unless the line is already lower case,1,1,-1.0,-1.0,True,,True,True,False,1,0,1,0,7,5,2,0,1.0,0.0,0.0577
-8966754,76,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,7,6,1,0,0.5,1.0,0.0189
-8966754,76,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0385
-8966753,98,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,7,7,0,0,0.0,1.0,0.0
-8966753,98,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.1
-8966753,98,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,98,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,98,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,98,lower-cased,below 1 unless the line is already lower case,1,0,-1.0,-1.0,True,,True,True,False,1,0,0,0,7,5,2,0,1.0,0.0,0.0612
-8966753,98,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,6,1,0,0.5,1.0,0.02
-8966753,98,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.1
-8966753,98,ligature letters written out,below 1 (spelling not kept),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.04
-8966753,28,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,8,8,0,0,0.0,1.0,0.0
-8966753,28,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0545
-8966753,28,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,28,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,28,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,28,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,8,7,1,0,0.5,1.0,0.0182
-8966753,28,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0545
-8966752,91,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,6,6,0,0,0.0,1.0,0.0
-8966752,91,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.0339
-8966752,91,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966752,91,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966752,91,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966752,91,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,6,5,1,0,0.5,1.0,0.0169
-8966752,91,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.0339
-8966752,31,perfect,1.0,5,2,1.0,1.0,True,,True,True,False,5,5,2,2,1,1,0,0,0.0,1.0,0.0
-8966752,31,identity (return the OCR),"0 if damaged, 1 if clean",5,2,0.0,0.0,True,,True,True,False,5,0,2,0,1,1,0,0,0.0,0.0,0.3846
-8966752,31,empty,"0, format invalid",5,2,0.0,0.0,False,empty,False,False,False,5,0,0,0,1,0,0,0,0.0,,
-8966752,31,two lines,"0, integrity invalid",5,2,0.0,0.0,False,several lines,False,False,False,5,0,0,0,1,0,0,0,0.0,,
-8966752,31,commentary prefix,below 1 (extra words),5,2,0.0,0.0,False,commentary prefix,False,False,False,5,0,0,0,1,0,0,0,0.0,,
-8966752,31,lower-cased,below 1 unless the line is already lower case,5,2,0.2222,0.2222,True,,True,True,False,5,2,2,0,1,1,0,0,0.0,0.2222,0.3673
-8966752,31,one correct word changed,below 1 (a correct word broken),5,2,0.5,0.5,True,,True,True,False,5,5,2,2,1,0,1,0,0.5,1.0,0.02
-8966752,31,names left unrepaired,repair rate without the name words,5,2,0.3333,0.3333,True,,True,True,False,5,3,2,0,1,1,0,0,0.0,0.3333,0.2941
-8966752,31,only names repaired,repair rate of the name words only,5,2,0.6667,0.6667,True,,True,True,False,5,2,2,2,1,1,0,0,0.0,0.6667,0.0816
-8966752,1,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,2,2,0,0,0.0,1.0,0.0
-8966752,1,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,2,2,0,0,0.0,0.0,0.2941
-8966752,1,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,2,0,0,0,0.0,,
-8966752,1,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,2,0,0,0,0.0,,
-8966752,1,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,2,0,0,0,0.0,,
-8966752,1,lower-cased,below 1 unless the line is already lower case,1,0,-1.0,-1.0,True,,True,True,False,1,0,0,0,2,0,2,0,1.0,0.0,0.7647
-8966752,1,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,2,2,0,0,0.0,0.0,0.2353
-8966754,92,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,8,8,0,0,0.0,1.0,0.0
-8966754,92,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0333
-8966754,92,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966754,92,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966754,92,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966754,92,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,8,7,1,0,0.5,1.0,0.0164
-8966754,92,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0333
-8966751,98,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,9,9,0,0,0.0,1.0,0.0
-8966751,98,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,9,9,0,0,0.0,0.0,0.1311
-8966751,98,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,9,0,0,0,0.0,,
-8966751,98,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,9,0,0,0,0.0,,
-8966751,98,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,9,0,0,0,0.0,,
-8966751,98,lower-cased,below 1 unless the line is already lower case,2,0,0.5,0.5,True,,True,True,False,2,1,0,0,9,9,0,0,0.0,0.5,0.0175
-8966751,98,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,1,0,0,9,9,0,0,0.0,0.5,0.0172
-8966751,98,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,9,9,0,0,0.0,0.0,0.0847
-8966751,24,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,7,7,0,0,0.0,1.0,0.0
-8966751,24,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.0385
-8966751,24,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966751,24,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966751,24,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966751,24,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,6,1,0,0.5,1.0,0.0192
-8966751,24,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.0385
-8966753,87,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,8,8,0,0,0.0,1.0,0.0
-8966753,87,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0179
-8966753,87,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,87,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,87,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,87,lower-cased,below 1 unless the line is already lower case,1,0,0.5,0.5,True,,True,True,False,1,1,0,0,8,7,1,0,0.5,1.0,0.0179
-8966753,87,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0175
-8966753,87,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0179
-8966754,56,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,8,8,0,0,0.0,1.0,0.0
-8966754,56,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,8,8,0,0,0.0,0.0,0.0588
-8966754,56,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,8,0,0,0,0.0,,
-8966754,56,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,8,0,0,0,0.0,,
-8966754,56,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,8,0,0,0,0.0,,
-8966754,56,lower-cased,below 1 unless the line is already lower case,2,0,-0.5,-0.5,True,,True,True,False,2,1,0,0,8,6,2,0,1.0,0.5,0.0588
-8966754,56,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,2,0,0,8,7,1,0,0.5,1.0,0.0192
-8966754,56,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,8,8,0,0,0.0,0.0,0.0588
-8966751,53,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,6,6,0,0,0.0,1.0,0.0
-8966751,53,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.0364
-8966751,53,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966751,53,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966751,53,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966751,53,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,6,5,1,0,0.5,1.0,0.0182
-8966751,53,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.0364
-8966754,42,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,7,7,0,0,0.0,1.0,0.0
-8966754,42,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,7,7,0,0,0.0,0.0,0.0727
-8966754,42,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,7,0,0,0,0.0,,
-8966754,42,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,7,0,0,0,0.0,,
-8966754,42,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,7,0,0,0,0.0,,
-8966754,42,lower-cased,below 1 unless the line is already lower case,2,0,0.5,0.5,True,,True,True,False,2,2,0,0,7,6,1,0,0.5,1.0,0.0185
-8966754,42,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,1,0,0,7,7,0,0,0.0,0.5,0.0182
-8966754,42,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,7,7,0,0,0.0,0.0,0.0727
-8966754,67,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,9,9,0,0,0.0,1.0,0.0
-8966754,67,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,9,9,0,0,0.0,0.0,0.069
-8966754,67,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,9,0,0,0,0.0,,
-8966754,67,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,9,0,0,0,0.0,,
-8966754,67,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,9,0,0,0,0.0,,
-8966754,67,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,1,0,0,9,9,0,0,0.0,0.5,0.0169
-8966754,67,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,9,9,0,0,0.0,0.0,0.069
-8966751,96,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,9,9,0,0,0.0,,0.0
-8966751,96,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,9,0,0,0,0.0,,
-8966751,96,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,9,0,0,0,0.0,,
-8966751,96,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,9,0,0,0,0.0,,
-8966751,96,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,9,8,1,0,0.5,,0.0175
-8966753,72,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,11,11,0,0,0.0,,0.0
-8966753,72,identity (return the OCR),"0 if damaged, 1 if clean",0,0,1.0,1.0,True,,True,True,True,0,0,0,0,11,11,0,0,0.0,,0.0172
-8966753,72,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,72,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,72,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,72,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,11,10,1,0,0.5,,0.0172
-8966752,106,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,10,10,0,0,0.0,,0.0
-8966752,106,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,10,0,0,0,0.0,,
-8966752,106,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,10,0,0,0,0.0,,
-8966752,106,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,10,0,0,0,0.0,,
-8966752,106,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,10,9,1,0,0.5,,0.0192
-8966753,100,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,10,10,0,0,0.0,,0.0
-8966753,100,identity (return the OCR),"0 if damaged, 1 if clean",0,0,1.0,1.0,True,,True,True,True,0,0,0,0,10,10,0,0,0.0,,0.0339
-8966753,100,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,10,0,0,0,0.0,,
-8966753,100,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,10,0,0,0,0.0,,
-8966753,100,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,10,0,0,0,0.0,,
-8966753,100,lower-cased,below 1 unless the line is already lower case,0,0,-1.0,-1.0,True,,True,True,True,0,0,0,0,10,6,4,0,2.0,,0.069
-8966753,100,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,10,9,1,0,0.5,,0.0169
-8966753,88,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,11,11,0,0,0.0,,0.0
-8966753,88,identity (return the OCR),"0 if damaged, 1 if clean",0,0,1.0,1.0,True,,True,True,True,0,0,0,0,11,11,0,0,0.0,,0.0185
-8966753,88,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,88,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,88,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,88,lower-cased,below 1 unless the line is already lower case,0,0,0.0,0.0,True,,True,True,True,0,0,0,0,11,9,2,0,1.0,,0.0377
-8966753,88,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,11,10,1,0,0.5,,0.0185
-8966753,61,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,9,9,0,0,0.0,,0.0
-8966753,61,identity (return the OCR),"0 if damaged, 1 if clean",0,0,1.0,1.0,True,,True,True,True,0,0,0,0,9,9,0,0,0.0,,0.0727
-8966753,61,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,9,0,0,0,0.0,,
-8966753,61,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,9,0,0,0,0.0,,
-8966753,61,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,9,0,0,0,0.0,,
-8966753,61,lower-cased,below 1 unless the line is already lower case,0,0,-0.5,-0.5,True,,True,True,True,0,0,0,0,9,6,3,0,1.5,,0.0566
-8966753,61,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,9,8,1,0,0.5,,0.0185
-8966753,90,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,12,12,0,0,0.0,,0.0
-8966753,90,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,12,0,0,0,0.0,,
-8966753,90,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,12,0,0,0,0.0,,
-8966753,90,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,12,0,0,0,0.0,,
-8966753,90,lower-cased,below 1 unless the line is already lower case,0,0,0.0,0.0,True,,True,True,True,0,0,0,0,12,10,2,0,1.0,,0.0357
-8966753,90,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,12,11,1,0,0.5,,0.0175
-8966751,88,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,7,7,0,0,0.0,,0.0
-8966751,88,identity (return the OCR),"0 if damaged, 1 if clean",0,0,1.0,1.0,True,,True,True,True,0,0,0,0,7,7,0,0,0.0,,0.0217
-8966751,88,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,7,0,0,0,0.0,,
-8966751,88,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,7,0,0,0,0.0,,
-8966751,88,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,7,0,0,0,0.0,,
-8966751,88,lower-cased,below 1 unless the line is already lower case,0,0,0.0,0.0,True,,True,True,True,0,0,0,0,7,5,2,0,1.0,,0.0444
-8966751,88,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,7,6,1,0,0.5,,0.0217
-8966753,85,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,11,11,0,0,0.0,,0.0
-8966753,85,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,85,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,85,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,11,0,0,0,0.0,,
-8966753,85,lower-cased,below 1 unless the line is already lower case,0,0,0.5,0.5,True,,True,True,True,0,0,0,0,11,10,1,0,0.5,,0.0185
-8966753,85,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,11,10,1,0,0.5,,0.0182
-8966754,17,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,8,8,0,0,0.0,,0.0
-8966754,17,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,8,0,0,0,0.0,,
-8966754,17,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,8,0,0,0,0.0,,
-8966754,17,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,8,0,0,0,0.0,,
-8966754,17,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,8,7,1,0,0.5,,0.0182
-8966754,9,perfect,1.0,3,0,1.0,1.0,True,,True,True,False,3,3,0,0,4,4,0,0,0.0,1.0,0.0
-8966754,9,identity (return the OCR),"0 if damaged, 1 if clean",3,0,0.0,0.0,True,,True,True,False,3,0,0,0,4,4,0,0,0.0,0.0,0.2203
-8966754,9,empty,"0, format invalid",3,0,0.0,0.0,False,empty,False,False,False,3,0,0,0,4,0,0,0,0.0,,
-8966754,9,two lines,"0, integrity invalid",3,0,0.0,0.0,False,several lines,False,False,False,3,0,0,0,4,0,0,0,0.0,,
-8966754,9,commentary prefix,below 1 (extra words),3,0,0.0,0.0,False,commentary prefix,False,False,False,3,0,0,0,4,0,0,0,0.0,,
-8966754,9,one correct word changed,below 1 (a correct word broken),3,0,0.6667,0.6667,True,,True,True,False,3,2,0,0,4,4,0,0,0.0,0.6667,0.0167
-8966754,9,only names repaired,repair rate of the name words only,3,0,0.0,0.0,True,,True,True,False,3,0,0,0,4,4,0,0,0.0,0.0,0.2034
-8966754,9,ligature letters written out,below 1 (spelling not kept),3,0,0.6667,0.6667,True,,True,True,False,3,2,0,0,4,4,0,0,0.0,0.6667,0.0333
-8966753,98,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,7,7,0,0,0.0,1.0,0.0
-8966753,98,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.1
-8966753,98,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,98,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,98,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,98,lower-cased,below 1 unless the line is already lower case,1,0,-1.0,-1.0,True,,True,True,False,1,0,0,0,7,5,2,0,1.0,0.0,0.0612
-8966753,98,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,6,1,0,0.5,1.0,0.02
-8966753,98,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.1
-8966753,98,ligature letters written out,below 1 (spelling not kept),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.04
-8966753,102,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,9,9,0,0,0.0,1.0,0.0
-8966753,102,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0545
-8966753,102,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,102,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,102,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,102,lower-cased,below 1 unless the line is already lower case,1,0,-1.0,-1.0,True,,True,True,False,1,0,0,0,9,7,2,0,1.0,0.0,0.0556
-8966753,102,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,9,8,1,0,0.5,1.0,0.0182
-8966753,102,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0545
-8966753,102,ligature letters written out,below 1 (spelling not kept),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0364
-8966751,18,perfect,1.0,4,0,1.0,1.0,True,,True,True,False,4,4,0,0,0,0,0,0,0.0,1.0,0.0
-8966751,18,identity (return the OCR),"0 if damaged, 1 if clean",4,0,0.0,0.0,True,,True,True,False,4,0,0,0,0,0,0,0,0.0,0.0,0.102
-8966751,18,empty,"0, format invalid",4,0,0.0,0.0,False,empty,False,False,False,4,0,0,0,0,0,0,0,0.0,,
-8966751,18,two lines,"0, integrity invalid",4,0,0.0,0.0,False,several lines,False,False,False,4,0,0,0,0,0,0,0,0.0,,
-8966751,18,commentary prefix,below 1 (extra words),4,0,0.0,0.0,False,commentary prefix,False,False,False,4,0,0,0,0,0,0,0,0.0,,
-8966751,18,one correct word changed,below 1 (a correct word broken),4,0,0.75,0.75,True,,True,True,False,4,3,0,0,0,0,0,0,0.0,0.75,0.02
-8966751,18,only names repaired,repair rate of the name words only,4,0,0.0,0.0,True,,True,True,False,4,0,0,0,0,0,0,0,0.0,0.0,0.102
-8966751,18,ligature letters written out,below 1 (spelling not kept),4,0,0.75,0.75,True,,True,True,False,4,3,0,0,0,0,0,0,0.0,0.75,0.04
-8966751,44,perfect,1.0,3,0,1.0,1.0,True,,True,True,False,3,3,0,0,2,2,0,0,0.0,1.0,0.0
-8966751,44,identity (return the OCR),"0 if damaged, 1 if clean",3,0,0.0,0.0,True,,True,True,False,3,0,0,0,2,2,0,0,0.0,0.0,0.1429
-8966751,44,empty,"0, format invalid",3,0,0.0,0.0,False,empty,False,False,False,3,0,0,0,2,0,0,0,0.0,,
-8966751,44,two lines,"0, integrity invalid",3,0,0.0,0.0,False,several lines,False,False,False,3,0,0,0,2,0,0,0,0.0,,
-8966751,44,commentary prefix,below 1 (extra words),3,0,0.0,0.0,False,commentary prefix,False,False,False,3,0,0,0,2,0,0,0,0.0,,
-8966751,44,one correct word changed,below 1 (a correct word broken),3,0,0.5,0.5,True,,True,True,False,3,3,0,0,2,1,1,0,0.5,1.0,0.0175
-8966751,44,only names repaired,repair rate of the name words only,3,0,0.0,0.0,True,,True,True,False,3,0,0,0,2,2,0,0,0.0,0.0,0.125
-8966751,44,ligature letters written out,below 1 (spelling not kept),3,0,0.6667,0.6667,True,,True,True,False,3,2,0,0,2,2,0,0,0.0,0.6667,0.0351
-8966754,5,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,2,2,0,0,0.0,1.0,0.0
-8966754,5,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,2,2,0,0,0.0,0.0,0.087
-8966754,5,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,2,0,0,0,0.0,,
-8966754,5,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,2,0,0,0,0.0,,
-8966754,5,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,2,0,0,0,0.0,,
-8966754,5,lower-cased,below 1 unless the line is already lower case,1,1,-1.0,-1.0,True,,True,True,False,1,0,1,0,2,0,2,0,1.0,0.0,0.3913
-8966754,5,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,2,2,0,0,0.0,0.0,0.087
-8966754,13,perfect,1.0,3,2,1.0,1.0,True,,True,True,False,3,3,2,2,3,3,0,0,0.0,1.0,0.0
-8966754,13,identity (return the OCR),"0 if damaged, 1 if clean",3,2,0.0,0.0,True,,True,True,False,3,0,2,0,3,3,0,0,0.0,0.0,0.2766
-8966754,13,empty,"0, format invalid",3,2,0.0,0.0,False,empty,False,False,False,3,0,0,0,3,0,0,0,0.0,,
-8966754,13,two lines,"0, integrity invalid",3,2,0.0,0.0,False,several lines,False,False,False,3,0,0,0,3,0,0,0,0.0,,
-8966754,13,commentary prefix,below 1 (extra words),3,2,0.0,0.0,False,commentary prefix,False,False,False,3,0,0,0,3,0,0,0,0.0,,
-8966754,13,lower-cased,below 1 unless the line is already lower case,3,2,0.5714,0.5714,True,,True,True,False,3,2,2,1,3,3,0,0,0.0,0.5714,0.0227
-8966754,13,one correct word changed,below 1 (a correct word broken),3,2,0.5,0.5,True,,True,True,False,3,3,2,2,3,2,1,0,0.5,1.0,0.0222
-8966754,13,names left unrepaired,repair rate without the name words,3,2,0.1429,0.1429,True,,True,True,False,3,1,2,0,3,3,0,0,0.0,0.1429,0.234
-8966754,13,only names repaired,repair rate of the name words only,3,2,0.8571,0.8571,True,,True,True,False,3,2,2,2,3,3,0,0,0.0,0.8571,0.0455
-8966754,26,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,6,6,0,0,0.0,1.0,0.0
-8966754,26,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,6,6,0,0,0.0,0.0,0.0357
-8966754,26,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966754,26,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966754,26,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,6,0,0,0,0.0,,
-8966754,26,lower-cased,below 1 unless the line is already lower case,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,6,6,0,0,0.0,0.0,0.0179
-8966754,26,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,6,5,1,0,0.5,1.0,0.0175
-8966754,26,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,6,6,0,0,0.0,0.0,0.0357
-8966754,76,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,7,7,0,0,0.0,1.0,0.0
-8966754,76,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0385
-8966754,76,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966754,76,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966754,76,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966754,76,lower-cased,below 1 unless the line is already lower case,1,1,-1.0,-1.0,True,,True,True,False,1,0,1,0,7,5,2,0,1.0,0.0,0.0577
-8966754,76,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,7,6,1,0,0.5,1.0,0.0189
-8966754,76,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0385
-8966753,18,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,9,9,0,0,0.0,1.0,0.0
-8966753,18,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,9,9,0,0,0.0,0.0,0.0566
-8966753,18,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,18,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,18,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,
-8966753,18,lower-cased,below 1 unless the line is already lower case,1,1,-0.5,-0.5,True,,True,True,False,1,0,1,0,9,8,1,0,0.5,0.0,0.0377
-8966753,18,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,9,8,1,0,0.5,1.0,0.0185
-8966753,18,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,9,9,0,0,0.0,0.0,0.0377
-8966753,48,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,7,7,0,0,0.0,1.0,0.0
-8966753,48,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.1017
-8966753,48,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,48,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,48,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,
-8966753,48,lower-cased,below 1 unless the line is already lower case,1,1,-0.5,-0.5,True,,True,True,False,1,0,1,0,7,6,1,0,0.5,0.0,0.0339
-8966753,48,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,7,6,1,0,0.5,1.0,0.0167
-8966753,48,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0847
-8966753,103,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,8,8,0,0,0.0,1.0,0.0
-8966753,103,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,8,8,0,0,0.0,0.0,0.0741
-8966753,103,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,103,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,103,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966753,103,lower-cased,below 1 unless the line is already lower case,1,1,-1.0,-1.0,True,,True,True,False,1,0,1,0,8,5,3,0,1.5,0.0,0.0769
-8966753,103,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,8,7,1,0,0.5,1.0,0.0189
-8966753,103,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,8,8,0,0,0.0,0.0,0.0741
-8966752,12,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,8,8,0,0,0.0,1.0,0.0
-8966752,12,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,8,8,0,0,0.0,0.0,0.0741
-8966752,12,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966752,12,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966752,12,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,
-8966752,12,lower-cased,below 1 unless the line is already lower case,1,1,-0.5,-0.5,True,,True,True,False,1,0,1,0,8,7,1,0,0.5,0.0,0.037
-8966752,12,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,8,7,1,0,0.5,1.0,0.0182
-8966752,12,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,8,8,0,0,0.0,0.0,0.0741
-8966752,31,perfect,1.0,5,2,1.0,1.0,True,,True,True,False,5,5,2,2,1,1,0,0,0.0,1.0,0.0
-8966752,31,identity (return the OCR),"0 if damaged, 1 if clean",5,2,0.0,0.0,True,,True,True,False,5,0,2,0,1,1,0,0,0.0,0.0,0.3846
-8966752,31,empty,"0, format invalid",5,2,0.0,0.0,False,empty,False,False,False,5,0,0,0,1,0,0,0,0.0,,
-8966752,31,two lines,"0, integrity invalid",5,2,0.0,0.0,False,several lines,False,False,False,5,0,0,0,1,0,0,0,0.0,,
-8966752,31,commentary prefix,below 1 (extra words),5,2,0.0,0.0,False,commentary prefix,False,False,False,5,0,0,0,1,0,0,0,0.0,,
-8966752,31,lower-cased,below 1 unless the line is already lower case,5,2,0.2222,0.2222,True,,True,True,False,5,2,2,0,1,1,0,0,0.0,0.2222,0.3673
-8966752,31,one correct word changed,below 1 (a correct word broken),5,2,0.5,0.5,True,,True,True,False,5,5,2,2,1,0,1,0,0.5,1.0,0.02
-8966752,31,names left unrepaired,repair rate without the name words,5,2,0.3333,0.3333,True,,True,True,False,5,3,2,0,1,1,0,0,0.0,0.3333,0.2941
-8966752,31,only names repaired,repair rate of the name words only,5,2,0.6667,0.6667,True,,True,True,False,5,2,2,2,1,1,0,0,0.0,0.6667,0.0816
-8966752,38,perfect,1.0,3,1,1.0,1.0,True,,True,True,False,3,3,1,1,3,3,0,0,0.0,1.0,0.0
-8966752,38,identity (return the OCR),"0 if damaged, 1 if clean",3,1,0.0,0.0,True,,True,True,False,3,0,1,0,3,3,0,0,0.0,0.0,0.3617
-8966752,38,empty,"0, format invalid",3,1,0.0,0.0,False,empty,False,False,False,3,0,0,0,3,0,0,0,0.0,,
-8966752,38,two lines,"0, integrity invalid",3,1,0.0,0.0,False,several lines,False,False,False,3,0,0,0,3,0,0,0,0.0,,
-8966752,38,commentary prefix,below 1 (extra words),3,1,0.0,0.0,False,commentary prefix,False,False,False,3,0,0,0,3,0,0,0,0.0,,
-8966752,38,lower-cased,below 1 unless the line is already lower case,3,1,-0.5,-0.5,True,,True,True,False,3,0,1,0,3,2,1,0,0.5,0.0,0.4255
-8966752,38,one correct word changed,below 1 (a correct word broken),3,1,0.5,0.5,True,,True,True,False,3,3,1,1,3,2,1,0,0.5,1.0,0.0208
-8966752,38,names left unrepaired,repair rate without the name words,3,1,0.4,0.4,True,,True,True,False,3,2,1,0,3,3,0,0,0.0,0.4,0.1277
-8966752,38,only names repaired,repair rate of the name words only,3,1,0.6,0.6,True,,True,True,False,3,1,1,1,3,3,0,0,0.0,0.6,0.234
+page_id,line_no,attack,expect,n_damaged,n_name_damaged,reward,reward_reading,format_valid,format_reason,integrity_valid,alignment_valid,clean_line,damaged_words,repaired_words,scientific_name_damaged,scientific_name_repairs,correct_words,preserved_correct_words,damaged_correct_words,extra_words,penalty,weighted_repair_rate,cer_diagnostic,case_only_words,case_words,case_accuracy,exact_repair_rate
+8966752,91,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,6,6,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,91,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.0339,0,0,,0.0
+8966752,91,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,91,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,91,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,91,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,6,5,1,0,0.5,1.0,0.0169,0,0,,1.0
+8966752,91,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.0339,0,0,,0.0
+8966751,71,perfect,1.0,5,0,1.0,1.0,True,,True,True,False,5,5,0,0,1,1,0,0,0.0,1.0,0.0,0,0,,1.0
+8966751,71,identity (return the OCR),"0 if damaged, 1 if clean",5,0,0.0,0.0,True,,True,True,False,5,0,0,0,1,1,0,0,0.0,0.0,0.1525,0,0,,0.0
+8966751,71,empty,"0, format invalid",5,0,0.0,0.0,False,empty,False,False,False,5,0,0,0,1,0,0,0,0.0,,,0,0,,
+8966751,71,two lines,"0, integrity invalid",5,0,0.0,0.0,False,several lines,False,False,False,5,0,0,0,1,0,0,0,0.0,,,0,0,,
+8966751,71,commentary prefix,below 1 (extra words),5,0,0.0,0.0,False,commentary prefix,False,False,False,5,0,0,0,1,0,0,0,0.0,,,0,0,,
+8966751,71,one correct word changed,below 1 (a correct word broken),5,0,0.8,0.8,True,,True,True,False,5,4,0,0,1,1,0,0,0.0,0.8,0.0167,0,0,,0.8
+8966751,71,only names repaired,repair rate of the name words only,5,0,0.2,0.2,True,,True,True,False,5,1,0,0,1,1,0,0,0.0,0.2,0.1186,0,0,,0.2
+8966751,24,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,7,7,0,0,0.0,1.0,0.0,0,0,,1.0
+8966751,24,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.0385,0,0,,0.0
+8966751,24,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966751,24,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966751,24,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966751,24,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,6,1,0,0.5,1.0,0.0192,0,0,,1.0
+8966751,24,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.0385,0,0,,0.0
+8966752,51,perfect,1.0,2,1,1.0,1.0,True,,True,True,False,2,2,1,1,6,6,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,51,identity (return the OCR),"0 if damaged, 1 if clean",2,1,0.0,0.0,True,,True,True,False,2,0,1,0,6,6,0,0,0.0,0.0,0.0545,0,0,,0.0
+8966752,51,empty,"0, format invalid",2,1,0.0,0.0,False,empty,False,False,False,2,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,51,two lines,"0, integrity invalid",2,1,0.0,0.0,False,several lines,False,False,False,2,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,51,commentary prefix,below 1 (extra words),2,1,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,51,lower-cased,below 1 unless the line is already lower case,2,1,0.25,0.25,True,,True,True,False,2,1,1,1,6,5,1,0,0.5,0.75,0.037,0,0,,0.5
+8966752,51,one correct word changed,below 1 (a correct word broken),2,1,0.5,0.5,True,,True,True,False,2,2,1,1,6,5,1,0,0.5,1.0,0.0182,0,0,,1.0
+8966752,51,names left unrepaired,repair rate without the name words,2,1,0.25,0.25,True,,True,True,False,2,1,1,0,6,6,0,0,0.0,0.25,0.0185,0,0,,0.5
+8966752,51,only names repaired,repair rate of the name words only,2,1,0.75,0.75,True,,True,True,False,2,1,1,1,6,6,0,0,0.0,0.75,0.0364,0,0,,0.5
+8966753,87,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,8,8,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,87,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0179,0,0,,0.0
+8966753,87,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,87,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,87,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,87,lower-cased,below 1 unless the line is already lower case,1,0,0.5,0.5,True,,True,True,False,1,1,0,0,8,7,1,0,0.5,1.0,0.0179,0,0,,1.0
+8966753,87,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0175,0,0,,0.0
+8966753,87,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0179,0,0,,0.0
+8966753,28,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,8,8,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,28,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0545,0,0,,0.0
+8966753,28,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,28,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,28,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,28,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,8,7,1,0,0.5,1.0,0.0182,0,0,,1.0
+8966753,28,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0545,0,0,,0.0
+8966754,82,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,8,8,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,82,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.037,0,0,,0.0
+8966754,82,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,82,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,82,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,82,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0185,0,0,,0.0
+8966754,82,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.037,0,0,,0.0
+8966752,73,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,4,4,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,73,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,4,4,0,0,0.0,0.0,0.0769,0,0,,0.0
+8966752,73,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,73,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,73,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,73,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,2,0,0,4,3,1,0,0.5,1.0,0.0196,0,0,,1.0
+8966752,73,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,4,4,0,0,0.0,0.0,0.0769,0,0,,0.0
+8966754,65,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,9,9,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,65,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0351,0,0,,0.0
+8966754,65,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966754,65,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966754,65,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966754,65,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,9,8,1,0,0.5,1.0,0.0175,0,0,,1.0
+8966754,65,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0351,0,0,,0.0
+8966752,76,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,7,8,0,0,0.0,1.0,0.0,1,2,1.0,1.0
+8966752,76,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,8,0,0,0.0,0.0,0.2075,1,2,0.0,0.0
+8966752,76,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,,1,0,,
+8966752,76,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,,1,0,,
+8966752,76,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,,1,0,,
+8966752,76,lower-cased,below 1 unless the line is already lower case,1,0,0.0,0.0,True,,True,True,False,1,1,0,0,7,6,2,0,1.0,1.0,0.1887,1,2,0.5,1.0
+8966752,76,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,7,1,0,0.5,1.0,0.0185,1,2,1.0,1.0
+8966752,76,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,8,0,0,0.0,0.0,0.1887,1,2,0.0,0.0
+8966754,81,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,6,6,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,81,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.037,0,0,,0.0
+8966754,81,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966754,81,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966754,81,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966754,81,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.0185,0,0,,0.0
+8966754,81,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,6,6,0,0,0.0,0.0,0.037,0,0,,0.0
+8966754,76,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,7,7,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,76,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0385,0,0,,0.0
+8966754,76,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,76,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,76,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,76,lower-cased,below 1 unless the line is already lower case,1,1,-1.0,-1.0,True,,True,True,False,1,0,1,0,7,5,2,0,1.0,0.0,0.0577,0,0,,0.0
+8966754,76,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,7,6,1,0,0.5,1.0,0.0189,0,0,,1.0
+8966754,76,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0385,0,0,,0.0
+8966753,99,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,10,10,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,99,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,10,10,0,0,0.0,0.0,0.0566,0,0,,0.0
+8966753,99,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966753,99,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966753,99,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966753,99,lower-cased,below 1 unless the line is already lower case,1,0,0.5,0.5,True,,True,True,False,1,1,0,0,10,9,1,0,0.5,1.0,0.0189,0,0,,1.0
+8966753,99,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,10,9,1,0,0.5,1.0,0.0185,0,0,,1.0
+8966753,99,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,10,10,0,0,0.0,0.0,0.0566,0,0,,0.0
+8966753,29,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,9,9,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,29,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0345,0,0,,0.0
+8966753,29,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,29,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,29,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,29,lower-cased,below 1 unless the line is already lower case,1,0,0.0,0.0,True,,True,True,False,1,1,0,0,9,7,2,0,1.0,1.0,0.0351,0,0,,1.0
+8966753,29,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,9,8,1,0,0.5,1.0,0.0172,0,0,,1.0
+8966753,29,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0345,0,0,,0.0
+8966752,105,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,4,4,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,105,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,4,4,0,0,0.0,0.0,0.0962,0,0,,0.0
+8966752,105,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,105,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,105,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,105,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,1,0,0,4,4,0,0,0.0,0.5,0.0192,0,0,,0.5
+8966752,105,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,4,4,0,0,0.0,0.0,0.0784,0,0,,0.0
+8966752,33,perfect,1.0,5,0,1.0,1.0,True,,True,True,False,5,5,0,0,1,1,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,33,identity (return the OCR),"0 if damaged, 1 if clean",5,0,0.0,0.0,True,,True,True,False,5,0,0,0,1,1,0,0,0.0,0.0,0.4426,0,0,,0.0
+8966752,33,empty,"0, format invalid",5,0,0.0,0.0,False,empty,False,False,False,5,0,0,0,1,0,0,0,0.0,,,0,0,,
+8966752,33,two lines,"0, integrity invalid",5,0,0.0,0.0,False,several lines,False,False,False,5,0,0,0,1,0,0,0,0.0,,,0,0,,
+8966752,33,commentary prefix,below 1 (extra words),5,0,0.0,0.0,False,commentary prefix,False,False,False,5,0,0,0,1,0,0,0,0.0,,,0,0,,
+8966752,33,one correct word changed,below 1 (a correct word broken),5,0,0.8,0.8,True,,True,True,False,5,4,0,0,1,1,0,0,0.0,0.8,0.0182,0,0,,0.8
+8966752,33,only names repaired,repair rate of the name words only,5,0,0.0,0.0,True,,True,True,False,5,0,0,0,1,1,0,0,0.0,0.0,0.4068,0,0,,0.0
+8966752,7,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,9,9,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,7,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0339,0,0,,0.0
+8966752,7,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966752,7,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966752,7,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966752,7,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0169,0,0,,0.0
+8966752,7,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0339,0,0,,0.0
+8966754,92,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,8,8,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,92,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0333,0,0,,0.0
+8966754,92,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,92,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,92,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,92,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,8,7,1,0,0.5,1.0,0.0164,0,0,,1.0
+8966754,92,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,8,8,0,0,0.0,0.0,0.0333,0,0,,0.0
+8966751,47,perfect,1.0,3,1,1.0,1.0,True,,True,True,False,3,3,1,1,4,4,0,0,0.0,1.0,0.0,0,3,1.0,1.0
+8966751,47,identity (return the OCR),"0 if damaged, 1 if clean",3,1,0.0,0.0,True,,True,True,False,3,0,1,0,4,4,0,0,0.0,0.0,0.3585,0,3,0.0,0.0
+8966751,47,empty,"0, format invalid",3,1,0.0,0.0,False,empty,False,False,False,3,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966751,47,two lines,"0, integrity invalid",3,1,0.0,0.0,False,several lines,False,False,False,3,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966751,47,commentary prefix,below 1 (extra words),3,1,0.0,0.0,False,commentary prefix,False,False,False,3,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966751,47,lower-cased,below 1 unless the line is already lower case,3,1,0.5,0.5,True,,True,True,False,3,3,1,1,4,3,1,0,0.5,1.0,0.4118,0,3,0.0,1.0
+8966751,47,one correct word changed,below 1 (a correct word broken),3,1,0.5,0.5,True,,True,True,False,3,3,1,1,4,3,1,0,0.5,1.0,0.0192,0,3,1.0,1.0
+8966751,47,names left unrepaired,repair rate without the name words,3,1,0.4,0.4,True,,True,True,False,3,2,1,0,4,4,0,0,0.0,0.4,0.1176,0,3,0.6667,0.6667
+8966751,47,only names repaired,repair rate of the name words only,3,1,0.6,0.6,True,,True,True,False,3,1,1,1,4,4,0,0,0.0,0.6,0.2264,0,3,0.3333,0.3333
+8966753,92,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,11,11,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,92,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,11,11,0,0,0.0,0.0,0.0339,0,0,,0.0
+8966753,92,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,11,0,0,0,0.0,,,0,0,,
+8966753,92,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,11,0,0,0,0.0,,,0,0,,
+8966753,92,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,11,0,0,0,0.0,,,0,0,,
+8966753,92,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,11,11,0,0,0.0,0.0,0.0169,0,0,,0.0
+8966753,92,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,11,11,0,0,0.0,0.0,0.0339,0,0,,0.0
+8966754,56,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,8,8,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,56,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,8,8,0,0,0.0,0.0,0.0588,0,0,,0.0
+8966754,56,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,56,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,56,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,56,lower-cased,below 1 unless the line is already lower case,2,0,-0.5,-0.5,True,,True,True,False,2,1,0,0,8,6,2,0,1.0,0.5,0.0588,0,0,,0.5
+8966754,56,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,2,0,0,8,7,1,0,0.5,1.0,0.0192,0,0,,1.0
+8966754,56,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,8,8,0,0,0.0,0.0,0.0588,0,0,,0.0
+8966751,52,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,5,5,0,0,0.0,1.0,0.0,0,0,,1.0
+8966751,52,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,5,5,0,0,0.0,0.0,0.0392,0,0,,0.0
+8966751,52,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,5,0,0,0,0.0,,,0,0,,
+8966751,52,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,5,0,0,0,0.0,,,0,0,,
+8966751,52,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,5,0,0,0,0.0,,,0,0,,
+8966751,52,one correct word changed,below 1 (a correct word broken),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,5,5,0,0,0.0,0.0,0.0192,0,0,,0.0
+8966751,52,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,5,5,0,0,0.0,0.0,0.0392,0,0,,0.0
+8966754,42,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,7,7,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,42,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,7,7,0,0,0.0,0.0,0.0727,0,0,,0.0
+8966754,42,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,42,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,42,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,42,lower-cased,below 1 unless the line is already lower case,2,0,0.5,0.5,True,,True,True,False,2,2,0,0,7,6,1,0,0.5,1.0,0.0185,0,0,,1.0
+8966754,42,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,1,0,0,7,7,0,0,0.0,0.5,0.0182,0,0,,0.5
+8966754,42,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,7,7,0,0,0.0,0.0,0.0727,0,0,,0.0
+8966754,67,perfect,1.0,2,0,1.0,1.0,True,,True,True,False,2,2,0,0,9,9,0,0,0.0,1.0,0.0,0,1,1.0,1.0
+8966754,67,identity (return the OCR),"0 if damaged, 1 if clean",2,0,0.0,0.0,True,,True,True,False,2,0,0,0,9,9,0,0,0.0,0.0,0.069,0,1,0.0,0.0
+8966754,67,empty,"0, format invalid",2,0,0.0,0.0,False,empty,False,False,False,2,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966754,67,two lines,"0, integrity invalid",2,0,0.0,0.0,False,several lines,False,False,False,2,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966754,67,commentary prefix,below 1 (extra words),2,0,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966754,67,one correct word changed,below 1 (a correct word broken),2,0,0.5,0.5,True,,True,True,False,2,1,0,0,9,9,0,0,0.0,0.5,0.0169,0,1,1.0,0.5
+8966754,67,only names repaired,repair rate of the name words only,2,0,0.0,0.0,True,,True,True,False,2,0,0,0,9,9,0,0,0.0,0.0,0.069,0,1,0.0,0.0
+8966752,14,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,7,7,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,14,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.0577,0,0,,0.0
+8966752,14,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966752,14,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966752,14,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966752,14,lower-cased,below 1 unless the line is already lower case,1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,6,1,0,0.5,1.0,0.0192,0,0,,1.0
+8966752,14,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,6,1,0,0.5,1.0,0.0189,0,0,,1.0
+8966752,14,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.0385,0,0,,0.0
+8966752,87,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,10,10,0,0,0.0,,0.0,0,0,,
+8966752,87,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966752,87,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966752,87,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966752,87,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,10,9,1,0,0.5,,0.0185,0,0,,
+8966753,97,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,9,9,0,0,0.0,,0.0,0,0,,
+8966753,97,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,97,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,97,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,97,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,9,8,1,0,0.5,,0.0182,0,0,,
+8966753,85,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,11,11,0,0,0.0,,0.0,0,0,,
+8966753,85,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,11,0,0,0,0.0,,,0,0,,
+8966753,85,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,11,0,0,0,0.0,,,0,0,,
+8966753,85,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,11,0,0,0,0.0,,,0,0,,
+8966753,85,lower-cased,below 1 unless the line is already lower case,0,0,0.5,0.5,True,,True,True,True,0,0,0,0,11,10,1,0,0.5,,0.0185,0,0,,
+8966753,85,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,11,10,1,0,0.5,,0.0182,0,0,,
+8966753,59,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,8,8,0,0,0.0,,0.0,0,0,,
+8966753,59,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,59,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,59,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,59,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,8,7,1,0,0.5,,0.0182,0,0,,
+8966753,89,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,9,9,0,0,0.0,,0.0,0,0,,
+8966753,89,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,89,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,89,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,89,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,9,8,1,0,0.5,,0.0159,0,0,,
+8966751,55,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,4,5,0,0,0.0,,0.0,1,1,1.0,
+8966751,55,identity (return the OCR),"0 if damaged, 1 if clean",0,0,1.0,1.0,True,,True,True,True,0,0,0,0,4,5,0,0,0.0,,0.25,1,1,0.0,
+8966751,55,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,4,0,0,0,0.0,,,1,0,,
+8966751,55,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,4,0,0,0,0.0,,,1,0,,
+8966751,55,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,4,0,0,0,0.0,,,1,0,,
+8966751,55,lower-cased,below 1 unless the line is already lower case,0,0,-0.5,-0.5,True,,True,True,True,0,0,0,0,4,2,3,0,1.5,,0.3438,1,1,0.0,
+8966753,83,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,10,10,0,0,0.0,,0.0,0,0,,
+8966753,83,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966753,83,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966753,83,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,10,0,0,0,0.0,,,0,0,,
+8966753,83,lower-cased,below 1 unless the line is already lower case,0,0,-0.5,-0.5,True,,True,True,True,0,0,0,0,10,7,3,0,1.5,,0.0588,0,0,,
+8966753,83,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,10,9,1,0,0.5,,0.0192,0,0,,
+8966754,17,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,8,8,0,0,0.0,,0.0,0,0,,
+8966754,17,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,17,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,17,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966754,17,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,8,7,1,0,0.5,,0.0182,0,0,,
+8966752,72,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,7,7,0,0,0.0,,0.0,0,0,,
+8966752,72,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966752,72,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966752,72,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966752,72,one correct word changed,below 1 (a correct word broken),0,0,0.5,0.5,True,,True,True,True,0,0,0,0,7,6,1,0,0.5,,0.0196,0,0,,
+8966752,94,perfect,1.0,0,0,1.0,1.0,True,,True,True,True,0,0,0,0,4,4,0,0,0.0,,0.0,0,0,,
+8966752,94,empty,"0, format invalid",0,0,0.0,0.0,False,empty,False,False,True,0,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,94,two lines,"0, integrity invalid",0,0,0.0,0.0,False,several lines,False,False,True,0,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,94,commentary prefix,below 1 (extra words),0,0,0.0,0.0,False,commentary prefix,False,False,True,0,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966752,94,lower-cased,below 1 unless the line is already lower case,0,0,-0.5,-0.5,True,,True,True,True,0,0,0,0,4,1,3,0,1.5,,0.12,0,0,,
+8966754,9,perfect,1.0,3,0,1.0,1.0,True,,True,True,False,3,3,0,0,4,4,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,9,identity (return the OCR),"0 if damaged, 1 if clean",3,0,0.0,0.0,True,,True,True,False,3,0,0,0,4,4,0,0,0.0,0.0,0.2203,0,0,,0.0
+8966754,9,empty,"0, format invalid",3,0,0.0,0.0,False,empty,False,False,False,3,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966754,9,two lines,"0, integrity invalid",3,0,0.0,0.0,False,several lines,False,False,False,3,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966754,9,commentary prefix,below 1 (extra words),3,0,0.0,0.0,False,commentary prefix,False,False,False,3,0,0,0,4,0,0,0,0.0,,,0,0,,
+8966754,9,one correct word changed,below 1 (a correct word broken),3,0,0.6667,0.6667,True,,True,True,False,3,2,0,0,4,4,0,0,0.0,0.6667,0.0167,0,0,,0.6667
+8966754,9,only names repaired,repair rate of the name words only,3,0,0.0,0.0,True,,True,True,False,3,0,0,0,4,4,0,0,0.0,0.0,0.2034,0,0,,0.0
+8966754,9,ligature letters written out,below 1 (spelling not kept),3,0,0.6667,0.6667,True,,True,True,False,3,2,0,0,4,4,0,0,0.0,0.6667,0.0333,0,0,,0.6667
+8966753,98,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,7,7,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,98,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.1,0,0,,0.0
+8966753,98,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966753,98,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966753,98,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966753,98,lower-cased,below 1 unless the line is already lower case,1,0,-1.0,-1.0,True,,True,True,False,1,0,0,0,7,5,2,0,1.0,0.0,0.0612,0,0,,0.0
+8966753,98,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,7,6,1,0,0.5,1.0,0.02,0,0,,1.0
+8966753,98,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.1,0,0,,0.0
+8966753,98,ligature letters written out,below 1 (spelling not kept),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,7,7,0,0,0.0,0.0,0.04,0,0,,0.0
+8966753,102,perfect,1.0,1,0,1.0,1.0,True,,True,True,False,1,1,0,0,9,9,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,102,identity (return the OCR),"0 if damaged, 1 if clean",1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0545,0,0,,0.0
+8966753,102,empty,"0, format invalid",1,0,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,102,two lines,"0, integrity invalid",1,0,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,102,commentary prefix,below 1 (extra words),1,0,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,102,lower-cased,below 1 unless the line is already lower case,1,0,-1.0,-1.0,True,,True,True,False,1,0,0,0,9,7,2,0,1.0,0.0,0.0556,0,0,,0.0
+8966753,102,one correct word changed,below 1 (a correct word broken),1,0,0.5,0.5,True,,True,True,False,1,1,0,0,9,8,1,0,0.5,1.0,0.0182,0,0,,1.0
+8966753,102,only names repaired,repair rate of the name words only,1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0545,0,0,,0.0
+8966753,102,ligature letters written out,below 1 (spelling not kept),1,0,0.0,0.0,True,,True,True,False,1,0,0,0,9,9,0,0,0.0,0.0,0.0364,0,0,,0.0
+8966751,18,perfect,1.0,4,0,1.0,1.0,True,,True,True,False,4,4,0,0,0,0,0,0,0.0,1.0,0.0,0,0,,1.0
+8966751,18,identity (return the OCR),"0 if damaged, 1 if clean",4,0,0.0,0.0,True,,True,True,False,4,0,0,0,0,0,0,0,0.0,0.0,0.102,0,0,,0.0
+8966751,18,empty,"0, format invalid",4,0,0.0,0.0,False,empty,False,False,False,4,0,0,0,0,0,0,0,0.0,,,0,0,,
+8966751,18,two lines,"0, integrity invalid",4,0,0.0,0.0,False,several lines,False,False,False,4,0,0,0,0,0,0,0,0.0,,,0,0,,
+8966751,18,commentary prefix,below 1 (extra words),4,0,0.0,0.0,False,commentary prefix,False,False,False,4,0,0,0,0,0,0,0,0.0,,,0,0,,
+8966751,18,one correct word changed,below 1 (a correct word broken),4,0,0.75,0.75,True,,True,True,False,4,3,0,0,0,0,0,0,0.0,0.75,0.02,0,0,,0.75
+8966751,18,only names repaired,repair rate of the name words only,4,0,0.0,0.0,True,,True,True,False,4,0,0,0,0,0,0,0,0.0,0.0,0.102,0,0,,0.0
+8966751,18,ligature letters written out,below 1 (spelling not kept),4,0,0.75,0.75,True,,True,True,False,4,3,0,0,0,0,0,0,0.0,0.75,0.04,0,0,,0.75
+8966751,44,perfect,1.0,3,0,1.0,1.0,True,,True,True,False,3,3,0,0,2,2,0,0,0.0,1.0,0.0,0,0,,1.0
+8966751,44,identity (return the OCR),"0 if damaged, 1 if clean",3,0,0.0,0.0,True,,True,True,False,3,0,0,0,2,2,0,0,0.0,0.0,0.1429,0,0,,0.0
+8966751,44,empty,"0, format invalid",3,0,0.0,0.0,False,empty,False,False,False,3,0,0,0,2,0,0,0,0.0,,,0,0,,
+8966751,44,two lines,"0, integrity invalid",3,0,0.0,0.0,False,several lines,False,False,False,3,0,0,0,2,0,0,0,0.0,,,0,0,,
+8966751,44,commentary prefix,below 1 (extra words),3,0,0.0,0.0,False,commentary prefix,False,False,False,3,0,0,0,2,0,0,0,0.0,,,0,0,,
+8966751,44,one correct word changed,below 1 (a correct word broken),3,0,0.5,0.5,True,,True,True,False,3,3,0,0,2,1,1,0,0.5,1.0,0.0175,0,0,,1.0
+8966751,44,only names repaired,repair rate of the name words only,3,0,0.0,0.0,True,,True,True,False,3,0,0,0,2,2,0,0,0.0,0.0,0.125,0,0,,0.0
+8966751,44,ligature letters written out,below 1 (spelling not kept),3,0,0.6667,0.6667,True,,True,True,False,3,2,0,0,2,2,0,0,0.0,0.6667,0.0351,0,0,,0.6667
+8966754,5,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,2,2,0,0,0.0,1.0,0.0,0,1,1.0,1.0
+8966754,5,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,2,2,0,0,0.0,0.0,0.087,0,1,0.0,0.0
+8966754,5,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,2,0,0,0,0.0,,,0,0,,
+8966754,5,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,2,0,0,0,0.0,,,0,0,,
+8966754,5,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,2,0,0,0,0.0,,,0,0,,
+8966754,5,lower-cased,below 1 unless the line is already lower case,1,1,0.0,0.0,True,,True,True,False,1,1,1,1,2,0,2,0,1.0,1.0,0.3913,0,1,0.0,1.0
+8966754,5,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,2,2,0,0,0.0,0.0,0.087,0,1,0.0,0.0
+8966754,13,perfect,1.0,3,2,1.0,1.0,True,,True,True,False,3,3,2,2,3,3,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,13,identity (return the OCR),"0 if damaged, 1 if clean",3,2,0.0,0.0,True,,True,True,False,3,0,2,0,3,3,0,0,0.0,0.0,0.2766,0,0,,0.0
+8966754,13,empty,"0, format invalid",3,2,0.0,0.0,False,empty,False,False,False,3,0,0,0,3,0,0,0,0.0,,,0,0,,
+8966754,13,two lines,"0, integrity invalid",3,2,0.0,0.0,False,several lines,False,False,False,3,0,0,0,3,0,0,0,0.0,,,0,0,,
+8966754,13,commentary prefix,below 1 (extra words),3,2,0.0,0.0,False,commentary prefix,False,False,False,3,0,0,0,3,0,0,0,0.0,,,0,0,,
+8966754,13,lower-cased,below 1 unless the line is already lower case,3,2,0.5714,0.5714,True,,True,True,False,3,2,2,1,3,3,0,0,0.0,0.5714,0.0227,0,0,,0.6667
+8966754,13,one correct word changed,below 1 (a correct word broken),3,2,0.5,0.5,True,,True,True,False,3,3,2,2,3,2,1,0,0.5,1.0,0.0222,0,0,,1.0
+8966754,13,names left unrepaired,repair rate without the name words,3,2,0.1429,0.1429,True,,True,True,False,3,1,2,0,3,3,0,0,0.0,0.1429,0.234,0,0,,0.3333
+8966754,13,only names repaired,repair rate of the name words only,3,2,0.8571,0.8571,True,,True,True,False,3,2,2,2,3,3,0,0,0.0,0.8571,0.0455,0,0,,0.6667
+8966754,26,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,6,6,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,26,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,6,6,0,0,0.0,0.0,0.0357,0,0,,0.0
+8966754,26,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966754,26,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966754,26,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966754,26,lower-cased,below 1 unless the line is already lower case,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,6,6,0,0,0.0,0.0,0.0179,0,0,,0.0
+8966754,26,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,6,5,1,0,0.5,1.0,0.0175,0,0,,1.0
+8966754,26,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,6,6,0,0,0.0,0.0,0.0357,0,0,,0.0
+8966754,76,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,7,7,0,0,0.0,1.0,0.0,0,0,,1.0
+8966754,76,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0385,0,0,,0.0
+8966754,76,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,76,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,76,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966754,76,lower-cased,below 1 unless the line is already lower case,1,1,-1.0,-1.0,True,,True,True,False,1,0,1,0,7,5,2,0,1.0,0.0,0.0577,0,0,,0.0
+8966754,76,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,7,6,1,0,0.5,1.0,0.0189,0,0,,1.0
+8966754,76,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0385,0,0,,0.0
+8966753,18,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,9,9,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,18,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,9,9,0,0,0.0,0.0,0.0566,0,0,,0.0
+8966753,18,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,18,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,18,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,9,0,0,0,0.0,,,0,0,,
+8966753,18,lower-cased,below 1 unless the line is already lower case,1,1,-0.5,-0.5,True,,True,True,False,1,0,1,0,9,8,1,0,0.5,0.0,0.0377,0,0,,0.0
+8966753,18,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,9,8,1,0,0.5,1.0,0.0185,0,0,,1.0
+8966753,18,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,9,9,0,0,0.0,0.0,0.0377,0,0,,0.0
+8966753,48,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,7,7,0,0,0.0,1.0,0.0,0,1,1.0,1.0
+8966753,48,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.1017,0,1,0.0,0.0
+8966753,48,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966753,48,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966753,48,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,7,0,0,0,0.0,,,0,0,,
+8966753,48,lower-cased,below 1 unless the line is already lower case,1,1,0.5,0.5,True,,True,True,False,1,1,1,1,7,6,1,0,0.5,1.0,0.0339,0,1,0.0,1.0
+8966753,48,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,7,6,1,0,0.5,1.0,0.0167,0,1,1.0,1.0
+8966753,48,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,7,7,0,0,0.0,0.0,0.0847,0,1,0.0,0.0
+8966753,103,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,8,8,0,0,0.0,1.0,0.0,0,0,,1.0
+8966753,103,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,8,8,0,0,0.0,0.0,0.0741,0,0,,0.0
+8966753,103,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,103,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,103,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966753,103,lower-cased,below 1 unless the line is already lower case,1,1,-1.0,-1.0,True,,True,True,False,1,0,1,0,8,5,3,0,1.5,0.0,0.0769,0,0,,0.0
+8966753,103,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,8,7,1,0,0.5,1.0,0.0189,0,0,,1.0
+8966753,103,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,8,8,0,0,0.0,0.0,0.0741,0,0,,0.0
+8966752,12,perfect,1.0,1,1,1.0,1.0,True,,True,True,False,1,1,1,1,8,8,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,12,identity (return the OCR),"0 if damaged, 1 if clean",1,1,0.0,0.0,True,,True,True,False,1,0,1,0,8,8,0,0,0.0,0.0,0.0741,0,0,,0.0
+8966752,12,empty,"0, format invalid",1,1,0.0,0.0,False,empty,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966752,12,two lines,"0, integrity invalid",1,1,0.0,0.0,False,several lines,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966752,12,commentary prefix,below 1 (extra words),1,1,0.0,0.0,False,commentary prefix,False,False,False,1,0,0,0,8,0,0,0,0.0,,,0,0,,
+8966752,12,lower-cased,below 1 unless the line is already lower case,1,1,-0.5,-0.5,True,,True,True,False,1,0,1,0,8,7,1,0,0.5,0.0,0.037,0,0,,0.0
+8966752,12,one correct word changed,below 1 (a correct word broken),1,1,0.5,0.5,True,,True,True,False,1,1,1,1,8,7,1,0,0.5,1.0,0.0182,0,0,,1.0
+8966752,12,names left unrepaired,repair rate without the name words,1,1,0.0,0.0,True,,True,True,False,1,0,1,0,8,8,0,0,0.0,0.0,0.0741,0,0,,0.0
+8966752,31,perfect,1.0,4,1,1.0,1.0,True,,True,True,False,4,4,1,1,1,2,0,0,0.0,1.0,0.0,1,2,1.0,1.0
+8966752,31,identity (return the OCR),"0 if damaged, 1 if clean",4,1,0.0,0.0,True,,True,True,False,4,0,1,0,1,2,0,0,0.0,0.0,0.3846,1,2,0.0,0.0
+8966752,31,empty,"0, format invalid",4,1,0.0,0.0,False,empty,False,False,False,4,0,0,0,1,0,0,0,0.0,,,1,0,,
+8966752,31,two lines,"0, integrity invalid",4,1,0.0,0.0,False,several lines,False,False,False,4,0,0,0,1,0,0,0,0.0,,,1,0,,
+8966752,31,commentary prefix,below 1 (extra words),4,1,0.0,0.0,False,commentary prefix,False,False,False,4,0,0,0,1,0,0,0,0.0,,,1,0,,
+8966752,31,lower-cased,below 1 unless the line is already lower case,4,1,0.8333,0.8333,True,,True,True,False,4,3,1,1,1,2,0,0,0.0,0.8333,0.3673,1,2,0.0,0.75
+8966752,31,one correct word changed,below 1 (a correct word broken),4,1,0.5,0.5,True,,True,True,False,4,4,1,1,1,1,1,0,0.5,1.0,0.02,1,2,1.0,1.0
+8966752,31,names left unrepaired,repair rate without the name words,4,1,0.5,0.5,True,,True,True,False,4,3,1,0,1,2,0,0,0.0,0.5,0.2941,1,2,0.0,0.75
+8966752,31,only names repaired,repair rate of the name words only,4,1,0.5,0.5,True,,True,True,False,4,1,1,1,1,2,0,0,0.0,0.5,0.0816,1,2,1.0,0.25
+8966752,51,perfect,1.0,2,1,1.0,1.0,True,,True,True,False,2,2,1,1,6,6,0,0,0.0,1.0,0.0,0,0,,1.0
+8966752,51,identity (return the OCR),"0 if damaged, 1 if clean",2,1,0.0,0.0,True,,True,True,False,2,0,1,0,6,6,0,0,0.0,0.0,0.0545,0,0,,0.0
+8966752,51,empty,"0, format invalid",2,1,0.0,0.0,False,empty,False,False,False,2,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,51,two lines,"0, integrity invalid",2,1,0.0,0.0,False,several lines,False,False,False,2,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,51,commentary prefix,below 1 (extra words),2,1,0.0,0.0,False,commentary prefix,False,False,False,2,0,0,0,6,0,0,0,0.0,,,0,0,,
+8966752,51,lower-cased,below 1 unless the line is already lower case,2,1,0.25,0.25,True,,True,True,False,2,1,1,1,6,5,1,0,0.5,0.75,0.037,0,0,,0.5
+8966752,51,one correct word changed,below 1 (a correct word broken),2,1,0.5,0.5,True,,True,True,False,2,2,1,1,6,5,1,0,0.5,1.0,0.0182,0,0,,1.0
+8966752,51,names left unrepaired,repair rate without the name words,2,1,0.25,0.25,True,,True,True,False,2,1,1,0,6,6,0,0,0.0,0.25,0.0185,0,0,,0.5
+8966752,51,only names repaired,repair rate of the name words only,2,1,0.75,0.75,True,,True,True,False,2,1,1,1,6,6,0,0,0.0,0.75,0.0364,0,0,,0.5
