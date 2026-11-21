@@ -113,6 +113,13 @@ trap 'finalise exit' EXIT
   kill -TERM $$ ) &
 WATCHDOG_PID=$!
 log "run ${RUN_ID}: stage=${STAGE} max=${MAX_MIN} min at \$${PRICE}/h on pod ${RUNPOD_POD_ID:-?}"
+# Self-delete diagnostics, logged BEFORE the job so they reach the uploaded log (the first stage-1
+# launch, started with a custom start command, could not delete itself). No secret is printed.
+log "runpodctl: $(command -v runpodctl || echo missing); RUNPOD_API_KEY $([ -n "${RUNPOD_API_KEY:-}" ] && echo set || echo missing); RUNPOD_POD_ID ${RUNPOD_POD_ID:-missing}"
+if [ -n "${RUNPOD_API_KEY:-}" ] && runpodctl config --apiKey "$RUNPOD_API_KEY" > /dev/null 2>&1; then
+  log "runpodctl configured with the pod-scoped key"
+fi
+log "read check: $(runpodctl get pod "${RUNPOD_POD_ID:-x}" 2>&1 | head -2 | tr '\n' ' ' | cut -c1-200)"
 
 # code: a fresh clone of main (read access is public or via the same token)
 rm -rf "$REPO"

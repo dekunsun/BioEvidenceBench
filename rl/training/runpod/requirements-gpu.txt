@@ -6,10 +6,10 @@ torch==2.14.0
 transformers==5.20.2
 accelerate==1.16.0
 datasets==5.2.0
-# scoring (src/rl_task_b.py, src/score.py), same versions as the development environment
-duckdb==2.0.0
-rapidfuzz==3.14.6
-pandas==3.0.5
-numpy==2.5.3
-scipy==1.18.1
-requests==2.34.2
+# scoring (src/rl_task_b.py, src/score.py): not pinned, so pip can pick versions that fit vLLM's
+# own pins (pinning numpy 2.5.3 made the first stage-1 launch fail); the run's pip freeze records them
+duckdb
+rapidfuzz
+pandas
+scipy
+requests
