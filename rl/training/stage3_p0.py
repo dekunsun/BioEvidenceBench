@@ -65,12 +65,13 @@ def cmd_eval(args) -> None:
     tok = AutoTokenizer.from_pretrained(C.MODEL_ID)            # the one renderer and template, always the base's
     llm = LLM(model=args.model, dtype="bfloat16", seed=EVAL_SEED, gpu_memory_utilization=0.85,
               max_model_len=2048, enforce_eager=True)
-    sp = SamplingParams(n=EVAL_K, max_tokens=MAX_TOKENS, seed=EVAL_SEED, **EVAL)
+    sp = SamplingParams(n=args.k, max_tokens=MAX_TOKENS, seed=EVAL_SEED, **EVAL)
     out = Path(args.out)
-    result = {"model": args.model, "label": args.label, "decoding": EVAL, "k": EVAL_K, "seed": EVAL_SEED}
-    for name in DEV_SETS:
+    result = {"model": args.model, "label": args.label, "decoding": EVAL, "k": args.k, "seed": EVAL_SEED}
+    for name in args.sets.split(","):
         items = C.load_items(DATA / f"{name}.jsonl")
-        assert all(it["split"] == "dev" for it in items)
+        want = "dev" if "_dev_" in name else "heldout_book" if "cuvier" in name else "intest"
+        assert all(it["split"] == want for it in items), name
         t0 = time.time()
         gens = llm.generate([C.render_prompt(tok, it) for it in items], sp)
         rows = []
@@ -79,12 +80,12 @@ def cmd_eval(args) -> None:
                 rows.append({"item_id": it["item_id"], "book": it["book"], "sample": k, "answer": c.text,
                              "truncated": c.finish_reason == "length", "out_tokens": len(c.token_ids),
                              "run_on": C.run_on(it, c.text), **C.score_answer(it, c.text)})
-        m = C.primary_metrics(items, rows)
+        m = C.primary_metrics(items, [r for r in rows if r["sample"] < EVAL_K])   # pass@1 over 4 samples (METRICS 2a)
         m["seconds"] = round(time.time() - t0, 1)
         m["truncated_share"] = round(sum(r["truncated"] for r in rows) / len(rows), 4)
         m["run_on_share"] = round(sum(r["run_on"] != "within" for r in rows) / len(rows), 4)
         m["think_share"] = round(sum(r["has_think"] for r in rows) / len(rows), 4)
-        m["per_book"] = {b: C.primary_metrics(items, [r for r in rows if r["book"] == b])
+        m["per_book"] = {b: C.primary_metrics(items, [r for r in rows if r["book"] == b and r["sample"] < EVAL_K])
                          for b in sorted({r["book"] for r in rows})}
         result[name] = m
         with gzip.open(out.parent / f"{out.name}_{name}_answers.jsonl.gz", "wt", encoding="utf-8") as f:
@@ -354,6 +355,8 @@ def main() -> None:
     e.add_argument("--model", required=True)
     e.add_argument("--label", required=True)
     e.add_argument("--out", required=True)
+    e.add_argument("--sets", default=",".join(DEV_SETS))
+    e.add_argument("--k", type=int, default=EVAL_K)
     for name in ("sft", "grpo"):
         t = sub.add_parser(name)
         t.add_argument("--seed", type=int, required=True)

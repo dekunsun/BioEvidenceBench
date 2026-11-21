@@ -87,7 +87,7 @@ def build_train(units: list[dict], rng: random.Random) -> list[dict]:
 
 def build_dev(units: list[dict], rng: random.Random) -> list[dict]:
     out = []
-    for book in sorted(C.BOOKS):
+    for book in sorted(set(C.BOOKS) - {"Cuvier"}):
         us = sorted((u for u in units if u["book"] == book), key=lambda u: u["item_id"])
         out += rng.sample(us, min(DEV_PER_BOOK, len(us)))
     return sorted(out, key=lambda u: (u["book"], u["page_id"], u["line_no"]))

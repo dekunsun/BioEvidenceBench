@@ -161,6 +161,9 @@ case "$STAGE" in
     export RUN_ID
     run_job "$SETUP && $VENV/bin/python rl/training/stage3_p0.py all --seed ${STAGE#p0s} --out '$WS' --ckpt-root /workspace/ckpt --price '$PRICE'"
     ;;
+  test4)   # stage 4: frozen models on the locked test sets (TEST_PROTOCOL.md)
+    run_job "$SETUP && cd rl/training && $VENV/bin/python stage4_test.py --out '$WS'"
+    ;;
   sft600s1|sft600s2)   # stage 3 re-run of B and D with SFT 600 steps (Gloria, 2026-11-21); C is kept
     export RUN_ID
     run_job "$SETUP && $VENV/bin/python rl/training/stage3_p0.py all --seed ${STAGE#sft600s} --sft-steps 600 --conditions sft,sft_grpo --out '$WS' --ckpt-root /workspace/ckpt --price '$PRICE'"

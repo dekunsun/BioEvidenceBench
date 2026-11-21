@@ -26,7 +26,9 @@ BOOKS = {"Butler": ("Birds of Great Britain and Ireland, vol. 2", 1907, "English
          "Trudy": ("Trudy Russkago entomologicheskago obshchestva / Horae Societatis Entomologicae Rossicae, vol. 16",
                    1881, "German, French, Latin and Russian"),
          "Chitinskelett": ("Das Chitinskelett von Eosentomon (Zoologica 64)", 1912, "German"),
-         "Piscium": ("Piscium querelae et vindiciae", 1708, "Latin")}
+         "Piscium": ("Piscium querelae et vindiciae", 1708, "Latin"),
+         # held-out book, test only (BHL item 25923: title, volume, year and language FRE from the BHL metadata)
+         "Cuvier": ("Histoire naturelle des poissons, vol. 10", 1835, "French")}
 
 
 def prompt_messages(item: dict, version: str = PROMPT_VERSION) -> list[dict]:
