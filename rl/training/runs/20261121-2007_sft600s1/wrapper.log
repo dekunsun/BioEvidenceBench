@@ -1,0 +1,4 @@
+[20:07:50] run 20261121-2007_sft600s1: stage=sft600s1 max=120 min at $0.89/h on pod o2p398tz3x0js5
+[20:07:50] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID o2p398tz3x0js5
+[20:07:50] read check: Error: Unauthorized 
+[21:03:24] outcome=success minutes=55
