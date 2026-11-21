@@ -263,3 +263,27 @@ def test_a_word_read_wrong_is_a_substitution_not_a_deletion():
 
 def test_a_one_letter_word_in_the_context_is_not_evidence():
     assert T.classify_deletions("Z. 8 v. u. l. selten", "Z. u. 1. selten", "Z. 3 v. u. st.", "") == ([], ["8", "v"])
+
+
+# ---------------------------------------------------------------- format clean-up (module 7b)
+@pytest.mark.parametrize("raw, clean", [
+    ("<think>\nparua is parva\n</think>\n\n" + REF, REF),
+    ("Corrected line: " + REF, REF),
+    ('"' + REF + '"', REF),
+    ("```" + REF + "```", REF),
+    (REF + "\nNote: I fixed parua.", REF),
+    (REF, REF),
+    ("", ""),
+])
+def test_format_cleanup_removes_only_defined_wrappers(raw, clean):
+    assert T.format_cleanup(raw) == clean
+
+
+def test_format_cleanup_never_changes_the_text_it_keeps():
+    raw = "Here is the line: Muscicapa parua recorded in specirnens"
+    out = T.format_cleanup(raw)
+    assert out == "Muscicapa parua recorded in specirnens" and out in raw   # OCR errors left as they are
+
+
+def test_cleaned_answer_scores_as_the_plain_answer():
+    assert r(u(), T.format_cleanup("Corrected line: " + REF))["reward"] == 1.0

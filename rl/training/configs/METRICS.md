@@ -41,7 +41,7 @@ rest on the pooled paired comparisons below.
 |---|---|---|---|
 | P0 | Copy | – | the OCR unchanged (no model) |
 | P0 | A. Base | – | `Qwen/Qwen3-0.6B`, the post-trained instruct model (Gloria), task prompt, no training |
-| P0 | A′. Base + format clean-up | – | A's outputs through a fixed clean-up (drop a `<think>…</think>` block; keep the first non-empty line; strip a commentary prefix and wrapping quotes or Markdown); no GPU |
+| P0 | A′. Base + format clean-up | – | A's outputs through the fixed clean-up of section 3 (the same clean-up is applied to every condition for the post-processed metrics); no GPU |
 | P0 | B. SFT | 2 | supervised on (OCR → expert line) |
 | P0 | C. GRPO | 2 | Reward v1.3 |
 | P0 | D. SFT → GRPO | 2 | B, then C's training |
@@ -96,10 +96,26 @@ Candidates are found by the `REWARD_AUDIT.md` checks and by reading; each candid
 hand (Claude lists, Gloria confirms a sample of at least 20 or all if fewer). Also reported: the
 **high-reward violation rate** = confirmed violations ÷ answers with reward ≥ 0.75.
 
-**Format separated from content.** Every primary metric is also reported on format-valid answers
-only, and each gain over Base is split into (a) answers that went from format-invalid to valid and
-(b) better repairs among answers already valid. A′ shows how much a fixed clean-up closes without
-training.
+**Raw, format-valid and post-processed metrics (Gloria).** Every condition's answers are scored
+three ways, on the same test lines and the same decoding:
+
+| Metric | Answers scored | Question |
+|---|---|---|
+| Raw repair rate (and the other primary metrics) | as generated | how much repair the model's actual output delivers |
+| Format-valid rate | as generated | whether the model follows the output format |
+| **Post-processed** repair rate (and the others) | after the fixed clean-up | whether content improved once removable format differences are gone |
+
+The clean-up (`format_cleanup` in `src/rl_task_b.py`, with tests) is applied identically to every
+condition and never reads the reference: drop `<think>…</think>` blocks, keep the first non-empty
+line, drop a commentary prefix, drop one pair of wrapping quotes, backticks or Markdown asterisks.
+It only cuts: the code checks that the result is a contiguous piece of the answer, so it never
+infers, adds or rewrites content. Content comparisons rest on the post-processed metrics.
+
+Metrics on format-valid answers only are a **diagnostic, not evidence**: conditions differ in which
+lines they answer validly (a weak model may be valid mostly on easy lines), so these subsets select
+different populations. Likewise, splitting a gain into "format" and "content" parts is
+**descriptive**: two models' answers are not the same answer before and after training, so the
+split is not a causal attribution.
 
 Diagnostics, not success criteria: mean training reward (Reward v1.3), CER, case accuracy,
 `reward_reading` (ſ ≡ s), recoverable-deletion repair rate. **The training reward is never the
@@ -115,11 +131,12 @@ independent test pages, not the number of resamples.
 
 ## 5. Decision rules
 
-- **GRPO improves repair** if Δ(C − Base) and Δ(C − A′) on metric 1 have intervals above 0 in every
-  seed, and preservation passes the non-inferiority rule below.
-- **The gain is more than format** only if Δ(C − A′) on metric 1 among format-valid answers has an
-  interval above 0.
-- **SFT → GRPO adds to SFT** on the same terms with D and B.
+- **GRPO improves the delivered repair** if Δ(C − Base) on the raw repair rate has an interval above
+  0 in every seed, and preservation passes the non-inferiority rule below.
+- **GRPO improves content, not only format**, if Δ(C − Base) on the **post-processed** repair rate
+  (Base post-processed = A′) has an interval above 0 in every seed. If only the raw difference is
+  above 0, the result is reported as a format gain.
+- **SFT → GRPO adds to SFT** on the same two terms, with D and B (both post-processed for content).
 - **Preservation, non-inferiority** (Gloria: margin 1 point, provisional; review: as a
   non-inferiority margin): passes if the lower bound of Δ preservation is above −0.01; fails if the
   upper bound is below −0.01; otherwise **inconclusive** (never a pass by default).
@@ -146,8 +163,10 @@ RunPod's page); community capacity is not guaranteed.
 
 ## 7. Attribution (7c), fixed now
 
-pass@k before training (k = 1, 8) vs pass@1 after (Yue et al. 2025: RL may mostly re-rank what the
-base model can already sample); error types (name letters, ordinary words, ligatures, long s,
+pass@1 and pass@8 before and after training, with the same sampling settings (Gloria): if pass@1
+rises after training but pass@8 before training already found the same right answers, training may
+mainly have made existing answers more likely (Yue et al. 2025). This is an interpretation, not a
+proof; error types (name letters, ordinary words, ligatures, long s,
 numbers, punctuation, word splits); edit behaviour (edit rate, edit precision, edit recall);
 difficulty before training (0%, 10–90%, 100% pass); Gloria reads about 50 lines (wrong before /
 right after, and the reverse).

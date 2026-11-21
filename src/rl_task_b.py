@@ -383,6 +383,31 @@ def format_check(output, target: str) -> str:
     return ""
 
 
+_THINK_BLOCK = re.compile(r"<think\b.*?</think>", re.I | re.S)
+
+
+def format_cleanup(output) -> str:
+    """The fixed, deterministic clean-up applied to EVERY condition's answers for the post-processed
+    metrics (module 7b, METRICS.md). It only removes defined wrappers and never reads the
+    reference: drop `<think>...</think>` blocks; keep the first non-empty line; drop a commentary
+    prefix (`Corrected line:`...); drop one pair of wrapping quotes, backticks or Markdown
+    asterisks around the whole line. Guarantee, checked here: the result is one contiguous piece of
+    the answer (after the thinking block is removed), so no character is changed or added."""
+    if not isinstance(output, str):
+        return ""
+    text = _THINK_BLOCK.sub("", output)
+    line = next((x.strip() for x in text.splitlines() if x.strip()), "")
+    m = _COMMENTARY.match(line)
+    if m:
+        line = line[m.end():].strip()
+    for a, b in _WRAPPERS:
+        if len(line) > len(a) + len(b) and line.startswith(a) and line.endswith(b):
+            line = line[len(a):len(line) - len(b)].strip()
+            break
+    assert line in text, "clean-up must only cut, never rewrite"
+    return line
+
+
 def _score(unit, legacy_rows, out_rows, out, key, name_weight):
     """Repair rate, broken and inserted words under one comparison (`ok` or `ok_reading`).
 
