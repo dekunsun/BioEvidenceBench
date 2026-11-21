@@ -98,3 +98,4 @@ Result: `rl/release/publish_result.json`.
 SHA-256 `bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c`), tag at commit `c994ade`. Pod `20261121-2239_publish`, 3 minutes on an RTX 3090
 (about $0.03; RunPod balance unchanged at 18.84 at the time of writing). The private drafts were not
 changed.
+Public download checked by Gloria in a browser on 2026-11-21 ("可以下载，没问题"); this session's proxy returned 401 on the download link.
