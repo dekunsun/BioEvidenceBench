@@ -58,7 +58,20 @@ Edit precision = reference words the model changed that are now right ÷ words i
   and pass@8 not at all. Consistent with Yue et al. (2025): RL here makes answers the policy
   already samples slightly more likely; it did not reach answers outside that set.
 
-## 4. For Gloria
+## 4. Gloria's reading
 
-`reading_sheet_gloria.xlsx`: 43 test lines (25 "Base wrong, D right", 18 "Base right, D wrong";
-the second pool had only 13 in-book and 5 Cuvier lines), shuffled, with a comment column.
+**Gloria's reading of 43 test lines (2026-11-21; `results_7c/received/2026-11-21_reading_sheet_gloria.xlsx`).**
+Base wrong / D right (25 lines): every one is a repair that matches the expert line: misread letters
+(`coDected` → `collected`, `iu` → `in`, `e3'e` → `eye`), Latin endings (`acnminatd` → `acuminatâ`),
+long s (`obfcuritate` → `obſcuritate`), a ligature in a subfamily name (`EMBERIZINÆ`), French
+spacing (`delà` → `de la`); D also stops at the line-end hyphen and adds no word where Base
+continued or padded (R14, R26, R27, R29, R32, R36, R37). One caveat (R08): `V e r h o e f f` →
+`Verhoeff` only removes letter spacing, not a misreading. Measured on all test answers, letter-spaced
+words are about 3% of the words SFT and D repair, so they do not drive the gain.
+Base right / D wrong (18 lines): 13 change, add or drop letters of a correct word with no support
+on the line (`Visagapatam` → `Viseugapatam`, `Commerson` → `Comerson`, `Incertellus` → `Incertus`,
+`very least` for `veriest`); 4 apply a language prior the book does not follow (`valde` → `valdè`,
+`magnae` → `magnæ`, `l'interieur` → `l'intérieur`, `Stt.` → `Stett.`), which the reward rightly
+penalises; 1 (R40) is a scoring problem: D only changed the hyphen in `45-46` to an en dash and lost
+0.5 (hole H5 in `rl/REWARD_AUDIT.md`). So SFT → GRPO's errors are mostly unsupported rewriting of
+correct words, the behaviour the −0.5 penalty targets and which GRPO reduced by about a quarter.

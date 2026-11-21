@@ -4,7 +4,7 @@
 Design fixed before training in `rl/training/configs/METRICS.md`; locked test protocol in
 `rl/training/configs/TEST_PROTOCOL.md`, frozen with the model list (commit `1140608`) before any
 test line was scored. Development decisions are logged in `rl/LOG.md` (Chinese: `rl/PLAN_zh.md`
-section 14). Gloria's reward-hacking review is in section 6; her reading of 43 lines is still open.*
+section 14). Gloria's reward-hacking review and her reading of 43 lines are in section 6.*
 
 ## TL;DR
 
@@ -110,7 +110,7 @@ Details: `rl/training/results_7c/ATTRIBUTION_7C.md`.
 | Reward weaknesses seen | finishing a line-end hyphenated word scores 1.0 (H4); one invented word on a clean line scores 0.75; punctuation is not scored at all (section 6) |
 | Not measured | side effects on other tasks (task A) and on general ability |
 
-## 6. Open reviews and audits (to be filled)
+## 6. Reviews and audits
 
 - **Reward hacking** (METRICS.md 3, 5), reviewed by Gloria (30 blind candidates, all confirmed).
   Confirmed rate: **Base 2.2% in-book, 3.4% Cuvier** (above the 2% threshold: Reward v1.3 does not
@@ -120,9 +120,22 @@ Details: `rl/training/results_7c/ATTRIBUTION_7C.md`.
   and still score 1.0. It earns the same as the correct answer, Base does it (43 answers at 1.0), no
   trained model does, and GRPO training never rewarded it, so no completed run is affected; it is
   fixed in v1.4 before any further training. Details: `rl/REWARD_AUDIT.md` part 2.
-- **Reading 43 test lines** (`rl/training/results_7c/reading_sheet_gloria.xlsx`, Base wrong / D
-  right and the reverse). *Gloria's reading: pending.*
-- `rl/REWARD_AUDIT.md` part 2 (task B, 2026-11-21): probes on dev plus the test answers. No probe beats the honest answer; four holes: copying is a safe floor (H1, decided the GRPO result), one inserted word costs only 0.25 (H2, rare), punctuation unscored (H3, 7–12% of answers score 1.0 with different punctuation), line-end hyphen continuation free (H4, found by Gloria). Fixes are for a v1.4 tested on dev, not applied to this round.
+- **Gloria's reading of 43 test lines (2026-11-21; `results_7c/received/2026-11-21_reading_sheet_gloria.xlsx`).**
+  Base wrong / D right (25 lines): every one is a repair that matches the expert line: misread letters
+  (`coDected` → `collected`, `iu` → `in`, `e3'e` → `eye`), Latin endings (`acnminatd` → `acuminatâ`),
+  long s (`obfcuritate` → `obſcuritate`), a ligature in a subfamily name (`EMBERIZINÆ`), French
+  spacing (`delà` → `de la`); D also stops at the line-end hyphen and adds no word where Base
+  continued or padded (R14, R26, R27, R29, R32, R36, R37). One caveat (R08): `V e r h o e f f` →
+  `Verhoeff` only removes letter spacing, not a misreading. Measured on all test answers, letter-spaced
+  words are about 3% of the words SFT and D repair, so they do not drive the gain.
+  Base right / D wrong (18 lines): 13 change, add or drop letters of a correct word with no support
+  on the line (`Visagapatam` → `Viseugapatam`, `Commerson` → `Comerson`, `Incertellus` → `Incertus`,
+  `very least` for `veriest`); 4 apply a language prior the book does not follow (`valde` → `valdè`,
+  `magnae` → `magnæ`, `l'interieur` → `l'intérieur`, `Stt.` → `Stett.`), which the reward rightly
+  penalises; 1 (R40) is a scoring problem: D only changed the hyphen in `45-46` to an en dash and lost
+  0.5 (hole H5 in `rl/REWARD_AUDIT.md`). So SFT → GRPO's errors are mostly unsupported rewriting of
+  correct words, the behaviour the −0.5 penalty targets and which GRPO reduced by about a quarter.
+- `rl/REWARD_AUDIT.md` part 2 (task B, 2026-11-21): probes on dev plus the test answers. No probe beats the honest answer; five holes: copying is a safe floor (H1, decided the GRPO result), one inserted word costs only 0.25 (H2, rare), punctuation unscored (H3, 7–12% of answers score 1.0 with different punctuation), line-end hyphen continuation free (H4, found by Gloria), dash glyphs scored inconsistently (H5, found by Gloria; 16% of in-book damaged words differ only in a dash; SFT's repair rate without them is 0.39, so the conclusions hold). Fixes are for a v1.4 tested on dev, not applied to this round.
 
 ## 7. Development decisions and deviations (all on dev or before the test; none after it)
 
