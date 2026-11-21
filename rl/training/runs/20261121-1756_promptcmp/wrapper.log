@@ -1,0 +1,4 @@
+[17:56:47] run 20261121-1756_promptcmp: stage=promptcmp max=30 min at $0.89/h on pod nfk4unw9h2ir68
+[17:56:47] runpodctl: /usr/bin/runpodctl; RUNPOD_API_KEY set; RUNPOD_POD_ID nfk4unw9h2ir68
+[17:56:48] read check: Error: Unauthorized 
+[18:01:36] outcome=success minutes=4

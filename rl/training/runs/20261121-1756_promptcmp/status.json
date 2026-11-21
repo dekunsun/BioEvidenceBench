@@ -1,0 +1,10 @@
+{
+  "run_id": "20261121-1756_promptcmp",
+  "stage": "promptcmp",
+  "outcome": "success",
+  "minutes": 4.82,
+  "usd_estimate": 0.0714,
+  "usd_per_hour": 0.89,
+  "pod_id": "nfk4unw9h2ir68",
+  "gpu": "NVIDIA+GeForce+RTX+4090"
+}

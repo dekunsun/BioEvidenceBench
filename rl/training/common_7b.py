@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import rl_task_b as T  # noqa: E402
 
 PROMPTS = ROOT / "rl" / "env" / "task_b_ocr_repair" / "prompts"
-PROMPT_VERSION = "repair_v2"          # changed only by a logged dev-set decision
+PROMPT_VERSION = "repair_v3"          # dev decision 2026-11-21 (runs/20261121-1756_promptcmp/REPORT.md); never changed on test
 PROMPT_FILE = PROMPTS / f"{PROMPT_VERSION}.txt"
 MODEL_ID = "Qwen/Qwen3-0.6B"          # the post-trained instruct model (Gloria, 2026-11-21)
 BOOKS = {"Butler": ("Birds of Great Britain and Ireland, vol. 2", 1907, "English"),

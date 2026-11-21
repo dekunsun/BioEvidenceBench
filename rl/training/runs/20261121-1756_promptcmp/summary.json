@@ -1,0 +1,99 @@
+{
+  "repair_v2|rollout_T1.0": {
+    "items_with_signal": 0.565,
+    "mean_reward_raw": -0.0643,
+    "mean_reward_post": -0.0729,
+    "pass_rate_raw": 0.0387,
+    "pass_rate_post": 0.0401,
+    "format_invalid_share": 0.0251,
+    "format_failure_kinds": {
+      "several lines": 35,
+      "commentary prefix": 2
+    },
+    "think_share": 0.0,
+    "truncated_share": 0.0048,
+    "run_on_share": 0.4164,
+    "run_on_kinds": {
+      "next": 411,
+      "previous": 37,
+      "both": 61,
+      "other": 104
+    },
+    "line_tag_share": 0.0,
+    "generation_seconds": 80.9,
+    "out_tokens_total": 44114
+  },
+  "repair_v2|card_nonthinking": {
+    "items_with_signal": 0.185,
+    "mean_reward_raw": -0.0191,
+    "mean_reward_post": -0.0208,
+    "pass_rate_raw": 0.0496,
+    "pass_rate_post": 0.0496,
+    "format_invalid_share": 0.0143,
+    "format_failure_kinds": {
+      "several lines": 21
+    },
+    "think_share": 0.0,
+    "truncated_share": 0.0027,
+    "run_on_share": 0.4083,
+    "run_on_kinds": {
+      "next": 434,
+      "previous": 33,
+      "both": 57,
+      "other": 77
+    },
+    "line_tag_share": 0.0,
+    "generation_seconds": 3.0,
+    "out_tokens_total": 43100
+  },
+  "repair_v3|rollout_T1.0": {
+    "items_with_signal": 0.543,
+    "mean_reward_raw": 0.0957,
+    "mean_reward_post": 0.0943,
+    "pass_rate_raw": 0.1535,
+    "pass_rate_post": 0.1542,
+    "format_invalid_share": 0.0061,
+    "format_failure_kinds": {
+      "commentary prefix": 5,
+      "wrapped in *": 2,
+      "several lines": 2
+    },
+    "think_share": 0.0,
+    "truncated_share": 0.0,
+    "run_on_share": 0.017,
+    "run_on_kinds": {
+      "next": 8,
+      "previous": 2,
+      "both": 1,
+      "other": 14
+    },
+    "line_tag_share": 0.0,
+    "generation_seconds": 2.4,
+    "out_tokens_total": 29938
+  },
+  "repair_v3|card_nonthinking": {
+    "items_with_signal": 0.185,
+    "mean_reward_raw": 0.1622,
+    "mean_reward_post": 0.1622,
+    "pass_rate_raw": 0.1821,
+    "pass_rate_post": 0.1821,
+    "format_invalid_share": 0.0,
+    "format_failure_kinds": {},
+    "think_share": 0.0,
+    "truncated_share": 0.0007,
+    "run_on_share": 0.0156,
+    "run_on_kinds": {
+      "next": 14,
+      "previous": 2,
+      "both": 0,
+      "other": 7
+    },
+    "line_tag_share": 0.0,
+    "generation_seconds": 2.3,
+    "out_tokens_total": 30007
+  },
+  "gate": {
+    "rule": "items_with_signal at rollout_T1.0 >= 0.2",
+    "passed": true
+  }
+}

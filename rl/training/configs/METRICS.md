@@ -60,6 +60,11 @@ budgets; equal steps are not called equal compute.
 
 ## 2a. Prompts and decoding (thinking mode off everywhere)
 
+- **Prompt version `repair_v3`** (dev decision, Gloria, 2026-11-21, before P0): context lines first, the line
+  to repair last inside `<line>…</line>`, stop where the marked line ends. Chosen over `repair_v2` on the
+  184 stage-1 dev items (run-on 41% → 2%, pass rate 4% → 15% at T 1.0, items with signal 56% → 54%;
+  `rl/training/runs/20261121-1756_promptcmp/REPORT.md`). Used by every condition; never changed on the
+  locked test set.
 - **One prompt renderer for every stage**: `tokenizer.apply_chat_template(..., add_generation_prompt=True,
   enable_thinking=False)`, rendered once and passed on as plain strings to SFT, GRPO and evaluation
   (TRL's `GRPOConfig` has `chat_template_kwargs`, `SFTConfig` has no such option, so trainer-side
