@@ -383,7 +383,11 @@ after SFT raised pass@1 by under a point and left pass@8 unchanged, as Yue et al
 audit found five holes; two (finishing a word split at the line end; inconsistent dash glyphs) were found
 only by reading answers by hand, and no trained model exploited them. The SFT checkpoint is released as a
 research model ([`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)); details in [RL results](rl_results.md).
-GPU cost was about US$5.86.
+**[exploratory]** Put in front of extraction (legacy OCR of the 16 test pages repaired line by line, then
+the frozen G1 with Opus), the released model lifted value F1 from 0.60 to 0.67 (Butler) and 0.64 to 0.72
+(Reeve), paired page bootstrap +0.07 and +0.08, about a fifth of the gap to modern OCR; it fixed 31 of 350
+test mentions and turned 6 correct names into other names (`B. oreades` → `B. ovoletes`).
+GPU cost was about US$5.93, the pipeline test included.
 
 ---
 
@@ -448,7 +452,7 @@ did not.
 - **Linking** was scored on birds only (34 names); molluscs, with heavier synonymy, were deferred.
 - **Review time** comes from 9 timed spot-check items, not a review-time study.
 - **The training study** used one 0.6B model, one reward family and two seeds, and measured line repair, not
-  extraction; whether the repaired text raises extraction F1 is untested.
+  extraction; its test inside the extraction pipeline was designed after unsealing (exploratory).
 - **AI assistance.** The pipeline, scorer and documents were built with an AI coding assistant (Claude
   Code), and Claude models are among those evaluated. The assistant never created or pre-filled gold
   labels and did not review test labels for omissions; every labelling decision was made by the labeller
@@ -474,7 +478,7 @@ Repository: [github.com/dekunsun/BioEvidenceBench](https://github.com/dekunsun/B
 [annotation guide](../ANNOTATION_GUIDE.md) · [pre-registration](../PREREGISTRATION.md) ·
 [deviations](../DEVIATIONS.md) · [training study](rl_results.md) and [released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1).
 Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata: CC0. Total API spend for the
-project was about US$50; GPU spend for the training study about US$6.
+project was US$55.65 ([evaluation settings](eval_settings.md)); GPU spend for the training study about US$6.
 
 ## Acknowledgements
 

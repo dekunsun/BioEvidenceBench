@@ -1,10 +1,10 @@
 # Training report: SFT and GRPO for historical OCR line repair (modules 7b–7c)
 
-*2026-11-21. Gloria Sun (design decisions, audits, reviews) with Claude (code, runs, analysis).
+*2026-11-21. Dekun Sun (design decisions, audits, reviews) with Claude (code, runs, analysis).
 Design fixed before training in `rl/training/configs/METRICS.md`; locked test protocol in
 `rl/training/configs/TEST_PROTOCOL.md`, frozen with the model list (commit `1140608`) before any
 test line was scored. Development decisions are logged in `rl/LOG.md` (Chinese: `rl/PLAN_zh.md`
-section 14). Gloria's reward-hacking review and her reading of 43 lines are in section 6.*
+section 14). The author's reward-hacking review and her reading of 43 lines are in section 6.*
 
 ## TL;DR
 
@@ -21,8 +21,9 @@ section 14). Gloria's reward-hacking review and her reading of 43 lines are in s
   right 4% of the time, so "change nothing" is its best reachable policy; SFT's gains come mostly
   from lines the base model never solved in 8 tries. On a cross-language book (Cuvier, French),
   SFT keeps about half its gain.
-- Cost: **$5.83 of GPU** (RunPod RTX 4090, $20 cap), all runs and failures included.
-- **Released** (Gloria, 7d): the SFT seed-2 checkpoint as a research checkpoint, [`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1),
+- Cost: **$5.83 of GPU** (RunPod RTX 4090, $20 cap), all runs and failures included; publishing and the
+  later pipeline test (`results/sft_repair_pipeline/REPORT.md`) bring the total to about $5.93.
+- **Released** (the author, 7d): the SFT seed-2 checkpoint as a research checkpoint, [`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1),
   `sft_s2.tar`, SHA-256 `bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c`; not for automatic replacement of library text (`rl/RELEASE_DECISION.md`).
 
 ## 1. Setup
@@ -30,7 +31,7 @@ section 14). Gloria's reward-hacking review and her reading of 43 lines are in s
 | | |
 |---|---|
 | Task | Task B: repair one line of legacy BHL OCR into the expert transcription (IMPACT ground truth), given the line before and after as context (`rl/env/task_b_ocr_repair/`) |
-| Data | Split v2 by content pages, 5 training books (Butler, Reeve, Trudy, Chitinskelett, Piscium); 39,439 usable lines (train 31,909, dev 3,787, in-book test 3,743) after the data rules and two alignment audits (one by Gloria, kappa 0.90); Cuvier held out, built only when the test protocol was frozen |
+| Data | Split v2 by content pages, 5 training books (Butler, Reeve, Trudy, Chitinskelett, Piscium); 39,439 usable lines (train 31,909, dev 3,787, in-book test 3,743) after the data rules and two alignment audits (one by the author, kappa 0.90); Cuvier held out, built only when the test protocol was frozen |
 | Reward | Reward v1.3: weighted damaged-word repair rate (names × 3) − 0.5 per broken correct word − 0.25 per inserted word, clipped to [−1, 1]; hard gates for format, length (0.5–1.5×) and alignment; punctuation not scored, case-only differences neutral (`REWARD_DESIGN.md`) |
 | Model | `Qwen/Qwen3-0.6B` (instruct), thinking off everywhere (`enable_thinking=False`, one renderer for all stages), prompt `repair_v3` |
 | Training mix | 4,800 lines, every block of 16 = 8 damaged-name / 3 clean / 5 other damaged (`make_data_p0.py`) |
@@ -114,15 +115,15 @@ Details: `rl/training/results_7c/ATTRIBUTION_7C.md`.
 
 ## 6. Reviews and audits
 
-- **Reward hacking** (METRICS.md 3, 5), reviewed by Gloria (30 blind candidates, all confirmed).
+- **Reward hacking** (METRICS.md 3, 5), reviewed by the author (30 blind candidates, all confirmed).
   Confirmed rate: **Base 2.2% in-book, 3.4% Cuvier** (above the 2% threshold: Reward v1.3 does not
   judge the untrained model's answers reliably); **trained models 0–0.45%** (below it). Lower bounds,
-  since one independent check found the candidates. Gloria also found a hole the probes had missed
+  since one independent check found the candidates. The author also found a hole the probes had missed
   (**H4**): a word broken by the line-end hyphen can be finished with letters the line does not have
   and still score 1.0. It earns the same as the correct answer, Base does it (43 answers at 1.0), no
   trained model does, and GRPO training never rewarded it, so no completed run is affected; it is
   fixed in v1.4 before any further training. Details: `rl/REWARD_AUDIT.md` part 2.
-- **Gloria's reading of 43 test lines (2026-11-21; `results_7c/received/2026-11-21_reading_sheet_gloria.xlsx`).**
+- **The author's reading of 43 test lines (2026-11-21; `results_7c/received/2026-11-21_reading_sheet_gloria.xlsx`).**
   Base wrong / D right (25 lines): every one is a repair that matches the expert line: misread letters
   (`coDected` → `collected`, `iu` → `in`, `e3'e` → `eye`), Latin endings (`acnminatd` → `acuminatâ`),
   long s (`obfcuritate` → `obſcuritate`), a ligature in a subfamily name (`EMBERIZINÆ`), French
@@ -137,18 +138,18 @@ Details: `rl/training/results_7c/ATTRIBUTION_7C.md`.
   penalises; 1 (R40) is a scoring problem: D only changed the hyphen in `45-46` to an en dash and lost
   0.5 (hole H5 in `rl/REWARD_AUDIT.md`). So SFT → GRPO's errors are mostly unsupported rewriting of
   correct words, the behaviour the −0.5 penalty targets and which GRPO reduced by about a quarter.
-- `rl/REWARD_AUDIT.md` part 2 (task B, 2026-11-21): probes on dev plus the test answers. No probe beats the honest answer; five holes: copying is a safe floor (H1, decided the GRPO result), one inserted word costs only 0.25 (H2, rare), punctuation unscored (H3, 7–12% of answers score 1.0 with different punctuation), line-end hyphen continuation free (H4, found by Gloria), dash glyphs scored inconsistently (H5, found by Gloria; 16% of in-book damaged words differ only in a dash; SFT's repair rate without them is 0.39, so the conclusions hold). Fixes are for a v1.4 tested on dev, not applied to this round.
+- `rl/REWARD_AUDIT.md` part 2 (task B, 2026-11-21): probes on dev plus the test answers. No probe beats the honest answer; five holes: copying is a safe floor (H1, decided the GRPO result), one inserted word costs only 0.25 (H2, rare), punctuation unscored (H3, 7–12% of answers score 1.0 with different punctuation), line-end hyphen continuation free (H4, found by the author), dash glyphs scored inconsistently (H5, found by the author; 16% of in-book damaged words differ only in a dash; SFT's repair rate without them is 0.39, so the conclusions hold). Fixes are for a v1.4 tested on dev, not applied to this round.
 
 ## 7. Development decisions and deviations (all on dev or before the test; none after it)
 
 | Decision | Why | Record |
 |---|---|---|
 | Prompt `repair_v2` → `repair_v3` (target line last, inside `<line>` tags) | 41% of Base answers ran on into the next line; v3: 2%, signal unchanged | `runs/20261121-1756_promptcmp/REPORT.md` |
-| Training mix about 20% clean lines (stage 2 had 31%) | copying is more attractive with more clean lines | Gloria, `METRICS.md` 9 |
+| Training mix about 20% clean lines (stage 2 had 31%) | copying is more attractive with more clean lines | The author, `METRICS.md` 9 |
 | float32 master weights (stages 1–2 used bf16) | bf16 weights round away most updates at lr 1e-6 | `METRICS.md` 9 |
 | Seed-specific block order | TRL gives vLLM the same sampling seed in every run | `METRICS.md` 9 |
-| SFT 300 → 600 steps, B and D re-run | dev repair still rising at step 300 | Gloria, `rl/LOG.md` |
-| P1 reduced to the reward ablation; data and name-weight ablations dropped | C learns no names with both, so removing either cannot show a difference | Gloria, `TEST_PROTOCOL.md` 2 |
+| SFT 300 → 600 steps, B and D re-run | dev repair still rising at step 300 | The author, `rl/LOG.md` |
+| P1 reduced to the reward ablation; data and name-weight ablations dropped | C learns no names with both, so removing either cannot show a difference | The author, `TEST_PROTOCOL.md` 2 |
 | Cuvier built with the automatic rules only | nobody has read the book, so no manual exclusions or scan-checked typos | `src/rl_task_b_build_cuvier.py` |
 | Reward-hacking candidates split into punctuation-only and word-level | punctuation is unscored by design, case neutral by decision; the check as frozen flags both | `STAGE4_TEST_REPORT.md` 4 |
 

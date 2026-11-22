@@ -51,7 +51,7 @@ makes every judgment, and every judgment leaves a record.**
 | The AI never writes or pre-fills gold labels; it types in only decisions the labeller made explicitly, each logged | A model under test must not help set the exam; every change traces to who, when and which sentence |
 | The AI does not review test labels for omissions or attribute errors | Same reason; it supplies facts ("is this word in the OCR input?"), the person judges |
 | Deliveries are archived and committed unchanged before any comparison | Independence of the labels can be shown afterwards |
-| A small paid pilot first, cost per page reported, then a go-ahead; a cap on every run | Total API spend about $49, no overrun |
+| A small paid pilot first, cost per page reported, then a go-ahead; a cap on every run | Total API spend $55.65 (per run in `eval_settings.md`), no overrun |
 | Caps need headroom | One Gemini cap set too tight left 3 requests unsent and cost a re-run |
 | Decisions go into `CLAUDE.md` with the date and the labeller's own words | After a new session or a context reset, the assistant still knows what is settled |
 | Questions that need a person are grouped, each with a recommendation | 23 disagreements in 9 groups were adjudicated in one sentence |
@@ -95,7 +95,7 @@ That is two cases, not a rule.
 | Groups with no reward difference rose from about 50% to 95% while the training reward rose | A falling learning signal can mean success or collapse; the reward alone cannot tell which | Log every completion with its step and reward, and watch the copy share, entropy and a dev metric beside the reward |
 | GRPO after SFT raised the training reward from 0.54 to 0.65 with no repair gain on dev or test | Training reward is not the measure of success | Fix the success metrics and decision rules before training, and judge only on held-out lines |
 | 41% of the untrained model's answers ran on into the next line, because the prompt put the next line just before the answer | The input layout can be the real cause of a "model" failure | Read the answers that fail before tuning anything; put the item to act on last and mark its boundary |
-| The automated probes found three reward holes; Gloria's manual reading found two more (finishing a line-end hyphenated word scored 1.0; dash glyphs scored inconsistently) | Constructed attacks only find what you thought of | Have a person read high-reward answers blind to the model; keep each hole as a failing test until it is fixed |
+| The automated probes found three reward holes; the author's manual reading found two more (finishing a line-end hyphenated word scored 1.0; dash glyphs scored inconsistently) | Constructed attacks only find what you thought of | Have a person read high-reward answers blind to the model; keep each hole as a failing test until it is fixed |
 | bf16 weights would have rounded away most updates at lr 1e-6 | Precision is part of the experiment | Train with float32 master weights, or check that updates survive at the chosen learning rate |
 | TRL gives vLLM the same sampling seed in every run | Two "seeds" can be nearly the same run | Check what a seed actually changes; vary data order or sampling explicitly |
 | Name-word counts were first reported per answer (×4), not per word | Counts and rates need the same unit check as code | Recompute every count from the test file itself before writing it down |

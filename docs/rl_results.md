@@ -1,6 +1,6 @@
 # RL post-training results: repairing historical OCR with SFT and GRPO
 
-*Module 7 of BioEvidenceBench, 2026-11-20 to 2026-11-21. Gloria Sun (design decisions, audits,
+*Module 7 of BioEvidenceBench, 2026-11-20 to 2026-11-21. Dekun Sun (design decisions, audits,
 reviews, release decision) with Claude (code, runs, analysis). The full record of every step is
 `rl/LOG.md` (Chinese: `rl/PLAN_zh.md` section 14). Paths in backticks are relative to the
 repository root.*
@@ -23,11 +23,11 @@ repository root.*
   never penalises copying and costs 0.5 per broken word. SFT's gain comes mostly from lines the base
   model never solved in 8 tries: it supplies answers, RL only re-weights them.
 - **On an unseen book and language** (Cuvier 1835, French), SFT keeps about half its gain (0.21).
-- **The reward had five holes**, two of them found by Gloria's manual review, not by the automated
+- **The reward had five holes**, two of them found by the author's manual review, not by the automated
   probes. None was exploited by a trained model; one (copying is a safe floor) decided the result.
 - **Released**: the SFT seed-2 checkpoint as a research checkpoint,
   [`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1),
-  not for automatic replacement of library text. **GPU spend: about $5.86** of a $20 cap.
+  not for automatic replacement of library text. **GPU spend: about $5.93** of a $20 cap.
 
 ## 1. Why this task
 
@@ -45,8 +45,8 @@ expert transcription, not downstream extraction F1.
 | Unit | one line of the expert transcription (IMPACT ground truth) paired with the legacy BHL OCR aligned to it, plus the nearest OCR line above and below as context |
 | Books | five for training, development and in-book test: Butler 1907 (English), Reeve 1849 (Latin and English), *Horae Societatis Entomologicae Rossicae* 1881 (German, French, Latin, Russian), *Das Chitinskelett von Eosentomon* 1913 (German), *Piscium querelae et vindiciae* 1708 (Latin); **Cuvier 1835 (French) held out**, never read until the test protocol was frozen |
 | Split | by contiguous content pages (split v2): train 31,909 lines, dev 3,787, in-book test 3,743 |
-| Lines set aside | unreadable characters in the reference, mixed-script words, index lines with leader dots, words the OCR lost and the context cannot supply, confirmed transcription typos (12 checked by Gloria against the scans, 9 confirmed), 5 manual exclusions |
-| Alignment audit | two rounds; Gloria independently judged 30 pairs: same-line agreement 27 / 28, kappa 0.90 |
+| Lines set aside | unreadable characters in the reference, mixed-script words, index lines with leader dots, words the OCR lost and the context cannot supply, confirmed transcription typos (12 checked by the author against the scans, 9 confirmed), 5 manual exclusions |
+| Alignment audit | two rounds; the author independently judged 30 pairs: same-line agreement 27 / 28, kappa 0.90 |
 | Prompt | `repair_v3`: context lines first, the line to repair last inside `<line>…</line>`, "stop where the marked line ends" (section 4.3) |
 | Model | `Qwen/Qwen3-0.6B`, instruct, thinking mode off in every stage (`enable_thinking=False`, one renderer for SFT, GRPO and evaluation) |
 
@@ -62,7 +62,7 @@ characters and apostrophes are folded; punctuation is not scored.
 | | |
 |---|---|
 | Conditions (P0) | Copy (the OCR), A = Base, A′ = Base after a fixed format clean-up, B = SFT, C = GRPO from Base, D = SFT → GRPO; two seeds per trained condition |
-| Ablations | P1: C with the reward 1 − CER (one seed). The data ablation (no name oversampling) and the name-weight ablation were dropped, with Gloria's agreement, before any test result: C learned no names with both, so removing either could not show a difference |
+| Ablations | P1: C with the reward 1 − CER (one seed). The data ablation (no name oversampling) and the name-weight ablation were dropped, with the author's agreement, before any test result: C learned no names with both, so removing either could not show a difference |
 | Primary metrics | damaged-word repair rate; scientific-name exact recovery; correct-word preservation; format-failure rate; raw and after the fixed clean-up |
 | Statistics | paired Δ on the same lines, 95% interval from 2,000 bootstrap resamples of page blocks; a claim needs every seed's interval on the same side of 0; preservation by non-inferiority (margin 1 point, "inconclusive" is never a pass) |
 | Reward hacking | an answer with reward ≥ 0.75 that violates a requirement checked independently of the reward, confirmed by hand; more than 2% in a condition means the verifier is not reliable for it |
@@ -80,11 +80,11 @@ characters and apostrophes are folded; punctuation is not scored.
 
 ### 4.2 Why answers ran on
 
-Gloria asked whether the input boundary was ambiguous. No input contained a newline; the cause was
+The author asked whether the input boundary was ambiguous. No input contained a newline; the cause was
 the prompt layout: v2 put the *next* line last, right before the answer, and sentences flow across
 lines, so 70% of run-ons appended the next line.
 
-### 4.3 Prompt v2 vs v3 (a logged development revision, approved by Gloria before P0)
+### 4.3 Prompt v2 vs v3 (a logged development revision, approved by the author before P0)
 
 | Base model, 184 dev items × 8 answers | v2, T 1.0 | v3, T 1.0 | v2, eval decoding | v3, eval decoding |
 |---|---|---|---|---|
@@ -100,7 +100,7 @@ v3 removed the confound without reducing the learning signal; it is the prompt f
 ### 4.4 Settings fixed before the P0 runs
 
 - Training mix: 4,800 lines; every block of 16 (one GRPO step) holds 8 lines with a damaged
-  scientific name, 3 clean lines (19%, Gloria: "about 20%") and 5 other damaged lines.
+  scientific name, 3 clean lines (19%, the author: "about 20%") and 5 other damaged lines.
 - SFT lr 1e-5; GRPO: 8 answers per prompt, 16 prompts per step, T 1.0, `dapo` loss, std scaling per
   group, β = 0, lr 1e-6, vLLM colocated, 300 steps.
 - **Float32 master weights** with bf16 autocast: bf16 weights round away most updates at lr 1e-6
@@ -117,7 +117,7 @@ v3 removed the confound without reducing the learning signal; it is the prompt f
 |---|---|---|
 | Base repair | 0.061 | 0.061 |
 | B, SFT 300 steps | 0.324 | 0.315 |
-| **B, SFT 600 steps** (re-run, Gloria: SFT was still improving at step 300) | **0.358** (step 600) | **0.361** (step 400) |
+| **B, SFT 600 steps** (re-run, the author: SFT was still improving at step 300) | **0.358** (step 600) | **0.361** (step 400) |
 | C, GRPO from Base | 0.012 | 0.057 |
 | D, SFT 600 → GRPO | 0.353 (step 50) | 0.347 (step 50) |
 | C-CER, GRPO with 1 − CER (P1) | 0.047 (step 250) | – |
@@ -216,7 +216,7 @@ exactly what the −0.5 penalty asks for.
 **By difficulty before training**: on the 289 in-book lines Base never got right in 8 tries, SFT
 reaches pass@1 0.30 (GRPO 0.12–0.13, almost all from copying clean lines it used to damage).
 
-**Gloria's reading of 43 test lines** (Base wrong / D right, and the reverse): all 25 "D right" lines
+**The author's reading of 43 test lines** (Base wrong / D right, and the reverse): all 25 "D right" lines
 are genuine repairs matching the expert line (misread letters, Latin endings, long s, a ligature
 in a subfamily name), and D stops at the line-end hyphen where Base continued. Of 18 "D wrong" lines,
 13 change correct words with no support on the line (`Visagapatam` → `Viseugapatam`), 4 apply a
@@ -234,10 +234,10 @@ several lines, run-on, commentary, writing the line twice.
 | **H1** Copying is a safe floor (0 on a damaged line, never negative; a broken word −0.5; under 1 − CER copying scores 0.81–0.90) | stop repairing | **decided the GRPO result** |
 | **H2** One inserted word costs only 0.25 (an invented word on a clean line scores 0.75) | pad lines | Base 2.4% of test answers, trained ≤ 0.15% |
 | **H3** Punctuation is not scored | ignore punctuation | 7–12% of answers score 1.0 with different punctuation |
-| **H4** A word broken by the line-end hyphen can be finished for free (`au-` → `au-dessus` scores 1.0), *found by Gloria* | continue the next line's word | Base 43 test answers at 1.0; no trained model; never rewarded in training |
-| **H5** Dash glyphs scored inconsistently (`45-46` → `45–46` loses 0.5; 16% of in-book damaged words differ only in a dash glyph), *found by Gloria* | unfair penalties; credit for learning the edition's dash habit | SFT's repair rate without dash-only words is 0.39 instead of 0.40; no conclusion changes |
+| **H4** A word broken by the line-end hyphen can be finished for free (`au-` → `au-dessus` scores 1.0), *found by the author* | continue the next line's word | Base 43 test answers at 1.0; no trained model; never rewarded in training |
+| **H5** Dash glyphs scored inconsistently (`45-46` → `45–46` loses 0.5; 16% of in-book damaged words differ only in a dash glyph), *found by the author* | unfair penalties; credit for learning the edition's dash habit | SFT's repair rate without dash-only words is 0.39 instead of 0.40; no conclusion changes |
 
-**Confirmed reward hacking** (Gloria judged 30 blind candidates, all violations): **Base 2.2% in-book,
+**Confirmed reward hacking** (the author judged 30 blind candidates, all violations): **Base 2.2% in-book,
 3.4% Cuvier**, above the 2% threshold, so Reward v1.3 is not a reliable judge of the untrained model;
 **trained models 0–0.45%**. These are lower bounds (one independent check found the candidates).
 Fixes go into Reward v1.4, which is planned and not built (decided so far: all dash glyphs compared
@@ -247,11 +247,11 @@ as one class). A strict-xfail test documents H4.
 
 | | |
 |---|---|
-| Decision (Gloria) | publish **B, SFT seed 2** as a research checkpoint; no production use; no further GPU training for now |
+| Decision (the author) | publish **B, SFT seed 2** as a research checkpoint; no production use; no further GPU training for now |
 | Why B, not D | B meets every pre-registered criterion D meets; D's extra GRPO step buys 0.3 points of preservation and no repair. Seed chosen on dev (0.361 vs 0.358), not on a test result |
 | Why not production | 40% repair in-book, 21% on the French book, and about 1.8% of correct words changed: a library would introduce new errors into correct text |
 | Pre-release checks | file is the one tested (frozen asset id and size); SHA-256 computed; tar holds only model and tokenizer files; licences (Qwen3-0.6B Apache 2.0, `finebooks/bhl-impact-gt` CC-BY 3.0, all six BHL items not in copyright); model card with results, regressions and out-of-scope use |
-| Release | [`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1): `sft_s2.tar`, 1,203,578,880 bytes, SHA-256 `bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c`, tag at training commit `c994ade`; download checked by Gloria |
+| Release | [`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1): `sft_s2.tar`, 1,203,578,880 bytes, SHA-256 `bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c`, tag at training commit `c994ade`; download checked by the author |
 
 ## 10. Cost
 
@@ -266,7 +266,8 @@ as one class). A strict-xfail test documents H4.
 | P1 reward ablation | 44 | $0.65 |
 | Locked test | 17 | $0.25 |
 | Publishing | 3 | $0.03 |
-| **Total** | | **$5.52 by run time; about $5.86 by RunPod balance** (pod start-up and deletion delays included) |
+| Pipeline test: repair the 22 sample pages (section 14) | 5 | $0.07 |
+| **Total** | | **$5.59 by run time; about $5.93 by RunPod balance** (pod start-up and deletion delays included) |
 
 All on RunPod, mostly Secure RTX 4090 at $0.89/h. Earlier, the task B API trial (Haiku and Opus as
 policies on 200 dev items) cost $4.24 of Claude API budget, separately.
@@ -278,7 +279,7 @@ prompt v2 → v3; training mix with about 20% clean lines; float32 master weight
 order; SFT 300 → 600 steps (B and D re-run); P1 reduced to the reward ablation; Cuvier built with the
 automatic rules only (nobody had read it); reward-hacking candidates split into punctuation-only and
 word-level, because punctuation is unscored by design. **Deviation:** the plan asked for release
-criteria written by Gloria before the results; none were written separately, so the release decision
+criteria written by the author before the results; none were written separately, so the release decision
 applies only the pre-registered decision rules and marks its practical criteria as written afterwards.
 
 ## 12. What this cannot show
@@ -287,7 +288,7 @@ applies only the pre-registered decision rules and marks its practical criteria 
   help" holds for this setting, not for GRPO in general.
 - The in-book test has 12 independent page blocks, so intervals are coarse; Cuvier's name results rest
   on 10 words.
-- Line repair is not extraction: whether the repaired text raises extraction F1 was not measured.
+- Line repair is not extraction: the pipeline test (section 14) was designed after unsealing and is exploratory.
 - All texts are public and may be in the base model's pre-training data.
 - Reward v1.3 ignores punctuation; every metric here inherits that blind spot.
 
@@ -339,7 +340,7 @@ beside the repair. Rules fixed before the run: `results/sft_repair_pipeline/PLAN
   - **GRPO 无效**：从原模型直接做 GRPO，模型学会原样照抄 OCR；种子 1 和留出书上的修复率比未训练时还低。SFT 之后再做 GRPO，修复率不变，只是改坏的词少了约四分之一。
 - **原因**：GRPO 只能强化模型已经会写出来的答案。原模型的改动只有 4% 是对的，而奖励对照抄从不扣分、改坏一个词扣 0.5，所以"不改"是它能学到的最好策略。SFT 的提升主要来自原模型 8 次都做不对的行：SFT 提供新答案，RL 只是在已有答案之间重新分配概率。
 - **留出书**：在没见过的法语书 Cuvier 上，SFT 保留了约一半的提升（0.21）。
-- **奖励审计**：找到五个漏洞，其中两个（H4 行末断词续写、H5 横线字形）是 Gloria 人工审查时发现的，自动探针没有发现。训练过的模型都没有利用这些漏洞，但"照抄是安全的保底"（H1）直接决定了 GRPO 的结果。经 Gloria 确认的钻空子比例：原模型 2.2–3.4%（超过 2% 门槛），训练过的模型 0–0.45%。
-- **发布**：SFT 种子 2 作为研究用检查点公开（`rl-sft-ocr-repair-v1`），不可用于自动替换原文。GPU 总花费约 $5.86，上限 $20。
+- **奖励审计**：找到五个漏洞，其中两个（H4 行末断词续写、H5 横线字形）是作者人工审查时发现的，自动探针没有发现。训练过的模型都没有利用这些漏洞，但"照抄是安全的保底"（H1）直接决定了 GRPO 的结果。经作者确认的钻空子比例：原模型 2.2–3.4%（超过 2% 门槛），训练过的模型 0–0.45%。
+- **发布**：SFT 种子 2 作为研究用检查点公开（`rl-sft-ocr-repair-v1`），不可用于自动替换原文。GPU 总花费约 $5.93，上限 $20。
 - **下一步可以做的**：从已经能采样到正确修复的起点做 GRPO；奖励 v1.4；拒绝采样微调。
 - **接进抽取流程（已做，探索性）**：先用发布的检查点逐行修复旧 OCR，再用冻结的 G1 让 Opus 提取，16 页测试页上 F1 从 0.60 升到 0.67（Butler）、0.64 升到 0.72（Reeve），配对自助法差值 +0.07 / +0.08；现代 OCR（dots.mocr）是 0.95 / 0.98，Opus 边提取边修复（G2）是 0.96 / 0.91。350 个主要字段提及里修好 31 个、改坏 6 个，改坏的都是原本正确的名字被换成别的看似合理的名字。小模型逐行修复不能代替重新 OCR；若要用，必须保留原行供核对（`results/sft_repair_pipeline/REPORT.md`）。

@@ -1,12 +1,12 @@
 # Release decision: module 7b checkpoints (7d)
 
-*Drafted by Claude, decided by Gloria on 2026-11-21 (section 4). Evidence: `rl/TRAINING_REPORT.md`,
+*Drafted by Claude, decided by the author on 2026-11-21 (section 4). Evidence: `rl/TRAINING_REPORT.md`,
 `rl/training/runs/STAGE4_TEST_REPORT.md`, `rl/training/results_7c/ATTRIBUTION_7C.md`,
 `rl/REWARD_AUDIT.md` part 2. Nothing here changes a test result or a checkpoint.*
 
 ## 0. How the criteria were set (read first)
 
-The plan (7d) asks for release criteria written by Gloria **before** seeing results. No separate
+The plan (7d) asks for release criteria written by the author **before** seeing results. No separate
 release document was written before the test. What was fixed before the test, with her approval, is
 the set of decision rules in `METRICS.md` section 5 and `TEST_PROTOCOL.md` sections 4–5. Section 1 uses
 only those. Section 2 adds practical criteria written **after** the results; they are marked as such
@@ -42,22 +42,24 @@ SFT keeps only half its gain and repairs no ligature.
    correct words and repair 40% of damaged ones on the in-book test (21% on Cuvier). A library would
    be introducing new errors into text that was right. Any use needs review and evidence (the main
    study's G1 design: the model points at the source, code keeps the original).
-2. **Downstream value is untested.** The module measured line repair, not whether repaired lines raise
-   extraction F1 in the BioEvidenceBench pipeline; the main study's exploratory G2 (LLM repair) did,
-   with a much larger model.
+2. **Downstream value was untested when this was decided.** The module measured line repair, not whether
+   repaired lines raise extraction F1 in the BioEvidenceBench pipeline; the main study's exploratory G2
+   (LLM repair) did, with a much larger model. *Tested afterwards (exploratory, 2026-11-21): value F1 on
+   legacy OCR 0.60 → 0.67 (Butler), 0.64 → 0.72 (Reeve); 6 correct names broken
+   (`results/sft_repair_pipeline/REPORT.md`).*
 3. **Cost**: B costs about $0.01 of GPU per run; D adds a GRPO run (about $0.45) for +0.3 points of
    preservation.
 
-## 3. Proposed decision (Gloria to confirm or change)
+## 3. Proposed decision (the author to confirm or change)
 
 | Question | Proposal | Why |
 |---|---|---|
 | Which checkpoint, if any | **No production release.** As a research artifact: **B, SFT seed 2** (`sft_s2`, release `rl-ckpt-20261121-2008_sft600s2`), with D seed 1 (`sft_grpo_s1`, release `rl-ckpt-20261121-2007_sft600s1`) kept beside it for comparison | B meets every pre-registered criterion that D meets; D's extra step buys only a practically small preservation gain. Seeds chosen by the stage-3 rule's metric on dev, not by a test result: B seed 2 (dev repair 0.361 vs 0.358), D seed 1 (0.353 vs 0.347); both differences are within noise |
-| Make the weights public | **Gloria's decision** (the draft releases are private). If yes: a model card with the task, data licences (BHL / IMPACT, CC-BY 3.0; Qwen3 Apache 2.0), the test numbers, the regressions above and "not for automatic replacement" | Publishing is outward-facing |
+| Make the weights public | **The author's decision** (the draft releases are private). If yes: a model card with the task, data licences (BHL / IMPACT, CC-BY 3.0; Qwen3 Apache 2.0), the test numbers, the regressions above and "not for automatic replacement" | Publishing is outward-facing |
 | Keep investing in GRPO on this setup | **No** | Two seeds, two rewards, and an SFT start all show no repair gain; the cause (the policy rarely samples correct repairs; copying is a safe floor) is understood |
 | Any further training | Optional, one small experiment (about $2–3 of the remaining about $14): Reward v1.4 (dash glyphs unified, H4 fixed), GRPO from B with pass@8 measured first; or rejection-sampling fine-tuning as the cheaper alternative. Only with a new dev-only plan and a new locked test | Tests the one open question (does GRPO help when the group already contains repairs?) without reopening this round |
 
-## 4. Decision (Gloria, 2026-11-21: "按你的建议，同意选择 B Seed 2；同意在完成发布前检查后公开研究权重；暂时不再开展新的 GPU 训练实验")
+## 4. Decision (the author, 2026-11-21: "按你的建议，同意选择 B Seed 2；同意在完成发布前检查后公开研究权重；暂时不再开展新的 GPU 训练实验")
 
 1. **Checkpoint: B, SFT seed 2** (`sft_s2.tar`, draft release `rl-ckpt-20261121-2008_sft600s2`). No
    production use.
@@ -80,7 +82,7 @@ SFT keeps only half its gain and repairs no ligature.
 | Known evaluation weaknesses disclosed | **Pass** | reward holes H1–H5 and the dash-glyph share in the card |
 | Contamination disclosed | **Pass** | in the card |
 
-## 6. Publishing (Gloria, 2026-11-21: "你直接发就可以")
+## 6. Publishing (the author, 2026-11-21: "你直接发就可以")
 
 Claude publishes. This session has no tool that edits releases, so a short RunPod pod (no GPU work)
 runs `rl/release/publish_release.py` with the repository token from RunPod Secrets. The script:
@@ -98,4 +100,4 @@ Result: `rl/release/publish_result.json`.
 SHA-256 `bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c`), tag at commit `c994ade`. Pod `20261121-2239_publish`, 3 minutes on an RTX 3090
 (about $0.03; RunPod balance unchanged at 18.84 at the time of writing). The private drafts were not
 changed.
-Public download checked by Gloria in a browser on 2026-11-21 ("可以下载，没问题"); this session's proxy returned 401 on the download link.
+Public download checked by the author in a browser on 2026-11-21 ("可以下载，没问题"); this session's proxy returned 401 on the download link.

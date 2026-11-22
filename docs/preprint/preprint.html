@@ -512,7 +512,11 @@ after SFT raised pass@1 by under a point and left pass@8 unchanged, as Yue et al
 audit found five holes; two (finishing a word split at the line end; inconsistent dash glyphs) were found
 only by reading answers by hand, and no trained model exploited them. The SFT checkpoint is released as a
 research model (<a href="https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1"><code>rl-sft-ocr-repair-v1</code></a>); details in <a href="../rl_results.md">RL results</a>.
-GPU cost was about US$5.86.</p>
+<strong>[exploratory]</strong> Put in front of extraction (legacy OCR of the 16 test pages repaired line by line, then
+the frozen G1 with Opus), the released model lifted value F1 from 0.60 to 0.67 (Butler) and 0.64 to 0.72
+(Reeve), paired page bootstrap +0.07 and +0.08, about a fifth of the gap to modern OCR; it fixed 31 of 350
+test mentions and turned 6 correct names into other names (<code>B. oreades</code> → <code>B. ovoletes</code>).
+GPU cost was about US$5.93, the pipeline test included.</p>
 <hr />
 <h2>7. Discussion</h2>
 <h3>7.1 Where reliability is lost</h3>
@@ -563,7 +567,7 @@ did not.</p>
 <li><strong>Linking</strong> was scored on birds only (34 names); molluscs, with heavier synonymy, were deferred.</li>
 <li><strong>Review time</strong> comes from 9 timed spot-check items, not a review-time study.</li>
 <li><strong>The training study</strong> used one 0.6B model, one reward family and two seeds, and measured line repair, not
-  extraction; whether the repaired text raises extraction F1 is untested.</li>
+  extraction; its test inside the extraction pipeline was designed after unsealing (exploratory).</li>
 <li><strong>AI assistance.</strong> The pipeline, scorer and documents were built with an AI coding assistant (Claude
   Code), and Claude models are among those evaluated. The assistant never created or pre-filled gold
   labels and did not review test labels for omissions; every labelling decision was made by the labeller
@@ -584,7 +588,7 @@ leave unequal evidence, the choice between them should be made on audit cost as 
 <a href="../../ANNOTATION_GUIDE.md">annotation guide</a> · <a href="../../PREREGISTRATION.md">pre-registration</a> ·
 <a href="../../DEVIATIONS.md">deviations</a> · <a href="../rl_results.md">training study</a> and <a href="https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1">released model</a>.
 Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata: CC0. Total API spend for the
-project was about US$50; GPU spend for the training study about US$6.</p>
+project was US$55.65 (<a href="../eval_settings.md">evaluation settings</a>); GPU spend for the training study about US$6.</p>
 <h2>Acknowledgements</h2>
 <p>Thanks to the second labeller for five pages of independent labels, and to the FineBooks, IMPACT and BHL
 teams for open data.</p>
