@@ -186,6 +186,8 @@ The trained model is [published for research](https://github.com/dekunsun/BioEvi
 
 **What this means:** for a careful editing task, examples of the right answer did the teaching. A reward that never penalizes doing nothing taught the model to do nothing.
 
+What these findings mean for a library or museum deciding where to put its next unit of money or reviewer time is set out in the [decision memo](docs/product.md).
+
 ## Why the evaluation can be audited
 
 This is a small pilot, but its methodological choices are intended to make conclusions inspectable:
@@ -200,20 +202,6 @@ This is a small pilot, but its methodological choices are intended to make concl
 | **Uncertainty** | Scores are reported by book with page-bootstrap intervals; uncertain or underpowered comparisons are identified as such. |
 
 Some of the most useful lessons came from unexpected issues: annotation boundaries, typos in expert text, dev-set saturation, and API responses that appeared successful but did not meet the output schema. These are documented in [Lessons learned](docs/lessons_learned.md).
-
-## Research findings and system design implications
-
-The study supports several design considerations for **these two books and the evaluated workflows**:
-
-- **Improve transcription at the first major point of loss.** Modern OCR substantially improved downstream extraction in this pilot; a small line-repair model placed before extraction recovered only about a fifth of that gain (exploratory). Other languages, eras, and page layouts still need separate testing.
-- **Evaluate OCR against downstream scientific needs.** Page-level CER remains useful, but exact preservation of scientific names adds a more direct signal of whether key information will survive extraction.
-- **Evaluate taxonomic linking separately.** A direct GBIF lookup lost many historically valid references. Contextual LLM linking improved recall in exploratory tests, but ambiguous cases still require expert judgment.
-- **Define scope and annotation rules before evaluation.** Decisions about index pages, bibliographic mentions, and field boundaries change measured scores. Later revisions should be reported separately.
-- **Choose workflows by evidence quality as well as accuracy.** OCR-grounded quotations, LLM-repaired text, and direct image extraction leave different kinds of traceability. Their full human audit costs have not yet been measured head to head.
-- **Do not treat model agreement as proof of correctness.** On damaged OCR, two models can repeat the same error. Any proposed auto-accept or review-prioritization rule needs independent validation against human labels.
-- **Teach with examples before rewards.** In the training follow-up, expert examples taught a small model to repair 40% of damaged words; an automatic score alone taught it to copy. Before training on a reward, check what doing nothing scores.
-
-These are **research-to-product implications**, not claims about a deployed platform or a universal best architecture. See the [Product summary](docs/product.md) for proposed curator workflows and trade-offs.
 
 ## Scope and limitations
 
