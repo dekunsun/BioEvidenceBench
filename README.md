@@ -110,7 +110,7 @@ An OCR system may have an excellent **character error rate (CER)** and still dam
 
 ![Low overall character error can coexist with poor preservation of scientific names](docs/assets/overview/fig05_name_preservation.png)
 
-**Exploratory result:** across **23 OCR versions** of the sampled pages (21 FineBooks models, Mistral OCR and the library's legacy OCR), preservation of annotated names tracked downstream extraction much more closely than page-level CER. The Spearman correlations between name preservation and extraction value F1 were **0.95 (Butler)** and **1.00 (Reeve)**; the corresponding correlations with page CER were **−0.11** and **−0.61**. Several OCR models with **under 0.5% page CER** still preserved only **57–79% of Butler's names** intact.
+**Exploratory result:** across **24 OCR versions** of the sampled pages (22 FineBooks models, Mistral OCR and the library's legacy OCR), preservation of annotated names tracked downstream extraction much more closely than page-level CER. The Spearman correlations between name preservation and extraction value F1 were **0.95 (Butler)** and **1.00 (Reeve)**; the corresponding correlations with page CER were **−0.11** and **−0.61**. Several OCR models with **under 0.5% page CER** still preserved only **57–79% of Butler's names** intact.
 
 The practical point is about evaluation design: a library interested in biodiversity data should test **whether names survive transcription**, not only how many characters were misread across the whole page.
 

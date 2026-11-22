@@ -57,8 +57,9 @@ def main() -> None:
 
     lines = ["# Does a cheap OCR measure predict downstream extraction? (exploratory, test pages)", "",
              "Opus G1 value F1 (ALL_PRIMARY) on each OCR text, against the OCR's median page CER and the share "
-             "of gold mentions preserved intact (`src/ocr_ladder.py`). 21 FineBooks OCR rows (Datalab rows "
-             "not sent to the API: their outputs carry use restrictions), BHL legacy OCR and the expert text; "
+             "of gold mentions preserved intact (`src/ocr_ladder.py`). 22 FineBooks OCR rows (21 from the ladder runs, dots.mocr "
+             "from the frozen test run; Datalab rows not sent to the API: their outputs carry use restrictions), "
+             "Mistral OCR through OpenRouter, BHL legacy OCR and the expert text; "
              "7 Butler and 9 Reeve test pages. Decided after unsealing: exploratory.", "",
              "| book | Spearman F1 vs page CER | Spearman F1 vs preservation | Spearman recall vs preservation |",
              "|---|---|---|---|"]

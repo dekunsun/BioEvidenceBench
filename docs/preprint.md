@@ -26,7 +26,7 @@ never rewrites the source. **[pre-registered]** On legacy OCR, value-level F1 wa
 0.64 (Reeve); on modern OCR 0.95 and 0.98; on the expert transcription 0.98 for both. A plain GBIF name
 lookup then lost 14 of 34 correctly extracted bird names, against 0 lost before linking. Requiring a
 verbatim quote cost no accuracy, and agreement between two LLMs from different providers did not imply
-correctness. **[exploratory]** Across 23 OCR versions of the same pages, the share of gold names that
+correctness. **[exploratory]** Across 24 OCR versions of the same pages, the share of gold names that
 survived OCR intact predicted extraction almost exactly (Spearman 0.95 and 1.00), while page character
 error rate did not (−0.11 and −0.61). Four Claude models differed by at most 0.05 in extraction F1 but by
 0.15 in linking recall. Three routes past bad OCR (modern OCR, LLM repair of legacy OCR, reading the page
@@ -276,16 +276,16 @@ frozen gold and scorer, and needs a fresh test set before it counts as a finding
 
 ### 6.1 Name preservation, not page error rate
 
-All 21 FineBooks OCR rows whose outputs may be sent to an API, Mistral OCR (through OpenRouter) and legacy
-OCR were run through the frozen G1 condition. Value F1 tracked the share of gold names that survived OCR intact (Spearman 0.95 Butler, 1.00
+The 22 FineBooks OCR rows whose outputs may be sent to an API, Mistral OCR (through OpenRouter) and legacy
+OCR (24 versions per book) were run through the frozen G1 condition. Value F1 tracked the share of gold names that survived OCR intact (Spearman 0.95 Butler, 1.00
 Reeve) and not page CER (−0.11, −0.61). Several OCR models with page CER under 0.5% kept only 57–79% of
 Butler's names intact. Extraction recall was close to preservation (median gap +0.01): if the name
 survives OCR, the model gets it.
 
-![Value F1 against gold names intact after OCR](../poster/fig/ladder_poster.png)
+![Value F1 against gold names intact after OCR](figures/preprint_ladder.png)
 
-*Figure 2. Each point is one OCR version of the same 16 pages (Butler blue, Reeve orange). The dashed line
-is y = x.*
+*Figure 2. Each point is one OCR version of the same 16 test pages (24 versions per book: 22 FineBooks rows,
+Mistral OCR and legacy OCR). The dashed line is y = x.*
 
 ### 6.2 Is the linking loss the linker's?
 

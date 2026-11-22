@@ -4,7 +4,7 @@ that every label is the poster's body size (26 px = 19.5 pt). Values are read fr
     python src/plot_poster_charts.py
 
 A  extraction value F1 on legacy OCR, modern OCR and expert transcription, per book (pre-registered run)
-B  value F1 against gold-name preservation over 23 OCR versions of the same pages (exploratory)
+B  value F1 against gold-name preservation over 24 OCR versions of the same pages (exploratory)
 C  Butler link recall by linker, expert text (plain GBIF lookup pre-registered; others exploratory)
 If a column width in poster/poster.html changes, change WIDTH here and regenerate.
 """
@@ -68,7 +68,7 @@ def chart_a():
 
 def chart_b():
     d = pd.read_csv(ROOT / "results" / "ocr_ladder" / "downstream.csv")
-    d = d[d.ocr != "expert"]                             # the 23 OCR versions (21 FineBooks rows + Mistral OCR + legacy)
+    d = d[d.ocr != "expert"]                             # the 24 OCR versions (22 FineBooks rows + Mistral OCR + legacy)
     fig, ax = plt.subplots(figsize=(WIDTH["B"], 4.0))
     for book in ("Butler", "Reeve"):
         x = d[d.book == book]
