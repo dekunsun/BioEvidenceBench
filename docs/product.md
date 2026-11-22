@@ -132,7 +132,6 @@ is [published as a research model](https://github.com/dekunsun/BioEvidenceBench/
 - Mollusc name linking (deferred), a review-time study, audit metrics for evidence.
 - Whether repair and image reading hold on material outside the models' training data.
 - NHM's exact OCR setting. Mistral OCR through OpenRouter (version not reported) was tested: value F1 0.95 Butler, 0.92 Reeve (exploratory).
-- Whether the small repair model helps extraction inside the pipeline.
 
 ---
 
@@ -230,4 +229,3 @@ is [published as a research model](https://github.com/dekunsun/BioEvidenceBench/
 - 贝类学名关联（已推迟）、审核时间研究、衡量证据价值的审核指标。
 - 读正和读图在模型没见过的材料上是否还成立。
 - NHM 实际使用的 OCR 设置。通过 OpenRouter 调用的 Mistral OCR（未报告版本）已测：值 F1 Butler 0.95、Reeve 0.92（探索性）。
-- 小修复模型放进流程后能否提高抽取效果。
