@@ -28,13 +28,7 @@ On the surface, the digitization worked. The book is online, and the page is sea
 
 That gap sits inside roughly 64 million scanned pages in the Biodiversity Heritage Library. Historical natural-history books record species names, collection localities, researchers, and dates of observations. OCR and large language models can help turn those pages into structured data for modern databases such as GBIF. Yet pulling text off a page is not the same as producing a record another person can trust: a small error upstream rarely stays small—it compounds down the line. A single misread character can corrupt a species name and break its downstream database match; even a cleanly extracted historical name may fail to resolve against today's taxonomy; and a plausible-looking result may arrive without evidence anyone can verify.
 
-**BioEvidenceBench studies where these errors arise and how they propagate** from scanned page to database record. Using two historical books, human reference annotations, a pre-registered evaluation, and separately reported exploratory experiments, it examines OCR, information extraction, source evidence, taxonomic linking, and the rules defining which mentions count. The goal is not only to compare models, but also to identify which part of the workflow most needs improvement. A companion study asks whether a small, cheap model can be trained to repair the text itself, and audits the reward used to train it.
-
-Projects such as [FineBooks](https://huggingface.co/blog/finebooks/historical-books-ocr-leaderboard) ask **how accurately AI models transcribe historical books**. BioEvidenceBench asks the complementary question:
-
-> **Once a historical page has been read, how reliably can its names, people, places, and dates become scientific data that another person can verify?**
-
-The same distinction matters wherever AI turns documents into evidence, from natural-history collections to archives, medicine, and research.
+**BioEvidenceBench measures where, between the scanned page and the database record, trustworthy data is lost.** Projects such as [FineBooks](https://huggingface.co/blog/finebooks/historical-books-ocr-leaderboard) ask how accurately AI transcribes historical books; this one asks whether the names, places and dates on a page become data another person can verify, and whether a small, cheap model can be trained to repair the text itself.
 
 ## What happens between a page and a usable record?
 
