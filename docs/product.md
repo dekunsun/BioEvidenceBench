@@ -34,7 +34,10 @@ measure what evidence is for, not that evidence has no value.
 **Recommendations**
 
 1. **Keep investing in OCR, accepted on whether names survive**, per kind of material, not on page
-   error rate (name preservation predicts extraction almost exactly; page CER does not).
+   error rate (name preservation predicts extraction almost exactly; page CER does not). A cheap
+   repair step does not replace it: a small fine-tuned model that repaired legacy OCR line by line
+   before extraction lifted value F1 only from 0.60 / 0.64 to 0.67 / 0.72 and changed some correct
+   names into other names (*exploratory*).
 2. **Fund entity resolution as its own workstream.** An LLM linker lifts link recall from 0.59 to
    0.91; the rest is a taxonomy policy for curators.
 3. **Write the scope down before scaling.** Ruling BHL index pages out of scope cut the review queue
@@ -116,8 +119,8 @@ pre-registered locked test ([RL results](rl_results.md)).
 | --- | --- | --- |
 | Does supervised training on expert transcriptions work? | Partly | Damaged words repaired 4% → 40% on held-out lines of the training books, 21% on an unseen French book; names 1% → 36–44% |
 | Does reinforcement learning (GRPO) add anything? | No | From the base model it learns to copy the OCR; after supervised training it repairs no more words and only breaks about a quarter fewer correct ones |
-| Can it replace the API repair step? | Not yet | It still changes about 1.8% of correct words; whether its output raises extraction F1 is untested |
-| What did it cost? | Little | About $5.86 of GPU for every run, failures included; one supervised run about $0.10 |
+| Can it replace the API repair step? | No | Put in front of extraction (Opus, G1, 16 test pages), it lifts value F1 from 0.60 to 0.67 (Butler) and 0.64 to 0.72 (Reeve), about a fifth of the gap to modern OCR (0.95 / 0.98); Opus repairing while it extracts reaches 0.96 / 0.91; it fixed 31 of 350 test mentions and broke 6 correct names, e.g. `B. oreades` → `B. ovoletes` (*exploratory*, [report](../results/sft_repair_pipeline/REPORT.md)) |
+| What did it cost? | Little | About $5.93 of GPU for every run, failures included; one supervised run about $0.10; repairing the 22 sample pages $0.07 |
 
 Product reading: for this task the money goes into expert examples, not reward engineering; and a
 reward must be checked for what "do nothing" scores before any training. The supervised checkpoint
@@ -149,7 +152,7 @@ is [published as a research model](https://github.com/dekunsun/BioEvidenceBench/
 
 **建议**
 
-1. **继续投 OCR，按"学名是否完整保留"验收**，按材料类型分别测，不看整页错字率（学名保留率几乎完全预测抽取效果，整页错字率不能）。
+1. **继续投 OCR，按"学名是否完整保留"验收**，按材料类型分别测，不看整页错字率（学名保留率几乎完全预测抽取效果，整页错字率不能）。便宜的修复步骤替代不了它：用微调过的小模型先逐行修复旧 OCR 再提取，值 F1 只从 0.60 / 0.64 升到 0.67 / 0.72，还把一些正确的名字改成了别的名字（探索性）。
 2. **把实体解析当成独立的工作来投入。** LLM 关联器把关联召回率从 0.59 提到 0.91；剩下的是馆员要定的分类学口径。
 3. **规模化之前先把范围写下来。** 把 BHL 索引页定为范围外，审核量少了 60%。
 4. **按证据选路线，不只看 F1**，并用审核指标衡量证据：能追溯到原页的值占多少、每个值的审核时间、能抓到多少错误。
@@ -216,8 +219,8 @@ is [published as a research model](https://github.com/dekunsun/BioEvidenceBench/
 | --- | --- | --- |
 | 用专家转录做监督训练有用吗？ | 部分有用 | 训练书的未见行上，受损词修复率 4% → 40%；没见过的法语书上 21%；学名 1% → 36–44% |
 | 强化学习（GRPO）能再加分吗？ | 不能 | 从原模型出发学会了照抄 OCR；在监督训练之后也没有多修一个词，只是改坏的正确词少了约四分之一 |
-| 能替代 API 修复这一步吗？ | 暂时不能 | 仍会改坏约 1.8% 的正确词；修复后能否提高抽取 F1 还没测 |
-| 花了多少钱？ | 很少 | GPU 共约 $5.86，包括失败的运行；一次监督训练约 $0.10 |
+| 能替代 API 修复这一步吗？ | 不能 | 放在提取之前（Opus，G1，16 页测试页），值 F1 从 0.60 升到 0.67（Butler）、0.64 升到 0.72（Reeve），只补回与现代 OCR（0.95 / 0.98）差距的约五分之一，Opus 边提取边修复能到 0.96 / 0.91；350 个测试提及里修好 31 个，改坏 6 个正确名字，例如 `B. oreades` → `B. ovoletes`（探索性，[报告](../results/sft_repair_pipeline/REPORT.md)） |
+| 花了多少钱？ | 很少 | GPU 共约 $5.93，包括失败的运行；一次监督训练约 $0.10；修复 22 页样本 $0.07 |
 
 产品上的读法：这个任务的钱应该花在专家示范上，而不是奖励设计上；用奖励训练前，先算"什么都不改"能得多少分。监督训练的检查点已[作为研究模型公开](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)，不能用于自动替换原文。
 
