@@ -203,7 +203,7 @@ Some of the most useful lessons came from unexpected issues: annotation boundari
 
 The study supports several design considerations for **these two books and the evaluated workflows**:
 
-- **Improve transcription at the first major point of loss.** Modern OCR substantially improved downstream extraction in this pilot. Other languages, eras, and page layouts still need separate testing.
+- **Improve transcription at the first major point of loss.** Modern OCR substantially improved downstream extraction in this pilot; a small line-repair model placed before extraction recovered only about a fifth of that gain (exploratory). Other languages, eras, and page layouts still need separate testing.
 - **Evaluate OCR against downstream scientific needs.** Page-level CER remains useful, but exact preservation of scientific names adds a more direct signal of whether key information will survive extraction.
 - **Evaluate taxonomic linking separately.** A direct GBIF lookup lost many historically valid references. Contextual LLM linking improved recall in exploratory tests, but ambiguous cases still require expert judgment.
 - **Define scope and annotation rules before evaluation.** Decisions about index pages, bibliographic mentions, and field boundaries change measured scores. Later revisions should be reported separately.
@@ -220,7 +220,7 @@ These are **research-to-product implications**, not claims about a deployed plat
 - **Public-data exposure is possible:** the books and transcriptions may have appeared in model training; a follow-up memorization probe found no clear evidence of page memory but cannot rule it out.
 - **Labels and scoring require judgment:** most pages had one primary annotator, with a second on five; decisions made after unsealing are identified as exploratory.
 - **Traceability is not proof of scientific validity:** verifying a quote against OCR does not independently verify the printed page or settle a historical taxonomic dispute.
-- **The training follow-up is narrow:** one small model, one reward design, two training seeds; it measured line repair, not extraction accuracy. The released model is a research checkpoint, not a deployed tool.
+- **The training follow-up is narrow:** one small model, one reward design, two training seeds; its locked test measured line repair, and its test inside the extraction pipeline was designed afterwards (exploratory). The released model is a research checkpoint, not a deployed tool.
 - **Not peer reviewed / not deployed:** this is an open research pilot. Proposed product features are **not reported as completed experiments**.
 
 ## Reproduce the evaluation
@@ -245,7 +245,7 @@ pytest -q
 python src/freeze.py --verify
 ```
 
-For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and the [original evaluation settings](docs/eval_settings.md). API keys, costs, provider settings, output schema, and the sealed/unsealed test procedure matter; do not treat a new run against previously inspected pages as a fresh blind test. The complete per-script map is in [research methods](docs/preprint.md) and the source files under [`src/`](src/).
+For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and the [original evaluation settings](docs/eval_settings.md). API keys, costs, provider settings, output schema, and the sealed/unsealed test procedure matter; do not treat a new run against previously inspected pages as a fresh blind test. Each script under [`src/`](src/) starts with a note on what it does and how to run it; each run folder under [`results/`](results/) keeps its settings, prompts and raw outputs.
 
 ## Research materials and data provenance
 
