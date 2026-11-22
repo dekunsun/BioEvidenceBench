@@ -204,7 +204,7 @@ Some of the most useful lessons came from unexpected issues: annotation boundari
 - **Public-data exposure is possible:** the books and transcriptions may have appeared in model training; a follow-up memorization probe found no clear evidence of page memory but cannot rule it out.
 - **Labels and scoring require judgment:** most pages had one primary annotator, with a second on five; decisions made after unsealing are identified as exploratory.
 - **Traceability is not proof of scientific validity:** verifying a quote against OCR does not independently verify the printed page or settle a historical taxonomic dispute.
-- **The training follow-up is narrow:** one small model, one reward design, two training seeds; its locked test measured line repair, and its test inside the extraction pipeline was designed afterwards (exploratory). The released model is a research checkpoint, not a deployed tool.
+- **The training study is narrow:** one small model, one reward design, two training seeds; its locked test measured line repair, and its test inside the extraction pipeline was designed afterwards (exploratory). The released model is a research checkpoint, not a deployed tool.
 - **Not peer reviewed / not deployed:** this is an open research pilot. Proposed product features are **not reported as completed experiments**.
 
 ## Reproduce the evaluation
@@ -229,13 +229,11 @@ pytest -q
 python src/freeze.py --verify
 ```
 
-For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and the [original evaluation settings](docs/eval_settings.md). API keys, costs, provider settings, output schema, and the sealed/unsealed test procedure matter; do not treat a new run against previously inspected pages as a fresh blind test. Each script under [`src/`](src/) starts with a note on what it does and how to run it; each run folder under [`results/`](results/) keeps its settings, prompts and raw outputs.
+For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and the [evaluation settings](docs/eval_settings.md). API keys, costs, provider settings, output schema, and the sealed/unsealed test procedure matter; do not treat a new run against previously inspected pages as a fresh blind test. Each script under [`src/`](src/) starts with a note on what it does and how to run it; each run folder under [`results/`](results/) keeps its settings, prompts and raw outputs.
 
 ## About this project
 
-**What I did:** defined the task and the labelling guide, labelled all 607 reference mentions myself before seeing model output, wrote and froze the pre-registration, ran the error analysis and cost tracking, wrote the decision memo, and trained, tested and released the small model.
-
-**Read next:** [Decision memo](docs/product.md) · [Preprint](docs/preprint/preprint.pdf) · [RL technical report](docs/rl_report/rl_report.pdf) · [Lessons learned](docs/lessons_learned.md)
+**What I did:** defined the task and the labeling guide, labeled all 607 reference mentions myself before seeing model output, wrote and froze the pre-registration, ran the error analysis and cost tracking, wrote the decision memo, and trained, tested and released the small model.
 
 ## Research materials and data provenance
 
@@ -247,7 +245,7 @@ For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and 
 | **[Pre-registration](PREREGISTRATION.md)** · [Freeze](FREEZE.json) · [Deviations](DEVIATIONS.md) | What was decided in advance and what changed after testing. |
 | **[RL technical report](docs/rl_report/rl_report.pdf)** · [Web page](docs/rl_results.md) · [Training report](rl/TRAINING_REPORT.md) · [Released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | Teaching a small model to repair OCR: supervised and reinforcement learning, the reward audit, and the release decision. |
 | **[Lessons learned](docs/lessons_learned.md)** · [Stories](docs/stories/) · [Notes](docs/notes/) | Annotation, data-quality, API, metric and training failures encountered during the study. |
-| **[Product implications](docs/product.md)** · [Poster](poster/poster.pdf) | Design decisions and a presentation of the pilot. |
+| **[Decision memo and product design](docs/product.md)** · [Poster](poster/poster.pdf) | The decision this pilot informs, six recommendations, a proposed curator workflow; the pilot on one poster. |
 | **[FineBooks data](https://huggingface.co/datasets/finebooks/bhl-impact-gt)** · [OCR output](https://huggingface.co/buckets/finebooks/bhl-ocr-outputs) | Expert text and modern OCR underlying the comparisons. |
 
 **Licenses and attribution.** The expert transcriptions are from IMPACT/Biodiversity Heritage Library via FineBooks (**CC BY 3.0**); BHL metadata are **CC0 1.0**; public dots.mocr outputs are published under **MIT** as indicated in the source manifest. This project's code is [MIT-licensed](LICENSE) and its original gold annotations are [CC BY 4.0](gold/LICENSE.md). The illustrated overview figures are explanatory reconstructions; the numerical figures reproduce values reported in this project's run records.

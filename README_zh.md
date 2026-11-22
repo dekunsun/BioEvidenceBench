@@ -204,7 +204,7 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 - **无法完全排除训练数据接触：** 书籍和转录文本公开；后续记忆探针未发现明确证据，但不能证明模型从未见过。
 - **金标准也存在判断空间：** 主体由一人标注、五页接受独立复核；解封后的规则调整明确作为探索性结果。
 - **证据可追溯不等于科学事实自动正确：** 核对 OCR 引语不能独立证明扫描页中的文字无误，也不能解决历史分类学争议。
-- **训练后续研究范围很窄：** 只有一个小模型、一种奖励设计、两个训练种子，锁定测试测的是逐行修复；接进提取流程的测试是之后才设计的（探索性）。公开的模型是研究用检查点，不是已部署的工具。
+- **训练研究范围很窄：** 只有一个小模型、一种奖励设计、两个训练种子，锁定测试测的是逐行修复；接进提取流程的测试是之后才设计的（探索性）。公开的模型是研究用检查点，不是已部署的工具。
 - **尚未经同行评审、尚未部署：** 这是一项开放研究试点。产品设想不作为已完成的实验报告。
 
 ## 如何复现实验
@@ -229,13 +229,11 @@ pytest -q
 python src/freeze.py --verify
 ```
 
-如需**重新调用 LLM**，请查看 [`src/run_extraction.py`](src/run_extraction.py) 和 [Evaluation settings](docs/eval_settings.md)。API 密钥、费用、模型调用方式、输出格式和测试集封存流程均影响结果。对已经查看过的页面重新运行，**不能称作新的盲测**。
+如需**重新调用 LLM**，请查看 [`src/run_extraction.py`](src/run_extraction.py) 和 [运行设置](docs/eval_settings.md)。API 密钥、费用、模型调用方式、输出格式和测试集封存流程均影响结果。对已经查看过的页面重新运行，**不能称作新的盲测**。
 
 ## 关于这个项目
 
 **我做了什么：** 定义任务、写标注规范；在看到任何模型输出之前亲手标注全部 607 个参考提及；写好预注册并在测试前冻结；做错误分析和成本记录；写决策备忘录；训练、测试并公开发布小模型。
-
-**接着读：** [决策备忘录](docs/product.md#中文版) · [研究预印本](docs/preprint/preprint.pdf) · [RL 技术报告](docs/rl_report/rl_report.pdf) · [经验教训](docs/lessons_learned.md)
 
 ## 研究资料与数据来源
 
@@ -246,8 +244,8 @@ python src/freeze.py --verify
 | **[标注指南](ANNOTATION_GUIDE.md)** · [金标准](gold/) | 标注边界、修正记录与人工参考数据。 |
 | **[预注册](PREREGISTRATION.md)** · [冻结文件](FREEZE.json) · [变更](DEVIATIONS.md) | 测试前决定了什么、测试后又做了什么。 |
 | **[RL 技术报告](docs/rl_report/rl_report.pdf)** · [网页版](docs/rl_results.md) · [训练报告](rl/TRAINING_REPORT.md) · [公开的模型](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | 教小模型修复 OCR：监督训练与强化学习、奖励审计和发布决定。 |
-| **[经验记录](docs/lessons_learned.md)** · [故事](docs/stories/) · [笔记](docs/notes/) | 标注、数据质量、API、评测指标和训练中遇到的问题。 |
-| **[产品设计](docs/product.md)** · [海报](poster/poster.pdf) | 产品化启示与试点研究介绍。 |
+| **[经验教训](docs/lessons_learned.md)** · [故事](docs/stories/) · [笔记](docs/notes/) | 标注、数据质量、API、评测指标和训练中遇到的问题。 |
+| **[决策备忘录与产品设计](docs/product.md#中文版)** · [海报](poster/poster.pdf) | 这次试点要回答的决策、六条建议、给馆员的工作流程设想；一张海报看完整个试点。 |
 | **[FineBooks 数据集](https://huggingface.co/datasets/finebooks/bhl-impact-gt)** · [OCR 输出](https://huggingface.co/buckets/finebooks/bhl-ocr-outputs) | 专家转录和现代 OCR 的上游来源。 |
 
 **许可与署名。** 专家转录来自 FineBooks 提供的 IMPACT/Biodiversity Heritage Library 数据（**CC BY 3.0**）；BHL 元数据为 **CC0 1.0**；公开 dots.mocr 输出的来源清单标明 **MIT**。本项目代码为 [MIT](LICENSE)，原创人工标注为 [CC BY 4.0](gold/LICENSE.md)。图文介绍中的插画属于解释性示意图；数字来自本项目的实验记录。
