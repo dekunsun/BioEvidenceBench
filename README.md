@@ -16,17 +16,6 @@
 
 </div>
 
-## At a glance
-
-BioEvidenceBench has two strands, both run on public Biodiversity Heritage Library (BHL) pages:
-
-1. **Evaluating an AI extraction pipeline and diagnosing where it loses reliability.** The same pages were read as old OCR, modern OCR and an expert transcription, and an LLM extracted names, people, places, institutions and dates from each, under a pre-registered plan with a locked test set. Old OCR was the largest loss (value F1 0.60 / 0.64, against 0.95 / 0.98 with modern OCR). Once the OCR was good, the losses moved to linking names to today's taxonomy (a direct GBIF lookup lost 14 of 34 correctly extracted bird names) and to the rules for what counts as a record. Two models agreeing was not evidence of being right.
-2. **Low-cost post-training of a small model, with an audit of its reward.** For about $6 of GPU, a 0.6-billion-parameter model was trained to repair OCR line by line. Supervised fine-tuning raised the share of damaged words repaired from 4% to 40%; reinforcement learning on an automatic reward (GRPO) taught it to copy the OCR unchanged. Reading answers by hand found two reward loopholes the automated probes had missed.
-
-**What I did:** defined the task and the labelling guide, labelled all 607 reference mentions myself before seeing model output, wrote and froze the pre-registration, ran the error analysis and cost tracking, wrote the decision memo, and trained, tested and released the small model.
-
-**Where to start:** [Decision memo](docs/product.md) · [Preprint](docs/preprint/preprint.pdf) · [RL technical report](docs/rl_report/rl_report.pdf) · [Lessons learned](docs/lessons_learned.md)
-
 ## One misread name, one unreliable record
 
 In an 1849 book on shells, *Conchologia iconica*, a species appears in print as **`BULIMUS CHILENSIS`**. When the page was digitized, the library's older optical character recognition (OCR) software read it as **`BuLlMLS CiilLE.NSls`**.
@@ -39,7 +28,7 @@ On the surface, the digitization worked. The book is online, and the page is sea
 
 That gap sits inside roughly 64 million scanned pages in the Biodiversity Heritage Library. Historical natural-history books record species names, collection localities, researchers, and dates of observations. OCR and large language models can help turn those pages into structured data for modern databases such as GBIF. Yet pulling text off a page is not the same as producing a record another person can trust: a small error upstream rarely stays small—it compounds down the line. A single misread character can corrupt a species name and break its downstream database match; even a cleanly extracted historical name may fail to resolve against today's taxonomy; and a plausible-looking result may arrive without evidence anyone can verify.
 
-**BioEvidenceBench studies where these errors arise and how they propagate** from scanned page to database record. Using two historical books, human reference annotations, a pre-registered evaluation, and separately reported exploratory experiments, it examines OCR, information extraction, source evidence, taxonomic linking, and the rules defining which mentions count. The goal is not only to compare models, but also to identify which part of the workflow most needs improvement.
+**BioEvidenceBench studies where these errors arise and how they propagate** from scanned page to database record. Using two historical books, human reference annotations, a pre-registered evaluation, and separately reported exploratory experiments, it examines OCR, information extraction, source evidence, taxonomic linking, and the rules defining which mentions count. The goal is not only to compare models, but also to identify which part of the workflow most needs improvement. A companion study asks whether a small, cheap model can be trained to repair the text itself, and audits the reward used to train it.
 
 Projects such as [FineBooks](https://huggingface.co/blog/finebooks/historical-books-ocr-leaderboard) ask **how accurately AI models transcribe historical books**. BioEvidenceBench asks the complementary question:
 
@@ -259,6 +248,12 @@ python src/freeze.py --verify
 ```
 
 For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and the [original evaluation settings](docs/eval_settings.md). API keys, costs, provider settings, output schema, and the sealed/unsealed test procedure matter; do not treat a new run against previously inspected pages as a fresh blind test. Each script under [`src/`](src/) starts with a note on what it does and how to run it; each run folder under [`results/`](results/) keeps its settings, prompts and raw outputs.
+
+## About this project
+
+**What I did:** defined the task and the labelling guide, labelled all 607 reference mentions myself before seeing model output, wrote and froze the pre-registration, ran the error analysis and cost tracking, wrote the decision memo, and trained, tested and released the small model.
+
+**Read next:** [Decision memo](docs/product.md) · [Preprint](docs/preprint/preprint.pdf) · [RL technical report](docs/rl_report/rl_report.pdf) · [Lessons learned](docs/lessons_learned.md)
 
 ## Research materials and data provenance
 
