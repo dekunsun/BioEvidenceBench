@@ -294,17 +294,7 @@ name and its context → currently accepted name → GBIF) reached 0.91 on the e
 OCR (from 0.12). Its remaining misses are taxonomic judgments (`Phylloscopus tristis` as a race of
 *P. collybita*). The model mattered here: Opus 0.91, Fable 5.2 0.88, Sonnet 5.5 0.79, Haiku 5.5 0.76.
 
-### 6.3 Cheaper and stronger extraction models
-
-| Value F1, G1 (Butler / Reeve) | Haiku 5.5 | Sonnet 5.5 | Opus 5.5 | Fable 5.2 |
-| --- | --- | --- | --- | --- |
-| Modern OCR | 0.94 / 0.95 | 0.93 / 0.97 | 0.95 / 0.98 | 0.96 / 0.98 |
-| Legacy OCR | 0.61 / 0.60 | 0.58 / 0.64 | 0.60 / 0.64 | 0.60 / 0.65 |
-| US$ per 1,000 page-passes | 0.6 (batch) | 10 (sync) | 11 (batch) | 43 (sync) |
-
-The model gap (≤ 0.05) is small next to the OCR gap (about 0.35).
-
-### 6.4 LLM repair and reading the image
+### 6.3 LLM repair and reading the image
 
 - **G2, repair**: the model keeps a verbatim quote (checked as in G1) and adds a separate repaired reading,
   scored on the reading and flagged when it differs. Legacy OCR rose from 0.60 to 0.96 (Butler) and 0.64 to
@@ -316,78 +306,19 @@ The model gap (≤ 0.05) is small next to the OCR gap (about 0.35).
 - **V1, page image only**: 0.96 and 0.98 (value-bag scoring). **V2**, image plus OCR, added nothing over
   repair.
 
-### 6.5 Memorisation probe
+### 6.4 Other exploratory checks
 
-The books are public. In the expert text we swapped two neighbouring letters in 69 gold names (a visible
-error) and replaced the epithet of 29 binomials with one printed elsewhere in the same book (a fluent
-change). Opus and Fable restored 65–68 of the 69 typos and Haiku 54; **none of the three models restored
-any of the 29 fluent swaps**, even when the original name was printed elsewhere on the page. Repair reacts
-to visible errors, not to a remembered page. This does not rule out memorisation in general.
+Each row is a short check on the same 16 test pages unless stated; details and run folders are in
+[Results](results.md).
 
-### 6.6 Image-level evidence
-
-Asked to read the page image and draw a box per mention (V3), Opus got 96–98% of values right, but the box
-contained the right word (Internet Archive hOCR word boxes as reference, lenient matching) for only 67%
-(Butler) and 40% (Reeve, two-column dense pages) of them.
-
-### 6.7 Cheap review signals
-
-On legacy OCR, two mechanical checks (OCR-junk characters in a value; no exact GBIF match for a taxon)
-flagged 25% of outputs and caught 55% of the errors at 77% precision; model disagreement caught 7%. On
-modern OCR, errors were rare (about 3%) and no cheap signal found them.
-
-### 6.8 Whole books
-
-The frozen G1 prompt on 682 pages took 7.5 minutes per batch and cost US$7.64 (Opus) and US$0.40 (Haiku).
-On the 16 test pages inside the run, F1 matched the evaluated setting (Opus 0.96 / 0.98). In a 60-item
-shuffled spot-check against the scans, with the stratum hidden, all 25 decided Opus outputs from outside
-the sample were correct, with no misread. 19 of 21 "unsure" items were entries in Reeve's index, a scope
-the guide never defined: 16% of Opus's output outside the sample sat on index pages. Ruling BHL `Index`
-pages out of scope cut the queue of mentions needing review (no agreement or a failed check) from 1,404 to
-555. Of 14 decided outputs that only Haiku produced, 10 were real mentions Opus missed. Median review time
-was 30 s per item (9 timed items).
-
-### 6.9 Botany (PCAS 1898)
-
-On 8 botany pages without an expert transcription (value-level scoring, pages pooled, Opus): frozen G1 on
-legacy OCR 0.70, repair 0.83, image only 0.83 as labelled; taxa 0.73, 0.96 and 0.99. After the labeller
-adjudicated five boundary conventions (titles not part of person names, narrow-to-wide place chains as one
-span, a sub-unit and its parent as one institution, a part-of-place phrase, `Carolinæ` as printed), the
-totals rose to 0.80, 0.94 and 0.94. Every adjudication moved the gold towards the model's boundary and was
-made after seeing model output, so both versions are reported. Joint botanical authorities (`H. & A.`) are
-one person under the labeller's rule; the model splits them.
-
-### 6.10 Training a small repair model (separate pre-registered study)
-
-If legacy OCR is where names are lost, a cheap model that repairs it line by line could sit before
-extraction. We built a line-repair environment from five IMPACT books (one expert line, the legacy OCR
-aligned to it and the OCR lines around it; split by contiguous pages; a sixth book, Cuvier 1835 in
-French, held out) and a word-level verifiable reward for GRPO [13] (damaged reference words written exactly, scientific
-names weighted ×3, −0.5 per correct word broken, −0.25 per word inserted, hard format and length gates).
-Design, decision rules and the locked test (500 in-book lines, 500 Cuvier lines) were fixed before
-scoring; development choices were made on dev lines and logged. On Qwen3-0.6B [15], two seeds per condition:
-
-| Condition | Damaged words repaired, in-book | Correct words kept | Cuvier |
-| --- | --- | --- | --- |
-| Untrained | 0.04 | 0.92 | 0.05 |
-| Supervised fine-tuning (SFT) | 0.40 / 0.41 | 0.98 | 0.21 |
-| GRPO from the untrained model | 0.006 / 0.034 | 0.99–1.00 | 0.002 / 0.011 |
-| SFT, then GRPO | 0.39 / 0.41 | 0.99 | 0.20 / 0.21 |
-
-GRPO from the untrained model learned to return the OCR unchanged (85–93% of its training answers, groups
-without reward variance 90–95%): copying a damaged line never scores below zero, and the untrained model's
-edits were right 4% of the time. A dense reward (1 − CER) did not change this. After SFT, GRPO repaired no
-more words (difference −0.004, intervals spanning zero on three test sets) and broke about a quarter fewer
-correct ones. SFT's gain came mostly from lines the untrained model never solved in eight attempts; GRPO
-after SFT raised pass@1 by under a point and left pass@8 unchanged, as Yue et al. describe [14]. A reward
-audit found five holes; two (finishing a word split at the line end; inconsistent dash glyphs) were found
-only by reading answers by hand, and no trained model exploited them. The SFT checkpoint is released as a
-research model ([`rl-sft-ocr-repair-v1`](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)); details in [RL results](rl_results.md).
-**[exploratory]** Put in front of extraction (legacy OCR of the 16 test pages repaired line by line, then
-the frozen G1 with Opus), the released model lifted value F1 from 0.60 to 0.67 (Butler) and 0.64 to 0.72
-(Reeve), paired page bootstrap +0.07 and +0.08, about a fifth of the gap to modern OCR; it fixed 31 of 350
-test mentions and turned 6 correct names into other names (`B. oreades` → `B. ovoletes`).
-GPU cost was about US$5.93, the pipeline test included.
+| Question | Result |
+| --- | --- |
+| Does a cheaper or stronger extraction model change the picture? | Value F1 (G1, Butler / Reeve) on modern OCR: Haiku 5.5 0.94 / 0.95, Sonnet 5.5 0.93 / 0.97, Opus 5.5 0.95 / 0.98, Fable 5.2 0.96 / 0.98; on legacy OCR all 0.58–0.65. Cost per 1,000 page-passes: Haiku US$0.6 (batch), Sonnet 10 (sync), Opus 11 (batch), Fable 43 (sync). The model gap (≤ 0.05) is small next to the OCR gap (about 0.35). |
+| Is repair driven by a remembered page? | No sign of it. In the expert text, 69 gold names got a visible typo (two letters swapped) and 29 binomials got a fluent epithet swap from elsewhere in the same book. Opus and Fable restored 65–68 of the typos, Haiku 54; none of the three restored any of the 29 fluent swaps. This does not rule out memorisation in general. |
+| Can a vision model give image-level evidence? | Values yes, boxes no. Reading the image and drawing a box per mention (V3), Opus got 96–98% of values right, but the box contained the right word (Internet Archive hOCR words, lenient match) for 67% (Butler) and 40% (Reeve, dense two-column pages). |
+| Do cheap signals find the errors? | On legacy OCR, two mechanical checks (OCR-junk characters; no exact GBIF match for a taxon) flagged 25% of outputs and caught 55% of errors at 77% precision; model disagreement caught 7%. On modern OCR errors were rare (about 3%) and no cheap signal found them. |
+| Does it run on whole books? | The frozen G1 prompt on 682 pages: 7.5 minutes per batch, US$7.64 (Opus), US$0.40 (Haiku); the 16 test pages inside the run reproduced the evaluated F1 (0.96 / 0.98). In a 60-item blind spot-check, all 25 decided Opus outputs outside the sample were correct; 19 of 21 "unsure" items were index entries, and ruling BHL `Index` pages out of scope cut the review queue from 1,404 to 555 mentions. Median review time 30 s per item (9 timed items). |
+| Does it hold on another discipline? | 8 botany pages (PCAS 1898, no expert transcription, value-level, pages pooled, Opus): legacy OCR 0.70, repair 0.83, image only 0.83 as labelled (taxa 0.73, 0.96, 0.99). After five boundary conventions were adjudicated, having seen model output: 0.80, 0.94, 0.94. Both versions are reported. |
 
 ---
 
@@ -438,6 +369,21 @@ did not.
 
 ---
 
+### 7.6 Companion study: can a small model do the repair?
+
+A separate, pre-registered training study asked whether a cheap model could repair legacy OCR line by
+line before extraction; it is reported in full in the
+[RL technical report](rl_report/rl_report.pdf). On a line-repair task built from five IMPACT books, with a
+word-level verifiable reward for GRPO [13] and a locked test of 500 in-book lines and 500 lines of an
+unseen French book, Qwen3-0.6B [15] repaired 4% of damaged words untrained and 40–41% after supervised
+fine-tuning (21% on the French book). GRPO from the untrained model learned to return the OCR unchanged,
+because copying a damaged line never scored below zero; after fine-tuning it repaired no more words and
+only broke fewer correct ones, consistent with Yue et al. [14]. Reading answers by hand found two reward
+holes the automated probes missed. **[exploratory]** Put in front of extraction, the released checkpoint
+lifted value F1 on legacy OCR from 0.60 to 0.67 (Butler) and 0.64 to 0.72 (Reeve), about a fifth of the
+gap to modern OCR, and turned 6 correct names into other names. For these books, a small repair model
+does not replace re-OCR. GPU cost was about US$5.93.
+
 ## 8. Limitations
 
 - **Small and narrow.** Two English books printed in 1849 and 1907, 16 test pages, plus 8 botany pages.
@@ -476,7 +422,7 @@ Repository: [github.com/dekunsun/BioEvidenceBench](https://github.com/dekunsun/B
 [Results](results.md) · [evaluation settings, one row per run](eval_settings.md) ·
 [product summary and decision memo](product.md) · [lessons learned](lessons_learned.md) ·
 [annotation guide](../ANNOTATION_GUIDE.md) · [pre-registration](../PREREGISTRATION.md) ·
-[deviations](../DEVIATIONS.md) · [training study](rl_results.md) and [released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1).
+[deviations](../DEVIATIONS.md) · [RL technical report](rl_report/rl_report.pdf) and [released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1).
 Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata: CC0. Total API spend for the
 project was US$55.65 ([evaluation settings](eval_settings.md)); GPU spend for the training study about US$6.
 

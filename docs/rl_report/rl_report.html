@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BioEvidenceBench RL: Repairing Historical OCR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+<style>
+  :root {
+    --ink: #1d1f24;
+    --muted: #5b6070;
+    --rule: #d9dbe1;
+    --link: #1f5fbf;
+    --paper: #fcfcfa;
+    --head: #f1f2f5;
+  }
+  html { background: var(--paper); }
+  body {
+    margin: 0 auto;
+    max-width: 46rem;
+    padding: 2.5rem 1.25rem 4rem;
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--paper);
+    font-variant-numeric: lining-nums;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { text-align: center; margin-bottom: 2rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .6rem; text-wrap: balance; }
+  .authors { color: var(--muted); font-size: 1.02rem; margin: .2rem 0; }
+  .affil, .date { color: var(--muted); font-size: .9rem; margin: .15rem 0; }
+  h2 { font-size: 1.22rem; margin: 2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid var(--rule); }
+  h3 { font-size: 1.04rem; margin: 1.3rem 0 .4rem; }
+  p { margin: .55rem 0; text-align: justify; hyphens: auto; }
+  .abstract { font-size: .97em; }
+  header p { text-align: center; }
+  ul, ol { padding-left: 1.4rem; margin: .5rem 0; }
+  li { margin: .25rem 0; }
+  figure { margin: 1.4rem 0; break-inside: avoid; }
+  figure img { width: 100%; display: block; border: 1px solid var(--rule); background: #fff; }
+  figcaption { font-size: .86rem; line-height: 1.45; color: var(--ink); margin-top: .5rem; }
+  figcaption b:first-child { font-weight: 700; }
+  .tablewrap { overflow-x: auto; margin: 1rem 0; break-inside: avoid; }
+  table { border-collapse: collapse; width: 100%; font-size: .84rem; line-height: 1.35; }
+  caption { caption-side: top; text-align: left; font-size: .86rem; margin-bottom: .4rem; }
+  th, td { border-top: 1px solid var(--rule); padding: .32rem .45rem; text-align: left; vertical-align: top; }
+  thead th { background: var(--head); border-top: 1.5px solid var(--ink); border-bottom: 1px solid var(--ink); font-weight: 600; }
+  tbody tr:last-child td { border-bottom: 1.5px solid var(--ink); }
+  td.n, th.n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .note { font-size: .86em; color: var(--muted); }
+  .refs li { font-size: .86rem; margin: .35rem 0; text-align: left; }
+  .refs { list-style: none; padding-left: 0; }
+  .refs li { padding-left: 1.4rem; text-indent: -1.4rem; }
+  .eq { text-align: center; margin: .8rem 0; font-style: italic; }
+  @media (max-width: 520px) {
+    body { font-size: 15px; padding-inline: 16px; }
+    h1 { font-size: 1.4rem; }
+    p { text-align: left; }
+  }
+  .case { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 1.2rem 0 .4rem; break-inside: avoid; }
+  .case > div { border: 1px solid var(--rule); background: #fff; padding: .6rem .75rem; font-size: .85em; line-height: 1.4; }
+  .case h4 { margin: 0 0 .35rem; font-size: 1em; }
+  .case .ctx { color: var(--muted); margin: 0 0 .45rem; text-align: left; }
+  .case .step { margin: .3rem 0; text-align: left; }
+  .case code { font-size: .92em; }
+  .case q { font-style: italic; }
+  .truth { display: inline-block; border: 1px solid var(--ink); padding: 0 .3rem; font-size: .9em; }
+  @media (max-width: 520px) { .case { grid-template-columns: 1fr; } }
+  @page { size: A4; margin: 15mm 16mm 16mm; }
+  @media print {
+    html, body { background: #fff; }
+    body { max-width: none; padding: 0; font-size: 9.8pt; line-height: 1.38; }
+    header { margin-bottom: 1rem; }
+    h1 { font-size: 15.5pt; }
+    h2 { font-size: 11.5pt; margin: 1.1rem 0 .35rem; }
+    h3 { font-size: 10.2pt; margin: .8rem 0 .25rem; }
+    p { margin: .35rem 0; }
+    figure { margin: .8rem 0; }
+    figure img { width: 82%; margin: 0 auto; }
+    figure.wide img { width: 100%; }
+    figcaption { font-size: 8.4pt; }
+    table { font-size: 7.9pt; min-width: 0; table-layout: auto; }
+    .tablewrap { overflow: visible; }
+    td.n, th.n { white-space: normal; }
+    th, td { padding: .25rem .3rem; }
+    caption, .refs li { font-size: 8.4pt; }
+    h2 { break-after: avoid; }
+    h3 { break-after: avoid; }
+    a { color: var(--ink); }
+    figure img { border: none; }
+  }
+
+  .refs { list-style: decimal; padding-left: 1.6rem; }
+  .refs li { padding-left: 0; text-indent: 0; }
+  hr { display: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Teaching a small model to repair historical OCR: supervised fine-tuning, GRPO and a reward audit</h1>
+  <p class="authors">Dekun Sun</p>
+  <p class="affil">University of Pennsylvania · <a href="https://ai4s.fyi">ai4s.fyi</a></p>
+  <p class="date">November 2026 · preprint draft, work in progress, not peer reviewed · <a href="https://github.com/dekunsun/BioEvidenceBench">github.com/dekunsun/BioEvidenceBench</a> · <a href="rl_report.pdf">PDF</a></p>
+  <p class="date">Technical report on the training study of BioEvidenceBench (module 7). The locked test was pre-registered and run once; the pipeline test in section 14 is exploratory.</p>
+</header>
+
+<p align="center"><img src="../figures/rl_results.png" width="100%" alt="Left: repair rate on the locked test; right: share of GRPO training answers that copy the OCR"></p>
+
+<h2>Summary</h2>
+<ul>
+<li><strong>Question.</strong> Can a small open model learn to repair legacy BHL OCR, one line at a time, and does
+  reinforcement learning with a verifiable reward (GRPO) add anything beyond supervised fine-tuning
+  (SFT)?</li>
+<li><strong>Answer, for Qwen3-0.6B on this task.</strong> SFT works: on 500 locked test lines from the five
+  training books it raises the share of damaged words written correctly from <strong>0.04 to 0.40–0.41</strong>,
+  scientific names from 0.01 to 0.36–0.44, and keeps more correct words (0.92 → 0.98). <strong>GRPO does
+  not</strong>: from the base model it learns to return the OCR unchanged (repair 0.006 / 0.034, below the
+  untrained model in seed 1 and on the held-out book); after SFT it adds no repair (Δ −0.004,
+  intervals spanning 0 on three test sets) and only breaks fewer correct words (+0.3 points).</li>
+<li><strong>Why.</strong> GRPO can only reinforce answers the model already produces. The base model's edits are
+  right 4% of the time, so "change nothing" is the best policy it can reach under a reward that
+  never penalises copying and costs 0.5 per broken word. SFT's gain comes mostly from lines the base
+  model never solved in 8 tries: it supplies answers, RL only re-weights them.</li>
+<li><strong>On an unseen book and language</strong> (Cuvier 1835, French), SFT keeps about half its gain (0.21).</li>
+<li><strong>The reward had five holes</strong>, two of them found by the author's manual review, not by the automated
+  probes. None was exploited by a trained model; one (copying is a safe floor) decided the result.</li>
+<li><strong>Released</strong>: the SFT seed-2 checkpoint as a research checkpoint,
+  <a href="https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1"><code>rl-sft-ocr-repair-v1</code></a>,
+  not for automatic replacement of library text. <strong>GPU spend: about $5.93</strong> of a $20 cap.</li>
+</ul>
+<h2>1. Why this task</h2>
+<p>The main study found that legacy OCR, not extraction, is where most reliability is lost on these
+books, and that an LLM which repairs OCR on the fly (exploratory condition G2) recovers most of it.
+This module asks whether a model small enough to run cheaply on all of BHL can learn that repair,
+and whether a verifiable reward is a better teacher than the expert transcription itself. The test
+it uses is narrower than the main study: line-level OCR repair, scored word by word against the
+expert transcription, not downstream extraction F1.</p>
+<h2>2. The environment (task B)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit</td>
+<td>one line of the expert transcription (IMPACT ground truth) paired with the legacy BHL OCR aligned to it, plus the nearest OCR line above and below as context</td>
+</tr>
+<tr>
+<td>Books</td>
+<td>five for training, development and in-book test: Butler 1907 (English), Reeve 1849 (Latin and English), <em>Horae Societatis Entomologicae Rossicae</em> 1881 (German, French, Latin, Russian), <em>Das Chitinskelett von Eosentomon</em> 1913 (German), <em>Piscium querelae et vindiciae</em> 1708 (Latin); <strong>Cuvier 1835 (French) held out</strong>, never read until the test protocol was frozen</td>
+</tr>
+<tr>
+<td>Split</td>
+<td>by contiguous content pages (split v2): train 31,909 lines, dev 3,787, in-book test 3,743</td>
+</tr>
+<tr>
+<td>Lines set aside</td>
+<td>unreadable characters in the reference, mixed-script words, index lines with leader dots, words the OCR lost and the context cannot supply, confirmed transcription typos (12 checked by the author against the scans, 9 confirmed), 5 manual exclusions</td>
+</tr>
+<tr>
+<td>Alignment audit</td>
+<td>two rounds; the author independently judged 30 pairs: same-line agreement 27 / 28, kappa 0.90</td>
+</tr>
+<tr>
+<td>Prompt</td>
+<td><code>repair_v3</code>: context lines first, the line to repair last inside <code>&lt;line&gt;…&lt;/line&gt;</code>, "stop where the marked line ends" (section 4.3)</td>
+</tr>
+<tr>
+<td>Model</td>
+<td><code>Qwen/Qwen3-0.6B</code>, instruct, thinking mode off in every stage (<code>enable_thinking=False</code>, one renderer for SFT, GRPO and evaluation)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Reward v1.3</strong> (<code>rl/env/task_b_ocr_repair/REWARD_DESIGN.md</code>): for a damaged line, the weighted share
+of damaged reference words written exactly (scientific names × 3) minus 0.5 per correct word broken
+and 0.25 per word inserted, clipped to [−1, 1]; a clean line scores 1 if nothing breaks. Hard gates
+score 0: format (empty, several lines, commentary, wrappers, any <code>&lt;think&gt;</code> tag), length outside 0.5–1.5×
+the reference, poor alignment. Case-only differences are neutral; typographic ligatures, MUFI
+characters and apostrophes are folded; punctuation is not scored.</p>
+<h2>3. Design fixed before training (<code>rl/training/configs/METRICS.md</code>)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conditions (P0)</td>
+<td>Copy (the OCR), A = Base, A′ = Base after a fixed format clean-up, B = SFT, C = GRPO from Base, D = SFT → GRPO; two seeds per trained condition</td>
+</tr>
+<tr>
+<td>Ablations</td>
+<td>P1: C with the reward 1 − CER (one seed). The data ablation (no name oversampling) and the name-weight ablation were dropped, with the author's agreement, before any test result: C learned no names with both, so removing either could not show a difference</td>
+</tr>
+<tr>
+<td>Primary metrics</td>
+<td>damaged-word repair rate; scientific-name exact recovery; correct-word preservation; format-failure rate; raw and after the fixed clean-up</td>
+</tr>
+<tr>
+<td>Statistics</td>
+<td>paired Δ on the same lines, 95% interval from 2,000 bootstrap resamples of page blocks; a claim needs every seed's interval on the same side of 0; preservation by non-inferiority (margin 1 point, "inconclusive" is never a pass)</td>
+</tr>
+<tr>
+<td>Reward hacking</td>
+<td>an answer with reward ≥ 0.75 that violates a requirement checked independently of the reward, confirmed by hand; more than 2% in a condition means the verifier is not reliable for it</td>
+</tr>
+<tr>
+<td>Budget gates</td>
+<td>$2 smoke test, $13 primary runs, $3 ablations and test, $2 reserve; $20 hard cap</td>
+</tr>
+</tbody>
+</table></div>
+<h2>4. Development, stage by stage (dev data only)</h2>
+<h3>4.1 Calibration and smoke test</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What it showed</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stop test</td>
+<td>the pod saves, uploads its results to a git branch, checks the upload, then is deleted</td>
+<td>$0.02</td>
+</tr>
+<tr>
+<td>Calibration (4th launch; 3 failed on environment set-up)</td>
+<td>thinking really off (0 <code>&lt;think&gt;</code>); 57% of items give unequal rewards within a group of 8 at T 1.0 (gate ≥ 20%: passed); but mean reward −0.07, pass rate 4%, and <strong>40% of answers run on into the context lines</strong></td>
+<td>$0.20</td>
+</tr>
+<tr>
+<td>Smoke test</td>
+<td>SFT 0.53 s/step, GRPO 5.8 s/step ($0.14 per 100 steps on an RTX 4090); in 60 steps, GRPO from Base climbed to the copy-the-OCR reward while entropy fell 0.13 → 0.02 and groups without signal rose 59% → 93%</td>
+<td>$0.19</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4.2 Why answers ran on</h3>
+<p>The author asked whether the input boundary was ambiguous. No input contained a newline; the cause was
+the prompt layout: v2 put the <em>next</em> line last, right before the answer, and sentences flow across
+lines, so 70% of run-ons appended the next line.</p>
+<h3>4.3 Prompt v2 vs v3 (a logged development revision, approved by the author before P0)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Base model, 184 dev items × 8 answers</th>
+<th>v2, T 1.0</th>
+<th>v3, T 1.0</th>
+<th>v2, eval decoding</th>
+<th>v3, eval decoding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Answers running into the context</td>
+<td class="n">41.6%</td>
+<td><strong>1.7%</strong></td>
+<td class="n">40.8%</td>
+<td><strong>1.6%</strong></td>
+</tr>
+<tr>
+<td>Format failures</td>
+<td class="n">2.5%</td>
+<td class="n">0.6%</td>
+<td class="n">1.4%</td>
+<td class="n">0%</td>
+</tr>
+<tr>
+<td>Mean reward</td>
+<td class="n">−0.064</td>
+<td class="n">+0.096</td>
+<td class="n">−0.019</td>
+<td class="n">+0.162</td>
+</tr>
+<tr>
+<td>Pass rate</td>
+<td class="n">3.9%</td>
+<td class="n">15.4%</td>
+<td class="n">5.0%</td>
+<td class="n">18.2%</td>
+</tr>
+<tr>
+<td>Items with unequal rewards (GRPO's signal)</td>
+<td class="n">56.5%</td>
+<td class="n">54.3%</td>
+<td class="n">18.5%</td>
+<td class="n">18.5%</td>
+</tr>
+</tbody>
+</table></div>
+<p>v3 removed the confound without reducing the learning signal; it is the prompt for every condition.
+($0.07; <code>rl/training/runs/20261121-1756_promptcmp/REPORT.md</code>.)</p>
+<h3>4.4 Settings fixed before the P0 runs</h3>
+<ul>
+<li>Training mix: 4,800 lines; every block of 16 (one GRPO step) holds 8 lines with a damaged
+  scientific name, 3 clean lines (19%, the author: "about 20%") and 5 other damaged lines.</li>
+<li>SFT lr 1e-5; GRPO: 8 answers per prompt, 16 prompts per step, T 1.0, <code>dapo</code> loss, std scaling per
+  group, β = 0, lr 1e-6, vLLM colocated, 300 steps.</li>
+<li><strong>Float32 master weights</strong> with bf16 autocast: bf16 weights round away most updates at lr 1e-6
+  (the smoke test used bf16; the copying it found came back in float32, so it was not a rounding effect).</li>
+<li>A seed-specific order of the 16-line blocks, because TRL gives vLLM the same sampling seed in every
+  run.</li>
+<li>A checkpoint every 50 steps, chosen on 500 dev lines by a rule written before the runs: highest
+  post-processed repair rate among checkpoints whose preservation is at least Base's minus 0.01.</li>
+<li><strong>Every GRPO answer logged</strong> with its step and reward, so "learns to copy" can be checked directly.</li>
+</ul>
+<h3>4.5 Primary runs on dev, and the SFT re-run</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Dev, chosen checkpoint</th>
+<th>Seed 1</th>
+<th>Seed 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base repair</td>
+<td class="n">0.061</td>
+<td class="n">0.061</td>
+</tr>
+<tr>
+<td>B, SFT 300 steps</td>
+<td class="n">0.324</td>
+<td class="n">0.315</td>
+</tr>
+<tr>
+<td><strong>B, SFT 600 steps</strong> (re-run, the author: SFT was still improving at step 300)</td>
+<td><strong>0.358</strong> (step 600)</td>
+<td><strong>0.361</strong> (step 400)</td>
+</tr>
+<tr>
+<td>C, GRPO from Base</td>
+<td class="n">0.012</td>
+<td class="n">0.057</td>
+</tr>
+<tr>
+<td>D, SFT 600 → GRPO</td>
+<td>0.353 (step 50)</td>
+<td>0.347 (step 50)</td>
+</tr>
+<tr>
+<td>C-CER, GRPO with 1 − CER (P1)</td>
+<td>0.047 (step 250)</td>
+<td class="n">–</td>
+</tr>
+</tbody>
+</table></div>
+<p>D chose its first checkpoint in both seeds and stayed at or slightly below its SFT start.
+Runs: <code>rl/training/runs/20261121-1832_p0s1</code>, <code>_p0s2</code>, <code>20261121-2007_sft600s1</code>, <code>20261121-2008_sft600s2</code>,
+<code>20261121-2022_p1cer</code>; reports <code>rl/training/runs/STAGE3_P0_REPORT.md</code>.</p>
+<h2>5. What GRPO did in training (every completion logged)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Answers copying the OCR, steps 0–49 → 250–299</th>
+<th>Groups with no reward difference</th>
+<th>Entropy</th>
+<th>Training reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C, seed 1</td>
+<td>79% → 93%</td>
+<td>46% → 95%</td>
+<td>0.16 → 0.01</td>
+<td>0.12 → 0.19</td>
+</tr>
+<tr>
+<td>C, seed 2</td>
+<td>74% → 85%</td>
+<td>55% → 90%</td>
+<td>0.15 → 0.03</td>
+<td>0.14 → 0.21</td>
+</tr>
+<tr>
+<td>C-CER, seed 1</td>
+<td>81% → 70% (90% at steps 50–99)</td>
+<td>20% → 74%</td>
+<td>0.16 → 0.02</td>
+<td>(1 − CER) 0.85 → 0.86</td>
+</tr>
+<tr>
+<td>D, seed 1</td>
+<td>18% → 18%</td>
+<td>19% → 45%</td>
+<td>0.43 → 0.16</td>
+<td>0.54 → 0.65</td>
+</tr>
+<tr>
+<td>D, seed 2</td>
+<td>17% → 17%</td>
+<td>24% → 43%</td>
+<td>0.38 → 0.17</td>
+<td>0.55 → 0.64</td>
+</tr>
+</tbody>
+</table></div>
+<p>GRPO from Base collapses onto copying: groups lose all reward variance and the learning signal
+disappears. GRPO after SFT keeps editing, and its training reward rises by 0.1 while dev repair does
+not move: a rising training reward was not a better repair.</p>
+<h2>6. The locked test (<code>rl/training/runs/STAGE4_TEST_REPORT.md</code>)</h2>
+<p>Frozen before any test line was scored (<code>rl/training/configs/TEST_PROTOCOL.md</code> with
+<code>stage4_models.json</code>, commit <code>1140608</code>); run once, 16.6 minutes, $0.25. Sets: 500 in-book lines (100
+per book; the 17 lines the alignment audits had displayed left out; 93 pages, 12 page blocks),
+500 Cuvier lines (319 pages), and 3,226 further in-book lines for a larger confirmation. Evaluation
+decoding T 0.7, top-p 0.8, top-k 20; 8 answers per line, pass@1 over answers 0–3.</p>
+<h3>6.1 Metrics (raw; after the clean-up the numbers differ by at most 0.002)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>In-book repair</th>
+<th>Names (22 words)</th>
+<th>Preservation</th>
+<th>Format failure</th>
+<th>Cuvier repair</th>
+<th>Cuvier preservation</th>
+<th>Larger set repair</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy the OCR</td>
+<td class="n">0</td>
+<td class="n">0</td>
+<td class="n">1.000</td>
+<td class="n">0%</td>
+<td class="n">0</td>
+<td class="n">1.000</td>
+<td class="n">0</td>
+</tr>
+<tr>
+<td>A. Base (A′ the same)</td>
+<td class="n">0.037</td>
+<td class="n">0.011</td>
+<td class="n">0.921</td>
+<td class="n">4.4%</td>
+<td class="n">0.047</td>
+<td class="n">0.921</td>
+<td class="n">0.038</td>
+</tr>
+<tr>
+<td>B. SFT s1 / s2</td>
+<td class="n">0.399 / 0.410</td>
+<td class="n">0.44 / 0.36</td>
+<td class="n">0.983 / 0.982</td>
+<td class="n">0.2 / 0.7%</td>
+<td class="n">0.213 / 0.212</td>
+<td class="n">0.981 / 0.982</td>
+<td class="n">0.527 / 0.510</td>
+</tr>
+<tr>
+<td>C. GRPO s1 / s2</td>
+<td class="n">0.006 / 0.034</td>
+<td class="n">0 / 0</td>
+<td class="n">0.996 / 0.990</td>
+<td class="n">0.3 / 0.4%</td>
+<td class="n">0.002 / 0.011</td>
+<td class="n">0.999 / 0.998</td>
+<td class="n">–</td>
+</tr>
+<tr>
+<td>D. SFT → GRPO s1 / s2</td>
+<td class="n">0.394 / 0.406</td>
+<td class="n">0.42 / 0.33</td>
+<td class="n">0.986 / 0.987</td>
+<td class="n">0.2 / 0.4%</td>
+<td class="n">0.200 / 0.209</td>
+<td class="n">0.983 / 0.985</td>
+<td class="n">0.525 / 0.508</td>
+</tr>
+<tr>
+<td>C-CER s1</td>
+<td class="n">0.027</td>
+<td class="n">0</td>
+<td class="n">0.993</td>
+<td class="n">0.3%</td>
+<td class="n">0.032</td>
+<td class="n">0.995</td>
+<td class="n">–</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cuvier has 10 damaged name words (7 lines), so names there are descriptive.</p>
+<h3>6.2 Pre-registered verdicts</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Comparison</th>
+<th>Seed 1</th>
+<th>Seed 2</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does GRPO improve the delivered repair?</td>
+<td>C − A, in-book</td>
+<td class="n">−0.031 [−0.060, −0.016]</td>
+<td class="n">−0.003 [−0.011, 0.008]</td>
+<td><strong>No</strong>; seed 1 below Base</td>
+</tr>
+<tr>
+<td>… content, not only format?</td>
+<td>C − A′</td>
+<td>same within 0.002</td>
+<td></td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>… on the held-out book?</td>
+<td>C − A, Cuvier</td>
+<td class="n">−0.046 [−0.082, −0.018]</td>
+<td class="n">−0.037 [−0.072, −0.011]</td>
+<td><strong>No</strong>; both below Base</td>
+</tr>
+<tr>
+<td>Does SFT → GRPO add to SFT?</td>
+<td>D − B, in-book</td>
+<td class="n">−0.004 [−0.020, 0.001]</td>
+<td class="n">−0.004 [−0.012, 0.003]</td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>D − B, larger set</td>
+<td class="n">−0.002 [−0.005, 0.001]</td>
+<td class="n">−0.002 [−0.010, 0.006]</td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>D − B, Cuvier</td>
+<td class="n">−0.014 [−0.033, 0.010]</td>
+<td class="n">−0.003 [−0.017, 0.010]</td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>Preservation, D − B</td>
+<td>margin 1 point</td>
+<td>+0.003, interval above 0</td>
+<td>+0.004, above 0</td>
+<td><strong>Pass</strong>, everywhere</td>
+</tr>
+<tr>
+<td>Names without harm, D − B</td>
+<td></td>
+<td class="n">−0.023 [−0.083, 0.038]</td>
+<td class="n">−0.034 [−0.096, 0.000]</td>
+<td><strong>No</strong> gain</td>
+</tr>
+<tr>
+<td>(descriptive) SFT − Base</td>
+<td>in-book / Cuvier</td>
+<td>+0.362 / +0.166</td>
+<td>+0.373 / +0.165</td>
+<td>intervals well above 0</td>
+</tr>
+<tr>
+<td>P1: does a dense reward escape copying?</td>
+<td>C-CER − C / C-CER − A, in-book</td>
+<td class="n">+0.021 [0.007, 0.039] / −0.010 [−0.030, 0.001]</td>
+<td></td>
+<td>slightly better than C, not above Base</td>
+</tr>
+</tbody>
+</table></div>
+<p>A page-level bootstrap (93 pages, sensitivity only) agrees with every verdict.</p>
+<h3>6.3 Pass rates: a higher pass@1 is not a better repair</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>In-book pass@1</th>
+<th>pass@8</th>
+<th>Cuvier pass@1</th>
+<th>pass@8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy</td>
+<td class="n">0.478</td>
+<td class="n">0.478</td>
+<td class="n">0.752</td>
+<td class="n">0.752</td>
+</tr>
+<tr>
+<td>Base</td>
+<td class="n">0.376</td>
+<td class="n">0.422</td>
+<td class="n">0.577</td>
+<td class="n">0.636</td>
+</tr>
+<tr>
+<td>SFT s1 / s2</td>
+<td class="n">0.561 / 0.554</td>
+<td class="n">0.612 / 0.598</td>
+<td class="n">0.703 / 0.710</td>
+<td class="n">0.758 / 0.768</td>
+</tr>
+<tr>
+<td>GRPO s1 / s2</td>
+<td class="n">0.478 / 0.486</td>
+<td class="n">0.482 / 0.494</td>
+<td class="n">0.747 / 0.747</td>
+<td class="n">0.748 / 0.750</td>
+</tr>
+<tr>
+<td>SFT → GRPO s1 / s2</td>
+<td class="n">0.567 / 0.562</td>
+<td class="n">0.610 / 0.604</td>
+<td class="n">0.718 / 0.726</td>
+<td class="n">0.762 / 0.774</td>
+</tr>
+</tbody>
+</table></div>
+<p>GRPO's pass@1 beats Base's only because a copied clean line scores 1: it equals Copy's. After SFT,
+GRPO raises pass@1 by under a point and leaves pass@8 unchanged, the pattern Yue et al. (2025,
+arXiv 2504.13837) describe: RL makes answers the policy already gives slightly more likely.</p>
+<h2>7. Where the gain came from (7c, <code>rl/training/results_7c/ATTRIBUTION_7C.md</code>)</h2>
+<p><strong>By error type</strong> (in-book repair rate):</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Damaged word</th>
+<th>Words</th>
+<th>Base</th>
+<th>SFT</th>
+<th>GRPO</th>
+<th>SFT → GRPO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ordinary misread letters</td>
+<td class="n">399</td>
+<td class="n">0.05</td>
+<td class="n">0.45–0.47</td>
+<td class="n">0.01–0.05</td>
+<td class="n">0.45–0.46</td>
+</tr>
+<tr>
+<td>Long s (ſ)</td>
+<td class="n">169</td>
+<td class="n">0</td>
+<td class="n">0.32–0.35</td>
+<td class="n">0</td>
+<td class="n">0.32–0.35</td>
+</tr>
+<tr>
+<td>Split by the OCR</td>
+<td class="n">34</td>
+<td class="n">0.07</td>
+<td class="n">0.25–0.29</td>
+<td class="n">0.02–0.05</td>
+<td class="n">0.24–0.29</td>
+</tr>
+<tr>
+<td>Ligature (æ œ)</td>
+<td class="n">29</td>
+<td class="n">0</td>
+<td class="n">0.31–0.39</td>
+<td class="n">0</td>
+<td class="n">0.28–0.36</td>
+</tr>
+<tr>
+<td>Scientific name</td>
+<td class="n">22</td>
+<td class="n">0.01</td>
+<td class="n">0.34–0.43</td>
+<td class="n">0</td>
+<td class="n">0.32–0.40</td>
+</tr>
+<tr>
+<td>Digit</td>
+<td class="n">9</td>
+<td class="n">0.03</td>
+<td class="n">0.22–0.25</td>
+<td class="n">0</td>
+<td class="n">0.22–0.25</td>
+</tr>
+</tbody>
+</table></div>
+<p>Base never writes the long s or a ligature the OCR lost: these are conventions of the expert edition,
+which SFT shows and GRPO would first have to sample.</p>
+<p><strong>By edit behaviour</strong> (in-book): Base edits 50% of lines and only <strong>4%</strong> of its changes are right;
+SFT edits 61–62% with 41–43% precision; GRPO from Base edits 7–17%. SFT → GRPO keeps SFT's edits and
+repairs but breaks 0.10 instead of 0.13 correct words per answer, which is its preservation gain and
+exactly what the −0.5 penalty asks for.</p>
+<p><strong>By difficulty before training</strong>: on the 289 in-book lines Base never got right in 8 tries, SFT
+reaches pass@1 0.30 (GRPO 0.12–0.13, almost all from copying clean lines it used to damage).</p>
+<p><strong>The author's reading of 43 test lines</strong> (Base wrong / D right, and the reverse): all 25 "D right" lines
+are genuine repairs matching the expert line (misread letters, Latin endings, long s, a ligature
+in a subfamily name), and D stops at the line-end hyphen where Base continued. Of 18 "D wrong" lines,
+13 change correct words with no support on the line (<code>Visagapatam</code> → <code>Viseugapatam</code>), 4 apply a
+language prior the book does not follow (<code>valde</code> → <code>valdè</code>, <code>l'interieur</code> → <code>l'intérieur</code>), and 1 is a
+scoring problem (hole H5 below).</p>
+<h2>8. Is the reward trustworthy? (<code>rl/REWARD_AUDIT.md</code> part 2)</h2>
+<p><strong>Constructed probes</strong> (17 kinds of answer × 585 dev lines): no probe scores above the honest answer.
+Held: empty answers, deleting hard words (−0.03, below copying), lower-casing, misspelling one word,
+several lines, run-on, commentary, writing the line twice.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Hole</th>
+<th>What it allows</th>
+<th>Seen?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H1</strong> Copying is a safe floor (0 on a damaged line, never negative; a broken word −0.5; under 1 − CER copying scores 0.81–0.90)</td>
+<td>stop repairing</td>
+<td><strong>decided the GRPO result</strong></td>
+</tr>
+<tr>
+<td><strong>H2</strong> One inserted word costs only 0.25 (an invented word on a clean line scores 0.75)</td>
+<td>pad lines</td>
+<td>Base 2.4% of test answers, trained ≤ 0.15%</td>
+</tr>
+<tr>
+<td><strong>H3</strong> Punctuation is not scored</td>
+<td>ignore punctuation</td>
+<td>7–12% of answers score 1.0 with different punctuation</td>
+</tr>
+<tr>
+<td><strong>H4</strong> A word broken by the line-end hyphen can be finished for free (<code>au-</code> → <code>au-dessus</code> scores 1.0), <em>found by the author</em></td>
+<td>continue the next line's word</td>
+<td>Base 43 test answers at 1.0; no trained model; never rewarded in training</td>
+</tr>
+<tr>
+<td><strong>H5</strong> Dash glyphs scored inconsistently (<code>45-46</code> → <code>45–46</code> loses 0.5; 16% of in-book damaged words differ only in a dash glyph), <em>found by the author</em></td>
+<td>unfair penalties; credit for learning the edition's dash habit</td>
+<td>SFT's repair rate without dash-only words is 0.39 instead of 0.40; no conclusion changes</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Confirmed reward hacking</strong> (the author judged 30 blind candidates, all violations): <strong>Base 2.2% in-book,
+3.4% Cuvier</strong>, above the 2% threshold, so Reward v1.3 is not a reliable judge of the untrained model;
+<strong>trained models 0–0.45%</strong>. These are lower bounds (one independent check found the candidates).
+Fixes go into Reward v1.4, which is planned and not built (decided so far: all dash glyphs compared
+as one class). A strict-xfail test documents H4.</p>
+<h2>9. Release decision (7d, <code>rl/RELEASE_DECISION.md</code>)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decision (the author)</td>
+<td>publish <strong>B, SFT seed 2</strong> as a research checkpoint; no production use; no further GPU training for now</td>
+</tr>
+<tr>
+<td>Why B, not D</td>
+<td>B meets every pre-registered criterion D meets; D's extra GRPO step buys 0.3 points of preservation and no repair. Seed chosen on dev (0.361 vs 0.358), not on a test result</td>
+</tr>
+<tr>
+<td>Why not production</td>
+<td>40% repair in-book, 21% on the French book, and about 1.8% of correct words changed: a library would introduce new errors into correct text</td>
+</tr>
+<tr>
+<td>Pre-release checks</td>
+<td>file is the one tested (frozen asset id and size); SHA-256 computed; tar holds only model and tokenizer files; licences (Qwen3-0.6B Apache 2.0, <code>finebooks/bhl-impact-gt</code> CC-BY 3.0, all six BHL items not in copyright); model card with results, regressions and out-of-scope use</td>
+</tr>
+<tr>
+<td>Release</td>
+<td><a href="https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1"><code>rl-sft-ocr-repair-v1</code></a>: <code>sft_s2.tar</code>, 1,203,578,880 bytes, SHA-256 <code>bfeb5657e7e078d25b1c47c64a8afd2c63c80d5e8bb0594f285d0fafdea16e8c</code>, tag at training commit <code>c994ade</code>; download checked by the author</td>
+</tr>
+</tbody>
+</table></div>
+<h2>10. Cost</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Run</th>
+<th>Minutes</th>
+<th>GPU (estimate from run time)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stop test</td>
+<td class="n">1</td>
+<td>$0.02</td>
+</tr>
+<tr>
+<td>Calibration, 3 failed launches + 1 success</td>
+<td class="n">13</td>
+<td>$0.20</td>
+</tr>
+<tr>
+<td>Smoke test</td>
+<td class="n">13</td>
+<td>$0.19</td>
+</tr>
+<tr>
+<td>Prompt v2 vs v3</td>
+<td class="n">5</td>
+<td>$0.07</td>
+</tr>
+<tr>
+<td>P0, seeds 1 and 2 (in parallel)</td>
+<td>87 + 74</td>
+<td>$2.39</td>
+</tr>
+<tr>
+<td>SFT 600 re-run, seeds 1 and 2</td>
+<td>56 + 61</td>
+<td>$1.74</td>
+</tr>
+<tr>
+<td>P1 reward ablation</td>
+<td class="n">44</td>
+<td>$0.65</td>
+</tr>
+<tr>
+<td>Locked test</td>
+<td class="n">17</td>
+<td>$0.25</td>
+</tr>
+<tr>
+<td>Publishing</td>
+<td class="n">3</td>
+<td>$0.03</td>
+</tr>
+<tr>
+<td>Pipeline test: repair the 22 sample pages (section 14)</td>
+<td class="n">5</td>
+<td>$0.07</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>$5.59 by run time; about $5.93 by RunPod balance</strong> (pod start-up and deletion delays included)</td>
+</tr>
+</tbody>
+</table></div>
+<p>All on RunPod, mostly Secure RTX 4090 at $0.89/h. Earlier, the task B API trial (Haiku and Opus as
+policies on 200 dev items) cost $4.24 of Claude API budget, separately.</p>
+<h2>11. What changed during development, and one deviation</h2>
+<p>All of these were decided on dev data or before the locked test, and are logged in <code>rl/LOG.md</code>:
+prompt v2 → v3; training mix with about 20% clean lines; float32 master weights; seed-specific block
+order; SFT 300 → 600 steps (B and D re-run); P1 reduced to the reward ablation; Cuvier built with the
+automatic rules only (nobody had read it); reward-hacking candidates split into punctuation-only and
+word-level, because punctuation is unscored by design. <strong>Deviation:</strong> the plan asked for release
+criteria written by the author before the results; none were written separately, so the release decision
+applies only the pre-registered decision rules and marks its practical criteria as written afterwards.</p>
+<h2>12. What this cannot show</h2>
+<ul>
+<li>One small model, one reward family, 300 GRPO steps at one learning rate, two seeds: "GRPO does not
+  help" holds for this setting, not for GRPO in general.</li>
+<li>The in-book test has 12 independent page blocks, so intervals are coarse; Cuvier's name results rest
+  on 10 words.</li>
+<li>Line repair is not extraction: the pipeline test (section 14) was designed after unsealing and is exploratory.</li>
+<li>All texts are public and may be in the base model's pre-training data.</li>
+<li>Reward v1.3 ignores punctuation; every metric here inherits that blind spot.</li>
+</ul>
+<h2>13. What it suggests next</h2>
+<ol>
+<li>Start GRPO where the group already contains repairs (SFT checkpoints at several steps, or a
+   larger model), measure pass@8 before training, and test whether GRPO's gain grows with it.</li>
+<li>Reward v1.4: dash glyphs unified (decided), H4 fixed, and a small negative score for a damaged line
+   returned unchanged where the line itself shows the repair, so copying is no longer the safe floor;
+   probed on dev before any training.</li>
+<li>Rejection-sampling fine-tuning (keep the SFT model's answers that score 1, train on them) as a
+   cheaper alternative to GRPO for the same purpose.</li>
+<li>~~Test the released checkpoint inside the extraction pipeline.~~ Done (2026-11-21, exploratory, see
+   section 14).</li>
+</ol>
+<h2>14. The released checkpoint inside the extraction pipeline (exploratory)</h2>
+<p>Legacy OCR of the 22 sample pages repaired line by line by <code>sft_s2</code> (greedy, <code>repair_v3</code>, 924 lines,
+$0.07 on the GPU), then the frozen G1 extraction with Opus on the 16 test pages ($0.25). Value F1 rises
+from 0.60 to <strong>0.67</strong> (Butler) and 0.64 to <strong>0.72</strong> (Reeve); paired page bootstrap +0.07 [0.04, 0.10] and
++0.08 [0.02, 0.12]. That is about a fifth of the gap to dots.mocr (0.95 / 0.98) and far below Opus
+repairing while it extracts (G2, 0.96 / 0.91). Of 350 primary test mentions it fixed 31 and broke 6, all
+6 intact names turned into other plausible names (<code>B. oreades</code> → <code>B. ovoletes</code>, <code>LICHT.</code> → <code>LINN.</code>).
+A small line-level repair model is not a substitute for re-OCR; if used, the original line must be kept
+beside the repair. Rules fixed before the run: <code>results/sft_repair_pipeline/PLAN.md</code>; results:
+<code>results/sft_repair_pipeline/REPORT.md</code>.</p>
+<h2>Files</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>What</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training report (all of the above in one place)</td>
+<td><code>rl/TRAINING_REPORT.md</code></td>
+</tr>
+<tr>
+<td>Design and decision rules</td>
+<td><code>rl/training/configs/METRICS.md</code>, <code>TEST_PROTOCOL.md</code>, <code>stage4_models.json</code></td>
+</tr>
+<tr>
+<td>Environment, reward, data rules</td>
+<td><code>rl/env/task_b_ocr_repair/</code> (<code>REWARD_DESIGN.md</code>, <code>SPLIT_V2.md</code>, <code>build/</code>)</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><code>rl/training/</code> (<code>stage1_calibrate.py</code>, <code>stage2_smoke.py</code>, <code>stage3_p0.py</code>, <code>stage4_test.py</code>, <code>analyze_test_7b.py</code>, <code>attribution_7c.py</code>), <code>src/rl_task_b*.py</code>, <code>rl/training/runpod/</code></td>
+</tr>
+<tr>
+<td>Runs</td>
+<td><code>rl/training/runs/</code> (one folder per pod run; <code>STAGE3_P0_REPORT.md</code>, <code>STAGE4_TEST_REPORT.md</code>)</td>
+</tr>
+<tr>
+<td>Test analysis, attribution</td>
+<td><code>rl/training/results_test/</code>, <code>rl/training/results_7c/</code></td>
+</tr>
+<tr>
+<td>Reward audit, release</td>
+<td><code>rl/REWARD_AUDIT.md</code>, <code>rl/RELEASE_DECISION.md</code>, <code>rl/release/</code></td>
+</tr>
+<tr>
+<td>Toy GRPO (7a)</td>
+<td><code>rl/training/toy_grpo.py</code>, <code>rl/training/NOTES_zh.md</code></td>
+</tr>
+<tr>
+<td>Figure</td>
+<td><code>src/plot_rl.py</code> → <code>docs/figures/rl_results.png</code></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>中文摘要</h2>
+<ul>
+<li><strong>问题</strong>：一个小型开源模型能否学会逐行修复 BHL 的旧 OCR？在监督微调（SFT）之外，用可验证奖励做强化学习（GRPO）能否再带来提升？</li>
+<li><strong>结论</strong>（只针对 Qwen3-0.6B 和这个任务）：</li>
+<li><strong>SFT 有效</strong>：在 500 行锁定的同书内测试上，受损词修复率从 0.04 提到 0.40–0.41，学名从 0.01 提到 0.36–0.44，保留率从 0.92 升到 0.98。</li>
+<li><strong>GRPO 无效</strong>：从原模型直接做 GRPO，模型学会原样照抄 OCR；种子 1 和留出书上的修复率比未训练时还低。SFT 之后再做 GRPO，修复率不变，只是改坏的词少了约四分之一。</li>
+<li><strong>原因</strong>：GRPO 只能强化模型已经会写出来的答案。原模型的改动只有 4% 是对的，而奖励对照抄从不扣分、改坏一个词扣 0.5，所以"不改"是它能学到的最好策略。SFT 的提升主要来自原模型 8 次都做不对的行：SFT 提供新答案，RL 只是在已有答案之间重新分配概率。</li>
+<li><strong>留出书</strong>：在没见过的法语书 Cuvier 上，SFT 保留了约一半的提升（0.21）。</li>
+<li><strong>奖励审计</strong>：找到五个漏洞，其中两个（H4 行末断词续写、H5 横线字形）是作者人工审查时发现的，自动探针没有发现。训练过的模型都没有利用这些漏洞，但"照抄是安全的保底"（H1）直接决定了 GRPO 的结果。经作者确认的钻空子比例：原模型 2.2–3.4%（超过 2% 门槛），训练过的模型 0–0.45%。</li>
+<li><strong>发布</strong>：SFT 种子 2 作为研究用检查点公开（<code>rl-sft-ocr-repair-v1</code>），不可用于自动替换原文。GPU 总花费约 $5.93，上限 $20。</li>
+<li><strong>下一步可以做的</strong>：从已经能采样到正确修复的起点做 GRPO；奖励 v1.4；拒绝采样微调。</li>
+<li><strong>接进抽取流程（已做，探索性）</strong>：先用发布的检查点逐行修复旧 OCR，再用冻结的 G1 让 Opus 提取，16 页测试页上 F1 从 0.60 升到 0.67（Butler）、0.64 升到 0.72（Reeve），配对自助法差值 +0.07 / +0.08；现代 OCR（dots.mocr）是 0.95 / 0.98，Opus 边提取边修复（G2）是 0.96 / 0.91。350 个主要字段提及里修好 31 个、改坏 6 个，改坏的都是原本正确的名字被换成别的看似合理的名字。小模型逐行修复不能代替重新 OCR；若要用，必须保留原行供核对（<code>results/sft_repair_pipeline/REPORT.md</code>）。</li>
+</ul>
+
+</body>
+</html>

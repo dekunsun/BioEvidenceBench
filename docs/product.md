@@ -1,5 +1,7 @@
 # BioEvidenceBench: product summary
 
+**The decision this memo informs:** for a library or museum turning historical books into biodiversity data, where should the next unit of money or reviewer time go: better OCR, a better extraction model, evidence checks, name linking, or human review?
+
 Part 1 is the one-page decision memo; part 2 is the product design built from the results. It is a
 design, not a deployed product. Numbers marked *(pre-registered)* come from the frozen test run on
 16 locked pages; everything else is exploratory ([`DEVIATIONS.md`](../DEVIATIONS.md)). Full numbers:
@@ -136,6 +138,8 @@ is [published as a research model](https://github.com/dekunsun/BioEvidenceBench/
 ---
 
 ## 中文版
+
+**这份备忘录要回答的决策：** 一个把历史文献转成生物多样性数据的图书馆或博物馆，下一笔钱或审核人力该投在哪里：更好的 OCR、更强的提取模型、证据核对、学名关联，还是人工审核？
 
 第一部分是一页决策备忘录，第二部分是根据结果推出的产品设计。这是设计，不是已上线的产品。标"预注册"的数字来自冻结后在 16 个锁定测试页上的运行，其余都是探索性的（[`DEVIATIONS.md`](../DEVIATIONS.md)）。完整数字见 [results](results.md) 和 [evaluation settings](eval_settings.md)。
 

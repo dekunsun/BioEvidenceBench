@@ -8,7 +8,7 @@
 
 *Open research pilot · November 2026 · Preprint in progress, not peer reviewed*
 
-[**Read the preprint**](docs/preprint/preprint.pdf) · [**Full results**](docs/results.md) · [**Training follow-up**](docs/rl_results.md) · [**Reproduce**](#reproduce-the-evaluation) · [**Poster**](poster/poster.pdf) · [**中文版**](README_zh.md)
+[**Decision memo**](docs/product.md) · [**Preprint**](docs/preprint/preprint.pdf) · [**RL technical report**](docs/rl_report/rl_report.pdf) · [**Full results**](docs/results.md) · [**Lessons learned**](docs/lessons_learned.md) · [**Reproduce**](#reproduce-the-evaluation) · [**Poster**](poster/poster.pdf) · [**中文版**](README_zh.md)
 
 <img src="docs/assets/overview/cover_illustration.png" width="900" alt="Conceptual illustration: historical natural-history books flowing through OCR, extraction, evidence, linking, and review into structured biodiversity records">
 
@@ -16,17 +16,28 @@
 
 </div>
 
+## At a glance
+
+BioEvidenceBench has two strands, both run on public Biodiversity Heritage Library (BHL) pages:
+
+1. **Evaluating an AI extraction pipeline and diagnosing where it loses reliability.** The same pages were read as old OCR, modern OCR and an expert transcription, and an LLM extracted names, people, places, institutions and dates from each, under a pre-registered plan with a locked test set. Old OCR was the largest loss (value F1 0.60 / 0.64, against 0.95 / 0.98 with modern OCR). Once the OCR was good, the losses moved to linking names to today's taxonomy (a direct GBIF lookup lost 14 of 34 correctly extracted bird names) and to the rules for what counts as a record. Two models agreeing was not evidence of being right.
+2. **Low-cost post-training of a small model, with an audit of its reward.** For about $6 of GPU, a 0.6-billion-parameter model was trained to repair OCR line by line. Supervised fine-tuning raised the share of damaged words repaired from 4% to 40%; reinforcement learning on an automatic reward (GRPO) taught it to copy the OCR unchanged. Reading answers by hand found two reward loopholes the automated probes had missed.
+
+**What I did:** defined the task and the labelling guide, labelled all 607 reference mentions myself before seeing model output, wrote and froze the pre-registration, ran the error analysis and cost tracking, wrote the decision memo, and trained, tested and released the small model.
+
+**Where to start:** [Decision memo](docs/product.md) · [Preprint](docs/preprint/preprint.pdf) · [RL technical report](docs/rl_report/rl_report.pdf) · [Lessons learned](docs/lessons_learned.md)
+
 ## One misread name, one unreliable record
 
-In an 1849 book about shells, *Conchologia iconica*, a species name appears in print as **`BULIMUS CHILENSIS`**. The digital library's older optical character recognition (OCR) text renders it as **`BuLlMLS CiilLE.NSls`**.
+In an 1849 book on shells, *Conchologia iconica*, a species appears in print as **`BULIMUS CHILENSIS`**. When the page was digitized, the library's older optical character recognition (OCR) software read it as **`BuLlMLS CiilLE.NSls`**.
 
-The book is online. The page is searchable. A language model can even find the line where the species is mentioned. But if it faithfully copies the OCR mistake, the resulting database record still contains the wrong name.
+On the surface, the digitization worked. The book is online, and the page is searchable. Hand that text to a large language model, and it can pinpoint the exact line where the species is mentioned. Yet if the model faithfully copies what the OCR gave it, the database still ends up with the wrong name.
 
 ![A documented OCR mistake in a historical species name](docs/assets/overview/fig01_misread_name.png)
 
 *The name and OCR error are documented in the [preprint](docs/preprint.md). This is a schematic illustration, not a photograph of the page.*
 
-Historical natural-history books record species names, collection localities, researchers, and dates of observations. OCR and large language models can help turn these pages into structured data. But getting text out of a page is not the same as producing a reliable record: one misread character can change a species name; a correctly extracted historical name may not match today's taxonomic database; and a plausible-looking result may lack evidence another person can check.
+That gap sits inside roughly 64 million scanned pages in the Biodiversity Heritage Library. Historical natural-history books record species names, collection localities, researchers, and dates of observations. OCR and large language models can help turn those pages into structured data for modern databases such as GBIF. Yet pulling text off a page is not the same as producing a record another person can trust: a small error upstream rarely stays small—it compounds down the line. A single misread character can corrupt a species name and break its downstream database match; even a cleanly extracted historical name may fail to resolve against today's taxonomy; and a plausible-looking result may arrive without evidence anyone can verify.
 
 **BioEvidenceBench studies where these errors arise and how they propagate** from scanned page to database record. Using two historical books, human reference annotations, a pre-registered evaluation, and separately reported exploratory experiments, it examines OCR, information extraction, source evidence, taxonomic linking, and the rules defining which mentions count. The goal is not only to compare models, but also to identify which part of the workflow most needs improvement.
 
@@ -83,6 +94,8 @@ We measured three forms of matching:
 - **Value match (primary):** did it recover the correct text value, with only limited formatting normalization?
 
 The primary measure is **value F1**, which combines precision and recall. It is **not** character accuracy or the percentage of pages read correctly. Confidence intervals use **1,000 page-level bootstrap resamples**, calculated separately for the two books.
+
+*Part 1 of 2: evaluating the extraction pipeline (Findings 1–6). Part 2, the training study, follows.*
 
 ## Finding 1 — Better OCR changed the downstream result
 
@@ -168,7 +181,7 @@ A separate exploratory whole-book run processed **682 text pages**. Index entrie
 
 **What this means:** a benchmark's definitions and review policy are part of the scientific result, not just documentation written afterward.
 
-## Finding 7 — A small model learned part of the repair from examples, not from rewards
+## Part 2 · Training study — A small model learned part of the repair from examples, not from rewards
 
 If old OCR is where names are lost, could a small, cheap model fix the text itself, one line at a time, before anything is extracted? In a follow-up study we trained an open 0.6-billion-parameter model (Qwen3-0.6B) on five books from the same expert-transcribed collection, then tested it once, on lines it had never seen, under a plan fixed in advance.
 
@@ -180,7 +193,7 @@ If old OCR is where names are lost, could a small, cheap model fix the text itse
 - **On an unseen French book**, the supervised model kept about half its gain (21% of damaged words repaired).
 - **The automatic score had loopholes.** Automated attacks found three; reading answers by hand found two more, for example finishing a word split at the end of a line scored as a perfect answer.
 
-The trained model is [published for research](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1), **not** for automatically replacing library text: it still changes about 2 in every 100 correct words. Put in front of the extraction step, it raised value F1 on legacy OCR only from 0.60 to 0.67 (Butler) and 0.64 to 0.72 (Reeve), against about 0.95 with modern OCR, and it turned a few correct names into other names ([details](results/sft_repair_pipeline/REPORT.md)). Full results: [training follow-up](docs/rl_results.md).
+The trained model is [published for research](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1), **not** for automatically replacing library text: it still changes about 2 in every 100 correct words. Put in front of the extraction step, it raised value F1 on legacy OCR only from 0.60 to 0.67 (Butler) and 0.64 to 0.72 (Reeve), against about 0.95 with modern OCR, and it turned a few correct names into other names ([details](results/sft_repair_pipeline/REPORT.md)). Full results: [RL technical report](docs/rl_report/rl_report.pdf) ([web page](docs/rl_results.md)).
 
 **What this means:** for a careful editing task, examples of the right answer did the teaching. A reward that never penalizes doing nothing taught the model to do nothing.
 
@@ -255,7 +268,7 @@ For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and 
 | **[Results](docs/results.md)** · [Run settings](docs/eval_settings.md) | Full pre-registered and exploratory scores, intervals and provenance. |
 | **[Annotation guide](ANNOTATION_GUIDE.md)** · [Gold labels](gold/) | Label definitions, corrections and human reference data. |
 | **[Pre-registration](PREREGISTRATION.md)** · [Freeze](FREEZE.json) · [Deviations](DEVIATIONS.md) | What was decided in advance and what changed after testing. |
-| **[Training follow-up](docs/rl_results.md)** · [Training report](rl/TRAINING_REPORT.md) · [Released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | Teaching a small model to repair OCR: supervised and reinforcement learning, the reward audit, and the release decision. |
+| **[RL technical report](docs/rl_report/rl_report.pdf)** · [Web page](docs/rl_results.md) · [Training report](rl/TRAINING_REPORT.md) · [Released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | Teaching a small model to repair OCR: supervised and reinforcement learning, the reward audit, and the release decision. |
 | **[Lessons learned](docs/lessons_learned.md)** · [Stories](docs/stories/) · [Notes](docs/notes/) | Annotation, data-quality, API, metric and training failures encountered during the study. |
 | **[Product implications](docs/product.md)** · [Poster](poster/poster.pdf) | Design decisions and a presentation of the pilot. |
 | **[FineBooks data](https://huggingface.co/datasets/finebooks/bhl-impact-gt)** · [OCR output](https://huggingface.co/buckets/finebooks/bhl-ocr-outputs) | Expert text and modern OCR underlying the comparisons. |

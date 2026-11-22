@@ -8,7 +8,7 @@
 
 *开放研究试点 · 2026 年 11 月 · 预印本撰写中，尚未经过同行评审*
 
-[**English**](README.md) · [**研究预印本**](docs/preprint/preprint.pdf) · [**完整结果**](docs/results.md) · [**训练后续研究**](docs/rl_results.md) · [**如何复现**](#如何复现实验) · [**Poster**](poster/poster.pdf)
+[**English**](README.md) · [**决策备忘录**](docs/product.md#中文版) · [**研究预印本**](docs/preprint/preprint.pdf) · [**RL 技术报告**](docs/rl_report/rl_report.pdf) · [**完整结果**](docs/results.md) · [**经验教训**](docs/lessons_learned.md) · [**如何复现**](#如何复现实验) · [**Poster**](poster/poster.pdf)
 
 <img src="docs/assets/overview/cover_illustration.png" width="900" alt="历史自然史书籍经过 OCR、信息提取、证据核对、学名关联和人工审核，成为结构化生物多样性记录的概念插画">
 
@@ -16,17 +16,28 @@
 
 </div>
 
+## 一览
+
+BioEvidenceBench 有两条主线，都基于生物多样性遗产图书馆（BHL）的公开书页：
+
+1. **AI 提取管线评测与可靠性诊断。** 同一批书页分别用旧 OCR、现代 OCR 和专家转录三个版本交给大语言模型，提取学名、人名、地点、机构和日期；评测方案预注册，测试集事先锁定。旧 OCR 是最大的损失来源（值 F1 0.60 / 0.64，现代 OCR 为 0.95 / 0.98）。OCR 变好之后，损失转移到两处：把名字关联到今天的分类学名录（直接查 GBIF，34 个已正确提取的鸟类学名丢了 14 个），以及"什么算一条记录"的规则。两个模型给出相同答案，不代表答案正确。
+2. **低成本小模型后训练与奖励审计。** 用约 6 美元的 GPU，训练一个 0.6B 参数的模型逐行修复 OCR。监督微调把受损词修复率从 4% 提到 40%；只用自动奖励做强化学习（GRPO），模型学会了原样照抄 OCR。人工阅读答案，又找出两个自动探针漏掉的奖励漏洞。
+
+**我做了什么：** 定义任务、写标注规范；在看到任何模型输出之前亲手标注全部 607 个参考提及；写好预注册并在测试前冻结；做错误分析和成本记录；写决策备忘录；训练、测试并公开发布小模型。
+
+**从哪里读起：** [决策备忘录](docs/product.md#中文版) · [研究预印本](docs/preprint/preprint.pdf) · [RL 技术报告](docs/rl_report/rl_report.pdf) · [经验教训](docs/lessons_learned.md)
+
 ## 一个被读错的学名，会变成错误的科学记录
 
-在 1849 年的贝类著作 *Conchologia iconica* 中，原书印的是 **`BULIMUS CHILENSIS`**；数字图书馆的旧版 OCR（光学字符识别）却将它读成 **`BuLlMLS CiilLE.NSls`**。
+在 1849 年出版的贝类著作 *Conchologia iconica* 中，书页上印着一个物种学名：**`BULIMUS CHILENSIS`**。数字化时，图书馆早期的 OCR（光学字符识别）系统却把它读成了 **`BuLlMLS CiilLE.NSls`**。
 
-书已经扫描上网，页面也可以搜索。语言模型甚至可能找到这个学名所在的行。但如果它准确地复制了 OCR 的错误，数据库最后保存的仍是错误名称。
+表面上看，数字化已经完成：书已上网，页面也能搜索。把这段文字交给大语言模型，它甚至能准确找出这个学名所在的行。可只要模型忠实复制了上游的错字，最后存进数据库的依然是一个错误名称。
 
 ![历史学名 OCR 错误示意](docs/assets/overview/fig01_misread_name.png)
 
 *这个学名和 OCR 误读来自[预印本](docs/preprint.md)中的真实记录；图片为示意图，不是原始扫描页截图。*
 
-历史自然科学文献记录了大量物种名称、采集地点、研究者和观察日期。如今，OCR 和大语言模型可以帮助我们将这些资料转换成结构化数据。但从扫描页面到数据库记录，仍有多个可能引入错误的环节：一处 OCR 误读可能改变学名拼写；一个正确提取的历史名称，可能无法准确匹配现代分类学名录；即使模型找到正确的文字，记录也未必有足够证据供别人核查。
+同样的隐患藏在生物多样性遗产图书馆（BHL）约 6,400 万页历史文献里。这些历史自然科学著作记录了大量物种名称、采集地点、研究者和观察日期。OCR 和大语言模型能帮我们把书页转成结构化数据，汇入 GBIF 等现代数据库。但把文字从纸面搬到屏幕，不等于产出了一条可信的科学记录——上游的一处小错，往往会在下游不断放大。OCR 读错一个字母，不仅会让学名失真，还会直接导致后续的检索和数据库关联失效；即便上游文字提取完全无误，历史名称也可能因分类学变迁而对不上今天的名录；而一条看似合理的结果，如果缺少可核查的证据，研究者依然无从验证。
 
 **BioEvidenceBench 研究这些错误如何在文献处理过程中产生和传播。** 项目以两本历史自然科学著作为主要测试对象，通过人工标注、预注册评测，以及单独报告的探索性实验，分别检查 OCR、实体提取、证据定位、分类学关联和数据范围定义。研究的目标不只是比较哪个模型更准确，还包括判断可靠性损失发生在哪里，以及哪些改进更值得投入。
 
@@ -83,6 +94,8 @@
 - **值级匹配（Value）：** 除有限的格式规范化外，是否保留了正确文字？
 
 主要指标是 **Value F1**，综合准确率（Precision）和召回率（Recall）。它**不是 OCR 字符准确率，也不是正确页面所占比例**。95% 置信区间通过每本书分别进行 **1,000 次页面级 Bootstrap 抽样**计算。
+
+*第一部分：提取管线评测（发现一至六）。第二部分是训练研究，在后面。*
 
 ## 发现一：改善 OCR 明显提高了下游信息提取质量
 
@@ -168,7 +181,7 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 
 **启示：** 数据范围、标注规则和审核策略，也是科学评测的一部分。
 
-## 发现七：小模型能从示范里学会一部分修复，但光靠奖励学不会
+## 第二部分 · 训练研究：小模型能从示范里学会一部分修复，但光靠奖励学不会
 
 既然旧 OCR 是学名丢失的主要环节，能不能让一个小而便宜的模型先逐行把文字修好，再做提取？后续研究训练了一个 0.6B 参数的开源模型（Qwen3-0.6B），训练数据来自同一套专家转录中的五本书；测试按事先定好的方案只跑一次，用的都是模型从没见过的行。
 
@@ -180,7 +193,7 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 - **换一本没见过的法语书**：监督训练的模型保留了约一半的提升（修好 21% 的受损词）。
 - **自动评分本身有漏洞。** 自动构造的攻击找到 3 个，人工逐条阅读又找到 2 个，例如把行末被断开的单词续写完整，也能拿满分。
 
-训练好的模型已[作为研究用检查点公开](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)，**不能**用于自动替换图书馆的原文：它仍会改坏约 2% 的正确词。把它放在提取之前，旧 OCR 上的提取 F1 只从 0.60 升到 0.67（Butler）、从 0.64 升到 0.72（Reeve），而现代 OCR 约 0.95；它还把几个原本正确的学名改成了别的名字（[详情](results/sft_repair_pipeline/REPORT.md)）。完整结果见[训练后续研究](docs/rl_results.md)。
+训练好的模型已[作为研究用检查点公开](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)，**不能**用于自动替换图书馆的原文：它仍会改坏约 2% 的正确词。把它放在提取之前，旧 OCR 上的提取 F1 只从 0.60 升到 0.67（Butler）、从 0.64 升到 0.72（Reeve），而现代 OCR 约 0.95；它还把几个原本正确的学名改成了别的名字（[详情](results/sft_repair_pipeline/REPORT.md)）。完整结果见 [RL 技术报告](docs/rl_report/rl_report.pdf)（[网页版](docs/rl_results.md)）。
 
 **启示：** 对需要谨慎修改的任务，教会模型的是正确答案的示范；一个从不惩罚"什么都不做"的奖励，教会模型的就是什么都不做。
 
@@ -255,7 +268,7 @@ python src/freeze.py --verify
 | **[完整结果](docs/results.md)** · [运行设置](docs/eval_settings.md) | 所有预注册与探索性结果、区间和来源。 |
 | **[标注指南](ANNOTATION_GUIDE.md)** · [金标准](gold/) | 标注边界、修正记录与人工参考数据。 |
 | **[预注册](PREREGISTRATION.md)** · [冻结文件](FREEZE.json) · [变更](DEVIATIONS.md) | 测试前决定了什么、测试后又做了什么。 |
-| **[训练后续研究](docs/rl_results.md)** · [训练报告](rl/TRAINING_REPORT.md) · [公开的模型](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | 教小模型修复 OCR：监督训练与强化学习、奖励审计和发布决定。 |
+| **[RL 技术报告](docs/rl_report/rl_report.pdf)** · [网页版](docs/rl_results.md) · [训练报告](rl/TRAINING_REPORT.md) · [公开的模型](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | 教小模型修复 OCR：监督训练与强化学习、奖励审计和发布决定。 |
 | **[经验记录](docs/lessons_learned.md)** · [故事](docs/stories/) · [笔记](docs/notes/) | 标注、数据质量、API、评测指标和训练中遇到的问题。 |
 | **[产品设计](docs/product.md)** · [海报](poster/poster.pdf) | 产品化启示与试点研究介绍。 |
 | **[FineBooks 数据集](https://huggingface.co/datasets/finebooks/bhl-impact-gt)** · [OCR 输出](https://huggingface.co/buckets/finebooks/bhl-ocr-outputs) | 专家转录和现代 OCR 的上游来源。 |
