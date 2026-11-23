@@ -1,11 +1,9 @@
 model,kind,sites,events,siku,siku (other glyph),wikisource,neither,missing
-claude_opus,different_word,6,5,5,1,0,0,0
+claude_opus,different_word,7,6,6,1,0,0,0
 claude_opus,glyph_variant,103,103,67,0,30,6,0
 claude_opus,interchangeable_usage,6,6,6,0,0,0,0
-claude_opus,pending,1,1,1,0,0,0,0
 claude_opus,toponym_miswriting_candidate,2,2,2,0,0,0,0
-claude_haiku,different_word,6,5,5,1,0,0,0
+claude_haiku,different_word,7,6,6,1,0,0,0
 claude_haiku,glyph_variant,103,103,6,0,77,16,4
 claude_haiku,interchangeable_usage,6,6,5,0,1,0,0
-claude_haiku,pending,1,1,1,0,0,0,0
 claude_haiku,toponym_miswriting_candidate,2,2,2,0,0,0,0

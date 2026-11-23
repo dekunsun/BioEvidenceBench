@@ -181,7 +181,10 @@ def probe_a(models=("claude_opus", "claude_haiku")) -> None:
     changes = DATA / "probe_a_changes.csv"                  # her later decisions on single sites, logged
     if changes.exists():
         for c in pd.read_csv(changes).itertuples():
-            d.loc[(d.half_leaf == c.half_leaf) & (d.pos == c.pos), c.column] = c.value
+            m = (d.half_leaf == c.half_leaf) & (d.pos == c.pos)
+            d.loc[m, c.column] = c.value
+            if c.column == "kind_confirmed":
+                d.loc[m, "kind_final"] = c.value
     # one variation event = a run of adjacent non-glyph sites (即是/地近 is one event, not two; her note)
     ev, last = [], None
     for r in d.itertuples():

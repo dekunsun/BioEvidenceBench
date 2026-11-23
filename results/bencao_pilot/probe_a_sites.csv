@@ -111,7 +111,7 @@ half_leaf,pos,line,context,siku,wikisource,kind,site_confirmed,claude_opus,claud
 036-30a,87,6,梗直故名吴普本草一,吴,吳,glyph_variant,Y (line verified),吴,siku,吳,wikisource,,,glyph_variant,108
 036-30a,107,7,方書並無是葢亦庾詞,是,見,different_word,Y (line verified),是,siku,是,siku,Y,“方書並無是/並無見”字词不同；即使文意接近，也不能计作同一字形。,different_word,109
 036-30a,108,7,書並無是葢亦庾詞爾,葢,蓋,glyph_variant,Y (line verified),義,neither,蓋,wikisource,,,glyph_variant,110
-036-30a,110,7,無是葢亦庾詞爾桔梗,庾,瘦,different_word,Y (her scan check),庾,siku,庾,siku,?,“庾詞/瘦辭”有第三种文献用字“廋詞”（如《古今圖書集成》引文）。需先独立核查扫描上究竟是“庾”还是“廋”等，再判断属于版本文字差异还是两份电子转录各自的误字；暂不确认该 kind。,pending,111
+036-30a,110,7,無是葢亦庾詞爾桔梗,庾,瘦,different_word,Y (her scan check),庾,siku,庾,siku,different_word,“庾詞/瘦辭”有第三种文献用字“廋詞”（如《古今圖書集成》引文）。需先独立核查扫描上究竟是“庾”还是“廋”等，再判断属于版本文字差异还是两份电子转录各自的误字；暂不确认该 kind。,different_word,111
 036-30a,111,7,是葢亦庾詞爾桔梗薺,詞,辭,interchangeable_usage,Y (line verified),詞,siku,詞,siku,Y,“詞/辭”在言辞义上语义接近，可列 interchangeable_usage；但同句“庾/瘦/廋”尚有争议，不能用本结论代替整句的扫描核验。,interchangeable_usage,112
 036-30a,146,8,桔梗也至别録始出薺,别,別,glyph_variant,Y (line verified),别,siku,別,wikisource,,,glyph_variant,113
 036-30a,147,8,梗也至别録始出薺苨,録,錄,glyph_variant,Y (line verified),録,siku,錄,wikisource,,,glyph_variant,114

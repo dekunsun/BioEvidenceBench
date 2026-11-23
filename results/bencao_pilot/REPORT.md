@@ -130,19 +130,19 @@ one variation event (即是/地近 is one event, her note).
 
 | Kind (her decision) | Sites | Events | Opus follows manuscript | Opus follows Wikisource | Haiku follows manuscript | Haiku follows Wikisource |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| different words (諸道/諸地, 即是/地近, 隂廣/附廣, 是/見, 鍾/鐘) | 6 | 5 | 6 | 0 | 6 | 0 |
+| different words (諸道/諸地, 即是/地近, 隂廣/附廣, 是/見, 鍾/鐘, 庾/瘦) | 7 | 6 | 7 | 0 | 7 | 0 |
 | place-name miswriting candidate (枹䍐/抱䍐, twice) | 2 | 2 | 2 | 0 | 2 | 0 |
 | interchangeable usages (暴/曝 ×2, 註/注, 欬/咳 ×2, 詞/辭) | 6 | 6 | 6 | 0 | 5 | 1 |
-| pending kind (庾/瘦; the scan reads 庾, re-checked by the author) | 1 | 1 | 1 | 0 | 1 | 0 |
 | glyph variants | 103 | 103 | 67 | 30 | 6 | 77 |
 
 The author's changes to the proposal: 鍾/鐘 is a different word, not a usage (鍾 is a vessel or measure,
 鐘 a bell; Wikisource's 鐘 may be its own error); 枹䍐/抱䍐 is a place name whose 抱 may be a copying error
 from the similar radical, kept as its own kind and never folded; 庾詞/瘦辭 has a third attested form
-廋詞; she re-checked the scan, which reads 庾 (not 廋), and the kind is still to be given. Interchangeable usages are accepted in context
+廋詞; she re-checked the scan, which reads 庾 (not 廋), and classed it as a different word (Wikisource's
+瘦 may be an error of that electronic text). Interchangeable usages are accepted in context
 only; they are never folded globally. Where the two texts differ in wording, both models write what the
 manuscript shows. Where they differ only in glyph form, Opus mostly keeps the manuscript form and Haiku
-mostly writes the standard form, which is normalisation, not evidence of recall. Five word-level events
+mostly writes the standard form, which is normalisation, not evidence of recall. Six word-level events
 are few.
 
 **B. Occlusion probe (paid, $0.15).** Columns 2 and 5 (from the right) of each half-leaf were painted

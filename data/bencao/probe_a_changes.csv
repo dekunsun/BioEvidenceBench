@@ -1,2 +1,3 @@
 half_leaf,pos,column,value,her_decision
 036-30a,110,site_confirmed,Y (her scan check),掃描上是「庾詞」，不是「廋」（2026-11-23 對話「又看了一下，是庾詞」）
+036-30a,110,kind_confirmed,different_word,同意歸為不同的詞；Wikisource 的「瘦」可能是電子本自己的誤字（2026-11-23 對話「同意，歸為不同的詞」）
