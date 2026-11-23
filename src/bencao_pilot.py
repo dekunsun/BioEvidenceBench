@@ -136,6 +136,66 @@ def tesseract_vert() -> None:
     print(pages[["half_leaf", "legacy_cer", "tesseract_vert_cer"]].to_string(index=False))
 
 
+# Characters outside the common CJK block that many fonts cannot show (they appear as a box):
+# shown in the verification page with the usual character and the code point next to them.
+RARE = {"𢎞": "弘", "𠻳": "嗽", "䍐": "罕", "䖅": "蘦", "䘖": "銜", "㗋": "喉"}
+
+
+def verify_page(embed: bool = False, dest: Path | None = None) -> Path:
+    """Scan next to the transcription, one numbered line per manuscript column. Rare characters carry
+    their usual form and code point, e.g. 𢎞〔弘 U+2239E〕, so the page can be checked without a font that
+    covers CJK extensions. embed=True puts the scans inside the file (to send it on its own)."""
+    import base64
+    import html as H
+    pages = pd.read_csv(DATA / "pilot_pages.csv")
+
+    def mark(line: str) -> str:
+        out = []
+        for ch in line:
+            cp = ord(ch)
+            if cp > 0xFFFF or 0x3400 <= cp <= 0x4DBF:
+                hint = RARE.get(ch, "")
+                out.append(f"<span class='rare'>{H.escape(ch)}</span><span class='hint'>〔{hint} U+{cp:04X}〕</span>")
+            elif ch == "〓":
+                out.append("<span class='rare'>〓</span><span class='hint'>〔Kanripo: character outside Unicode〕</span>")
+            else:
+                out.append(H.escape(ch))
+        return "".join(out)
+
+    parts = []
+    for r in pages.itertuples():
+        lines = (DATA / "kanripo_plain" / f"{r.half_leaf}.txt").read_text(encoding="utf-8").split("\n")
+        src = f"pages/{r.half_leaf}.jpg"
+        if embed:
+            src = "data:image/jpeg;base64," + base64.b64encode((OUT / src).read_bytes()).decode()
+        lis = "".join(f"<li><span class='n'>{i}</span>{mark(l)}</li>" for i, l in enumerate(lines, 1))
+        parts.append(f"<section><h2>{r.half_leaf} · {H.escape(r.why)}</h2><div class='row'>"
+                     f"<img src='{src}' alt='scan {r.half_leaf}'><ol>{lis}</ol></div>"
+                     f"<p class='meta'>Internet Archive 06048793.cn image n{r.ia_image_n} · Commons DjVu page "
+                     f"{r.commons_page_to_confirm} (to confirm)</p></section>")
+    rare_rows = "".join(f"<tr><td class='big'>{c}</td><td>{h}</td><td>U+{ord(c):04X}</td></tr>" for c, h in RARE.items())
+    page = f"""<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>本草綱目 pilot: scan check</title><style>
+:root{{--bg:#fff;--fg:#1b1b1b;--muted:#666;--rule:#ddd;--hint:#a0522d}}
+@media (prefers-color-scheme: dark){{:root:not([data-theme="light"]){{--bg:#151515;--fg:#eee;--muted:#aaa;--rule:#333;--hint:#e0a070}}}}
+:root[data-theme="dark"]{{--bg:#151515;--fg:#eee;--muted:#aaa;--rule:#333;--hint:#e0a070}}
+body{{background:var(--bg);color:var(--fg);font-family:"Noto Serif CJK TC","Songti TC","HanaMinA","HanaMinB","Hanazono Mincho",serif;margin:0 16px 40px;max-width:1200px}}
+h1{{font-size:1.3rem}} h2{{font-size:1.05rem;border-top:1px solid var(--rule);padding-top:12px}}
+.row{{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}} img{{max-width:520px;width:100%;border:1px solid var(--rule);background:#fff}}
+ol{{list-style:none;padding:0;margin:0;flex:1;min-width:280px;font-size:1.15rem;line-height:1.9}}
+.n{{display:inline-block;width:2em;color:var(--muted);font-size:.85rem}} .meta{{color:var(--muted);font-size:.85rem}}
+.rare{{background:rgba(160,82,45,.15);border-radius:3px}} .hint{{color:var(--hint);font-size:.75rem}}
+table{{border-collapse:collapse;margin:8px 0}} td{{border:1px solid var(--rule);padding:2px 10px}} .big{{font-size:1.3rem}}
+</style></head><body><h1>本草綱目 卷十二上 · six-page pilot · transcription against scan</h1>
+<p>Line 1 is the rightmost column of the scan; columns read right to left. Small two-column notes are joined (right column, then left). Record differences in <code>scan_verify.xlsx</code>. Transcription: Kanseki Repository (CC BY-SA 4.0). Scans: public domain.</p>
+<p>Rare characters (CJK extensions) are marked; if your font shows a box, the hint in 〔 〕 gives the usual form and code point. 罕用字已标出：若显示为方框，看〔 〕里的常用字与编码。</p>
+<table><tr><td>char</td><td>usual form</td><td>code point</td></tr>{rare_rows}</table>
+{''.join(parts)}</body></html>"""
+    dest = dest or OUT / "verify.html"
+    dest.write_text(page, encoding="utf-8")
+    return dest
+
+
 LEVELS = {"legacy_ia": "Internet Archive Tesseract (horizontal, simplified)",
           "tesseract_chi_tra_vert": "Tesseract 5, chi_tra_vert, local",
           "claude_haiku": "Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py)",
@@ -162,4 +222,4 @@ def score() -> None:
 
 if __name__ == "__main__":
     import sys
-    {"tesseract": tesseract_vert, "score": score}.get((sys.argv[1:] or ["main"])[0], main)()
+    {"tesseract": tesseract_vert, "score": score, "verify": verify_page}.get((sys.argv[1:] or ["main"])[0], main)()
