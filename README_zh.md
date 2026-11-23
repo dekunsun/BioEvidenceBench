@@ -22,7 +22,7 @@
 
 表面上看，数字化已经完成：书已上网，页面也能搜索。把这段文字交给大语言模型，它甚至能准确找出这个学名所在的行。可只要模型忠实复制了上游的错字，最后存进数据库的依然是一个错误名称。
 
-![1849 年扫描页上的印刷学名 BULIMUS CHILENSIS、图书馆旧 OCR 读成的 BuLlMLS CiilLE.NSls，以及数据记录需要的准确学名](docs/assets/overview/fig01_scan_name_zh.png)
+<p align="center"><img src="docs/assets/overview/fig01_scan_name_zh.png" width="820" alt="1849 年扫描页上的印刷学名 BULIMUS CHILENSIS、图书馆旧 OCR 读成的 BuLlMLS CiilLE.NSls，以及数据记录需要的准确学名"></p>
 
 *真实页面（BHL 第 8966790 页）。OCR 文字从图书馆的文件原样复制；现代 OCR 和专家转录都把学名读对了。扫描图来自 Biodiversity Heritage Library，经 IMPACT 专家转录集，CC BY 3.0。*
 

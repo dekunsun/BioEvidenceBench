@@ -22,7 +22,7 @@ In an 1849 book on shells, *Conchologia iconica*, a species appears in print as 
 
 On the surface, the digitization worked. The book is online, and the page is searchable. Hand that text to a large language model, and it can pinpoint the exact line where the species is mentioned. Yet if the model faithfully copies what the OCR gave it, the database still ends up with the wrong name.
 
-![The printed name BULIMUS CHILENSIS on the 1849 scan, the library's older OCR reading BuLlMLS CiilLE.NSls, and the exact name a record needs](docs/assets/overview/fig01_scan_name.png)
+<p align="center"><img src="docs/assets/overview/fig01_scan_name.png" width="820" alt="The printed name BULIMUS CHILENSIS on the 1849 scan, the library's older OCR reading BuLlMLS CiilLE.NSls, and the exact name a record needs"></p>
 
 *The real page (BHL page 8966790). The OCR text is copied unchanged from the library's file; modern OCR and the expert transcription both read the name intact. Scan from the Biodiversity Heritage Library via the IMPACT ground-truth set, CC BY 3.0.*
 
