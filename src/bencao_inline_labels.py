@@ -83,6 +83,8 @@ def convert(marked_lines: dict[int, str], half_leaf: str) -> pd.DataFrame:
 if __name__ == "__main__":
     wb, pb, dest = sys.argv[1:4]
     sh = pd.read_excel(wb, sheet_name="行内标注")
-    marked = {int(r.line): str(r.标注版) for r in sh.itertuples() if isinstance(r.标注版, str) and "[" in r.标注版}
+    sh = sh.rename(columns={sh.columns[2]: "marked"})
+    sh = sh[pd.to_numeric(sh.line, errors="coerce").notna()]          # the worked example rows have no line number
+    marked = {int(r.line): str(r.marked) for r in sh.itertuples() if isinstance(r.marked, str) and "[" in r.marked}
     convert(marked, pb).to_csv(dest, index=False)
     print(dest)
