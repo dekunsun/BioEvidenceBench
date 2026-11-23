@@ -126,6 +126,10 @@ OCR fails exactly on the fields of interest (italic Latin diagnoses, abbreviatio
 reads `BuLlMLS CiilLE.NSls`. Book and OCR quality are therefore confounded, and every result is reported
 per book.
 
+![Reeve page 8966790: the printed name BULIMUS CHILENSIS, the legacy OCR reading and the exact name](assets/overview/fig01_scan_name.png)
+
+*Figure 1. Reeve, page 8966790 (BHL). The scan (left), the name cut from it, BHL's legacy OCR as served, and the exact name a record needs. Scans in Figures 1, 2, 4 and 6 are from the IMPACT ground-truth set (finebooks/bhl-impact-gt), CC BY 3.0; every text string is copied from the project's files.*
+
 ### 3.2 Sample
 
 22 pages were sampled by stratum (entity-rich, low-density, no target names, poor OCR) across the range
@@ -144,6 +148,10 @@ comparison; every later change was decided by the labeller and logged. Rules fou
 the guide and the gold but never into the prompt, which was fixed at guide v0.6; scores are also reported
 with those rows treated as optional. Known typos in the expert transcription (`nontifringilla` for the
 scan's `montifringilla`) are recorded with the scan's reading as an accepted alternative.
+
+![Butler page 8992489: Fringilla montifringilla on the scan, read as junk by legacy OCR, correctly by dots.mocr, and as nontifringilla in the expert transcription](assets/overview/fig09_transcription_typo.png)
+
+*Figure 2. Butler, page 8992489. The name on the scan and in three text versions: legacy OCR is unreadable, dots.mocr matches the scan, and the expert transcription has a one-letter typo found when the labeller checked the scan.*
 
 Gold size: development 186 mentions, test 421 (primary fields: Butler 137, Reeve 213). A second labeller
 labelled 5 test pages with a copy of the guide whose examples did not come from those pages. Agreement on
@@ -213,7 +221,7 @@ in a separate deviations file.
 
 ![Extraction value F1 on three text versions and Butler link recall](figures/hero.png)
 
-*Figure 1. Left: value F1 of Claude Opus 5.5 (G1) on the same 16 test pages read as legacy OCR, modern OCR
+*Figure 3. Left: value F1 of Claude Opus 5.5 (G1) on the same 16 test pages read as legacy OCR, modern OCR
 and expert transcription, with 95% page-bootstrap intervals. Right: Butler link recall on the expert text
 for the pre-registered plain GBIF lookup and, for reference, the exploratory LLM linker (§6.2).*
 
@@ -262,6 +270,10 @@ and 0.12 on legacy OCR. The lost names are old genera and synonyms (`Aedon`, `Lu
 names now treated as races of another species (`Motacilla beema`), abbreviated genera whose full name is
 not on the page (`M. minuta`) and a homonym (`Passer`).
 
+![Three Butler names read correctly for which a plain GBIF lookup returned only the genus](assets/overview/fig08_linking_names.png)
+
+*Figure 4. Three of the 14 names lost at linking, as printed in 1907 (Butler, pages 8992647 and 8992644). Each is read correctly; the plain GBIF lookup returns only the genus (cached responses, results/linking_test/); the right column is the gold accepted name.*
+
 ### 5.6 Sensitivity
 
 Treating the 12 gold rows decided by guide rules added after the prompt as optional changed primary F1 by
@@ -284,7 +296,7 @@ survives OCR, the model gets it.
 
 ![Value F1 against gold names intact after OCR](figures/preprint_ladder.png)
 
-*Figure 2. Each point is one OCR version of the same 16 test pages (24 versions per book: 22 FineBooks rows,
+*Figure 5. Each point is one OCR version of the same 16 test pages (24 versions per book: 22 FineBooks rows,
 Mistral OCR and legacy OCR). The dashed line is y = x.*
 
 ### 6.2 Is the linking loss the linker's?
@@ -303,6 +315,10 @@ OCR (from 0.12). Its remaining misses are taxonomic judgments (`Phylloscopus tri
   typos.
 - **Fluent OCR errors are not repairable**: DeepSeek-OCR-2 writes plausible text (`Linnaeus` for
   `Linnæus`, `Turritella brevisis`); repair reached only 0.81 and 0.87.
+
+![Reeve page 8967281: Turritella brevialis on the scan, read correctly by legacy OCR and dots.mocr, written as Turritella brevisis by DeepSeek-OCR-2](assets/overview/fig07_fluent_error.png)
+
+*Figure 6. Reeve, page 8967281. BHL's legacy OCR and dots.mocr read the printed `Turritella brevialis`; DeepSeek-OCR-2 writes `Turritella brevisis`, which looks like a real name and gives neither a reader nor a model a cue to check it.*
 - **V1, page image only**: 0.96 and 0.98 (value-bag scoring). **V2**, image plus OCR, added nothing over
   repair.
 

@@ -108,6 +108,10 @@ An OCR system may have an excellent **character error rate (CER)** and still dam
 
 **Exploratory result:** across **24 OCR versions** of the sampled pages (22 FineBooks models, Mistral OCR and the library's legacy OCR), preservation of annotated names tracked downstream extraction much more closely than page-level CER. The Spearman correlations between name preservation and extraction value F1 were **0.95 (Butler)** and **1.00 (Reeve)**; the corresponding correlations with page CER were **−0.11** and **−0.61**. Several OCR models with **under 0.5% page CER** still preserved only **57–79% of Butler's names** intact.
 
+<p align="center"><img src="docs/assets/overview/fig07_fluent_error.png" width="820" alt="Reeve page 8967281: the printed name Turritella brevialis, read correctly by the library's older OCR and by dots.mocr, and written as Turritella brevisis by DeepSeek-OCR-2"></p>
+
+*A real example (Reeve, page 8967281). One modern OCR model wrote a plausible species name that is not on the page. Two wrong letters hardly move the page's character error rate; a check on the names catches it.*
+
 The practical point is about evaluation design: a library interested in biodiversity data should test **whether names survive transcription**, not only how many characters were misread across the whole page.
 
 These are exploratory comparisons on the same small collection, **not** a universal result for all OCR systems or document types.
@@ -119,6 +123,10 @@ A historical book can print a name correctly; the AI can extract it correctly; a
 ![Twenty of thirty-four historical bird-name references linked successfully in a direct lookup](docs/assets/overview/fig03_linking.png)
 
 **Pre-registered result:** on expert text, **34 eligible bird-name mentions** were correct before linking. A simple [GBIF](https://www.gbif.org/) name lookup (no surrounding context; an abbreviated genus such as the `M.` in `M. minuta` was first written out from earlier on the page) linked **20** to the correct taxon but failed on **14** — a linking recall of **0.59**. The 14 cases comprised **8 genus-only matches, 3 wrong taxa, and 3 without a record**.
+
+<p align="center"><img src="docs/assets/overview/fig08_linking_names.png" width="820" alt="Three names printed in Butler (1907), each read correctly, for which a plain GBIF lookup returned only the genus, beside the name accepted today"></p>
+
+*Three of the 14 failures as printed in 1907. Each name is read correctly; the plain lookup returns only the genus, because the species has since been renamed, moved to another genus or merged into another species.*
 
 A later **exploratory** approach first used an LLM to interpret a historical name in context, then looked up its proposed modern name. It raised linking recall on the same material to **0.91**. This is a useful lead, **not a new independent test result**; unresolved taxonomy still requires a domain expert.
 

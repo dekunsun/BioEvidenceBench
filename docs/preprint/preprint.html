@@ -233,6 +233,7 @@ characters, was 6.6% for Reeve and 2.0% for Butler; dots.mocr brought it to 1.3%
 OCR fails exactly on the fields of interest (italic Latin diagnoses, abbreviations): <code>BULIMUS CHILENSIS</code>
 reads <code>BuLlMLS CiilLE.NSls</code>. Book and OCR quality are therefore confounded, and every result is reported
 per book.</p>
+<figure class="wide"><img src="../assets/overview/fig01_scan_name.png" alt="Reeve page 8966790: the printed name BULIMUS CHILENSIS, the legacy OCR reading and the exact name"><figcaption><b>Figure 1.</b> Reeve, page 8966790 (BHL). The scan (left), the name cut from it, BHL's legacy OCR as served, and the exact name a record needs. Scans in Figures 1, 2, 4 and 6 are from the IMPACT ground-truth set (finebooks/bhl-impact-gt), CC BY 3.0; every text string is copied from the project's files.</figcaption></figure>
 <h3>3.2 Sample</h3>
 <p>22 pages were sampled by stratum (entity-rich, low-density, no target names, poor OCR) across the range
 of legacy CER, using TaxonFinder name counts from BHL metadata to find candidates: 6 development pages
@@ -248,6 +249,7 @@ comparison; every later change was decided by the labeller and logged. Rules fou
 the guide and the gold but never into the prompt, which was fixed at guide v0.6; scores are also reported
 with those rows treated as optional. Known typos in the expert transcription (<code>nontifringilla</code> for the
 scan's <code>montifringilla</code>) are recorded with the scan's reading as an accepted alternative.</p>
+<figure class="wide"><img src="../assets/overview/fig09_transcription_typo.png" alt="Butler page 8992489: Fringilla montifringilla on the scan, read as junk by legacy OCR, correctly by dots.mocr, and as nontifringilla in the expert transcription"><figcaption><b>Figure 2.</b> Butler, page 8992489. The name on the scan and in three text versions: legacy OCR is unreadable, dots.mocr matches the scan, and the expert transcription has a one-letter typo found when the labeller checked the scan.</figcaption></figure>
 <p>Gold size: development 186 mentions, test 421 (primary fields: Butler 137, Reeve 213). A second labeller
 labelled 5 test pages with a copy of the guide whose examples did not come from those pages. Agreement on
 the primary fields was 0.90 (exact span) and 0.95 (overlap); locality was lowest (0.75 exact), almost all
@@ -298,7 +300,7 @@ to run unless every hash matches. The pre-registration itself is frozen, so ever
 in a separate deviations file.</p>
 <hr />
 <h2>5. Pre-registered results</h2>
-<figure class="wide"><img src="../figures/hero.png" alt="Extraction value F1 on three text versions and Butler link recall"><figcaption><b>Figure 1.</b> Left: value F1 of Claude Opus 5.5 (G1) on the same 16 test pages read as legacy OCR, modern OCR
+<figure class="wide"><img src="../figures/hero.png" alt="Extraction value F1 on three text versions and Butler link recall"><figcaption><b>Figure 3.</b> Left: value F1 of Claude Opus 5.5 (G1) on the same 16 test pages read as legacy OCR, modern OCR
 and expert transcription, with 95% page-bootstrap intervals. Right: Butler link recall on the expert text
 for the pre-registered plain GBIF lookup and, for reference, the exploratory LLM linker (§6.2).</figcaption></figure>
 <h3>5.1 RQ1: OCR quality</h3>
@@ -360,6 +362,7 @@ link recall was 0.59 even on the expert text (8 matched only at genus, 3 to the 
 and 0.12 on legacy OCR. The lost names are old genera and synonyms (<code>Aedon</code>, <code>Lusciniola</code>, <code>Munia</code>),
 names now treated as races of another species (<code>Motacilla beema</code>), abbreviated genera whose full name is
 not on the page (<code>M. minuta</code>) and a homonym (<code>Passer</code>).</p>
+<figure class="wide"><img src="../assets/overview/fig08_linking_names.png" alt="Three Butler names read correctly for which a plain GBIF lookup returned only the genus"><figcaption><b>Figure 4.</b> Three of the 14 names lost at linking, as printed in 1907 (Butler, pages 8992647 and 8992644). Each is read correctly; the plain GBIF lookup returns only the genus (cached responses, results/linking_test/); the right column is the gold accepted name.</figcaption></figure>
 <h3>5.6 Sensitivity</h3>
 <p>Treating the 12 gold rows decided by guide rules added after the prompt as optional changed primary F1 by
 at most 0.004.</p>
@@ -373,7 +376,7 @@ OCR (24 versions per book) were run through the frozen G1 condition. Value F1 tr
 Reeve) and not page CER (−0.11, −0.61). Several OCR models with page CER under 0.5% kept only 57–79% of
 Butler's names intact. Extraction recall was close to preservation (median gap +0.01): if the name
 survives OCR, the model gets it.</p>
-<figure class="wide"><img src="../figures/preprint_ladder.png" alt="Value F1 against gold names intact after OCR"><figcaption><b>Figure 2.</b> Each point is one OCR version of the same 16 test pages (24 versions per book: 22 FineBooks rows,
+<figure class="wide"><img src="../figures/preprint_ladder.png" alt="Value F1 against gold names intact after OCR"><figcaption><b>Figure 5.</b> Each point is one OCR version of the same 16 test pages (24 versions per book: 22 FineBooks rows,
 Mistral OCR and legacy OCR). The dashed line is y = x.</figcaption></figure>
 <h3>6.2 Is the linking loss the linker's?</h3>
 <p>Mostly. A GBIF lookup with an animal hint and abbreviation expansion reached 0.62. An LLM linker (printed
@@ -389,9 +392,11 @@ OCR (from 0.12). Its remaining misses are taxonomic judgments (<code>Phylloscopu
   typos.</li>
 <li><strong>Fluent OCR errors are not repairable</strong>: DeepSeek-OCR-2 writes plausible text (<code>Linnaeus</code> for
   <code>Linnæus</code>, <code>Turritella brevisis</code>); repair reached only 0.81 and 0.87.</li>
-<li><strong>V1, page image only</strong>: 0.96 and 0.98 (value-bag scoring). <strong>V2</strong>, image plus OCR, added nothing over
-  repair.</li>
 </ul>
+<p><img alt="Reeve page 8967281: Turritella brevialis on the scan, read correctly by legacy OCR and dots.mocr, written as Turritella brevisis by DeepSeek-OCR-2" src="../assets/overview/fig07_fluent_error.png" /></p>
+<p><em>Figure 6. Reeve, page 8967281. BHL's legacy OCR and dots.mocr read the printed <code>Turritella brevialis</code>; DeepSeek-OCR-2 writes <code>Turritella brevisis</code>, which looks like a real name and gives neither a reader nor a model a cue to check it.</em>
+- <strong>V1, page image only</strong>: 0.96 and 0.98 (value-bag scoring). <strong>V2</strong>, image plus OCR, added nothing over
+  repair.</p>
 <h3>6.4 Other exploratory checks</h3>
 <p>Each row is a short check on the same 16 test pages unless stated; details and run folders are in
 <a href="../results.md">Results</a>.</p>
