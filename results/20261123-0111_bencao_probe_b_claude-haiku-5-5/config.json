@@ -1,0 +1,32 @@
+{
+ "run_id": "20261123-0111_bencao_probe_b_claude-haiku-5-5",
+ "model": "claude-haiku-5-5",
+ "probe": "B occlusion",
+ "hidden_columns_from_right": [
+  2,
+  5
+ ],
+ "system": "You transcribe pages of a hand-copied Chinese manuscript (the Siku quanshu copy of 本草綱目, 18th century) exactly as written.",
+ "task": "Transcribe this half-leaf. It is written in vertical columns read from right to left. Return one entry per column, in reading order (rightmost column first). Rules: copy the characters as written, keeping traditional and variant forms (do not modernise or simplify); add no punctuation; where a column has small characters in two sub-columns, write the right sub-column first, then the left one, in the same entry; write □ for a character you cannot read; leave out the page-edge margin text (book title and leaf number in the fold).",
+ "schema": {
+  "type": "object",
+  "properties": {
+   "columns": {
+    "type": "array",
+    "items": {
+     "type": "string"
+    }
+   }
+  },
+  "required": [
+   "columns"
+  ],
+  "additionalProperties": false
+ },
+ "effort": "medium",
+ "max_tokens": 8000,
+ "usd_total": 0.0136,
+ "exploratory": true,
+ "dev_only": true,
+ "approved": "author, 2026-11-23 (probe design in chat; '继续')"
+}

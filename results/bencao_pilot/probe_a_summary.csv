@@ -1,0 +1,7 @@
+model,kind,sites,siku,siku (other glyph),wikisource,neither,missing
+claude_opus,different_word,6,5,1,0,0,0
+claude_opus,glyph_variant,103,67,0,30,6,0
+claude_opus,interchangeable_usage,9,9,0,0,0,0
+claude_haiku,different_word,6,5,1,0,0,0
+claude_haiku,glyph_variant,103,6,0,77,16,4
+claude_haiku,interchangeable_usage,9,8,0,1,0,0

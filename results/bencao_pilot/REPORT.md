@@ -90,3 +90,46 @@ How to read it:
   something else, it is recalling.
 - **Same family.** If Claude also extracts, OCR and extraction share a model family; a non-Claude OCR
   level (Gemini, or an open model on a GPU) would remove that confound.
+
+## Read or recall? Two dev-only probes (2026-11-23, designed with the author)
+
+`src/bencao_probes.py`. Both probes are reported as **evidence about image dependence on these six
+pages, not as proof** for or against memorisation.
+
+**A. Edition probe (no API call).** Wikisource's 本草綱目/草之一 stands for the text that circulates
+online, the most likely source of anything memorised. Kanripo's Siku text, the Wikisource text and each
+OCR output are aligned character by character; at every place where Siku and Wikisource differ, the
+output follows the manuscript, the circulating text, or neither (`probe_a_sites.csv`,
+`probe_a_summary.csv`). Sites are split into glyph variants (same character, another form), interchangeable
+usages (暴/曝, 註/注, 欬/咳 …) and different words. The split is proposed from fixed lists; the author
+confirms it in `kind_confirmed`, and the Siku reading at each site against the scan in `site_confirmed`.
+
+| Sites | Number | Opus follows manuscript | Opus follows Wikisource | Haiku follows manuscript | Haiku follows Wikisource |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| different words (諸道/諸地, 即是/地近, 是/見, 庾/瘦, 隂廣/附廣) | 6 | 6 | 0 | 6 | 0 |
+| interchangeable usages | 9 | 9 | 0 | 8 | 1 |
+| glyph variants | 103 | 67 | 30 | 6 | 77 |
+
+Where the two texts differ in wording, both models write what the manuscript shows. Where they differ
+only in glyph form, Opus mostly keeps the manuscript form and Haiku mostly writes the standard form,
+which is normalisation, not evidence of recall. Six word-level sites are few.
+
+**B. Occlusion probe (paid, $0.15).** Columns 2 and 5 (from the right) of each half-leaf were painted
+white, located from the ruled column lines; the image was otherwise unchanged and the prompt was the
+same. Measure: of each column's own 3-character sequences (those in no other column of the page), the
+share that appears in the output (`probe_b_summary.csv`; runs `results/20261123-0110_bencao_probe_b_claude-opus-5-5/`,
+`results/20261123-0111_bencao_probe_b_claude-haiku-5-5/`, masked images inside).
+
+| Model | Visible columns | Hidden columns |
+| --- | ---: | ---: |
+| Claude Opus 5.5 | 929 / 1,083 = 0.86 | 2 / 335 = 0.006 |
+| Claude Haiku 5.5 | 803 / 1,083 = 0.74 | 1 / 335 = 0.003 |
+
+Both models left the hidden columns out (Opus returned 6 columns for 036-5a) rather than filling them
+in. A plain character-overlap measure gave 0.22 for hidden columns, but that came from formulaic wording
+repeated across columns (甘草二兩水三升煑…服…合), not from the hidden text.
+
+**Reading.** On these pages the output depends on what is visible: hidden text is not reproduced, and
+where the manuscript's wording differs from the circulating text the models follow the manuscript.
+Limits: six pages, two models from one family, one prompt that asks for what is written (a model might
+withhold recalled text because of the instruction), and a reference that is not yet scan-verified.

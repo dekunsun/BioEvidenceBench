@@ -424,7 +424,7 @@ Repository: [github.com/dekunsun/BioEvidenceBench](https://github.com/dekunsun/B
 [annotation guide](../ANNOTATION_GUIDE.md) · [pre-registration](../PREREGISTRATION.md) ·
 [deviations](../DEVIATIONS.md) · [RL technical report](rl_report/rl_report.pdf) and [released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1).
 Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata: CC0. Total API spend for the
-project was US$55.81 ([evaluation settings](eval_settings.md)); GPU spend for the training study about US$6.
+project was US$55.96 ([evaluation settings](eval_settings.md)); GPU spend for the training study about US$6.
 
 ## Acknowledgements
 

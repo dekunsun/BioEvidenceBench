@@ -51,7 +51,7 @@ makes every judgment, and every judgment leaves a record.**
 | The AI never writes or pre-fills gold labels; it types in only decisions the labeller made explicitly, each logged | A model under test must not help set the exam; every change traces to who, when and which sentence |
 | The AI does not review test labels for omissions or attribute errors | Same reason; it supplies facts ("is this word in the OCR input?"), the person judges |
 | Deliveries are archived and committed unchanged before any comparison | Independence of the labels can be shown afterwards |
-| A small paid pilot first, cost per page reported, then a go-ahead; a cap on every run | Total API spend $55.81 (per run in `eval_settings.md`), no overrun |
+| A small paid pilot first, cost per page reported, then a go-ahead; a cap on every run | Total API spend $55.96 (per run in `eval_settings.md`), no overrun |
 | Caps need headroom | One Gemini cap set too tight left 3 requests unsent and cost a re-run |
 | Decisions go into `CLAUDE.md` with the date and the labeller's own words | After a new session or a context reset, the assistant still knows what is settled |
 | Questions that need a person are grouped, each with a recommendation | 23 disagreements in 9 groups were adjudicated in one sentence |
