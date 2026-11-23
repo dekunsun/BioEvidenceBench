@@ -30,13 +30,17 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    legacy condition is "no usable text", unlike Butler and Reeve, where legacy OCR found the right place
    93–97% of the time. A modern OCR that reads vertical traditional Chinese is required for the
    comparison to mean anything.
-3. **The transcription has visible gaps.** Kanripo marks unread characters with blanks (036-2b `芫  甘遂`,
+3. **A free local OCR level exists but is weak.** Tesseract 5 with the vertical traditional-Chinese model
+   (`chi_tra_vert`, psm 5; `python src/bencao_pilot.py tesseract`) reaches CER 0.67–0.74 on three
+   pages and 0.86–1.09 on the three with dense small notes or a mixed layout. It can serve as an
+   intermediate OCR level; it is not the modern OCR the comparison needs.
+4. **The transcription has visible gaps.** Kanripo marks unread characters with blanks (036-2b `芫  甘遂`,
    probably 芫花; 036-5a `名涼膈丸  聖`). Scan verification has to fill these before a page can be
    `scan_verified`.
-4. **Density is high.** About 170–310 characters per half-leaf, mostly in small two-column notes, with
+5. **Density is high.** About 170–310 characters per half-leaf, mostly in small two-column notes, with
    many cited authors, works and places per page (see the guide draft's examples). Six half-leaves are
    probably 150–250 mentions, far more per page than Butler or Reeve.
-5. **The Commons copy could not be fetched from this environment** (Wikimedia returned HTTP 429). The
+6. **The Commons copy could not be fetched from this environment** (Wikimedia returned HTTP 429). The
    working images come from the Internet Archive copy of the same CADAL scan; Commons is cited for the
    licence. To confirm in a browser: Commons DjVu page 11 shows the same page as image n10 (036-1a).
 
@@ -44,8 +48,8 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
 
 1. Check the six pages against the scans (`verify.html`, `scan_verify.xlsx`) and mark the ones that
    pass as `scan_verified`.
-2. Decide the open points in `docs/notes/bencao_guide_v0_draft.md` (aliases, short author names, place
-   phrases, ingredients, minerals, variant characters).
+2. ~~Decide the open points of the guide~~ done: guide v0.1 (`docs/notes/bencao_guide.md`), the
+   proposals adopted by the author on 2026-11-23.
 3. Choose the modern OCR: an open model that reads vertical traditional Chinese, or a vision LLM (if a
    Claude model, it shares a family with the extractor; to be stated). A 5-page cost pilot comes first.
 4. Only then label the pilot pages (dev) and draft the plan for a locked test set.

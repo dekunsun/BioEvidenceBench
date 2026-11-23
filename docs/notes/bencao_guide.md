@@ -1,6 +1,7 @@
-# 本草綱目 case: annotation guide v0 (DRAFT, decisions open)
+# 本草綱目 case: annotation guide v0.1
 
-*Draft for the author to decide. Not a guide yet; no page has been labelled. Examples come from
+*v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
+the draft left open (6, 7) take the defaults stated below. No page has been labelled yet. Examples come from
 half-leaves 036-1a, 036-2a and 036-2b, which are **not** among the six pilot pages, so nothing here
 pre-fills a label on a pilot page.*
 
@@ -21,34 +22,35 @@ pre-fills a label on a pilot page.*
 | `person` | a named author or person cited | 𢎞景, 甄權, 沈括, 郭璞, 雷斆, 寇宗奭, 王好古 |
 | `locality` | a place where something grows, is produced or is found | 河東, 安南 |
 | `cited_work` (new) | a book cited as a source | 別録, 爾雅, 筆談, 衍義, 霏雪録 |
+| `substance` (new, scored separately, not in the primary F1) | minerals, water, earth and other non-organic drugs | (金石部; rare in 草部) |
 | `date`, `institution` | dropped: harvest months (二月八月除日采根) are practice, not dated events; institutions do not occur | — |
 
-## Decisions needed
+## Decisions (adopted 2026-11-23)
 
 1. **Alternative names in 釋名.** 宻甘, 宻草, 美草, 蕗草, 靈通 are other names of 甘草; 國老 is an honorific
-   ("national elder"). Are all `taxon`? Only botanical-sounding ones? (Proposal: all names listed under
-   釋名 are `taxon`, flagged `alias`.)
+   ("national elder"). **Decided: every name listed under 釋名 is `taxon`, with `qualifier = alias`.**
 2. **Source tags in small notes.** `宻甘(别/録)`: the 別録 attached to each alias says where the name comes
-   from. Label each as `cited_work`? (Proposal: yes; they are the evidence trail.)
-3. **Short names of authors.** 𢎞景 for 陶弘景, 權 for 甄權, 頌 for 蘇頌, 時珍 for 李時珍, 寇氏. Label the
-   short form as printed? (Proposal: yes; resolving to the full name is the linking step, scored
-   separately, as abbreviated genera were for Butler.)
+   from. **Decided: each is a `cited_work`; they are the evidence trail.**
+3. **Short names of authors.** 𢎞景 for 陶弘景, 權 for 甄權, 頌 for 蘇頌, 時珍 for 李時珍, 寇氏. **Decided:
+   label the short form as printed; resolving it to the full name is the linking step, scored
+   separately, as abbreviated genera were for Butler.**
 4. **Place phrases.** 河西川谷, 積沙山, 上郡, 汶山諸道: is 川谷 (river valley) part of the place? Is 河東蒲坂縣
-   one span or two? (Proposal: follow the main guide: narrow-to-wide chains are one span; generic words
-   such as 川谷, 山谷 only as part of a named place.)
+   one span or two? **Decided: as in the main guide, a narrow-to-wide chain is one span; generic words such as
+   川谷, 山谷 count only as part of a named place.**
 5. **Comparison plants.** 葉如槐葉 ("leaves like the pagoda tree's"): is 槐 a `taxon` mention?
-   (Proposal: yes; it names an organism.)
+   **Decided: yes; it names an organism.**
 6. **Ingredients in 附方.** Every drug in a prescription is a substance name. Label them all, or only
-   the entry's own drug? (Proposal: all, as `taxon`; minerals and processed products such as 乾漆 too?
-   to decide.)
+   the entry's own drug? **Decided: all of them. Organisms and products made from them (乾漆 from the
+   lacquer tree) are `taxon`; minerals are `substance` (point 7).**
 7. **Minerals and non-organisms.** 本草 covers minerals, water, fire and earth. A `taxon` field implies
-   organisms. Separate field `substance` for minerals and products? (Matters little for 草部, a lot later.)
+   organisms. **Decided: minerals and other non-organic drugs are a separate field `substance`, scored
+   separately like `vernacular` in the main guide.** (Matters little for 草部.)
 8. **Variant and missing characters.** Spans follow Kanripo's characters (宻, 𢎞, 䖅). Value matching folds
    a fixed variant table (宻→密, 𢎞→弘, …), reported with and without folding, like `norm_value` in the
    main scorer. Kanripo gaps (two spaces, e.g. 036-2b `芫  甘遂`, probably 芫花) are filled from the scan
-   during verification and logged in an errata file.
+   during verification and logged in an errata file. **Decided as written.**
 9. **Book titles inside quotations.** 沈括筆談云本草註引爾雅: 筆談 and 爾雅 cited; 本草註 a generic
-   reference. Label generic references? (Proposal: no.)
+   reference. Label generic references? **Decided: no.**
 
 ## Linking (later)
 

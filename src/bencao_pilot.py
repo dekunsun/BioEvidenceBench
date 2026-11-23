@@ -111,5 +111,29 @@ def main() -> None:
     print(pd.DataFrame(rows)[["half_leaf", "ia_image_n", "lines", "chars", "legacy_cer"]].to_string(index=False))
 
 
+def tesseract_vert() -> None:
+    """Free local OCR level: Tesseract 5 with the vertical traditional-Chinese model (`chi_tra_vert`, psm 5)
+    on the full-resolution Internet Archive images. Needs `apt-get install tesseract-ocr tesseract-ocr-chi-tra-vert`.
+    Writes data/bencao/tesseract_chi_tra_vert/<pb>.txt and adds its CER to the summary."""
+    import subprocess
+    pages = pd.read_csv(DATA / "pilot_pages.csv")
+    out = DATA / "tesseract_chi_tra_vert"
+    out.mkdir(parents=True, exist_ok=True)
+    cers = []
+    for r in pages.itertuples():
+        img = CACHE / "full" / f"{r.half_leaf}.jpg"
+        get(f"https://archive.org/download/{IA}/page/n{r.ia_image_n}.jpg", img)
+        text = subprocess.run(["tesseract", str(img), "-", "-l", "chi_tra_vert", "--psm", "5"],
+                              capture_output=True, text=True, check=True).stdout
+        (out / f"{r.half_leaf}.txt").write_text(text, encoding="utf-8")
+        ref = (DATA / "kanripo_plain" / f"{r.half_leaf}.txt").read_text(encoding="utf-8")
+        cers.append(round(cer(text, ref), 3))
+    pages["tesseract_vert_cer"] = cers
+    pages.to_csv(DATA / "pilot_pages.csv", index=False)
+    pages.to_csv(OUT / "summary.csv", index=False)
+    print(pages[["half_leaf", "legacy_cer", "tesseract_vert_cer"]].to_string(index=False))
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    tesseract_vert() if sys.argv[1:] == ["tesseract"] else main()
