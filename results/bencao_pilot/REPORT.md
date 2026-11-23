@@ -36,7 +36,10 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    intermediate OCR level; it is not the modern OCR the comparison needs.
 4. **Double blanks in the transcription mean two different things.** Sometimes a missing character
    (036-7b: Kanripo has `(活函金匱/玉  方)`, putting 函 in the right sub-column and leaving its place in
-   the left one blank; the scan has 活金匱 / 玉函方), sometimes only layout spacing before an attribution
+   the left one blank; the scan has 活金匱 / 玉函方; the same pattern on 036-7b line 5, 名 in
+   `藥性論名時珍…/之長故  今`, and 036-12b line 2, 薓 in `廣雅薓時珍/曰人  年深`: where the right sub-column
+   has a layout space, Kanripo moved the left sub-column's character at that height into it), sometimes
+   only layout spacing before an attribution
    (036-30a `立瘥  蘇頌圖經`). Characters outside Unicode are written as entities (`&KR1171;`, twice on
    036-12b; counted as one placeholder 〓). Scan verification has to settle each blank before a page
    can be `scan_verified`.
