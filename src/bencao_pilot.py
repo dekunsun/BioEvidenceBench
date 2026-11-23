@@ -62,7 +62,9 @@ def split_half_leaves(text: str) -> dict[str, str]:
 
 
 def plain(kr: str) -> str:
-    """Kanripo markup removed: ¶ ends a manuscript line; brackets and the column slash of small notes go."""
+    """Kanripo markup removed: ¶ ends a manuscript line; brackets and the column slash of small notes go;
+    a character outside Unicode (`&KR1171;`) becomes the placeholder 〓, one character."""
+    kr = re.sub(r"&KR\d+;", "〓", kr)
     lines = [re.sub(r"[()/]", "", ln).strip("　 ") for ln in kr.split("¶\n")]
     return "\n".join(ln for ln in lines if ln)
 
@@ -134,6 +136,30 @@ def tesseract_vert() -> None:
     print(pages[["half_leaf", "legacy_cer", "tesseract_vert_cer"]].to_string(index=False))
 
 
+LEVELS = {"legacy_ia": "Internet Archive Tesseract (horizontal, simplified)",
+          "tesseract_chi_tra_vert": "Tesseract 5, chi_tra_vert, local",
+          "claude_haiku": "Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py)",
+          "claude_opus": "Claude Opus 5.5 reading the scan (src/bencao_ocr_claude.py)"}
+
+
+def score() -> None:
+    """CER of every OCR level against the Kanripo transcription (markup removed), per half-leaf.
+    Not yet scan-verified: differences include Kanripo's own gaps and variant-glyph choices."""
+    pages = pd.read_csv(DATA / "pilot_pages.csv")
+    rows = []
+    for level, desc in LEVELS.items():
+        for pb in pages.half_leaf:
+            f = DATA / level / f"{pb}.txt"
+            if f.exists():
+                ref = (DATA / "kanripo_plain" / f"{pb}.txt").read_text(encoding="utf-8")
+                rows.append({"level": level, "description": desc, "half_leaf": pb,
+                             "cer": round(cer(f.read_text(encoding="utf-8"), ref), 3)})
+    d = pd.DataFrame(rows)
+    d.to_csv(OUT / "ocr_levels.csv", index=False)
+    print(d.pivot(index="half_leaf", columns="level", values="cer").to_string())
+    print(d.groupby("level").cer.median().round(3).to_string())
+
+
 if __name__ == "__main__":
     import sys
-    tesseract_vert() if sys.argv[1:] == ["tesseract"] else main()
+    {"tesseract": tesseract_vert, "score": score}.get((sys.argv[1:] or ["main"])[0], main)()

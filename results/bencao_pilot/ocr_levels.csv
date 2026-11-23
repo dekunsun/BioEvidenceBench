@@ -1,0 +1,25 @@
+level,description,half_leaf,cer
+legacy_ia,"Internet Archive Tesseract (horizontal, simplified)",036-1b,0.962
+legacy_ia,"Internet Archive Tesseract (horizontal, simplified)",036-5a,0.968
+legacy_ia,"Internet Archive Tesseract (horizontal, simplified)",036-7b,0.995
+legacy_ia,"Internet Archive Tesseract (horizontal, simplified)",036-12b,0.973
+legacy_ia,"Internet Archive Tesseract (horizontal, simplified)",036-13a,0.98
+legacy_ia,"Internet Archive Tesseract (horizontal, simplified)",036-30a,1.006
+tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-1b,0.733
+tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-5a,0.863
+tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-7b,1.037
+tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-12b,0.727
+tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-13a,0.669
+tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-30a,1.088
+claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-1b,0.075
+claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-5a,0.211
+claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-7b,0.358
+claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-12b,0.15
+claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-13a,0.054
+claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-30a,0.152
+claude_opus,Claude Opus 5.5 reading the scan (src/bencao_ocr_claude.py),036-1b,0.031
+claude_opus,Claude Opus 5.5 reading the scan (src/bencao_ocr_claude.py),036-5a,0.032
+claude_opus,Claude Opus 5.5 reading the scan (src/bencao_ocr_claude.py),036-7b,0.084
+claude_opus,Claude Opus 5.5 reading the scan (src/bencao_ocr_claude.py),036-12b,0.058
+claude_opus,Claude Opus 5.5 reading the scan (src/bencao_ocr_claude.py),036-13a,0.023
+claude_opus,Claude Opus 5.5 reading the scan (src/bencao_ocr_claude.py),036-30a,0.018

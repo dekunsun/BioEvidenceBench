@@ -1,0 +1,37 @@
+{
+ "run_id": "20261123-0058_bencao_ocr_claude-haiku-5-5",
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "max_tokens": 8000,
+ "temperature": "provider default",
+ "system": "You transcribe pages of a hand-copied Chinese manuscript (the Siku quanshu copy of 本草綱目, 18th century) exactly as written.",
+ "task": "Transcribe this half-leaf. It is written in vertical columns read from right to left. Return one entry per column, in reading order (rightmost column first). Rules: copy the characters as written, keeping traditional and variant forms (do not modernise or simplify); add no punctuation; where a column has small characters in two sub-columns, write the right sub-column first, then the left one, in the same entry; write □ for a character you cannot read; leave out the page-edge margin text (book title and leaf number in the fold).",
+ "schema": {
+  "type": "object",
+  "properties": {
+   "columns": {
+    "type": "array",
+    "items": {
+     "type": "string"
+    }
+   }
+  },
+  "required": [
+   "columns"
+  ],
+  "additionalProperties": false
+ },
+ "image_source": "Internet Archive 06048793.cn, full-size page, long side scaled to 2000 px, JPEG q90",
+ "image_sha256": {
+  "036-1b": "8705b4dcd906bae955b1aefbae480836ba6e78294f70523b3204f123e18e1df2",
+  "036-5a": "4f4d321a91ae43f5f959d6163c7aca5c1fa81246a35076f65064cbc194878f2e",
+  "036-7b": "ec31041766291ce0817fc369290a4030653b6a102d890e28c778693e6767f566",
+  "036-12b": "d12080954c15462eda26b390e9f89b5a091fa72ef8a4c1f539362b730767cee5",
+  "036-13a": "644f5bf0683f72eec50c1c93d7475de2c012d57ad1179aa36a15ab5f86375822",
+  "036-30a": "55a049e00abbb32dfb361b37e77cd2d951309524f8318cdb0e3c6a997fb39b9a"
+ },
+ "max_usd": 0.5,
+ "usd_total": 0.0112,
+ "exploratory": true,
+ "approved": "author, 2026-11-23 (\"跑\")"
+}

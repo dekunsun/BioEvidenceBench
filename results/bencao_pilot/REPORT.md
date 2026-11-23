@@ -34,9 +34,11 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    (`chi_tra_vert`, psm 5; `python src/bencao_pilot.py tesseract`) reaches CER 0.67–0.74 on three
    pages and 0.86–1.09 on the three with dense small notes or a mixed layout. It can serve as an
    intermediate OCR level; it is not the modern OCR the comparison needs.
-4. **The transcription has visible gaps.** Kanripo marks unread characters with blanks (036-2b `芫  甘遂`,
-   probably 芫花; 036-5a `名涼膈丸  聖`). Scan verification has to fill these before a page can be
-   `scan_verified`.
+4. **Double blanks in the transcription mean two different things.** Sometimes a missing character
+   (036-7b `金匱玉  方`, where the scan has 玉函方), sometimes only layout spacing before an attribution
+   (036-30a `立瘥  蘇頌圖經`). Characters outside Unicode are written as entities (`&KR1171;`, twice on
+   036-12b; counted as one placeholder 〓). Scan verification has to settle each blank before a page
+   can be `scan_verified`.
 5. **Density is high.** About 170–310 characters per half-leaf, mostly in small two-column notes, with
    many cited authors, works and places per page (see the guide draft's examples). Six half-leaves are
    probably 150–250 mentions, far more per page than Butler or Reeve.
@@ -50,6 +52,41 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    pass as `scan_verified`.
 2. ~~Decide the open points of the guide~~ done: guide v0.1 (`docs/notes/bencao_guide.md`), the
    proposals adopted by the author on 2026-11-23.
-3. Choose the modern OCR: an open model that reads vertical traditional Chinese, or a vision LLM (if a
-   Claude model, it shares a family with the extractor; to be stated). A 5-page cost pilot comes first.
+3. ~~Choose the modern OCR~~ option A run (below). Before Claude output is used as the modern-OCR
+   level for Claude extraction, decide whether to add a second, non-Claude OCR (option B or C).
 4. Only then label the pilot pages (dev) and draft the plan for a locked test set.
+
+## Modern OCR, option A (run 2026-11-23, approved by the author: "跑")
+
+Claude models transcribe each half-leaf from the scan alone (`src/bencao_ocr_claude.py`; runs
+`results/20261123-0058_bencao_ocr_claude-haiku-5-5/` and `results/20261123-0059_bencao_ocr_claude-opus-5-5/`).
+CER against the Kanripo transcription, markup removed (`python src/bencao_pilot.py score` →
+`ocr_levels.csv`):
+
+| Half-leaf | Internet Archive OCR | Tesseract `chi_tra_vert` | Claude Haiku 5.5 | Claude Opus 5.5 |
+| --- | ---: | ---: | ---: | ---: |
+| 036-1b | 0.96 | 0.73 | 0.08 | 0.03 |
+| 036-5a | 0.97 | 0.86 | 0.21 | 0.03 |
+| 036-7b | 1.00 | 1.04 | 0.36 | 0.08 |
+| 036-12b | 0.97 | 0.73 | 0.15 | 0.06 |
+| 036-13a | 0.98 | 0.67 | 0.05 | 0.02 |
+| 036-30a | 1.01 | 1.09 | 0.15 | 0.02 |
+| **median** | **0.98** | **0.80** | **0.15** | **0.03** |
+| cost, six pages | — | $0 | $0.011 | $0.148 |
+
+How to read it:
+
+- **This is disagreement with an unverified transcription, not error.** Most of Opus's 77 differences
+  are variant glyphs (隂/陰, 𢎞/弘, 毎/每, 録/錄, 黒/黑): one side keeps the manuscript form, the other a
+  standard form. Which side matches the scan is settled only by the scan check. The variant-folding
+  table of the guide (point 8) will lower these numbers.
+- **The levels are well separated**, which is what the comparison needs: near-nothing (Internet
+  Archive), poor (vertical Tesseract), fair (Haiku) and close (Opus).
+- **At Kanripo's gaps Opus agrees with the scan**: it writes 玉函方 where Kanripo has a blank, and leaves
+  the layout blank before 蘇頌 empty.
+- **Recall versus reading cannot be told apart yet.** 本草綱目 is famous; Opus may partly recall the text.
+  A probe for later: places where the Siku copy differs from the common printed editions (taboo
+  changes, copyist variants). If Opus writes the common-edition reading where the manuscript shows
+  something else, it is recalling.
+- **Same family.** If Claude also extracts, OCR and extraction share a model family; a non-Claude OCR
+  level (Gemini, or an open model on a GPU) would remove that confound.
