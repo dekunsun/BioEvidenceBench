@@ -48,7 +48,9 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    probably 150–250 mentions, far more per page than Butler or Reeve.
 6. **The Commons copy could not be fetched from this environment** (Wikimedia returned HTTP 429). The
    working images come from the Internet Archive copy of the same CADAL scan; Commons is cited for the
-   licence. To confirm in a browser: Commons DjVu page 11 shows the same page as image n10 (036-1a).
+   licence. The author confirmed in a browser (2026-11-23) that Commons DjVu page 11 shows 036-1a, the
+   page of Internet Archive image n10: Commons page = image n + 1 (`commons_page` in
+   `data/bencao/pilot_pages.csv`).
 
 ## Next steps (each needs the author's decision)
 
@@ -66,8 +68,8 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    (section "Non-Claude OCR" below). Gemini not run: PaddleOCR already gives a usable non-Claude level
    at $0.
 4. Label 036-1b first (`gold/labelling_bencao_036-1b.xlsx`), record the time, then decide the other five.
-5. Commons page check: Wikimedia still returns HTTP 429 to this environment; the author checks in a
-   browser that DjVu page 11 begins 欽定四庫全書 / 本草綱目卷十二上 (half-leaf 036-1a).
+5. ~~Commons page check~~ done: the author confirmed in a browser that DjVu page 11 begins
+   欽定四庫全書 / 本草綱目卷十二上 (half-leaf 036-1a).
 6. Only then draft the plan for a locked test set.
 
 ## Modern OCR, option A (run 2026-11-23, approved by the author: "跑")

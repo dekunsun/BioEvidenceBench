@@ -52,9 +52,12 @@ The Catalogue of Life China API needs a key and was not tested.
 
 1. ~~The Kanripo licence~~ settled: CC BY-SA 4.0 (collection-level statement). Still open: how the WYG text was proofread.
 2. ~~The rights to the scans~~ settled: use the Commons copies with their public-domain statements.
-3. The mapping from Commons file pages to Kanripo half-leaf markers (per volume), and a check that the
-   Commons and Internet Archive copies are the same image sequence, since the legacy OCR comes from the
-   Internet Archive copy.
-4. Which modern OCR to run, and its cost.
+3. ~~The mapping from Commons file pages to Kanripo half-leaf markers~~ checked for 卷十二上 by the author
+   in a browser (2026-11-23): Commons file CADAL06048793 confirmed; its DjVu page 11 shows the same image
+   as Internet Archive n10, which is Kanripo half-leaf 036-1a. So Commons page = IA image n + 1 =
+   half-leaf index + 11 (`commons_page` in `data/bencao/pilot_pages.csv`). Other volumes need their own
+   one-page check.
+4. ~~Which modern OCR to run~~ Claude Opus and Haiku (paid, $0.16) and PaddleOCR (open, local, $0); see
+   `results/bencao_pilot/REPORT.md`.
 5. The Siku copy is a hand-written manuscript in regular script, not a print, and has taboo-avoidance
    changes; both should be stated as conditions of the case.
