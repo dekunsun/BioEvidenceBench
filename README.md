@@ -22,9 +22,9 @@ In an 1849 book on shells, *Conchologia iconica*, a species appears in print as 
 
 On the surface, the digitization worked. The book is online, and the page is searchable. Hand that text to a large language model, and it can pinpoint the exact line where the species is mentioned. Yet if the model faithfully copies what the OCR gave it, the database still ends up with the wrong name.
 
-![The printed name BULIMUS CHILENSIS on the 1849 scan, and the same line in the library's older OCR, a modern OCR model and the expert transcription](docs/assets/overview/fig01_scan_name.png)
+![The printed name BULIMUS CHILENSIS on the 1849 scan, the library's older OCR reading BuLlMLS CiilLE.NSls, and the exact name a record needs](docs/assets/overview/fig01_scan_name.png)
 
-*The real page (BHL page 8966790): the scan, then the same line in three text versions, copied unchanged. Scan from the Biodiversity Heritage Library via the IMPACT ground-truth set, CC BY 3.0.*
+*The real page (BHL page 8966790). The OCR text is copied unchanged from the library's file; modern OCR and the expert transcription both read the name intact. Scan from the Biodiversity Heritage Library via the IMPACT ground-truth set, CC BY 3.0.*
 
 That gap sits inside roughly 64 million scanned pages in the Biodiversity Heritage Library. Historical natural-history books record species names, collection localities, researchers, and dates of observations. OCR and large language models can help turn those pages into structured data for modern databases such as GBIF. Yet pulling text off a page is not the same as producing a record another person can trust: a small error upstream rarely stays small—it compounds down the line. A single misread character can corrupt a species name and break its downstream database match; even a cleanly extracted historical name may fail to resolve against today's taxonomy; and a plausible-looking result may arrive without evidence anyone can verify.
 
