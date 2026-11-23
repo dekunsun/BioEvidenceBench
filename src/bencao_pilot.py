@@ -204,7 +204,10 @@ LEVELS = {"legacy_ia": "Internet Archive Tesseract (horizontal, simplified)",
 
 def score() -> None:
     """CER of every OCR level against the Kanripo transcription (markup removed), per half-leaf.
-    Not yet scan-verified: differences include Kanripo's own gaps and variant-glyph choices."""
+    Not yet scan-verified: differences include Kanripo's own gaps and variant-glyph choices.
+    `cer` compares forms as written (primary); `cer_folded` folds data/bencao/variant_table.csv on both
+    sides first (auxiliary OCR metric, guide v0.2 rule 10; contextual substitutions are never folded)."""
+    from bencao_variants import fold
     pages = pd.read_csv(DATA / "pilot_pages.csv")
     rows = []
     for level, desc in LEVELS.items():
@@ -212,12 +215,13 @@ def score() -> None:
             f = DATA / level / f"{pb}.txt"
             if f.exists():
                 ref = (DATA / "kanripo_plain" / f"{pb}.txt").read_text(encoding="utf-8")
+                hyp = f.read_text(encoding="utf-8")
                 rows.append({"level": level, "description": desc, "half_leaf": pb,
-                             "cer": round(cer(f.read_text(encoding="utf-8"), ref), 3)})
+                             "cer": round(cer(hyp, ref), 3), "cer_folded": round(cer(fold(hyp), fold(ref)), 3)})
     d = pd.DataFrame(rows)
     d.to_csv(OUT / "ocr_levels.csv", index=False)
     print(d.pivot(index="half_leaf", columns="level", values="cer").to_string())
-    print(d.groupby("level").cer.median().round(3).to_string())
+    print(d.groupby("level")[["cer", "cer_folded"]].median().round(3).to_string())
 
 
 if __name__ == "__main__":

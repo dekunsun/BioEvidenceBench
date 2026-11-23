@@ -1,6 +1,6 @@
-# 本草綱目 case: annotation guide v0.1
+# 本草綱目 case: annotation guide v0.2
 
-*v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
+*v0.2, 2026-11-23: rule 10 (historical forms and restoration) added on the author's decisions. v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
 the draft left open (6, 7) take the defaults stated below. No page has been labelled yet. Examples come from
 half-leaves 036-1a, 036-2a and 036-2b, which are **not** among the six pilot pages, so nothing here
 pre-fills a label on a pilot page.*
@@ -46,11 +46,36 @@ pre-fills a label on a pilot page.*
    organisms. **Decided: minerals and other non-organic drugs are a separate field `substance`, scored
    separately like `vernacular` in the main guide.** (Matters little for 草部.)
 8. **Variant and missing characters.** Spans follow Kanripo's characters (宻, 𢎞, 䖅). Value matching folds
-   a fixed variant table (宻→密, 𢎞→弘, …), reported with and without folding, like `norm_value` in the
-   main scorer. Kanripo gaps (two spaces, e.g. 036-2b `芫  甘遂`, probably 芫花) are filled from the scan
+   the fixed table `data/bencao/variant_table.csv` (宻→密, 𢎞→弘, …) only in the auxiliary metric; the
+   primary scores compare forms as written (v0.2, rule 10). Kanripo gaps (two spaces, e.g. 036-2b `芫  甘遂`, probably 芫花) are filled from the scan
    during verification and logged in an errata file. **Decided as written.**
 9. **Book titles inside quotations.** 沈括筆談云本草註引爾雅: 筆談 and 爾雅 cited; 本草註 a generic
    reference. Label generic references? **Decided: no.**
+
+10. **Historical forms: taboo avoidance and restoration (v0.2, the author's decisions 2026-11-23).**
+    The Siku copy avoids imperial names: 弘 (乾隆 弘曆) is written 𢎞 with the last stroke missing
+    (卷十二上 21 times, 下 31 times, never 弘); 玄 (康熙 玄燁) is written 𤣥 (𤣥參 17 times in 卷十二下) or,
+    in places, replaced by another character (元參, once in 卷十二下). Rules:
+    - **As written.** Transcription and gold `text` keep what the scan shows, characters and forms
+      (陶𢎞景, 𤣥參, 元參). Nothing in the source text is changed.
+    - **Two different columns, never mixed.** `scan_text` keeps its meaning from the main guide: the
+      scan's reading where the *transcription* is wrong (a transcription error). Historical forms go in
+      three new gold columns:
+      | Column | Content | Example |
+      | --- | --- | --- |
+      | `restored_form` | the standard form of the value, confirmed by the author | 陶弘景; 玄參; 枹罕 |
+      | `normalization_type` | `glyph_variant` (same character, another form: 䍐→罕), `taboo_missing_stroke` (𢎞→弘, 𤣥→玄), `taboo_substitution` (another character put in by the copyist: 元→玄), `interchangeable_usage` (different characters for the same word: 暴/曝) | `taboo_missing_stroke` |
+      | `restoration_evidence` | why: the rule, a parallel passage or a reference | 避乾隆諱，弘缺末筆; 同條標題作𤣥參 |
+      Empty when the value is already standard. Gold file: `gold/gold_mentions_bencao_TEMPLATE.csv`.
+    - **Scoring.** The primary scores compare forms as written, without folding. An auxiliary OCR
+      metric folds the fixed table `data/bencao/variant_table.csv` (glyph variants and missing-stroke
+      taboo forms only). Contextual substitutions (元/玄) are never folded; they get their own metric:
+      at each gold mention with `normalization_type = taboo_substitution`, did the output keep the form
+      as written, and does a separate restoration step reach `restored_form`.
+    - **Linking** uses the confirmed `restored_form` (𤣥參 is looked up as 玄參), keeping `text` and
+      `restoration_evidence` on the same row.
+    - **OCR.** 𢎞 read as 弘 is a glyph fold in the auxiliary metric, not an error there; 元 read as 玄
+      (or the reverse) is never folded.
 
 ## Linking (later)
 

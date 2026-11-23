@@ -57,15 +57,9 @@ WS_URL = "https://zh.wikisource.org/wiki/%E6%9C%AC%E8%8D%89%E7%B6%B1%E7%9B%AE/%E
 PAGES = ["036-1b", "036-5a", "036-7b", "036-12b", "036-13a", "036-30a"]
 HIDE = (2, 5)                       # columns painted white in probe B, counted from the right, 1-based
 
-# glyph-variant pairs (Siku form, standard form): the same character, written differently. Fixed list.
-VARIANTS = {frozenset(p) for p in ["隂陰", "𢎞弘", "毎每", "録錄", "黒黑", "别別", "黄黃", "葢蓋", "温溫",
-                                   "虚虛", "煑煮", "揺搖", "呉吳", "緑綠", "衆眾", "説說", "茋芪", "乆久",
-                                   "疎踈", "間閒", "搗擣", "状狀", "讚讃", "衘銜", "䘖銜", "竒奇", "廵巡",
-                                   "䖏處", "従從", "冝宜", "觧解", "鍳鑑", "髙高", "徳德", "囙因", "麪麵",
-                                   "宻密", "畧略", "寳寶", "隣鄰", "啚圖", "觔斤", "爲為", "峯峰", "牀床",
-                                   "䍐罕", "疎疏", "陜陝", "横橫", "靭韌", "脉脈", "證証", "㗋喉", "𠻳嗽",
-                                   "茋耆", "茋芪", "薓參", "薓蓡", "絶絕", "鋭銳", "讚贊", "讃贊", "嬀媯", "亘亙",
-                                   "隠隱", "臓臟", "吴吳", "踈疏", "隂陰"]}
+# glyph-variant and missing-stroke taboo pairs: one fixed table shared with the OCR scoring (guide v0.2 rule 10)
+from bencao_variants import pairs as _variant_pairs  # noqa: E402
+VARIANTS = _variant_pairs()
 # different characters used interchangeably for the same word in this text (proposed; the author confirms)
 USAGE = {frozenset(p) for p in ["暴曝", "註注", "鍾鐘", "欬咳", "詞辭", "枹抱"]}
 PUNCT = r"[\s，。、；：︰！？「」『』（）()《》〈〉·．,.;:!?\"'—…=*#|〓□]"

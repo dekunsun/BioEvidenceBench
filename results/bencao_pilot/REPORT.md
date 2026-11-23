@@ -72,14 +72,20 @@ CER against the Kanripo transcription, markup removed (`python src/bencao_pilot.
 | 036-13a | 0.98 | 0.67 | 0.05 | 0.02 |
 | 036-30a | 1.01 | 1.09 | 0.15 | 0.02 |
 | **median** | **0.98** | **0.80** | **0.15** | **0.03** |
+| median, glyph-folded (auxiliary) | 0.98 | 0.79 | 0.08 | 0.007 |
 | cost, six pages | — | $0 | $0.011 | $0.148 |
+
+The folded row folds the fixed table `data/bencao/variant_table.csv` (glyph variants and the
+missing-stroke taboo forms 𢎞/弘, 𤣥/玄) on both sides before comparing; it is the auxiliary OCR metric of
+guide v0.2 rule 10. The primary figure stays the unfolded one. Contextual substitutions (元 written for
+玄) are never folded.
 
 How to read it:
 
 - **This is disagreement with an unverified transcription, not error.** Most of Opus's 77 differences
   are variant glyphs (隂/陰, 𢎞/弘, 毎/每, 録/錄, 黒/黑): one side keeps the manuscript form, the other a
-  standard form. Which side matches the scan is settled only by the scan check. The variant-folding
-  table of the guide (point 8) will lower these numbers.
+  standard form. Which side matches the scan is settled only by the scan check. Folding the variant
+  table lowers Opus's median from 0.032 to 0.007 (row above).
 - **The levels are well separated**, which is what the comparison needs: near-nothing (Internet
   Archive), poor (vertical Tesseract), fair (Haiku) and close (Opus).
 - **At Kanripo's gaps Opus agrees with the scan**: it writes 玉函方 where Kanripo has a blank, and leaves
