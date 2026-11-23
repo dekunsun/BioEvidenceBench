@@ -97,7 +97,9 @@ def ws_segment(ref: str, wsc: str) -> str:
     return win[best[1]:best[2]]
 
 
-SCAN_VERIFY = DATA / "received" / "2026-11-23_scan_verify_gloria.xlsx"   # the author's line-by-line scan check
+# the author's line-by-line scan check (received file + her later decisions, data/bencao/scan_verify_changes.csv)
+SCAN_VERIFY = DATA / "scan_verify_working.csv"
+KINDS = DATA / "received" / "2026-11-23_probe_a_kinds_gloria.xlsx"         # her kind decisions for the 15 non-glyph sites
 
 
 def site_line(pb: str, pos: int) -> int:
@@ -116,7 +118,7 @@ def scan_line_verdict(pb: str, line: int, pos: int, siku: str) -> str:
     character at the aligned position. Anything else is left empty for her to decide."""
     if not SCAN_VERIFY.exists():
         return ""
-    v = pd.read_excel(SCAN_VERIFY)
+    v = pd.read_csv(SCAN_VERIFY)
     hit = v[(v.half_leaf == pb) & (v.line == line)]
     if not len(hit):
         return ""
@@ -165,14 +167,34 @@ def probe_a(models=("claude_opus", "claude_haiku")) -> None:
     d = pd.DataFrame(sites)
     d.insert(2, "line", [site_line(r.half_leaf, r.pos) for r in d.itertuples()])
     d["site_confirmed"] = [scan_line_verdict(r.half_leaf, r.line, r.pos, r.siku) for r in d.itertuples()]
+    # the author's kinds: `kind` stays the proposal, `kind_final` is her decision ("Y" = proposal accepted);
+    # a site she queried ("?") is not counted as scan-confirmed until she settles it.
+    if KINDS.exists():
+        k = pd.read_excel(KINDS)[["half_leaf", "pos", "kind_confirmed", "note"]].rename(columns={"note": "her_note"})
+        d = d.drop(columns=["kind_confirmed"]).merge(k, on=["half_leaf", "pos"], how="left")
+        d["kind_confirmed"] = d.kind_confirmed.fillna("")
+        d["kind_final"] = [kd if kc in ("", "Y") else ("pending" if kc == "?" else kc)
+                           for kd, kc in zip(d.kind, d.kind_confirmed)]
+        d.loc[d.kind_confirmed == "?", "site_confirmed"] = ""
+    else:
+        d["kind_final"] = d.kind
+    # one variation event = a run of adjacent non-glyph sites (即是/地近 is one event, not two; her note)
+    ev, last = [], None
+    for r in d.itertuples():
+        same = (last is not None and r.kind_final != "glyph_variant" and r.kind_final == last[2]
+                and r.half_leaf == last[0] and r.pos == last[1] + 1)
+        ev.append(ev[-1] if same else (ev[-1] + 1 if ev else 0))
+        last = (r.half_leaf, r.pos, r.kind_final)
+    d["event"] = ev
     OUT.mkdir(parents=True, exist_ok=True)
     d.to_csv(OUT / "probe_a_sites.csv", index=False)
     summ = []
     for m in models:
-        for kind, g in d.groupby("kind"):
+        for kind, g in d.groupby("kind_final"):
             vc = g[f"{m}_follows"].value_counts()
-            summ.append({"model": m, "kind": kind, "sites": len(g), **{k: int(vc.get(k, 0)) for k in
-                         ("siku", "siku (other glyph)", "wikisource", "neither", "missing")}})
+            summ.append({"model": m, "kind": kind, "sites": len(g), "events": g.event.nunique(),
+                         **{k: int(vc.get(k, 0)) for k in
+                            ("siku", "siku (other glyph)", "wikisource", "neither", "missing")}})
     s = pd.DataFrame(summ)
     s.to_csv(OUT / "probe_a_summary.csv", index=False)
     print(s.to_string(index=False))

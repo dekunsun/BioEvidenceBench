@@ -1,7 +1,7 @@
 half_leaf,status,note
-036-1b,scan_verified,all 8 lines Y
-036-5a,scan_verified,all 8 lines Y
-036-13a,scan_verified,all 8 lines Y
-036-30a,scan_verified,all 8 lines Y
-036-7b,pending,"line 1 N (函 misplaced, reading given); line 5 N: her reading has 名 twice, to confirm"
-036-12b,pending,"line 2 N: her reading has 薓 twice, to confirm; line 3 ?: two 〓 (Kanripo &KR1171;) not displayable"
+036-1b,scan_verified,all lines match
+036-5a,scan_verified,all lines match
+036-13a,scan_verified,all lines match
+036-30a,"scan_verified, one character queried",all lines match; line 7 庾 vs 廋 to be checked again on the scan (her note in probe_a_kinds)
+036-7b,scan_verified,"lines 1 and 5 corrected from her reading (Kanripo moved 函, 名 into right sub-column spaces)"
+036-12b,scan_verified,line 2 corrected (薓 moved); line 3: both 〓 one rare character (Kanripo &KR1171;)

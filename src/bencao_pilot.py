@@ -216,12 +216,16 @@ def score() -> None:
             if f.exists():
                 ref = (DATA / "kanripo_plain" / f"{pb}.txt").read_text(encoding="utf-8")
                 hyp = f.read_text(encoding="utf-8")
+                ver = DATA / "verified_plain" / f"{pb}.txt"            # Kanripo corrected by the author's scan check
+                vref = ver.read_text(encoding="utf-8") if ver.exists() else None
                 rows.append({"level": level, "description": desc, "half_leaf": pb,
-                             "cer": round(cer(hyp, ref), 3), "cer_folded": round(cer(fold(hyp), fold(ref)), 3)})
+                             "cer": round(cer(hyp, ref), 3), "cer_folded": round(cer(fold(hyp), fold(ref)), 3),
+                             "cer_verified": round(cer(hyp, vref), 3) if vref else None,
+                             "cer_verified_folded": round(cer(fold(hyp), fold(vref)), 3) if vref else None})
     d = pd.DataFrame(rows)
     d.to_csv(OUT / "ocr_levels.csv", index=False)
     print(d.pivot(index="half_leaf", columns="level", values="cer").to_string())
-    print(d.groupby("level")[["cer", "cer_folded"]].median().round(3).to_string())
+    print(d.groupby("level")[["cer", "cer_folded", "cer_verified", "cer_verified_folded"]].median().round(3).to_string())
 
 
 if __name__ == "__main__":
