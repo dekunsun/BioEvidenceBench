@@ -52,8 +52,11 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
 
 ## Next steps (each needs the author's decision)
 
-1. Check the six pages against the scans (`verify.html`, `scan_verify.xlsx`) and mark the ones that
-   pass as `scan_verified`.
+1. ~~Check the six pages against the scans~~ done by the author on 2026-11-23 (archived unchanged as
+   `data/bencao/received/2026-11-23_scan_verify_gloria.xlsx`; status in `data/bencao/scan_status.csv`):
+   036-1b, 036-5a, 036-13a and 036-30a are `scan_verified` (all lines match). 036-7b and 036-12b wait on
+   three questions (the misplaced 名 and 薓, and the two 〓 on 036-12b line 3). Every probe A site lies on
+   a line she checked, so `site_confirmed` is now filled from her check (118 of 118).
 2. ~~Decide the open points of the guide~~ done: guide v0.1 (`docs/notes/bencao_guide.md`), the
    proposals adopted by the author on 2026-11-23.
 3. ~~Choose the modern OCR~~ option A run (below). Before Claude output is used as the modern-OCR

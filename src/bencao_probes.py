@@ -97,6 +97,40 @@ def ws_segment(ref: str, wsc: str) -> str:
     return win[best[1]:best[2]]
 
 
+SCAN_VERIFY = DATA / "received" / "2026-11-23_scan_verify_gloria.xlsx"   # the author's line-by-line scan check
+
+
+def site_line(pb: str, pos: int) -> int:
+    """Manuscript line (1-based) that holds cleaned position `pos` of the half-leaf."""
+    n = 0
+    for k, line in enumerate((DATA / "kanripo_plain" / f"{pb}.txt").read_text(encoding="utf-8").splitlines(), 1):
+        n += len(clean(line))
+        if pos < n:
+            return k
+    return k
+
+
+def scan_line_verdict(pb: str, line: int, pos: int, siku: str) -> str:
+    """site_confirmed from the author's scan check. A site on a line she marked Y matches the scan as
+    transcribed. On a line she marked N, the site counts as confirmed when her scan_reading has the same
+    character at the aligned position. Anything else is left empty for her to decide."""
+    if not SCAN_VERIFY.exists():
+        return ""
+    v = pd.read_excel(SCAN_VERIFY)
+    hit = v[(v.half_leaf == pb) & (v.line == line)]
+    if not len(hit):
+        return ""
+    verdict, reading = str(hit.matches_scan.iloc[0]).strip().upper(), hit.scan_reading.iloc[0]
+    if verdict == "Y":
+        return "Y (line verified)"
+    if verdict == "N" and isinstance(reading, str):
+        lines = (DATA / "kanripo_plain" / f"{pb}.txt").read_text(encoding="utf-8").splitlines()
+        start = sum(len(clean(x)) for x in lines[:line - 1])
+        got = ref_map(clean(lines[line - 1]), clean(reading))[pos - start]
+        return "Y (her scan_reading)" if got == siku else ""
+    return ""
+
+
 def probe_a(models=("claude_opus", "claude_haiku")) -> None:
     if not WS_CACHE.exists():
         import urllib.request
@@ -129,6 +163,8 @@ def probe_a(models=("claude_opus", "claude_haiku")) -> None:
                                        else "neither")
             sites.append(row)
     d = pd.DataFrame(sites)
+    d.insert(2, "line", [site_line(r.half_leaf, r.pos) for r in d.itertuples()])
+    d["site_confirmed"] = [scan_line_verdict(r.half_leaf, r.line, r.pos, r.siku) for r in d.itertuples()]
     OUT.mkdir(parents=True, exist_ok=True)
     d.to_csv(OUT / "probe_a_sites.csv", index=False)
     summ = []

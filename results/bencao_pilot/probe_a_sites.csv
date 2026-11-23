@@ -1,119 +1,119 @@
-half_leaf,pos,context,siku,wikisource,kind,kind_confirmed,site_confirmed,claude_opus,claude_opus_follows,claude_haiku,claude_haiku_follows
-036-1b,4,木毒調和衆藥有功故,衆,眾,glyph_variant,,,衆,siku,衆,siku
-036-1b,16,之號集解别録曰甘草,别,別,glyph_variant,,,别,siku,別,wikisource
-036-1b,17,號集解别録曰甘草生,録,錄,glyph_variant,,,錄,wikisource,錄,wikisource
-036-1b,40,除日采根暴乾十日成,暴,曝,interchangeable_usage,,,暴,siku,暴,siku
-036-1b,46,十日成陶𢎞景曰河西,𢎞,弘,glyph_variant,,,弘,wikisource,弘,wikisource
-036-1b,68,從汶山諸道中來赤皮,道,地,different_word,,,道,siku,道,siku
-036-1b,81,堅實者是枹䍐草最佳,枹,抱,interchangeable_usage,,,枹,siku,枹,siku
-036-1b,82,實者是枹䍐草最佳枹,䍐,罕,glyph_variant,,,罕,wikisource,罕,wikisource
-036-1b,86,䍐草最佳枹䍐乃西羌,枹,抱,interchangeable_usage,,,枹,siku,枹,siku
-036-1b,87,草最佳枹䍐乃西羌地,䍐,罕,glyph_variant,,,罕,wikisource,罕,wikisource
-036-1b,101,乾者理多虚疎又有如,虚,虛,glyph_variant,,,虚,siku,虛,wikisource
-036-1b,102,者理多虚疎又有如鯉,疎,疏,glyph_variant,,,踈,neither,疏,wikisource
-036-1b,140,蘇頌曰今陜西河東州,陜,陝,glyph_variant,,,陜,siku,陝,wikisource
-036-1b,192,赤色上有横梁梁下皆,横,橫,glyph_variant,,,横,siku,橫,wikisource
-036-1b,208,頭及赤皮隂乾用今甘,隂,陰,glyph_variant,,,陰,wikisource,陰,wikisource
-036-1b,227,為佳其輕虚縱理及細,虚,虛,glyph_variant,,,虚,siku,虛,wikisource
-036-1b,232,縱理及細靭者不堪惟,靭,韌,glyph_variant,,,靭,siku,勒,neither
-036-1b,252,大苦郭璞註似地黄又,註,注,interchangeable_usage,,,註,siku,注,wikisource
-036-1b,255,璞註似地黄又詩唐風,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-5a,49,傷寒心悸脉結代者甘,脉,脈,glyph_variant,,,脉,siku,脈,wikisource
-036-5a,60,兩水三升煑一半服七,煑,煮,glyph_variant,,,煑,siku,煮,wikisource
-036-5a,78,寒咽痛少隂證甘草湯,隂,陰,glyph_variant,,,陰,wikisource,陰,wikisource
-036-5a,79,咽痛少隂證甘草湯主,證,証,glyph_variant,,,證,siku,證,siku
-036-5a,96,炙水二升煑一升半服,煑,煮,glyph_variant,,,煑,siku,,missing
-036-5a,114,寒論肺熱㗋痛有痰熱,㗋,喉,glyph_variant,,,喉,wikisource,咳,neither
-036-5a,134,一夜一兩毎服五錢水,毎,每,glyph_variant,,,每,wikisource,每,wikisource
-036-5a,140,五錢水一鍾半入阿膠,鍾,鐘,interchangeable_usage,,,鍾,siku,鍾,siku
-036-5a,169,便數而不欬者肺中冷,欬,咳,interchangeable_usage,,,欬,siku,欬,siku
-036-5a,180,草乾薑湯温之甘草炙,温,溫,glyph_variant,,,溫,wikisource,溫,wikisource
-036-5a,195,兩水三升煑一升五合,煑,煮,glyph_variant,,,煑,siku,煮,wikisource
-036-5a,208,景金匱要畧肺痿乆𠻳,畧,略,glyph_variant,,,畧,siku,略,wikisource
-036-5a,211,要畧肺痿乆𠻳涕唾多,乆,久,glyph_variant,,,久,wikisource,欠,neither
-036-5a,212,畧肺痿乆𠻳涕唾多骨,𠻳,嗽,glyph_variant,,,嗽,wikisource,嗽,wikisource
-036-5a,252,方小兒熱𠻳甘草二兩,𠻳,嗽,glyph_variant,,,嗽,wikisource,嗽,wikisource
-036-5a,268,研末蜜丸緑豆大食後,緑,綠,glyph_variant,,,綠,wikisource,綠,wikisource
-036-7b,50,玉函妙方黄耆本經上,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-7b,58,上品釋名黄茋綱目戴,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-7b,59,品釋名黄茋綱目戴糝,茋,耆,glyph_variant,,,芪,neither,芪,neither
-036-7b,68,本經戴椹别録又名獨,别,別,glyph_variant,,,别,siku,別,wikisource
-036-7b,69,經戴椹别録又名獨椹,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-7b,76,獨椹芰草别録又名蜀,别,別,glyph_variant,,,别,siku,,missing
-036-7b,77,椹芰草别録又名蜀脂,録,錄,glyph_variant,,,録,siku,,missing
-036-7b,84,蜀脂百本别録王孫藥,别,別,glyph_variant,,,别,siku,別,wikisource
-036-7b,85,脂百本别録王孫藥性,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-7b,98,曰耆長也黄耆色黄為,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-7b,101,也黄耆色黄為補藥之,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-7b,112,今俗通作黄茋或作蓍,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-7b,113,俗通作黄茋或作蓍者,茋,芪,glyph_variant,,,芪,wikisource,芪,wikisource
-036-7b,139,異物集解别録曰黄耆,别,別,glyph_variant,,,别,siku,弘,neither
-036-7b,140,物集解别録曰黄耆生,録,錄,glyph_variant,,,録,siku,景,neither
-036-7b,142,解别録曰黄耆生蜀郡,黄,黃,glyph_variant,,,黄,siku,第,neither
-036-7b,158,月十月采隂乾𢎞景曰,隂,陰,glyph_variant,,,陰,wikisource,曰,neither
-036-7b,160,月采隂乾𢎞景曰第一,𢎞,弘,glyph_variant,,,弘,wikisource,耆,neither
-036-7b,171,西洮陽色黄白甜美今,黄,黃,glyph_variant,,,黄,siku,月,neither
-036-7b,181,難得次用黒水宕昌者,黒,黑,glyph_variant,,,黑,wikisource,黑,wikisource
-036-7b,196,者亦甘而温補又有蠶,温,溫,glyph_variant,,,温,siku,溫,wikisource
-036-12b,10,或省作蓡黄參呉普血,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-12b,12,作蓡黄參呉普血參别,呉,吳,glyph_variant,,,吴,neither,吳,wikisource
-036-12b,16,呉普血參别録人䘖本,别,別,glyph_variant,,,别,siku,錄,neither
-036-12b,17,普血參别録人䘖本經,録,錄,glyph_variant,,,録,siku,,missing
-036-12b,19,參别録人䘖本經鬼葢,䘖,銜,glyph_variant,,,銜,wikisource,銜,wikisource
-036-12b,23,䘖本經鬼葢本經神草,葢,蓋,glyph_variant,,,葢,siku,蓋,wikisource
-036-12b,28,本經神草别録土精别,别,別,glyph_variant,,,别,siku,別,wikisource
-036-12b,29,經神草别録土精别録,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-12b,32,别録土精别録地精廣,别,別,glyph_variant,,,别,siku,別,wikisource
-036-12b,33,録土精别録地精廣雅,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-12b,104,然承誤日乆亦不能變,乆,久,glyph_variant,,,久,wikisource,久,wikisource
-036-12b,121,尚作薓字别録一名人,别,別,glyph_variant,,,别,siku,別,wikisource
-036-12b,122,作薓字别録一名人微,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-12b,142,級故曰人衘其草背陽,衘,銜,glyph_variant,,,銜,wikisource,衝,neither
-036-12b,148,草背陽向隂故曰鬼葢,隂,陰,glyph_variant,,,陰,wikisource,陰,wikisource
-036-12b,152,隂故曰鬼葢其在五參,葢,蓋,glyph_variant,,,葢,siku,蓋,wikisource
-036-12b,158,在五參色黄屬土而補,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-12b,166,補脾胃生隂血故有黄,隂,陰,glyph_variant,,,陰,wikisource,陰,wikisource
-036-12b,170,隂血故有黄參血參之,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-12b,204,有人宅後毎夜聞人呼,毎,每,glyph_variant,,,每,wikisource,每,wikisource
-036-12b,234,五尺得人薓一如人體,薓,參,glyph_variant,,,蓡,neither,漢,neither
-036-12b,246,備呼聲遂絶觀此則土,絶,絕,glyph_variant,,,絶,siku,絕,wikisource
-036-12b,256,之名尤可證也禮斗威,證,証,glyph_variant,,,證,siku,證,siku
-036-12b,277,運斗樞云揺光星散而,揺,搖,glyph_variant,,,揺,siku,搖,wikisource
-036-13a,2,利則揺光不明人,揺,搖,glyph_variant,,,揺,siku,搖,wikisource
-036-13a,19,之名又可證矣集解别,證,証,glyph_variant,,,證,siku,證,siku
-036-13a,23,證矣集解别録曰人參,别,別,glyph_variant,,,别,siku,別,wikisource
-036-13a,24,矣集解别録曰人參生,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-13a,49,根竹刀刮暴乾無令見,暴,曝,interchangeable_usage,,,暴,siku,暴,siku
-036-13a,73,月生葉小鋭枝黒莖有,鋭,銳,glyph_variant,,,鋭,siku,銳,wikisource
-036-13a,75,葉小鋭枝黒莖有毛三,黒,黑,glyph_variant,,,黒,siku,黑,wikisource
-036-13a,95,如人者神𢎞景曰上黨,𢎞,弘,glyph_variant,,,弘,wikisource,弘,wikisource
-036-13a,111,者形長而黄状如防風,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-13a,112,形長而黄状如防風多,状,狀,glyph_variant,,,狀,wikisource,狀,wikisource
-036-13a,146,麗者高麗即是遼東形,即,地,different_word,,,即,siku,即,siku
-036-13a,147,者高麗即是遼東形大,是,近,different_word,,,是,siku,是,siku
-036-13a,153,東形大而虚軟不及百,虚,虛,glyph_variant,,,虛,wikisource,虛,wikisource
-036-13a,185,人作人參讚云三椏五,讚,贊,glyph_variant,,,讃,neither,讚,siku
-036-13a,194,葉背陽向隂欲來求我,隂,陰,glyph_variant,,,陰,wikisource,陰,wikisource
-036-13a,211,似桐甚大隂廣則多生,隂,附,different_word,,,陰,siku (other glyph),陰,siku (other glyph)
-036-13a,279,檀州幽州嬀州并州並,嬀,媯,glyph_variant,,,媯,wikisource,嫣,neither
-036-13a,287,並出人參葢其山皆與,葢,蓋,glyph_variant,,,葢,siku,盖,neither
-036-13a,295,與太行連亘相接故,亘,亙,glyph_variant,,,亘,siku,亘,siku
-036-30a,10,蘇頌圖經隠忍葉氣味,隠,隱,glyph_variant,,,隱,wikisource,隱,wikisource
-036-30a,29,痛面目青黄林露骨立,黄,黃,glyph_variant,,,黄,siku,黃,wikisource
-036-30a,34,林露骨立煑汁一二升,煑,煮,glyph_variant,,,煑,siku,袠,neither
-036-30a,44,時珍主腹臓風壅欬𠻳,臓,臟,glyph_variant,,,臓,siku,臟,wikisource
-036-30a,47,腹臓風壅欬𠻳上氣蘇,欬,咳,interchangeable_usage,,,欬,siku,欬,siku
-036-30a,48,臓風壅欬𠻳上氣蘇頌,𠻳,嗽,glyph_variant,,,嗽,wikisource,嗽,wikisource
-036-30a,63,釋名白藥别録梗草别,别,別,glyph_variant,,,别,siku,別,wikisource
-036-30a,64,名白藥别録梗草别録,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-30a,67,别録梗草别録薺苨本,别,別,glyph_variant,,,别,siku,別,wikisource
-036-30a,68,録梗草别録薺苨本經,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-30a,87,梗直故名吴普本草一,吴,吳,glyph_variant,,,吴,siku,吳,wikisource
-036-30a,107,方書並無是葢亦庾詞,是,見,different_word,,,是,siku,是,siku
-036-30a,108,書並無是葢亦庾詞爾,葢,蓋,glyph_variant,,,義,neither,蓋,wikisource
-036-30a,110,無是葢亦庾詞爾桔梗,庾,瘦,different_word,,,庾,siku,庾,siku
-036-30a,111,是葢亦庾詞爾桔梗薺,詞,辭,interchangeable_usage,,,詞,siku,詞,siku
-036-30a,146,桔梗也至别録始出薺,别,別,glyph_variant,,,别,siku,別,wikisource
-036-30a,147,梗也至别録始出薺苨,録,錄,glyph_variant,,,録,siku,錄,wikisource
-036-30a,168,不同當以别録為,别,別,glyph_variant,,,别,siku,別,wikisource
-036-30a,169,同當以别録為,録,錄,glyph_variant,,,録,siku,錄,wikisource
+half_leaf,pos,line,context,siku,wikisource,kind,kind_confirmed,site_confirmed,claude_opus,claude_opus_follows,claude_haiku,claude_haiku_follows
+036-1b,4,1,木毒調和衆藥有功故,衆,眾,glyph_variant,,Y (line verified),衆,siku,衆,siku
+036-1b,16,2,之號集解别録曰甘草,别,別,glyph_variant,,Y (line verified),别,siku,別,wikisource
+036-1b,17,2,號集解别録曰甘草生,録,錄,glyph_variant,,Y (line verified),錄,wikisource,錄,wikisource
+036-1b,40,2,除日采根暴乾十日成,暴,曝,interchangeable_usage,,Y (line verified),暴,siku,暴,siku
+036-1b,46,2,十日成陶𢎞景曰河西,𢎞,弘,glyph_variant,,Y (line verified),弘,wikisource,弘,wikisource
+036-1b,68,3,從汶山諸道中來赤皮,道,地,different_word,,Y (line verified),道,siku,道,siku
+036-1b,81,3,堅實者是枹䍐草最佳,枹,抱,interchangeable_usage,,Y (line verified),枹,siku,枹,siku
+036-1b,82,3,實者是枹䍐草最佳枹,䍐,罕,glyph_variant,,Y (line verified),罕,wikisource,罕,wikisource
+036-1b,86,3,䍐草最佳枹䍐乃西羌,枹,抱,interchangeable_usage,,Y (line verified),枹,siku,枹,siku
+036-1b,87,3,草最佳枹䍐乃西羌地,䍐,罕,glyph_variant,,Y (line verified),罕,wikisource,罕,wikisource
+036-1b,101,4,乾者理多虚疎又有如,虚,虛,glyph_variant,,Y (line verified),虚,siku,虛,wikisource
+036-1b,102,4,者理多虚疎又有如鯉,疎,疏,glyph_variant,,Y (line verified),踈,neither,疏,wikisource
+036-1b,140,5,蘇頌曰今陜西河東州,陜,陝,glyph_variant,,Y (line verified),陜,siku,陝,wikisource
+036-1b,192,6,赤色上有横梁梁下皆,横,橫,glyph_variant,,Y (line verified),横,siku,橫,wikisource
+036-1b,208,6,頭及赤皮隂乾用今甘,隂,陰,glyph_variant,,Y (line verified),陰,wikisource,陰,wikisource
+036-1b,227,7,為佳其輕虚縱理及細,虚,虛,glyph_variant,,Y (line verified),虚,siku,虛,wikisource
+036-1b,232,7,縱理及細靭者不堪惟,靭,韌,glyph_variant,,Y (line verified),靭,siku,勒,neither
+036-1b,252,8,大苦郭璞註似地黄又,註,注,interchangeable_usage,,Y (line verified),註,siku,注,wikisource
+036-1b,255,8,璞註似地黄又詩唐風,黄,黃,glyph_variant,,Y (line verified),黄,siku,黃,wikisource
+036-5a,49,2,傷寒心悸脉結代者甘,脉,脈,glyph_variant,,Y (line verified),脉,siku,脈,wikisource
+036-5a,60,2,兩水三升煑一半服七,煑,煮,glyph_variant,,Y (line verified),煑,siku,煮,wikisource
+036-5a,78,3,寒咽痛少隂證甘草湯,隂,陰,glyph_variant,,Y (line verified),陰,wikisource,陰,wikisource
+036-5a,79,3,咽痛少隂證甘草湯主,證,証,glyph_variant,,Y (line verified),證,siku,證,siku
+036-5a,96,3,炙水二升煑一升半服,煑,煮,glyph_variant,,Y (line verified),煑,siku,,missing
+036-5a,114,4,寒論肺熱㗋痛有痰熱,㗋,喉,glyph_variant,,Y (line verified),喉,wikisource,咳,neither
+036-5a,134,4,一夜一兩毎服五錢水,毎,每,glyph_variant,,Y (line verified),每,wikisource,每,wikisource
+036-5a,140,4,五錢水一鍾半入阿膠,鍾,鐘,interchangeable_usage,,Y (line verified),鍾,siku,鍾,siku
+036-5a,169,5,便數而不欬者肺中冷,欬,咳,interchangeable_usage,,Y (line verified),欬,siku,欬,siku
+036-5a,180,6,草乾薑湯温之甘草炙,温,溫,glyph_variant,,Y (line verified),溫,wikisource,溫,wikisource
+036-5a,195,6,兩水三升煑一升五合,煑,煮,glyph_variant,,Y (line verified),煑,siku,煮,wikisource
+036-5a,208,6,景金匱要畧肺痿乆𠻳,畧,略,glyph_variant,,Y (line verified),畧,siku,略,wikisource
+036-5a,211,6,要畧肺痿乆𠻳涕唾多,乆,久,glyph_variant,,Y (line verified),久,wikisource,欠,neither
+036-5a,212,7,畧肺痿乆𠻳涕唾多骨,𠻳,嗽,glyph_variant,,Y (line verified),嗽,wikisource,嗽,wikisource
+036-5a,252,8,方小兒熱𠻳甘草二兩,𠻳,嗽,glyph_variant,,Y (line verified),嗽,wikisource,嗽,wikisource
+036-5a,268,8,研末蜜丸緑豆大食後,緑,綠,glyph_variant,,Y (line verified),綠,wikisource,綠,wikisource
+036-7b,50,3,玉函妙方黄耆本經上,黄,黃,glyph_variant,,Y (line verified),黄,siku,黃,wikisource
+036-7b,58,4,上品釋名黄茋綱目戴,黄,黃,glyph_variant,,Y (line verified),黄,siku,黃,wikisource
+036-7b,59,4,品釋名黄茋綱目戴糝,茋,耆,glyph_variant,,Y (line verified),芪,neither,芪,neither
+036-7b,68,4,本經戴椹别録又名獨,别,別,glyph_variant,,Y (line verified),别,siku,別,wikisource
+036-7b,69,4,經戴椹别録又名獨椹,録,錄,glyph_variant,,Y (line verified),録,siku,錄,wikisource
+036-7b,76,4,獨椹芰草别録又名蜀,别,別,glyph_variant,,Y (line verified),别,siku,,missing
+036-7b,77,4,椹芰草别録又名蜀脂,録,錄,glyph_variant,,Y (line verified),録,siku,,missing
+036-7b,84,5,蜀脂百本别録王孫藥,别,別,glyph_variant,,Y (her scan_reading),别,siku,別,wikisource
+036-7b,85,5,脂百本别録王孫藥性,録,錄,glyph_variant,,Y (her scan_reading),録,siku,錄,wikisource
+036-7b,98,5,曰耆長也黄耆色黄為,黄,黃,glyph_variant,,Y (her scan_reading),黄,siku,黃,wikisource
+036-7b,101,5,也黄耆色黄為補藥之,黄,黃,glyph_variant,,Y (her scan_reading),黄,siku,黃,wikisource
+036-7b,112,5,今俗通作黄茋或作蓍,黄,黃,glyph_variant,,Y (her scan_reading),黄,siku,黃,wikisource
+036-7b,113,5,俗通作黄茋或作蓍者,茋,芪,glyph_variant,,Y (her scan_reading),芪,wikisource,芪,wikisource
+036-7b,139,7,異物集解别録曰黄耆,别,別,glyph_variant,,Y (line verified),别,siku,弘,neither
+036-7b,140,7,物集解别録曰黄耆生,録,錄,glyph_variant,,Y (line verified),録,siku,景,neither
+036-7b,142,7,解别録曰黄耆生蜀郡,黄,黃,glyph_variant,,Y (line verified),黄,siku,第,neither
+036-7b,158,7,月十月采隂乾𢎞景曰,隂,陰,glyph_variant,,Y (line verified),陰,wikisource,曰,neither
+036-7b,160,7,月采隂乾𢎞景曰第一,𢎞,弘,glyph_variant,,Y (line verified),弘,wikisource,耆,neither
+036-7b,171,7,西洮陽色黄白甜美今,黄,黃,glyph_variant,,Y (line verified),黄,siku,月,neither
+036-7b,181,8,難得次用黒水宕昌者,黒,黑,glyph_variant,,Y (line verified),黑,wikisource,黑,wikisource
+036-7b,196,8,者亦甘而温補又有蠶,温,溫,glyph_variant,,Y (line verified),温,siku,溫,wikisource
+036-12b,10,1,或省作蓡黄參呉普血,黄,黃,glyph_variant,,Y (line verified),黄,siku,黃,wikisource
+036-12b,12,1,作蓡黄參呉普血參别,呉,吳,glyph_variant,,Y (line verified),吴,neither,吳,wikisource
+036-12b,16,1,呉普血參别録人䘖本,别,別,glyph_variant,,Y (line verified),别,siku,錄,neither
+036-12b,17,1,普血參别録人䘖本經,録,錄,glyph_variant,,Y (line verified),録,siku,,missing
+036-12b,19,1,參别録人䘖本經鬼葢,䘖,銜,glyph_variant,,Y (line verified),銜,wikisource,銜,wikisource
+036-12b,23,1,䘖本經鬼葢本經神草,葢,蓋,glyph_variant,,Y (line verified),葢,siku,蓋,wikisource
+036-12b,28,2,本經神草别録土精别,别,別,glyph_variant,,Y (her scan_reading),别,siku,別,wikisource
+036-12b,29,2,經神草别録土精别録,録,錄,glyph_variant,,Y (her scan_reading),録,siku,錄,wikisource
+036-12b,32,2,别録土精别録地精廣,别,別,glyph_variant,,Y (her scan_reading),别,siku,別,wikisource
+036-12b,33,2,録土精别録地精廣雅,録,錄,glyph_variant,,Y (her scan_reading),録,siku,錄,wikisource
+036-12b,104,4,然承誤日乆亦不能變,乆,久,glyph_variant,,Y (line verified),久,wikisource,久,wikisource
+036-12b,121,4,尚作薓字别録一名人,别,別,glyph_variant,,Y (line verified),别,siku,別,wikisource
+036-12b,122,4,作薓字别録一名人微,録,錄,glyph_variant,,Y (line verified),録,siku,錄,wikisource
+036-12b,142,5,級故曰人衘其草背陽,衘,銜,glyph_variant,,Y (line verified),銜,wikisource,衝,neither
+036-12b,148,5,草背陽向隂故曰鬼葢,隂,陰,glyph_variant,,Y (line verified),陰,wikisource,陰,wikisource
+036-12b,152,5,隂故曰鬼葢其在五參,葢,蓋,glyph_variant,,Y (line verified),葢,siku,蓋,wikisource
+036-12b,158,5,在五參色黄屬土而補,黄,黃,glyph_variant,,Y (line verified),黄,siku,黃,wikisource
+036-12b,166,5,補脾胃生隂血故有黄,隂,陰,glyph_variant,,Y (line verified),陰,wikisource,陰,wikisource
+036-12b,170,5,隂血故有黄參血參之,黄,黃,glyph_variant,,Y (line verified),黄,siku,黃,wikisource
+036-12b,204,6,有人宅後毎夜聞人呼,毎,每,glyph_variant,,Y (line verified),每,wikisource,每,wikisource
+036-12b,234,7,五尺得人薓一如人體,薓,參,glyph_variant,,Y (line verified),蓡,neither,漢,neither
+036-12b,246,7,備呼聲遂絶觀此則土,絶,絕,glyph_variant,,Y (line verified),絶,siku,絕,wikisource
+036-12b,256,8,之名尤可證也禮斗威,證,証,glyph_variant,,Y (line verified),證,siku,證,siku
+036-12b,277,8,運斗樞云揺光星散而,揺,搖,glyph_variant,,Y (line verified),揺,siku,搖,wikisource
+036-13a,2,1,利則揺光不明人,揺,搖,glyph_variant,,Y (line verified),揺,siku,搖,wikisource
+036-13a,19,1,之名又可證矣集解别,證,証,glyph_variant,,Y (line verified),證,siku,證,siku
+036-13a,23,2,證矣集解别録曰人參,别,別,glyph_variant,,Y (line verified),别,siku,別,wikisource
+036-13a,24,2,矣集解别録曰人參生,録,錄,glyph_variant,,Y (line verified),録,siku,錄,wikisource
+036-13a,49,2,根竹刀刮暴乾無令見,暴,曝,interchangeable_usage,,Y (line verified),暴,siku,暴,siku
+036-13a,73,3,月生葉小鋭枝黒莖有,鋭,銳,glyph_variant,,Y (line verified),鋭,siku,銳,wikisource
+036-13a,75,3,葉小鋭枝黒莖有毛三,黒,黑,glyph_variant,,Y (line verified),黒,siku,黑,wikisource
+036-13a,95,3,如人者神𢎞景曰上黨,𢎞,弘,glyph_variant,,Y (line verified),弘,wikisource,弘,wikisource
+036-13a,111,4,者形長而黄状如防風,黄,黃,glyph_variant,,Y (line verified),黄,siku,黃,wikisource
+036-13a,112,4,形長而黄状如防風多,状,狀,glyph_variant,,Y (line verified),狀,wikisource,狀,wikisource
+036-13a,146,5,麗者高麗即是遼東形,即,地,different_word,,Y (line verified),即,siku,即,siku
+036-13a,147,5,者高麗即是遼東形大,是,近,different_word,,Y (line verified),是,siku,是,siku
+036-13a,153,5,東形大而虚軟不及百,虚,虛,glyph_variant,,Y (line verified),虛,wikisource,虛,wikisource
+036-13a,185,6,人作人參讚云三椏五,讚,贊,glyph_variant,,Y (line verified),讃,neither,讚,siku
+036-13a,194,6,葉背陽向隂欲來求我,隂,陰,glyph_variant,,Y (line verified),陰,wikisource,陰,wikisource
+036-13a,211,6,似桐甚大隂廣則多生,隂,附,different_word,,Y (line verified),陰,siku (other glyph),陰,siku (other glyph)
+036-13a,279,8,檀州幽州嬀州并州並,嬀,媯,glyph_variant,,Y (line verified),媯,wikisource,嫣,neither
+036-13a,287,8,並出人參葢其山皆與,葢,蓋,glyph_variant,,Y (line verified),葢,siku,盖,neither
+036-13a,295,8,與太行連亘相接故,亘,亙,glyph_variant,,Y (line verified),亘,siku,亘,siku
+036-30a,10,2,蘇頌圖經隠忍葉氣味,隠,隱,glyph_variant,,Y (line verified),隱,wikisource,隱,wikisource
+036-30a,29,2,痛面目青黄林露骨立,黄,黃,glyph_variant,,Y (line verified),黄,siku,黃,wikisource
+036-30a,34,3,林露骨立煑汁一二升,煑,煮,glyph_variant,,Y (line verified),煑,siku,袠,neither
+036-30a,44,3,時珍主腹臓風壅欬𠻳,臓,臟,glyph_variant,,Y (line verified),臓,siku,臟,wikisource
+036-30a,47,3,腹臓風壅欬𠻳上氣蘇,欬,咳,interchangeable_usage,,Y (line verified),欬,siku,欬,siku
+036-30a,48,3,臓風壅欬𠻳上氣蘇頌,𠻳,嗽,glyph_variant,,Y (line verified),嗽,wikisource,嗽,wikisource
+036-30a,63,6,釋名白藥别録梗草别,别,別,glyph_variant,,Y (line verified),别,siku,別,wikisource
+036-30a,64,6,名白藥别録梗草别録,録,錄,glyph_variant,,Y (line verified),録,siku,錄,wikisource
+036-30a,67,6,别録梗草别録薺苨本,别,別,glyph_variant,,Y (line verified),别,siku,別,wikisource
+036-30a,68,6,録梗草别録薺苨本經,録,錄,glyph_variant,,Y (line verified),録,siku,錄,wikisource
+036-30a,87,6,梗直故名吴普本草一,吴,吳,glyph_variant,,Y (line verified),吴,siku,吳,wikisource
+036-30a,107,7,方書並無是葢亦庾詞,是,見,different_word,,Y (line verified),是,siku,是,siku
+036-30a,108,7,書並無是葢亦庾詞爾,葢,蓋,glyph_variant,,Y (line verified),義,neither,蓋,wikisource
+036-30a,110,7,無是葢亦庾詞爾桔梗,庾,瘦,different_word,,Y (line verified),庾,siku,庾,siku
+036-30a,111,7,是葢亦庾詞爾桔梗薺,詞,辭,interchangeable_usage,,Y (line verified),詞,siku,詞,siku
+036-30a,146,8,桔梗也至别録始出薺,别,別,glyph_variant,,Y (line verified),别,siku,別,wikisource
+036-30a,147,8,梗也至别録始出薺苨,録,錄,glyph_variant,,Y (line verified),録,siku,錄,wikisource
+036-30a,168,8,不同當以别録為,别,別,glyph_variant,,Y (line verified),别,siku,別,wikisource
+036-30a,169,8,同當以别録為,録,錄,glyph_variant,,Y (line verified),録,siku,錄,wikisource
