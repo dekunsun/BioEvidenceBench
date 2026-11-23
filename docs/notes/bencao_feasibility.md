@@ -52,7 +52,9 @@ The Catalogue of Life China API needs a key and was not tested.
 
 1. ~~The Kanripo licence~~ settled: CC BY-SA 4.0 (collection-level statement). Still open: how the WYG text was proofread.
 2. ~~The rights to the scans~~ settled: use the Commons copies with their public-domain statements.
-3. The mapping from Internet Archive image numbers to Kanripo half-leaf markers (per volume).
+3. The mapping from Commons file pages to Kanripo half-leaf markers (per volume), and a check that the
+   Commons and Internet Archive copies are the same image sequence, since the legacy OCR comes from the
+   Internet Archive copy.
 4. Which modern OCR to run, and its cost.
 5. The Siku copy is a hand-written manuscript in regular script, not a print, and has taboo-avoidance
    changes; both should be stated as conditions of the case.
