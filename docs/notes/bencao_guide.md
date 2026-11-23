@@ -9,8 +9,9 @@ pre-fills a label on a pilot page.*
 
 - A mention is a character span in the reference text plus a field.
 - The reference text is the Kanripo transcription of a `scan_verified` half-leaf, with Kanripo markup
-  removed (`data/bencao/kanripo_plain/`): one manuscript column per line, small two-column notes joined
-  right column first.
+  removed and the author's scan corrections applied (`data/bencao/verified_plain/`): one manuscript column
+  per line, small two-column notes joined right column first. Labellers write `line` and `text`; a script
+  fills `start`/`end` (first pilot page: `gold/labelling_bencao_036-1b.xlsx`).
 - Running heads (欽定四庫全書, the volume title) are not mentions.
 - Non-contiguous text goes to an issues file, not into gold.
 

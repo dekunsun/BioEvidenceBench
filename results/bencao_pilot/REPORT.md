@@ -62,9 +62,13 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    `site_confirmed` is filled from her check (118 of 118).
 2. ~~Decide the open points of the guide~~ done: guide v0.1 (`docs/notes/bencao_guide.md`), the
    proposals adopted by the author on 2026-11-23.
-3. ~~Choose the modern OCR~~ option A run (below). Before Claude output is used as the modern-OCR
-   level for Claude extraction, decide whether to add a second, non-Claude OCR (option B or C).
-4. Only then label the pilot pages (dev) and draft the plan for a locked test set.
+3. ~~Choose the modern OCR~~ option A run (below); a non-Claude level, PaddleOCR, added on 2026-11-23
+   (section "Non-Claude OCR" below). Gemini not run: PaddleOCR already gives a usable non-Claude level
+   at $0.
+4. Label 036-1b first (`gold/labelling_bencao_036-1b.xlsx`), record the time, then decide the other five.
+5. Commons page check: Wikimedia still returns HTTP 429 to this environment; the author checks in a
+   browser that DjVu page 11 begins 欽定四庫全書 / 本草綱目卷十二上 (half-leaf 036-1a).
+6. Only then draft the plan for a locked test set.
 
 ## Modern OCR, option A (run 2026-11-23, approved by the author: "跑")
 
@@ -164,3 +168,28 @@ repeated across columns (甘草二兩水三升煑…服…合), not from the hid
 where the manuscript's wording differs from the circulating text the models follow the manuscript.
 Limits: six pages, two models from one family, one prompt that asks for what is written (a model might
 withhold recalled text because of the instruction). The reference is now scan-verified by the author.
+
+## Non-Claude OCR: PaddleOCR (2026-11-23, approved by the author, "1-4 都做")
+
+Open-source PaddleOCR 3.7 (PP-OCRv6 medium, `lang="chinese_cht"`), run locally on CPU, $0
+(`src/bencao_ocr_paddle.py`; install and settings in its docstring). PaddleOCR returns one box per
+sub-column or stretch of large text; `assemble` puts boxes into the 8 ruled columns, drops the fold
+margin, and reads each column top to bottom, the two sub-columns of a note right first.
+
+| Run | Detector input | CER median vs scan-verified reference |
+| --- | --- | ---: |
+| `results/20261123-0539_bencao_ocr_paddleocr/` | default | 0.36 |
+| `results/20261123-0547_bencao_ocr_paddleocr/` (used: `data/bencao/paddleocr/`) | long side up to 1600 px | 0.26 |
+
+The first run missed whole sub-columns (036-1b, column 2, was empty); the larger detector input
+recovered most of them. Two settings were tried on these same six pages, so the 0.26 is tuned on them.
+
+| Half-leaf | 1b | 5a | 7b | 12b | 13a | 30a |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| PaddleOCR CER | 0.07 | 0.36 | 0.27 | 0.42 | 0.11 | 0.25 |
+| missed / misread / extra characters | 2 / 15 / 2 | 43 / 31 / 28 | 21 / 18 / 20 | 24 / 93 / 5 | 21 / 11 / 0 | 14 / 19 / 9 |
+
+It sits between vertical Tesseract (0.80) and Claude Haiku (0.15): a usable non-Claude level, strong on
+clean pages (036-1b 0.07), weak on dense small notes and rare glyphs (036-12b reads 薓 and 〓 badly).
+It normalises some forms the scan keeps (枹䍐 read as 抱旱/抱罕), which the folded metric does not
+forgive, since 枹/抱 is not in the variant table.

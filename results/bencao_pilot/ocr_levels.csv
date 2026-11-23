@@ -11,6 +11,12 @@ tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-7b,1.037,1.019,1.0
 tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-12b,0.727,0.713,0.727,0.713
 tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-13a,0.669,0.666,0.669,0.666
 tesseract_chi_tra_vert,"Tesseract 5, chi_tra_vert, local",036-30a,1.088,1.082,1.088,1.082
+paddleocr,"PaddleOCR 3.7, PP-OCRv6 traditional Chinese, local (src/bencao_ocr_paddle.py)",036-1b,0.065,0.034,0.065,0.034
+paddleocr,"PaddleOCR 3.7, PP-OCRv6 traditional Chinese, local (src/bencao_ocr_paddle.py)",036-5a,0.359,0.342,0.359,0.342
+paddleocr,"PaddleOCR 3.7, PP-OCRv6 traditional Chinese, local (src/bencao_ocr_paddle.py)",036-7b,0.293,0.242,0.274,0.223
+paddleocr,"PaddleOCR 3.7, PP-OCRv6 traditional Chinese, local (src/bencao_ocr_paddle.py)",036-12b,0.42,0.396,0.416,0.392
+paddleocr,"PaddleOCR 3.7, PP-OCRv6 traditional Chinese, local (src/bencao_ocr_paddle.py)",036-13a,0.107,0.077,0.107,0.077
+paddleocr,"PaddleOCR 3.7, PP-OCRv6 traditional Chinese, local (src/bencao_ocr_paddle.py)",036-30a,0.246,0.193,0.246,0.193
 claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-1b,0.075,0.034,0.075,0.034
 claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-5a,0.211,0.173,0.211,0.173
 claude_haiku,Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py),036-7b,0.358,0.288,0.34,0.27

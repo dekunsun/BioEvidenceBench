@@ -1,0 +1,53 @@
+[
+ {
+  "half_leaf": "036-1b",
+  "boxes": 19,
+  "dropped_outside_columns": [
+   "金正人人",
+   "卷十二上"
+  ]
+ },
+ {
+  "half_leaf": "036-5a",
+  "boxes": 37,
+  "dropped_outside_columns": [
+   "NQ",
+   "本草綱目",
+   "五"
+  ]
+ },
+ {
+  "half_leaf": "036-7b",
+  "boxes": 36,
+  "dropped_outside_columns": [
+   "金寶正金言",
+   "卷十二上"
+  ]
+ },
+ {
+  "half_leaf": "036-12b",
+  "boxes": 30,
+  "dropped_outside_columns": [
+   "",
+   "卷十二上"
+  ]
+ },
+ {
+  "half_leaf": "036-13a",
+  "boxes": 18,
+  "dropped_outside_columns": [
+   "",
+   "本草綱目",
+   "十"
+  ]
+ },
+ {
+  "half_leaf": "036-30a",
+  "boxes": 21,
+  "dropped_outside_columns": [
+   "",
+   "本草綱目",
+   "三十"
+  ]
+ }
+]

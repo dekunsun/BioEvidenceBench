@@ -1,0 +1,27 @@
+{
+ "run_id": "20261123-0547_bencao_ocr_paddleocr",
+ "engine": "PaddleOCR",
+ "paddleocr": "3.7.0",
+ "paddlepaddle": "3.3.1",
+ "settings": {
+  "lang": "chinese_cht",
+  "use_doc_orientation_classify": false,
+  "use_doc_unwarping": false,
+  "use_textline_orientation": true,
+  "enable_mkldnn": false,
+  "text_det_limit_type": "max",
+  "text_det_limit_side_len": 1600
+ },
+ "image_source": "Internet Archive 06048793.cn, full-size page (data/cache/bencao/full)",
+ "image_sha256": {
+  "036-1b": "189a6bec7a96d12510c4fa8d1640782c17a542f272bc306cb9e224622ae74dcd",
+  "036-5a": "a95cfbf1e44cb5a71112d2adebed37319886a0fcad4b86ba60d23b4fef932357",
+  "036-7b": "9adbd00a6c84a587933451b111b75776f41f23f6fc696adcffd2104a20c626eb",
+  "036-12b": "3cf34573c99a12ce20691bf594f104a62844cc18ec5ee19d9ca234c797a3ca17",
+  "036-13a": "1fb0c8e1a50be71eee0db2192a8c78c226365941e69492ffb828dc3e2f3c06bb",
+  "036-30a": "07976090abb40906624ca499c118f8d9bd843f26df16f1bb855f00f1ae2e7bc4"
+ },
+ "cost_usd": 0,
+ "exploratory": true,
+ "approved": "author, 2026-11-23 (\"1-4 都做\")"
+}

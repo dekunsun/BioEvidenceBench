@@ -198,6 +198,7 @@ table{{border-collapse:collapse;margin:8px 0}} td{{border:1px solid var(--rule);
 
 LEVELS = {"legacy_ia": "Internet Archive Tesseract (horizontal, simplified)",
           "tesseract_chi_tra_vert": "Tesseract 5, chi_tra_vert, local",
+          "paddleocr": "PaddleOCR 3.7, PP-OCRv6 traditional Chinese, local (src/bencao_ocr_paddle.py)",
           "claude_haiku": "Claude Haiku 5.5 reading the scan (src/bencao_ocr_claude.py)",
           "claude_opus": "Claude Opus 5.5 reading the scan (src/bencao_ocr_claude.py)"}
 
