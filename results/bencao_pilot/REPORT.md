@@ -58,8 +58,8 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    sub-columns; the two 〓 on 036-12b are one rare character) are logged in
    `data/bencao/scan_verify_changes.csv` and applied in `data/bencao/scan_verify_working.csv`. The
    corrected reference is `data/bencao/verified_plain/`; OCR CER against it barely moves (Opus 0.032,
-   Haiku 0.150). One character remains queried: 庾 or 廋 on 036-30a line 7. Probe A's `site_confirmed`
-   is filled from her check (117 of 118; the queried site is left empty).
+   Haiku 0.150). She re-checked 庾 on 036-30a line 7 (not 廋; `data/bencao/probe_a_changes.csv`). Probe A's
+   `site_confirmed` is filled from her check (118 of 118).
 2. ~~Decide the open points of the guide~~ done: guide v0.1 (`docs/notes/bencao_guide.md`), the
    proposals adopted by the author on 2026-11-23.
 3. ~~Choose the modern OCR~~ option A run (below). Before Claude output is used as the modern-OCR
@@ -133,13 +133,13 @@ one variation event (即是/地近 is one event, her note).
 | different words (諸道/諸地, 即是/地近, 隂廣/附廣, 是/見, 鍾/鐘) | 6 | 5 | 6 | 0 | 6 | 0 |
 | place-name miswriting candidate (枹䍐/抱䍐, twice) | 2 | 2 | 2 | 0 | 2 | 0 |
 | interchangeable usages (暴/曝 ×2, 註/注, 欬/咳 ×2, 詞/辭) | 6 | 6 | 6 | 0 | 5 | 1 |
-| pending (庾/瘦: the scan may read 廋; to be checked again) | 1 | 1 | 1 | 0 | 1 | 0 |
+| pending kind (庾/瘦; the scan reads 庾, re-checked by the author) | 1 | 1 | 1 | 0 | 1 | 0 |
 | glyph variants | 103 | 103 | 67 | 30 | 6 | 77 |
 
 The author's changes to the proposal: 鍾/鐘 is a different word, not a usage (鍾 is a vessel or measure,
 鐘 a bell; Wikisource's 鐘 may be its own error); 枹䍐/抱䍐 is a place name whose 抱 may be a copying error
 from the similar radical, kept as its own kind and never folded; 庾詞/瘦辭 has a third attested form
-廋詞, so the scan is checked again before a kind is given. Interchangeable usages are accepted in context
+廋詞; she re-checked the scan, which reads 庾 (not 廋), and the kind is still to be given. Interchangeable usages are accepted in context
 only; they are never folded globally. Where the two texts differ in wording, both models write what the
 manuscript shows. Where they differ only in glyph form, Opus mostly keeps the manuscript form and Haiku
 mostly writes the standard form, which is normalisation, not evidence of recall. Five word-level events
@@ -163,5 +163,4 @@ repeated across columns (甘草二兩水三升煑…服…合), not from the hid
 **Reading.** On these pages the output depends on what is visible: hidden text is not reproduced, and
 where the manuscript's wording differs from the circulating text the models follow the manuscript.
 Limits: six pages, two models from one family, one prompt that asks for what is written (a model might
-withhold recalled text because of the instruction). The reference is now scan-verified by the author
-(one character, 庾 or 廋 on 036-30a, still queried).
+withhold recalled text because of the instruction). The reference is now scan-verified by the author.
