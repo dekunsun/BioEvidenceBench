@@ -35,7 +35,8 @@ legacy OCR (`data/bencao/legacy_ia/`), the scan (`pages/`), and the page map
    pages and 0.86–1.09 on the three with dense small notes or a mixed layout. It can serve as an
    intermediate OCR level; it is not the modern OCR the comparison needs.
 4. **Double blanks in the transcription mean two different things.** Sometimes a missing character
-   (036-7b `金匱玉  方`, where the scan has 玉函方), sometimes only layout spacing before an attribution
+   (036-7b: Kanripo has `(活函金匱/玉  方)`, putting 函 in the right sub-column and leaving its place in
+   the left one blank; the scan has 活金匱 / 玉函方), sometimes only layout spacing before an attribution
    (036-30a `立瘥  蘇頌圖經`). Characters outside Unicode are written as entities (`&KR1171;`, twice on
    036-12b; counted as one placeholder 〓). Scan verification has to settle each blank before a page
    can be `scan_verified`.
@@ -88,6 +89,10 @@ How to read it:
   table lowers Opus's median from 0.032 to 0.007 (row above).
 - **The levels are well separated**, which is what the comparison needs: near-nothing (Internet
   Archive), poor (vertical Tesseract), fair (Haiku) and close (Opus).
+- **Small two-column notes can be read in the wrong order.** On 036-7b, column 1, Opus wrote 活金匱 水莨菪
+  菜中有…有毒 玉函方 誤食…: all right sub-columns first, then the left ones, and it dropped 毒 from
+  水莨菪毒. The scan's order is 活金匱 玉函方 水莨菪毒 菜中有…有毒 誤食…. CER counts this only as a few
+  edits, so reading order needs its own check before Opus output is used for extraction.
 - **At Kanripo's gaps Opus agrees with the scan**: it writes 玉函方 where Kanripo has a blank, and leaves
   the layout blank before 蘇頌 empty.
 - **Recall versus reading cannot be told apart yet.** 本草綱目 is famous; Opus may partly recall the text.
