@@ -1,0 +1,3 @@
+text,run,value_f1,ci_low,ci_high,diff_vs_first,diff_ci_low,diff_ci_high,per_page
+paddleocr,20261124-0904_bencao_extract_claude-opus-5-5_paddleocr,0.72,0.603,0.831,0.0,0.0,0.0,036-1b:0.74 036-5a:0.93 036-7b:0.67 036-12b:0.51 036-13a:0.89 036-30a:0.57
+claude_haiku,20261124-0902_bencao_extract_claude-opus-5-5_claude_haiku,0.683,0.576,0.788,-0.037,-0.111,0.025,036-1b:0.76 036-5a:0.73 036-7b:0.52 036-12b:0.58 036-13a:0.87 036-30a:0.59
