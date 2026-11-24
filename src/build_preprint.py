@@ -48,7 +48,7 @@ def tables(html: str) -> str:
 
 TARGETS = {
     "preprint": dict(src=SRC, out=OUT, name="preprint", start="## Abstract",
-                     page_title="BioEvidenceBench: Where Is Trustworthy Data Lost?",
+                     page_title="BioEvidenceBench: Where Do AI Agents Lose Evidence?",
                      note="Results marked <b>[pre-registered]</b> come from a run frozen before the test pages "
                           "were processed; results marked <b>[exploratory]</b> were designed after the test "
                           "outputs were unsealed."),

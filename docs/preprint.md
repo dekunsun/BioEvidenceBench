@@ -1,4 +1,4 @@
-# Where is trustworthy data lost between a historical page and a database? A pre-registered, stage-by-stage evaluation of evidence-grounded extraction from biodiversity literature
+# Where do AI agents lose evidence when they extract, ground and link data from historical scientific literature? A pre-registered, stage-by-stage evaluation on biodiversity books
 
 **Dekun Sun** · University of Pennsylvania
 
