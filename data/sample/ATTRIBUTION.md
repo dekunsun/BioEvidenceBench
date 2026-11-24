@@ -28,3 +28,10 @@ The `expert_view/` files add only a line-offset prefix for labelling. Page scans
 
 `manifest.csv` holds the SHA-256 of every file; they equal the input hashes recorded in the
 extraction runs under `results/`.
+
+## Plate images (added 2026-11-24)
+
+- `docs/assets/overview/reeve_plate17.jpg` and `reeve_plate17_fig102.png`: Reeve, *Conchologia iconica*
+  vol. 5 (1849), *Bulimus* plate XVII, figure 102 = *Bulimus chilensis* (the species of README figure 1).
+  Internet Archive item `conchologiaiconi05reev`, image n77 (the plate before text pages n78–n79).
+  Published 1849; public domain by age.
