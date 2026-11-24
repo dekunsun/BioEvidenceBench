@@ -2,6 +2,7 @@
 author's labels (exploratory, dev: the guide and these labels came from the same pages).
 
     python src/bencao_extract.py run   --model claude-opus-5-5 --max-usd 1   # paid; approved by the author, 2026-11-24 ("跑吧")
+    python src/bencao_extract.py run   --text paddleocr                      # same, on an OCR level (2026-11-24, "继续做吧")
     python src/bencao_extract.py relocate <run folder>   # re-locate saved answers, no API call
     python src/bencao_extract.py score <run folder>
 
@@ -73,8 +74,11 @@ SCHEMA = {"type": "object", "properties": {"mentions": {"type": "array", "items"
     "required": ["mentions"], "additionalProperties": False}
 
 
-def ref_lines(pb: str) -> list[str]:
-    return (DATA / "verified_plain" / f"{pb}.txt").read_text(encoding="utf-8").splitlines()
+TEXTS = ["verified_plain", "claude_opus", "claude_haiku", "paddleocr"]   # scan-verified reference, then OCR levels
+
+
+def ref_lines(pb: str, text: str = "verified_plain") -> list[str]:
+    return (DATA / text / f"{pb}.txt").read_text(encoding="utf-8").splitlines()
 
 
 def numbered(lines: list[str]) -> str:
@@ -123,21 +127,22 @@ def locate(lines: list[str], mentions: list[dict]) -> list[dict]:
     return out
 
 
-def run(model: str, max_usd: float) -> None:
+def run(model: str, max_usd: float, text: str = "verified_plain") -> None:
     import anthropic
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
-    out = ROOT / "results" / f"{stamp}_bencao_extract_{model}"
+    tag = "" if text == "verified_plain" else f"_{text}"
+    out = ROOT / "results" / f"{stamp}_bencao_extract_{model}{tag}"
     out.mkdir(parents=True)
     client = anthropic.Anthropic(api_key=os.environ["EVAL_ANTHROPIC_API_KEY"], max_retries=4)
     spent, recs, rows, hashes = 0.0, [], [], {}
     for pb in PAGES:
-        lines = ref_lines(pb)
-        text = numbered(lines)
+        lines = ref_lines(pb, text)
+        numtext = numbered(lines)
         hashes[pb] = hashlib.sha256("\n".join(lines).encode("utf-8")).hexdigest()
         if spent > max_usd:
             recs.append({"half_leaf": pb, "error": "cap reached, not sent"})
             continue
-        user = RULES + "\nText (half-leaf " + pb + "):\n" + text
+        user = RULES + "\nText (half-leaf " + pb + "):\n" + numtext
         msg = client.messages.create(model=model, max_tokens=8000, system=SYSTEM,
                                      messages=[{"role": "user", "content": user}],
                                      output_config={"effort": "medium", "format": {"type": "json_schema", "schema": SCHEMA}})
@@ -155,7 +160,7 @@ def run(model: str, max_usd: float) -> None:
     (out / "config.json").write_text(json.dumps({
         "run_id": out.name, "model": model, "prompt_version": PROMPT_VERSION, "effort": "medium", "max_tokens": 8000,
         "temperature": "provider default", "system": SYSTEM, "rules": RULES, "schema": SCHEMA,
-        "input": "data/bencao/verified_plain/<half-leaf>.txt, numbered lines", "input_sha256": hashes,
+        "text": text, "input": f"data/bencao/{text}/<half-leaf>.txt, numbered lines", "input_sha256": hashes,
         "max_usd": max_usd, "usd_total": round(spent, 4), "exploratory": True, "dev": True,
         "approved": "author, 2026-11-24 (\"跑吧\")"}, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{out.name}: ${spent:.4f}")
@@ -170,20 +175,98 @@ def prf(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
 def relocate(run_dir: str) -> None:
     """Re-run the locator on the saved raw answers (no API call)."""
     run = Path(run_dir)
+    text = json.loads((run / "config.json").read_text(encoding="utf-8")).get("text", "verified_plain")
     rows = []
     for line in (run / "outputs.jsonl").read_text(encoding="utf-8").splitlines():
         r = json.loads(line)
         if "raw" in r:
-            for x in locate(ref_lines(r["half_leaf"]), json.loads(r["raw"])["mentions"]):
+            for x in locate(ref_lines(r["half_leaf"], text), json.loads(r["raw"])["mentions"]):
                 rows.append({"page_id": r["half_leaf"], **x})
     pd.DataFrame(rows).to_csv(run / "mentions.csv", index=False)
 
 
+def to_reference(hyp: str, ref: str) -> list[int | None]:
+    """For each character offset in an OCR text, its offset in the reference (character alignment by
+    Levenshtein opcodes); None for OCR characters with no counterpart (inserted by the OCR)."""
+    import rapidfuzz.distance.Levenshtein as Lev
+    m: list[int | None] = [None] * (len(hyp) + 1)
+    for op in Lev.opcodes(hyp, ref):
+        if op.tag in ("equal", "replace"):
+            for k in range(op.src_end - op.src_start):
+                m[op.src_start + k] = op.dest_start + min(k, op.dest_end - op.dest_start - 1)
+    m[len(hyp)] = len(ref)
+    return m
+
+
+def aligned(pred: pd.DataFrame, text: str) -> pd.DataFrame:
+    """Move predicted spans from OCR offsets to reference offsets. Spans with no aligned character are
+    dropped from span scoring and counted as `unaligned` (they still count in value scoring)."""
+    if text == "verified_plain":
+        pred["aligned"] = True
+        return pred
+    rows = []
+    for pb, g in pred.groupby("page_id"):
+        hyp = "\n".join(ref_lines(pb, text))
+        ref = "\n".join(ref_lines(pb))
+        m = to_reference(hyp, ref)
+        for r in g.itertuples(index=False):
+            pos = [m[k] for k in range(r.start, r.end) if m[k] is not None]
+            d = r._asdict()
+            d.update(aligned=bool(pos), start=min(pos) if pos else -1, end=max(pos) + 1 if pos else -1)
+            rows.append(d)
+    return pd.DataFrame(rows)
+
+
+def value_scores(pred: pd.DataFrame, gold: pd.DataFrame) -> list[dict]:
+    """Value-level P/R/F1: per half-leaf and field, the multiset of extracted strings against the gold
+    strings (line breaks removed). Comparable across text versions without alignment, as in the English
+    books' value F1. Optional (expert_pending) gold values neither count nor penalise."""
+    from collections import Counter
+    out = []
+    for name, fields in [(f, [f]) for f in FIELDS] + [("ALL_PRIMARY", PRIMARY)]:
+        tp = fp = fn = 0
+        for pb in PAGES:
+            for f in fields:
+                g = gold[(gold.page_id == pb) & (gold.field == f)]
+                req = Counter(t.replace("\n", "") for t in g[g.adjudication != "expert_pending"].text)
+                opt = Counter(t.replace("\n", "") for t in g[g.adjudication == "expert_pending"].text)
+                p = Counter(str(v).replace("\n", "") for v in pred[(pred.page_id == pb) & (pred.field == f)].value)
+                hit = req & p
+                rest = p - hit
+                fp += sum((rest - opt).values())
+                tp += sum(hit.values())
+                fn += sum((req - hit).values())
+        P, R, F = prf(tp, fp, fn)
+        out.append({"field": name, "match": "value", "tp": tp, "fp": fp, "fn": fn, "precision": P, "recall": R, "f1": F})
+    return out
+
+
+def preservation(text: str) -> dict:
+    """Share of required primary gold values whose exact string survives in a text version (line breaks
+    removed from both; a value counts as many times as it occurs, capped by the number of gold rows)."""
+    from collections import Counter
+    gold = pd.read_csv(ROOT / "gold" / "gold_mentions_bencao_gloria.csv", keep_default_na=False)
+    gold = gold[gold.field.isin(PRIMARY) & (gold.adjudication != "expert_pending")]
+    from bencao_variants import fold
+    kept = kept_f = total = 0
+    for pb in PAGES:
+        flat = "".join(ref_lines(pb, text))
+        for v, n in Counter(t.replace("\n", "") for t in gold[gold.page_id == pb].text).items():
+            kept += min(n, flat.count(v)); kept_f += min(n, fold(flat).count(fold(v))); total += n
+    return {"text": text, "gold_values": total, "preserved": kept, "share": round(kept / total, 3),
+            "share_folded": round(kept_f / total, 3)}   # folded: glyph variants and missing-stroke forms only
+
+
 def score(run_dir: str) -> None:
     run = Path(run_dir)
+    text = json.loads((run / "config.json").read_text(encoding="utf-8")).get("text", "verified_plain")
     pred = pd.read_csv(run / "mentions.csv", keep_default_na=False)
     pred = pred[pred.status.str.startswith("ok")].copy()
     pred["start"], pred["end"] = pred.start.astype(float).astype(int), pred.end.astype(float).astype(int)
+    vals = pred.copy()
+    pred = aligned(pred, text)
+    unaligned = int((~pred.aligned).sum())
+    pred = pred[pred.aligned]
     gold = pd.read_csv(ROOT / "gold" / "gold_mentions_bencao_gloria.csv", keep_default_na=False)
     rows, errs = [], []
     for name, fields in [(f, [f]) for f in FIELDS] + [("ALL_PRIMARY", PRIMARY)]:
@@ -212,12 +295,15 @@ def score(run_dir: str) -> None:
                     errs += [{"page_id": pb, "kind": "missed", "field": m.field, "line": m.line, "text": m.text} for m in missed.itertuples()]
             P, R, F = prf(tp, fp, fn)
             rows.append({"field": name, "match": mode, "tp": tp, "fp": fp, "fn": fn, "precision": P, "recall": R, "f1": F})
+    gold_all = gold
+    rows += value_scores(vals, gold_all)
     s = pd.DataFrame(rows)
+    s.insert(0, "text", text)
     s.to_csv(run / "scores.csv", index=False)
     pd.DataFrame(errs).to_csv(run / "errors.csv", index=False)
     allp = pd.read_csv(run / "mentions.csv", keep_default_na=False)
     print(s.to_string(index=False))
-    print("invalid evidence:", (allp.status == "invalid_evidence").sum(), "of", len(allp))
+    print("invalid evidence:", (allp.status == "invalid_evidence").sum(), "of", len(allp), "| unaligned:", unaligned)
 
 
 if __name__ == "__main__":
@@ -226,9 +312,10 @@ if __name__ == "__main__":
     ap.add_argument("run_dir", nargs="?")
     ap.add_argument("--model", default="claude-opus-5-5", choices=list(PRICES))
     ap.add_argument("--max-usd", type=float, default=1.0)
+    ap.add_argument("--text", default="verified_plain", choices=TEXTS)
     a = ap.parse_args()
     if a.cmd == "run":
-        run(a.model, a.max_usd)
+        run(a.model, a.max_usd, a.text)
     elif a.cmd == "relocate":
         relocate(a.run_dir)
     else:
