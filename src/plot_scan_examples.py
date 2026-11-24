@@ -299,9 +299,10 @@ def linking_names(lang: str) -> Path:
                                     ec=NAVY, lw=1.4))
         fig.text(xs[1] + widths[1] / 2 + 0.004, y + rh / 2, L[4].format(g=genus), ha="center", va="center",
                  fontsize=11, color=RED, family=FONT[lang], zorder=5, style="italic" if lang == "zh" else "normal")
-        value(fig, xs[2] + widths[2] / 2 + 0.004, y + rh * 0.60, r.accepted_name, "good", None,
+        # the accepted name sits on the same line as the GBIF answer and the arrows (the author, 2026-11-24)
+        value(fig, xs[2] + widths[2] / 2 + 0.004, y + rh / 2, r.accepted_name, "good", None,
               widths[2] * 0.86, W, size=11, italic=True)
-        fig.text(xs[2] + widths[2] / 2 + 0.004, y + rh * 0.27, why[name], ha="center", va="center", fontsize=9.5,
+        fig.text(xs[2] + widths[2] / 2 + 0.004, y + rh * 0.22, why[name], ha="center", va="center", fontsize=9.5,
                  color=GREY, family=FONT[lang], zorder=5)
         for j in (0, 1):
             fig.patches.append(FancyArrowPatch((xs[j] + widths[j] + 0.004, y + rh / 2),
