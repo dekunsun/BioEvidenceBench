@@ -4,6 +4,8 @@
 
 ### Where does trustworthy data get lost between a 19th-century page and a database record?
 
+Read, extract, cite, link, review: the steps an AI agent also has to get right before it can use the scientific literature.
+
 **Dekun Sun** · University of Pennsylvania · [ai4s.fyi](https://ai4s.fyi)
 
 *Open research pilot · November 2026 · Preprint in progress, not peer reviewed*
@@ -46,6 +48,8 @@ Turning a scanned book into data is not one model call. Information passes throu
 <p align="center"><img src="docs/assets/overview/fig00_pipeline_trace.png" width="820" alt="One entry from Butler 1907 followed through OCR, extraction, evidence, linking and review: the older OCR garbles the date, a plain GBIF lookup reaches only the genus, and review produces the complete record"></p>
 
 **BioEvidenceBench evaluates reliability across these stages.** Scope rules and human review can apply throughout the workflow; these six dimensions are not necessarily six sequential processing steps. This is a research benchmark and workflow analysis, **not** a deployed digitization or curator-review product.
+
+**Why this matters for AI agents in science.** The same stages apply whether a fixed pipeline or an AI agent does the work. An agent that mines the literature for scientific facts also has to read the page, pick out the facts, cite where each came from, match names to today's databases, and hand uncertain cases to people. Each of those steps can fail quietly, and each can be tested the way this pilot tests them; the findings below say where the checks matter most.
 
 ## The experiment: three versions of the same pages
 
@@ -190,6 +194,21 @@ The trained model is [published for research](https://github.com/dekunsun/BioEvi
 
 What these findings mean for a library or museum deciding where to put its next unit of money or reviewer time is set out in the [decision memo](docs/product.md).
 
+## External case · 本草綱目 (exploratory, classical Chinese)
+
+Does the same method work on a different script? A first pilot applies it to six half-leaves of the *Bencao gangmu* (本草綱目, completed 1578), in the Siku quanshu manuscript copy: a pharmacopoeia whose entries name drugs, plants, people, places and the books they quote. The reference text is the Kanseki Repository transcription, checked line by line against the scan by the author, who then labelled 224 mentions (drug or organism, person, place, cited work) before any model extracted from these pages. Claude Opus 5.5 extracted with the same evidence rule as for the English books, from four versions of the text.
+
+| Text given to the extractor | Character error rate | Names intact (variant forms folded) | Value F1 |
+| --- | ---: | ---: | ---: |
+| Scan-checked reference | 0 | 100% (100%) | 0.98 |
+| Claude Opus 5.5 reading the scan | 0.03 | 88% (98%) | 0.87 |
+| Claude Haiku 5.5 reading the scan | 0.15 | 69% (87%) | 0.68 |
+| PaddleOCR 3.7 (open source) | 0.26 | 68% (81%) | 0.72 |
+
+- **The English finding repeats:** whether the names survive OCR tracks extraction; the overall character error rate does not. Haiku has fewer character errors than PaddleOCR but loses as many names, and scores lower.
+- **A new kind of loss:** the Claude readers often write the standard form of a character where the manuscript has a variant or a taboo form (陶𢎞景 becomes 陶弘景). Counting that as an error or not moves Opus from 88% to 98% of names intact. In the English books the comparable effect, ligatures such as æ, moves the figure by 0 to 2 points. For classical Chinese, an evaluation has to say whether a record must be faithful to the edition or only findable, and score both.
+- **Not yet an independent result:** the annotation guide and the extraction prompt were written from these same six half-leaves. An eight-half-leaf test set has been chosen by a fixed rule and the configuration frozen; it waits for the author's labels. Details: [pilot report](results/bencao_pilot/REPORT.md), [annotation guide](docs/notes/bencao_guide.md), [test plan](docs/notes/bencao_prereg.md).
+
 ## Why the evaluation can be audited
 
 This is a small pilot, but its methodological choices are intended to make conclusions inspectable:
@@ -209,6 +228,7 @@ Some of the most useful lessons came from unexpected issues: annotation boundari
 
 - **Small, specific pilot:** the pre-registered results cover **16 test pages from two English printed books** (1849 and 1907). The books differ in OCR quality, so results are reported separately; confidence intervals are relatively wide.
 - **Not all kinds of historical documents:** other languages, eras, tables, illustrated plates, mixed layouts and handwriting were not evaluated in the main experiment.
+- **Classical Chinese is a development set only:** six half-leaves of one edition of one work, labelled by the author without domain training (18 expert questions remain open), with the guide and prompt written from the same pages. An eight-page test set is frozen but not yet labelled.
 - **Public-data exposure is possible:** the books and transcriptions may have appeared in model training; a follow-up memorization probe found no clear evidence of page memory but cannot rule it out.
 - **Labels and scoring require judgment:** most pages had one primary annotator, with a second on five; decisions made after unsealing are identified as exploratory.
 - **Traceability is not proof of scientific validity:** verifying a quote against OCR does not independently verify the printed page or settle a historical taxonomic dispute.
@@ -256,11 +276,12 @@ For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and 
 | **[Annotation guide](ANNOTATION_GUIDE.md)** · [Gold labels](gold/) | Label definitions, corrections and human reference data. |
 | **[Pre-registration](PREREGISTRATION.md)** · [Freeze](FREEZE.json) · [Deviations](DEVIATIONS.md) | What was decided in advance and what changed after testing. |
 | **[RL technical report](docs/rl_report/rl_report.pdf)** · [Web page](docs/rl_results.md) · [Training report](rl/TRAINING_REPORT.md) · [Released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | Teaching a small model to repair OCR: supervised and reinforcement learning, the reward audit, and the release decision. |
+| **[本草綱目 pilot report](results/bencao_pilot/REPORT.md)** · [Guide](docs/notes/bencao_guide.md) · [Test plan](docs/notes/bencao_prereg.md) | The classical Chinese external case: OCR levels, extraction, glyph fidelity, and the frozen test set. |
 | **[Lessons learned](docs/lessons_learned.md)** · [Stories](docs/stories/) · [Notes](docs/notes/) | Annotation, data-quality, API, metric and training failures encountered during the study. |
 | **[Decision memo and product design](docs/product.md)** · [Poster](poster/poster.pdf) | The decision this pilot informs, six recommendations, a proposed curator workflow; the pilot on one poster. |
 | **[FineBooks data](https://huggingface.co/datasets/finebooks/bhl-impact-gt)** · [OCR output](https://huggingface.co/buckets/finebooks/bhl-ocr-outputs) | Expert text and modern OCR underlying the comparisons. |
 
-**Licenses and attribution.** The expert transcriptions are from IMPACT/Biodiversity Heritage Library via FineBooks (**CC BY 3.0**); BHL metadata are **CC0 1.0**; public dots.mocr outputs are published under **MIT** as indicated in the source manifest. This project's code is [MIT-licensed](LICENSE) and its original gold annotations are [CC BY 4.0](gold/LICENSE.md). The illustrated overview figures are explanatory reconstructions; the numerical figures reproduce values reported in this project's run records.
+**Licenses and attribution.** The expert transcriptions are from IMPACT/Biodiversity Heritage Library via FineBooks (**CC BY 3.0**); BHL metadata are **CC0 1.0**; public dots.mocr outputs are published under **MIT** as indicated in the source manifest. This project's code is [MIT-licensed](LICENSE) and its original gold annotations are [CC BY 4.0](gold/LICENSE.md). The 本草綱目 transcription is from the Kanseki Repository (**CC BY-SA 4.0**), and files that contain it carry that licence; the scans are public domain. The illustrated overview figures are explanatory reconstructions; the numerical figures reproduce values reported in this project's run records.
 
 ---
 
