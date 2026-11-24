@@ -1,0 +1,79 @@
+{
+ "frozen_at": "2026-11-24T09:12:09+00:00",
+ "code_commit": "2bb47b21e0dc5b6628f7e3ccf4ca6e489ad7551d",
+ "guide_version": "v0.5",
+ "prompt_version": "bencao-p2-guide-v0.4",
+ "prompt_sha256": "85effe545b5f4bd1e90bfa6295671a1f27da8bffe05f3c706664efe9850586e6",
+ "dev_pages": [
+  "036-1b",
+  "036-5a",
+  "036-7b",
+  "036-12b",
+  "036-13a",
+  "036-30a"
+ ],
+ "texts": [
+  "verified_plain",
+  "claude_opus",
+  "claude_haiku",
+  "paddleocr"
+ ],
+ "paddleocr_settings": {
+  "lang": "chinese_cht",
+  "use_doc_orientation_classify": false,
+  "use_doc_unwarping": false,
+  "use_textline_orientation": true,
+  "enable_mkldnn": false,
+  "text_det_limit_type": "max",
+  "text_det_limit_side_len": 1600
+ },
+ "dev_extraction_runs": {
+  "20261124-0900_bencao_extract_claude-opus-5-5": {
+   "model": "claude-opus-5-5",
+   "prompt_version": "bencao-p2-guide-v0.4",
+   "effort": "medium",
+   "max_tokens": 8000,
+   "text": "verified_plain"
+  },
+  "20261124-0901_bencao_extract_claude-opus-5-5_claude_opus": {
+   "model": "claude-opus-5-5",
+   "prompt_version": "bencao-p2-guide-v0.4",
+   "effort": "medium",
+   "max_tokens": 8000,
+   "text": "claude_opus"
+  },
+  "20261124-0902_bencao_extract_claude-opus-5-5_claude_haiku": {
+   "model": "claude-opus-5-5",
+   "prompt_version": "bencao-p2-guide-v0.4",
+   "effort": "medium",
+   "max_tokens": 8000,
+   "text": "claude_haiku"
+  },
+  "20261124-0904_bencao_extract_claude-opus-5-5_paddleocr": {
+   "model": "claude-opus-5-5",
+   "prompt_version": "bencao-p2-guide-v0.4",
+   "effort": "medium",
+   "max_tokens": 8000,
+   "text": "paddleocr"
+  }
+ },
+ "dev_ocr_runs": [
+  "20261123-0058_bencao_ocr_claude-haiku-5-5",
+  "20261123-0059_bencao_ocr_claude-opus-5-5",
+  "20261123-0547_bencao_ocr_paddleocr"
+ ],
+ "primary_metric": "value F1 on ALL_PRIMARY (taxon, person, locality, cited_work), exact forms; folded value F1 and names intact (exact and folded) always reported beside it",
+ "files": {
+  "docs/notes/bencao_guide.md": "734e24074dd41714a3b735da4455f230356006fcfd351096b1bda2a6da684a05",
+  "src/bencao_extract.py": "3baadfa34d6165039cca4043959a19b8d52328673795973c2fa4aa8727515965",
+  "src/bencao_variants.py": "865fa993962150e1a5062c3ba231540f620c90ee0b5316cd7a917c5bcba88d08",
+  "data/bencao/variant_table.csv": "0b812293f8f372ed36ae5453b65a8572aac247605545a02e6b630dc6193a4726",
+  "src/bencao_ocr_claude.py": "8d076f59a2c62bf5e0df52f6921f368d026b98fb8b3478bd8f55245b041322ac",
+  "src/bencao_ocr_paddle.py": "d1bde1ba481cd5acffb149bf917ff9ad475f112b61f52abd94f20e3ec2e613ab",
+  "src/bencao_pilot.py": "519a499705ccc738c28ee102e47835f3fbcc3dc7e690c3c3ddfff381eefb765b",
+  "src/bencao_link_keys.py": "5ec732a373a9609388c6a9c06bb3cec4f61cfcb0b34e2bbd6fd670089673fafe",
+  "gold/gold_mentions_bencao_gloria.csv": "fa4e4cf3bb305c6ce7ee9195c4a5336469f4a10edf094e923325407d74978e08",
+  "gold/gold_changes_bencao_gloria.csv": "b2cb1ac79bc76195d97e57c1a9b5122ebf29da744f59463446a670207557c789"
+ },
+ "approved": "the author, 2026-11-24 (proposed by her: freeze guide, prompt, OCR settings and scorer, then prepare an independent test set)"
+}
