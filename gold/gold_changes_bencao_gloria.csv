@@ -10,3 +10,5 @@ page_id,line,start,end,field,text,column,before,after,decision
 036-1b,3,83,86,taxon,枹䍐草,adjudication,expert_pending,,作者 2026-11-24 采纳 Claude 的建议（「按照你的建议来」）：rule 12 (v0.3)
 036-1b,3,91,93,locality,西羌,adjudication,expert_pending,,作者 2026-11-24 采纳 Claude 的建议（「按照你的建议来」）：rule 13 (v0.3)
 036-1b,8,264,267,cited_work,詩唐風,adjudication,expert_pending,,作者 2026-11-24 采纳 Claude 的建议（「按照你的建议来」）：rule 11 (v0.3)
+036-1b,2,52,55,locality,上\n郡,(new row),,locality 上郡,作者 2026-11-24：「上郡加上」（陶弘景「河西上郡」= 河西、上郡两个产地；跨列一个 span，规范 v0.3 第 14 条）
+036-1b,2,50,52,locality,河西,adjudication,expert_pending,,作者 2026-11-24：随「上郡加上」确认「河西」为单独地名

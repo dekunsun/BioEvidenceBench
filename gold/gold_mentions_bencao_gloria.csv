@@ -6,7 +6,9 @@ page_id,line,start,end,field,text,scan_text,restored_form,normalization_type,res
 036-1b,2,27,30,locality,積沙山,,,,,habitat,山名；保留原文字形,,v0.2,
 036-1b,2,31,33,locality,上郡,,,,,habitat,與「河西川谷」「積沙山」並列的產地,,v0.2,
 036-1b,2,46,49,person,陶𢎞景,,陶弘景,taboo_missing_stroke,四庫本避乾隆名諱，「𢎞」為「弘」的缺筆形式,cited_person,避諱缺筆字保留在 text；restored_form 僅用於人物關聯,,v0.2,
-036-1b,2,50,52,locality,河西,,,,,cross_line_candidate,UNCLEAR: 「陶𢎞景曰河西上」延續第3列開頭「郡」，可能是「河西、上郡」並列，或「河西上郡」整體；此處暫標可定位片段，正式評分前須定跨列實體規則,expert_pending,v0.2,
+036-1b,2,50,52,locality,河西,,,,,cross_line_candidate,UNCLEAR: 「陶𢎞景曰河西上」延續第3列開頭「郡」，可能是「河西、上郡」並列，或「河西上郡」整體；此處暫標可定位片段，正式評分前須定跨列實體規則,,v0.2,
+036-1b,2,52,55,locality,"上
+郡",,,,,,跨列：第 2 列末「上」+ 第 3 列首「郡」（规范 v0.3 第 14 条）,,v0.3,
 036-1b,3,62,65,locality,蜀漢中,,,,,regional_phrase,UNCLEAR: 原文「今出蜀漢中」，可能包含「蜀」「漢中」兩個地名；按開發版相鄰地域整段標，待人工定邊界,expert_pending,v0.2,
 036-1b,3,67,69,locality,汶山,,,,,habitat,產地，原文「汶山諸道中來」,,v0.2,
 036-1b,3,83,86,taxon,枹䍐草,,枹罕草,glyph_variant,䍐/罕異體字；「枹」不能作「抱」全局歸併,regional_drug_name,UNCLEAR: 此處指枹䍐所產甘草的地方稱謂；是否算獨立藥名須人工裁定（與同片段地名可能重疊）,,v0.2,
