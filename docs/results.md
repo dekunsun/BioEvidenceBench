@@ -77,7 +77,7 @@ Task: repair one line of legacy OCR into the expert transcription, scored word b
 extraction F1). Qwen3-0.6B, pre-registered locked test of 500 in-book lines and 500 lines of an unseen
 French book. SFT raises damaged-word repair from 0.04 to 0.40–0.41 (Cuvier 0.21); GRPO from the base
 model learns to copy the OCR (0.006 / 0.034); GRPO after SFT adds no repair (Δ −0.004) and +0.3 points
-of preservation. The SFT checkpoint is released for research. Full results: [RL results](rl_results.md).
+of preservation. The SFT checkpoint is released for research. Full results: [RL results](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html).
 
 Inside the extraction pipeline (exploratory, after unsealing): legacy OCR repaired by the released
 checkpoint raises Opus G1 value F1 from 0.60 to 0.67 (Butler) and 0.64 to 0.72 (Reeve), paired page

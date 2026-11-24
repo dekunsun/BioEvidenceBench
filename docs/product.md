@@ -115,7 +115,7 @@ pilot was people: labelling, linking, review.
 ### Can a cheap model do the repair? (training follow-up)
 
 A separate study trained a small open model (Qwen3-0.6B) to repair legacy OCR line by line, with a
-pre-registered locked test ([RL results](rl_results.md)).
+pre-registered locked test ([RL results](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html)).
 
 | Question | Answer | Evidence |
 | --- | --- | --- |
@@ -216,7 +216,7 @@ is [published as a research model](https://github.com/dekunsun/BioEvidenceBench/
 
 **便宜的小模型能不能做修复？（训练后续研究）**
 
-另一项研究训练了一个开源小模型（Qwen3-0.6B）逐行修复旧 OCR，测试集事先锁定、只跑一次（[RL 结果](rl_results.md)）。
+另一项研究训练了一个开源小模型（Qwen3-0.6B）逐行修复旧 OCR，测试集事先锁定、只跑一次（[RL 结果](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html)）。
 
 | 问题 | 答案 | 依据 |
 | --- | --- | --- |

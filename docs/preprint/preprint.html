@@ -94,6 +94,7 @@
     figure img { border: none; }
   }
 
+  img { max-width: 100%; height: auto; }
   h1 { font-size: 1.5rem; }
   .subtitle { font-size: 1.05rem; color: var(--muted); margin: 0 0 .7rem; text-wrap: balance; }
   .refs { list-style: decimal; padding-left: 1.6rem; }
@@ -396,10 +397,11 @@ OCR (from 0.12). Its remaining misses are taxonomic judgments (<code>Phylloscopu
 <li><strong>Fluent OCR errors are not repairable</strong>: DeepSeek-OCR-2 writes plausible text (<code>Linnaeus</code> for
   <code>Linnæus</code>, <code>Turritella brevisis</code>); repair reached only 0.81 and 0.87.</li>
 </ul>
-<p><img alt="Reeve page 8967281: Turritella brevialis on the scan, read correctly by legacy OCR and dots.mocr, written as Turritella brevisis by DeepSeek-OCR-2" src="../assets/overview/fig07_fluent_error.png" /></p>
-<p><em>Figure 6. Reeve, page 8967281. BHL's legacy OCR and dots.mocr read the printed <code>Turritella brevialis</code>; DeepSeek-OCR-2 writes <code>Turritella brevisis</code>, which looks like a real name and gives neither a reader nor a model a cue to check it.</em>
-- <strong>V1, page image only</strong>: 0.96 and 0.98 (value-bag scoring). <strong>V2</strong>, image plus OCR, added nothing over
-  repair.</p>
+<figure class="wide"><img src="../assets/overview/fig07_fluent_error.png" alt="Reeve page 8967281: Turritella brevialis on the scan, read correctly by legacy OCR and dots.mocr, written as Turritella brevisis by DeepSeek-OCR-2"><figcaption><b>Figure 6.</b> Reeve, page 8967281. BHL's legacy OCR and dots.mocr read the printed <code>Turritella brevialis</code>; DeepSeek-OCR-2 writes <code>Turritella brevisis</code>, which looks like a real name and gives neither a reader nor a model a cue to check it.</figcaption></figure>
+<ul>
+<li><strong>V1, page image only</strong>: 0.96 and 0.98 (value-bag scoring). <strong>V2</strong>, image plus OCR, added nothing over
+  repair.</li>
+</ul>
 <h3>6.4 Other exploratory checks</h3>
 <p>Each row is a short check on the same 16 test pages unless stated; details and run folders are in
 <a href="../results.md">Results</a>.</p>
@@ -476,7 +478,7 @@ did not.</p>
 <h3>7.6 Companion study: can a small model do the repair?</h3>
 <p>A separate, pre-registered training study asked whether a cheap model could repair legacy OCR line by
 line before extraction; it is reported in full in the
-<a href="../rl_report/rl_report.pdf">RL technical report</a>. On a line-repair task built from five IMPACT books, with a
+<a href="https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html">RL technical report</a>. On a line-repair task built from five IMPACT books, with a
 word-level verifiable reward for GRPO [13] and a locked test of 500 in-book lines and 500 lines of an
 unseen French book, Qwen3-0.6B [15] repaired 4% of damaged words untrained and 40–41% after supervised
 fine-tuning (21% on the French book). GRPO from the untrained model learned to return the OCR unchanged,
@@ -519,7 +521,7 @@ leave unequal evidence, the choice between them should be made on audit cost as 
 <a href="../results.md">Results</a> · <a href="../eval_settings.md">evaluation settings, one row per run</a> ·
 <a href="../product.md">product summary and decision memo</a> · <a href="../lessons_learned.md">lessons learned</a> ·
 <a href="../../ANNOTATION_GUIDE.md">annotation guide</a> · <a href="../../PREREGISTRATION.md">pre-registration</a> ·
-<a href="../../DEVIATIONS.md">deviations</a> · <a href="../rl_report/rl_report.pdf">RL technical report</a> and <a href="https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1">released model</a>.
+<a href="../../DEVIATIONS.md">deviations</a> · <a href="https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html">RL technical report</a> and <a href="https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1">released model</a>.
 Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata: CC0. Total API spend for the
 project was US$55.96 (<a href="../eval_settings.md">evaluation settings</a>); GPU spend for the training study about US$6.</p>
 <h2>Acknowledgements</h2>

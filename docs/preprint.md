@@ -319,6 +319,7 @@ OCR (from 0.12). Its remaining misses are taxonomic judgments (`Phylloscopus tri
 ![Reeve page 8967281: Turritella brevialis on the scan, read correctly by legacy OCR and dots.mocr, written as Turritella brevisis by DeepSeek-OCR-2](assets/overview/fig07_fluent_error.png)
 
 *Figure 6. Reeve, page 8967281. BHL's legacy OCR and dots.mocr read the printed `Turritella brevialis`; DeepSeek-OCR-2 writes `Turritella brevisis`, which looks like a real name and gives neither a reader nor a model a cue to check it.*
+
 - **V1, page image only**: 0.96 and 0.98 (value-bag scoring). **V2**, image plus OCR, added nothing over
   repair.
 
@@ -389,7 +390,7 @@ did not.
 
 A separate, pre-registered training study asked whether a cheap model could repair legacy OCR line by
 line before extraction; it is reported in full in the
-[RL technical report](rl_report/rl_report.pdf). On a line-repair task built from five IMPACT books, with a
+[RL technical report](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html). On a line-repair task built from five IMPACT books, with a
 word-level verifiable reward for GRPO [13] and a locked test of 500 in-book lines and 500 lines of an
 unseen French book, Qwen3-0.6B [15] repaired 4% of damaged words untrained and 40–41% after supervised
 fine-tuning (21% on the French book). GRPO from the untrained model learned to return the OCR unchanged,
@@ -438,7 +439,7 @@ Repository: [github.com/dekunsun/BioEvidenceBench](https://github.com/dekunsun/B
 [Results](results.md) · [evaluation settings, one row per run](eval_settings.md) ·
 [product summary and decision memo](product.md) · [lessons learned](lessons_learned.md) ·
 [annotation guide](../ANNOTATION_GUIDE.md) · [pre-registration](../PREREGISTRATION.md) ·
-[deviations](../DEVIATIONS.md) · [RL technical report](rl_report/rl_report.pdf) and [released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1).
+[deviations](../DEVIATIONS.md) · [RL technical report](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html) and [released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1).
 Expert transcriptions: FineBooks / IMPACT / BHL, CC-BY 3.0. BHL metadata: CC0. Total API spend for the
 project was US$55.96 ([evaluation settings](eval_settings.md)); GPU spend for the training study about US$6.
 

@@ -78,6 +78,7 @@ def main(target: str = "preprint") -> None:
     html = re.sub(r'(<h2>References</h2>\s*)<ol>', r'\1<ol class="refs">', html)
     html = html.replace("<h2>Abstract</h2>\n<p>", '<h2>Abstract</h2>\n<p class="abstract">', 1)
     css = (OUT / "preprint.css").read_text(encoding="utf-8")         # one stylesheet for both
+    css += "\n  img { max-width: 100%; height: auto; }"      # no figure may run past the text column
     css += "\n  h1 { font-size: 1.5rem; }\n  .subtitle { font-size: 1.05rem; color: var(--muted); margin: 0 0 .7rem; text-wrap: balance; }"
     css += "\n  .refs { list-style: decimal; padding-left: 1.6rem; }\n  .refs li { padding-left: 0; text-indent: 0; }\n  hr { display: none; }\n"
     page = f"""<!doctype html>
