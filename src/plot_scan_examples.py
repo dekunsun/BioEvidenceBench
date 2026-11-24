@@ -29,7 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs" / "assets" / "overview"
 BG, BAND, NAVY, GREY, EDGE = "#fffdf8", "#137f7d", "#1b2a3a", "#5b6573", "#dfe3e8"
 RED, TEAL, STONE = "#b23b3b", "#1f8683", "#9aa3ad"
-TINT = {"plain": "#ffffff", "bad": "#fdf3f2", "good": "#f0f7f6"}
+TINT = {"plain": "#ffffff", "bad": "#f9dedb", "good": "#dcefe9"}
 ACCENT = {"plain": STONE, "bad": RED, "good": TEAL}
 MARK = {"plain": "", "bad": "✗", "good": "✓"}
 MONO = "DejaVu Sans Mono"
@@ -83,17 +83,19 @@ def scan_axes(fig, im, box_xy, crop, left, bottom, top, W, H, max_w=0.56) -> flo
     return left + sw
 
 
-def card(fig, lang, x, y, w, h, kind, head=None, foot=None):
-    """White card with a tint, a coloured stripe on the left and a ✓/✗ mark top right."""
+def card(fig, lang, x, y, w, h, kind, head=None, foot=None, pad=(0.02, 0.018), head_size=10.5):
+    """White card with a tint, a coloured stripe on the left and a ✓/✗ mark top right.
+    pad = (left, top) inner padding in figure fractions."""
+    px, py = pad
     fig.patches.append(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0,rounding_size=0.010",
                                       transform=fig.transFigure, fc=TINT[kind], ec=EDGE, lw=1.0))
-    fig.patches.append(Rectangle((x + 0.002, y + 0.012), 0.0045, h - 0.024, transform=fig.transFigure,
+    fig.patches.append(Rectangle((x + 0.002, y + 0.66 * py), 0.0045, h - 1.32 * py, transform=fig.transFigure,
                                  color=ACCENT[kind], zorder=3))
     if MARK[kind]:
-        fig.text(x + w - 0.014, y + h - 0.016, MARK[kind], ha="right", va="top", fontsize=13,
+        fig.text(x + w - 0.7 * px, y + h - 0.9 * py, MARK[kind], ha="right", va="top", fontsize=head_size + 2.5,
                  fontweight="bold", color=ACCENT[kind], family="DejaVu Sans", zorder=5)
     if head:
-        fig.text(x + 0.02, y + h - 0.018, head, ha="left", va="top", fontsize=10.5, fontweight="bold",
+        fig.text(x + px, y + h - py, head, ha="left", va="top", fontsize=head_size, fontweight="bold",
                  color=NAVY, family=FONT[lang], zorder=5)
     if foot:
         fig.text(x + 0.02, y + 0.016, foot, ha="left", va="bottom", fontsize=9, color=GREY,
@@ -275,7 +277,37 @@ def linking_names(lang: str) -> Path:
     return save(fig, "fig08_linking_names", lang)
 
 
+def poster_strip() -> Path:
+    """Compact horizontal version of figure 1 for the poster's Motivation box: name cut from the scan,
+    BHL's legacy OCR, the exact name; same card style, no title (the poster box has its own)."""
+    pid, box = "8966790", (388, 608, 760, 652)
+    legacy = text_of("data/sample/legacy", pid, "CiilLE", ("BuL", "CiilLE.NSls"))
+    expert = text_of("data/sample/expert", pid, "CHILENSIS", ("BULIMUS", "CHILENSIS"))
+    W, H = 8.4, 1.25
+    fig = plt.figure(figsize=(W, H), dpi=300, facecolor="#ffffff")
+    cards = [("Printed, Reeve 1849", "plain"), ("BHL's legacy OCR", "bad"), ("What the record needs", "good")]
+    w, gap, y, h = 0.292, 0.058, 0.04, 0.92
+    for i, (head, kind) in enumerate(cards):
+        x = 0.002 + i * (w + gap)
+        card(fig, "en", x, y, w, h, kind, head, pad=(0.024, 0.13), head_size=12)
+        mid = y + h * 0.36
+        if i == 0:
+            image_in(fig, page(pid).crop((box[0] - 4, box[1] - 4, box[2] - 18, box[3] + 4)), x + w / 2 + 0.004, mid,
+                     w * 0.80, h * 0.46, W, H)
+        else:
+            value(fig, x + w / 2 + 0.004, mid, legacy if i == 1 else expert, kind, expert, w * 0.84, W, size=16)
+        if i < 2:
+            fig.patches.append(FancyArrowPatch((x + w + 0.006, y + h / 2), (x + w + gap - 0.006, y + h / 2),
+                                               transform=fig.transFigure, arrowstyle="-|>", mutation_scale=12,
+                                               color=STONE, lw=1.5))
+    p = ROOT / "poster" / "fig" / "misread_poster.png"
+    fig.savefig(p, facecolor="#ffffff")
+    plt.close(fig)
+    return p
+
+
 if __name__ == "__main__":
+    print(poster_strip())
     for lang in ("en", "zh"):
         for f in (scan_name, fluent_error, linking_names, transcription_typo):
             print(f(lang))
