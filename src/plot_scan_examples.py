@@ -160,11 +160,29 @@ def save(fig, stem: str, lang: str) -> Path:
     return p
 
 
-def scan_and_stack(lang, stem, pid, crop, box, title, sub, notes, cards, ref, H):
+def scan_and_stack(lang, stem, pid, crop, box, title, sub, notes, cards, ref, H, specimen=None, max_w=0.56):
+    """Scan on the left, card stack on the right. `specimen` = (image path, caption): an optional narrow
+    panel before the scan showing the organism itself (a real plate figure from the same book)."""
     W = 12
     fig = frame(lang, W, H, title, sub, notes)
     im = page(pid)
-    right = scan_axes(fig, im, box, crop, 0.04, 0.16, 1 - 1.15 / H, W, H)
+    left, bottom, top = 0.04, 0.16, 1 - 1.15 / H
+    if specimen:
+        sp = Image.open(ROOT / specimen[0]).convert("RGB")
+        ih = (top - bottom) - 0.42 / H                         # leave room for the caption
+        iw = ih * H / W * sp.width / sp.height
+        ax = fig.add_axes([left, bottom + 0.36 / H, iw, ih])
+        ax.imshow(sp)
+        ax.set_xticks([]); ax.set_yticks([])
+        for s in ax.spines.values():
+            s.set_color(EDGE); s.set_linewidth(1.0)
+        fig.text(left + iw / 2, bottom + 0.22 / H, specimen[1], ha="center", va="top", fontsize=9, color=GREY,
+                 family=[FONT[lang], "DejaVu Sans"], linespacing=1.4)
+        fig.patches.append(FancyArrowPatch((left + iw + 0.004, (bottom + top) / 2), (left + iw + 0.026, (bottom + top) / 2),
+                                           transform=fig.transFigure, arrowstyle="-|>", mutation_scale=12,
+                                           color=STONE, lw=1.5))
+        left += iw + 0.03
+    right = scan_axes(fig, im, box, crop, left, bottom, top, W, H, max_w=max_w)
     card_stack(fig, lang, cards, ref, right + 0.035, 0.96, 0.62 / H + 0.04, 1 - 1.15 / H, W, H,
                name_img=im.crop((box[0] - 4, box[1] - 4, box[2] + 4, box[3] + 4)))
     return save(fig, stem, lang)
@@ -180,14 +198,19 @@ def scan_name(lang: str) -> Path:
                 [("On the printed page", None, "scan, 1849", "plain"),
                  ("Library's older OCR", legacy, "corrupted letters", "bad"),
                  ("What the record needs", expert, "exact name preserved", "good")],
-                [SCAN_NOTE["en"], "OCR text copied unchanged; modern OCR and the expert transcription both read the name intact."]),
+                [SCAN_NOTE["en"] + " Plate XVII: Internet Archive copy of the same book, public domain.",
+                 "OCR text copied unchanged; modern OCR and the expert transcription both read the name intact."],
+                "The shell itself\nPlate XVII, fig. 102"),
          "zh": ("一个学名被读错时", "Reeve《Conchologia iconica》（1849），Biodiversity Heritage Library 第 8966790 页",
                 [("印刷页上", None, "扫描原图，1849 年", "plain"),
                  ("图书馆旧 OCR", legacy, "字母被读坏", "bad"),
                  ("数据记录需要的", expert, "学名完整保留", "good")],
-                [SCAN_NOTE["zh"], "OCR 文字原样复制；现代 OCR 和专家转录都把学名读对了。"])}[lang]
+                [SCAN_NOTE["zh"] + " 图版 XVII：同一本书在 Internet Archive 的扫描，公有领域。",
+                 "OCR 文字原样复制；现代 OCR 和专家转录都把学名读对了。"],
+                "贝壳本身\n图版 XVII，第 102 号")}[lang]
     return scan_and_stack(lang, "fig01_scan_name", pid, (330, 530, 1290, 960), (388, 608, 760, 652),
-                          L[0], L[1], L[3], L[2], expert, 5.6)
+                          L[0], L[1], L[3], L[2], expert, 5.6,
+                          specimen=("docs/assets/overview/reeve_plate17_fig102.png", L[4]), max_w=0.44)
 
 
 def fluent_error(lang: str) -> Path:
