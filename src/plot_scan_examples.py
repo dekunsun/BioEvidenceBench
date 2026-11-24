@@ -450,24 +450,36 @@ def pipeline_trace(lang: str) -> Path:
     return save(fig, "fig00_pipeline_trace", lang)
 
 def poster_strip() -> Path:
-    """Compact horizontal version of figure 1 for the poster's Motivation box: name cut from the scan,
-    BHL's legacy OCR, the exact name; same card style, no title (the poster box has its own)."""
+    """Compact horizontal version of figure 1 for the poster's Motivation box: the shell (Reeve plate XVII,
+    fig. 102), the name cut from the scan, BHL's legacy OCR, the exact name; same card style, no title."""
     pid, box = "8966790", (388, 608, 760, 652)
     legacy = text_of("data/sample/legacy", pid, "CiilLE", ("BuL", "CiilLE.NSls"))
     expert = text_of("data/sample/expert", pid, "CHILENSIS", ("BULIMUS", "CHILENSIS"))
-    W, H = 8.4, 1.25
+    W, H = 8.4, 1.4
     fig = plt.figure(figsize=(W, H), dpi=300, facecolor="#ffffff")
-    cards = [("Printed, Reeve 1849", "plain"), ("BHL's legacy OCR", "bad"), ("What the record needs", "good")]
-    w, gap, y, h = 0.292, 0.058, 0.04, 0.92
+    # the shell itself first (Reeve plate XVII, fig. 102), then the three cards
+    sp = Image.open(ROOT / "docs" / "assets" / "overview" / "reeve_plate17_fig102.png").convert("RGB")
+    sh_ = 0.96
+    sw_ = sh_ * H / W * sp.width / sp.height
+    ax = fig.add_axes([0.002, 0.02, sw_, sh_])
+    ax.imshow(sp); ax.set_xticks([]); ax.set_yticks([])
+    for s in ax.spines.values():
+        s.set_color(EDGE); s.set_linewidth(1.0)
+    x0 = 0.002 + sw_ + 0.045
+    fig.patches.append(FancyArrowPatch((x0 - 0.04, 0.5), (x0 - 0.006, 0.5), transform=fig.transFigure,
+                                       arrowstyle="-|>", mutation_scale=12, color=STONE, lw=1.5))
+    cards = [("Printed, Reeve 1849", "plain"), ("BHL's legacy OCR", "bad"), ("The record needs", "good")]
+    gap, y, h = 0.045, 0.04, 0.92
+    w = (0.99 - x0 - 2 * gap) / 3
     for i, (head, kind) in enumerate(cards):
-        x = 0.002 + i * (w + gap)
-        card(fig, "en", x, y, w, h, kind, head, pad=(0.024, 0.13), head_size=12)
+        x = x0 + i * (w + gap)
+        card(fig, "en", x, y, w, h, kind, head, pad=(0.02, 0.12), head_size=10.5)
         mid = y + h * 0.36
         if i == 0:
             image_in(fig, page(pid).crop((box[0] - 4, box[1] - 4, box[2] - 18, box[3] + 4)), x + w / 2 + 0.004, mid,
                      w * 0.80, h * 0.46, W, H)
         else:
-            value(fig, x + w / 2 + 0.004, mid, legacy if i == 1 else expert, kind, expert, w * 0.84, W, size=16)
+            value(fig, x + w / 2 + 0.004, mid, legacy if i == 1 else expert, kind, expert, w * 0.86, W, size=16)
         if i < 2:
             fig.patches.append(FancyArrowPatch((x + w + 0.006, y + h / 2), (x + w + gap - 0.006, y + h / 2),
                                                transform=fig.transFigure, arrowstyle="-|>", mutation_scale=12,
