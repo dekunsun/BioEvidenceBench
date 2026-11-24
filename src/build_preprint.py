@@ -66,6 +66,10 @@ def main(target: str = "preprint") -> None:
     md = src.read_text(encoding="utf-8")
     # title block: first heading, author line, status line; the rest is the body
     title = cfg.get("title") or re.search(r"^# (.+)$", md, re.M).group(1)
+    # a question title followed by a descriptor ("…? A pre-registered …") is set as the question plus a
+    # smaller subtitle line, so the header stays at about three lines (the author, 2026-11-24)
+    head, _, rest = title.partition("? ")
+    head, sub = (head + "?", f'\n  <p class="subtitle">{rest}</p>') if rest else (title, "")
     body = md[md.index(cfg["start"]):]
     html = markdown.markdown(body, extensions=["tables", "sane_lists"])
     html = figures(fix_links(html))
@@ -74,6 +78,7 @@ def main(target: str = "preprint") -> None:
     html = re.sub(r'(<h2>References</h2>\s*)<ol>', r'\1<ol class="refs">', html)
     html = html.replace("<h2>Abstract</h2>\n<p>", '<h2>Abstract</h2>\n<p class="abstract">', 1)
     css = (OUT / "preprint.css").read_text(encoding="utf-8")         # one stylesheet for both
+    css += "\n  h1 { font-size: 1.5rem; }\n  .subtitle { font-size: 1.05rem; color: var(--muted); margin: 0 0 .7rem; text-wrap: balance; }"
     css += "\n  .refs { list-style: decimal; padding-left: 1.6rem; }\n  .refs li { padding-left: 0; text-indent: 0; }\n  hr { display: none; }\n"
     page = f"""<!doctype html>
 <html lang="en">
@@ -88,7 +93,7 @@ def main(target: str = "preprint") -> None:
 <body>
 
 <header>
-  <h1>{title}</h1>
+  <h1>{head}</h1>{sub}
   <p class="authors">Dekun Sun</p>
   <p class="affil">University of Pennsylvania · <a href="https://ai4s.fyi">ai4s.fyi</a></p>
   <p class="date">November 2026 · preprint draft, work in progress, not peer reviewed · <a href="{REPO}">github.com/dekunsun/BioEvidenceBench</a> · <a href="{name}.pdf">PDF</a></p>
