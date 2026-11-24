@@ -39,7 +39,7 @@ PAGES = ["036-1b", "036-5a", "036-7b", "036-12b", "036-13a", "036-30a"]
 FIELDS = ["taxon", "person", "locality", "cited_work", "substance"]
 PRIMARY = ["taxon", "person", "locality", "cited_work"]           # substance is scored separately
 PRICES = {"claude-opus-5-5": (4.0, 20.0), "claude-sonnet-5-5": (2.0, 10.0), "claude-haiku-5-5": (0.10, 0.50)}
-PROMPT_VERSION = "bencao-p1-guide-v0.3"
+PROMPT_VERSION = "bencao-p2-guide-v0.4"   # p1 (guide v0.3) runs: results/20261124-08*_bencao_extract_*
 
 SYSTEM = ("You extract named entities from the 本草綱目 (Siku quanshu manuscript copy). You never rewrite the text: "
           "for every mention you give the line number and copy the characters exactly as they appear on that line.")
@@ -52,8 +52,10 @@ Fields
   (槐 in 甘草枝葉悉如槐), and regional drug names made of a place plus a drug name (one span; the place inside it
   is not labelled again).
 - person: a named person, including short forms such as 𢎞景, 權, 頌, 時珍.
-- locality: a place. A chain of place names written together from narrow to wide is one span; generic words such
-  as 川谷 or 山谷 count only as part of a named place; the name of a people used for its land is a locality.
+- locality: a place. A chain of places written together from wide to narrow (region, then county, mountain or
+  district) is split: each named place is its own locality (江南宣州 → 江南, 宣州). A generic word written
+  directly after a name stays in its span (name + 川谷, 山谷 or 山 is one span); a generic word joined by 之 does
+  not (X之山 → X). Generic words alone are not labelled. The name of a people used for its land is a locality.
 - cited_work: a book cited as a source, including the source tags in small notes (別録 after an alternative name)
   and a book plus one of its sections written together as one span. Generic references are not labelled.
 - substance: minerals, water, earth and other non-organic drugs.

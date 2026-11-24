@@ -1,6 +1,6 @@
-# 本草綱目 case: annotation guide v0.3
+# 本草綱目 case: annotation guide v0.4
 
-*v0.3, 2026-11-24: rules 11–14 from the first labelled page (036-1b), adopted by the author on Claude's recommendation without her own research ("按照你的建议来，我没有相应的知识也没有research"); to be revisited with a domain expert. v0.2, 2026-11-23: rule 10 (historical forms and restoration) added on the author's decisions. v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
+*v0.4, 2026-11-24: rule 15 (place-name chains), written to match the author's labels on the six pilot half-leaves and adopted by her on Claude's recommendation ("按你的建议来"); no gold row changed. v0.3, 2026-11-24: rules 11–14 from the first labelled page (036-1b), adopted by the author on Claude's recommendation without her own research ("按照你的建议来，我没有相应的知识也没有research"); to be revisited with a domain expert. v0.2, 2026-11-23: rule 10 (historical forms and restoration) added on the author's decisions. v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
 the draft left open (6, 7) take the defaults stated below. No page has been labelled yet. Examples come from
 half-leaves 036-1a, 036-2a and 036-2b, which are **not** among the six pilot pages, so nothing here
 pre-fills a label on a pilot page.*
@@ -36,8 +36,8 @@ pre-fills a label on a pilot page.*
    label the short form as printed; resolving it to the full name is the linking step, scored
    separately, as abbreviated genera were for Butler.**
 4. **Place phrases.** 河西川谷, 積沙山, 上郡, 汶山諸道: is 川谷 (river valley) part of the place? Is 河東蒲坂縣
-   one span or two? **Decided: as in the main guide, a narrow-to-wide chain is one span; generic words such as
-   川谷, 山谷 count only as part of a named place.**
+   one span or two? **Decided (v0.1): generic words such as 川谷, 山谷 count only as part of a named place.
+   The v0.1 sentence "a narrow-to-wide chain is one span" is replaced by rule 15 (v0.4).**
 5. **Comparison plants.** 葉如槐葉 ("leaves like the pagoda tree's"): is 槐 a `taxon` mention?
    **Decided: yes; it names an organism.**
 6. **Ingredients in 附方.** Every drug in a prescription is a substance name. Label them all, or only
@@ -91,6 +91,15 @@ pre-fills a label on a pilot page.*
     the end of one manuscript column and `郡` at the start of the next form one `locality` `上郡`.
     Expert questions that are about facts, not rules (is `蜀漢中` one place or two; is `大苦` a name of the
     plant in `䖅大苦`), stay `expert_pending` until a domain expert answers.
+
+15. **Place-name chains (v0.4).** Classical Chinese writes a chain of places from wide to narrow with no
+    separator (region, then county, mountain or district). Each named place in the chain is its own
+    `locality`: `河東蒲坂縣` → `河東` + `蒲坂縣`; `隴西洮陽` → `隴西` + `洮陽`; `潞州太行紫團山` → `潞州` +
+    `太行` + `紫團山`. The main guide's rule that a comma-separated narrow-to-wide address is one span
+    ("Rottingdean, Sussex") is about English print and does not carry over. A generic word written directly
+    after a name stays in its span (`河西川谷`, `上黨山谷`, `積沙山`); a generic word joined by `之` does not
+    (`首陽之山` → `首陽`). Each piece is then a unit a historical gazetteer can resolve. `蜀漢中` stays
+    `expert_pending`: whether `蜀` is a place in a chain or part of a name is a fact for an expert.
 
 ## Linking (later)
 
