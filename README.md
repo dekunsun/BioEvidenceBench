@@ -49,7 +49,7 @@ Turning a scanned book into data is not one model call. Information passes throu
 
 **BioEvidenceBench evaluates reliability across these stages.** Scope rules and human review can apply throughout the workflow; these six dimensions are not necessarily six sequential processing steps. This is a research benchmark and workflow analysis, **not** a deployed digitization or curator-review product.
 
-**Why this matters for AI agents in science.** The same stages apply whether a fixed pipeline or an AI agent does the work. An agent that mines the literature for scientific facts also has to read the page, pick out the facts, cite where each came from, match names to today's databases, and hand uncertain cases to people. Each of those steps can fail quietly, and each can be tested the way this pilot tests them; the findings below say where the checks matter most.
+**Why this matters for AI agents in science.** The same stages apply whether a fixed pipeline or an AI agent does the work. An agent that mines the literature for scientific facts also has to read the page, pick out the facts, cite where each came from, match names to today's databases, and hand uncertain cases to people. Each of those steps can fail quietly, and each can be tested the way this pilot tests them; the findings below say where the checks matter most. BioEvidenceBench evaluates the evidence-handling capabilities a scientific agent can use; it does not claim to be a complete scientific agent.
 
 ## The experiment: three versions of the same pages
 
@@ -227,7 +227,7 @@ Some of the most useful lessons came from unexpected issues: annotation boundari
 ## Scope and limitations
 
 - **Small, specific pilot:** the pre-registered results cover **16 test pages from two English printed books** (1849 and 1907). The books differ in OCR quality, so results are reported separately; confidence intervals are relatively wide.
-- **Not all kinds of historical documents:** other languages, eras, tables, illustrated plates, mixed layouts and handwriting were not evaluated in the main experiment.
+- **Not all kinds of historical documents:** the pre-registered experiment covers English print only; apart from the classical Chinese pilot below, other languages, eras, tables, illustrated plates, mixed layouts and handwriting were not evaluated.
 - **Classical Chinese is a development set only:** six half-leaves of one edition of one work, labelled by the author without domain training (18 expert questions remain open), with the guide and prompt written from the same pages. An eight-page test set is frozen but not yet labelled.
 - **Public-data exposure is possible:** the books and transcriptions may have appeared in model training; a follow-up memorization probe found no clear evidence of page memory but cannot rule it out.
 - **Labels and scoring require judgment:** most pages had one primary annotator, with a second on five; decisions made after unsealing are identified as exploratory.
