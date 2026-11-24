@@ -10,9 +10,9 @@
 
 [**Decision memo**](docs/product.md) · [**Preprint**](docs/preprint/preprint.pdf) · [**RL technical report**](docs/rl_report/rl_report.pdf) · [**Full results**](docs/results.md) · [**Lessons learned**](docs/lessons_learned.md) · [**Reproduce**](#reproduce-the-evaluation) · [**Poster**](poster/poster.pdf) · [**中文版**](README_zh.md)
 
-<img src="docs/assets/overview/cover_illustration.png" width="900" alt="Conceptual illustration: historical natural-history books flowing through OCR, extraction, evidence, linking, and review into structured biodiversity records">
+<img src="docs/assets/overview/fig00_pipeline_trace.png" width="900" alt="One entry from Butler 1907 followed through OCR, extraction, evidence, linking and review: the older OCR garbles the date, a plain GBIF lookup reaches only the genus, and review produces the complete record">
 
-<sub>Conceptual illustration of the workflow, not a historical scan or a deployed product.</sub>
+<sub>A real page and real outputs: each card shows what that stage actually produced on this page; the bottom row is the record it should end as.</sub>
 
 </div>
 
@@ -240,6 +240,10 @@ python src/freeze.py --verify
 For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and the [evaluation settings](docs/eval_settings.md). API keys, costs, provider settings, output schema, and the sealed/unsealed test procedure matter; do not treat a new run against previously inspected pages as a fresh blind test. Each script under [`src/`](src/) starts with a note on what it does and how to run it; each run folder under [`results/`](results/) keeps its settings, prompts and raw outputs.
 
 ## About this project
+
+<p align="center"><img src="docs/assets/overview/cover_illustration.png" width="560" alt="Conceptual illustration: historical natural-history books flowing through OCR, extraction, evidence, linking, and review into structured biodiversity records"></p>
+
+<p align="center"><sub>Concept illustration of the workflow, not a real page or a deployed product.</sub></p>
 
 **What I did:** defined the task and the labeling guide, labeled all 607 reference mentions myself before seeing model output, wrote and froze the pre-registration, ran the error analysis and cost tracking, wrote the decision memo, and trained, tested and released the small model.
 

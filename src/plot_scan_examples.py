@@ -277,6 +277,111 @@ def linking_names(lang: str) -> Path:
     return save(fig, "fig08_linking_names", lang)
 
 
+def pipeline_trace(lang: str) -> Path:
+    """README header: one real entry (Butler 1907, BHL page 8992647) followed through every stage.
+    The scan with the three values boxed; five stage cards with what each stage actually produced on the
+    library's older OCR text (✓ = matches the printed page); the record the pipeline should end with."""
+    pid = "8992647"
+    legacy_name = text_of("data/sample/legacy", pid, "Motacilla beema", ("Motacilla", "beema"))
+    legacy_place = text_of("data/sample/legacy", pid, "Rottingdean", ("Rottingdean", "Sussex"))
+    legacy_date = text_of("data/sample/legacy", pid, "Rottingdean", ("April", "1898"))
+    expert_date = text_of("data/sample/expert", pid, "Rottingdean", ("April", "I898"))
+    m = pd.read_csv(ROOT / "results" / "20261119-2052_claude-opus-5-5_test_batch" / "test_mentions.csv",
+                    keep_default_na=False)
+    m = m[(m.page_id.astype(str) == pid) & (m.version == "legacy") & (m.condition == "G1")]
+    ext = {f: m[m.field == f] for f in ("taxon", "locality", "date")}
+    ex_name = ext["taxon"][ext["taxon"].value == legacy_name].iloc[0]
+    ex_place = ext["locality"][ext["locality"].value == legacy_place].iloc[0]
+    ex_date = ext["date"][ext["date"].value == legacy_date].iloc[0]
+    links = pd.read_csv(ROOT / "results" / "linking_test" / "link_outcomes.csv", keep_default_na=False)
+    lk = links[(links.page_id.astype(str) == pid) & (links.text == "Motacilla beema") & (links.version == "expert")
+               & (links.condition == "GOLD") & (links.linker == "printed")].iloc[0]
+    gl = pd.read_csv(ROOT / "gold" / "gold_links_gloria.csv", keep_default_na=False)
+    gl = gl[(gl.page_id.astype(str) == pid) & (gl.text == "Motacilla beema")].iloc[0]
+    gm = pd.read_csv(ROOT / "gold" / "gold_mentions_gloria_test.csv", keep_default_na=False)
+    gdate = gm[(gm.page_id.astype(str) == pid) & (gm.text == expert_date)].iloc[0]
+    genus = str(lk.gbif_name).split()[0]
+    L = {"en": dict(
+            title="One entry, followed through the pipeline",
+            sub="Butler, Birds of Great Britain and Ireland (1907), BHL page 8992647. Every value is the real output of that stage.",
+            stages=[("1  OCR", "library's older OCR"), ("2  Extract", "Claude Opus 5.5"), ("3  Evidence", "line + quote, checked by code"),
+                    ("4  Link", "plain GBIF lookup"), ("5  Review", "curator (the author)")],
+            found="line {l}: found", genus=f"{genus}: genus only", none="(not linked)",
+            rec_head=["BHL page", "taxon as printed", "accepted taxon", "GBIF key", "locality", "date"],
+            note=[SCAN_NOTE["en"], f"The expert transcription types the year as '{expert_date.split()[-1]}'; the curator records the scan's reading. "
+                  "Linking source: Avibase."], legend="Boxes: the three values a record needs\n(red = misread by the older OCR)\n\n✓ matches the printed page   ✗ does not"),
+         "zh": dict(
+            title="一条记录，走完整条流程",
+            sub="Butler《Birds of Great Britain and Ireland》（1907），BHL 第 8992647 页；每个值都是该环节的真实输出",
+            stages=[("1  OCR", "图书馆旧 OCR"), ("2  抽取", "Claude Opus 5.5"), ("3  证据", "行号 + 原文引文，代码核对"),
+                    ("4  关联", "直接查 GBIF"), ("5  审核", "人工（作者）")],
+            found="第 {l} 行：找到", genus=f"{genus}：只到属", none="（不关联）",
+            rec_head=["BHL 页", "印刷学名", "有效学名", "GBIF 编号", "地点", "日期"],
+            note=[SCAN_NOTE["zh"], f"专家转录把年份打成「{expert_date.split()[-1]}」；人工审核按扫描原文记录。学名依据：Avibase。"],
+            legend="方框：一条记录需要的三个值\n（红框 = 旧 OCR 读错了）\n\n✓ 与印刷页一致   ✗ 不一致")}[lang]
+    W, H = 12, 6.75
+    fig = frame(lang, W, H, L["title"], L["sub"], L["note"])
+    im = page(pid)
+    crop = (330, 1290, 1880, 1660)
+    boxes = [(900, 1460, 1243, 1512, TEAL), (866, 1586, 1335, 1640, TEAL), (1436, 1586, 1826, 1640, RED)]
+    sh = 1.55 / H
+    sw = sh * H * (crop[2] - crop[0]) / (crop[3] - crop[1]) / W
+    ax = fig.add_axes([0.04, 1 - 1.12 / H - sh, sw, sh])
+    ax.imshow(im.crop(crop))
+    for x0, y0, x1, y1, c in boxes:
+        ax.add_patch(Rectangle((x0 - crop[0], y0 - crop[1]), x1 - x0, y1 - y0, fill=False, ec=c, lw=2.2))
+    ax.set_xticks([]); ax.set_yticks([])
+    for s in ax.spines.values():
+        s.set_color(EDGE); s.set_linewidth(1.2)
+    fig.text(0.04 + sw + 0.025, 1 - 1.12 / H - sh / 2, L["legend"], va="center", fontsize=10, color=GREY, linespacing=1.5,
+             family=[FONT[lang], "DejaVu Sans"])                  # fallback: the Chinese font has no ✓/✗
+    # five stage cards; each lists name / place / date as that stage produced them
+    good = lambda v, ref: v == ref
+    stage_rows = [
+        [(legacy_name, True), (legacy_place, True), (legacy_date, False)],
+        [(ex_name.value, True), (ex_place.value, True), (ex_date.value, False)],
+        [(L["found"].format(l=int(float(ex_name.line))), True), (L["found"].format(l=int(float(ex_place.line))), True),
+         (L["found"].format(l=int(float(ex_date.line))), True)],
+        [(L["genus"], False), (L["none"], None), (L["none"], None)],
+        [(gl.accepted_name, True), (legacy_place, True), (gdate.scan_text, True)],
+    ]
+    top, ch = 1 - 1.12 / H - sh - 0.25 / H, 1.75 / H
+    n, gap = 5, 0.016
+    cw = (0.92 - gap * (n - 1)) / n
+    for i, ((name, who), vals) in enumerate(zip(L["stages"], stage_rows)):
+        x = 0.04 + i * (cw + gap)
+        y = top - ch
+        kind = "bad" if any(ok is False for _, ok in vals) else "good"
+        fig.patches.append(FancyBboxPatch((x, y), cw, ch, boxstyle="round,pad=0,rounding_size=0.010",
+                                          transform=fig.transFigure, fc="#ffffff", ec=EDGE, lw=1.0))
+        fig.patches.append(Rectangle((x, y + ch - 0.045 / H), cw, 0.045 / H, transform=fig.transFigure, color=ACCENT[kind]))
+        fig.text(x + 0.012, y + ch - 0.16 / H, name, va="top", fontsize=11, fontweight="bold", color=NAVY, family=FONT[lang])
+        fig.text(x + 0.012, y + ch - 0.43 / H, who, va="top", fontsize=8.5, color=GREY, family=FONT[lang])
+        for k, (v, ok) in enumerate(vals):
+            yy = y + ch - 0.85 / H - k * 0.385 / H
+            mark, col = {True: ("✓", TEAL), False: ("✗", RED), None: ("·", STONE)}[ok]
+            fig.text(x + 0.012, yy, mark, va="center", fontsize=11, fontweight="bold", color=col, family="DejaVu Sans")
+            fs = min(9.5, (cw - 0.04) * W * 72 / (max(len(v), 1) * 0.62))
+            fig.text(x + 0.03, yy, v, va="center", fontsize=fs, color=NAVY if ok is not False else RED,
+                     family=MONO if i != 2 and not (i == 3 and lang == "zh") else FONT[lang])
+        if i < n - 1:
+            fig.patches.append(FancyArrowPatch((x + cw + 0.001, y + ch / 2), (x + cw + gap - 0.001, y + ch / 2),
+                                               transform=fig.transFigure, arrowstyle="-|>", mutation_scale=10,
+                                               color=STONE, lw=1.3))
+    # the record the pipeline should end with
+    rec = [pid, "Motacilla beema", gl.accepted_name, str(gl.accepted_usage_key), legacy_place, gdate.scan_text]
+    ry, rh = top - ch - 0.32 / H, 0.95 / H
+    widths = [0.10, 0.17, 0.15, 0.11, 0.21, 0.18]
+    x = 0.04
+    fig.patches.append(FancyBboxPatch((0.04, ry - rh), 0.92, rh, boxstyle="round,pad=0,rounding_size=0.010",
+                                      transform=fig.transFigure, fc=TINT["good"], ec=EDGE, lw=1.0))
+    for wdt, head, val in zip(widths, L["rec_head"], rec):
+        fig.text(x + 0.012, ry - 0.22 / H, head, va="top", fontsize=9, color=GREY, family=FONT[lang])
+        fig.text(x + 0.012, ry - rh + 0.26 / H, val, va="bottom", fontsize=11, fontweight="bold", color=TEAL, family=MONO)
+        x += wdt
+    return save(fig, "fig00_pipeline_trace", lang)
+
+
 def poster_strip() -> Path:
     """Compact horizontal version of figure 1 for the poster's Motivation box: name cut from the scan,
     BHL's legacy OCR, the exact name; same card style, no title (the poster box has its own)."""
@@ -309,5 +414,5 @@ def poster_strip() -> Path:
 if __name__ == "__main__":
     print(poster_strip())
     for lang in ("en", "zh"):
-        for f in (scan_name, fluent_error, linking_names, transcription_typo):
+        for f in (pipeline_trace, scan_name, fluent_error, linking_names, transcription_typo):
             print(f(lang))

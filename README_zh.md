@@ -10,9 +10,9 @@
 
 [**English**](README.md) · [**决策备忘录**](docs/product.md#中文版) · [**研究预印本**](docs/preprint/preprint.pdf) · [**RL 技术报告**](docs/rl_report/rl_report.pdf) · [**完整结果**](docs/results.md) · [**经验教训**](docs/lessons_learned.md) · [**如何复现**](#如何复现实验) · [**Poster**](poster/poster.pdf)
 
-<img src="docs/assets/overview/cover_illustration.png" width="900" alt="历史自然史书籍经过 OCR、信息提取、证据核对、学名关联和人工审核，成为结构化生物多样性记录的概念插画">
+<img src="docs/assets/overview/fig00_pipeline_trace_zh.png" width="900" alt="Butler 1907 年一条记录走完 OCR、抽取、证据、关联、审核五个环节：旧 OCR 读坏了日期，直接查 GBIF 只匹配到属，人工审核后得到完整记录">
 
-<sub>此图为工作流程概念插画，不是真实历史书页，也不是已经部署的产品。</sub>
+<sub>真实页面与真实输出：每个格子都是该环节在这一页上的实际结果，最下面是这条记录最终应有的样子。</sub>
 
 </div>
 
@@ -240,6 +240,10 @@ python src/freeze.py --verify
 如需**重新调用 LLM**，请查看 [`src/run_extraction.py`](src/run_extraction.py) 和 [运行设置](docs/eval_settings.md)。API 密钥、费用、模型调用方式、输出格式和测试集封存流程均影响结果。对已经查看过的页面重新运行，**不能称作新的盲测**。
 
 ## 关于这个项目
+
+<p align="center"><img src="docs/assets/overview/cover_illustration.png" width="560" alt="历史自然史书籍经过 OCR、信息提取、证据核对、学名关联和人工审核，成为结构化生物多样性记录的概念插画"></p>
+
+<p align="center"><sub>工作流程概念插画，不是真实书页，也不是已部署的产品。</sub></p>
 
 **我做了什么：** 定义任务、写标注规范；在看到任何模型输出之前亲手标注全部 607 个参考提及；写好预注册并在测试前冻结；做错误分析和成本记录；写决策备忘录；训练、测试并公开发布小模型。
 
