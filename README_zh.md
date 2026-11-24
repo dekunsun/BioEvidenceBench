@@ -20,7 +20,7 @@
 
 <p align="center"><img src="docs/assets/overview/fig01_scan_name_zh.png" width="820" alt="1849 年扫描页上的印刷学名 BULIMUS CHILENSIS、图书馆旧 OCR 读成的 BuLlMLS CiilLE.NSls，以及数据记录需要的准确学名"></p>
 
-*真实页面（BHL 第 8966790 页）。OCR 文字从图书馆的文件原样复制；现代 OCR 和专家转录都把学名读对了。扫描图来自 Biodiversity Heritage Library，经 IMPACT 专家转录集，CC BY 3.0。*
+<sub>真实页面（BHL 第 8966790 页）。OCR 文字从图书馆的文件原样复制；现代 OCR 和专家转录都把学名读对了。扫描图来自 Biodiversity Heritage Library，经 IMPACT 专家转录集，CC BY 3.0。</sub>
 
 同样的隐患藏在生物多样性遗产图书馆（BHL）约 6,400 万页历史文献里。这些历史自然科学著作记录了大量物种名称、采集地点、研究者和观察日期。OCR 和大语言模型能帮我们把书页转成结构化数据，汇入 GBIF 等现代数据库。但把文字从纸面搬到屏幕，不等于产出了一条可信的科学记录——上游的一处小错，往往会在下游不断放大。OCR 读错一个字母，不仅会让学名失真，还会直接导致后续的检索和数据库关联失效；即便上游文字提取完全无误，历史名称也可能因分类学变迁而对不上今天的名录；而一条看似合理的结果，如果缺少可核查的证据，研究者依然无从验证。
 
@@ -30,7 +30,7 @@
 
 一张书页变成科学数据，通常不只是调用一次模型。信息会经过多个环节，每一步都可能出错。
 
-![历史书页经过六个环节形成可核查的科学记录](docs/assets/overview/fig04_pipeline.png)
+<p align="center"><img src="docs/assets/overview/fig04_pipeline.png" width="820" alt="历史书页经过六个环节形成可核查的科学记录"></p>
 
 | 环节 | 简单解释 | 可能发生的错误 |
 | --- | --- | --- |
@@ -43,7 +43,7 @@
 
 **一条真实记录走过这些环节。** Butler 1907 年书中 Sykes' Wagtail 的条目：旧 OCR 读坏了日期，抽取和证据都没问题，直接查数据库只查到属，最后由人工审核定下这条记录。
 
-<p align="center"><img src="docs/assets/overview/fig00_pipeline_trace_zh.png" width="900" alt="Butler 1907 年一条记录走完 OCR、抽取、证据、关联、审核五个环节：旧 OCR 读坏了日期，直接查 GBIF 只匹配到属，人工审核后得到完整记录"></p>
+<p align="center"><img src="docs/assets/overview/fig00_pipeline_trace_zh.png" width="820" alt="Butler 1907 年一条记录走完 OCR、抽取、证据、关联、审核五个环节：旧 OCR 读坏了日期，直接查 GBIF 只匹配到属，人工审核后得到完整记录"></p>
 
 **BioEvidenceBench 评估这些环节的可靠性。** 其中数据范围定义和人工复核会贯穿多个处理阶段，因此六个维度并不一定是依次执行的六道工序。它是一项研究评测和工作流程分析，**不是**已经上线的数字化或馆员审核产品。
 
@@ -82,7 +82,7 @@
 
 ## 发现一：改善 OCR 明显提高了下游信息提取质量
 
-![旧 OCR、现代 OCR 和专家转录下的 Value F1 对比](docs/assets/overview/fig02_ocr_results.png)
+<p align="center"><img src="docs/assets/overview/fig02_ocr_results.png" width="820" alt="旧 OCR、现代 OCR 和专家转录下的 Value F1 对比"></p>
 
 **预注册结果 · 16 页锁定测试集 · Claude Opus 5.5 · Value F1（越高越好）**
 
@@ -92,7 +92,7 @@
 | 现代 OCR（dots.mocr） | **0.95** | **0.98** |
 | 专家转录 | **0.98** | **0.98** |
 
-*表中为四舍五入后的数据，准确数值与 95% 区间见 [Results](docs/results.md)；插图为便于阅读未绘出区间，可打开[原始分析图](docs/figures/hero.png)查看区间。*
+<sub>表中为四舍五入后的数据，准确数值与 95% 区间见 [Results](docs/results.md)；插图为便于阅读未绘出区间，可打开[原始分析图](docs/figures/hero.png)查看区间。</sub>
 
 在旧 OCR 条件下，模型经常**找对了位置，却复制了错误的字母**。如果只判断是否找到相应片段，宽松 F1 为 **0.93–0.97**；但要求文字值正确时，Value F1 只有 **0.60–0.64**。找到名字的位置与获得正确的名字，是两件不同的事。
 
@@ -104,13 +104,13 @@
 
 OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但稀有的拉丁学名，即使只错一个字母，也可能影响科学检索和数据库匹配。
 
-![低字符错误率与学名未完整保留可以同时发生](docs/assets/overview/fig05_name_preservation.png)
+<p align="center"><img src="docs/assets/overview/fig05_name_preservation.png" width="820" alt="低字符错误率与学名未完整保留可以同时发生"></p>
 
 **探索性结果：** 在同一批页面的 **24 种 OCR 版本**中（FineBooks 的 22 个模型、Mistral OCR 和图书馆的旧 OCR），学名保留率与下游 Value F1 的相关性明显高于整页 CER。学名保留率与 F1 的 Spearman 相关系数分别为 **0.95（Butler）**和 **1.00（Reeve）**；整页 CER 对应为 **−0.11** 和 **−0.61**。有几种 OCR 模型的整页 CER **低于 0.5%**，但只完整保留了 **57%–79% 的 Butler 学名**。
 
 <p align="center"><img src="docs/assets/overview/fig07_fluent_error_zh.png" width="820" alt="Reeve 第 8967281 页：印刷学名 Turritella brevialis，图书馆旧 OCR 和 dots.mocr 读对了，DeepSeek-OCR-2 写成了 Turritella brevisis"></p>
 
-*真实例子（Reeve 第 8967281 页）：一个现代 OCR 模型写出了一个看似合理、但页面上并没有的学名。两个字母的错误几乎不影响整页字符错误率，只有逐个检查学名才能发现。*
+<sub>真实例子（Reeve 第 8967281 页）：一个现代 OCR 模型写出了一个看似合理、但页面上并没有的学名。两个字母的错误几乎不影响整页字符错误率，只有逐个检查学名才能发现。</sub>
 
 如果一套数字化系统的目标是支持生物多样性研究，验收 OCR 时就不能只看总字符错误率，还需要直接检查**科学名称有没有逐字保留**。
 
@@ -120,13 +120,13 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 
 书中印着一个正确的历史学名，AI 也将它提取正确，并不保证数据库查询一定找到正确物种。分类学名称会随着时间改变；同名、异名及分类观点差异，都可能影响关联。
 
-![34 处历史鸟类名称中，简单数据库查询成功关联 20 处](docs/assets/overview/fig03_linking.png)
+<p align="center"><img src="docs/assets/overview/fig03_linking.png" width="820" alt="34 处历史鸟类名称中，简单数据库查询成功关联 20 处"></p>
 
 **预注册结果：** 在专家转录中，有 **34 处符合条件的鸟类学名提及**在关联前已经正确。简单的 [GBIF](https://www.gbif.org/) 名称查询（不提供上下文，只是先按同页前文把缩写属名补全，如 `M. minuta`），成功将 **20 处**关联到正确分类单元，**14 处**失败，Recall 为 **0.59**。其中 **8 处只匹配到属、3 处匹配错误、3 处找不到记录**。
 
 <p align="center"><img src="docs/assets/overview/fig08_linking_names_zh.png" width="820" alt="Butler（1907）中三个印刷学名都读对了，直接查 GBIF 却只匹配到属，右侧是今天的有效学名"></p>
 
-*14 处失败中的 3 处，按 1907 年的印刷原样。学名都读对了，直接查询却只匹配到属，因为这些物种后来改了名、移到了别的属，或并入了另一个种。*
+<sub>14 处失败中的 3 处，按 1907 年的印刷原样。学名都读对了，直接查询却只匹配到属，因为这些物种后来改了名、移到了别的属，或并入了另一个种。</sub>
 
 之后开展的**探索性实验**让 LLM 先依据原文上下文解释历史名称，再用候选现代名称查询数据库，同批材料上的关联 Recall 提升到 **0.91**。但这**不是一次新的独立盲测**，剩余的分类学争议仍需领域专家处理。
 
@@ -158,7 +158,7 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 | 现代 OCR | **6** | **5** |
 | 旧版 OCR | **50** | **75** |
 
-*预注册 RQ4 结果。这里统计的是拟自动接受集合中的**错误条数**，不是错误率，也不是模型一致率。详见[完整结果](docs/results.md)。*
+<sub>预注册 RQ4 结果。这里统计的是拟自动接受集合中的**错误条数**，不是错误率，也不是模型一致率。详见[完整结果](docs/results.md)。</sub>
 
 两个模型经常继承**同一处 OCR 误读**，因此达成一致并不能独立证明学名正确，更不能作为无需审核、直接发布科学记录的理由。任何自动放行或审核优先级规则，都需要用人工验证的数据单独检验。
 
@@ -176,7 +176,7 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 
 既然旧 OCR 是学名丢失的主要环节，能不能让一个小而便宜的模型先逐行把文字修好，再做提取？后续研究训练了一个 0.6B 参数的开源模型（Qwen3-0.6B），训练数据来自同一套专家转录中的五本书；测试按事先定好的方案只跑一次，用的都是模型从没见过的行。
 
-![未训练模型、监督训练、强化学习以及两者结合时修好的受损词比例](docs/assets/overview/fig06_rl_repair.png)
+<p align="center"><img src="docs/assets/overview/fig06_rl_repair.png" width="820" alt="未训练模型、监督训练、强化学习以及两者结合时修好的受损词比例"></p>
 
 - **给它看专家转录**（监督微调，SFT）：受损词修复率从 **4%** 升到 **40%**，包括学名、旧式长 s（ſ）和 æ 这类连字；同时改坏的正确词比训练前更少。
 - **只用自动评分训练**（强化学习，GRPO）：它学会了**把 OCR 原样交回**。照抄从不扣分，而它自己的改动大多是错的，所以"什么都不改"最稳。
@@ -241,7 +241,7 @@ python src/freeze.py --verify
 
 ## 关于这个项目
 
-<p align="center"><img src="docs/assets/overview/cover_illustration.png" width="560" alt="历史自然史书籍经过 OCR、信息提取、证据核对、学名关联和人工审核，成为结构化生物多样性记录的概念插画"></p>
+<p align="center"><img src="docs/assets/overview/cover_illustration.png" width="820" alt="历史自然史书籍经过 OCR、信息提取、证据核对、学名关联和人工审核，成为结构化生物多样性记录的概念插画"></p>
 
 <p align="center"><sub>工作流程概念插画，不是真实书页，也不是已部署的产品。</sub></p>
 
@@ -251,7 +251,7 @@ python src/freeze.py --verify
 
 | 资料 | 内容 |
 | --- | --- |
-| **[预印本 PDF](docs/preprint/preprint.pdf)** · [HTML](docs/preprint/preprint.html) · [Markdown](docs/preprint.md) | 研究问题、方法、统计、局限和参考文献。 |
+| **[预印本 PDF](docs/preprint/preprint.pdf)** · [网页版](docs/preprint.md) | 研究问题、方法、统计、局限和参考文献。 |
 | **[完整结果](docs/results.md)** · [运行设置](docs/eval_settings.md) | 所有预注册与探索性结果、区间和来源。 |
 | **[标注指南](ANNOTATION_GUIDE.md)** · [金标准](gold/) | 标注边界、修正记录与人工参考数据。 |
 | **[预注册](PREREGISTRATION.md)** · [冻结文件](FREEZE.json) · [变更](DEVIATIONS.md) | 测试前决定了什么、测试后又做了什么。 |

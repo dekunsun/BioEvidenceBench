@@ -195,3 +195,46 @@ It sits between vertical Tesseract (0.80) and Claude Haiku (0.15): a usable non-
 clean pages (036-1b 0.07), weak on dense small notes and rare glyphs (036-12b reads 薓 and 〓 badly).
 It normalises some forms the scan keeps (枹䍐 read as 抱旱/抱罕), which the folded metric does not
 forgive, since 枹/抱 is not in the variant table.
+
+## Claude extraction against the author's labels (2026-11-24, approved by the author, "跑吧")
+
+Run `results/20261124-0826_bencao_extract_claude-opus-5-5/` (`src/bencao_extract.py`): Claude Opus 5.5,
+effort medium, JSON schema enforced, one request per half-leaf on the scan-verified reference text
+(`data/bencao/verified_plain/`), $0.242 in total, about $0.04 per half-leaf. As in the English books' G1
+condition the model returns field + line + verbatim quote and code slices the value; 0 of 230 quotes
+were invalid evidence. Gold: `gold/gold_mentions_bencao_gloria.csv` (224 rows, labelled alone by the
+author, about 5 hours for the six half-leaves); the 18 `expert_pending` rows are optional.
+
+**Not blind.** The guide was written from these pages and the prompt rules were written by Claude after
+seeing the author's labels (examples taken only from half-leaves 036-1a and 036-2a). After the first
+scoring the locator was changed once: within a line, a quote is looked for after the previous mention
+first (the model lists mentions in reading order). This moved two values (`乾薑` on 036-5a line 6 from an
+unlabelled `乾薑湯` to the labelled occurrence; `河西` on 036-1b line 2); the first placement is kept as
+`mentions_locator_v1.csv`. Scores below are after the change. These numbers check that the pipeline
+works on a classical Chinese text; they are not an independent result.
+
+| Field | Gold rows (required) | Exact P / R / F1 | Overlap F1 |
+| --- | ---: | --- | ---: |
+| taxon | 97 | 0.94 / 1.00 / 0.97 | 0.97 |
+| person | 18 | 1.00 / 1.00 / 1.00 | 1.00 |
+| locality | 53 | 0.86 / 0.83 / 0.85 | 0.94 |
+| cited_work | 38 | 0.95 / 0.95 / 0.95 | 0.99 |
+| **all primary** | 206 | **0.93 / 0.95 / 0.94** | **0.97** |
+
+`substance` (4 outputs: 水 and similar) has no gold rows: the author labelled no substances on these pages.
+
+What the 26 exact-match differences are (`errors.csv`):
+
+- **Place-name chains (most of the locality loss).** The model keeps a chain as one span where the
+  author split it: `隴西洮陽` (gold `隴西` + `洮陽`), `潞州太行紫團山` (3 gold rows), `河東蒲坂縣` (2),
+  and `首陽之山` against gold `首陽`. Guide rule "narrow to wide is one span" does not say what to do
+  with wide-to-narrow chains or with `之山`; this is a guide question, not a model error as such.
+- **Names inside other spans:** `人參` inside the cited title `人參讚`, `椵` inside `椵樹`, `枹䍐` labelled
+  as a place inside the regional drug name (rule 12 says no nested locality).
+- **Cited-work boundaries:** `本經下品` (gold `本經`), `傷寒類要` across the column break (no gold row).
+- **Things the author did not label:** `蜜`, `米泔`, `蓍` as taxa; `蜀` / `漢中` where the gold row `蜀漢中`
+  is `expert_pending`.
+
+No person was missed or invented; every taxon in the gold was found. Next, if wanted: the same run on
+PaddleOCR and Haiku OCR text (the OCR → extraction question of the English books), after deciding the
+place-chain rule.

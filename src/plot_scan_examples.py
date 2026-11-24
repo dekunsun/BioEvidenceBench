@@ -265,19 +265,21 @@ def linking_names(lang: str) -> Path:
            "zh": {"Motacilla beema": "现在是这个种的亚种", "Lusciniola schwarzi": "已移到另一个属",
                   "Aedon familiaris": "现在归入这个种"}}[lang]
     L = {"en": ("Read correctly, still not linked", "Butler, Birds of Great Britain and Ireland (1907), BHL pages 8992647 and 8992644",
-                ["Printed in 1907", "Plain GBIF name lookup", "Accepted name today (gold)"],
+                ["The page, 1907 (name highlighted)", "Plain GBIF lookup", "Accepted name today"],
                 [SCAN_NOTE["en"], "GBIF answers cached in results/linking_test/; accepted names decided by the author with Avibase."],
                 "genus {g} only"),
          "zh": ("字读对了，学名照样关联不上", "Butler《Birds of Great Britain and Ireland》（1907），BHL 第 8992647、8992644 页",
-                ["1907 年印刷的学名", "直接查 GBIF 得到的", "今天的有效学名（金标准）"],
+                ["1907 年原书页（学名已标出）", "直接查 GBIF", "今天的有效学名"],
                 [SCAN_NOTE["zh"], "GBIF 查询结果缓存在 results/linking_test/；有效学名由作者对照 Avibase 判定。"],
                 "只匹配到属 {g}")}[lang]
-    W, H = 12, 5.8
+    W, H = 12, 7.3
     fig = frame(lang, W, H, L[0], L[1], L[3])
-    xs, widths, kinds = [0.04, 0.375, 0.665], [0.30, 0.255, 0.295], ["plain", "bad", "good"]
-    top, rh, gap = 1 - 1.45 / H, 0.18, 0.035
+    # Left column: the page around each name (account heading, the name, the first line of text), name
+    # highlighted, so the reader sees what was printed and where; then the lookup and the accepted name.
+    xs, widths, kinds = [0.03, 0.565, 0.755], [0.50, 0.155, 0.215], ["plain", "bad", "good"]
+    top, rh, gap = 1 - 1.45 / H, 1.55 / H, 0.2 / H
     for j, head in enumerate(L[2]):
-        fig.text(xs[j] + 0.02, top + 0.022, head, ha="left", va="bottom", fontsize=11, fontweight="bold",
+        fig.text(xs[j] + 0.012, top + 0.022, head, ha="left", va="bottom", fontsize=11, fontweight="bold",
                  color=NAVY, family=FONT[lang])
     for i, (pid, name, box) in enumerate(rows):
         r = links[(links.page_id.astype(str) == pid) & (links.text == name)].iloc[0]
@@ -285,18 +287,26 @@ def linking_names(lang: str) -> Path:
         y = top - (i + 1) * rh - i * gap
         for j in range(3):
             card(fig, lang, xs[j], y, widths[j], rh, kinds[j])
-        image_in(fig, page(pid).crop((box[0] - 4, box[1] - 4, box[2] + 4, box[3] + 4)),
-                 xs[0] + widths[0] / 2 + 0.004, y + rh / 2, widths[0] * 0.78, rh * 0.62, W, H)
+        crop = (200, box[1] - 150, 2100, box[3] + 215)          # heading above, first lines and drop cap below
+        im = page(pid).crop(crop)
+        ih = rh * 0.86
+        iw = min(widths[0] * 0.95, ih * H / W * im.width / im.height)
+        ih = iw * W / H * im.height / im.width
+        ax = fig.add_axes([xs[0] + widths[0] / 2 + 0.003 - iw / 2, y + rh / 2 - ih / 2, iw, ih])
+        ax.imshow(im); ax.set_axis_off(); ax.set_zorder(5)
+        ax.add_patch(FancyBboxPatch((box[0] - crop[0] - 6, box[1] - crop[1] - 4), box[2] - box[0] + 12,
+                                    box[3] - box[1] + 8, boxstyle="round,pad=4", fc=STONE, alpha=0.22,
+                                    ec=NAVY, lw=1.4))
         fig.text(xs[1] + widths[1] / 2 + 0.004, y + rh / 2, L[4].format(g=genus), ha="center", va="center",
-                 fontsize=12, color=RED, family=FONT[lang], zorder=5)
+                 fontsize=11, color=RED, family=FONT[lang], zorder=5, style="italic" if lang == "zh" else "normal")
         value(fig, xs[2] + widths[2] / 2 + 0.004, y + rh * 0.60, r.accepted_name, "good", None,
-              widths[2] * 0.85, W, size=13, italic=True)
-        fig.text(xs[2] + widths[2] / 2 + 0.004, y + rh * 0.25, why[name], ha="center", va="center", fontsize=9.5,
+              widths[2] * 0.86, W, size=11, italic=True)
+        fig.text(xs[2] + widths[2] / 2 + 0.004, y + rh * 0.27, why[name], ha="center", va="center", fontsize=9.5,
                  color=GREY, family=FONT[lang], zorder=5)
-        for j in (0, 1):                                         # arrows on every row
-            fig.patches.append(FancyArrowPatch((xs[j] + widths[j] + 0.005, y + rh / 2),
-                                               (xs[j + 1] - 0.005, y + rh / 2), transform=fig.transFigure,
-                                               arrowstyle="-|>", mutation_scale=13, color=STONE, lw=1.6))
+        for j in (0, 1):
+            fig.patches.append(FancyArrowPatch((xs[j] + widths[j] + 0.004, y + rh / 2),
+                                               (xs[j + 1] - 0.004, y + rh / 2), transform=fig.transFigure,
+                                               arrowstyle="-|>", mutation_scale=12, color=STONE, lw=1.5))
     return save(fig, "fig08_linking_names", lang)
 
 

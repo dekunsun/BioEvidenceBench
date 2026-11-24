@@ -20,7 +20,7 @@ On the surface, the digitization worked. The book is online, and the page is sea
 
 <p align="center"><img src="docs/assets/overview/fig01_scan_name.png" width="820" alt="The printed name BULIMUS CHILENSIS on the 1849 scan, the library's older OCR reading BuLlMLS CiilLE.NSls, and the exact name a record needs"></p>
 
-*The real page (BHL page 8966790). The OCR text is copied unchanged from the library's file; modern OCR and the expert transcription both read the name intact. Scan from the Biodiversity Heritage Library via the IMPACT ground-truth set, CC BY 3.0.*
+<sub>The real page (BHL page 8966790). The OCR text is copied unchanged from the library's file; modern OCR and the expert transcription both read the name intact. Scan from the Biodiversity Heritage Library via the IMPACT ground-truth set, CC BY 3.0.</sub>
 
 That gap sits inside roughly 64 million scanned pages in the Biodiversity Heritage Library. Historical natural-history books record species names, collection localities, researchers, and dates of observations. OCR and large language models can help turn those pages into structured data for modern databases such as GBIF. Yet pulling text off a page is not the same as producing a record another person can trust: a small error upstream rarely stays small—it compounds down the line. A single misread character can corrupt a species name and break its downstream database match; even a cleanly extracted historical name may fail to resolve against today's taxonomy; and a plausible-looking result may arrive without evidence anyone can verify.
 
@@ -30,7 +30,7 @@ That gap sits inside roughly 64 million scanned pages in the Biodiversity Herita
 
 Turning a scanned book into data is not one model call. Information passes through several stages, and errors can appear at any of them.
 
-![Six stages from a historical page to a checked scientific record](docs/assets/overview/fig04_pipeline.png)
+<p align="center"><img src="docs/assets/overview/fig04_pipeline.png" width="820" alt="Six stages from a historical page to a checked scientific record"></p>
 
 | Stage | In plain language | What could go wrong? |
 | --- | --- | --- |
@@ -43,7 +43,7 @@ Turning a scanned book into data is not one model call. Information passes throu
 
 **One real entry through these stages.** Butler's 1907 account of Sykes' Wagtail: the older OCR garbles the date, extraction and evidence hold, the plain database lookup reaches only the genus, and review settles the record.
 
-<p align="center"><img src="docs/assets/overview/fig00_pipeline_trace.png" width="900" alt="One entry from Butler 1907 followed through OCR, extraction, evidence, linking and review: the older OCR garbles the date, a plain GBIF lookup reaches only the genus, and review produces the complete record"></p>
+<p align="center"><img src="docs/assets/overview/fig00_pipeline_trace.png" width="820" alt="One entry from Butler 1907 followed through OCR, extraction, evidence, linking and review: the older OCR garbles the date, a plain GBIF lookup reaches only the genus, and review produces the complete record"></p>
 
 **BioEvidenceBench evaluates reliability across these stages.** Scope rules and human review can apply throughout the workflow; these six dimensions are not necessarily six sequential processing steps. This is a research benchmark and workflow analysis, **not** a deployed digitization or curator-review product.
 
@@ -82,7 +82,7 @@ The primary measure is **value F1**, which combines precision and recall. It is 
 
 ## Finding 1 — Better OCR changed the downstream result
 
-![Value F1 of entity extraction across legacy OCR, modern OCR and expert transcriptions](docs/assets/overview/fig02_ocr_results.png)
+<p align="center"><img src="docs/assets/overview/fig02_ocr_results.png" width="820" alt="Value F1 of entity extraction across legacy OCR, modern OCR and expert transcriptions"></p>
 
 **Pre-registered result · 16 locked test pages · Claude Opus 5.5 · value F1 (higher is better)**
 
@@ -92,7 +92,7 @@ The primary measure is **value F1**, which combines precision and recall. It is 
 | Modern OCR (dots.mocr) | **0.95** | **0.98** |
 | Expert transcription | **0.98** | **0.98** |
 
-*Rounded values; exact scores and 95% intervals are in [Results](docs/results.md). The figure omits intervals for readability; the [original analysis figure](docs/figures/hero.png) includes the intervals.*
+<sub>Rounded values; exact scores and 95% intervals are in [Results](docs/results.md). The figure omits intervals for readability; the [original analysis figure](docs/figures/hero.png) includes the intervals.</sub>
 
 With legacy OCR, the model often found a relevant name **at the correct location** but copied its corrupted spelling. Its more forgiving location-based score was **0.93–0.97**, while value F1 was only **0.60–0.64**. Finding the words and recovering the right words were different tasks.
 
@@ -104,13 +104,13 @@ On these pages, improving the source text made a much larger difference than swa
 
 An OCR system may have an excellent **character error rate (CER)** and still damage rare Latin names. A small number of mistakes is not necessarily spread evenly across the page.
 
-![Low overall character error can coexist with poor preservation of scientific names](docs/assets/overview/fig05_name_preservation.png)
+<p align="center"><img src="docs/assets/overview/fig05_name_preservation.png" width="820" alt="Low overall character error can coexist with poor preservation of scientific names"></p>
 
 **Exploratory result:** across **24 OCR versions** of the sampled pages (22 FineBooks models, Mistral OCR and the library's legacy OCR), preservation of annotated names tracked downstream extraction much more closely than page-level CER. The Spearman correlations between name preservation and extraction value F1 were **0.95 (Butler)** and **1.00 (Reeve)**; the corresponding correlations with page CER were **−0.11** and **−0.61**. Several OCR models with **under 0.5% page CER** still preserved only **57–79% of Butler's names** intact.
 
 <p align="center"><img src="docs/assets/overview/fig07_fluent_error.png" width="820" alt="Reeve page 8967281: the printed name Turritella brevialis, read correctly by the library's older OCR and by dots.mocr, and written as Turritella brevisis by DeepSeek-OCR-2"></p>
 
-*A real example (Reeve, page 8967281). One modern OCR model wrote a plausible species name that is not on the page. Two wrong letters hardly move the page's character error rate; a check on the names catches it.*
+<sub>A real example (Reeve, page 8967281). One modern OCR model wrote a plausible species name that is not on the page. Two wrong letters hardly move the page's character error rate; a check on the names catches it.</sub>
 
 The practical point is about evaluation design: a library interested in biodiversity data should test **whether names survive transcription**, not only how many characters were misread across the whole page.
 
@@ -120,13 +120,13 @@ These are exploratory comparisons on the same small collection, **not** a univer
 
 A historical book can print a name correctly; the AI can extract it correctly; and a modern database lookup can still return only a genus, a different taxon, or no record. Taxonomy changes over time, so matching text strings is not equivalent to resolving their scientific meaning.
 
-![Twenty of thirty-four historical bird-name references linked successfully in a direct lookup](docs/assets/overview/fig03_linking.png)
+<p align="center"><img src="docs/assets/overview/fig03_linking.png" width="820" alt="Twenty of thirty-four historical bird-name references linked successfully in a direct lookup"></p>
 
 **Pre-registered result:** on expert text, **34 eligible bird-name mentions** were correct before linking. A simple [GBIF](https://www.gbif.org/) name lookup (no surrounding context; an abbreviated genus such as the `M.` in `M. minuta` was first written out from earlier on the page) linked **20** to the correct taxon but failed on **14** — a linking recall of **0.59**. The 14 cases comprised **8 genus-only matches, 3 wrong taxa, and 3 without a record**.
 
 <p align="center"><img src="docs/assets/overview/fig08_linking_names.png" width="820" alt="Three names printed in Butler (1907), each read correctly, for which a plain GBIF lookup returned only the genus, beside the name accepted today"></p>
 
-*Three of the 14 failures as printed in 1907. Each name is read correctly; the plain lookup returns only the genus, because the species has since been renamed, moved to another genus or merged into another species.*
+<sub>Three of the 14 failures as printed in 1907. Each name is read correctly; the plain lookup returns only the genus, because the species has since been renamed, moved to another genus or merged into another species.</sub>
 
 A later **exploratory** approach first used an LLM to interpret a historical name in context, then looked up its proposed modern name. It raised linking recall on the same material to **0.91**. This is a useful lead, **not a new independent test result**; unresolved taxonomy still requires a domain expert.
 
@@ -158,7 +158,7 @@ The models agreed on **99–100% of predictions**, leaving at most two unflagged
 | Modern OCR | **6** | **5** |
 | Legacy OCR | **50** | **75** |
 
-*Pre-registered RQ4 results. These are error counts within the proposed auto-accept sets, **not error rates** or a measure of model agreement; see [Results](docs/results.md).*
+<sub>Pre-registered RQ4 results. These are error counts within the proposed auto-accept sets, **not error rates** or a measure of model agreement; see [Results](docs/results.md).</sub>
 
 The two models often inherited **the same OCR mistake**. Agreement therefore does not provide independent evidence that a name is spelled correctly or that a record is safe to publish. Any automated review shortcut needs to be tested against human-verified records, especially when models share the same input.
 
@@ -176,7 +176,7 @@ A separate exploratory whole-book run processed **682 text pages**. Index entrie
 
 If old OCR is where names are lost, could a small, cheap model fix the text itself, one line at a time, before anything is extracted? In a follow-up study we trained an open 0.6-billion-parameter model (Qwen3-0.6B) on five books from the same expert-transcribed collection, then tested it once, on lines it had never seen, under a plan fixed in advance.
 
-![Share of damaged words repaired by an untrained model, supervised training, reinforcement learning, and both](docs/assets/overview/fig06_rl_repair.png)
+<p align="center"><img src="docs/assets/overview/fig06_rl_repair.png" width="820" alt="Share of damaged words repaired by an untrained model, supervised training, reinforcement learning, and both"></p>
 
 - **Shown expert transcriptions** (supervised fine-tuning), the model learned to repair **40%** of damaged words, up from **4%**, including scientific names, the old long s (ſ) and ligatures such as æ, while changing fewer correct words than before.
 - **Trained only on an automatic score** (reinforcement learning with GRPO), it learned to **hand the OCR back unchanged**. Copying never lost points, and its own edits were usually wrong, so doing nothing was the safest way to score.
@@ -241,7 +241,7 @@ For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and 
 
 ## About this project
 
-<p align="center"><img src="docs/assets/overview/cover_illustration.png" width="560" alt="Conceptual illustration: historical natural-history books flowing through OCR, extraction, evidence, linking, and review into structured biodiversity records"></p>
+<p align="center"><img src="docs/assets/overview/cover_illustration.png" width="820" alt="Conceptual illustration: historical natural-history books flowing through OCR, extraction, evidence, linking, and review into structured biodiversity records"></p>
 
 <p align="center"><sub>Concept illustration of the workflow, not a real page or a deployed product.</sub></p>
 
@@ -251,7 +251,7 @@ For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and 
 
 | Resource | Contents |
 | --- | --- |
-| **[Preprint](docs/preprint/preprint.pdf)** · [HTML](docs/preprint/preprint.html) · [Markdown](docs/preprint.md) | Research questions, methods, statistics, limitations and references. |
+| **[Preprint](docs/preprint/preprint.pdf)** · [web page](docs/preprint.md) | Research questions, methods, statistics, limitations and references. |
 | **[Results](docs/results.md)** · [Run settings](docs/eval_settings.md) | Full pre-registered and exploratory scores, intervals and provenance. |
 | **[Annotation guide](ANNOTATION_GUIDE.md)** · [Gold labels](gold/) | Label definitions, corrections and human reference data. |
 | **[Pre-registration](PREREGISTRATION.md)** · [Freeze](FREEZE.json) · [Deviations](DEVIATIONS.md) | What was decided in advance and what changed after testing. |

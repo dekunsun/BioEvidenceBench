@@ -1,0 +1,13 @@
+field,match,tp,fp,fn,precision,recall,f1
+taxon,exact,97,6,0,0.942,1.0,0.97
+taxon,overlap,97,6,0,0.942,1.0,0.97
+person,exact,18,0,0,1.0,1.0,1.0
+person,overlap,18,0,0,1.0,1.0,1.0
+locality,exact,44,7,9,0.863,0.83,0.846
+locality,overlap,48,1,5,0.98,0.906,0.941
+cited_work,exact,36,2,2,0.947,0.947,0.947
+cited_work,overlap,37,0,1,1.0,0.974,0.987
+substance,exact,0,4,0,0.0,0.0,0.0
+substance,overlap,0,4,0,0.0,0.0,0.0
+ALL_PRIMARY,exact,195,15,11,0.929,0.947,0.938
+ALL_PRIMARY,overlap,200,7,6,0.966,0.971,0.969
