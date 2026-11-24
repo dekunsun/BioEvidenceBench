@@ -2,9 +2,7 @@
 
 # BioEvidenceBench
 
-### 从 19 世纪的科学书页到数据库记录，可信的信息在哪一步丢失？
-
-识别、抽取、引证、关联、复核：AI 智能体要使用科学文献，也必须把这几步做对。
+### AI 智能体从历史科学文献中抽取信息、给出出处、关联数据库时，证据在哪里丢失？
 
 **Dekun Sun** · University of Pennsylvania · [ai4s.fyi](https://ai4s.fyi)
 

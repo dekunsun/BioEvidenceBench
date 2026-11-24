@@ -2,9 +2,7 @@
 
 # BioEvidenceBench
 
-### Where does trustworthy data get lost between a 19th-century page and a database record?
-
-Read, extract, cite, link, review: the steps an AI agent also has to get right before it can use the scientific literature.
+### Where do AI agents lose evidence when they extract, ground and link data from historical scientific literature?
 
 **Dekun Sun** · University of Pennsylvania · [ai4s.fyi](https://ai4s.fyi)
 
