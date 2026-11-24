@@ -56,6 +56,10 @@
 - **Lovell Reeve, *Conchologia iconica*, vol. 5（1849）**：历史贝类描述。
 - **Arthur G. Butler, *Birds of Great Britain and Ireland*, vol. 2（1907）**：历史鸟类学名和描述。
 
+<p align="center"><img src="docs/assets/overview/fig11_books_zh.png" width="820" alt="Reeve《Conchologia iconica》（1849）的文字页、同一卷的 Bulimus 图版 XVII，以及 Butler《Birds of Great Britain and Ireland》（1907）的一页"></p>
+
+<sub>两本书的真实书页（BHL 第 8967281、8992647 页，经 IMPACT 专家转录集，CC BY 3.0），以及 Reeve 同一卷的图版 XVII（Internet Archive，公有领域）。</sub>
+
 为了控制变量，同一张书页分别用三种文字输入模型：
 
 | 文字版本 | 含义 |
@@ -192,7 +196,7 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 
 这些发现对一个要决定下一笔钱或审核人力投在哪里的图书馆或博物馆意味着什么，写在[决策备忘录](docs/product.md#中文版)里。
 
-## 外部案例 · 《本草綱目》（探索性，古汉语）
+## 外部案例 · 《本草綱目》*Bencao gangmu*（Compendium of Materia Medica，探索性，古汉语）
 
 同样的方法换一种文字还管用吗？第一个试点用的是《本草綱目》（1578 年成书）文淵閣四庫全書本的六个半叶：一部药典，条目里有药名、植物、人名、地名和引用的书。参考文本是 Kanseki Repository 的转录，由作者逐行对照扫描核过；在任何模型抽取这些页之前，作者标注了 224 个提及（药物或生物、人名、地名、引用书名）。Claude Opus 5.5 用与英文书相同的证据规则，从四种文本版本里抽取。
 
@@ -203,7 +207,11 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 | Claude Haiku 5.5 直接读扫描 | 0.15 | 69%（87%） | 0.68 |
 | PaddleOCR 3.7（开源） | 0.26 | 68%（81%） | 0.72 |
 
-- **英文书的结论在这里重现：** 决定抽取质量的是名字能否完整保留，而不是整页字符错误率。Haiku 的字符错误比 PaddleOCR 少，但丢的名字一样多，得分反而更低。
+<sub>按六个半叶重抽样估计的 95% 区间：参考文本 0.98 [0.95, 0.99]，Opus OCR 0.87 [0.83, 0.91]，Haiku 0.68 [0.58, 0.79]，PaddleOCR 0.72 [0.60, 0.83]。六页之内分不出 Haiku 和 PaddleOCR 的高下（差值 −0.04 [−0.11, 0.03]）。</sub>
+
+<p align="center"><img src="docs/assets/overview/fig10_bencao_glyph_zh.png" width="820" alt="《本草綱目》写本页，框出人名陶弘景：写本上「弘」少一笔；Claude Opus 写成通行字形；金标准同时保留写本字形和规范形"></p>
+
+- **英文书的结论在这里重现：** 决定抽取质量的是名字能否完整保留，而不是整页字符错误率。Haiku 的字符错误比 PaddleOCR 少，但丢的名字一样多，得分也不比它高。两者丢名字的方式不同：Haiku 多是把字写成通行字形（丢的 68 个里有 30 个），PaddleOCR 多是读错字或打乱双行小注的阅读顺序（84 个里有 58 个）。
 - **新出现的一种损失：** Claude 读扫描时，常把写本上的异体字或避讳字写成通行字形（陶𢎞景 写成 陶弘景）。算不算错，会让 Opus 的名字保留率在 88% 和 98% 之间变化。英文书里与之相当的连字问题（如 æ）只造成 0 到 2 个点的差别。做古汉语评测，必须先说清记录是要忠于版本，还是只要能检索，并且两个分数都报。
 - **还不是独立结果：** 标注规范和抽取提示词都是从这六个半叶写出来的。一个 8 个半叶的测试集已按固定规则选定，配置已冻结，正在等作者标注。详见[试点报告](results/bencao_pilot/REPORT.md)、[标注规范](docs/notes/bencao_guide.md)、[测试计划](docs/notes/bencao_prereg.md)。
 

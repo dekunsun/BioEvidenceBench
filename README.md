@@ -56,6 +56,10 @@ The pilot uses two English-language works from the [Biodiversity Heritage Librar
 - **Lovell Reeve, *Conchologia iconica*, vol. 5 (1849):** historical descriptions of shells.
 - **Arthur G. Butler, *Birds of Great Britain and Ireland*, vol. 2 (1907):** historical bird names and descriptions.
 
+<p align="center"><img src="docs/assets/overview/fig11_books.png" width="820" alt="A text page of Reeve's Conchologia iconica (1849), the Bulimus plate XVII from the same volume, and a page of Butler's Birds of Great Britain and Ireland (1907)"></p>
+
+<sub>Real pages from the two books (BHL pages 8967281 and 8992647, via the IMPACT ground-truth set, CC BY 3.0) and plate XVII of the Reeve volume (Internet Archive, public domain).</sub>
+
 Each sampled page was read in three forms, keeping the underlying page constant:
 
 | Version | What it represents |
@@ -192,7 +196,7 @@ The trained model is [published for research](https://github.com/dekunsun/BioEvi
 
 What these findings mean for a library or museum deciding where to put its next unit of money or reviewer time is set out in the [decision memo](docs/product.md).
 
-## External case · 本草綱目 (exploratory, classical Chinese)
+## External case · *Bencao gangmu* 本草綱目, the Compendium of Materia Medica (exploratory, classical Chinese)
 
 Does the same method work on a different script? A first pilot applies it to six half-leaves of the *Bencao gangmu* (本草綱目, completed 1578), in the Siku quanshu manuscript copy: a pharmacopoeia whose entries name drugs, plants, people, places and the books they quote. The reference text is the Kanseki Repository transcription, checked line by line against the scan by the author, who then labelled 224 mentions (drug or organism, person, place, cited work) before any model extracted from these pages. Claude Opus 5.5 extracted with the same evidence rule as for the English books, from four versions of the text.
 
@@ -203,7 +207,11 @@ Does the same method work on a different script? A first pilot applies it to six
 | Claude Haiku 5.5 reading the scan | 0.15 | 69% (87%) | 0.68 |
 | PaddleOCR 3.7 (open source) | 0.26 | 68% (81%) | 0.72 |
 
-- **The English finding repeats:** whether the names survive OCR tracks extraction; the overall character error rate does not. Haiku has fewer character errors than PaddleOCR but loses as many names, and scores lower.
+<sub>Value F1 with 95% intervals from resampling the six half-leaves: reference 0.98 [0.95, 0.99], Opus OCR 0.87 [0.83, 0.91], Haiku 0.68 [0.58, 0.79], PaddleOCR 0.72 [0.60, 0.83]. Haiku and PaddleOCR are not distinguishable on six pages (difference −0.04 [−0.11, 0.03]).</sub>
+
+<p align="center"><img src="docs/assets/overview/fig10_bencao_glyph.png" width="820" alt="A Bencao gangmu manuscript page with the name Tao Hongjing boxed: the manuscript writes 弘 one stroke short; Claude Opus wrote the standard form; the gold record keeps the manuscript form and the standard form"></p>
+
+- **The English finding repeats:** whether the names survive OCR tracks extraction; the overall character error rate does not. Haiku makes fewer character errors than PaddleOCR but loses as many names, and does not score higher. They lose names differently: Haiku mostly writes standard forms of characters (30 of its 68 lost names), PaddleOCR mostly misreads them or breaks the reading order of the small two-column notes (58 of 84).
 - **A new kind of loss:** the Claude readers often write the standard form of a character where the manuscript has a variant or a taboo form (陶𢎞景 becomes 陶弘景). Counting that as an error or not moves Opus from 88% to 98% of names intact. In the English books the comparable effect, ligatures such as æ, moves the figure by 0 to 2 points. For classical Chinese, an evaluation has to say whether a record must be faithful to the edition or only findable, and score both.
 - **Not yet an independent result:** the annotation guide and the extraction prompt were written from these same six half-leaves. An eight-half-leaf test set has been chosen by a fixed rule and the configuration frozen; it waits for the author's labels. Details: [pilot report](results/bencao_pilot/REPORT.md), [annotation guide](docs/notes/bencao_guide.md), [test plan](docs/notes/bencao_prereg.md).
 

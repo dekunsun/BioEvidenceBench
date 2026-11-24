@@ -3,6 +3,47 @@
 *2026-11-23. Built by `src/bencao_pilot.py`. No model was called, nothing was labelled, no money was
 spent. Feasibility of the sources: `docs/notes/bencao_feasibility.md`.*
 
+## Summary (2026-11-24): what the pilot can and cannot say
+
+*This report grew in the order the work was done; this section is the short version. All of it is
+development work on six half-leaves the guide and prompt were written from. An eight-half-leaf test set is
+chosen and the configuration frozen (`data/bencao/FREEZE_bencao.json`, plan `docs/notes/bencao_prereg.md`);
+it waits for the author's labels.*
+
+**What was done.** The author checked six half-leaves of the Kanseki Repository transcription against the
+scan and labelled 224 mentions by hand (drug or organism, person, place, cited work), about five hours.
+Three readers turned the scans into text (Claude Opus 5.5, Claude Haiku 5.5, PaddleOCR 3.7); Claude Opus 5.5
+then extracted mentions from each text and from the checked reference, quoting each one from its line.
+Cost of all model calls in this pilot about $2.5.
+
+**What it shows** (value F1 on the primary fields, 95% intervals from resampling the six half-leaves,
+`value_f1_bootstrap_p2.csv`):
+
+| Text the extractor read | Names intact before extraction (variants folded) | Value F1 |
+| --- | ---: | ---: |
+| Scan-checked reference | 100% | 0.98 [0.95, 0.99] |
+| Claude Opus 5.5 reading the scan | 88% (98%) | 0.87 [0.83, 0.91] |
+| Claude Haiku 5.5 reading the scan | 69% (87%) | 0.68 [0.58, 0.79] |
+| PaddleOCR 3.7 | 68% (81%) | 0.72 [0.60, 0.83] |
+
+1. **On the right text, extraction is close to the labels** (0.98). The remaining differences are rule
+   questions (a place inside a drug name, a name inside a book title) and words the author did not label.
+2. **What OCR does to names decides the result**, as in the English books. Every OCR text is clearly below
+   the reference (Opus −0.11 [−0.15, −0.06]); Haiku and PaddleOCR cannot be told apart on six pages
+   (−0.04 [−0.11, 0.03]) although Haiku's character error rate is much lower (0.15 against 0.26).
+3. **The OCR systems fail differently** (`name_loss_by_text.csv`): the Claude readers write the standard form
+   of a character where the manuscript has a variant or a taboo form (Haiku: 30 of 68 lost names); PaddleOCR
+   misreads characters and breaks the reading order of the small two-column notes (58 of 84).
+4. **New compared with English: glyph fidelity and meaning are different targets.** Opus keeps 88% of names
+   letter for letter but 98% once variant forms are allowed. Whether that is an error depends on the use
+   (an edition-faithful record or a searchable one), so both numbers are reported; in the English books the
+   comparable ligature effect is 0 to 2 points.
+
+**What it cannot show yet.** Whether these hold on pages the rules were not written from (the test set);
+whether the 98% survives new variants (the variant table was collected from these pages); anything about
+other editions, other works or other OCR systems; and the 18 `expert_pending` labels still need a person
+with domain training.
+
 ## What was built
 
 | Half-leaf | Content | Lines | Characters | Legacy OCR CER | IA image |
