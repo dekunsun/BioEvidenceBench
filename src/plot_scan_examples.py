@@ -58,10 +58,11 @@ def text_of(path: str, pid: str, key: str, span: tuple[str, str] | None = None) 
 def frame(lang: str, W: float, H: float, title: str, sub: str, notes: list[str]):
     fig = plt.figure(figsize=(W, H), dpi=150, facecolor=BG)
     fig.patches.append(Rectangle((0, 1 - 0.07 / H), 1, 0.07 / H, transform=fig.transFigure, color=BAND))
-    fig.text(0.04, 1 - 0.32 / H, title, fontsize=21, fontweight="bold", color=NAVY, va="top", family=FONT[lang])
-    fig.text(0.04, 1 - 0.78 / H, sub, fontsize=11.5, color=GREY, va="top", family=FONT[lang])
+    fam = [FONT[lang], "WenQuanYi Zen Hei"]               # CJK fallback for Chinese names in English figures
+    fig.text(0.04, 1 - 0.32 / H, title, fontsize=21, fontweight="bold", color=NAVY, va="top", family=fam)
+    fig.text(0.04, 1 - 0.78 / H, sub, fontsize=11.5, color=GREY, va="top", family=fam)
     for k, part in enumerate(notes):
-        fig.text(0.04, (0.42 - k * 0.22) / H, part, fontsize=8.5, color=GREY, style="italic", family=FONT[lang])
+        fig.text(0.04, (0.42 - k * 0.22) / H, part, fontsize=8.5, color=GREY, style="italic", family=fam)
     return fig
 
 
@@ -572,8 +573,117 @@ def poster_linking_strip() -> Path:
     return p
 
 
+def cjk(fig, xc, yc, text: str, colours: list[str], W: float, size: float) -> None:
+    """Chinese characters centred one em apart (value() assumes a Latin monospace advance)."""
+    step = size / 72 / W * 1.05
+    x0 = xc - len(text) * step / 2 + step / 2
+    for i, ch in enumerate(text):
+        fig.text(x0 + i * step, yc, ch, ha="center", va="center", fontsize=size, fontweight="bold",
+                 color=colours[i], family="WenQuanYi Zen Hei", zorder=5)
+
+
+def bencao_glyph(lang: str) -> Path:
+    """本草綱目 (Siku quanshu manuscript copy), half-leaf 036-1b: the whole page, the name 陶𢎞景 boxed; then
+    what Claude Opus wrote when reading the scan (the standard form 陶弘景) and what the gold record keeps
+    (the manuscript's form, with the standard form beside it). Strings are read from the project files;
+    𢎞 (弘 without its last stroke, a taboo form) has no glyph in the fonts here, so it is shown cut from
+    the scan. Scan: CADAL via Internet Archive 06048793.cn, public domain."""
+    pb = "036-1b"
+    im = Image.open(ROOT / "results" / "bencao_pilot" / "pages" / f"{pb}.jpg").convert("RGB")
+    gold = pd.read_csv(ROOT / "gold" / "gold_mentions_bencao_gloria.csv", keep_default_na=False)
+    row = gold[(gold.page_id == pb) & (gold.text == "陶𢎞景")].iloc[0]
+    opus = (ROOT / "data" / "bencao" / "claude_opus" / f"{pb}.txt").read_text(encoding="utf-8")
+    assert row.restored_form in opus                      # Opus wrote the standard form on this page
+    chars = [(1538, 1972, 1620, 2058), (1538, 2056, 1620, 2142), (1538, 2140, 1620, 2228)]   # 陶 𢎞 景
+    strip = Image.new("RGB", (sum(c[2] - c[0] for c in chars) + 24, max(c[3] - c[1] for c in chars)), "white")
+    x = 0
+    for c in chars:
+        strip.paste(im.crop(c), (x, 0)); x += c[2] - c[0] + 12
+    L = {"en": ("Same name, two right answers", "Bencao gangmu (Compendium of Materia Medica), Siku quanshu manuscript copy, half-leaf 036-1b",
+                ["On the manuscript", "Claude Opus 5.5 reading the scan", "Kept in the gold record"],
+                ["the author Tao Hongjing, with 弘 written one stroke short", "standard form: wrong for the edition, fine for search",
+                 "text keeps the manuscript's form · restored form for search"],
+                ["Scan: CADAL via Internet Archive (06048793.cn), public domain. Transcription: Kanseki Repository, CC BY-SA 4.0.",
+                 "The 18th-century copyists left a stroke out of 弘 to avoid the Qianlong emperor's personal name (Hongli)."]),
+         "zh": ("同一个名字，两种正确答案", "《本草綱目》文淵閣四庫全書本，半叶 036-1b",
+                ["写本上", "Claude Opus 5.5 直接读扫描", "金标准记录"],
+                ["人名陶弘景，「弘」字少写最后一笔", "写成通行字形：对版本是错，对检索没问题",
+                 "原文照写本字形 · 规范形供检索"],
+                ["扫描：CADAL，经 Internet Archive（06048793.cn），公有领域。转录：Kanseki Repository，CC BY-SA 4.0。",
+                 "四库馆臣为避乾隆皇帝名讳（弘曆），把「弘」字少写一笔。"])}[lang]
+    W, H = 12, 6.4
+    fig = frame(lang, W, H, L[0], L[1], L[4])
+    bottom, top = 0.15, 1 - 1.15 / H
+    sh = top - bottom
+    sw = sh * H / W * im.width / im.height
+    ax = fig.add_axes([0.04, bottom, sw, sh])
+    ax.imshow(im); ax.set_xticks([]); ax.set_yticks([])
+    for sp in ax.spines.values():
+        sp.set_color(EDGE); sp.set_linewidth(1.0)
+    ax.add_patch(Rectangle((chars[0][0] - 14, chars[0][1] - 10), chars[0][2] - chars[0][0] + 28,
+                           chars[2][3] - chars[0][1] + 20, fill=False, ec=RED, lw=2.4))
+    x0 = 0.04 + sw + 0.05
+    cw, gap = 0.96 - x0, 0.05
+    ch = (top - bottom - 2 * gap) / 3
+    kinds = ["plain", "bad", "good"]
+    for i in range(3):
+        y = top - (i + 1) * ch - i * gap
+        card(fig, lang, x0, y, cw, ch, kinds[i], L[2][i], None)
+        mid = y + ch * 0.50
+        if i == 0:
+            image_in(fig, strip, x0 + cw / 2, mid, cw * 0.5, ch * 0.42, W, H)
+        elif i == 1:
+            cjk(fig, x0 + cw / 2, mid, row.restored_form, [NAVY, RED, NAVY], W, 22)    # 弘: the changed character
+        else:
+            image_in(fig, strip, x0 + cw * 0.30, mid, cw * 0.30, ch * 0.34, W, H)
+            fig.text(x0 + cw * 0.50, mid, "·", ha="center", va="center", fontsize=16, color=GREY)
+            cjk(fig, x0 + cw * 0.70, mid, row.restored_form, [TEAL] * 3, W, 20)
+        fig.text(x0 + cw / 2, y + 0.022, L[3][i], ha="center", va="bottom", fontsize=9.5, color=GREY,
+                 family=[FONT[lang], "WenQuanYi Zen Hei"], zorder=5)
+        if i < 2:
+            fig.patches.append(FancyArrowPatch((x0 + cw / 2, y - 0.008), (x0 + cw / 2, y - gap + 0.008),
+                                               transform=fig.transFigure, arrowstyle="-|>", mutation_scale=14,
+                                               color=STONE, lw=1.6))
+    return save(fig, "fig10_bencao_glyph", lang)
+
+
+def book_pages(lang: str) -> Path:
+    """The two English books of the main study, one real page each (bhl-impact-gt, CC BY 3.0), and the
+    shell plate from the same Reeve volume (Internet Archive, public domain)."""
+    pages = [("8967281", {"en": "Reeve, Conchologia iconica, vol. 5 (1849)\nBHL page 8967281: shell descriptions",
+                          "zh": "Reeve《Conchologia iconica》第 5 卷（1849）\nBHL 第 8967281 页：贝壳描述"}),
+             (None, {"en": "Same volume, plate XVII\nshells of the genus Bulimus",
+                     "zh": "同一卷，图版 XVII\nBulimus 属的贝壳"}),
+             ("8992647", {"en": "Butler, Birds of Great Britain and Ireland, vol. 2 (1907)\nBHL page 8992647: bird accounts",
+                          "zh": "Butler《Birds of Great Britain and Ireland》第 2 卷（1907）\nBHL 第 8992647 页：鸟类记述"})]
+    W, H = 12, 6.6
+    fig = plt.figure(figsize=(W, H), dpi=150, facecolor=BG)
+    fig.patches.append(Rectangle((0, 1 - 0.07 / H), 1, 0.07 / H, transform=fig.transFigure, color=BAND))
+    plate = ROOT / "docs" / "assets" / "overview" / "reeve_plate17.jpg"
+    if not plate.exists():
+        plate = ROOT / "docs" / "assets" / "overview" / "reeve_plate17.png"
+    ims = [page(p) if p else Image.open(plate).convert("RGB") for p, _ in pages]
+    bottom, top = 0.17, 1 - 0.25 / H
+    hgt = top - bottom
+    widths = [hgt * H / W * i.width / i.height for i in ims]
+    gap = (0.92 - sum(widths)) / 2
+    x = 0.04
+    for im, (pid, cap), w in zip(ims, pages, widths):
+        ax = fig.add_axes([x, bottom, w, hgt])
+        ax.imshow(im); ax.set_xticks([]); ax.set_yticks([])
+        for sp in ax.spines.values():
+            sp.set_color(EDGE); sp.set_linewidth(1.0)
+        fig.text(x + w / 2, bottom - 0.02, cap[lang], ha="center", va="top", fontsize=9.5, color=NAVY,
+                 family=[FONT[lang], "DejaVu Sans"], linespacing=1.4)
+        x += w + gap
+    note = {"en": "Pages: Biodiversity Heritage Library via the IMPACT ground-truth set (finebooks/bhl-impact-gt), CC BY 3.0. Plate: Internet Archive copy of the same volume, public domain.",
+            "zh": "书页：Biodiversity Heritage Library，经 IMPACT 专家转录集（finebooks/bhl-impact-gt），CC BY 3.0。图版：同一卷在 Internet Archive 的扫描，公有领域。"}[lang]
+    fig.text(0.04, 0.03, note, fontsize=8.5, color=GREY, style="italic", family=[FONT[lang], "DejaVu Sans"])
+    return save(fig, "fig11_books", lang)
+
+
 if __name__ == "__main__":
     print(poster_strip(), poster_fluent_strip(), poster_linking_strip())
     for lang in ("en", "zh"):
-        for f in (pipeline_trace, scan_name, fluent_error, linking_names, transcription_typo):
+        for f in (pipeline_trace, scan_name, fluent_error, linking_names, transcription_typo, bencao_glyph, book_pages):
             print(f(lang))
