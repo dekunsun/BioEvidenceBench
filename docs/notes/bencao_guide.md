@@ -1,6 +1,6 @@
-# 本草綱目 case: annotation guide v0.2
+# 本草綱目 case: annotation guide v0.3
 
-*v0.2, 2026-11-23: rule 10 (historical forms and restoration) added on the author's decisions. v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
+*v0.3, 2026-11-24: rules 11–14 from the first labelled page (036-1b), adopted by the author on Claude's recommendation without her own research ("按照你的建议来，我没有相应的知识也没有research"); to be revisited with a domain expert. v0.2, 2026-11-23: rule 10 (historical forms and restoration) added on the author's decisions. v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
 the draft left open (6, 7) take the defaults stated below. No page has been labelled yet. Examples come from
 half-leaves 036-1a, 036-2a and 036-2b, which are **not** among the six pilot pages, so nothing here
 pre-fills a label on a pilot page.*
@@ -77,6 +77,20 @@ pre-fills a label on a pilot page.*
       `restoration_evidence` on the same row.
     - **OCR.** 𢎞 read as 弘 is a glyph fold in the auxiliary metric, not an error there; 元 read as 玄
       (or the reverse) is never folded.
+
+11. **Book plus section (v0.3).** A cited book followed directly by a section of it, written without a
+    break, is one `cited_work` span: `詩唐風` (《詩·唐風》, the Tang airs of the Book of Songs). Book and
+    section are separated at the linking step, not in the span.
+12. **Regional drug names (v0.3).** A place name joined to a drug name as one name for a regional kind of
+    the drug is one `taxon` span: `枹䍐草` (licorice from 枹䍐). The place inside it is not labelled again;
+    a separate mention of the place (`枹䍐乃西羌地名`) is a `locality` as usual.
+13. **Peoples as territory (v0.3).** The name of a people used for the land they live in is a `locality`
+    (`西羌地名`, "a place name in the land of the Western Qiang"). Used for the people themselves it is not
+    labelled; `person` is for named individuals only.
+14. **Names split by a line break.** As in the main guide (2.0.3): one span across the break, e.g. `上` at
+    the end of one manuscript column and `郡` at the start of the next form one `locality` `上郡`.
+    Expert questions that are about facts, not rules (is `蜀漢中` one place or two; is `大苦` a name of the
+    plant in `䖅大苦`), stay `expert_pending` until a domain expert answers.
 
 ## Linking (later)
 
