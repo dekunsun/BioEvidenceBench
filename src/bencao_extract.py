@@ -5,6 +5,7 @@ author's labels (exploratory, dev: the guide and these labels came from the same
     python src/bencao_extract.py run   --text paddleocr                      # same, on an OCR level (2026-11-24, "继续做吧")
     python src/bencao_extract.py relocate <run folder>   # re-locate saved answers, no API call
     python src/bencao_extract.py score <run folder>
+    python src/bencao_extract.py summary <run folder> ...   # one table across text versions
 
 Design as in the English books' G1 condition: the input lines are numbered; for each mention the model
 returns the field, the line number and a verbatim quote; code finds the quote in that line (or across the
@@ -217,27 +218,29 @@ def aligned(pred: pd.DataFrame, text: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def value_scores(pred: pd.DataFrame, gold: pd.DataFrame) -> list[dict]:
+def value_scores(pred: pd.DataFrame, gold: pd.DataFrame, folded: bool = False) -> list[dict]:
     """Value-level P/R/F1: per half-leaf and field, the multiset of extracted strings against the gold
     strings (line breaks removed). Comparable across text versions without alignment, as in the English
     books' value F1. Optional (expert_pending) gold values neither count nor penalise."""
     from collections import Counter
+    from bencao_variants import fold
+    norm = (lambda t: fold(t.replace("\n", ""))) if folded else (lambda t: t.replace("\n", ""))
     out = []
     for name, fields in [(f, [f]) for f in FIELDS] + [("ALL_PRIMARY", PRIMARY)]:
         tp = fp = fn = 0
         for pb in PAGES:
             for f in fields:
                 g = gold[(gold.page_id == pb) & (gold.field == f)]
-                req = Counter(t.replace("\n", "") for t in g[g.adjudication != "expert_pending"].text)
-                opt = Counter(t.replace("\n", "") for t in g[g.adjudication == "expert_pending"].text)
-                p = Counter(str(v).replace("\n", "") for v in pred[(pred.page_id == pb) & (pred.field == f)].value)
+                req = Counter(norm(t) for t in g[g.adjudication != "expert_pending"].text)
+                opt = Counter(norm(t) for t in g[g.adjudication == "expert_pending"].text)
+                p = Counter(norm(str(v)) for v in pred[(pred.page_id == pb) & (pred.field == f)].value)
                 hit = req & p
                 rest = p - hit
                 fp += sum((rest - opt).values())
                 tp += sum(hit.values())
                 fn += sum((req - hit).values())
         P, R, F = prf(tp, fp, fn)
-        out.append({"field": name, "match": "value", "tp": tp, "fp": fp, "fn": fn, "precision": P, "recall": R, "f1": F})
+        out.append({"field": name, "match": "value_folded" if folded else "value", "tp": tp, "fp": fp, "fn": fn, "precision": P, "recall": R, "f1": F})
     return out
 
 
@@ -296,7 +299,7 @@ def score(run_dir: str) -> None:
             P, R, F = prf(tp, fp, fn)
             rows.append({"field": name, "match": mode, "tp": tp, "fp": fp, "fn": fn, "precision": P, "recall": R, "f1": F})
     gold_all = gold
-    rows += value_scores(vals, gold_all)
+    rows += value_scores(vals, gold_all) + value_scores(vals, gold_all, folded=True)
     s = pd.DataFrame(rows)
     s.insert(0, "text", text)
     s.to_csv(run / "scores.csv", index=False)
@@ -306,10 +309,26 @@ def score(run_dir: str) -> None:
     print("invalid evidence:", (allp.status == "invalid_evidence").sum(), "of", len(allp), "| unaligned:", unaligned)
 
 
+def summary(run_dirs: list[str]) -> None:
+    """One table across text versions: name preservation and value F1 per field (results/bencao_pilot/)."""
+    rows = []
+    for d in run_dirs:
+        sc = pd.read_csv(Path(d) / "scores.csv")
+        text = sc.text.iloc[0]
+        row = {"text": text, "run": Path(d).name, **{k: v for k, v in preservation(text).items() if k != "text"}}
+        for _, r in sc[sc.match.isin(["value", "value_folded", "exact"])].iterrows():
+            row[f"{r.field}_{r.match}_f1"] = r.f1
+        rows.append(row)
+    out = ROOT / "results" / "bencao_pilot" / "ocr_to_extraction.csv"
+    pd.DataFrame(rows).to_csv(out, index=False)
+    print(pd.DataFrame(rows)[["text", "share", "share_folded", "ALL_PRIMARY_value_f1", "ALL_PRIMARY_value_folded_f1",
+                              "taxon_value_f1", "person_value_f1", "locality_value_f1", "cited_work_value_f1"]].to_string(index=False))
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["run", "relocate", "score"])
-    ap.add_argument("run_dir", nargs="?")
+    ap.add_argument("cmd", choices=["run", "relocate", "score", "summary"])
+    ap.add_argument("run_dir", nargs="*")
     ap.add_argument("--model", default="claude-opus-5-5", choices=list(PRICES))
     ap.add_argument("--max-usd", type=float, default=1.0)
     ap.add_argument("--text", default="verified_plain", choices=TEXTS)
@@ -317,6 +336,8 @@ if __name__ == "__main__":
     if a.cmd == "run":
         run(a.model, a.max_usd, a.text)
     elif a.cmd == "relocate":
-        relocate(a.run_dir)
+        relocate(a.run_dir[0])
+    elif a.cmd == "summary":
+        summary(a.run_dir)
     else:
-        score(a.run_dir)
+        score(a.run_dir[0])

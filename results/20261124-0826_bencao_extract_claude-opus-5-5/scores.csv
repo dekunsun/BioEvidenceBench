@@ -17,3 +17,9 @@ verified_plain,locality,value,45,6,8,0.882,0.849,0.865
 verified_plain,cited_work,value,36,2,2,0.947,0.947,0.947
 verified_plain,substance,value,0,4,0,0.0,0.0,0.0
 verified_plain,ALL_PRIMARY,value,196,14,10,0.933,0.951,0.942
+verified_plain,taxon,value_folded,97,6,0,0.942,1.0,0.97
+verified_plain,person,value_folded,18,0,0,1.0,1.0,1.0
+verified_plain,locality,value_folded,45,6,8,0.882,0.849,0.865
+verified_plain,cited_work,value_folded,36,2,2,0.947,0.947,0.947
+verified_plain,substance,value_folded,0,4,0,0.0,0.0,0.0
+verified_plain,ALL_PRIMARY,value_folded,196,14,10,0.933,0.951,0.942

@@ -1,0 +1,68 @@
+{
+ "run_id": "20261124-0836_bencao_extract_claude-opus-5-5_claude_haiku",
+ "model": "claude-opus-5-5",
+ "prompt_version": "bencao-p1-guide-v0.3",
+ "effort": "medium",
+ "max_tokens": 8000,
+ "temperature": "provider default",
+ "system": "You extract named entities from the 本草綱目 (Siku quanshu manuscript copy). You never rewrite the text: for every mention you give the line number and copy the characters exactly as they appear on that line.",
+ "rules": "Find every mention of these fields in the numbered text below (one manuscript column per line; small\ntwo-column notes are already joined, right sub-column first).\n\nFields\n- taxon: the name of a drug, plant or animal, and any name used for a drug: entry headings, alternative names\n  listed under 釋名 (set alias = true for these), every drug in a prescription, organisms named in comparisons\n  (槐 in 甘草枝葉悉如槐), and regional drug names made of a place plus a drug name (one span; the place inside it\n  is not labelled again).\n- person: a named person, including short forms such as 𢎞景, 權, 頌, 時珍.\n- locality: a place. A chain of place names written together from narrow to wide is one span; generic words such\n  as 川谷 or 山谷 count only as part of a named place; the name of a people used for its land is a locality.\n- cited_work: a book cited as a source, including the source tags in small notes (別録 after an alternative name)\n  and a book plus one of its sections written together as one span. Generic references are not labelled.\n- substance: minerals, water, earth and other non-organic drugs.\n\nRules\n- Copy characters exactly, including variant and taboo forms (宻, 𢎞, 䖅); never normalise or correct.\n- Every occurrence is its own mention, in reading order.\n- A name split by a line break: give the line where it starts and quote the whole name without the break.\n- Running heads (欽定四庫全書, the volume title) are not mentions.\n\nExample (from half-leaf 036-1a, not part of this task):\n  line 6: 釋名宻甘别録宻草别録美草别録 → taxon 宻甘 (alias), cited_work 别録, taxon 宻草 (alias), cited_work 别録, taxon 美草 (alias), cited_work 别録\n  line 7: 别録𢎞景曰此草最為衆藥之主 → cited_work 别録, person 𢎞景\n",
+ "schema": {
+  "type": "object",
+  "properties": {
+   "mentions": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "field": {
+       "type": "string",
+       "enum": [
+        "taxon",
+        "person",
+        "locality",
+        "cited_work",
+        "substance"
+       ]
+      },
+      "line": {
+       "type": "integer"
+      },
+      "quote": {
+       "type": "string"
+      },
+      "alias": {
+       "type": "boolean"
+      }
+     },
+     "required": [
+      "field",
+      "line",
+      "quote",
+      "alias"
+     ],
+     "additionalProperties": false
+    }
+   }
+  },
+  "required": [
+   "mentions"
+  ],
+  "additionalProperties": false
+ },
+ "text": "claude_haiku",
+ "input": "data/bencao/claude_haiku/<half-leaf>.txt, numbered lines",
+ "input_sha256": {
+  "036-1b": "ba20b8cb0d84be6787fe60dfae6dcf0291a8a04007f4badb8d880fc13c460817",
+  "036-5a": "403f165c678ea962a760477b718f291713edf93f653632cfa9cd576998bc0b0f",
+  "036-7b": "42d3d86400fb10b161d2eb1cd1df7901146f8be9565a11008424c6cc00d2f6a9",
+  "036-12b": "7837fa3be2e718c917395046bca49d7288b91770c47e381afde5338edc140423",
+  "036-13a": "bc543f24ac0109e0ef940b3373e757056efcc9a083979872131e41f9a49c76e3",
+  "036-30a": "74932a37933ebe0c75f49331e4d7914d9d963b8a0af80246f38aae9c04d19a6c"
+ },
+ "max_usd": 0.6,
+ "usd_total": 0.247,
+ "exploratory": true,
+ "dev": true,
+ "approved": "author, 2026-11-24 (\"跑吧\")"
+}

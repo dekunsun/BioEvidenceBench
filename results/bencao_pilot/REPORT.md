@@ -238,3 +238,38 @@ What the 26 exact-match differences are (`errors.csv`):
 No person was missed or invented; every taxon in the gold was found. Next, if wanted: the same run on
 PaddleOCR and Haiku OCR text (the OCR → extraction question of the English books), after deciding the
 place-chain rule.
+
+## From OCR to extraction (2026-11-24, the author: "继续做吧")
+
+The same extraction (Claude Opus 5.5, same prompt and schema) run on three OCR versions of the six
+half-leaves, $0.73 together (`results/20261124-0835…_paddleocr`, `…0836…_claude_haiku`,
+`…0838…_claude_opus`; table `results/bencao_pilot/ocr_to_extraction.csv`, `python src/bencao_extract.py
+summary <runs>`). Main metric: **value F1**, as in the English books: per half-leaf and field, the
+extracted strings against the author's strings, so a name counts only if every character is right.
+`folded` forgives glyph variants and missing-stroke taboo forms from `data/bencao/variant_table.csv`
+(auxiliary, guide rule 10). "Names intact" = share of the 206 required gold values that occur letter for
+letter in the text before any extraction.
+
+| Text given to the extractor | OCR CER (median) | Names intact (folded) | Value F1 primary (folded) | taxon | person | locality | cited_work |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Scan-verified reference | 0 | 1.00 (1.00) | **0.94** (0.94) | 0.97 | 1.00 | 0.87 | 0.95 |
+| Claude Opus OCR | 0.03 | 0.88 (0.98) | **0.83** (0.91) | 0.83 | 0.80 | 0.78 | 0.90 |
+| Claude Haiku OCR | 0.15 | 0.69 (0.87) | **0.63** (0.79) | 0.62 | 0.73 | 0.75 | 0.47 |
+| PaddleOCR 3.7 | 0.26 | 0.68 (0.81) | **0.68** (0.78) | 0.67 | 0.71 | 0.76 | 0.55 |
+
+Reading:
+
+- As in the English books, the share of names that survive OCR tracks extraction better than CER does:
+  Haiku has the lower CER (0.15 against 0.26) but PaddleOCR keeps as many names (0.68–0.69) and scores a
+  little higher (0.68 against 0.63). Four text versions, six pages: an observation, not a correlation.
+- Opus OCR's CER is 0.03, yet one name in eight breaks, mostly because it writes the standard form where
+  the scan has a variant (𢎞景 → 弘景, 宻 → 密). Folded, it loses about 3 points against the reference.
+  Whether such a name is "wrong" depends on the use: wrong for an edition-faithful record, harmless for
+  linking (guide rule 10 keeps the scan's form in gold and the standard form in `restored_form`).
+- Haiku OCR loses cited works most (0.47): the small two-column source notes (別録 and others) are where
+  its reading order and characters fail.
+- 0–1 invalid quotes per run: the evidence check holds on OCR text too; it cannot tell whether the OCR
+  text itself is right.
+
+Same caveats as above: not blind, six half-leaves, one extraction model; the PaddleOCR detector size was
+chosen on these pages.
