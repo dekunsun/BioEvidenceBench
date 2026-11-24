@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <title>BioEvidenceBench poster</title>
 <style>
-@page { size: 24in 36in; margin: 0; }
+@page { size: 841mm 1189mm; margin: 0; }  /* A0 portrait; the 27 x 38.18 in layout below is zoomed to fill it */
 :root{
   --ink:#15201c; --soft:#4d5a55; --faint:#6f7b76; --rule:#d9dee6; --panel:#ffffff; --ground:#ffffff;
   --accent:#011F5B; --accent-soft:#e9edf5; --anom:#011F5B; --unk:#011F5B; --unk-soft:#e9edf5; --part:#4d5a55; --part-soft:#eef1f0;
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;width:24in;height:36in;background:var(--ground);color:var(--ink);
+html,body{margin:0;padding:0;width:841mm;height:1189mm;overflow:hidden;background:var(--ground);color:var(--ink);
   font-family:"Helvetica Neue",Helvetica,Arial,"Noto Sans",sans-serif;font-size:26px;line-height:1.33}
-.poster{width:24in;height:36in;overflow:hidden;box-sizing:border-box;padding:0.733in 0.8in 0.533in;display:grid;grid-template-rows:auto 1fr;gap:0.3in}
+.poster{zoom:1.2263;width:27in;height:38.15in;overflow:hidden;box-sizing:border-box;padding:0.733in 0.8in 0.533in;display:grid;grid-template-rows:auto 1fr;gap:0.3in}
 header{display:grid;grid-template-columns:1fr auto;gap:0.533in;align-items:center;background:var(--accent);color:#fff;margin:-0.733in -0.8in 0;padding:0.46in 0.8in 0.40in}
 .brand{display:grid;justify-items:center;gap:.75in;align-self:center}
 .brand .penn{width:3.5in;display:block}
@@ -175,7 +175,7 @@ footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
 <style>
 #r1{grid-template-columns:0.40fr 0.60fr}
 #r2{grid-template-columns:0.70fr 0.30fr}
-#r3{grid-template-columns:0.60fr 0.40fr}
+#r3{grid-template-columns:0.54fr 0.46fr}
 .charts2{display:grid;grid-template-columns:1fr 1fr;gap:.35in;align-items:start}
 .charts3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.3in;align-items:start}
 .dwide{margin-top:.2in}
@@ -206,9 +206,9 @@ td.b{font-weight:700}
 <div class="poster">
 <header>
   <div>
-    <p class="kicker">Work in progress · 2026</p>
-    <h1>Where Is Trustworthy Data Lost Between the Page and the Database?</h1>
-    <p class="key"><b>BioEvidenceBench · Key finding:</b> On two English printed books, most reliability was lost at OCR, and modern OCR won it back (value F1 0.60–0.64 → 0.95–0.98). After that, linking names to today's taxonomy and an undefined scope limited trust, not the extraction model.</p>
+    <p class="kicker">Deep Matters 2026 · Agents for Science · an evaluation of the evidence-handling steps a scientific agent relies on, not itself an agent</p>
+    <h1>Where do AI agents lose evidence when they extract, ground and link data from historical scientific literature?</h1>
+    <p class="key"><b>BioEvidenceBench · Key finding:</b> most reliability was lost at OCR, and modern OCR won it back (value F1 0.60–0.64 → 0.95–0.98). After that, name linking and scope limited trust, not the extraction model.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS</span></p>
   </div>
   <div class="brand">
@@ -254,6 +254,7 @@ td.b{font-weight:700}
       <div><span class="v">0.90 / 0.95</span><span class="m">two-labeller agreement, exact / overlap</span></div>
     </div>
     <p class="gate"><b>Frozen</b> (hashes in FREEZE.json) before the test pages ran; test outputs sealed until then.</p>
+    <p class="note">Design borrowed from Lei, Docherty &amp; Cooper (2024, <i>Digital Discovery</i>; micrographs in materials papers): label before seeing model output, compare with keyword baselines. Here applied to a different question.</p>
   </div>
 </div>
 </div>
@@ -280,14 +281,25 @@ td.b{font-weight:700}
       <p class="cap">Plain lookup <span class="tagpre">pre-reg.</span>: 14 of 34 lost.</p>
     </div>
   </div>
+  <div class="charts2 dwide">
+    <div>
+      <p class="sub-h">On the page · a fluent OCR error looks like a real name</p>
+      <figure><img src="fig/fluent_poster.png" alt="Reeve 8967281: printed Turritella brevialis, read right by legacy OCR and dots.mocr, written as Turritella brevisis by DeepSeek-OCR-2"></figure>
+      <p class="cap">Two letters barely move the page error rate; only a check on the names catches it.</p>
+    </div>
+    <div>
+      <p class="sub-h">On the page · read correctly, still not linked</p>
+      <figure><img src="fig/linking_page_poster.png" alt="Butler 8992647: printed Motacilla beema; a plain GBIF lookup finds only the genus Motacilla; the accepted name today is Motacilla flava"></figure>
+      <p class="cap">The name changed since 1907; the plain lookup stops at the genus.</p>
+    </div>
+  </div>
   <div class="dwide">
-    <p class="sub-h">D · The extraction model matters little; the OCR matters a lot <span class="tagexp">exploratory</span></p>
-    <table>
-      <tr><th>Value F1, Butler / Reeve</th><th class="num">Haiku 5.5</th><th class="num">Sonnet 5.5</th><th class="num">Opus 5.5</th><th class="num">Fable 5.2</th></tr>
-      <tr><td>Modern OCR</td><td class="num">0.94 / 0.95</td><td class="num">0.93 / 0.97</td><td class="num">0.95 / 0.98</td><td class="num">0.96 / 0.98</td></tr>
-      <tr><td>Legacy OCR</td><td class="num">0.61 / 0.60</td><td class="num">0.58 / 0.64</td><td class="num">0.60 / 0.64</td><td class="num">0.60 / 0.65</td></tr>
-      <tr><td>US$ per 1,000 pages</td><td class="num">0.6</td><td class="num">10</td><td class="num">11</td><td class="num">43</td></tr>
-    </table>
+    <p class="sub-h">The same chain in materials papers <small>(an analogy for this audience, not tested here)</small></p>
+    <div class="charts3">
+      <p><b>Read.</b> OCR drops subscripts and units: Fe₂O₃ becomes Fe2O3, µm becomes um.</p>
+      <p><b>Link.</b> "TiO₂" without its phase is like a genus without its species: right formula, wrong entry.</p>
+      <p><b>Scope.</b> A value measured in the paper is not the same datum as one cited from another paper.</p>
+    </div>
   </div>
   </div>
 </div>
@@ -302,9 +314,11 @@ td.b{font-weight:700}
       <tr><td class="num b">9</td><td><b>Reeve 1849</b>, shells · test pages</td></tr>
       <tr><td class="num b">8</td><td><b>PCAS 1898</b>, botany · scans</td></tr>
       <tr><td class="num b">682</td><td><b>Whole books</b> · 60 spot-checked</td></tr>
+      <tr><td class="num b">6</td><td><b>本草綱目</b>, classical Chinese · dev pilot</td></tr>
     </table>
     <p class="sub-h" style="margin-top:.3in">Models</p>
     <p>Claude Opus 5.5 and Gemini 4 Carbon (pre-registered); Haiku, Sonnet 5.5 and Fable 5.2 (exploratory); gnfinder + regex baseline.</p>
+    <p>The extraction model mattered little: on modern OCR all four Claude models reached value F1 0.93–0.96 (Butler) and 0.95–0.98 (Reeve); on legacy OCR all fell to 0.58–0.65.</p>
     <p class="note">API spend about $56 in total. The real cost was labelling.</p>
   </div>
 </div>
@@ -331,7 +345,7 @@ td.b{font-weight:700}
     <ul class="concl">
       <li><b>Where to spend.</b> Accept OCR on name survival, per material; fund entity resolution; write the scope; review by sampling, with evidence. Not a bigger extraction model.</li>
       <li><b>Scope and review.</b> Agreement is not correctness (50 / 75 errors inside it on legacy OCR); five scope conventions move botany F1 0.83 → 0.94.</li>
-      <li><b>Limits and next.</b> Two English books and 8 botany pages; other languages, layouts and handwriting untested. Training follow-up: examples taught a small model to repair OCR (4% → 40%); RL taught it to copy.</li>
+      <li><b>Limits and next.</b> Two English books and 8 botany pages; a 本草綱目 pilot (6 dev pages) repeats the pattern, and models also normalise variant characters; its test set is frozen. Layouts and handwriting untested. Training follow-up: examples taught a small model to repair OCR (4% → 40%); RL taught it to copy.</li>
     </ul>
   </div>
 </div>

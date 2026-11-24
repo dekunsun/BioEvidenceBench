@@ -501,8 +501,79 @@ def poster_strip() -> Path:
     return p
 
 
+def poster_fluent_strip() -> Path:
+    """Poster strip of figure 7: the printed name, read right by legacy OCR and dots.mocr, written as a
+    plausible wrong name by DeepSeek-OCR-2 (Reeve 8967281)."""
+    pid, box = "8967281", (1350, 652, 1628, 694)
+    legacy = text_of("data/sample/legacy", pid, "Turritella brevialis", ("Turritella", "brevialis"))
+    deep = text_of("data/text/modern_deepseek-ocr2", pid, "Turritella brevisis", ("Turritella", "brevisis"))
+    W, H = 8.4, 1.4
+    fig = plt.figure(figsize=(W, H), dpi=300, facecolor="#ffffff")
+    cards = [("Printed, Reeve 1849", "plain"), ("Legacy OCR, dots.mocr", "good"), ("DeepSeek-OCR-2", "bad")]
+    gap, y, h, x0 = 0.045, 0.04, 0.92, 0.004
+    w = (0.99 - x0 - 2 * gap) / 3
+    for i, (head, kind) in enumerate(cards):
+        x = x0 + i * (w + gap)
+        card(fig, "en", x, y, w, h, kind, head, pad=(0.02, 0.12), head_size=10.5)
+        mid = y + h * 0.36
+        if i == 0:
+            image_in(fig, page(pid).crop((box[0] - 4, box[1] - 4, box[2] + 4, box[3] + 4)), x + w / 2 + 0.004, mid,
+                     w * 0.84, h * 0.46, W, H)
+        else:
+            value(fig, x + w / 2 + 0.004, mid, legacy if i == 1 else deep, kind, legacy, w * 0.88, W, size=14,
+                  italic=True)
+        if i < 2:
+            fig.patches.append(FancyArrowPatch((x + w + 0.006, y + h / 2), (x + w + gap - 0.006, y + h / 2),
+                                               transform=fig.transFigure, arrowstyle="-|>", mutation_scale=12,
+                                               color=STONE, lw=1.5))
+    p = ROOT / "poster" / "fig" / "fluent_poster.png"
+    fig.savefig(p, facecolor="#ffffff")
+    plt.close(fig)
+    return p
+
+
+def poster_linking_strip() -> Path:
+    """Poster strip of figure 8, one entry: the page (heading and name, name boxed), the plain GBIF lookup
+    reaching only the genus, the accepted name today (Butler 8992647, Motacilla beema)."""
+    links = pd.read_csv(ROOT / "results" / "linking_test" / "link_outcomes.csv")
+    links = links[(links.version == "expert") & (links.condition == "GOLD") & (links.linker == "printed")]
+    pid, name, box = "8992647", "Motacilla beema", (900, 1455, 1262, 1512)
+    r = links[(links.page_id.astype(str) == pid) & (links.text == name)].iloc[0]
+    genus = str(r.gbif_name).split()[0]
+    W, H = 8.4, 1.4
+    fig = plt.figure(figsize=(W, H), dpi=300, facecolor="#ffffff")
+    xs, ws = [0.004, 0.475, 0.735], [0.425, 0.215, 0.26]
+    y, h = 0.04, 0.92
+    card(fig, "en", xs[0], y, ws[0], h, "plain", "Printed, Butler 1907", pad=(0.012, 0.12), head_size=10.5)
+    card(fig, "en", xs[1], y, ws[1], h, "bad", "GBIF lookup", pad=(0.012, 0.12), head_size=10.5)
+    card(fig, "en", xs[2], y, ws[2], h, "good", "Accepted today", pad=(0.012, 0.12), head_size=10.5)
+    crop = (650, box[1] - 150, 1700, box[3] + 12)
+    im = page(pid).crop(crop)
+    ih = h * 0.62
+    iw = min(ws[0] * 0.94, ih * H / W * im.width / im.height)
+    ih = iw * W / H * im.height / im.width
+    ax = fig.add_axes([xs[0] + ws[0] / 2 + 0.003 - iw / 2, y + h * 0.36 - ih / 2, iw, ih])
+    ax.imshow(im); ax.set_axis_off(); ax.set_zorder(5)
+    ax.add_patch(FancyBboxPatch((box[0] - crop[0] - 6, box[1] - crop[1] - 4), box[2] - box[0] + 12, box[3] - box[1] + 8,
+                                boxstyle="round,pad=4", fc=STONE, alpha=0.22, ec=NAVY, lw=1.2))
+    fig.text(xs[1] + ws[1] / 2 + 0.004, y + h * 0.36, f"genus {genus} only", ha="center", va="center", fontsize=11,
+             color=RED, family="DejaVu Sans", zorder=5)
+    value(fig, xs[2] + ws[2] / 2 + 0.004, y + h * 0.36, r.accepted_name, "good", None, ws[2] * 0.88, W, size=12,
+          italic=True)
+    fig.text(xs[2] + ws[2] / 2 + 0.004, y + h * 0.12, "now a race of this species", ha="center", va="center",
+             fontsize=8.5, color=GREY, family="DejaVu Sans", zorder=5)
+    for j in (0, 1):
+        fig.patches.append(FancyArrowPatch((xs[j] + ws[j] + 0.006, y + h * 0.36), (xs[j + 1] - 0.006, y + h * 0.36),
+                                           transform=fig.transFigure, arrowstyle="-|>", mutation_scale=12,
+                                           color=STONE, lw=1.5))
+    p = ROOT / "poster" / "fig" / "linking_page_poster.png"
+    fig.savefig(p, facecolor="#ffffff")
+    plt.close(fig)
+    return p
+
+
 if __name__ == "__main__":
-    print(poster_strip())
+    print(poster_strip(), poster_fluent_strip(), poster_linking_strip())
     for lang in ("en", "zh"):
         for f in (pipeline_trace, scan_name, fluent_error, linking_names, transcription_typo):
             print(f(lang))
