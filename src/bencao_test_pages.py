@@ -2,7 +2,7 @@
 
     python src/bencao_test_pages.py select   -> data/bencao/test_pages.csv (8 half-leaves; commit before anything else)
     python src/bencao_test_pages.py pack     -> scans, Kanripo texts, results/bencao_test/scan_verify_test.xlsx
-                                                and verify_test.html for the author's scan check
+    python src/bencao_test_pages.py html [out] -> verify_test.html (scans embedded) for the author's scan check
 
 Chosen by the author on 2026-11-24 ("按你的建议，8 页，两卷各 4 页"): 4 half-leaves from 卷十二上 (Kanripo
 KR3e0079_036) and 4 from 卷十二下 (KR3e0079_037), one per content stratum per volume, by a fixed random
@@ -105,5 +105,59 @@ def pack() -> None:
     print(OUT / "scan_verify_test.xlsx", len(sheet), "lines")
 
 
+def html(dest: str | None = None) -> Path:
+    """One self-contained page: each scan beside its numbered Kanripo lines, rare characters marked with
+    their code point (and usual form where known), as for the pilot's verify page. Scans are embedded so the
+    file can be opened on its own. bencao_pilot.py is frozen, so this is a small copy, not a change to it."""
+    import base64
+    import html as H
+    from bencao_pilot import RARE
+    pages = pd.read_csv(DATA / "test_pages.csv")
+
+    def mark(line: str) -> str:
+        out = []
+        for ch in line:
+            cp = ord(ch)
+            if cp > 0xFFFF or 0x3400 <= cp <= 0x4DBF:
+                hint = RARE.get(ch, "")
+                out.append(f"<span class='rare'>{H.escape(ch)}</span><span class='hint'>〔{hint + ' ' if hint else ''}U+{cp:04X}〕</span>")
+            elif ch == "〓":
+                out.append("<span class='rare'>〓</span><span class='hint'>〔Kanripo: character outside Unicode〕</span>")
+            else:
+                out.append(H.escape(ch))
+        return "".join(out)
+
+    parts = []
+    for r in pages.itertuples():
+        lines = (DATA / "kanripo_plain" / f"{r.half_leaf}.txt").read_text(encoding="utf-8").split("\n")
+        src = "data:image/jpeg;base64," + base64.b64encode((OUT / "pages" / f"{r.half_leaf}.jpg").read_bytes()).decode()
+        lis = "".join(f"<li><span class='n'>{i}</span>{mark(l)}</li>" for i, l in enumerate(lines, 1))
+        parts.append(f"<section><h2>{r.half_leaf} · {r.volume}</h2><div class='row'>"
+                     f"<img src='{src}' alt='scan {r.half_leaf}'><ol>{lis}</ol></div>"
+                     f"<p class='meta'>Internet Archive 06048793.cn image n{r.ia_image_n} · Commons DjVu page {r.ia_image_n + 1}</p></section>")
+    page = f"""<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>本草綱目 test set: scan check</title><style>
+:root{{--bg:#fff;--fg:#1b1b1b;--muted:#666;--rule:#ddd;--hint:#a0522d}}
+@media (prefers-color-scheme: dark){{:root:not([data-theme="light"]){{--bg:#151515;--fg:#eee;--muted:#aaa;--rule:#333;--hint:#e0a070}}}}
+:root[data-theme="dark"]{{--bg:#151515;--fg:#eee;--muted:#aaa;--rule:#333;--hint:#e0a070}}
+body{{background:var(--bg);color:var(--fg);font-family:"Noto Serif CJK TC","Songti TC","HanaMinA","HanaMinB",serif;margin:0 16px 40px;max-width:1200px}}
+h1{{font-size:1.3rem}} h2{{font-size:1.05rem;border-top:1px solid var(--rule);padding-top:12px}}
+.row{{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}} img{{max-width:520px;width:100%;border:1px solid var(--rule);background:#fff}}
+ol{{list-style:none;padding:0;margin:0;flex:1;min-width:280px;font-size:1.15rem;line-height:1.9}}
+.n{{display:inline-block;width:2em;color:var(--muted);font-size:.85rem}} .meta{{color:var(--muted);font-size:.85rem}}
+.rare{{background:rgba(160,82,45,.15);border-radius:3px}} .hint{{color:var(--hint);font-size:.75rem}}
+</style></head><body><h1>本草綱目 · 测试集 8 个半叶 · 转录对照扫描</h1>
+<p>第 1 行是扫描最右边一列，从右往左读；双行小注已合并（先右小行，再左小行）。差异记在 <code>scan_verify_test.xlsx</code>，做法和试点一样。转录：Kanseki Repository（CC BY-SA 4.0）；扫描：公有领域。</p>
+{''.join(parts)}</body></html>"""
+    out = Path(dest) if dest else OUT / "verify_test.html"
+    out.write_text(page, encoding="utf-8")
+    print(out, round(out.stat().st_size / 1e6, 1), "MB")
+    return out
+
+
 if __name__ == "__main__":
-    {"select": select, "pack": pack}[sys.argv[1]]()
+    cmd = sys.argv[1]
+    if cmd == "html":
+        html(sys.argv[2] if len(sys.argv) > 2 else None)
+    else:
+        {"select": select, "pack": pack}[cmd]()
