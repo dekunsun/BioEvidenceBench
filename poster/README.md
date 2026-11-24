@@ -8,7 +8,7 @@ Portrait **A0 (841 × 1189 mm)**, one page, in the layout of the LiveLab poster 
 - `fig/`: the three charts (`extraction_poster.png`, `ladder_poster.png`, `linking_poster.png`) are drawn by
   `src/plot_poster_charts.py` at the width they occupy on the poster, so every label is the body size; values are read
   from the run records. University of Pennsylvania logo (reversed, for the dark band) and the AI4S.fyi logo and QR codes
-  are reused from the LiveLab poster; `qr_repo.svg` points to this repository. The strips `misread_poster.png`, `fluent_poster.png` and `linking_page_poster.png` are cut from the real scans by `src/plot_scan_examples.py` (`poster_strip`, `poster_fluent_strip`, `poster_linking_strip`).
+  are reused from the LiveLab poster; `qr_repo.svg` points to this repository. `cas_logo_reverse.png` is a white copy of the California Academy of Sciences logo, added at the author's request (she volunteers with its Scientific Computing team; the project is independent and uses public data only). The strips `misread_poster.png`, `fluent_poster.png` and `linking_page_poster.png` are cut from the real scans by `src/plot_scan_examples.py` (`poster_strip`, `poster_fluent_strip`, `poster_linking_strip`).
 
 Rebuild after editing the source:
 
