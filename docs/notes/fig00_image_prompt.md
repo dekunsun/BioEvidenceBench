@@ -1,13 +1,15 @@
 # Prompt for the README header image (fig00)
 
-Short version (the author, 2026-11-24: describe the process, not the styling). Two real images are pasted
-into the result afterwards, so the tool must leave room for them and must not draw them:
+Short version (the author, 2026-11-24: describe the process, not the styling). The entry is a **bird**,
+Sykes' Wagtail (*Motacilla beema*), from Butler's bird book. One real image is pasted into the result
+afterwards, so the tool must leave room for it and must not draw it:
 
-- `docs/assets/overview/reeve_plate17_fig102.png`: the shell *Bulimus chilensis*, figure 102 of Reeve,
-  *Conchologia iconica* vol. 5 (1849), plate XVII (Internet Archive `conchologiaiconi05reev`, image n77;
-  public domain by age).
 - `docs/assets/overview/fig00_scan_crop.png`: the printed page with the values boxed (Butler 1907, BHL page
   8992647; bhl-impact-gt, CC BY 3.0).
+
+The Reeve shell plate (`reeve_plate17_fig102.png`, *Bulimus chilensis*) belongs to the other example
+(README figure 1), not to this bird entry. Butler's volume 2 has no plate of this bird (it appears only in
+the appendix), so no bird picture is pasted unless a real plate is found later.
 
 Check the four data values in the result letter by letter; image tools often misspell names.
 
@@ -23,8 +25,8 @@ historical book becomes a checked database record, in five steps from left to ri
 4. **Link**: the name is looked up in a biodiversity database; the lookup finds only the genus.
 5. **Review**: a curator checks the page and settles the record.
 
-On the left, leave an empty rounded frame for a real page scan, and next to it an empty frame for a real
-shell drawing (do not draw either). On the right, end with a small record card holding four values:
+On the left, leave an empty rounded frame for a real page scan (do not draw it). The entry is about a
+bird, a wagtail; a delicate line drawing of a small wagtail may decorate a corner, clearly as decoration. On the right, end with a small record card holding four values:
 *Motacilla flava* · GBIF 9701857 · Rottingdean, Sussex · April 20th, 1898.
 Mark steps 1 and 4 with a small red cross and the others with a small teal tick. Keep text to the step
 names, a few words under each, and the record card. Title: "One record, five steps".
@@ -40,7 +42,8 @@ names, a few words under each, and the record card. Title: "One record, five ste
 4. **关联**：拿学名去生物多样性数据库查，只查到属。
 5. **审核**：人工对照书页，确定最终记录。
 
-左边留一个空白圆角框放真实书页扫描，旁边再留一个空白框放真实的贝壳插图（两者都不要画）。右边以一张
+左边留一个空白圆角框放真实书页扫描（不要画）。这条记载讲的是一种鸟（鹡鸰）；可以在一角画一只小鹡鸰的
+线描作装饰，明显只是装饰。右边以一张
 小记录卡收尾，写四个值：*Motacilla flava* · GBIF 9701857 · Rottingdean, Sussex · April 20th, 1898。
 第 1、4 步标小红叉，其余标小青绿色勾。文字只保留步骤名、每步下面几个字和记录卡。标题：「一条记录，
 五个环节」。
