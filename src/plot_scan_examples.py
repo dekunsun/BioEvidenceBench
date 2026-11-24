@@ -386,7 +386,7 @@ def pipeline_trace(lang: str) -> Path:
                     ("审核", "check", gl.accepted_name, "人工核定", "good")]}[lang]
     title, sub, heads = {
         "en": ("One record, five steps", "Butler, Birds of Great Britain and Ireland (1907) · BHL page 8992647 · real outputs",
-               ["accepted taxon", "GBIF key", "locality", "date"]),
+               ["taxon", "GBIF key", "place", "date"]),
         "zh": ("一条记录，五个环节", "Butler《Birds of Great Britain and Ireland》（1907）· BHL 第 8992647 页 · 真实输出",
                ["有效学名", "GBIF 编号", "地点", "日期"])}[lang]
     W, H = 12, 6.6

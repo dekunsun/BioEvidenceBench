@@ -1,0 +1,5 @@
+text,run,gold_values,preserved,share,share_folded,taxon_exact_f1,person_exact_f1,locality_exact_f1,cited_work_exact_f1,substance_exact_f1,ALL_PRIMARY_exact_f1,taxon_value_f1,person_value_f1,locality_value_f1,cited_work_value_f1,substance_value_f1,ALL_PRIMARY_value_f1,taxon_value_folded_f1,person_value_folded_f1,locality_value_folded_f1,cited_work_value_folded_f1,substance_value_folded_f1,ALL_PRIMARY_value_folded_f1
+verified_plain,20261124-0900_bencao_extract_claude-opus-5-5,206,206,1.0,1.0,0.97,1.0,0.963,0.974,0.0,0.971,0.97,1.0,0.981,0.974,0.0,0.976,0.97,1.0,0.981,0.974,0.0,0.976
+claude_opus,20261124-0901_bencao_extract_claude-opus-5-5_claude_opus,206,182,0.883,0.976,0.955,0.971,0.944,0.935,0.0,0.95,0.83,0.8,0.926,0.897,0.0,0.865,0.935,0.971,0.981,0.923,0.0,0.948
+claude_haiku,20261124-0902_bencao_extract_claude-opus-5-5_claude_haiku,206,143,0.694,0.874,0.887,0.824,0.881,0.817,0.0,0.868,0.629,0.706,0.907,0.479,0.0,0.683,0.765,0.882,0.963,0.873,0.0,0.846
+paddleocr,20261124-0904_bencao_extract_claude-opus-5-5_paddleocr,206,141,0.684,0.811,0.835,0.8,0.952,0.655,0.0,0.837,0.681,0.706,0.895,0.548,0.0,0.72,0.759,0.882,0.952,0.774,0.0,0.825

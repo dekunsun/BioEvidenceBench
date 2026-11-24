@@ -273,3 +273,24 @@ Reading:
 
 Same caveats as above: not blind, six half-leaves, one extraction model; the PaddleOCR detector size was
 chosen on these pages.
+
+## Prompt p2 after guide v0.4 rule 15 (2026-11-24, the author: "按你的建议来")
+
+Rule 15 (place-name chains, `docs/notes/bencao_guide.md`) was written to match how the author had already
+labelled the chains; no gold row changed. Prompt `bencao-p2-guide-v0.4` states it; all four texts re-run,
+$0.985 (`results/20261124-0900…`, `…0901…_claude_opus`, `…0902…_claude_haiku`, `…0904…_paddleocr`;
+table `results/bencao_pilot/ocr_to_extraction_p2.csv`; the p1 runs stay as history). The rule was written
+after seeing the errors on these same pages, so the gain is partly fitted to them.
+
+| Text | Names intact (folded) | Value F1 primary p1 → **p2** (folded) | locality p1 → p2 |
+| --- | ---: | ---: | ---: |
+| Scan-verified reference | 1.00 (1.00) | 0.94 → **0.98** (0.98) | 0.87 → 0.98 |
+| Claude Opus OCR | 0.88 (0.98) | 0.83 → **0.87** (0.95) | 0.78 → 0.93 |
+| Claude Haiku OCR | 0.69 (0.87) | 0.63 → **0.68** (0.85) | 0.75 → 0.91 |
+| PaddleOCR 3.7 | 0.68 (0.81) | 0.68 → **0.72** (0.83) | 0.76 → 0.90 |
+
+On the reference text 12 differences remain (`errors.csv`): `枹䍐` inside the regional drug name
+`枹䍐草` (rule 12), `人參` inside the title `人參讚`, the unlabelled `傷寒類要` across a column break,
+`蜀` / `漢中` against the `expert_pending` `蜀漢中`, and words the author did not label (`蜜`, `米泔`,
+`小便`, `蓍`). With the rule question settled, the order is the English books' one: the extractor is near
+the ceiling on the right text, and what is lost on OCR text is mostly names that did not survive OCR.

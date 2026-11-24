@@ -321,7 +321,9 @@ def summary(run_dirs: list[str]) -> None:
         for _, r in sc[sc.match.isin(["value", "value_folded", "exact"])].iterrows():
             row[f"{r.field}_{r.match}_f1"] = r.f1
         rows.append(row)
-    out = ROOT / "results" / "bencao_pilot" / "ocr_to_extraction.csv"
+    pv = json.loads((Path(run_dirs[0]) / "config.json").read_text(encoding="utf-8"))["prompt_version"]
+    name = "ocr_to_extraction.csv" if pv.startswith("bencao-p1") else f"ocr_to_extraction_{pv.split('-')[1]}.csv"
+    out = ROOT / "results" / "bencao_pilot" / name
     pd.DataFrame(rows).to_csv(out, index=False)
     print(pd.DataFrame(rows)[["text", "share", "share_folded", "ALL_PRIMARY_value_f1", "ALL_PRIMARY_value_folded_f1",
                               "taxon_value_f1", "person_value_f1", "locality_value_f1", "cited_work_value_f1"]].to_string(index=False))

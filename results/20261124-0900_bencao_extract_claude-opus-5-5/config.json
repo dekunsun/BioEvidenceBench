@@ -1,0 +1,68 @@
+{
+ "run_id": "20261124-0900_bencao_extract_claude-opus-5-5",
+ "model": "claude-opus-5-5",
+ "prompt_version": "bencao-p2-guide-v0.4",
+ "effort": "medium",
+ "max_tokens": 8000,
+ "temperature": "provider default",
+ "system": "You extract named entities from the 本草綱目 (Siku quanshu manuscript copy). You never rewrite the text: for every mention you give the line number and copy the characters exactly as they appear on that line.",
+ "rules": "Find every mention of these fields in the numbered text below (one manuscript column per line; small\ntwo-column notes are already joined, right sub-column first).\n\nFields\n- taxon: the name of a drug, plant or animal, and any name used for a drug: entry headings, alternative names\n  listed under 釋名 (set alias = true for these), every drug in a prescription, organisms named in comparisons\n  (槐 in 甘草枝葉悉如槐), and regional drug names made of a place plus a drug name (one span; the place inside it\n  is not labelled again).\n- person: a named person, including short forms such as 𢎞景, 權, 頌, 時珍.\n- locality: a place. A chain of places written together from wide to narrow (region, then county, mountain or\n  district) is split: each named place is its own locality (江南宣州 → 江南, 宣州). A generic word written\n  directly after a name stays in its span (name + 川谷, 山谷 or 山 is one span); a generic word joined by 之 does\n  not (X之山 → X). Generic words alone are not labelled. The name of a people used for its land is a locality.\n- cited_work: a book cited as a source, including the source tags in small notes (別録 after an alternative name)\n  and a book plus one of its sections written together as one span. Generic references are not labelled.\n- substance: minerals, water, earth and other non-organic drugs.\n\nRules\n- Copy characters exactly, including variant and taboo forms (宻, 𢎞, 䖅); never normalise or correct.\n- Every occurrence is its own mention, in reading order.\n- A name split by a line break: give the line where it starts and quote the whole name without the break.\n- Running heads (欽定四庫全書, the volume title) are not mentions.\n\nExample (from half-leaf 036-1a, not part of this task):\n  line 6: 釋名宻甘别録宻草别録美草别録 → taxon 宻甘 (alias), cited_work 别録, taxon 宻草 (alias), cited_work 别録, taxon 美草 (alias), cited_work 别録\n  line 7: 别録𢎞景曰此草最為衆藥之主 → cited_work 别録, person 𢎞景\n",
+ "schema": {
+  "type": "object",
+  "properties": {
+   "mentions": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "field": {
+       "type": "string",
+       "enum": [
+        "taxon",
+        "person",
+        "locality",
+        "cited_work",
+        "substance"
+       ]
+      },
+      "line": {
+       "type": "integer"
+      },
+      "quote": {
+       "type": "string"
+      },
+      "alias": {
+       "type": "boolean"
+      }
+     },
+     "required": [
+      "field",
+      "line",
+      "quote",
+      "alias"
+     ],
+     "additionalProperties": false
+    }
+   }
+  },
+  "required": [
+   "mentions"
+  ],
+  "additionalProperties": false
+ },
+ "text": "verified_plain",
+ "input": "data/bencao/verified_plain/<half-leaf>.txt, numbered lines",
+ "input_sha256": {
+  "036-1b": "0eeab29b39098d2eca8325d42b11f80d184827d1cb36c975e556752318c056c6",
+  "036-5a": "e74c0966ee46295e83f345ee4e3e537e43e84dd51b0d68e08aefd3e9a1733ef0",
+  "036-7b": "8225c2cecd9aee2222f30c3f52c33962420a0bdd5f0b4cc90a5dda4680840f2c",
+  "036-12b": "34836c3c86475c6051a9265414c3126d3537c2e5e8d4f403dee4519c99379cdd",
+  "036-13a": "b37ca95e1a6a10a11aa2dcbdf7a83b708343f2508c15ee9367310f5bf4f50850",
+  "036-30a": "007510a3eeeb4b78843c6092fb45ea9197e5ee3cd3ac5234f9ba6d619f951b5b"
+ },
+ "max_usd": 0.6,
+ "usd_total": 0.2387,
+ "exploratory": true,
+ "dev": true,
+ "approved": "author, 2026-11-24 (\"跑吧\")"
+}
