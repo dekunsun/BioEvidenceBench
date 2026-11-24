@@ -6,5 +6,5 @@
   column was added). `gold/gold_mentions_bencao_gloria.csv` swaps them back; no label was added, removed or changed.
 - Offsets computed against `data/bencao/verified_plain/036-1b.txt`, repeated strings matched in reading order
   within the line; every span checked to equal its text.
-- Provenance and labelling time: asked of the author on 2026-11-24 (see chat).
+- Provenance: labelled alone by the author (her answer, 2026-11-24: 自己标的). Time: about 120 minutes, self-reported (`data/bencao/labelling_time.csv`).
 - The author, 2026-11-24: notes saying 留待人工裁定 / 需人工決定 mean the item is left for a domain expert. Those 7 rows carry `adjudication = expert_pending` (log: `gold/gold_changes_bencao_gloria.csv`); until an expert decides they are optional in scoring (neither required nor counted as false positives).
