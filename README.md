@@ -8,7 +8,7 @@
 
 *Open research pilot · November 2026 · Preprint in progress, not peer reviewed*
 
-[**Decision memo**](docs/product.md) · [**Preprint**](docs/preprint.md) · [**RL technical report**](docs/rl_results.md) · [**Full results**](docs/results.md) · [**Lessons learned**](docs/lessons_learned.md) · [**Reproduce**](#reproduce-the-evaluation) · [**Poster**](poster/preview.png) · [**中文版**](README_zh.md)
+[**Decision memo**](docs/product.md) · [**Preprint**](https://dekunsun.github.io/BioEvidenceBench/docs/preprint/preprint.html) · [**RL technical report**](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html) · [**Full results**](docs/results.md) · [**Lessons learned**](docs/lessons_learned.md) · [**Reproduce**](#reproduce-the-evaluation) · [**Poster**](poster/preview.png) · [**中文版**](README_zh.md)
 
 </div>
 
@@ -190,7 +190,7 @@ If old OCR is where names are lost, could a small, cheap model fix the text itse
 - **On an unseen French book**, the supervised model kept about half its gain (21% of damaged words repaired).
 - **The automatic score had loopholes.** Automated attacks found three; reading answers by hand found two more, for example finishing a word split at the end of a line scored as a perfect answer.
 
-The trained model is [published for research](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1), **not** for automatically replacing library text: it still changes about 2 in every 100 correct words. Put in front of the extraction step, it raised value F1 on legacy OCR only from 0.60 to 0.67 (Butler) and 0.64 to 0.72 (Reeve), against about 0.95 with modern OCR, and it turned a few correct names into other names ([details](results/sft_repair_pipeline/REPORT.md)). Full results: [RL technical report](docs/rl_results.md) ([PDF](docs/rl_report/rl_report.pdf)).
+The trained model is [published for research](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1), **not** for automatically replacing library text: it still changes about 2 in every 100 correct words. Put in front of the extraction step, it raised value F1 on legacy OCR only from 0.60 to 0.67 (Butler) and 0.64 to 0.72 (Reeve), against about 0.95 with modern OCR, and it turned a few correct names into other names ([details](results/sft_repair_pipeline/REPORT.md)). Full results: [RL technical report](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html) ([PDF](docs/rl_report/rl_report.pdf)).
 
 **What this means:** for a careful editing task, examples of the right answer did the teaching. A reward that never penalizes doing nothing taught the model to do nothing.
 
@@ -277,11 +277,11 @@ For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and 
 
 | Resource | Contents |
 | --- | --- |
-| **[Preprint](docs/preprint.md)** · [PDF](docs/preprint/preprint.pdf) | Research questions, methods, statistics, limitations and references. |
+| **[Preprint](https://dekunsun.github.io/BioEvidenceBench/docs/preprint/preprint.html)** · [PDF](docs/preprint/preprint.pdf) · [Markdown](docs/preprint.md) | Research questions, methods, statistics, limitations and references. |
 | **[Results](docs/results.md)** · [Run settings](docs/eval_settings.md) | Full pre-registered and exploratory scores, intervals and provenance. |
 | **[Annotation guide](ANNOTATION_GUIDE.md)** · [Gold labels](gold/) | Label definitions, corrections and human reference data. |
 | **[Pre-registration](PREREGISTRATION.md)** · [Freeze](FREEZE.json) · [Deviations](DEVIATIONS.md) | What was decided in advance and what changed after testing. |
-| **[RL technical report](docs/rl_results.md)** · [PDF](docs/rl_report/rl_report.pdf) · [Training report](rl/TRAINING_REPORT.md) · [Released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | Teaching a small model to repair OCR: supervised and reinforcement learning, the reward audit, and the release decision. |
+| **[RL technical report](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html)** · [PDF](docs/rl_report/rl_report.pdf) · [Markdown](docs/rl_results.md) · [Training report](rl/TRAINING_REPORT.md) · [Released model](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | Teaching a small model to repair OCR: supervised and reinforcement learning, the reward audit, and the release decision. |
 | **[本草綱目 pilot report](results/bencao_pilot/REPORT.md)** · [Guide](docs/notes/bencao_guide.md) · [Test plan](docs/notes/bencao_prereg.md) | The classical Chinese external case: OCR levels, extraction, glyph fidelity, and the frozen test set. |
 | **[Lessons learned](docs/lessons_learned.md)** · [Stories](docs/stories/) · [Notes](docs/notes/) | Annotation, data-quality, API, metric and training failures encountered during the study. |
 | **[Decision memo and product design](docs/product.md)** · [Poster](poster/preview.png) ([A1 PDF](poster/poster.pdf)) | The decision this pilot informs, six recommendations, a proposed curator workflow; the pilot on one poster. |

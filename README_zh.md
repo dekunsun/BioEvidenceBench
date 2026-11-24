@@ -8,7 +8,7 @@
 
 *开放研究试点 · 2026 年 11 月 · 预印本撰写中，尚未经过同行评审*
 
-[**English**](README.md) · [**决策备忘录**](docs/product.md#中文版) · [**研究预印本**](docs/preprint.md) · [**RL 技术报告**](docs/rl_results.md) · [**完整结果**](docs/results.md) · [**经验教训**](docs/lessons_learned.md) · [**如何复现**](#如何复现实验) · [**Poster**](poster/preview.png)
+[**English**](README.md) · [**决策备忘录**](docs/product.md#中文版) · [**研究预印本**](https://dekunsun.github.io/BioEvidenceBench/docs/preprint/preprint.html) · [**RL 技术报告**](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html) · [**完整结果**](docs/results.md) · [**经验教训**](docs/lessons_learned.md) · [**如何复现**](#如何复现实验) · [**Poster**](poster/preview.png)
 
 </div>
 
@@ -190,7 +190,7 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 - **换一本没见过的法语书**：监督训练的模型保留了约一半的提升（修好 21% 的受损词）。
 - **自动评分本身有漏洞。** 自动构造的攻击找到 3 个，人工逐条阅读又找到 2 个，例如把行末被断开的单词续写完整，也能拿满分。
 
-训练好的模型已[作为研究用检查点公开](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)，**不能**用于自动替换图书馆的原文：它仍会改坏约 2% 的正确词。把它放在提取之前，旧 OCR 上的提取 F1 只从 0.60 升到 0.67（Butler）、从 0.64 升到 0.72（Reeve），而现代 OCR 约 0.95；它还把几个原本正确的学名改成了别的名字（[详情](results/sft_repair_pipeline/REPORT.md)）。完整结果见 [RL 技术报告](docs/rl_results.md)（[PDF](docs/rl_report/rl_report.pdf)）。
+训练好的模型已[作为研究用检查点公开](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1)，**不能**用于自动替换图书馆的原文：它仍会改坏约 2% 的正确词。把它放在提取之前，旧 OCR 上的提取 F1 只从 0.60 升到 0.67（Butler）、从 0.64 升到 0.72（Reeve），而现代 OCR 约 0.95；它还把几个原本正确的学名改成了别的名字（[详情](results/sft_repair_pipeline/REPORT.md)）。完整结果见 [RL 技术报告](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html)（[PDF](docs/rl_report/rl_report.pdf)）。
 
 **启示：** 对需要谨慎修改的任务，教会模型的是正确答案的示范；一个从不惩罚"什么都不做"的奖励，教会模型的就是什么都不做。
 
@@ -277,11 +277,11 @@ python src/freeze.py --verify
 
 | 资料 | 内容 |
 | --- | --- |
-| **[研究预印本](docs/preprint.md)** · [PDF](docs/preprint/preprint.pdf) | 研究问题、方法、统计、局限和参考文献。 |
+| **[研究预印本](https://dekunsun.github.io/BioEvidenceBench/docs/preprint/preprint.html)** · [PDF](docs/preprint/preprint.pdf) · [Markdown](docs/preprint.md) | 研究问题、方法、统计、局限和参考文献。 |
 | **[完整结果](docs/results.md)** · [运行设置](docs/eval_settings.md) | 所有预注册与探索性结果、区间和来源。 |
 | **[标注指南](ANNOTATION_GUIDE.md)** · [金标准](gold/) | 标注边界、修正记录与人工参考数据。 |
 | **[预注册](PREREGISTRATION.md)** · [冻结文件](FREEZE.json) · [变更](DEVIATIONS.md) | 测试前决定了什么、测试后又做了什么。 |
-| **[RL 技术报告](docs/rl_results.md)** · [PDF](docs/rl_report/rl_report.pdf) · [训练报告](rl/TRAINING_REPORT.md) · [公开的模型](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | 教小模型修复 OCR：监督训练与强化学习、奖励审计和发布决定。 |
+| **[RL 技术报告](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html)** · [PDF](docs/rl_report/rl_report.pdf) · [Markdown](docs/rl_results.md) · [训练报告](rl/TRAINING_REPORT.md) · [公开的模型](https://github.com/dekunsun/BioEvidenceBench/releases/tag/rl-sft-ocr-repair-v1) | 教小模型修复 OCR：监督训练与强化学习、奖励审计和发布决定。 |
 | **[《本草綱目》试点报告](results/bencao_pilot/REPORT.md)** · [标注规范](docs/notes/bencao_guide.md) · [测试计划](docs/notes/bencao_prereg.md) | 古汉语外部案例：OCR 水平、抽取、字形忠实度和已冻结的测试集。 |
 | **[经验教训](docs/lessons_learned.md)** · [故事](docs/stories/) · [笔记](docs/notes/) | 标注、数据质量、API、评测指标和训练中遇到的问题。 |
 | **[决策备忘录与产品设计](docs/product.md#中文版)** · [海报](poster/preview.png)（[A1 PDF](poster/poster.pdf)） | 这次试点要回答的决策、六条建议、给馆员的工作流程设想；一张海报看完整个试点。 |
