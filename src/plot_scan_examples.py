@@ -122,7 +122,7 @@ def value(fig, xc, yc, text: str, kind: str, ref: str | None, max_w: float, W: f
     x0 = xc - n * step / 2
     for i, ch in enumerate(text):
         fig.text(x0 + i * step, yc, ch, ha="left", va="center", fontsize=fs, fontweight="bold", color=colours[i],
-                 family=MONO, style="italic" if italic else "normal", zorder=5)
+                 family=[MONO, "WenQuanYi Zen Hei"], style="italic" if italic else "normal", zorder=5)
 
 
 def image_in(fig, im, xc, yc, max_w, max_h, W, H):
@@ -277,110 +277,154 @@ def linking_names(lang: str) -> Path:
     return save(fig, "fig08_linking_names", lang)
 
 
+def _icon(fig, kind: str, x: float, y: float, s: float, W: float, H: float, colour: str) -> None:
+    """A small line icon in a circle, drawn with plain shapes (no icon font): ocr, tag, quote, link, check,
+    leaf, key, pin, calendar. (x, y) = centre in figure fractions, s = diameter in inches."""
+    from matplotlib.patches import Circle, Polygon, Ellipse, FancyBboxPatch as FB
+    from matplotlib.lines import Line2D
+    ax = fig.add_axes([x - s / 2 / W, y - s / 2 / H, s / W, s / H])
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.set_axis_off(); ax.set_zorder(6)
+    ax.add_patch(Circle((0.5, 0.5), 0.5, color=colour, alpha=0.14))
+    lw, c = 1.8, colour
+    L = lambda xs, ys: ax.add_line(Line2D(xs, ys, color=c, lw=lw, solid_capstyle="round"))
+    if kind == "ocr":
+        for (x0, y0, dx, dy) in [(.25, .72, 1, -1), (.75, .72, -1, -1), (.25, .28, 1, 1), (.75, .28, -1, 1)]:
+            L([x0, x0 + .1 * dx], [y0, y0]); L([x0, x0], [y0, y0 + .1 * dy])
+        for yy in (.42, .5, .58):
+            L([.34, .66], [yy, yy])
+    elif kind == "tag":
+        ax.add_patch(Polygon([(.28, .62), (.5, .78), (.74, .54), (.52, .3), (.28, .46)], closed=True, fill=False, ec=c, lw=lw))
+        ax.add_patch(Circle((.38, .56), .035, color=c))
+    elif kind == "quote":
+        ax.text(.5, .42, "\u201c", ha="center", va="center", fontsize=s * 40, color=c, fontweight="bold", family="DejaVu Serif")
+    elif kind == "link":
+        pts = [(.5, .72), (.3, .34), (.7, .34)]
+        L([pts[0][0], pts[1][0]], [pts[0][1], pts[1][1]]); L([pts[0][0], pts[2][0]], [pts[0][1], pts[2][1]])
+        L([pts[1][0], pts[2][0]], [pts[1][1], pts[2][1]])
+        for q in pts:
+            ax.add_patch(Circle(q, .075, fc="white", ec=c, lw=lw))
+    elif kind == "check":
+        ax.add_patch(FB((.3, .3), .4, .4, boxstyle="round,pad=0,rounding_size=.06", fill=False, ec=c, lw=lw))
+        L([.38, .47, .63], [.5, .4, .6])
+    elif kind == "leaf":
+        ax.add_patch(Ellipse((.5, .52), .26, .48, angle=-35, fill=False, ec=c, lw=lw))
+        L([.36, .62], [.32, .7])
+    elif kind == "key":
+        ax.text(.5, .5, "#", ha="center", va="center", fontsize=s * 26, color=c, fontweight="bold")
+    elif kind == "pin":
+        ax.add_patch(Polygon([(.33, .56), (.5, .26), (.67, .56)], closed=True, fc=c, ec=c))
+        ax.add_patch(Circle((.5, .6), .17, color=c)); ax.add_patch(Circle((.5, .6), .07, color="white"))
+    elif kind == "calendar":
+        ax.add_patch(FB((.3, .3), .4, .38, boxstyle="round,pad=0,rounding_size=.04", fill=False, ec=c, lw=lw))
+        L([.3, .7], [.56, .56]); L([.4, .4], [.66, .74]); L([.6, .6], [.66, .74])
+
+
 def pipeline_trace(lang: str) -> Path:
-    """README header: one real entry (Butler 1907, BHL page 8992647) followed through every stage.
-    The scan with the three values boxed; five stage cards with what each stage actually produced on the
-    library's older OCR text (✓ = matches the printed page); the record the pipeline should end with."""
+    """README header, in the design language of the concept cover (scan → five steps with icons → record
+    table), but every value real: Butler 1907, BHL page 8992647, followed through the pipeline on the
+    library's older OCR text. Values are read from the run files; one result per step (the author,
+    2026-11-24: less text, more design)."""
     pid = "8992647"
     legacy_name = text_of("data/sample/legacy", pid, "Motacilla beema", ("Motacilla", "beema"))
     legacy_place = text_of("data/sample/legacy", pid, "Rottingdean", ("Rottingdean", "Sussex"))
     legacy_date = text_of("data/sample/legacy", pid, "Rottingdean", ("April", "1898"))
-    expert_date = text_of("data/sample/expert", pid, "Rottingdean", ("April", "I898"))
     m = pd.read_csv(ROOT / "results" / "20261119-2052_claude-opus-5-5_test_batch" / "test_mentions.csv",
                     keep_default_na=False)
     m = m[(m.page_id.astype(str) == pid) & (m.version == "legacy") & (m.condition == "G1")]
-    ext = {f: m[m.field == f] for f in ("taxon", "locality", "date")}
-    ex_name = ext["taxon"][ext["taxon"].value == legacy_name].iloc[0]
-    ex_place = ext["locality"][ext["locality"].value == legacy_place].iloc[0]
-    ex_date = ext["date"][ext["date"].value == legacy_date].iloc[0]
+    ex_name = m[(m.field == "taxon") & (m.value == legacy_name)].iloc[0]
     links = pd.read_csv(ROOT / "results" / "linking_test" / "link_outcomes.csv", keep_default_na=False)
     lk = links[(links.page_id.astype(str) == pid) & (links.text == "Motacilla beema") & (links.version == "expert")
                & (links.condition == "GOLD") & (links.linker == "printed")].iloc[0]
     gl = pd.read_csv(ROOT / "gold" / "gold_links_gloria.csv", keep_default_na=False)
     gl = gl[(gl.page_id.astype(str) == pid) & (gl.text == "Motacilla beema")].iloc[0]
     gm = pd.read_csv(ROOT / "gold" / "gold_mentions_gloria_test.csv", keep_default_na=False)
-    gdate = gm[(gm.page_id.astype(str) == pid) & (gm.text == expert_date)].iloc[0]
+    scan_date = gm[(gm.page_id.astype(str) == pid) & (gm.field == "date") & (gm.scan_text != "")].iloc[0].scan_text
     genus = str(lk.gbif_name).split()[0]
-    L = {"en": dict(
-            title="One entry, followed through the pipeline",
-            sub="Butler, Birds of Great Britain and Ireland (1907), BHL page 8992647. Every value is the real output of that stage.",
-            stages=[("1  OCR", "library's older OCR"), ("2  Extract", "Claude Opus 5.5"), ("3  Evidence", "line + quote, checked by code"),
-                    ("4  Link", "plain GBIF lookup"), ("5  Review", "curator (the author)")],
-            found="line {l}: found", genus=f"{genus}: genus only", none="(not linked)",
-            rec_head=["BHL page", "taxon as printed", "accepted taxon", "GBIF key", "locality", "date"],
-            note=[SCAN_NOTE["en"], f"The expert transcription types the year as '{expert_date.split()[-1]}'; the curator records the scan's reading. "
-                  "Linking source: Avibase."], legend="Boxes: the three values a record needs\n(red = misread by the older OCR)\n\n✓ matches the printed page   ✗ does not"),
-         "zh": dict(
-            title="一条记录，走完整条流程",
-            sub="Butler《Birds of Great Britain and Ireland》（1907），BHL 第 8992647 页；每个值都是该环节的真实输出",
-            stages=[("1  OCR", "图书馆旧 OCR"), ("2  抽取", "Claude Opus 5.5"), ("3  证据", "行号 + 原文引文，代码核对"),
-                    ("4  关联", "直接查 GBIF"), ("5  审核", "人工（作者）")],
-            found="第 {l} 行：找到", genus=f"{genus}：只到属", none="（不关联）",
-            rec_head=["BHL 页", "印刷学名", "有效学名", "GBIF 编号", "地点", "日期"],
-            note=[SCAN_NOTE["zh"], f"专家转录把年份打成「{expert_date.split()[-1]}」；人工审核按扫描原文记录。学名依据：Avibase。"],
-            legend="方框：一条记录需要的三个值\n（红框 = 旧 OCR 读错了）\n\n✓ 与印刷页一致   ✗ 不一致")}[lang]
-    W, H = 12, 6.75
-    fig = frame(lang, W, H, L["title"], L["sub"], L["note"])
-    im = page(pid)
-    crop = (330, 1290, 1880, 1660)
-    boxes = [(900, 1460, 1243, 1512, TEAL), (866, 1586, 1335, 1640, TEAL), (1436, 1586, 1826, 1640, RED)]
-    sh = 1.55 / H
-    sw = sh * H * (crop[2] - crop[0]) / (crop[3] - crop[1]) / W
-    ax = fig.add_axes([0.04, 1 - 1.12 / H - sh, sw, sh])
-    ax.imshow(im.crop(crop))
-    for x0, y0, x1, y1, c in boxes:
-        ax.add_patch(Rectangle((x0 - crop[0], y0 - crop[1]), x1 - x0, y1 - y0, fill=False, ec=c, lw=2.2))
+    line = int(float(ex_name.line))
+    steps = {"en": [("OCR", "ocr", legacy_date, "date misread", "bad"),
+                    ("Extract", "tag", ex_name.value, "copied as printed", "good"),
+                    ("Evidence", "quote", f"line {line}", "quote found in text", "good"),
+                    ("Link", "link", genus, "GBIF: genus only", "bad"),
+                    ("Review", "check", gl.accepted_name, "curator decides", "good")],
+             "zh": [("OCR", "ocr", legacy_date, "日期读错", "bad"),
+                    ("抽取", "tag", ex_name.value, "按原文抽出", "good"),
+                    ("证据", "quote", f"第 {line} 行", "引文在原文中找到", "good"),
+                    ("关联", "link", genus, "GBIF 只到属", "bad"),
+                    ("审核", "check", gl.accepted_name, "人工核定", "good")]}[lang]
+    title, sub, heads = {
+        "en": ("One record, five steps", "Butler, Birds of Great Britain and Ireland (1907) · BHL page 8992647 · real outputs",
+               ["accepted taxon", "GBIF key", "locality", "date"]),
+        "zh": ("一条记录，五个环节", "Butler《Birds of Great Britain and Ireland》（1907）· BHL 第 8992647 页 · 真实输出",
+               ["有效学名", "GBIF 编号", "地点", "日期"])}[lang]
+    W, H = 12, 6.6
+    fig = frame(lang, W, H, title, sub, [SCAN_NOTE[lang]])
+    # left: the page, with a soft shadow; three values boxed (red = misread by the older OCR)
+    crop = (255, 1255, 1950, 1700)
+    band = 1.95 / H                                          # vertical band for the page and the record table
+    sw = min(0.55, band * H * (crop[2] - crop[0]) / (crop[3] - crop[1]) / W)   # keep room for the table
+    sh = sw * W * (crop[3] - crop[1]) / (crop[2] - crop[0]) / H
+    px, py = 0.04, 1 - 1.2 / H - band + (band - sh) / 2
+    fig.patches.append(FancyBboxPatch((px + 0.006, py - 0.012), sw, sh, boxstyle="round,pad=0,rounding_size=0.006",
+                                      transform=fig.transFigure, fc="#e6e1d6", ec="none", zorder=-1))
+    ax = fig.add_axes([px, py, sw, sh])
+    ax.set_zorder(3)
+    ax.imshow(page(pid).crop(crop))
+    for x0, y0, x1, y1, c in [(900, 1460, 1243, 1512, TEAL), (866, 1586, 1335, 1640, TEAL), (1436, 1586, 1826, 1640, RED)]:
+        ax.add_patch(FancyBboxPatch((x0 - crop[0], y0 - crop[1]), x1 - x0, y1 - y0, boxstyle="round,pad=4",
+                                    fill=True, fc=c, alpha=0.13, ec=c, lw=2.0))
     ax.set_xticks([]); ax.set_yticks([])
     for s in ax.spines.values():
-        s.set_color(EDGE); s.set_linewidth(1.2)
-    fig.text(0.04 + sw + 0.025, 1 - 1.12 / H - sh / 2, L["legend"], va="center", fontsize=10, color=GREY, linespacing=1.5,
-             family=[FONT[lang], "DejaVu Sans"])                  # fallback: the Chinese font has no ✓/✗
-    # five stage cards; each lists name / place / date as that stage produced them
-    good = lambda v, ref: v == ref
-    stage_rows = [
-        [(legacy_name, True), (legacy_place, True), (legacy_date, False)],
-        [(ex_name.value, True), (ex_place.value, True), (ex_date.value, False)],
-        [(L["found"].format(l=int(float(ex_name.line))), True), (L["found"].format(l=int(float(ex_place.line))), True),
-         (L["found"].format(l=int(float(ex_date.line))), True)],
-        [(L["genus"], False), (L["none"], None), (L["none"], None)],
-        [(gl.accepted_name, True), (legacy_place, True), (gdate.scan_text, True)],
-    ]
-    top, ch = 1 - 1.12 / H - sh - 0.25 / H, 1.75 / H
-    n, gap = 5, 0.016
+        s.set_color(EDGE); s.set_linewidth(1.0)
+    # right of the page: the record it should end as, a table with icon headers
+    tx, tw = px + sw + 0.05, 0.96 - (px + sw + 0.05)
+    th, tb = band, 1 - 1.2 / H - band                        # the table fills the whole band
+    fig.patches.append(FancyBboxPatch((tx, tb), tw, th, boxstyle="round,pad=0,rounding_size=0.012",
+                                      transform=fig.transFigure, fc="#ffffff", ec=EDGE, lw=1.1))
+    rec = [(heads[0], "leaf", gl.accepted_name), (heads[1], "key", str(gl.accepted_usage_key)),
+           (heads[2], "pin", legacy_place), (heads[3], "calendar", scan_date)]
+    fig.text(tx + 0.018, tb + th - 0.2 / H, {"en": "Final record", "zh": "最终记录"}[lang], va="top", fontsize=12,
+             fontweight="bold", color=NAVY, family=FONT[lang])
+    rowh = (th - 0.55 / H) / 4
+    for k, (head, icon, val) in enumerate(rec):
+        yc = tb + th - 0.55 / H - (k + 0.5) * rowh
+        if k % 2 == 0:
+            fig.patches.append(Rectangle((tx + 0.008, yc - rowh / 2 + 0.004), tw - 0.016, rowh - 0.008,
+                                         transform=fig.transFigure, color=TINT["good"], alpha=0.55, lw=0))
+        _icon(fig, icon, tx + 0.035, yc, 0.34, W, H, TEAL)
+        fig.text(tx + 0.065, yc, head, va="center", fontsize=9, color=GREY, family=FONT[lang])
+        fig.text(tx + tw * 0.42, yc, val, va="center", fontsize=11.5, fontweight="bold", color=TEAL, family=MONO)
+    # curved arrow from the page into the steps
+    n, gap = 5, 0.022
     cw = (0.92 - gap * (n - 1)) / n
-    for i, ((name, who), vals) in enumerate(zip(L["stages"], stage_rows)):
+    ch = 1.95 / H
+    cy = tb - 0.5 / H - ch
+    fig.patches.append(FancyArrowPatch((px + sw * 0.22, py - 0.02), (0.04 + cw * 0.5, cy + ch + 0.012),
+                                       transform=fig.transFigure, connectionstyle="arc3,rad=0.25",
+                                       arrowstyle="-|>", mutation_scale=16, color=TEAL, lw=2.4))
+    fig.patches.append(FancyArrowPatch((0.04 + 4 * (cw + gap) + cw * 0.5, cy + ch + 0.012), (tx + tw * 0.5, tb - 0.02),
+                                       transform=fig.transFigure, connectionstyle="arc3,rad=0.25",
+                                       arrowstyle="-|>", mutation_scale=16, color=TEAL, lw=2.4))
+    for i, (name, icon, val, cap, kind) in enumerate(steps):
         x = 0.04 + i * (cw + gap)
-        y = top - ch
-        kind = "bad" if any(ok is False for _, ok in vals) else "good"
-        fig.patches.append(FancyBboxPatch((x, y), cw, ch, boxstyle="round,pad=0,rounding_size=0.010",
-                                          transform=fig.transFigure, fc="#ffffff", ec=EDGE, lw=1.0))
-        fig.patches.append(Rectangle((x, y + ch - 0.045 / H), cw, 0.045 / H, transform=fig.transFigure, color=ACCENT[kind]))
-        fig.text(x + 0.012, y + ch - 0.16 / H, name, va="top", fontsize=11, fontweight="bold", color=NAVY, family=FONT[lang])
-        fig.text(x + 0.012, y + ch - 0.43 / H, who, va="top", fontsize=8.5, color=GREY, family=FONT[lang])
-        for k, (v, ok) in enumerate(vals):
-            yy = y + ch - 0.85 / H - k * 0.385 / H
-            mark, col = {True: ("✓", TEAL), False: ("✗", RED), None: ("·", STONE)}[ok]
-            fig.text(x + 0.012, yy, mark, va="center", fontsize=11, fontweight="bold", color=col, family="DejaVu Sans")
-            fs = min(9.5, (cw - 0.04) * W * 72 / (max(len(v), 1) * 0.62))
-            fig.text(x + 0.03, yy, v, va="center", fontsize=fs, color=NAVY if ok is not False else RED,
-                     family=MONO if i != 2 and not (i == 3 and lang == "zh") else FONT[lang])
+        fig.patches.append(FancyBboxPatch((x, cy), cw, ch, boxstyle="round,pad=0,rounding_size=0.012",
+                                          transform=fig.transFigure, fc="#ffffff", ec=EDGE, lw=1.1))
+        fig.patches.append(Rectangle((x + 0.01, cy + ch - 0.05 / H), cw - 0.02, 0.05 / H, transform=fig.transFigure,
+                                     color=ACCENT[kind]))
+        _icon(fig, icon, x + cw / 2, cy + ch - 0.45 / H, 0.48, W, H, ACCENT[kind] if kind == "bad" else TEAL)
+        fig.text(x + cw / 2, cy + ch - 0.8 / H, name, ha="center", va="top", fontsize=12, fontweight="bold",
+                 color=NAVY, family=FONT[lang])
+        fig.text(x + cw - 0.012, cy + ch - 0.14 / H, MARK[kind], ha="right", va="top", fontsize=13, fontweight="bold",
+                 color=ACCENT[kind], family="DejaVu Sans")
+        fig.patches.append(FancyBboxPatch((x + 0.012, cy + 0.42 / H), cw - 0.024, 0.36 / H,
+                                          boxstyle="round,pad=0,rounding_size=0.008", transform=fig.transFigure,
+                                          fc=TINT[kind], ec="none"))
+        value(fig, x + cw / 2, cy + 0.6 / H, val, kind, None, cw * 0.84, W, size=11.5)
+        fig.text(x + cw / 2, cy + 0.14 / H, cap, ha="center", va="bottom", fontsize=9, color=GREY, family=FONT[lang])
         if i < n - 1:
-            fig.patches.append(FancyArrowPatch((x + cw + 0.001, y + ch / 2), (x + cw + gap - 0.001, y + ch / 2),
-                                               transform=fig.transFigure, arrowstyle="-|>", mutation_scale=10,
-                                               color=STONE, lw=1.3))
-    # the record the pipeline should end with
-    rec = [pid, "Motacilla beema", gl.accepted_name, str(gl.accepted_usage_key), legacy_place, gdate.scan_text]
-    ry, rh = top - ch - 0.32 / H, 0.95 / H
-    widths = [0.10, 0.17, 0.15, 0.11, 0.21, 0.18]
-    x = 0.04
-    fig.patches.append(FancyBboxPatch((0.04, ry - rh), 0.92, rh, boxstyle="round,pad=0,rounding_size=0.010",
-                                      transform=fig.transFigure, fc=TINT["good"], ec=EDGE, lw=1.0))
-    for wdt, head, val in zip(widths, L["rec_head"], rec):
-        fig.text(x + 0.012, ry - 0.22 / H, head, va="top", fontsize=9, color=GREY, family=FONT[lang])
-        fig.text(x + 0.012, ry - rh + 0.26 / H, val, va="bottom", fontsize=11, fontweight="bold", color=TEAL, family=MONO)
-        x += wdt
+            fig.patches.append(FancyArrowPatch((x + cw + 0.003, cy + ch / 2), (x + cw + gap - 0.003, cy + ch / 2),
+                                               transform=fig.transFigure, arrowstyle="-|>", mutation_scale=12,
+                                               color=TEAL, lw=1.6))
     return save(fig, "fig00_pipeline_trace", lang)
-
 
 def poster_strip() -> Path:
     """Compact horizontal version of figure 1 for the poster's Motivation box: name cut from the scan,
