@@ -294,3 +294,60 @@ On the reference text 12 differences remain (`errors.csv`): `枹䍐` inside the 
 `蜀` / `漢中` against the `expert_pending` `蜀漢中`, and words the author did not label (`蜜`, `米泔`,
 `小便`, `蓍`). With the rule question settled, the order is the English books' one: the extractor is near
 the ceiling on the right text, and what is lost on OCR text is mostly names that did not survive OCR.
+
+## How names are lost in each OCR text (2026-11-24, the author: "写进去")
+
+Before any extraction: for each of the 206 required primary gold values, why it does or does not survive
+in each OCR text (`python src/bencao_extract.py losses` → `name_loss_by_text.csv`, one row per case in
+`name_loss_cases.csv`). The gold span is mapped into the OCR text by character alignment, then classified
+in this order: **intact**; **normalised form** (equal once glyph variants and missing-stroke forms from
+`variant_table.csv` are folded); **reading order** (not at the aligned place but a spare occurrence is
+elsewhere on the half-leaf, or all its characters are next to the place but not contiguous); **missing**
+(most characters have no counterpart); **misread** (anything else). A heuristic: where the OCR reorders
+text the alignment itself can go wrong, so reading order and misread trade some cases.
+
+| OCR text | CER | Intact | Normalised form | Reading order | Missing | Misread |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Claude Opus | 0.03 | 182 (88%) | 19 | 0 | 1 | 4 |
+| Claude Haiku | 0.15 | 138 (67%) | **30** | 9 | 5 | 24 |
+| PaddleOCR 3.7 | 0.26 | 122 (59%) | 18 | **25** | 8 | **33** |
+
+(Intact here is per gold row at its own place, so it is a little lower than the count-based "names intact"
+above: a value that survives only at another occurrence counts as reading order.)
+
+- **The two OCR systems lose names in different ways.** The Claude readers write the standard form of a
+  character more often (`别録` → `別錄`, `陶𢎞景` → `陶弘景`): Haiku 30 of its 68 losses. PaddleOCR misreads
+  more (`枹䍐草` → `抱旱草`, `䖅` → `藿`) and loses more to reading order, mostly the two sub-columns of small
+  notes: 25 against Haiku's 9.
+- **This is why Haiku's lower CER does not give a higher value F1.** Scored letter for letter, a normalised
+  form is as wrong as a misreading, and Haiku normalises most. With forms folded the order flips (value F1
+  0.85 Haiku against 0.83 PaddleOCR, p2).
+- **Opus OCR** loses 24 names, 19 of them only by form. Its four misreadings are rare characters (`䖅` → `蘦`,
+  `蓍` → `着`).
+- The first count in chat (Haiku 37 normalised / 26 other, PaddleOCR 26 / 39) was count-based and did not
+  separate reading order; this table replaces it.
+
+### Glyph fidelity and meaning are two targets (the author's reading, 2026-11-24)
+
+Opus OCR keeps 88% of names letter for letter and 98% once variant forms are folded: it reads the same
+word but writes the common form. For an edition-faithful record that is an error; for search and linking it
+is not. The guide already keeps the two apart (gold `text` keeps the scan's form, `restored_form` the
+standard one); reports for this case therefore give both numbers. Two cautions: a folded match shows the
+same word, not that the model "understood" the name; and the 98% is fitted, since the 68 pairs in the
+variant table were collected from these six pages.
+
+The same effect exists in the English books but is small. On the 16 test pages (all 421 gold values,
+`data/sample/`), folding ligatures and long s (æ→ae, œ→oe, ſ→s):
+
+| Text | Intact | Folded | Gap |
+| --- | ---: | ---: | ---: |
+| Butler + Reeve, legacy OCR | 61% | 63% | 2 points |
+| Butler + Reeve, dots.mocr | 94% | 94% | 0 |
+| 本草綱目, Opus OCR | 88% | 98% | 10 points |
+| 本草綱目, PaddleOCR | 68% | 81% | 13 points |
+| 本草綱目, Haiku OCR | 69% | 87% | 18 points |
+
+dots.mocr kept 31 of the 35 values with æ/œ, and none of its four losses is a ligature change. Not the
+same comparison: the English row is an OCR model, the Chinese rows include Claude used as OCR, which was
+not measured for ligatures on the English books. In classical Chinese the gap is large enough to change
+which OCR ranks first; in this English print it is negligible.

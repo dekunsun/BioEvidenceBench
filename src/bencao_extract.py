@@ -6,6 +6,7 @@ author's labels (exploratory, dev: the guide and these labels came from the same
     python src/bencao_extract.py relocate <run folder>   # re-locate saved answers, no API call
     python src/bencao_extract.py score <run folder>
     python src/bencao_extract.py summary <run folder> ...   # one table across text versions
+    python src/bencao_extract.py losses                       # why gold names are lost in each OCR text
 
 Design as in the English books' G1 condition: the input lines are numbered; for each mention the model
 returns the field, the line number and a verbatim quote; code finds the quote in that line (or across the
@@ -311,6 +312,82 @@ def score(run_dir: str) -> None:
     print("invalid evidence:", (allp.status == "invalid_evidence").sum(), "of", len(allp), "| unaligned:", unaligned)
 
 
+LOSS = ["intact", "normalised_form", "found_elsewhere", "split_or_reordered", "missing", "misread"]
+
+
+def loss_breakdown() -> None:
+    """Why each required primary gold value did or did not survive in each OCR text, before extraction.
+    Per gold row: the reference span is mapped into the OCR text by character alignment, then, in order:
+      intact              the aligned OCR characters equal the gold value (line breaks ignored)
+      normalised_form     equal after folding glyph variants and missing-stroke forms (variant_table.csv)
+      found_elsewhere     not at the aligned place, but a spare occurrence of the value (exact or folded) is
+                          elsewhere on the half-leaf (reading order: a sub-column or note placed elsewhere;
+                          only occurrences not used by another gold row count)
+      split_or_reordered  all its characters are within one name-length of the aligned place, not contiguous
+      missing             fewer than half of its characters have an aligned counterpart
+      misread             anything else (a wrong character that is not a known variant)
+    A heuristic: alignment can go wrong where the OCR reorders text. Writes results/bencao_pilot/
+    name_loss_by_text.csv (counts) and name_loss_cases.csv (one row per gold value and text)."""
+    import rapidfuzz.distance.Levenshtein as Lev
+    from bencao_variants import fold
+    gold = pd.read_csv(ROOT / "gold" / "gold_mentions_bencao_gloria.csv", keep_default_na=False)
+    gold = gold[gold.field.isin(PRIMARY) & (gold.adjudication != "expert_pending")]
+    cases = []
+    for text in TEXTS[1:]:
+        for pb in PAGES:
+            ref, hyp = "\n".join(ref_lines(pb)), "\n".join(ref_lines(pb, text))
+            r2h: list[int | None] = [None] * (len(ref) + 1)          # reference offset -> OCR offset
+            for op in Lev.opcodes(ref, hyp):
+                if op.tag in ("equal", "replace"):
+                    for k in range(op.src_end - op.src_start):
+                        r2h[op.src_start + k] = op.dest_start + min(k, op.dest_end - op.dest_start - 1)
+            flat = hyp.replace("\n", "")
+            rows = []
+            for g in gold[gold.page_id == pb].itertuples():
+                v = g.text.replace("\n", "")
+                pos = [r2h[k] for k in range(int(g.start), int(g.end)) if ref[k] != "\n" and r2h[k] is not None]
+                sub = hyp[min(pos):max(pos) + 1].replace("\n", "") if pos else ""
+                rows.append((g, v, pos, sub))
+            # occurrences of each value in the OCR text not already used at its aligned place: only these can
+            # explain another gold row as "found elsewhere" (common names such as 甘草 occur many times)
+            spare: dict[str, int] = {}
+            for g, v, pos, sub in rows:
+                spare.setdefault(fold(v), fold(flat).count(fold(v)))
+                if sub and fold(sub) == fold(v):
+                    spare[fold(v)] -= 1
+            for g, v, pos, sub in rows:
+                lo, hi = (max(0, min(pos) - len(v)), max(pos) + 1 + len(v)) if pos else (0, 0)
+                window = fold(hyp[lo:hi])
+                if sub == v:
+                    kind = "intact"
+                elif sub and fold(sub) == fold(v):
+                    kind = "normalised_form"
+                elif spare[fold(v)] > 0:
+                    kind = "found_elsewhere"
+                    spare[fold(v)] -= 1
+                elif len(v) >= 2 and pos and all(fold(c) in window for c in v):
+                    kind = "split_or_reordered"
+                elif len(pos) < len(v) / 2:
+                    kind = "missing"
+                else:
+                    kind = "misread"
+                cases.append({"text": text, "page_id": pb, "field": g.field, "line": g.line, "gold": v,
+                              "ocr_at_place": sub, "kind": kind})
+    c = pd.DataFrame(cases)
+    out = ROOT / "results" / "bencao_pilot"
+    c.to_csv(out / "name_loss_cases.csv", index=False)
+    t = c.pivot_table(index="text", columns="kind", values="gold", aggfunc="count", fill_value=0)
+    t = t.reindex(columns=LOSS, fill_value=0).reindex(TEXTS[1:])
+    t["total"] = t.sum(axis=1)
+    t.to_csv(out / "name_loss_by_text.csv")
+    print(t.to_string())
+    for text in TEXTS[1:]:
+        for k in LOSS[1:]:
+            ex = c[(c.text == text) & (c.kind == k)].head(4)
+            if len(ex):
+                print(text, k, "; ".join(f"{a}→{b or '∅'}" for a, b in zip(ex.gold, ex.ocr_at_place)))
+
+
 def summary(run_dirs: list[str]) -> None:
     """One table across text versions: name preservation and value F1 per field (results/bencao_pilot/)."""
     rows = []
@@ -331,7 +408,7 @@ def summary(run_dirs: list[str]) -> None:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["run", "relocate", "score", "summary"])
+    ap.add_argument("cmd", choices=["run", "relocate", "score", "summary", "losses"])
     ap.add_argument("run_dir", nargs="*")
     ap.add_argument("--model", default="claude-opus-5-5", choices=list(PRICES))
     ap.add_argument("--max-usd", type=float, default=1.0)
@@ -341,6 +418,8 @@ if __name__ == "__main__":
         run(a.model, a.max_usd, a.text)
     elif a.cmd == "relocate":
         relocate(a.run_dir[0])
+    elif a.cmd == "losses":
+        loss_breakdown()
     elif a.cmd == "summary":
         summary(a.run_dir)
     else:

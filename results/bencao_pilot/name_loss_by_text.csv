@@ -1,0 +1,4 @@
+text,intact,normalised_form,found_elsewhere,split_or_reordered,missing,misread,total
+claude_opus,182,19,0,0,1,4,206
+claude_haiku,138,30,8,1,5,24,206
+paddleocr,122,18,22,3,8,33,206
