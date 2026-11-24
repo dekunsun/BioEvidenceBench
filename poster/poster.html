@@ -239,15 +239,17 @@ ol.take li{margin-bottom:.1in}
 <main>
 <div class="row" id="a1r1">
 <div class="box">
-  <p class="act">01 · The pages an agent has to read</p>
+  <p class="act">01 · Motivation</p>
   <div class="in">
+    <h2>The pages an agent has to read</h2>
     <figure style="margin:0"><img src="fig/books_poster.png" alt="A page of Reeve, Conchologia iconica (1849), the Bulimus plate from the same volume, and a page of Butler, Birds of Great Britain and Ireland (1907)"></figure>
-    <p class="cap">Two English books from the Biodiversity Heritage Library (about 64 million scanned pages). 16 held-out test pages, 607 names, places and dates labelled by hand before any model saw them. <span class="small">Pages: BHL via IMPACT, CC BY 3.0; plate: Internet Archive, public domain.</span></p>
+    <p class="cap">Two English books from the Biodiversity Heritage Library (about 64 million scanned pages). <span class="small">Pages: BHL via IMPACT, CC BY 3.0; plate: Internet Archive, public domain.</span></p>
   </div>
 </div>
 <div class="box">
-  <p class="act">02 · An agent's five steps</p>
+  <p class="act">02 · Methodology</p>
   <div class="in">
+    <h2>An agent's five steps, tested one by one</h2>
     <div class="steps">
       <div class="st hot"><span class="n">1</span><span class="w">Read</span><span class="l">OCR misreads a name</span></div>
       <div class="st"><span class="n">2</span><span class="w">Extract</span><span class="l">find names, places, dates</span></div>
@@ -256,6 +258,7 @@ ol.take li{margin-bottom:.1in}
       <div class="st"><span class="n">5</span><span class="w">Review</span><span class="l">a person decides</span></div>
     </div>
     <p class="note">Highlighted: where most trust was lost.</p>
+    <p style="margin:.16in 0 0">16 test pages read three ways (old OCR, modern OCR, expert text); 607 labels made before any model output; plan frozen before testing. Design follows Lei, Docherty &amp; Cooper (2024).</p>
     <p class="sub-h" style="margin-top:.25in">Same chain in a materials paper <small>(analogy, not tested)</small></p>
     <p style="margin:0 0 .06in"><b>Read:</b> Fe₂O₃ comes out as Fe2O3, µm as um.</p>
     <p style="margin:0 0 .06in"><b>Link:</b> "TiO₂" without its phase is a genus without its species.</p>
@@ -266,8 +269,9 @@ ol.take li{margin-bottom:.1in}
 
 <div class="row" id="a1r2">
 <div class="box">
-  <p class="act">03 · What broke, and how badly</p>
+  <p class="act">03 · Results</p>
   <div class="in">
+  <h2>What broke, and how badly</h2>
   <div class="r2grid">
     <div>
       <p class="sub-h">Read · same 16 pages, three texts</p>
@@ -292,15 +296,17 @@ ol.take li{margin-bottom:.1in}
 
 <div class="row" id="a1r3">
 <div class="box">
-  <p class="act">04 · Same name, two right answers</p>
+  <p class="act">04 · Case study: 本草綱目</p>
   <div class="in">
+    <h2>Same name, two right answers</h2>
     <figure style="margin:0"><img src="fig/bencao_glyph_poster.png" alt="Bencao gangmu manuscript page; the name Tao Hongjing written with a taboo form; Claude Opus wrote the standard form; the gold record keeps both"></figure>
     <p class="cap">A 1578 Chinese pharmacopoeia in an 18th-century manuscript copy (exploratory, 6 pages). Claude reads the scan but writes modern forms: 88% of names letter-perfect, 98% if variant forms are allowed. The agent has to know which one its user needs. <span class="small">Scan: CADAL, public domain; text: Kanseki Repository, CC BY-SA 4.0.</span></p>
   </div>
 </div>
 <div class="box">
-  <p class="act">05 · Five takeaways for agent builders</p>
+  <p class="act">05 · Conclusion</p>
   <div class="in">
+    <h2>Five takeaways for agent builders</h2>
     <ol class="take">
       <li><b>Check that names survive OCR</b>, not the page error rate.</li>
       <li><b>Make the agent quote its source.</b> It cost no recall and leaves an audit trail.</li>
@@ -308,7 +314,7 @@ ol.take li{margin-bottom:.1in}
       <li><b>Test linking on its own:</b> names change, databases move on.</li>
       <li><b>Write down what counts as a datum</b> before you score anything.</li>
     </ol>
-    <p class="foot">How it was tested: labels made before any model output; plan pre-registered and frozen; Claude Opus 5.5 and Gemini 4 Carbon. Design follows Lei, Docherty &amp; Cooper (2024, <i>Digital Discovery</i>).</p>
+    <p class="foot">Limits: two English printed books (1849, 1907) and a six-page Chinese pilot; other languages, layouts and handwriting untested.</p>
     <div class="cx2">
       <img class="ai4s" src="fig/ai4s_logo.png" alt="AI4S.fyi">
       <span class="q"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi">ai4s.fyi</span>

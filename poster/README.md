@@ -1,6 +1,6 @@
 # Poster
 
-Portrait **A1 (594 × 841 mm)**, one page, for Deep Matters 2026 (Agents for Science, 26 November 2026). The organisers asked for A1 and for content that is "fun, engaging and agentic-related", so this version is lighter than the A0 one: five boxes (the pages, an agent's five steps, what broke, the 本草綱目 example, takeaways for agent builders). Drawn on a 24 × 33.92 in canvas zoomed by 0.9744; body text prints at about 19 pt. The earlier A0 version is kept as `poster_a0.html` / `poster_a0.pdf` (`node render.js "$PWD" poster_a0 A0`).
+Portrait **A1 (594 × 841 mm)**, one page, for Deep Matters 2026 (Agents for Science, 26 November 2026). The organisers asked for A1 and for content that is "fun, engaging and agentic-related", so this version is lighter than the A0 one. Box titles stay the usual ones (01 Motivation, 02 Methodology, 03 Results, 04 Case study: 本草綱目, 05 Conclusion; the author, 2026-11-24), each with an agent-focused subtitle. Drawn on a 24 × 33.92 in canvas zoomed by 0.9744; body text prints at about 19 pt. The earlier A0 version is kept as `poster_a0.html` / `poster_a0.pdf` (`node render.js "$PWD" poster_a0 A0`).
 
 - `poster.html`: the source. Edit this, never the PDF.
 - `poster.pdf`: printed from the source with headless Chromium (`node render.js "$PWD" poster A1`), A1. Print at 100 %, no scaling.
