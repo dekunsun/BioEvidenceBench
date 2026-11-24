@@ -1,6 +1,6 @@
-# 本草綱目 case: annotation guide v0.4
+# 本草綱目 case: annotation guide v0.5
 
-*v0.4, 2026-11-24: rule 15 (place-name chains), written to match the author's labels on the six pilot half-leaves and adopted by her on Claude's recommendation ("按你的建议来"); no gold row changed. v0.3, 2026-11-24: rules 11–14 from the first labelled page (036-1b), adopted by the author on Claude's recommendation without her own research ("按照你的建议来，我没有相应的知识也没有research"); to be revisited with a domain expert. v0.2, 2026-11-23: rule 10 (historical forms and restoration) added on the author's decisions. v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
+*v0.5, 2026-11-24: rule 16 (mention span and lookup key are separate), proposed by the author; no gold row changed. v0.4, 2026-11-24: rule 15 (place-name chains), written to match the author's labels on the six pilot half-leaves and adopted by her on Claude's recommendation ("按你的建议来"); no gold row changed. v0.3, 2026-11-24: rules 11–14 from the first labelled page (036-1b), adopted by the author on Claude's recommendation without her own research ("按照你的建议来，我没有相应的知识也没有research"); to be revisited with a domain expert. v0.2, 2026-11-23: rule 10 (historical forms and restoration) added on the author's decisions. v0.1, 2026-11-23: the proposals of the v0 draft adopted by the author ("按你的建议"); the two points
 the draft left open (6, 7) take the defaults stated below. No page has been labelled yet. Examples come from
 half-leaves 036-1a, 036-2a and 036-2b, which are **not** among the six pilot pages, so nothing here
 pre-fills a label on a pilot page.*
@@ -100,6 +100,17 @@ pre-fills a label on a pilot page.*
     after a name stays in its span (`河西川谷`, `上黨山谷`, `積沙山`); a generic word joined by `之` does not
     (`首陽之山` → `首陽`). Each piece is then a unit a historical gazetteer can resolve. `蜀漢中` stays
     `expert_pending`: whether `蜀` is a place in a chain or part of a name is a fact for an expert.
+
+16. **Mention span and lookup key are separate (v0.5).** The gold span keeps what the page says; the
+    name a database or gazetteer is queried with is a separate key, decided at the linking step and scored
+    there, as abbreviated genera were for Butler. A place span may carry a generic word under rule 15
+    (`上黨山谷`), but the place to look up is `上黨`; passing the whole string to a gazetteer as if it were a
+    standard place name would fail or match the wrong thing. Keys for places are derived by one fixed rule in
+    `src/bencao_link_keys.py` (remove 川谷 or 山谷 written after a name; keep everything else, including the 山
+    of a mountain's name) and listed in `data/bencao/locality_link_keys.csv` with a `confirmed` column for
+    the author; the gold file is not changed. The same split already holds for the other fields: a short
+    author name (`𢎞景`) is looked up as 陶弘景, a historical form as its `restored_form`, a regional drug name
+    (`枹䍐草`) as the drug. Extraction is scored on spans; linking is scored on keys and results.
 
 ## Linking (later)
 
