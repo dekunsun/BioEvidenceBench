@@ -10,10 +10,6 @@
 
 [**English**](README.md) · [**决策备忘录**](docs/product.md#中文版) · [**研究预印本**](docs/preprint/preprint.pdf) · [**RL 技术报告**](docs/rl_report/rl_report.pdf) · [**完整结果**](docs/results.md) · [**经验教训**](docs/lessons_learned.md) · [**如何复现**](#如何复现实验) · [**Poster**](poster/poster.pdf)
 
-<img src="docs/assets/overview/fig00_pipeline_trace_zh.png" width="900" alt="Butler 1907 年一条记录走完 OCR、抽取、证据、关联、审核五个环节：旧 OCR 读坏了日期，直接查 GBIF 只匹配到属，人工审核后得到完整记录">
-
-<sub>真实页面与真实输出：每个格子都是该环节在这一页上的实际结果，最下面是这条记录最终应有的样子。</sub>
-
 </div>
 
 ## 一个被读错的学名，会变成错误的科学记录
@@ -44,6 +40,10 @@
 | **4. 关联实体** | 将历史学名关联到今天的分类学记录。 | 物种改过名称，或数据库查到了错误分类单元。 |
 | **5. 定义范围** | 用书面规则规定什么算一条记录。 | 把索引词条或文献引用当作观察记录。 |
 | **6. 人工复核** | 研究者或馆员检查不确定、有风险的结果。 | 把两个模型意见一致误当成正确。 |
+
+**一条真实记录走过这些环节。** Butler 1907 年书中 Sykes' Wagtail 的条目：旧 OCR 读坏了日期，抽取和证据都没问题，直接查数据库只查到属，最后由人工审核定下这条记录。
+
+<p align="center"><img src="docs/assets/overview/fig00_pipeline_trace_zh.png" width="900" alt="Butler 1907 年一条记录走完 OCR、抽取、证据、关联、审核五个环节：旧 OCR 读坏了日期，直接查 GBIF 只匹配到属，人工审核后得到完整记录"></p>
 
 **BioEvidenceBench 评估这些环节的可靠性。** 其中数据范围定义和人工复核会贯穿多个处理阶段，因此六个维度并不一定是依次执行的六道工序。它是一项研究评测和工作流程分析，**不是**已经上线的数字化或馆员审核产品。
 

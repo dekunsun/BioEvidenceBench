@@ -10,10 +10,6 @@
 
 [**Decision memo**](docs/product.md) · [**Preprint**](docs/preprint/preprint.pdf) · [**RL technical report**](docs/rl_report/rl_report.pdf) · [**Full results**](docs/results.md) · [**Lessons learned**](docs/lessons_learned.md) · [**Reproduce**](#reproduce-the-evaluation) · [**Poster**](poster/poster.pdf) · [**中文版**](README_zh.md)
 
-<img src="docs/assets/overview/fig00_pipeline_trace.png" width="900" alt="One entry from Butler 1907 followed through OCR, extraction, evidence, linking and review: the older OCR garbles the date, a plain GBIF lookup reaches only the genus, and review produces the complete record">
-
-<sub>A real page and real outputs: each card shows what that stage actually produced on this page; the bottom row is the record it should end as.</sub>
-
 </div>
 
 ## One misread name, one unreliable record
@@ -44,6 +40,10 @@ Turning a scanned book into data is not one model call. Information passes throu
 | **4. Link** | A printed historical name is matched to a present-day taxonomic record. | The name changed, or a database lookup selects the wrong taxon. |
 | **5. Define scope** | Written rules say what counts as a record. | An index entry or bibliographic reference is mistaken for an observation. |
 | **6. Review** | People inspect uncertain or high-risk outputs. | Agreement between models is mistaken for correctness. |
+
+**One real entry through these stages.** Butler's 1907 account of Sykes' Wagtail: the older OCR garbles the date, extraction and evidence hold, the plain database lookup reaches only the genus, and review settles the record.
+
+<p align="center"><img src="docs/assets/overview/fig00_pipeline_trace.png" width="900" alt="One entry from Butler 1907 followed through OCR, extraction, evidence, linking and review: the older OCR garbles the date, a plain GBIF lookup reaches only the genus, and review produces the complete record"></p>
 
 **BioEvidenceBench evaluates reliability across these stages.** Scope rules and human review can apply throughout the workflow; these six dimensions are not necessarily six sequential processing steps. This is a research benchmark and workflow analysis, **not** a deployed digitization or curator-review product.
 
