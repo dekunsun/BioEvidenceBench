@@ -30,7 +30,7 @@ def css() -> str:
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.5fr 0.5fr}
 #r2{grid-template-columns:0.665fr 0.335fr}
-#r3{grid-template-columns:0.47fr 0.53fr}
+#r3{grid-template-columns:0.58fr 0.42fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}
 main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no empty space */  /* share any spare page height between the rows */
@@ -42,9 +42,6 @@ h1{font-size:72px}
 .brand{justify-items:center}
 h1{font-size:80px}
 .concl-wrap{margin:auto 0}  /* 06: one block, centred in the card */
-.concl-wrap ol.concl2 li{font-size:27px !important;padding:.16in 0}
-.concl-wrap .sub-h{font-size:28px !important;color:var(--accent) !important}
-.concl-wrap .note{font-size:22px !important;margin-top:.12in !important}
 ol.concl2{margin:0;padding-left:.36in}
 ol.concl2 li{margin:0;padding:.12in 0;line-height:1.3;border-bottom:1.5px solid var(--rule)}
 ol.concl2 li:last-child{border-bottom:0}
@@ -85,7 +82,7 @@ ol.concl2 li:last-child{border-bottom:0}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--ink);line-height:1.25}
 .facts .d small{display:block;font-size:22px;color:var(--soft)}
-#r3 .box:first-child svg{max-height:none}
+#r3 .box:first-child svg{max-height:650px;margin:0 auto;display:block}
 #r1 .two{grid-template-columns:0.45fr 0.55fr !important}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
@@ -384,6 +381,7 @@ def page() -> str:
       <img src="fig/v5/hook_scan_grey.png" alt="BULIMUS CHILENSIS printed in Reeve 1849, BHL page 8966790" style="width:100%">
     </div>
     {motivation_svg()}
+    <p class="note" style="margin:.08in 0 0">Reeve, 1849 · BHL page 8966790</p>
   </div>
 </div>
 <div class="box">
@@ -409,6 +407,7 @@ def page() -> str:
       <div><span class="v">421</span><span class="d">Test mentions<small>607 total</small></span></div>
       <div><span class="v">0.90</span><span class="d">Exact-span agreement</span></div>
     </div>
+    <p class="note" style="margin:.08in 0 0">Pre-registered · Evaluation design informed by Lei, Docherty &amp; Cooper (2024).</p>
   </div>
 </div>
 </div>
@@ -431,7 +430,8 @@ def page() -> str:
         <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure>
         <p class="note" style="margin:.06in 0 0"><b class="ink">Page CER does not predict F1</b> <span style="white-space:nowrap">(ρ = −0.11 / −0.61)</span></p></div>
       <div><p class="sub-h">C · Correct names, failed links</p>
-        <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91"></figure></div>
+        <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91 (exploratory)"></figure>
+        <p class="note" style="margin:.06in 0 0"><b class="ink">* LLM-assisted linking: exploratory</b></p></div>
     </div>
   </div>
 </div>

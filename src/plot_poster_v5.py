@@ -15,6 +15,7 @@ v3.OUT = v3.ROOT / "poster" / "fig" / "v5"
 v3.FS = 17.0
 v3.W, v3.H = 4.5, 4.4
 v3.NARROW_F1 = True
+v3.STAR_LLM = True
 v3.LINK_LABELS = {'Plain GBIF\nlookup': 'Plain\nGBIF', 'GBIF with\ncontext hint': 'GBIF\n+ hint', 'LLM linker\n(Haiku)': 'LLM\nHaiku', 'LLM linker\n(Opus)': 'LLM\nOpus'}
 v3.INK, v3.GREY = "#15201c", "#4d5a55"
 plt.rcParams.update({"font.family": ["Liberation Sans", "DejaVu Sans"], "font.size": v3.FS,

@@ -24,7 +24,8 @@ MARK = {"Butler": "o", "Reeve": "s"}
 FS = 20.0
 LINK_LABELS: dict[str, str] = {}  # optional relabelling of link_recall's bars (used by plot_poster_v5)
 LIB_LABEL_BELOW = False  # put the library-OCR values under the points (narrow charts)
-NARROW_F1 = False  # narrow chart: short legend labels, wider x range, lower y floor
+NARROW_F1 = False
+STAR_LLM = False  # mark the exploratory LLM-linker bars with *  # narrow chart: short legend labels, wider x range, lower y floor
 W, H = 7.27, 2.9
 
 plt.rcParams.update({"font.family": ["Inter", "DejaVu Sans"], "font.size": FS, "axes.edgecolor": GREY,
@@ -109,7 +110,8 @@ def link_recall() -> None:
     fig, ax = plt.subplots(figsize=(W, H))
     for i, (lab, v, pre) in enumerate(rows):
         ax.bar(i, v, width=0.58, color=NAVY if pre else "white", edgecolor=NAVY, lw=2)
-        ax.text(i, v + 0.025, f"{v:.2f}", ha="center", va="bottom", fontsize=FS, color=INK)
+        star = "*" if STAR_LLM and lab.replace("\n", " ").startswith("LLM") else ""
+        ax.text(i, v + 0.025, f"{v:.2f}{star}", ha="center", va="bottom", fontsize=FS, color=INK)
     ax.set_xticks(range(len(rows)), [r[0] for r in rows])
     ax.set_ylim(0, 1.1)
     ax.set_yticks([0, 0.5, 1.0])
