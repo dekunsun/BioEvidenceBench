@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LIVELAB = Path("/home/user/dekunsun/livelab/poster/poster.html")
-NAVY, SOFT, INK, RULE, RED = "#011F5B", "#4d5a55", "#15201c", "#d9dee6", "#b3261e"
+NAVY, SOFT, INK, RULE, RED = "#011F5B", "#4d5a55", "#15201c", "#d9dee6", "#a8463c"
 FS = 30.2  # LiveLab's diagram text size
 
 
@@ -47,11 +47,12 @@ h1{font-size:72px}
 .code .out{font-family:"DejaVu Sans Mono",monospace;font-size:23px;color:var(--accent);margin:.1in 0}
 .code p{margin:.08in 0 0;color:var(--soft)}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:.15in;margin:.1in 0}
-.choices div{border:2px solid var(--accent);border-radius:10px;padding:.1in;text-align:center;font-style:italic;font-weight:700;color:var(--accent)}
+.choices div{border:2px solid var(--accent);border-radius:10px;padding:.1in;text-align:center;font-style:italic;font-weight:400;color:var(--accent)}
 .flip{transform:rotate(180deg);color:var(--soft);background:#f3f5f9;border-radius:8px;padding:.1in .15in;margin:.1in 0 .2in}
-.lost{color:#b3261e;font-weight:700}
+.lost{color:#a8463c}
+.dl .d b{font-weight:600}
 .dl{display:grid;grid-template-columns:1.25in 1fr;gap:.12in .2in;align-items:baseline;margin:.1in 0 .1in}
-.dl .v{font-size:34px;font-weight:700;color:var(--accent);text-align:right;font-variant-numeric:tabular-nums}
+.dl .v{font-size:34px;font-weight:600;color:var(--accent);text-align:right;font-variant-numeric:tabular-nums}
 .dl .d b{display:block}
 .dl .d span{color:var(--soft)}
 .zh{font-family:"WenQuanYi Zen Hei",sans-serif}
@@ -107,12 +108,12 @@ def motivation_svg() -> str:
     W, H = 800, 290
     p = [DEFS]
     cards = [("Printed, 1849", "BULIMUS", "CHILENSIS", INK, RULE),
-             ("Library OCR ✗", "BuLlMLS", "CiilLE.NSls", RED, RED),
+             ("Library OCR ✗", "BuLlMLS", "CiilLE.NSls", RED, RULE),
              ("Database needs ✓", "Bulimus", "chilensis", NAVY, NAVY)]
     for i, (h, a, b, col, st) in enumerate(cards):
         x = i * 280
         p.append(f'<rect x="{x}" y="0" width="240" height="150" rx="12" fill="#fff" stroke="{st}" stroke-width="2.5"/>')
-        p.append(f'<text x="{x + 120}" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="{col}">{h}</text>')
+        p.append(f'<text x="{x + 120}" y="38" text-anchor="middle" font-size="24" font-weight="400" fill="{SOFT}">{h}</text>')
         fam = 'style="font-family:\'DejaVu Sans Mono\',monospace"' if i < 2 else 'font-style="italic"'
         p.append(f'<text x="{x + 120}" y="86" text-anchor="middle" font-size="27" {fam} fill="{col}">{a}</text>')
         p.append(f'<text x="{x + 120}" y="122" text-anchor="middle" font-size="27" {fam} fill="{col}">{b}</text>')
@@ -120,11 +121,11 @@ def motivation_svg() -> str:
             p.append(arrow(f"M{x + 246} 75 H{x + 274}"))
     # the five steps the record depends on
     steps = ["read", "extract", "ground", "link", "review"]
-    p.append(f'<text x="0" y="212" font-size="26" font-weight="700" fill="{INK}">Five steps must hold:</text>')
+    p.append(f'<text x="0" y="212" font-size="26" font-weight="400" fill="{SOFT}">Five steps must hold:</text>')
     for i, s in enumerate(steps):
         x = i * 163
         p.append(f'<rect x="{x}" y="232" width="128" height="50" rx="25" fill="#fff" stroke="{NAVY}" stroke-width="2"/>')
-        p.append(f'<text x="{x + 64}" y="266" text-anchor="middle" font-size="26" font-weight="700" fill="{NAVY}">{s}</text>')
+        p.append(f'<text x="{x + 64}" y="266" text-anchor="middle" font-size="26" font-weight="500" fill="{NAVY}">{s}</text>')
         if i < 4:
             p.append(arrow(f"M{x + 131} 257 H{x + 159}"))
     return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="The printed name '
@@ -136,20 +137,20 @@ def methods_svg() -> str:
     W, H = 560, 600
     p = [DEFS]
     p.append(f'<rect x="120" y="0" width="320" height="56" rx="28" fill="#fff" stroke="{NAVY}" stroke-width="2.5"/>')
-    p.append(f'<text x="280" y="37" text-anchor="middle" font-size="{FS}" font-weight="700" fill="{NAVY}">One scanned page</text>')
+    p.append(f'<text x="280" y="37" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">One scanned page</text>')
     p.append(f'<text x="280" y="94" text-anchor="middle" font-size="26" fill="{SOFT}">read three ways</text>')
     p.append(arrow("M280 58 V70"))
     for i, (a, b) in enumerate([("Library", "OCR"), ("Modern", "OCR"), ("Expert", "transcript")]):
         x = i * 190
-        p.append(box(x, 112, 175, 90, [(a, 700, INK), (b, 700, INK)]))
+        p.append(box(x, 112, 175, 90, [(a, 500, INK), (b, 500, INK)]))
         p.append(arrow(f"M{x + 87} 204 V250"))
-    p.append(box(70, 256, 420, 90, [("Model returns", 700, INK), ("line + verbatim quote", 400, SOFT)],
+    p.append(box(70, 256, 420, 90, [("Model returns", 600, INK), ("line + verbatim quote", 400, SOFT)],
                  stroke=SOFT, dash=True))
     p.append(arrow("M280 348 V384"))
-    p.append(box(70, 390, 420, 90, [("Code checks the quote,", 700, INK), ("slices the value", 400, SOFT)]))
+    p.append(box(70, 390, 420, 90, [("Code checks the quote,", 600, INK), ("slices the value", 400, SOFT)]))
     p.append(arrow("M280 482 V518"))
     p.append(f'<rect x="20" y="524" width="520" height="64" rx="32" fill="{NAVY}"/>')
-    p.append(f'<text x="280" y="566" text-anchor="middle" font-size="{FS}" font-weight="700" fill="#fff">Scored against 607 hand labels</text>')
+    p.append(f'<text x="280" y="566" text-anchor="middle" font-size="{FS}" font-weight="600" fill="#fff">Scored against 607 hand labels</text>')
     return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="One scanned page, read '
             f'three ways: library OCR, modern OCR, expert transcription. The model returns a line and a verbatim '
             f'quote; code checks the quote and slices the value; scored against 607 hand labels.">'
@@ -162,11 +163,11 @@ def framework_svg() -> str:
     # left: the model writes the record
     p.append(f'<rect x="0" y="0" width="690" height="{H - 6}" rx="18" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>')
     p.append(f'<text x="25" y="46" font-size="{FS}" font-weight="700" fill="{SOFT}">Model writes the record</text>')
-    L = [(76, 60, [("Scanned page", 700, INK)]),
-         (196, 114, [("Model", 700, INK), ("reads the OCR,", 400, SOFT), ("writes the value", 400, SOFT)]),
-         (370, 114, [("Record", 700, INK), ("<tspan font-style='italic'>Turritella</tspan>", 400, SOFT),
-                     ("<tspan font-style='italic' fill='#b3261e' font-weight='700'>brevisis</tspan>", 400, SOFT)]),
-         (550, 60, [("Researcher trusts it", 700, INK)])]
+    L = [(76, 60, [("Scanned page", 600, INK)]),
+         (196, 114, [("Model", 600, INK), ("reads the OCR,", 400, SOFT), ("writes the value", 400, SOFT)]),
+         (370, 114, [("Record", 600, INK), ("<tspan font-style='italic'>Turritella</tspan>", 400, SOFT),
+                     ("<tspan font-style='italic'>brevisis</tspan>", 400, SOFT)]),
+         (550, 60, [("Researcher trusts it", 600, INK)])]
     prev = None
     for y, h, lines in L:
         p.append(box(25, y, 316, h, lines))
@@ -174,20 +175,20 @@ def framework_svg() -> str:
             p.append(arrow(f"M183 {prev} V{y - 5}"))
         prev = y + h
     for i, t in enumerate(["1 in 12 repairs", "is wrong; fluent", "OCR errors pass", "and look right"]):
-        p.append(f'<text x="366" y="{232 + i * 32}" font-size="{FS}" font-weight="700" fill="{INK}">{t}</text>')
+        p.append(f'<text x="366" y="{232 + i * 32}" font-size="{FS}" font-weight="400" fill="{SOFT}">{t}</text>')
     # right: code owns the text
     x0 = 723
     p.append(f'<rect x="{x0}" y="0" width="690" height="{H - 6}" rx="18" fill="#eef1f7" stroke="{NAVY}" stroke-width="2"/>')
     p.append(f'<text x="{x0 + 25}" y="46" font-size="{FS}" font-weight="700" fill="{NAVY}">Code owns the text</text>')
     bx, bw = 748, 330
-    R = [(76, 60, [("Scanned page", 700, INK)]),
-         (166, 92, [("OCR text", 700, INK), ("F1 0.60 → 0.95", 700, RED)]),
-         (290, 124, [("Code checks quote,", 700, NAVY), ("slices the value", 700, NAVY), ("0 recall lost", 400, SOFT)]),
-         (446, 92, [("Database lookup", 700, INK), ("14 of 34 lost", 700, RED)]),
-         (570, 124, [("Person reviews", 700, INK), ("50 of 75 errors made", 700, RED), ("by both models", 700, RED)])]
+    R = [(76, 60, [("Scanned page", 600, INK)]),
+         (166, 92, [("OCR text", 600, INK), ("F1 0.60 → 0.95", 400, RED)]),
+         (290, 124, [("Code checks quote,", 600, NAVY), ("slices the value", 600, NAVY), ("0 recall lost", 400, SOFT)]),
+         (446, 92, [("Database lookup", 600, INK), ("14 of 34 lost", 400, RED)]),
+         (570, 124, [("Person reviews", 600, INK), ("50 of 75 errors made", 400, RED), ("by both models", 400, RED)])]
     prev = None
     for y, h, lines in R:
-        p.append(box(bx, y, bw, h, lines, stroke=RED if any(c == RED for _, _, c in lines) else RULE))
+        p.append(box(bx, y, bw, h, lines, stroke=RULE))
         if prev:
             p.append(arrow(f"M{bx + bw / 2} {prev} V{y - 5}"))
         prev = y + h
@@ -195,13 +196,13 @@ def framework_svg() -> str:
     mx, my, mw, mh = 1110, 104, 286, 256
     p.append(f'<rect x="{mx}" y="{my}" width="{mw}" height="{mh}" rx="12" fill="#fff" stroke="{SOFT}" stroke-width="2" stroke-dasharray="9 7"/>')
     p.append(robot(mx + mw / 2, my + 16, 0.95))
-    for i, (t, wt, col) in enumerate([("Model", 700, INK), ("finds mentions,", 400, SOFT),
-                                      ("quotes the line", 400, SOFT), ("F1 0.93–0.98", 700, NAVY)]):
+    for i, (t, wt, col) in enumerate([("Model", 600, INK), ("finds mentions,", 400, SOFT),
+                                      ("quotes the line", 400, SOFT), ("F1 0.93–0.98", 400, NAVY)]):
         p.append(f'<text x="{mx + mw / 2}" y="{my + 136 + i * 32}" text-anchor="middle" font-size="{FS}" font-weight="{wt}" fill="{col}">{t}</text>')
     p.append(arrow(f"M{bx + bw} 212 H{mx - 5}", dash=True))
     p.append(arrow(f"M{mx + 60} {my + mh} V384 H{bx + bw + 5}", dash=True))
     for i, t in enumerate(["never rewrites", "the source text"]):
-        p.append(f'<text x="{mx + mw / 2 + 20}" y="{456 + i * 32}" text-anchor="middle" font-size="{FS}" font-weight="700" fill="{NAVY}">{t}</text>')
+        p.append(f'<text x="{mx + mw / 2 + 20}" y="{456 + i * 32}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">{t}</text>')
     return (f'<svg viewBox="-3 -3 {W} {H}" width="100%" role="img" aria-label="Two designs. Model writes the '
             f'record: scanned page, model reads the OCR and writes the value, record, researcher trusts it; 1 in '
             f'12 repairs is wrong, and fluent OCR errors pass and look right. Code owns the text: scanned page, OCR text '
@@ -264,9 +265,9 @@ def page() -> str:
           <div class="ln"><i>2 </i> <span class="hl">BULIMUS CHILENSIS</span>. Bul. testâ</div>
           <div class="ln"><i>3 </i> oblongo-ovatâ, tenui, subtiliter</div>
           <div class="out">model → {{"line": 2, "quote": "BULIMUS CHILENSIS"}}</div>
-          <p><b class="ink">Code</b> finds the quote in line 2 and slices the value from the text. A quote that differs from the text is logged as a silent correction.</p>
+          <p>Code finds the quote in line 2 and slices the value from the text. A quote that differs from the text is logged as a silent correction.</p>
         </div>
-        <p class="gate" style="white-space:normal"><b>Agents:</b> Claude Opus 5.5 and Gemini 4 Carbon. Design after Lei, Docherty &amp; Cooper (2024): label before seeing model output.</p>
+        <p class="gate" style="white-space:normal">Agents: Claude Opus 5.5 and Gemini 4 Carbon. Design after Lei, Docherty &amp; Cooper (2024): label before seeing model output.</p>
       </div>
     </div>
   </div>
@@ -288,7 +289,7 @@ def page() -> str:
       <div><p class="sub-h">D · Spot the fake: which is printed in 1849?</p>
         <div class="choices"><div>A · Turritella brevisis</div><div>B · Turritella brevialis</div></div>
         <div class="flip">B is printed; a modern OCR model wrote A. Nothing looks broken.</div>
-        <p style="margin:0"><b>Read right, linked wrong:</b> <i>Motacilla beema</i> (1907) finds only the genus; today it is <i>Motacilla flava</i>.</p></div>
+        <p style="margin:0">Read right, linked wrong: <i>Motacilla beema</i> (1907) finds only the genus; today it is <i>Motacilla flava</i>.</p></div>
     </div>
   </div>
 </div>
@@ -304,7 +305,7 @@ def page() -> str:
       <div class="v">0.90</div><div class="d"><b>Labeller agreement</b><span>exact match, 5 pages</span></div>
     </div>
     <p class="sub-h" style="margin-top:auto;padding-top:.2in">Next: classical Chinese</p>
-    <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the manuscript, 弘 one stroke short"><span class="zh" style="font-size:40px">→ 陶<span class="lost">弘</span>景</span></div>
+    <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the manuscript, 弘 one stroke short"><span class="zh" style="font-size:40px;color:var(--accent)">→ 陶弘景</span></div>
     <p class="note" style="margin-top:.08in"><i>Bencao gangmu</i> 本草綱目 manuscript: the model writes the modern character, right for search, wrong for the edition.</p>
   </div>
 </div>
