@@ -43,7 +43,9 @@ def figures(html: str) -> str:
 def tables(html: str) -> str:
     html = html.replace("<table>", '<div class="tablewrap"><table>').replace("</table>", "</table></div>")
     # numbers right-aligned, as in the LiveLab tables
-    return re.sub(r"<td>([−+\-]?[\d.,/ \[\]−–]+%?)</td>", r'<td class="n">\1</td>', html)
+    # a bold number (<strong>1.7%</strong>) is still a number
+    num = r"[−+\-]?[\d.,/ \[\]−–]+%?"
+    return re.sub(rf"<td>((?:<strong>)?{num}(?:</strong>)?)</td>", r'<td class="n">\1</td>', html)
 
 
 TARGETS = {
