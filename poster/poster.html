@@ -196,6 +196,7 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .pairs div{border:2px solid var(--rule);border-radius:10px;padding:.08in .12in;background:#fafbfc;font-size:25px;line-height:1.2}
 .pairs div i{color:var(--ink)}
 .quiz .qh{font-size:36px;line-height:1.15;color:var(--accent);margin:0 0 .08in}
+.quiz .ans.flipped{transform:rotate(180deg);text-align:right;border-top:0;border-bottom:1.5px solid var(--rule);padding:0 0 .08in;margin-top:.12in}
 .quiz .opts{display:grid;grid-template-columns:1fr 1fr;gap:.12in}
 .quiz .opts .opt{margin:0;padding:.1in .14in;gap:.12in}
 .quiz .opts .opt b{font-size:28px}
@@ -275,8 +276,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
-    <div class="logos"><img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
-    <img class="cas" src="fig/cas_logo_reverse.png" alt="California Academy of Sciences"></div>
+    <div class="logos"><img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania"></div>
     <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>github.com/dekunsun/BioEvidenceBench</span></div>
   </div>
 </header>
@@ -410,7 +410,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
     <div class="opts"><div class="opt"><b>A</b><i>Bulimus granulatus</i></div>
     <div class="opt"><b>B</b><i>Bulimus granulosus</i></div></div>
     <p style="margin:.1in 0 0;font-weight:600;color:var(--accent)">Both look scientifically plausible. Only one is supported by the source.</p>
-    <p class="ans">Answer: B. A is a modern OCR model's reading.</p>
+    <p class="ans flipped">Answer: B. A is a modern OCR model's reading.</p>
     <p class="sub-h" style="margin:.14in 0 .02in">Exploratory extension: classical Chinese</p>
     <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the Siku quanshu manuscript of the Bencao gangmu, 弘 one stroke short"><span class="zh" style="font-size:40px;color:var(--accent)">→ 陶弘景</span></div>
     <p class="note" style="margin:.02in 0 0">本草綱目 manuscript: the model writes the modern form.</p>
@@ -423,61 +423,108 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <div class="box">
   <p class="act">05 · Proposed Framework</p>
   <div class="in">
-    <h2>Code owns the text; the model points and quotes</h2>
-    <svg viewBox="-3 -3 1419 722" width="100%" role="img" aria-label="Two designs. Model writes the record: scanned page, model reads the OCR, repairs it and writes the value, record, researcher trusts it; about 8% of changed values are wrong, and fluent OCR errors pass unrepaired. Code owns the text: scanned page, OCR text (F1 0.60 to 0.95 by OCR), code checks the quote and slices the value (0 recall lost), LLM linker plus GBIF lookup (recall 0.59 to 0.91 on 34 correctly read Butler names), human review (on library OCR the values both models agreed on still held 50 errors in Butler and 75 in Reeve); the model, drawn as a robot, finds mentions and quotes the line, F1 0.93 to 0.98, and never rewrites the source text."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
-<rect x="0" y="0" width="690" height="716" rx="18" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>
-<text x="25" y="46" font-size="30.2" font-weight="700" fill="#4d5a55">Model writes the record</text>
-<rect x="25" y="76" width="316" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="183.0" y="116" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Scanned page</text>
-<rect x="25" y="196" width="316" height="114" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="183.0" y="231" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Model</text>
-<text x="183.0" y="263" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">reads the OCR,</text>
-<text x="183.0" y="295" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">repairs, writes value</text>
-<path d="M183 136 V191" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="25" y="370" width="316" height="114" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="183.0" y="405" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Record</text>
-<text x="183.0" y="437" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55"><tspan font-style='italic'>Turritella</tspan></text>
-<text x="183.0" y="469" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55"><tspan font-style='italic'>brevisis</tspan></text>
-<path d="M183 310 V365" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="25" y="550" width="316" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="183.0" y="590" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Researcher trusts it</text>
-<path d="M183 484 V545" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<text x="366" y="232" font-size="30.2" font-weight="400" fill="#4d5a55">~8% of changed</text>
-<text x="366" y="264" font-size="30.2" font-weight="400" fill="#4d5a55">values are wrong;</text>
-<text x="366" y="296" font-size="30.2" font-weight="400" fill="#4d5a55">fluent OCR errors</text>
-<text x="366" y="328" font-size="30.2" font-weight="400" fill="#4d5a55">pass unrepaired</text>
-<rect x="723" y="0" width="690" height="716" rx="18" fill="#eef1f7" stroke="#011F5B" stroke-width="2"/>
-<text x="748" y="46" font-size="30.2" font-weight="700" fill="#011F5B">Code owns the text</text>
-<rect x="748" y="76" width="330" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="913.0" y="116" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Scanned page</text>
-<rect x="748" y="166" width="330" height="92" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="913.0" y="206" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">OCR text</text>
-<text x="913.0" y="238" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">F1 0.60 → 0.95</text>
-<path d="M913.0 136 V161" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="748" y="290" width="330" height="124" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="913.0" y="330" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Code checks quote,</text>
-<text x="913.0" y="362" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">slices the value</text>
-<text x="913.0" y="394" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">0 recall lost</text>
-<path d="M913.0 258 V285" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="748" y="446" width="330" height="92" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="913.0" y="486" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">LLM linker + GBIF</text>
-<text x="913.0" y="518" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">recall 0.59 → 0.91</text>
-<path d="M913.0 414 V441" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="748" y="570" width="330" height="124" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
-<text x="913.0" y="610" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Human review</text>
-<text x="913.0" y="642" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">50 & 75 shared errors</text>
-<text x="913.0" y="674" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">on legacy OCR</text>
-<path d="M913.0 538 V565" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="1110" y="104" width="286" height="256" rx="12" fill="#fff" stroke="#4d5a55" stroke-width="2" stroke-dasharray="9 7"/>
-<line x1="1253.0" y1="123.8" x2="1253.0" y2="137.1" stroke="#011F5B" stroke-width="3.8"/><circle cx="1253.0" cy="123.8" r="5.7" fill="#011F5B"/><rect x="1220.7" y="137.1" width="64.6" height="49.4" rx="12.3" fill="#011F5B"/><rect x="1213.1" y="152.3" width="6.6" height="19.0" rx="2.8" fill="#011F5B"/><rect x="1286.2" y="152.3" width="6.6" height="19.0" rx="2.8" fill="#011F5B"/><circle cx="1240.7" cy="158.9" r="7.6" fill="#fff"/><circle cx="1265.4" cy="158.9" r="7.6" fill="#fff"/><circle cx="1242.5" cy="159.9" r="3.3" fill="#011F5B"/><circle cx="1267.2" cy="159.9" r="3.3" fill="#011F5B"/><rect x="1241.6" y="173.2" width="22.8" height="4.8" rx="2.4" fill="#fff"/><rect x="1232.1" y="190.3" width="41.8" height="20.9" rx="6.6" fill="#011F5B"/>
-<text x="1253.0" y="240" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Model</text>
-<text x="1253.0" y="272" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">finds mentions,</text>
-<text x="1253.0" y="304" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">quotes the line</text>
-<text x="1253.0" y="336" text-anchor="middle" font-size="30.2" font-weight="400" fill="#011F5B">F1 0.93–0.98</text>
-<path d="M1078 212 H1105" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
-<path d="M1170 360 V384 H1083" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
-<text x="1273.0" y="456" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">never rewrites</text>
-<text x="1273.0" y="488" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">the source text</text></svg>
+    <h2>Code owns the text; the model points, quotes, and defers</h2>
+    <svg viewBox="-3 -3 2006 1066" width="100%" role="img" aria-label="An evidence-aware workflow for scientific agents. Steps: scanned page, OCR text, mention plus quote, verify and link, then accept, review or abstain (proposed). Left, the model writes the record: scanned page, the model reads the OCR, repairs it and writes the value, record Turritella brevisis, researcher trusts it; no trace of what changed. Right, code owns the text: scanned page; OCR text, value F1 0.60 to 0.95; the model, drawn as a robot, proposes a mention and a quote, value F1 0.93 to 0.98; code verifies the quote and slices the value; link to authority (GBIF), recall 0.59 to 0.91 with an exploratory LLM linker. Then two checks: does the quote match the text exactly (tested), and is the linked name supported (proposed). Yes to both: accept the record with page, line and quote. No to either: review, by re-checking the scan or a human audit (proposed)."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+<text x="0" y="40" font-size="39" font-weight="400" fill="#4d5a55" text-anchor="start">An evidence-aware agent workflow</text>
+<rect x="760" y="8" width="70" height="40" rx="14" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<text x="844" y="40" font-size="39" font-weight="400" fill="#4d5a55" text-anchor="start">tested in this pilot</text>
+<rect x="1240" y="8" width="70" height="40" rx="14" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="10 8"/>
+<text x="1324" y="40" font-size="39" font-weight="400" fill="#4d5a55" text-anchor="start">proposed, not yet end to end</text>
+<rect x="0" y="82" width="330" height="78" rx="39" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<path d="M28 101 H46 L56 111 V141 H28 Z M46 101 V111 H56 M34 121 H50 M34 130 H50" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="70" y="134" font-size="36" font-weight="600" fill="#011F5B" text-anchor="start">Scanned page</text>
+<path d="M336 121 H366" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="370" y="82" width="246" height="78" rx="39" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<path d="M392 110 V101 H401 M423 101 H432 V110 M432 132 V141 H423 M401 141 H392 V132" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="412" y="132" text-anchor="middle" font-size="28" font-weight="700" fill="#011F5B">A</text>
+<text x="440" y="134" font-size="36" font-weight="600" fill="#011F5B" text-anchor="start">OCR text</text>
+<path d="M622 121 H652" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="656" y="82" width="378" height="78" rx="39" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<circle cx="683" cy="108" r="3.2" fill="#011F5B"/>
+<path d="M692 108 H718" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="683" cy="121" r="3.2" fill="#011F5B"/>
+<path d="M692 121 H718" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="683" cy="134" r="3.2" fill="#011F5B"/>
+<path d="M692 134 H718" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="726" y="134" font-size="36" font-weight="600" fill="#011F5B" text-anchor="start">Mention + quote</text>
+<path d="M1040 121 H1070" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1074" y="82" width="318" height="78" rx="39" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<path d="M1116 101 L1134 108 V121 C1134 132 1126 138 1116 142 C1106 138 1098 132 1098 121 V108 Z M1108 122 L1114 128 L1125 116" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1144" y="134" font-size="36" font-weight="600" fill="#011F5B" text-anchor="start">Verify &amp; link</text>
+<path d="M1398 121 H1428" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1432" y="82" width="500" height="78" rx="39" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="10 8"/>
+<circle cx="1474" cy="112" r="9" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1457 141 C1459 127 1489 127 1491 141" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1502" y="134" font-size="36" font-weight="600" fill="#011F5B" text-anchor="start">Accept / review / abstain</text>
+<rect x="0" y="210" width="560" height="846" rx="18" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>
+<text x="280" y="272" font-size="42" font-weight="700" fill="#4d5a55" text-anchor="middle">Model writes the record</text>
+<rect x="40" y="300" width="480" height="82" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="280" y="355.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="middle">Scanned page</text>
+<rect x="40" y="440" width="480" height="150" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="280" y="483.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="middle">Model</text>
+<text x="280" y="529.0" font-size="46" font-weight="400" fill="#4d5a55" text-anchor="middle">reads the OCR,</text>
+<text x="280" y="575.0" font-size="46" font-weight="400" fill="#4d5a55" text-anchor="middle">repairs, writes</text>
+<path d="M280 384 V434" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="40" y="650" width="480" height="150" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="280" y="693.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="middle">Record</text>
+<text x="280" y="739.0" font-size="46" font-weight="400" fill="#4d5a55" text-anchor="middle"><tspan font-style='italic'>Turritella</tspan></text>
+<text x="280" y="785.0" font-size="46" font-weight="400" fill="#a8463c" text-anchor="middle"><tspan font-style='italic'>brevisis</tspan></text>
+<path d="M280 592 V644" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="40" y="860" width="480" height="82" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="280" y="915.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="middle">Researcher trusts it</text>
+<path d="M280 802 V854" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="280" y="1012" font-size="39" font-weight="400" fill="#4d5a55" text-anchor="middle" font-style="italic">no trace of changes</text>
+<rect x="600" y="210" width="1398" height="846" rx="18" fill="#fff" stroke="#011F5B" stroke-width="2.5"/>
+<text x="630" y="272" font-size="48" font-weight="700" fill="#011F5B" text-anchor="start">Code owns the text</text>
+<rect x="630" y="300" width="565" height="92" rx="14" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<path d="M666 326.0 H684 L694 336.0 V366.0 H666 Z M684 326.0 V336.0 H694 M672 346.0 H688 M672 355.0 H688" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="730" y="360.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="start">Scanned page</text>
+<rect x="630" y="420" width="565" height="118" rx="14" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<path d="M660 468.0 V459.0 H669 M691 459.0 H700 V468.0 M700 490.0 V499.0 H691 M669 499.0 H660 V490.0" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="680" y="490.0" text-anchor="middle" font-size="28" font-weight="700" fill="#011F5B">A</text>
+<text x="730" y="470.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="start">OCR text</text>
+<text x="730" y="516.0" font-size="46" font-weight="400" fill="#a8463c" text-anchor="start">value F1 0.60 → 0.95</text>
+<path d="M690 394 V414" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="630" y="566" width="565" height="150" rx="14" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<line x1="680" y1="609.48" x2="680" y2="618.16" stroke="#011F5B" stroke-width="2.48"/><circle cx="680.0" cy="609.5" r="3.7" fill="#011F5B"/><rect x="658.9" y="618.2" width="42.2" height="32.2" rx="8.1" fill="#011F5B"/><rect x="654.0" y="628.1" width="4.3" height="12.4" rx="1.9" fill="#011F5B"/><rect x="701.7" y="628.1" width="4.3" height="12.4" rx="1.9" fill="#011F5B"/><circle cx="671.9" cy="632.4" r="5.0" fill="#fff"/><circle cx="688.1" cy="632.4" r="5.0" fill="#fff"/><circle cx="673.2" cy="633.0" r="2.2" fill="#011F5B"/><circle cx="689.3" cy="633.0" r="2.2" fill="#011F5B"/><rect x="672.6" y="641.7" width="14.9" height="3.1" rx="1.6" fill="#fff"/><rect x="666.4" y="652.9" width="27.3" height="13.6" rx="4.3" fill="#011F5B"/>
+<text x="730" y="609.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="start">Model points:</text>
+<text x="730" y="655.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="start">mention + quote</text>
+<text x="730" y="701.0" font-size="46" font-weight="400" fill="#011F5B" text-anchor="start">value F1 0.93–0.98</text>
+<path d="M690 540 V560" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="630" y="744" width="565" height="118" rx="14" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<path d="M672 791.0 L660 803.0 L672 815.0 M688 791.0 L700 803.0 L688 815.0 M684 787.0 L676 819.0" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="730" y="794.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="start">Code checks quote,</text>
+<text x="730" y="840.0" font-size="46" font-weight="400" fill="#4d5a55" text-anchor="start">slices the value</text>
+<path d="M690 718 V738" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="630" y="890" width="565" height="140" rx="14" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<ellipse cx="680" cy="947.0" rx="17" ry="7" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M663 947.0 V973.0 C663 983.0 697 983.0 697 973.0 V947.0 M663 960.0 C663 969.0 697 969.0 697 960.0" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="730" y="951.0" font-size="46" font-weight="600" fill="#15201c" text-anchor="start">Link to GBIF</text>
+<text x="730" y="997.0" font-size="46" font-weight="400" fill="#a8463c" text-anchor="start">recall 0.59 → 0.91*</text>
+<path d="M690 864 V884" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M1500 366 L1700 470 L1500 574 L1300 470 Z" fill="#eef1f7" stroke="#9fb0d0" stroke-width="2.5"/>
+<text x="1500" y="462" font-size="39" font-weight="600" fill="#011F5B" text-anchor="middle">Quote matches</text>
+<text x="1500" y="506" font-size="39" font-weight="600" fill="#011F5B" text-anchor="middle">the text exactly?</text>
+<path d="M1500 631 L1700 735 L1500 839 L1300 735 Z" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="10 8"/>
+<text x="1500" y="727" font-size="39" font-weight="600" fill="#011F5B" text-anchor="middle">Linked name</text>
+<text x="1500" y="771" font-size="39" font-weight="600" fill="#011F5B" text-anchor="middle">supported?</text>
+<path d="M1197 960 H1235 V470 H1294" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M1500 576 V625" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="1518" y="614" font-size="39" font-weight="400" fill="#2e7d4f" text-anchor="start">yes</text>
+<rect x="1712" y="520" width="272" height="170" rx="14" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="10 8"/>
+<circle cx="1752" cy="553" r="9" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1735 582 C1737 568 1767 568 1769 582" fill="none" stroke="#011F5B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1784" y="575" font-size="46" font-weight="700" fill="#011F5B" text-anchor="start">Review</text>
+<text x="1848.0" y="625" font-size="32" font-weight="400" fill="#4d5a55" text-anchor="middle">re-check scan</text>
+<text x="1848.0" y="665" font-size="32" font-weight="400" fill="#4d5a55" text-anchor="middle">or human audit</text>
+<path d="M1702 470 H1848.0 V514" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<text x="1720" y="456" font-size="39" font-weight="400" fill="#a8463c" text-anchor="start">no</text>
+<path d="M1702 735 H1848.0 V696" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<text x="1720" y="721" font-size="39" font-weight="400" fill="#a8463c" text-anchor="start">no</text>
+<path d="M1500 841 V894" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<text x="1518" y="879" font-size="39" font-weight="400" fill="#2e7d4f" text-anchor="start">yes</text>
+<rect x="1265" y="900" width="470" height="130" rx="14" fill="#eef6f0" stroke="#2e7d4f" stroke-width="2.5" stroke-dasharray="10 8"/>
+<circle cx="1310" cy="942" r="18" fill="none" stroke="#2e7d4f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1301 943 L1308 950 L1320 935" fill="none" stroke="#2e7d4f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1345" y="954" font-size="46" font-weight="700" fill="#15201c" text-anchor="start">Accept record</text>
+<text x="1345" y="1002" font-size="36" font-weight="400" fill="#4d5a55" text-anchor="start">page, line, quote kept</text></svg>
+    <p class="note" style="margin:.1in 0 0">* Exploratory results: ~8% of changed values were incorrect; LLM-assisted linking improved recall from 0.59 to 0.91 (Opus).</p>
   </div>
 </div>
 <div class="stack">
