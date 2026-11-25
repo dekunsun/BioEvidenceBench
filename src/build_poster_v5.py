@@ -30,7 +30,7 @@ def css() -> str:
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.44fr 0.56fr}
 #r2{grid-template-columns:0.635fr 0.365fr}
-#r3{grid-template-columns:0.535fr 0.465fr}
+#r3{grid-template-columns:0.56fr 0.44fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.26in 0.34in 0.22in}
@@ -112,7 +112,8 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 /* spacing (2026-11-25): spread spare height evenly instead of leaving it at the bottom of a box */
 #r1 .two{align-items:center;flex:1}
 #r1 .box:nth-child(2)>.in{display:flex;flex-direction:column}
-#r3 .box:first-child>.in{display:flex;flex-direction:column;justify-content:space-evenly}
+#r3 .box:first-child>.in{display:flex;flex-direction:column;justify-content:flex-start}
+#r3 .box:first-child>.in>svg{margin:auto 0}
 #r3 .box:first-child>.in>h2{margin-bottom:0}
 .grid2>div:nth-child(4){align-self:center}
 """
@@ -364,12 +365,12 @@ def page() -> str:
       <div><p class="lab">Entity linking</p><p class="num">14 / 34</p><p class="what">read right, still not linked</p></div>
       <div><p class="lab">Shared errors</p><p class="num">99–100%</p><p class="what">model agreement; auto-accept set on library OCR still held 50 (Butler) and 75 (Reeve) errors</p></div>
     </div>
-    <p class="punch">Two agents can agree on the same mistake: both read the same damaged OCR.</p>
     <div class="grid3">
       <div><p class="sub-h">A · Three texts: OCR decides F1</p>
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
       <div><p class="sub-h">B · Names intact predict F1</p>
-        <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure></div>
+        <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure>
+        <p class="note" style="margin:.06in 0 0"><b class="ink">Page CER does not</b> <span style="white-space:nowrap">(ρ = −0.11 / −0.61)</span></p></div>
       <div><p class="sub-h">C · Linking 34 correctly read names</p>
         <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91"></figure></div>
     </div>
@@ -386,11 +387,11 @@ def page() -> str:
     <div class="opts"><div class="opt"><b>A</b><i>Bulimus granulatus</i></div>
     <div class="opt"><b>B</b><i>Bulimus granulosus</i></div></div>
     <p style="margin:.1in 0 0;font-weight:600;color:var(--accent)">Both look scientifically plausible. Only one is supported by the source.</p>
-    <p class="ans">Answer: B. A modern OCR model (Qwen3.5-9B) wrote A: well-formed Latin, so nothing downstream flags it.</p>
+    <p class="ans">Answer: B. A is a modern OCR model's reading.</p>
     <p class="sub-h" style="margin:.14in 0 .02in">Exploratory extension: classical Chinese</p>
     <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the Siku quanshu manuscript of the Bencao gangmu, 弘 one stroke short"><span class="zh" style="font-size:40px;color:var(--accent)">→ 陶弘景</span></div>
-    <p class="note" style="margin:.02in 0 .02in"><i>Bencao gangmu</i> 本草綱目 manuscript: the model writes the modern 弘, right for search, wrong for the edition.</p>
-<p class="note" style="margin:0">Names intact track F1 here too: Opus OCR 88% → 0.87, PaddleOCR 68% → 0.72. Six dev half-leaves; exploratory.</p>
+    <p class="note" style="margin:.02in 0 0">本草綱目 manuscript: the model writes the modern form.</p>
+
   </div>
 </div>
 </div>
@@ -401,7 +402,6 @@ def page() -> str:
   <div class="in">
     <h2>Code owns the text; the model points and quotes</h2>
     {framework_svg()}
-    <p class="note" style="margin:.1in 0 0">Left: a model that repairs and writes values leaves no trace of what it changed. Right: every value is sliced from a numbered line, so each output can be audited; red marks where evidence was still lost on the 16 test pages.</p>
   </div>
 </div>
 <div class="stack">
