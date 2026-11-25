@@ -175,11 +175,10 @@ footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
 
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.5fr 0.5fr}
-#r2{grid-template-columns:0.68fr 0.32fr}
+#r2{grid-template-columns:0.62fr 0.38fr}
 #r3{grid-template-columns:0.6fr 0.4fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}
-main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no empty space */  /* share any spare page height between the rows */
 .box>.in{padding:0.26in 0.34in 0.22in}
 h1{font-size:72px}
 .kicker .proj{color:#fff;font-weight:700;font-size:32px;margin-right:.06in}
@@ -196,8 +195,7 @@ header{gap:.3in !important}
 h1{font-size:80px}
 .concl-wrap{margin:auto 0}  /* 06: one block, centred in the card */
 ol.concl2{margin:0;padding-left:.36in}
-ol.concl2 li{margin:0;padding:.12in 0;line-height:1.3;border-bottom:1.5px solid var(--rule)}
-ol.concl2 li:last-child{border-bottom:0}
+ol.concl2 li{margin:0;padding:.1in 0;line-height:1.3}
 .hqrs{display:grid;grid-template-columns:repeat(3,auto);gap:.18in}
 .hqrs .hqr img{width:1.0in;height:1.0in}
 .hqrs .hqr span{font-size:20px}
@@ -220,7 +218,7 @@ ol.concl2 li:last-child{border-bottom:0}
 .quiz .panel .zh{font-size:32px;color:var(--accent)}
 .quiz .qh{font-size:32px;line-height:1.15;color:var(--accent);margin:0 0 .08in}
 .quiz .ans.flipped{transform:rotate(180deg);text-align:right;border-top:0;border-bottom:1.5px solid var(--rule);padding:0 0 .08in;margin-top:.12in}
-.quiz .opts{display:grid;grid-template-columns:1fr;gap:.1in}
+.quiz .opts{display:grid;grid-template-columns:1fr 1fr;gap:.1in}
 .quiz .opts .opt{margin:0;padding:.1in .14in;gap:.12in}
 .quiz .opts .opt b{font-size:24px}
 .quiz .opts .opt i{font-size:24px}
@@ -238,7 +236,7 @@ ol.concl2 li:last-child{border-bottom:0}
 #r3 .box:first-child svg{display:block}
 #r1 .two{grid-template-columns:minmax(0,0.45fr) minmax(0,0.55fr) !important}
 #r1 .two>div:first-child svg{width:100% !important;display:block}
-.zhbars{width:100%;display:block;margin:.08in 0 0;mix-blend-mode:multiply}
+.zhbars{width:100%;max-width:560px;display:block;margin:.08in auto 0;mix-blend-mode:multiply}
 .zhtab{font-size:24px;margin:.1in 0 0;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
 .box.contact .cx-qr img{max-width:1.0in}
@@ -448,7 +446,6 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
       <p class="pn">Reeve 1849, BHL page 8966790</p>
       <p class="pq">Which name is on the page?</p>
       <div class="opts"><div class="opt"><b>A</b><i>Bulimus granulatus</i></div><div class="opt"><b>B</b><i>Bulimus granulosus</i></div></div>
-      <p class="pk">Both look plausible. Only one is supported by the source.</p>
       <p class="pn flip">Answer: B. A is a modern OCR model's reading.</p>
     </div>
     <div class="panel">

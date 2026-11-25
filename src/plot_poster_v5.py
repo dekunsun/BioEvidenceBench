@@ -13,7 +13,7 @@ import plot_poster_v3 as v3
 
 v3.OUT = v3.ROOT / "poster" / "fig" / "v5"
 v3.FS = 17.0
-v3.W, v3.H = 4.5, 5.6
+v3.W, v3.H = 4.5, 4.5
 v3.NARROW_F1 = True
 v3.STAR_LLM = True
 v3.LINK_LABELS = {'Plain GBIF\nlookup': 'Plain\nGBIF', 'GBIF with\ncontext hint': 'GBIF\n+ hint', 'LLM linker\n(Haiku)': 'LLM\nHaiku', 'LLM linker\n(Opus)': 'LLM\nOpus'}
@@ -31,7 +31,7 @@ def bencao_bars() -> None:
     d = pd.read_csv(v3.ROOT / "results" / "bencao_pilot" / "ocr_to_extraction_p2.csv").set_index("text")
     rows = [("Scan-verified", "verified_plain", "0"), ("Opus OCR", "claude_opus", "0.03"),
             ("Haiku OCR", "claude_haiku", "0.15"), ("PaddleOCR", "paddleocr", "0.26")]
-    fig, ax = plt.subplots(figsize=(3.4, 1.62))
+    fig, ax = plt.subplots(figsize=(3.6, 1.35))
     for i, (lab, key, cer) in enumerate(rows):
         from decimal import Decimal, ROUND_HALF_UP
         f1 = float(Decimal(str(d.loc[key, "ALL_PRIMARY_value_f1"])).quantize(Decimal("0.01"), ROUND_HALF_UP))  # 0.865 -> 0.87, as in the README
