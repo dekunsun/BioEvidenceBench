@@ -62,9 +62,10 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .quiz .ans{margin-top:.08in;padding-top:.08in;border-top:1.5px solid var(--rule);font-size:22px;color:var(--soft)}
 .quiz .ans b{color:var(--ink);font-weight:600}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.3in;margin-top:.1in;padding:.12in .2in;background:#f3f5f9;border-radius:10px}
-.facts div{display:flex;gap:.14in;align-items:baseline}
+.facts div{display:flex;flex-direction:column;gap:.02in}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
-.facts .d{color:var(--soft);line-height:1.25}
+.facts .d{color:var(--ink);line-height:1.25}
+.facts .d small{display:block;font-size:22px;color:var(--soft)}
 #r3 .box:first-child svg{max-height:7.4in}
 #r1 .two{grid-template-columns:0.45fr 0.55fr !important}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
@@ -383,9 +384,9 @@ def page() -> str:
       </div>
     </div>
     <div class="facts">
-      <div><span class="v">16</span><span class="d">test pages, Reeve 1849 and Butler 1907</span></div>
-      <div><span class="v">421</span><span class="d">test mentions labelled first (607 in all)</span></div>
-      <div><span class="v">0.90</span><span class="d">agreement between two labellers</span></div>
+      <div><span class="v">16</span><span class="d">Locked test pages</span></div>
+      <div><span class="v">421</span><span class="d">Test mentions<small>607 total</small></span></div>
+      <div><span class="v">0.90</span><span class="d">Exact-span agreement</span></div>
     </div>
   </div>
 </div>
