@@ -70,7 +70,7 @@ ol.concl2 li:last-child{border-bottom:0}
 .quiz .panel .bencao img{mix-blend-mode:multiply}
 .quiz .panel .opts .opt{background:#fff}
 .quiz .panel .opts .opt b,.quiz .panel .opts .opt i{font-size:24px}
-.quiz .panel .zh{font-size:30px;color:var(--accent)}
+.quiz .panel .zh{font-size:32px;color:var(--accent)}
 .quiz .qh{font-size:34px;line-height:1.15;color:var(--accent);margin:0 0 .08in}
 .quiz .ans.flipped{transform:rotate(180deg);text-align:right;border-top:0;border-bottom:1.5px solid var(--rule);padding:0 0 .08in;margin-top:.12in}
 .quiz .opts{display:grid;grid-template-columns:1fr;gap:.1in}
@@ -155,7 +155,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
     c += "#r1 .box:first-child svg{width:100% !important;margin:0 auto;display:block}\n"  # keep its text at body size
     # one smaller type scale for the whole poster (2026-11-25): body 24, notes 20, card headers 32
     for old, new in (("font-size:26px", "font-size:24px"), ("font-size:22px", "font-size:20px"),
-                     ("font-size:34px", "font-size:32px"), ("font-size:23px", "font-size:21px")):
+                     ("font-size:34px", "font-size:32px"), ("font-size:23px", "font-size:20px")):
         c = c.replace(old, new)
     return c
 
@@ -282,7 +282,7 @@ def framework_svg() -> str:
     width, so sizes are poster pixels). Left: the model writes the record (silent changes). Right: the
     evidence-aware workflow; solid steps were tested in this pilot, the dashed decision and its two exits
     are proposed. The measured numbers live in box 03."""
-    W, H = 1420, 790
+    W, H = 1300, 790
     TSTROKE, GREEN = "#9fb0d0", "#2e7d4f"
     p = [DEFS]
 
@@ -310,7 +310,7 @@ def framework_svg() -> str:
     x0 = 410
     p.append(f'<rect x="{x0}" y="0" width="{W - x0 - 2}" height="{H - 2}" rx="16" fill="#f6f8fc" stroke="{TSTROKE}" stroke-width="2.5"/>')
     t(x0 + 30, 58, "Evidence-aware workflow", 32, 700, NAVY, "start")
-    bx, bw, bh, cx = x0 + 40, 480, 74, x0 + 40 + 240
+    bx, bw, bh, cx = x0 + 36, 470, 74, x0 + 36 + 235
     steps = ["OCR text", "Model points + quotes", "Code verifies + slices", "Resolve entity"]
     prev = None
     for i, lab in enumerate(steps):
@@ -322,13 +322,13 @@ def framework_svg() -> str:
         prev = y + bh
     p.append(robot(bx + bw - 28, 96 + 96 + 8, 0.52))
     # decision (proposed)
-    dy, hw, hh = 552, 210, 80
+    dy, hw, hh = 552, 205, 80
     p.append(arrow(f"M{cx} {prev + 2} V{dy - hh - 5}"))
     p.append(f'<path d="M{cx} {dy - hh} L{cx + hw} {dy} L{cx} {dy + hh} L{cx - hw} {dy} Z" fill="#fff" stroke="{SOFT}" stroke-width="2.5" stroke-dasharray="9 7"/>')
     t(cx, dy - 6, "Evidence", 28, 700, NAVY)
     t(cx, dy + 28, "sufficient?", 28, 700, NAVY)
     # no -> re-check or defer
-    rx, rw, ry, rh = 1110, 270, 330, 110
+    rx, rw, ry, rh = 990, 280, 330, 110
     rect(rx, ry, rw, rh, stroke=SOFT, dash=True)
     t(rx + rw / 2, ry + 46, "Re-check", 28, 500, NAVY)
     t(rx + rw / 2, ry + 82, "or defer", 28, 500, NAVY)
@@ -515,6 +515,17 @@ def page() -> str:
 </main>
 
 </div>
+<script>
+/* Diagrams are SVG drawn in their own units, so their text would print at many sizes.
+   Snap each label to the poster scale: 24 px if it would print at 22 px or more, else 20 px. */
+for (const svg of document.querySelectorAll('svg[viewBox]')) {{
+  const scale = svg.getBoundingClientRect().width / svg.viewBox.baseVal.width;
+  for (const t of svg.querySelectorAll('text')) {{
+    const px = parseFloat(t.getAttribute('font-size')) * scale;
+    t.setAttribute('font-size', ((px >= 22 ? 24 : 20) / scale).toFixed(2));
+  }}
+}}
+</script>
 </body>
 </html>
 """

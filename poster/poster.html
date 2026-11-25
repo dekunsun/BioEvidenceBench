@@ -216,7 +216,7 @@ ol.concl2 li:last-child{border-bottom:0}
 .quiz .panel .bencao img{mix-blend-mode:multiply}
 .quiz .panel .opts .opt{background:#fff}
 .quiz .panel .opts .opt b,.quiz .panel .opts .opt i{font-size:24px}
-.quiz .panel .zh{font-size:30px;color:var(--accent)}
+.quiz .panel .zh{font-size:32px;color:var(--accent)}
 .quiz .qh{font-size:32px;line-height:1.15;color:var(--accent);margin:0 0 .08in}
 .quiz .ans.flipped{transform:rotate(180deg);text-align:right;border-top:0;border-bottom:1.5px solid var(--rule);padding:0 0 .08in;margin-top:.12in}
 .quiz .opts{display:grid;grid-template-columns:1fr;gap:.1in}
@@ -271,10 +271,10 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 .scans{display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;margin:.05in 0 .2in}
 .scans img{display:block;border:1.5px solid var(--rule);border-radius:6px}
 .code{background:#f3f5f9;border:1.5px solid var(--rule);border-radius:10px;padding:.16in .2in;font-size:24px}
-.code .ln{font-family:"DejaVu Sans Mono",monospace;font-size:21px;white-space:pre;color:var(--ink)}
+.code .ln{font-family:"DejaVu Sans Mono",monospace;font-size:20px;white-space:pre;color:var(--ink)}
 .code .ln i{color:var(--faint);font-style:normal}
 .code .hl{background:#dfe6f3;outline:2px solid var(--accent);border-radius:3px}
-.code .out{font-family:"DejaVu Sans Mono",monospace;font-size:21px;color:var(--accent);margin:.1in 0}
+.code .out{font-family:"DejaVu Sans Mono",monospace;font-size:20px;color:var(--accent);margin:.1in 0}
 .code p{margin:.08in 0 0;color:var(--soft)}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:.15in;margin:.1in 0}
 .choices div{border:2px solid var(--accent);border-radius:10px;padding:.1in;text-align:center;font-style:italic;font-weight:400;color:var(--accent)}
@@ -471,7 +471,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <p class="act">05 · Proposed Framework</p>
   <div class="in">
     <h2>Code owns the text; the model points and quotes.</h2>
-    <svg viewBox="-3 -3 1426 796" width="100%" role="img" aria-label="Two designs. Model writes: scanned page, model repairs, writes value, record; silent changes. Evidence-aware workflow: OCR text, the model (drawn as a robot) points and quotes, code verifies the quote and slices the value, resolve entity; these steps were tested. Proposed: if the evidence is sufficient, an auditable record; if not, re-check or defer."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+    <svg viewBox="-3 -3 1306 796" width="100%" role="img" aria-label="Two designs. Model writes: scanned page, model repairs, writes value, record; silent changes. Evidence-aware workflow: OCR text, the model (drawn as a robot) points and quotes, code verifies the quote and slices the value, resolve entity; these steps were tested. Proposed: if the evidence is sufficient, an auditable record; if not, re-check or defer."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
 <rect x="0" y="0" width="380" height="788" rx="16" fill="#f2f3f5" stroke="#c4cbd0" stroke-width="2"/>
 <text x="190" y="58" font-size="32" font-weight="700" fill="#4d5a55" text-anchor="middle">Model writes</text>
 <rect x="40" y="110" width="300" height="84" rx="12" fill="#fff" stroke="#c4cbd0" stroke-width="2.5"/>
@@ -486,37 +486,37 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <text x="190" y="636" font-size="28" font-weight="400" fill="#15201c" text-anchor="middle">Record</text>
 <path d="M190 512 V579" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
 <text x="190" y="742" font-size="28" font-weight="400" fill="#a8463c" text-anchor="middle" font-style="italic">Silent changes</text>
-<rect x="410" y="0" width="1008" height="788" rx="16" fill="#f6f8fc" stroke="#9fb0d0" stroke-width="2.5"/>
+<rect x="410" y="0" width="888" height="788" rx="16" fill="#f6f8fc" stroke="#9fb0d0" stroke-width="2.5"/>
 <text x="440" y="58" font-size="32" font-weight="700" fill="#011F5B" text-anchor="start">Evidence-aware workflow</text>
-<rect x="450" y="96" width="480" height="74" rx="12" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
-<text x="690" y="143" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">OCR text</text>
-<rect x="450" y="192" width="480" height="74" rx="12" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
-<text x="668" y="239" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">Model points + quotes</text>
-<path d="M690 172 V187" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="450" y="288" width="480" height="74" rx="12" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
-<text x="690" y="335" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">Code verifies + slices</text>
-<path d="M690 268 V283" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="450" y="384" width="480" height="74" rx="12" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
-<text x="690" y="431" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">Resolve entity</text>
-<path d="M690 364 V379" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<line x1="902" y1="202.08" x2="902" y2="209.36" stroke="#011F5B" stroke-width="2.08"/><circle cx="902.0" cy="202.1" r="3.1" fill="#011F5B"/><rect x="884.3" y="209.4" width="35.4" height="27.0" rx="6.8" fill="#011F5B"/><rect x="880.2" y="217.7" width="3.6" height="10.4" rx="1.6" fill="#011F5B"/><rect x="920.2" y="217.7" width="3.6" height="10.4" rx="1.6" fill="#011F5B"/><circle cx="895.2" cy="221.3" r="4.2" fill="#fff"/><circle cx="908.8" cy="221.3" r="4.2" fill="#fff"/><circle cx="896.3" cy="221.8" r="1.8" fill="#011F5B"/><circle cx="909.8" cy="221.8" r="1.8" fill="#011F5B"/><rect x="895.8" y="229.1" width="12.5" height="2.6" rx="1.3" fill="#fff"/><rect x="890.6" y="238.5" width="22.9" height="11.4" rx="3.6" fill="#011F5B"/>
-<path d="M690 460 V467" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<path d="M690 472 L900 552 L690 632 L480 552 Z" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="9 7"/>
-<text x="690" y="546" font-size="28" font-weight="700" fill="#011F5B" text-anchor="middle">Evidence</text>
-<text x="690" y="580" font-size="28" font-weight="700" fill="#011F5B" text-anchor="middle">sufficient?</text>
-<rect x="1110" y="330" width="270" height="110" rx="12" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="9 7"/>
-<text x="1245.0" y="376" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">Re-check</text>
-<text x="1245.0" y="412" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">or defer</text>
-<path d="M902 552 H1245.0 V445" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
-<text x="960" y="538" font-size="26" font-weight="400" fill="#a8463c" text-anchor="middle">No</text>
-<path d="M690 634 V691" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
-<text x="710" y="672" font-size="26" font-weight="400" fill="#2e7d4f" text-anchor="start">Yes</text>
-<rect x="450" y="696" width="480" height="74" rx="12" fill="#eef6f0" stroke="#2e7d4f" stroke-width="2.5" stroke-dasharray="9 7"/>
-<text x="690" y="744" font-size="28" font-weight="700" fill="#2e7d4f" text-anchor="middle">Auditable record</text>
-<rect x="1110" y="676" width="40" height="26" rx="6" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
-<text x="1162" y="697" font-size="22" font-weight="400" fill="#4d5a55" text-anchor="start">tested</text>
-<rect x="1110" y="720" width="40" height="26" rx="6" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="9 7"/>
-<text x="1162" y="741" font-size="22" font-weight="400" fill="#4d5a55" text-anchor="start">proposed</text></svg>
+<rect x="446" y="96" width="470" height="74" rx="12" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
+<text x="681" y="143" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">OCR text</text>
+<rect x="446" y="192" width="470" height="74" rx="12" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
+<text x="659" y="239" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">Model points + quotes</text>
+<path d="M681 172 V187" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="446" y="288" width="470" height="74" rx="12" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
+<text x="681" y="335" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">Code verifies + slices</text>
+<path d="M681 268 V283" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="446" y="384" width="470" height="74" rx="12" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
+<text x="681" y="431" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">Resolve entity</text>
+<path d="M681 364 V379" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="888" y1="202.08" x2="888" y2="209.36" stroke="#011F5B" stroke-width="2.08"/><circle cx="888.0" cy="202.1" r="3.1" fill="#011F5B"/><rect x="870.3" y="209.4" width="35.4" height="27.0" rx="6.8" fill="#011F5B"/><rect x="866.2" y="217.7" width="3.6" height="10.4" rx="1.6" fill="#011F5B"/><rect x="906.2" y="217.7" width="3.6" height="10.4" rx="1.6" fill="#011F5B"/><circle cx="881.2" cy="221.3" r="4.2" fill="#fff"/><circle cx="894.8" cy="221.3" r="4.2" fill="#fff"/><circle cx="882.3" cy="221.8" r="1.8" fill="#011F5B"/><circle cx="895.8" cy="221.8" r="1.8" fill="#011F5B"/><rect x="881.8" y="229.1" width="12.5" height="2.6" rx="1.3" fill="#fff"/><rect x="876.6" y="238.5" width="22.9" height="11.4" rx="3.6" fill="#011F5B"/>
+<path d="M681 460 V467" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M681 472 L886 552 L681 632 L476 552 Z" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="9 7"/>
+<text x="681" y="546" font-size="28" font-weight="700" fill="#011F5B" text-anchor="middle">Evidence</text>
+<text x="681" y="580" font-size="28" font-weight="700" fill="#011F5B" text-anchor="middle">sufficient?</text>
+<rect x="990" y="330" width="280" height="110" rx="12" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="9 7"/>
+<text x="1130.0" y="376" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">Re-check</text>
+<text x="1130.0" y="412" font-size="28" font-weight="500" fill="#011F5B" text-anchor="middle">or defer</text>
+<path d="M888 552 H1130.0 V445" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<text x="946" y="538" font-size="26" font-weight="400" fill="#a8463c" text-anchor="middle">No</text>
+<path d="M681 634 V691" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<text x="701" y="672" font-size="26" font-weight="400" fill="#2e7d4f" text-anchor="start">Yes</text>
+<rect x="446" y="696" width="470" height="74" rx="12" fill="#eef6f0" stroke="#2e7d4f" stroke-width="2.5" stroke-dasharray="9 7"/>
+<text x="681" y="744" font-size="28" font-weight="700" fill="#2e7d4f" text-anchor="middle">Auditable record</text>
+<rect x="990" y="676" width="40" height="26" rx="6" fill="#fff" stroke="#9fb0d0" stroke-width="2.5"/>
+<text x="1042" y="697" font-size="22" font-weight="400" fill="#4d5a55" text-anchor="start">tested</text>
+<rect x="990" y="720" width="40" height="26" rx="6" fill="#fff" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="9 7"/>
+<text x="1042" y="741" font-size="22" font-weight="400" fill="#4d5a55" text-anchor="start">proposed</text></svg>
   </div>
 </div>
 <div class="stack">
@@ -555,5 +555,16 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 </main>
 
 </div>
+<script>
+/* Diagrams are SVG drawn in their own units, so their text would print at many sizes.
+   Snap each label to the poster scale: 24 px if it would print at 22 px or more, else 20 px. */
+for (const svg of document.querySelectorAll('svg[viewBox]')) {
+  const scale = svg.getBoundingClientRect().width / svg.viewBox.baseVal.width;
+  for (const t of svg.querySelectorAll('text')) {
+    const px = parseFloat(t.getAttribute('font-size')) * scale;
+    t.setAttribute('font-size', ((px >= 22 ? 24 : 20) / scale).toFixed(2));
+  }
+}
+</script>
 </body>
 </html>
