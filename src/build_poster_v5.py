@@ -37,7 +37,7 @@ main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no e
 .box>.in{padding:0.26in 0.34in 0.22in}
 h1{font-size:72px}
 .kicker .proj{color:#fff;font-weight:700;font-size:32px;margin-right:.06in}
-.brand{display:flex !important;flex-direction:column;align-items:center;justify-content:center;gap:.16in}  /* Penn logo above, QR below (as in LiveLab) */
+.brand{display:flex !important;flex-direction:column;align-items:center;justify-content:center;gap:.34in}  /* Penn logo above, QR below (as in LiveLab) */
 header{gap:.3in !important}
 .brand .hqr{display:flex;flex-direction:column;align-items:center}
 .brand .hqr img{width:1.05in !important;height:1.05in !important;margin:0}
@@ -300,15 +300,16 @@ def framework_svg() -> str:
     # left: the model writes the record; each box can carry the evidence measured for it
     p.append(f'<rect x="0" y="0" width="430" height="{H - 2}" rx="16" fill="#f2f3f5" stroke="#c4cbd0" stroke-width="2"/>')
     t(215, 58, "Model writes", 32, 700, SOFT)
-    left = [("Scanned page", None), ("Model repairs", "~8% of changes wrong*"), ("Writes value", None), ("Record", None)]
+    left = [("Scanned page", None), ("Model repairs", ("~8% of changed", "values incorrect*")), ("Writes value", None), ("Record", None)]
     prev = None
     for i, (lab, ev) in enumerate(left):
-        y = 92 + i * 160
-        h = 100 if ev else 80
+        y = 92 if prev is None else prev + 64  # equal arrow gaps whatever the box height
+        h = 124 if ev else 80
         rect(40, y, 350, h, fill=LOSS_FILL if ev else "#fff", stroke=RED if ev else "#c4cbd0")
         t(215, y + (40 if ev else 50), lab, 28, 400, INK)
         if ev:
-            t(215, y + 78, ev, 22, 400, RED)
+            for k, line in enumerate(ev):
+                t(215, y + 76 + k * 28, line, 22, 400, RED)
         if prev:
             p.append(arrow(f"M215 {prev + 2} V{y - 5}"))
         prev = y + h
@@ -383,7 +384,7 @@ def page() -> str:
   <div>
     <p class="kicker"><span class="proj">BioEvidenceBench</span> · Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>From historical page to database record:<br>where do AI agents lose evidence?</h1>
-    <p class="key"><b>Key finding:</b> modern OCR lifted value F1 from 0.60–0.64 to 0.95–0.98, yet 14 of 34 extracted bird names still failed direct database linking. Accurate extraction is not enough for trustworthy scientific evidence.</p>
+    <p class="key"><b>Key finding:</b> modern OCR lifted value F1 from 0.60–0.64 to 0.95–0.98, yet 14 of 34 correctly extracted bird names still failed direct database linking. Accurate extraction is not enough for trustworthy scientific evidence.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · Research Collaborator, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
@@ -450,7 +451,7 @@ def page() -> str:
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
       <div><p class="sub-h">B · Name preservation vs F1</p>
         <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure>
-        <p class="note" style="margin:.06in 0 0"><b class="ink">Page CER does not predict F1</b> <span style="white-space:nowrap">(ρ = −0.11 / −0.61)</span></p></div>
+        <p class="note" style="margin:.06in 0 0"><b class="ink">Name preservation tracks F1 more closely than CER</b> <span style="white-space:nowrap">(ρ = −0.11 / −0.61)</span></p></div>
       <div><p class="sub-h">C · Correct names, failed links</p>
         <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91 (exploratory)"></figure>
         <p class="note" style="margin:.06in 0 0"><b class="ink">* LLM-assisted linking: exploratory</b></p></div>
@@ -496,7 +497,7 @@ def page() -> str:
     <p class="sub-h" style="margin:0 0 .08in">Three rules for evidence-grounded scientific agents</p>
     <ol class="concl2">
       <li><b>Gate reading on name survival, not average error.</b> Page CER did not predict F1 (ρ = −0.11 / −0.61).</li>
-      <li><b>Spend reasoning on linking, not extraction.</b> Small models extract almost as well at ~1/15 the cost; an LLM linker raised recall 0.59 → 0.91.*</li>
+      <li><b>Prioritise linking once extraction is reliable.</b> Small models extract almost as well at ~1/15 the cost; an LLM linker raised recall 0.59 → 0.91.*</li>
       <li><b>Verify against the source, not consensus.</b> 99–100% model agreement still passed 50 and 75 errors.</li>
     </ol>
     <p class="note" style="margin:.06in 0 0">Scope: two English printed books, pre-registered. * Exploratory.</p>

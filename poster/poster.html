@@ -183,7 +183,7 @@ main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no e
 .box>.in{padding:0.26in 0.34in 0.22in}
 h1{font-size:72px}
 .kicker .proj{color:#fff;font-weight:700;font-size:32px;margin-right:.06in}
-.brand{display:flex !important;flex-direction:column;align-items:center;justify-content:center;gap:.16in}  /* Penn logo above, QR below (as in LiveLab) */
+.brand{display:flex !important;flex-direction:column;align-items:center;justify-content:center;gap:.34in}  /* Penn logo above, QR below (as in LiveLab) */
 header{gap:.3in !important}
 .brand .hqr{display:flex;flex-direction:column;align-items:center}
 .brand .hqr img{width:1.05in !important;height:1.05in !important;margin:0}
@@ -310,7 +310,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <div>
     <p class="kicker"><span class="proj">BioEvidenceBench</span> · Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>From historical page to database record:<br>where do AI agents lose evidence?</h1>
-    <p class="key"><b>Key finding:</b> modern OCR lifted value F1 from 0.60–0.64 to 0.95–0.98, yet 14 of 34 extracted bird names still failed direct database linking. Accurate extraction is not enough for trustworthy scientific evidence.</p>
+    <p class="key"><b>Key finding:</b> modern OCR lifted value F1 from 0.60–0.64 to 0.95–0.98, yet 14 of 34 correctly extracted bird names still failed direct database linking. Accurate extraction is not enough for trustworthy scientific evidence.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · Research Collaborator, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
@@ -432,7 +432,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
       <div><p class="sub-h">B · Name preservation vs F1</p>
         <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure>
-        <p class="note" style="margin:.06in 0 0"><b class="ink">Page CER does not predict F1</b> <span style="white-space:nowrap">(ρ = −0.11 / −0.61)</span></p></div>
+        <p class="note" style="margin:.06in 0 0"><b class="ink">Name preservation tracks F1 more closely than CER</b> <span style="white-space:nowrap">(ρ = −0.11 / −0.61)</span></p></div>
       <div><p class="sub-h">C · Correct names, failed links</p>
         <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91 (exploratory)"></figure>
         <p class="note" style="margin:.06in 0 0"><b class="ink">* LLM-assisted linking: exploratory</b></p></div>
@@ -472,16 +472,17 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <text x="215" y="58" font-size="32" font-weight="700" fill="#4d5a55" text-anchor="middle">Model writes</text>
 <rect x="40" y="92" width="350" height="80" rx="12" fill="#fff" stroke="#c4cbd0" stroke-width="2.5"/>
 <text x="215" y="142" font-size="28" font-weight="400" fill="#15201c" text-anchor="middle">Scanned page</text>
-<rect x="40" y="252" width="350" height="100" rx="12" fill="#fbf1f0" stroke="#a8463c" stroke-width="2.5"/>
-<text x="215" y="292" font-size="28" font-weight="400" fill="#15201c" text-anchor="middle">Model repairs</text>
-<text x="215" y="330" font-size="22" font-weight="400" fill="#a8463c" text-anchor="middle">~8% of changes wrong*</text>
-<path d="M215 174 V247" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="40" y="412" width="350" height="80" rx="12" fill="#fff" stroke="#c4cbd0" stroke-width="2.5"/>
-<text x="215" y="462" font-size="28" font-weight="400" fill="#15201c" text-anchor="middle">Writes value</text>
-<path d="M215 354 V407" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="40" y="572" width="350" height="80" rx="12" fill="#fff" stroke="#c4cbd0" stroke-width="2.5"/>
-<text x="215" y="622" font-size="28" font-weight="400" fill="#15201c" text-anchor="middle">Record</text>
-<path d="M215 494 V567" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="40" y="236" width="350" height="124" rx="12" fill="#fbf1f0" stroke="#a8463c" stroke-width="2.5"/>
+<text x="215" y="276" font-size="28" font-weight="400" fill="#15201c" text-anchor="middle">Model repairs</text>
+<text x="215" y="312" font-size="22" font-weight="400" fill="#a8463c" text-anchor="middle">~8% of changed</text>
+<text x="215" y="340" font-size="22" font-weight="400" fill="#a8463c" text-anchor="middle">values incorrect*</text>
+<path d="M215 174 V231" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="40" y="424" width="350" height="80" rx="12" fill="#fff" stroke="#c4cbd0" stroke-width="2.5"/>
+<text x="215" y="474" font-size="28" font-weight="400" fill="#15201c" text-anchor="middle">Writes value</text>
+<path d="M215 362 V419" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="40" y="568" width="350" height="80" rx="12" fill="#fff" stroke="#c4cbd0" stroke-width="2.5"/>
+<text x="215" y="618" font-size="28" font-weight="400" fill="#15201c" text-anchor="middle">Record</text>
+<path d="M215 506 V563" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
 <text x="215" y="728" font-size="28" font-weight="400" fill="#a8463c" text-anchor="middle" font-style="italic">Silent changes</text>
 <text x="215" y="768" font-size="22" font-weight="400" fill="#4d5a55" text-anchor="middle">* exploratory</text>
 <rect x="460" y="0" width="998" height="798" rx="16" fill="#f6f8fc" stroke="#9fb0d0" stroke-width="2.5"/>
@@ -531,7 +532,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
     <p class="sub-h" style="margin:0 0 .08in">Three rules for evidence-grounded scientific agents</p>
     <ol class="concl2">
       <li><b>Gate reading on name survival, not average error.</b> Page CER did not predict F1 (ρ = −0.11 / −0.61).</li>
-      <li><b>Spend reasoning on linking, not extraction.</b> Small models extract almost as well at ~1/15 the cost; an LLM linker raised recall 0.59 → 0.91.*</li>
+      <li><b>Prioritise linking once extraction is reliable.</b> Small models extract almost as well at ~1/15 the cost; an LLM linker raised recall 0.59 → 0.91.*</li>
       <li><b>Verify against the source, not consensus.</b> 99–100% model agreement still passed 50 and 75 errors.</li>
     </ol>
     <p class="note" style="margin:.06in 0 0">Scope: two English printed books, pre-registered. * Exploratory.</p>
