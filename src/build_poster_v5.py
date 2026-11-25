@@ -30,7 +30,7 @@ def css() -> str:
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.5fr 0.5fr}
 #r2{grid-template-columns:0.68fr 0.32fr}
-#r3{grid-template-columns:0.55fr 0.45fr}
+#r3{grid-template-columns:0.6fr 0.4fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}
 main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no empty space */  /* share any spare page height between the rows */
@@ -284,7 +284,7 @@ def framework_svg() -> str:
     evidence-aware workflow; solid steps were tested in this pilot, the dashed decision and its two exits
     are proposed. Each step carries the evidence measured for it (2026-11-25, the author: every step
     tied to evidence); red = evidence lost on the 16 test pages, * = exploratory."""
-    W, H = 1300, 800
+    W, H = 1460, 800
     TSTROKE, GREEN = "#9fb0d0", "#2e7d4f"
     LOSS_FILL = "#fbf1f0"
     p = [DEFS]
@@ -297,28 +297,28 @@ def framework_svg() -> str:
         p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}" stroke="{stroke}" stroke-width="2.5"{d}/>')
 
     # left: the model writes the record; each box can carry the evidence measured for it
-    p.append(f'<rect x="0" y="0" width="380" height="{H - 2}" rx="16" fill="#f2f3f5" stroke="#c4cbd0" stroke-width="2"/>')
-    t(190, 58, "Model writes", 32, 700, SOFT)
+    p.append(f'<rect x="0" y="0" width="430" height="{H - 2}" rx="16" fill="#f2f3f5" stroke="#c4cbd0" stroke-width="2"/>')
+    t(215, 58, "Model writes", 32, 700, SOFT)
     left = [("Scanned page", None), ("Model repairs", "~8% of changes wrong*"), ("Writes value", None), ("Record", None)]
     prev = None
     for i, (lab, ev) in enumerate(left):
         y = 92 + i * 160
         h = 100 if ev else 80
-        rect(40, y, 300, h, fill=LOSS_FILL if ev else "#fff", stroke=RED if ev else "#c4cbd0")
-        t(190, y + (40 if ev else 50), lab, 28, 400, INK)
+        rect(40, y, 350, h, fill=LOSS_FILL if ev else "#fff", stroke=RED if ev else "#c4cbd0")
+        t(215, y + (40 if ev else 50), lab, 28, 400, INK)
         if ev:
-            t(190, y + 78, ev, 22, 400, RED)
+            t(215, y + 78, ev, 22, 400, RED)
         if prev:
-            p.append(arrow(f"M190 {prev + 2} V{y - 5}"))
+            p.append(arrow(f"M215 {prev + 2} V{y - 5}"))
         prev = y + h
-    t(190, 728, "Silent changes", 28, 400, RED, extra=' font-style="italic"')
-    t(190, 768, "* exploratory", 22, 400, SOFT)
+    t(215, 728, "Silent changes", 28, 400, RED, extra=' font-style="italic"')
+    t(215, 768, "* exploratory", 22, 400, SOFT)
 
     # right: evidence-aware workflow; red = where evidence was lost on the 16 test pages
-    x0 = 410
+    x0 = 460
     p.append(f'<rect x="{x0}" y="0" width="{W - x0 - 2}" height="{H - 2}" rx="16" fill="#f6f8fc" stroke="{TSTROKE}" stroke-width="2.5"/>')
     t(x0 + 30, 58, "Evidence-aware workflow", 32, 700, NAVY, "start")
-    bx, bw, bh, cx = x0 + 36, 470, 92, x0 + 36 + 235
+    bx, bw, bh, cx = x0 + 40, 540, 92, x0 + 40 + 270
     steps = [("OCR text", "value F1 0.60 → 0.95", True),
              ("Model points + quotes", "value F1 0.93–0.98", False),
              ("Code verifies + slices", "no recall lost to quoting", False),
@@ -334,13 +334,13 @@ def framework_svg() -> str:
         prev = y + bh
     p.append(robot(bx + bw - 28, 86 + 112 + 12, 0.52))
     # decision (proposed)
-    dy, hw, hh = 600, 205, 68
+    dy, hw, hh = 600, 230, 68
     p.append(arrow(f"M{cx} {prev + 2} V{dy - hh - 5}"))
     p.append(f'<path d="M{cx} {dy - hh} L{cx + hw} {dy} L{cx} {dy + hh} L{cx - hw} {dy} Z" fill="#fff" stroke="{SOFT}" stroke-width="2.5" stroke-dasharray="9 7"/>')
     t(cx, dy - 6, "Evidence", 28, 700, NAVY)
     t(cx, dy + 28, "sufficient?", 28, 700, NAVY)
     # no -> re-check or defer
-    rx, rw, ry, rh = 990, 280, 400, 100
+    rx, rw, ry, rh = 1120, 300, 400, 100
     rect(rx, ry, rw, rh, stroke=SOFT, dash=True)
     t(rx + rw / 2, ry + 42, "Re-check", 28, 500, NAVY)
     t(rx + rw / 2, ry + 76, "or defer", 28, 500, NAVY)
