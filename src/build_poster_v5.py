@@ -37,15 +37,15 @@ main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no e
 .box>.in{padding:0.26in 0.34in 0.22in}
 h1{font-size:72px}
 .kicker .proj{color:#fff;font-weight:700;font-size:32px;margin-right:.06in}
-.brand{display:flex !important;flex-direction:row;align-items:center;gap:.3in}
+.brand{display:flex !important;flex-direction:column;align-items:center;justify-content:center;gap:.16in}  /* Penn logo above, QR below (as in LiveLab) */
 header{gap:.3in !important}
 .brand .hqr{display:flex;flex-direction:column;align-items:center}
-.brand .hqr img{width:1.3in !important;height:1.3in !important;margin:0}
+.brand .hqr img{width:1.05in !important;height:1.05in !important;margin:0}
 .brand .hqr span{font-size:20px !important;margin-top:.06in;line-height:1.25;text-align:center}
 .brand{position:relative}
 .brand .hqr{position:relative}
 .brand .logos{display:flex;gap:.3in;align-items:center;justify-content:center}
-.brand .penn,.brand .cas{height:.95in !important;width:auto !important;display:block}  /* one row, same height */
+.brand .penn,.brand .cas{height:.8in !important;width:auto !important;display:block}  /* one row, same height */
 .brand{justify-items:center}
 h1{font-size:80px}
 .concl-wrap{margin:auto 0}  /* 06: one block, centred in the card */
@@ -382,7 +382,7 @@ def page() -> str:
 <header>
   <div>
     <p class="kicker"><span class="proj">BioEvidenceBench</span> · Work in progress · Deep Matters 2026 · Agents for Science · London</p>
-    <h1>From historical page to database record: where do AI agents lose evidence?</h1>
+    <h1>From historical page to database record:<br>where do AI agents lose evidence?</h1>
     <p class="key"><b>Key finding:</b> modern OCR lifted value F1 from 0.60–0.64 to 0.95–0.98, yet 14 of 34 extracted bird names still failed direct database linking. Accurate extraction is not enough for trustworthy scientific evidence.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · Research Collaborator, California Academy of Sciences, Scientific Computing</span></p>
   </div>
