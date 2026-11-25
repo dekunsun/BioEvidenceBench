@@ -57,6 +57,12 @@ h1{font-size:72px}
 .zh{font-family:"WenQuanYi Zen Hei",sans-serif}
 .bencao{display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;margin-top:.1in}
 .bencao img{height:.62in;display:block}
+/* spacing (2026-11-25): spread spare height evenly instead of leaving it at the bottom of a box */
+#r1 .two{align-items:center;flex:1}
+#r1 .box:nth-child(2)>.in{display:flex;flex-direction:column}
+#r3 .box:first-child>.in{display:flex;flex-direction:column;justify-content:space-around}
+#r3 .box:first-child>.in>h2{margin-bottom:0}
+.grid2>div:nth-child(4){align-self:center}
 """
     return c
 
