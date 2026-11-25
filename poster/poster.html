@@ -177,7 +177,7 @@ footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
 #r1{grid-template-columns:0.44fr 0.56fr}
 #r2{grid-template-columns:0.71fr 0.29fr}
 #r3{grid-template-columns:0.54fr 0.46fr}
-main{gap:0.25in !important}
+main{gap:0.2in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.34in 0.34in 0.30in}
 h1{font-size:72px}
@@ -197,6 +197,7 @@ h1{font-size:80px}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--soft);line-height:1.25}
 #r3 .box:first-child svg{max-height:6.2in}
+#r1 .two{grid-template-columns:0.40fr 0.60fr !important}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
 .box.contact .cx-qr img{max-width:1.0in}
@@ -255,7 +256,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <div>
     <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>Where do AI agents lose evidence in historical scientific literature?</h1>
-    <p class="key"><b>BioEvidenceBench · Key finding:</b> most evidence was lost at reading (F1 0.60 on library OCR, 0.95 on modern OCR) and at linking (14 of 34 names); extraction lost little.</p>
+    <p class="key"><b>BioEvidenceBench · Key finding:</b> most evidence was lost at reading (value F1 0.60 on library OCR, 0.95 on modern OCR) and at linking (14 of 34 names); extraction lost little.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
@@ -324,7 +325,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <text x="280.0" y="461" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">slices the value</text>
 <path d="M280 482 V518" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
 <rect x="20" y="524" width="520" height="64" rx="32" fill="#011F5B"/>
-<text x="280" y="566" text-anchor="middle" font-size="30.2" font-weight="600" fill="#fff">Scored against 607 hand labels</text></svg></div>
+<text x="280" y="566" text-anchor="middle" font-size="30.2" font-weight="600" fill="#fff">Scored on 421 test-page labels</text></svg></div>
       <div>
         <p class="sub-h">Point, not write</p>
         <div class="code">
@@ -339,10 +340,10 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
     </div>
     <div class="facts">
       <div><span class="v">16</span><span class="d">test pages, Reeve 1849 and Butler 1907</span></div>
-      <div><span class="v">607</span><span class="d">mentions labelled by hand first</span></div>
+      <div><span class="v">421</span><span class="d">test mentions labelled first (607 in all)</span></div>
       <div><span class="v">0.90</span><span class="d">agreement between two labellers</span></div>
     </div>
-    <p class="note" style="margin:.08in 0 0">Pre-registered and frozen before the test pages · agents: Claude Opus 5.5, Gemini 4 Carbon · design after Lei, Docherty &amp; Cooper (2024)</p>
+    <p class="note" style="margin:.06in 0 0">Pre-registered, frozen before the test pages · extraction models: Claude Opus 5.5, Gemini 4 Carbon · after Lei, Docherty &amp; Cooper (2024)</p>
   </div>
 </div>
 </div>
@@ -355,7 +356,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
     <div class="big3">
       <div><p class="lab">OCR · Butler</p><p class="num">0.60 → 0.95</p><p class="what">value F1, same pages, better OCR</p></div>
       <div><p class="lab">Entity linking</p><p class="num">14 / 34</p><p class="what">read right, still not linked</p></div>
-      <div><p class="lab">Shared errors</p><p class="num">99–100%</p><p class="what">model agreement; agreed but wrong on library OCR: 50 Butler, 75 Reeve</p></div>
+      <div><p class="lab">Shared errors</p><p class="num">99–100%</p><p class="what">model agreement; auto-accept set on library OCR still held 50 (Butler) and 75 (Reeve) errors</p></div>
     </div>
     <p class="punch">Two agents can agree on the same mistake: both read the same damaged OCR.</p>
     <div class="grid3">
@@ -388,7 +389,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <p class="act">05 · Proposed Framework</p>
   <div class="in">
     <h2>An evidence-aware scientific agent: a proposed workflow, informed by these results</h2>
-    <svg viewBox="-3 -3 1425 748" width="100%" role="img" aria-label="An evidence-aware scientific agent, proposed workflow. Research task; read source or OCR, keeping the original text (measured: F1 0.60 to 0.95 by OCR); extract entities, the model (drawn as a robot) points to a line and never rewrites it (F1 0.93 to 0.98); verify evidence by quote check and provenance (0 recall lost); resolve identity against a modern database (14 of 34 names lost). Then a decision, sufficient evidence? Two models agreeing is not enough: agreed but wrong, 50 in Butler and 75 in Reeve. Yes: auditable record. No: re-check the scan or ask a person, then read again. Signals that helped: OCR junk and no exact database match, not model agreement. Solid steps were measured; dashed ones are proposed and untested end to end."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+    <svg viewBox="-3 -3 1425 748" width="100%" role="img" aria-label="An evidence-aware scientific agent, proposed workflow. Research task; read source or OCR, keeping the original text (measured: value F1 0.60 to 0.95, library to modern OCR); extract entities, the model (drawn as a robot) points to a line and never rewrites it (F1 0.93 to 0.98); verify evidence by quote check and provenance (0 recall lost); resolve identity against a modern database (14 of 34 names lost). Then a decision, sufficient evidence? Two models agreeing is not enough: agreed but wrong, 50 in Butler and 75 in Reeve. Yes: auditable record. No: re-check the scan or ask a person, then read again. Signals that helped: OCR junk and no exact database match, not model agreement. Solid steps were measured; dashed ones are proposed and untested end to end."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
 <rect x="440" y="0" width="520" height="76" rx="12" fill="#011F5B" stroke="#011F5B" stroke-width="2"/>
 <text x="700" y="33" text-anchor="middle" font-size="30.2" font-weight="600" fill="#fff">Scientific research task</text>
 <text x="700" y="63" text-anchor="middle" font-size="25" fill="#c9d3e8">retrieve the relevant literature</text>
@@ -410,16 +411,21 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <path d="M700 396 V418" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
 <line x1="924" y1="222.4" x2="924" y2="230.8" stroke="#011F5B" stroke-width="2.4"/><circle cx="924.0" cy="222.4" r="3.6" fill="#011F5B"/><rect x="903.6" y="230.8" width="40.8" height="31.2" rx="7.8" fill="#011F5B"/><rect x="898.8" y="240.4" width="4.2" height="12.0" rx="1.8" fill="#011F5B"/><rect x="945.0" y="240.4" width="4.2" height="12.0" rx="1.8" fill="#011F5B"/><circle cx="916.2" cy="244.6" r="4.8" fill="#fff"/><circle cx="931.8" cy="244.6" r="4.8" fill="#fff"/><circle cx="917.4" cy="245.2" r="2.1" fill="#011F5B"/><circle cx="933.0" cy="245.2" r="2.1" fill="#011F5B"/><rect x="916.8" y="253.6" width="14.4" height="3.0" rx="1.5" fill="#fff"/><rect x="910.8" y="264.4" width="26.4" height="13.2" rx="4.2" fill="#011F5B"/>
 <text x="414" y="26" text-anchor="end" font-size="24" font-style="italic" fill="#4d5a55">measured, 16 test pages</text>
-<text x="414" y="153" text-anchor="end" font-size="26" fill="#a8463c">F1 0.60 → 0.95 by OCR</text>
-<text x="414" y="259" text-anchor="end" font-size="26" fill="#4d5a55">F1 0.93–0.98, four models</text>
-<text x="414" y="365" text-anchor="end" font-size="26" fill="#4d5a55">0 recall lost to quoting</text>
-<text x="414" y="471" text-anchor="end" font-size="26" fill="#a8463c">14 of 34 names lost</text>
+<text x="414" y="142" text-anchor="end" font-size="26" fill="#a8463c">value F1 0.60 → 0.95</text>
+<text x="414" y="169" text-anchor="end" font-size="21" fill="#4d5a55">Butler, library → modern OCR</text>
+<text x="414" y="248" text-anchor="end" font-size="26" fill="#4d5a55">value F1 0.93–0.98</text>
+<text x="414" y="275" text-anchor="end" font-size="21" fill="#4d5a55">4 Claude models, modern OCR</text>
+<text x="414" y="354" text-anchor="end" font-size="26" fill="#4d5a55">no recall cost</text>
+<text x="414" y="381" text-anchor="end" font-size="21" fill="#4d5a55">recall, quote required vs not</text>
+<text x="414" y="460" text-anchor="end" font-size="26" fill="#a8463c">14 of 34 names lost</text>
+<text x="414" y="487" text-anchor="end" font-size="21" fill="#4d5a55">plain GBIF lookup, Butler</text>
 <path d="M700 502 V496" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
 <path d="M700 502 L910 572 L700 642 L490 572 Z" fill="#fff" stroke="#011F5B" stroke-width="2.5" stroke-dasharray="9 7"/>
 <text x="700" y="566" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Sufficient</text>
 <text x="700" y="600" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">evidence?</text>
-<text x="414" y="568" text-anchor="end" font-size="26" fill="#a8463c">two models agreed, still wrong:</text>
-<text x="414" y="600" text-anchor="end" font-size="26" fill="#a8463c">50 Butler · 75 Reeve</text>
+<text x="414" y="562" text-anchor="end" font-size="26" fill="#a8463c">auto-accept set still wrong:</text>
+<text x="414" y="594" text-anchor="end" font-size="26" fill="#a8463c">50 Butler · 75 Reeve</text>
+<text x="414" y="621" text-anchor="end" font-size="21" fill="#4d5a55">library OCR, both models agree</text>
 <path d="M700 642 V670" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
 <text x="716" y="668" font-size="24" fill="#4d5a55">yes</text>
 <rect x="440" y="676" width="520" height="62" rx="12" fill="#011F5B"/>

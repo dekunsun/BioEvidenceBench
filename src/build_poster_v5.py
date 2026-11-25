@@ -31,7 +31,7 @@ def css() -> str:
 #r1{grid-template-columns:0.44fr 0.56fr}
 #r2{grid-template-columns:0.71fr 0.29fr}
 #r3{grid-template-columns:0.54fr 0.46fr}
-main{gap:0.25in !important}
+main{gap:0.2in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.34in 0.34in 0.30in}
 h1{font-size:72px}
@@ -51,6 +51,7 @@ h1{font-size:80px}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--soft);line-height:1.25}
 #r3 .box:first-child svg{max-height:6.2in}
+#r1 .two{grid-template-columns:0.40fr 0.60fr !important}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
 .box.contact .cx-qr img{max-width:1.0in}
@@ -192,7 +193,7 @@ def methods_svg() -> str:
     p.append(box(70, 390, 420, 90, [("Code checks the quote,", 600, INK), ("slices the value", 400, SOFT)]))
     p.append(arrow("M280 482 V518"))
     p.append(f'<rect x="20" y="524" width="520" height="64" rx="32" fill="{NAVY}"/>')
-    p.append(f'<text x="280" y="566" text-anchor="middle" font-size="{FS}" font-weight="600" fill="#fff">Scored against 607 hand labels</text>')
+    p.append(f'<text x="280" y="566" text-anchor="middle" font-size="{FS}" font-weight="600" fill="#fff">Scored on 421 test-page labels</text>')
     return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="One scanned page, read '
             f'three ways: library OCR, modern OCR, expert transcription. The model returns a line and a verbatim '
             f'quote; code checks the quote and slices the value; scored against 607 hand labels.">'
@@ -216,8 +217,10 @@ def framework_svg() -> str:
         if sub:
             p.append(f'<text x="{cx}" y="{y + 63}" text-anchor="middle" font-size="25" fill="{sc}">{sub}</text>')
 
-    def note(y, text, col=SOFT):
+    def note(y, text, col=SOFT, sub=""):
         p.append(f'<text x="{x0 - 26}" y="{y}" text-anchor="end" font-size="26" fill="{col}">{text}</text>')
+        if sub:  # what the number measures, so it is never read as another metric
+            p.append(f'<text x="{x0 - 26}" y="{y + 27}" text-anchor="end" font-size="21" fill="{SOFT}">{sub}</text>')
 
     ys = [0, 106, 212, 318, 424]
     step(ys[0], "Scientific research task", "retrieve the relevant literature", fill=NAVY, tc="#fff", sc="#c9d3e8", stroke=NAVY)
@@ -230,18 +233,18 @@ def framework_svg() -> str:
     p.append(robot(x0 + bw - 36, ys[2] + 8, 0.6))
     # measured on the test pages (left column)
     p.append(f'<text x="{x0 - 26}" y="26" text-anchor="end" font-size="24" font-style="italic" fill="{SOFT}">measured, 16 test pages</text>')
-    note(ys[1] + 47, "F1 0.60 → 0.95 by OCR", RED)
-    note(ys[2] + 47, "F1 0.93–0.98, four models")
-    note(ys[3] + 47, "0 recall lost to quoting")
-    note(ys[4] + 47, "14 of 34 names lost", RED)
+    note(ys[1] + 36, "value F1 0.60 → 0.95", RED, "Butler, library → modern OCR")
+    note(ys[2] + 36, "value F1 0.93–0.98", SOFT, "4 Claude models, modern OCR")
+    note(ys[3] + 36, "no recall cost", SOFT, "recall, quote required vs not")
+    note(ys[4] + 36, "14 of 34 names lost", RED, "plain GBIF lookup, Butler")
     # decision
     dy, dh, dw = 572, 70, 210
     p.append(arrow(f"M{cx} {ys[4] + bh + 2} V{dy - dh - 6}"))
     p.append(f'<path d="M{cx} {dy - dh} L{cx + dw} {dy} L{cx} {dy + dh} L{cx - dw} {dy} Z" fill="#fff" stroke="{NAVY}" stroke-width="2.5" stroke-dasharray="9 7"/>')
     p.append(f'<text x="{cx}" y="{dy - 6}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">Sufficient</text>')
     p.append(f'<text x="{cx}" y="{dy + 28}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">evidence?</text>')
-    note(dy - 4, "two models agreed, still wrong:", RED)
-    note(dy + 28, "50 Butler · 75 Reeve", RED)
+    note(dy - 10, "auto-accept set still wrong:", RED)
+    note(dy + 22, "50 Butler · 75 Reeve", RED, "library OCR, both models agree")
     # yes: the record
     ry = 676
     p.append(arrow(f"M{cx} {dy + dh} V{ry - 6}"))
@@ -264,8 +267,8 @@ def framework_svg() -> str:
     for i, t in enumerate(["Solid: measured here.", "Dashed: proposed, not", "yet tested end to end."]):
         p.append(f'<text x="0" y="{H - 62 + i * 28}" font-size="24" fill="{SOFT}">{t}</text>')
     return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="An evidence-aware scientific '
-            f'agent, proposed workflow. Research task; read source or OCR, keeping the original text (measured: F1 '
-            f'0.60 to 0.95 by OCR); extract entities, the model (drawn as a robot) points to a line and never rewrites it (F1 0.93 '
+            f'agent, proposed workflow. Research task; read source or OCR, keeping the original text (measured: value F1 '
+            f'0.60 to 0.95, library to modern OCR); extract entities, the model (drawn as a robot) points to a line and never rewrites it (F1 0.93 '
             f'to 0.98); verify evidence by quote check and provenance (0 recall lost); resolve identity against a '
             f'modern database (14 of 34 names lost). Then a decision, sufficient evidence? Two models agreeing is '
             f'not enough: agreed but wrong, 50 in Butler and 75 in Reeve. Yes: auditable record. No: re-check the '
@@ -290,7 +293,7 @@ def page() -> str:
   <div>
     <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>Where do AI agents lose evidence in historical scientific literature?</h1>
-    <p class="key"><b>BioEvidenceBench · Key finding:</b> most evidence was lost at reading (F1 0.60 on library OCR, 0.95 on modern OCR) and at linking (14 of 34 names); extraction lost little.</p>
+    <p class="key"><b>BioEvidenceBench · Key finding:</b> most evidence was lost at reading (value F1 0.60 on library OCR, 0.95 on modern OCR) and at linking (14 of 34 names); extraction lost little.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
@@ -334,10 +337,10 @@ def page() -> str:
     </div>
     <div class="facts">
       <div><span class="v">16</span><span class="d">test pages, Reeve 1849 and Butler 1907</span></div>
-      <div><span class="v">607</span><span class="d">mentions labelled by hand first</span></div>
+      <div><span class="v">421</span><span class="d">test mentions labelled first (607 in all)</span></div>
       <div><span class="v">0.90</span><span class="d">agreement between two labellers</span></div>
     </div>
-    <p class="note" style="margin:.08in 0 0">Pre-registered and frozen before the test pages · agents: Claude Opus 5.5, Gemini 4 Carbon · design after Lei, Docherty &amp; Cooper (2024)</p>
+    <p class="note" style="margin:.06in 0 0">Pre-registered, frozen before the test pages · extraction models: Claude Opus 5.5, Gemini 4 Carbon · after Lei, Docherty &amp; Cooper (2024)</p>
   </div>
 </div>
 </div>
@@ -350,7 +353,7 @@ def page() -> str:
     <div class="big3">
       <div><p class="lab">OCR · Butler</p><p class="num">0.60 → 0.95</p><p class="what">value F1, same pages, better OCR</p></div>
       <div><p class="lab">Entity linking</p><p class="num">14 / 34</p><p class="what">read right, still not linked</p></div>
-      <div><p class="lab">Shared errors</p><p class="num">99–100%</p><p class="what">model agreement; agreed but wrong on library OCR: 50 Butler, 75 Reeve</p></div>
+      <div><p class="lab">Shared errors</p><p class="num">99–100%</p><p class="what">model agreement; auto-accept set on library OCR still held 50 (Butler) and 75 (Reeve) errors</p></div>
     </div>
     <p class="punch">Two agents can agree on the same mistake: both read the same damaged OCR.</p>
     <div class="grid3">
