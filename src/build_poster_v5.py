@@ -181,58 +181,78 @@ def methods_svg() -> str:
 
 
 def framework_svg() -> str:
-    W, H = 1419, 722
+    """Box 05 (2026-11-25, from a reviewer's suggestion the author sent): an evidence-aware agent workflow
+    with a decision and a loop. Solid boxes are the steps this study measured; the decision, the re-check
+    and the person are proposed and untested end to end (dashed). Numbers on the left are the measured
+    losses on the 16 test pages; the signals note is the exploratory review-signal result."""
+    W, H = 1419, 742
+    TINT, LINE = "#eef1f7", "#c4cbd0"
     p = [DEFS]
-    # left: the model writes the record
-    p.append(f'<rect x="0" y="0" width="690" height="{H - 6}" rx="18" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>')
-    p.append(f'<text x="25" y="46" font-size="{FS}" font-weight="700" fill="{SOFT}">Model writes the record</text>')
-    L = [(76, 60, [("Scanned page", 600, INK)]),
-         (196, 114, [("Model", 600, INK), ("reads the OCR,", 400, SOFT), ("writes the value", 400, SOFT)]),
-         (370, 114, [("Record", 600, INK), ("<tspan font-style='italic'>Turritella</tspan>", 400, SOFT),
-                     ("<tspan font-style='italic'>brevisis</tspan>", 400, SOFT)]),
-         (550, 60, [("Researcher trusts it", 600, INK)])]
-    prev = None
-    for y, h, lines in L:
-        p.append(box(25, y, 316, h, lines))
-        if prev:
-            p.append(arrow(f"M183 {prev} V{y - 5}"))
-        prev = y + h
-    for i, t in enumerate(["1 in 12 repairs", "is wrong; fluent", "OCR errors pass", "and look right"]):
-        p.append(f'<text x="366" y="{232 + i * 32}" font-size="{FS}" font-weight="400" fill="{SOFT}">{t}</text>')
-    # right: code owns the text
-    x0 = 723
-    p.append(f'<rect x="{x0}" y="0" width="690" height="{H - 6}" rx="18" fill="#eef1f7" stroke="{NAVY}" stroke-width="2"/>')
-    p.append(f'<text x="{x0 + 25}" y="46" font-size="{FS}" font-weight="700" fill="{NAVY}">Code owns the text</text>')
-    bx, bw = 748, 330
-    R = [(76, 60, [("Scanned page", 600, INK)]),
-         (166, 92, [("OCR text", 600, INK), ("F1 0.60 → 0.95", 400, RED)]),
-         (290, 124, [("Code checks quote,", 600, NAVY), ("slices the value", 600, NAVY), ("0 recall lost", 400, SOFT)]),
-         (446, 92, [("Database lookup", 600, INK), ("14 of 34 lost", 400, RED)]),
-         (570, 124, [("Person reviews", 600, INK), ("agreed but wrong:", 400, RED), ("50 Butler · 75 Reeve", 400, RED)])]
-    prev = None
-    for y, h, lines in R:
-        p.append(box(bx, y, bw, h, lines, stroke=RULE))
-        if prev:
-            p.append(arrow(f"M{bx + bw / 2} {prev} V{y - 5}"))
-        prev = y + h
-    # the model on the side, with a robot
-    mx, my, mw, mh = 1110, 104, 286, 256
-    p.append(f'<rect x="{mx}" y="{my}" width="{mw}" height="{mh}" rx="12" fill="#fff" stroke="{SOFT}" stroke-width="2" stroke-dasharray="9 7"/>')
-    p.append(robot(mx + mw / 2, my + 16, 0.95))
-    for i, (t, wt, col) in enumerate([("Model", 600, INK), ("finds mentions,", 400, SOFT),
-                                      ("quotes the line", 400, SOFT), ("F1 0.93–0.98", 400, NAVY)]):
-        p.append(f'<text x="{mx + mw / 2}" y="{my + 136 + i * 32}" text-anchor="middle" font-size="{FS}" font-weight="{wt}" fill="{col}">{t}</text>')
-    p.append(arrow(f"M{bx + bw} 212 H{mx - 5}", dash=True))
-    p.append(arrow(f"M{mx + 60} {my + mh} V384 H{bx + bw + 5}", dash=True))
-    for i, t in enumerate(["never rewrites", "the source text"]):
-        p.append(f'<text x="{mx + mw / 2 + 20}" y="{456 + i * 32}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">{t}</text>')
-    return (f'<svg viewBox="-3 -3 {W} {H}" width="100%" role="img" aria-label="Two designs. Model writes the '
-            f'record: scanned page, model reads the OCR and writes the value, record, researcher trusts it; 1 in '
-            f'12 repairs is wrong, and fluent OCR errors pass and look right. Code owns the text: scanned page, OCR text '
-            f'(F1 0.60 to 0.95 by OCR), code checks the quote and slices the value (0 recall lost), database '
-            f'lookup (14 of 34 names lost), person reviews (values both models agreed on but wrong on library OCR: 50 in Butler, 75 in Reeve); the model, '
-            f'drawn as a robot, finds mentions and quotes the line, F1 0.93 to 0.98, and never rewrites the '
-            f'source text.">' + "\n".join(p) + "</svg>")
+    cx, x0, bw, bh = 700, 440, 520, 76
+
+    def step(y, title, sub, fill=TINT, tc=NAVY, sc=SOFT, stroke=LINE, dash=False):
+        d = ' stroke-dasharray="9 7"' if dash else ""
+        p.append(f'<rect x="{x0}" y="{y}" width="{bw}" height="{bh}" rx="12" fill="{fill}" stroke="{stroke}" stroke-width="2"{d}/>')
+        p.append(f'<text x="{cx}" y="{y + 33}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{tc}">{title}</text>')
+        if sub:
+            p.append(f'<text x="{cx}" y="{y + 63}" text-anchor="middle" font-size="25" fill="{sc}">{sub}</text>')
+
+    def note(y, text, col=SOFT):
+        p.append(f'<text x="{x0 - 26}" y="{y}" text-anchor="end" font-size="26" fill="{col}">{text}</text>')
+
+    ys = [0, 106, 212, 318, 424]
+    step(ys[0], "Scientific research task", "retrieve the relevant literature", fill=NAVY, tc="#fff", sc="#c9d3e8", stroke=NAVY)
+    step(ys[1], "Read source / OCR", "keep the original text")
+    step(ys[2], "Extract scientific entities", "points to a line; never rewrites it")
+    step(ys[3], "Verify evidence", "quote check + source provenance")
+    step(ys[4], "Resolve entity identity", "historical name → modern database")
+    for y in ys[:-1]:
+        p.append(arrow(f"M{cx} {y + bh + 2} V{y + 106 - 6}"))
+    p.append(robot(x0 + bw - 36, ys[2] + 8, 0.6))
+    # measured on the test pages (left column)
+    p.append(f'<text x="{x0 - 26}" y="26" text-anchor="end" font-size="24" font-style="italic" fill="{SOFT}">measured, 16 test pages</text>')
+    note(ys[1] + 47, "F1 0.60 → 0.95 by OCR", RED)
+    note(ys[2] + 47, "F1 0.93–0.98, four models")
+    note(ys[3] + 47, "0 recall lost to quoting")
+    note(ys[4] + 47, "14 of 34 names lost", RED)
+    # decision
+    dy, dh, dw = 572, 70, 210
+    p.append(arrow(f"M{cx} {ys[4] + bh + 2} V{dy - dh - 6}"))
+    p.append(f'<path d="M{cx} {dy - dh} L{cx + dw} {dy} L{cx} {dy + dh} L{cx - dw} {dy} Z" fill="#fff" stroke="{NAVY}" stroke-width="2.5" stroke-dasharray="9 7"/>')
+    p.append(f'<text x="{cx}" y="{dy - 6}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">Sufficient</text>')
+    p.append(f'<text x="{cx}" y="{dy + 28}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">evidence?</text>')
+    note(dy - 4, "two models agreed, still wrong:", RED)
+    note(dy + 28, "50 Butler · 75 Reeve", RED)
+    # yes: the record
+    ry = 676
+    p.append(arrow(f"M{cx} {dy + dh} V{ry - 6}"))
+    p.append(f'<text x="{cx + 16}" y="{dy + dh + 26}" font-size="24" fill="{SOFT}">yes</text>')
+    p.append(f'<rect x="{x0}" y="{ry}" width="{bw}" height="62" rx="12" fill="{NAVY}"/>')
+    p.append(f'<text x="{cx}" y="{ry + 41}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="#fff">Auditable record</text>')
+    # no: re-check, then back to reading
+    lx, lw, ly, lh = 1050, 330, 246, 140
+    lc = lx + lw / 2
+    nx = lx + lw - 34  # the "no" line enters the box near its right edge, clear of the signals note
+    p.append(f'<path d="M{cx + dw} {dy} H{nx} V{ly + lh + 6}" fill="none" stroke="{SOFT}" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>')
+    p.append(f'<text x="{cx + dw + 18}" y="{dy - 12}" font-size="24" fill="{SOFT}">no</text>')
+    p.append(f'<rect x="{lx}" y="{ly}" width="{lw}" height="{lh}" rx="12" fill="#fff" stroke="{SOFT}" stroke-width="2" stroke-dasharray="9 7"/>')
+    for i, (t, wt, col) in enumerate([("Re-check the scan", 600, NAVY), ("or ask a person", 400, SOFT), ("to review", 400, SOFT)]):
+        p.append(f'<text x="{lc}" y="{ly + 44 + i * 34}" text-anchor="middle" font-size="{FS}" font-weight="{wt}" fill="{col}">{t}</text>')
+    p.append(f'<path d="M{lc} {ly} V{ys[1] + bh / 2} H{x0 + bw + 8}" fill="none" stroke="{SOFT}" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>')
+    for i, t in enumerate(["Signals that helped:", "OCR junk, no exact", "database match.", "Not: model agreement."]):
+        p.append(f'<text x="{nx - 18}" y="{ly + lh + 44 + i * 30}" text-anchor="end" font-size="24" fill="{SOFT}">{t}</text>')
+    # legend
+    for i, t in enumerate(["Solid: measured here.", "Dashed: proposed, not", "yet tested end to end."]):
+        p.append(f'<text x="0" y="{H - 62 + i * 28}" font-size="24" fill="{SOFT}">{t}</text>')
+    return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="An evidence-aware scientific '
+            f'agent, proposed workflow. Research task; read source or OCR, keeping the original text (measured: F1 '
+            f'0.60 to 0.95 by OCR); extract entities, the model (drawn as a robot) points to a line and never rewrites it (F1 0.93 '
+            f'to 0.98); verify evidence by quote check and provenance (0 recall lost); resolve identity against a '
+            f'modern database (14 of 34 names lost). Then a decision, sufficient evidence? Two models agreeing is '
+            f'not enough: agreed but wrong, 50 in Butler and 75 in Reeve. Yes: auditable record. No: re-check the '
+            f'scan or ask a person, then read again. Signals that helped: OCR junk and no exact database match, '
+            f'not model agreement. Solid steps were measured; dashed ones are proposed and untested end to end.">'
+            + "\n".join(p) + "</svg>")
 
 
 def page() -> str:
@@ -345,7 +365,7 @@ def page() -> str:
 <div class="box">
   <p class="act">05 · Proposed Framework</p>
   <div class="in">
-    <h2>Code owns the text; the model points and quotes</h2>
+    <h2>An evidence-aware scientific agent: a proposed workflow, informed by these results</h2>
     {framework_svg()}
   </div>
 </div>
