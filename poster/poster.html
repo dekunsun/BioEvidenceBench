@@ -29,7 +29,7 @@ h1{font-size:76px;line-height:1.08;font-weight:700;margin:0 0 20px;letter-spacin
 .logos img.cas{width:2.6in}
 
 /* body: rows read left to right */
-main{flex:1;display:flex;flex-direction:column;gap:0.17in;padding:0.2in 0.4in 0.2in;min-height:0;background:var(--tint)}
+main{flex:1;display:flex;flex-direction:column;gap:0.13in;padding:0.16in 0.4in 0.16in;min-height:0;background:var(--tint)}
 .row{display:grid;gap:0.3in;min-height:0}
 .box{background:#fff;border:1.5px solid var(--rule);padding:0.17in 0.3in 0.15in;min-height:0;overflow:hidden;display:flex;flex-direction:column}
 h2{font-size:42px;font-weight:700;color:var(--navy);margin:0 0 10px;padding-bottom:6px;border-bottom:3px solid var(--navy)}
@@ -46,7 +46,7 @@ figure img{display:block;width:100%}
 /* figure 1 */
 .f1{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;margin-top:14px}
 img.scanfull{width:100%;display:block;border:1.5px solid var(--rule)}
-.f1 img{height:1.5in;width:auto;border:1.5px solid var(--rule)}
+.f1 img{height:1.38in;width:auto;border:1.5px solid var(--rule)}
 .readings{border-top:1.5px solid var(--rule)}
 .readings div{display:block;padding:10px 0;border-bottom:1.5px solid var(--rule)}
 .readings .k{display:block}
@@ -54,7 +54,7 @@ img.scanfull{width:100%;display:block;border:1.5px solid var(--rule)}
 
 /* thumbnails */
 .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.thumbs img{width:100%;height:1.4in;object-fit:cover;object-position:top;border:1.5px solid var(--rule)}
+.thumbs img{width:100%;height:1.48in;object-fit:cover;object-position:top;border:1.5px solid var(--rule)}
 
 /* tables */
 table{border-collapse:collapse;width:100%;font-size:26px;line-height:1.3}
@@ -106,7 +106,7 @@ tr:last-child td{border-bottom:2px solid var(--ink)}
 
 /* case study */
 .case{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
-.case img.page{height:2.45in;border:1.5px solid var(--rule)}
+.case img.page{height:2.35in;border:1.5px solid var(--rule)}
 .case .rows div{padding:6px 0;border-bottom:1.5px solid var(--rule)}
 .case .rows .k{font-size:22px;color:var(--grey);display:block}
 .case .rows img{height:64px;display:block;margin-top:4px}
@@ -123,6 +123,9 @@ ol.rules li{margin-bottom:10px}
 .qr p{margin:0;font-size:22px;color:var(--grey)}
 .qr p b{color:var(--ink);font-size:28px}
 .agentsvg{display:block;margin-bottom:8px}
+.linktab{margin-top:10px;font-size:26px}
+.linktab th{font-size:22px}
+.linktab td{padding:6px 6px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -142,7 +145,7 @@ ol.rules li{margin-bottom:10px}
 <div class="row" style="grid-template-columns:1fr 1.18fr">
   <section class="box">
     <h2>1 &nbsp;Motivation</h2>
-    <p>Agents for science increasingly read the literature for us; the Biodiversity Heritage Library alone holds 64 million scanned pages. To turn a page into a database record, five steps must hold: <b>read, extract, ground, link, review</b>. BioEvidenceBench measures where each fails. It tests the steps an agent relies on; it is not itself an agent.</p>
+    <p style="margin-bottom:8px">Agents for science increasingly read the literature for us; the Biodiversity Heritage Library alone holds 64 million scanned pages. To turn a page into a database record, five steps must hold: <b>read, extract, ground, link, review</b>. BioEvidenceBench measures where each fails. It tests the steps an agent relies on; it is not itself an agent.</p>
     <figure style="margin-top:auto">
       <img class="scanfull" src="fig/v2/hook_scan.png" alt="The printed name BULIMUS CHILENSIS on Reeve 1849, BHL page 8966790">
       <div class="f1">
@@ -249,22 +252,29 @@ ol.rules li{margin-bottom:10px}
   </section>
 </div>
 
-<div class="row" style="grid-template-columns:1.25fr 1fr">
+<div class="row" style="grid-template-columns:1.3fr 1fr">
   <section class="box">
     <h2>4 &nbsp;Two failures an agent cannot see</h2>
-    <figure style="display:grid;grid-template-columns:1fr 1.1fr;gap:0.3in">
+    <figure style="display:grid;grid-template-columns:1fr 1.3fr;gap:0.3in">
       <div class="panel">
         <span class="lab">(a) Quiz:</span> one name is printed in 1849, the other was written by a modern OCR model. Which is on the page?
         <div class="choices"><div>A &nbsp;Turritella brevisis</div><div>B &nbsp;Turritella brevialis</div></div>
-        <div class="flip">B is on the page; DeepSeek-OCR-2 wrote A. Two letters differ, nothing looks broken, and the page error rate barely moves.</div>
+        <div class="flip"><img src="fig/v2/quiz_scan.png" alt="The printed line: The Turritella brevialis of Lamarck" style="width:100%;border:0;margin:0 0 6px">B is on the page; DeepSeek-OCR-2 wrote A. Two letters differ, nothing looks broken, and the page error rate barely moves.</div>
       </div>
       <div class="panel" style="border-top:0;margin-top:0;padding-top:0">
-        <span class="lab">(b)</span> Read correctly, still not linked.
+        <span class="lab">(b) Read correctly, still not linked.</span>
         <img src="fig/v2/link_page.png" alt="Sykes' Wagtail, Motacilla beema, Butler 1907, BHL page 8992647" style="width:100%">
-        <div class="mono">GBIF lookup: <span class="lost">genus Motacilla only</span><br>Accepted today: Motacilla flava</div>
+        <table class="linktab">
+          <tr><th>Printed (1907)</th><th>GBIF finds</th><th>Accepted today</th></tr>
+          <tr><td><i>Motacilla beema</i></td><td class="lost">genus only</td><td><i>Motacilla flava</i></td></tr>
+          <tr><td><i>Lusciniola schwarzi</i></td><td class="lost">genus only</td><td><i>Phylloscopus schwarzi</i></td></tr>
+          <tr><td><i>Aedon familiaris</i></td><td class="lost">genus only</td><td><i>Cercotrichas galactotes</i></td></tr>
+        </table>
+        <p style="margin:10px 0 0">The spelling is right; the name has moved since 1907. Linking, not reading, lost 14 of 34 correctly read Butler names.</p>
       </div>
     </figure>
-    <p class="cap" style="margin-top:auto"><b>Figure 7.</b> Reeve page 8967281 and Butler page 8992647. Neither error shows in the text the agent quotes.</p>
+    
+    <p class="cap" style="margin-top:auto"><b>Figure 7.</b> Reeve page 8967281; Butler pages 8992647, 8992644 (accepted names checked with Avibase: a race, a new genus, a synonym). Neither error shows in the text the agent quotes.</p>
   </section>
   <section class="box">
     <h2>5 &nbsp;Work in progress: classical Chinese</h2>
@@ -282,7 +292,7 @@ ol.rules li{margin-bottom:10px}
       <tr><td>Claude Opus OCR</td><td class="n">88% (98%*)</td><td class="n">0.87 [0.83, 0.91]</td></tr>
       <tr><td>PaddleOCR</td><td class="n">68% (81%*)</td><td class="n">0.72 [0.60, 0.83]</td></tr>
     </table>
-    <p class="cap" style="margin-top:auto"><b>Table 1.</b> <i>Bencao gangmu</i> 本草綱目 (1578), 18th-century manuscript copy. Six development pages; an eight-page test set is frozen, not yet labelled. *Variant forms counted. The model writes the modern character: right for search, wrong for the edition.</p>
+    <p class="cap" style="margin-top:auto"><b>Table 1.</b> <i>Bencao gangmu</i> 本草綱目 (1578), 18th-century manuscript copy. Six development pages; eight-page test set frozen, not yet labelled. *Variant forms counted. The model writes the modern character: right for search, wrong for the edition.</p>
   </section>
 </div>
 
@@ -298,7 +308,7 @@ ol.rules li{margin-bottom:10px}
     </div>
     <div class="foot">
       <div>
-        <p class="cap" style="margin-top:0">Limits: two English printed books and a six-page Chinese pilot. The chain likely applies to materials papers (Fe₂O₃ read as Fe2O3), untested.</p>
+        <p class="cap" style="margin-top:0">Limits: two English printed books and a six-page Chinese pilot; the same chain in materials papers (Fe₂O₃ read as Fe2O3) is untested.</p>
         <ol class="refs">
           <li>Lei, Docherty &amp; Cooper (2024). <i>Digital Discovery</i>.</li>
           <li>FineBooks / IMPACT, <i>finebooks/bhl-impact-gt</i>, CC BY 3.0. Scans: BHL, Internet Archive, CADAL.</li>
