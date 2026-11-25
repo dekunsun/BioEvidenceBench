@@ -30,7 +30,7 @@ def css() -> str:
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.44fr 0.56fr}
 #r2{grid-template-columns:0.665fr 0.335fr}
-#r3{grid-template-columns:0.5fr 0.5fr}
+#r3{grid-template-columns:0.535fr 0.465fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.26in 0.34in 0.22in}
@@ -60,7 +60,7 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .facts div{display:flex;gap:.14in;align-items:baseline}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--soft);line-height:1.25}
-#r3 .box:first-child svg{max-height:6.2in}
+#r3 .box:first-child svg{max-height:7.4in}
 #r1 .two{grid-template-columns:0.37fr 0.63fr !important}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
@@ -108,7 +108,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 /* spacing (2026-11-25): spread spare height evenly instead of leaving it at the bottom of a box */
 #r1 .two{align-items:center;flex:1}
 #r1 .box:nth-child(2)>.in{display:flex;flex-direction:column}
-#r3 .box:first-child>.in{display:flex;flex-direction:column;justify-content:space-around}
+#r3 .box:first-child>.in{display:flex;flex-direction:column;justify-content:space-evenly}
 #r3 .box:first-child>.in>h2{margin-bottom:0}
 .grid2>div:nth-child(4){align-self:center}
 """
@@ -389,6 +389,7 @@ def page() -> str:
   <div class="in">
     <h2>Code owns the text; the model points and quotes</h2>
     {framework_svg()}
+    <p class="note" style="margin:.1in 0 0">Left: a model that repairs and writes values leaves no trace of what it changed. Right: every value is sliced from a numbered line, so each output can be audited; red marks where evidence was still lost on the 16 test pages.</p>
   </div>
 </div>
 <div class="stack">
