@@ -29,7 +29,7 @@ def css() -> str:
     c += """
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.5fr 0.5fr}
-#r2{grid-template-columns:0.665fr 0.335fr}
+#r2{grid-template-columns:0.7fr 0.3fr}
 #r3{grid-template-columns:0.58fr 0.42fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}
@@ -67,7 +67,7 @@ ol.concl2 li:last-child{border-bottom:0}
 .quiz .panel .zh{font-size:30px;color:var(--accent)}
 .quiz .qh{font-size:34px;line-height:1.15;color:var(--accent);margin:0 0 .08in}
 .quiz .ans.flipped{transform:rotate(180deg);text-align:right;border-top:0;border-bottom:1.5px solid var(--rule);padding:0 0 .08in;margin-top:.12in}
-.quiz .opts{display:grid;grid-template-columns:1fr 1fr;gap:.12in}
+.quiz .opts{display:grid;grid-template-columns:1fr;gap:.1in}
 .quiz .opts .opt{margin:0;padding:.1in .14in;gap:.12in}
 .quiz .opts .opt b{font-size:26px}
 .quiz .opts .opt i{font-size:26px}
@@ -83,7 +83,8 @@ ol.concl2 li:last-child{border-bottom:0}
 .facts .d{color:var(--ink);line-height:1.25}
 .facts .d small{display:block;font-size:22px;color:var(--soft)}
 #r3 .box:first-child svg{max-height:650px;margin:0 auto;display:block}
-#r1 .two{grid-template-columns:0.45fr 0.55fr !important}
+#r1 .two{grid-template-columns:minmax(0,0.45fr) minmax(0,0.55fr) !important}
+#r1 .two>div:first-child svg{width:100% !important;display:block}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
 .box.contact .cx-qr img{max-width:1.0in}

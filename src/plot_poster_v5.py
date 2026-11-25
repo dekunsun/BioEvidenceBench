@@ -13,7 +13,7 @@ import plot_poster_v3 as v3
 
 v3.OUT = v3.ROOT / "poster" / "fig" / "v5"
 v3.FS = 17.0
-v3.W, v3.H = 4.5, 4.4
+v3.W, v3.H = 4.5, 5.0
 v3.NARROW_F1 = True
 v3.STAR_LLM = True
 v3.LINK_LABELS = {'Plain GBIF\nlookup': 'Plain\nGBIF', 'GBIF with\ncontext hint': 'GBIF\n+ hint', 'LLM linker\n(Haiku)': 'LLM\nHaiku', 'LLM linker\n(Opus)': 'LLM\nOpus'}
