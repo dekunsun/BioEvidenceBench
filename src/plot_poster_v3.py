@@ -22,7 +22,7 @@ INK, GREY, RULE, NAVY, LIGHT = "#1b1f24", "#5f6670", "#d7dbe0", "#011F5B", "#8d9
 COL = {"Butler": NAVY, "Reeve": LIGHT}
 MARK = {"Butler": "o", "Reeve": "s"}
 FS = 20.0
-W, H = 7.27, 4.9
+W, H = 7.27, 4.1
 
 plt.rcParams.update({"font.family": ["Inter", "DejaVu Sans"], "font.size": FS, "axes.edgecolor": GREY,
                      "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK, "axes.spines.top": False,

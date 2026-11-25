@@ -62,6 +62,18 @@ td{padding:9px 8px;border-bottom:1.5px solid var(--rule);vertical-align:top}
 td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 tr:last-child td{border-bottom:2px solid var(--ink)}
 
+
+/* agent chain */
+.chain{display:flex;flex-direction:column;align-items:stretch}
+.chain .node{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;border:1.5px solid var(--rule);border-left:8px solid var(--navy);padding:8px 14px}
+.chain .node.lostn{border-left-color:var(--red)}
+.chain .node.end{display:block;text-align:center;border:1.5px dashed var(--grey);color:var(--grey);font-weight:600}
+.chain .no{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:24px}
+.chain .lostn .no{background:var(--red)}
+.chain .nm{font-weight:700}
+.chain .nm em{display:block;font-style:normal;font-weight:400;font-size:24px;color:var(--grey)}
+.chain .val{font-weight:700;white-space:nowrap}
+.chain .arrow{text-align:center;color:var(--grey);font-size:24px;line-height:1.1}
 /* figure 5 panels */
 .panel{border-top:1.5px solid var(--rule);padding-top:12px;margin-top:12px}
 .panel:first-child{border-top:0;margin-top:0;padding-top:0}
@@ -145,26 +157,35 @@ ol.rules li{margin-bottom:10px}
 <div class="col">
   <section>
     <h2>3 &nbsp;Results: where evidence was lost</h2>
-    <table>
-      <tr><th>Step</th><th>Measure</th><th class="n">Result</th></tr>
-      <tr><td><b>Read</b></td><td>Value F1, library → modern OCR</td><td class="n lost">0.60 → 0.95</td></tr>
-      <tr><td><b>Extract</b></td><td>Value F1, four Claude models, modern OCR</td><td class="n">0.93–0.98</td></tr>
-      <tr><td><b>Ground</b></td><td>Recall lost when quotes are required</td><td class="n">0</td></tr>
-      <tr><td><b>Link</b></td><td>Correctly read names lost at GBIF lookup</td><td class="n lost">14 of 34</td></tr>
-      <tr><td><b>Review</b></td><td>Library-OCR errors both models agreed on</td><td class="n lost">50 of 75</td></tr>
-    </table>
-    <p class="cap"><b>Table 1.</b> Each step of the agent's chain on the test pages. Red: evidence lost. Read and Link values are for Butler; Reeve 0.64 → 0.98.</p>
+    <figure>
+      <div class="chain">
+        <div class="node end"><span class="nm">Scanned page</span></div>
+        <div class="arrow">↓</div>
+        <div class="node lostn"><span class="no">1</span><span class="nm">Read<em>OCR</em></span><span class="val lost">0.60 → 0.95</span></div>
+        <div class="arrow">↓</div>
+        <div class="node"><span class="no">2</span><span class="nm">Extract<em>language model</em></span><span class="val">0.93–0.98</span></div>
+        <div class="arrow">↓</div>
+        <div class="node"><span class="no">3</span><span class="nm">Ground<em>quote the source line</em></span><span class="val">0 recall lost</span></div>
+        <div class="arrow">↓</div>
+        <div class="node lostn"><span class="no">4</span><span class="nm">Link<em>database lookup (GBIF)</em></span><span class="val lost">14 of 34 lost</span></div>
+        <div class="arrow">↓</div>
+        <div class="node lostn"><span class="no">5</span><span class="nm">Review<em>a second model, then people</em></span><span class="val lost">50 of 75 shared</span></div>
+        <div class="arrow">↓</div>
+        <div class="node end"><span class="nm">Database record</span></div>
+      </div>
+      <p class="cap"><b>Figure 3.</b> The agent's evidence chain on the test pages; red: evidence lost. Values: F1 library → modern OCR (Butler); F1 of four Claude models; names lost at lookup; library-OCR errors both models made. Quotes, a second model and self-repair check the agent against its own input, so they miss fluent errors; only an independent source (the scan, another OCR, the database, a person) catches them.</p>
+    </figure>
     <figure style="margin-top:18px">
       <img src="fig/v3/f1_by_text.png" alt="Value F1 by text version with 95% intervals: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert 0.98 and 0.98">
-      <p class="cap"><b>Figure 3.</b> Same pages, three texts. Better OCR recovers most of the loss; expert transcription adds little (0.98 for both books). Bars: 95% page-bootstrap intervals.</p>
+      <p class="cap"><b>Figure 4.</b> Same pages, three texts. Better OCR recovers most of the loss; expert transcription adds little (0.98 for both books). Bars: 95% page-bootstrap intervals.</p>
     </figure>
     <figure style="margin-top:18px">
       <img src="fig/v3/names_vs_f1.png" alt="Value F1 against share of gold names intact, 24 OCR versions per book">
-      <p class="cap"><b>Figure 4.</b> 24 OCR versions of the same pages. Whether names survive OCR predicts F1; the page character error rate does not (ρ −0.11 and −0.61). Exploratory.</p>
+      <p class="cap"><b>Figure 5.</b> 24 OCR versions of the same pages. Whether names survive OCR predicts F1; the page character error rate does not (ρ −0.11 and −0.61). Exploratory.</p>
     </figure>
     <figure style="margin-top:18px">
       <img src="fig/v3/link_recall.png" alt="Butler link recall on the expert text: plain GBIF lookup 0.59, GBIF with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91">
-      <p class="cap"><b>Figure 5.</b> Linking 34 correctly read bird names (Butler, expert text). A plain lookup links 0.59 (pre-registered); an LLM linker reaches 0.91 (exploratory). Its misses are taxonomic judgement calls, so it still needs review.</p>
+      <p class="cap"><b>Figure 6.</b> Linking 34 correctly read bird names (Butler, expert text). A plain lookup links 0.59 (pre-registered); an LLM linker reaches 0.91 (exploratory). Its misses are taxonomic judgement calls, so it still needs review.</p>
     </figure>
   </section>
 </div>
@@ -183,7 +204,7 @@ ol.rules li{margin-bottom:10px}
         <img src="fig/v2/link_page.png" alt="Sykes' Wagtail, Motacilla beema, Butler 1907, BHL page 8992647" style="width:100%">
         <div class="mono">GBIF lookup: <span class="lost">genus Motacilla only</span><br>Accepted today: Motacilla flava</div>
       </div>
-      <p class="cap"><b>Figure 6.</b> Reeve page 8967281 and Butler page 8992647. Neither error shows in the text the agent quotes.</p>
+      <p class="cap"><b>Figure 7.</b> Reeve page 8967281 and Butler page 8992647. Neither error shows in the text the agent quotes.</p>
     </figure>
   </section>
   <section>
@@ -202,7 +223,7 @@ ol.rules li{margin-bottom:10px}
       <tr><td>Claude Opus OCR</td><td class="n">88% (98%*)</td><td class="n">0.87 [0.83, 0.91]</td></tr>
       <tr><td>PaddleOCR</td><td class="n">68% (81%*)</td><td class="n">0.72 [0.60, 0.83]</td></tr>
     </table>
-    <p class="cap"><b>Table 2.</b> First extension of the method: <i>Bencao gangmu</i> 本草綱目 (1578), 18th-century manuscript copy. Six development pages only; an eight-page test set is frozen and not yet labelled. *If variant forms count. The model writes the modern character: right for search, wrong for the edition.</p>
+    <p class="cap"><b>Table 1.</b> First extension of the method: <i>Bencao gangmu</i> 本草綱目 (1578), 18th-century manuscript copy. Six development pages only; an eight-page test set is frozen and not yet labelled. *If variant forms count. The model writes the modern character: right for search, wrong for the edition.</p>
   </section>
   <section>
     <h2>6 &nbsp;Conclusions</h2>
