@@ -2,327 +2,444 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>BioEvidenceBench poster (A1)</title>
-<!-- A1 poster for Deep Matters 2026, version 4: rows read left to right (the author, 2026-11-25:
-     "想做成横向阅读的"); the agent chain runs across the page; one typeface (Inter) at four sizes (title 72, section 36, body 26, caption 21 px); one accent
-     colour (Penn navy) and red only for evidence that was lost. Canvas 24 x 33.92 in, zoomed by 0.9744
-     to fill A1. Charts: src/plot_poster_v3.py; scan crops: src/make_poster_assets.py.
-     Render: node poster/render.js "$PWD/poster" poster A1 -->
+<title>BioEvidenceBench poster · Deep Matters 2026</title>
+<!-- Version 5, built by src/build_poster_v5.py (LiveLab layout and CSS). Do not edit by hand. -->
 <style>
 @page { size: 594mm 841mm; margin: 0; }
-:root{ --navy:#011F5B; --ink:#1b1f24; --grey:#5f6670; --rule:#d7dbe0; --tint:#f4f5f7; --red:#b3261e; }
+:root{
+  --ink:#15201c; --soft:#4d5a55; --faint:#6f7b76; --rule:#d9dee6; --panel:#ffffff; --ground:#ffffff;
+  --accent:#011F5B; --accent-soft:#e9edf5; --anom:#011F5B; --unk:#011F5B; --unk-soft:#e9edf5; --part:#4d5a55; --part-soft:#eef1f0;
+}
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;width:594mm;height:841mm;overflow:hidden;background:#fff}
-body{font-family:"Inter",Arial,"WenQuanYi Zen Hei",sans-serif;color:var(--ink);font-size:28px;line-height:1.36}
-.poster{zoom:0.9744;width:24in;height:33.92in;overflow:hidden;display:flex;flex-direction:column}
-.mono{font-family:"DejaVu Sans Mono",monospace;font-size:26px}
-b{font-weight:700}
-i{font-style:italic}
+html,body{margin:0;padding:0;width:594mm;height:841mm;overflow:hidden;background:var(--ground);color:var(--ink);
+  font-family:"Helvetica Neue",Helvetica,Arial,"Noto Sans","WenQuanYi Zen Hei",sans-serif;font-size:26px;line-height:1.33}
+.poster{zoom:0.9744;width:24in;height:33.92in;overflow:hidden;box-sizing:border-box;padding:0.733in 0.8in 0.533in;display:grid;grid-template-rows:auto 1fr;gap:0.3in}
+header{display:grid;grid-template-columns:1fr auto;gap:0.533in;align-items:center;background:var(--accent);color:#fff;margin:-0.733in -0.8in 0;padding:0.46in 0.8in 0.40in}
+.brand{display:grid;justify-items:center;gap:.75in;align-self:center}
+.brand .penn{width:3.5in;display:block}
+.hqr img{width:1.35in;height:1.35in;display:block;background:#fff;padding:.08in;border-radius:8px;margin:0 auto}
+.hqr span{display:block;font-size:26px;color:#b9c6e6;text-align:center;margin-top:0.067in}
+.kicker{font-size:26px;color:#b9c6e6;font-weight:700;margin:0 0 0.133in}
+h1{font-size:83px;line-height:1.05;margin:0 0 0.167in;font-weight:700;color:#fff}
+.sub{font-size:34px;color:#dfe5f3;margin:0 0 0.167in;max-width:20in}
+.key{font-size:34px;color:#fff;margin:.08in 0 .2in;line-height:1.3;max-width:19.5in}
+.key b{color:#fff;font-weight:700}
+.authors{font-size:26px;margin:0;color:#fff}
+.authors b{font-weight:700}
+.authors .aff{color:#b9c6e6}
+main{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.367in;min-height:0}
+.col{display:flex;flex-direction:column;gap:0.62in;min-height:0}
+section{background:var(--panel);padding:0 0 0.133in}
+.act{font-size:34px;color:#fff;background:var(--accent);font-weight:700;margin:0 0 0.2in;padding:0.107in 0.2in;border-radius:4px}
+h2{font-size:26px;line-height:1.3;margin:0 0 .14in;font-weight:700}
+h3{font-size:34px;margin:0.12in 0 0.067in;font-weight:700}
+p{margin:0 0 0.133in;max-width:none}
+ul{margin:0 0 0.1in;padding-left:0.367in}
+li{margin-bottom:0.067in}
+.callout{border:0;background:none;padding:0;margin:.14in 0;font-size:26px}
+.callout b{font-weight:700}
+table{border-collapse:collapse;width:100%;table-layout:fixed;font-size:26px;margin:0.067in 0 0.167in}
+th,td{text-align:left;padding:0.13in 0.12in;border-bottom:2px solid var(--rule);vertical-align:top}
+th{font-size:26px;color:var(--faint);font-weight:700}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tag{display:inline;font-size:26px;font-weight:700;color:var(--accent);margin-left:.06in;white-space:nowrap}
+figure{margin:0.1in 0 0.067in}
+figure img{width:100%;display:block;border:0;border-radius:0;background:#fff}
+.crop{overflow:hidden;border:0;background:#fff}
+.crop img{border:0;border-radius:0}
+figcaption{font-size:26px;color:var(--faint);margin-top:0.08in;line-height:1.35}
+.q{display:grid;grid-template-columns:0.6in 1fr;gap:0.167in;align-items:start;margin-top:0.067in}
+.q .n{font-size:26px;font-weight:700;color:var(--accent);line-height:1}
+.q h3{margin-top:0.033in}
+.stats{display:grid;grid-template-columns:1fr;gap:0.093in;margin:0.067in 0 0.067in}
+.stat{display:grid;grid-template-columns:1.733in 1fr;gap:0.167in;align-items:center}
+.stat .d{font-size:26px;color:var(--soft);margin-top:0;line-height:1.3}
+.stat{background:#f3f5f9;border:2px solid var(--rule);border-radius:8px;padding:0.08in 0.2in}
+.stat .v{font-size:26px;white-space:nowrap;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.stat .v.unk{color:var(--unk)} .stat .v.anom{color:var(--anom)}
+.stat .d{font-size:26px;color:var(--soft);margin-top:0.1in;line-height:1.3}
+.flowcap{font-size:26px;color:var(--soft);margin:0.067in 0 0}
+.flowcap b{color:var(--ink)}
+footer{display:block;border-top:6px solid var(--accent);padding-top:.3in}
+footer h2{font-size:34px}
+footer p,footer li{font-size:26px}
+.promo{background:#fff;border:2px solid var(--rule);border-radius:16px;padding:.15in .35in;display:grid;grid-template-columns:auto 1fr auto;gap:.5in;align-items:center}
+.promo .logo{width:3.4in;display:block;margin:0}
+.promo .tag-line{font-size:26px;color:var(--soft);font-weight:700;margin:0 0 .08in}
+.promo p{color:var(--soft);margin:0 0 .06in;font-size:26px}
+.promo .handle{font-size:26px;color:var(--ink);font-weight:700}
+.promo .qrs{display:grid;grid-template-columns:auto auto;gap:.3in;text-align:center;font-size:26px;color:var(--soft)}
+.promo .qrs img{width:1.25in;height:1.25in;display:block;margin:0 auto .04in;border:2px solid var(--rule);border-radius:8px;padding:.05in;background:#fff}
+.case{border:0;background:none;padding:0;margin:.12in 0 .1in;font-size:26px;line-height:1.38}
+.case h4{font-size:26px;margin:0 0 0.08in;font-weight:700}
+.case .ctx{color:var(--faint);margin:0 0 0.1in;font-size:26px}
+.case .step{margin:0 0 0.067in}
+.case code{font-family:inherit;font-size:26px;background:none;padding:0}
+.case q{font-style:normal}
+.case .truth{font-weight:700;color:var(--accent)}
+figure .case{margin:0.1in 0 0.067in}
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.12in}
+.trio>div{background:none;border:0;padding:.1in 0;text-align:left}
+.trio .v{font-size:26px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.trio .m{font-size:26px;color:var(--soft);margin-top:.07in}
+.trio-cap{font-size:26px;color:var(--soft);margin:.08in 0 .1in;line-height:1.3}
+svg text{font-family:inherit}
+.small{font-size:26px;color:var(--faint)}
 
-/* header */
-header{background:var(--navy);color:#fff;padding:0.42in 0.55in 0.36in;display:grid;grid-template-columns:1fr auto;gap:0.6in;align-items:center}
-h1{font-size:76px;line-height:1.08;font-weight:700;margin:0 0 20px;letter-spacing:-.01em}
-.authors{font-size:28px;margin:0;color:#fff}
-.affil{font-size:22px;margin:6px 0 0;color:#c2cde3}
-.logos{display:grid;justify-items:end;gap:26px}
-.logos img.penn{width:3.0in}
-.logos img.cas{width:2.6in}
+/* flexible grid of boxed panels */
+main{display:grid;grid-template-columns:repeat(3,1fr);gap:0.45in;align-items:stretch;min-height:0}
+.box{border:2px solid var(--rule);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.box.tall>.in{display:flex;flex-direction:column;justify-content:space-between;flex:1}
+.box>.act{margin:0;border-radius:0;padding:0.13in 0.25in}
+.box>.in{padding:0.52in 0.34in 0.40in}
+.stack{display:flex;flex-direction:column;gap:0.32in}
+.stack .box{flex:1}
+.w2{grid-column:span 2}
+.w3{grid-column:span 3}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.4in;padding-left:.3in}
+.row3 li{margin:0}
+.three{display:grid;grid-template-columns:1.45fr 0.75fr 1fr;gap:0.35in;align-items:start}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0.45in;align-items:start}
+.two.l3{grid-template-columns:0.36fr 0.64fr}
+.two.sys{grid-template-columns:1fr 1.25fr}
+.box h2{font-size:26px;margin:0 0 .14in;font-weight:700;color:var(--ink)}
+.box h3{margin:.05in 0 .1in}
+.box figure{margin:.1in 0 .05in}
+.box .q{margin-top:0}
+.sub-h{font-size:26px;font-weight:700;margin:0 0 .08in;color:var(--ink)}
 
-/* body: rows read left to right */
-main{flex:1;display:flex;flex-direction:column;gap:0.13in;padding:0.16in 0.4in 0.16in;min-height:0;background:var(--tint)}
-.row{display:grid;gap:0.3in;min-height:0}
-.box{background:#fff;border:1.5px solid var(--rule);padding:0.17in 0.3in 0.15in;min-height:0;overflow:hidden;display:flex;flex-direction:column}
-h2{font-size:42px;font-weight:700;color:var(--navy);margin:0 0 10px;padding-bottom:6px;border-bottom:3px solid var(--navy)}
-h2 .tag{float:right;font-size:22px;font-weight:600;color:var(--grey);padding-top:14px}
-p{margin:0 0 12px}
-ul,ol{margin:0 0 12px;padding-left:30px}
-li{margin:0 0 5px}
-.cap{font-size:22px;color:var(--grey);margin:8px 0 0;line-height:1.35}
-.cap b{color:var(--ink)}
-figure{margin:0}
-figure img{display:block;width:100%}
-.lost{color:var(--red);font-weight:700}
+/* lighter panels */
+.box{border:1.5px solid var(--rule) !important;border-radius:10px}
+.box>.act{background:#eef1f7 !important;color:var(--accent) !important;border-bottom:1.5px solid var(--rule)}
 
-/* figure 1 */
-.f1{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;margin-top:14px}
-img.scanfull{width:100%;display:block;border:1.5px solid var(--rule)}
-.f1 img{height:1.38in;width:auto;border:1.5px solid var(--rule)}
-.readings{border-top:1.5px solid var(--rule)}
-.readings div{display:block;padding:10px 0;border-bottom:1.5px solid var(--rule)}
-.readings .k{display:block}
-.readings .k{font-size:22px;color:var(--grey)}
+.callout{border-left-width:5px !important}
+/* rows with their own split, like the reference posters */
+main{display:flex !important;flex-direction:column;gap:0.55in;min-height:0}
+.row{display:grid;gap:0.4in;align-items:stretch}
+#r1{grid-template-columns:0.38fr 0.62fr}
+#r2{grid-template-columns:0.72fr 0.28fr}
+#r3{grid-template-columns:0.61fr 0.39fr}
+.box>.in{flex:1}
+#r1 .two{grid-template-columns:0.44fr 0.56fr}
+.two.r2b{grid-template-columns:0.62fr 0.38fr;margin-top:.3in}
+ul.concl li{margin-bottom:.08in;font-size:26px}
+figure.arms{width:100%;margin-left:auto;margin-right:auto}
+.note{margin:.18in 0 0;color:var(--soft)}
+footer.bar{display:grid;grid-template-columns:auto 1fr auto;gap:.5in;align-items:center;border-top:6px solid var(--accent);padding-top:.25in}
+footer.bar .logo{width:3.0in;display:block}
+footer.bar .bar-text{margin:0;color:var(--soft)}
+footer.bar .qrs{display:grid;grid-template-columns:auto auto;gap:.3in;text-align:center;font-size:26px;color:var(--soft)}
+footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
+.stack{display:flex;flex-direction:column;gap:0.4in}
+.stack>.box:first-child{flex:1}
+.stack>.box.contact{flex:none}
+.box.contact .ct{display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:center}
+.box.contact .ct p{margin:.04in 0}
+.box.contact .logo{width:2.6in;display:block;margin:0 0 .08in}
+.box.contact .qrs{display:grid;grid-template-columns:auto auto;gap:.2in;text-align:center;color:var(--soft)}
+.box.contact .qrs img{width:0.9in;height:0.9in;display:block;margin:0 auto .04in}
+.box.contact>.in{padding:0.26in 0.34in 0.2in}
+#r1 .two figure img{margin:0 auto}
+#r2 > .box:nth-child(2) > .in{display:flex;flex-direction:column}
+.gate{margin:.2in 0 0;white-space:nowrap}
+.social{display:flex;align-items:center;gap:.1in}
+.social .sico{display:block}
+.social span{margin-left:.04in}
 
-/* thumbnails */
-.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.thumbs img{width:100%;height:1.48in;object-fit:cover;object-position:top;border:1.5px solid var(--rule)}
+.ct2{display:grid;grid-template-columns:1fr auto;gap:.35in;align-items:start}
+.ct2-text .ai4s{width:2.6in;display:block;margin:0 0 .12in -.04in}
+.ct2-text p{margin:0;color:var(--soft)}
+.ct2-qr{text-align:center;color:var(--soft)}
+.ct2-qr img{width:0.92in;height:0.92in;display:block;margin:0 auto .06in}
+.ct2-social{display:flex;align-items:center;gap:.12in;margin-top:.14in}
+.ct2-social .sico{display:block;width:32px;height:32px}
+.ct2-social span{margin-left:.06in;font-weight:700;color:var(--ink)}
+.cx{display:grid;grid-template-columns:1fr auto;gap:.3in;align-items:center}
+.cx-sep{margin-top:.12in;padding-top:.12in;border-top:1.5px solid var(--rule)}
+.cx-text p{margin:0 0 .03in;color:var(--soft)}
+.cx-text .ai4s{width:2.6in;display:block;margin:0 0 .1in -.04in}
+.cx-name{display:flex;align-items:center;gap:.1in;flex-wrap:wrap}
+.cx-name b,.cx-name span{color:var(--ink)}
+.cx-name .sico{display:block;width:30px;height:30px}
+.cx-qr{text-align:center;color:var(--soft)}
+.cx-qr img{width:100%;max-width:1.45in;aspect-ratio:1;height:auto;display:block;margin:0 auto .06in}
+.ink{color:var(--ink)}
+.cx-text .ai4s{width:2.1in;margin-bottom:.06in}
+.box.contact>.in{padding:0.3in 0.34in 0.24in}
+.cw{display:grid;grid-template-columns:max-content 1fr;gap:.3in;align-items:start}
+.cw-qrs{display:grid;grid-template-columns:1fr 1fr;gap:.2in}
+.box.contact .cw-left .ai4s{width:3.3in;display:block;margin:0 0 .14in -.05in}
+.cw-left p{margin:0;color:var(--soft)}
+.cw-rule{border-top:1.5px solid var(--rule);margin:.14in 0 .12in}
+.cw-line{margin:.16in 0 0;padding-top:.14in;border-top:1.5px solid var(--rule);color:var(--soft);white-space:nowrap}
 
-/* tables */
-table{border-collapse:collapse;width:100%;font-size:26px;line-height:1.3}
-th{font-size:22px;color:var(--grey);font-weight:600;text-align:left;padding:6px 8px;border-bottom:2px solid var(--ink)}
-td{padding:9px 8px;border-bottom:1.5px solid var(--rule);vertical-align:top}
-td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-tr:last-child td{border-bottom:2px solid var(--ink)}
-
-
-/* agent chain, left to right */
-.hchain{display:grid;grid-template-columns:1.1fr auto 1.3fr auto 1.3fr auto 1.3fr auto 1.3fr auto 1.3fr auto 1.1fr;align-items:stretch;margin-bottom:8px}
-.hchain .arrow{display:flex;align-items:center;justify-content:center;color:var(--grey);font-size:34px;padding:0 6px}
-.hchain .node{border:1.5px solid var(--rule);border-top:8px solid var(--navy);padding:8px 12px 8px;display:flex;flex-direction:column}
-.hchain .node.lostn{border-top-color:var(--red)}
-.hchain .node.end{border:1.5px dashed var(--grey);justify-content:center;text-align:center;color:var(--grey);font-weight:600}
-.hchain .top{display:flex;align-items:center;gap:12px}
-.hchain .no{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:22px;flex:none}
-.hchain .lostn .no{background:var(--red)}
-.hchain .nm{font-weight:700}
-.hchain em{font-style:normal;font-size:22px;color:var(--grey);display:block;margin:4px 0 6px}
-.hchain .val{font-weight:700;margin-top:auto}
-.hchain .val small{display:block;font-size:22px;font-weight:400;color:var(--grey)}
-.charts{display:grid;grid-template-columns:repeat(3,1fr);gap:0.3in;margin-top:8px}
-/* five rules aligned to the five steps */
-.rules5{display:grid;grid-template-columns:repeat(5,1fr);gap:0.22in;margin:0 0 8px}
-.rules5 div{border-top:6px solid var(--navy);padding-top:10px}
-.rules5 div.lostn{border-top-color:var(--red)}
-.rules5 b{display:block}
-.foot{display:grid;grid-template-columns:1fr auto;gap:0.4in;align-items:end}
-/* agent chain */
-.chain{display:flex;flex-direction:column;align-items:stretch}
-.chain .node{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;border:1.5px solid var(--rule);border-left:8px solid var(--navy);padding:8px 14px}
-.chain .node.lostn{border-left-color:var(--red)}
-.chain .node.end{display:block;text-align:center;border:1.5px dashed var(--grey);color:var(--grey);font-weight:600}
-.chain .no{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:22px}
-.chain .lostn .no{background:var(--red)}
-.chain .nm{font-weight:700}
-.chain .nm em{display:block;font-style:normal;font-weight:400;font-size:22px;color:var(--grey)}
-.chain .val{font-weight:700;white-space:nowrap}
-.chain .arrow{text-align:center;color:var(--grey);font-size:22px;line-height:1.1}
-/* figure 5 panels */
-.panel{border-top:1.5px solid var(--rule);padding-top:12px;margin-top:12px}
-.panel:first-child{border-top:0;margin-top:0;padding-top:0}
-.panel .lab{font-weight:700}
-.panel img{border:1.5px solid var(--rule);margin:8px 0}
-.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0}
-.choices div{border:1.5px solid var(--ink);padding:10px 12px;font-family:"DejaVu Serif",serif;font-style:italic;font-size:28px;text-align:center}
-.flip{transform:rotate(180deg);font-size:22px;color:var(--grey);background:var(--tint);padding:8px 12px}
-
-/* case study */
-.case{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
-.case img.page{height:2.35in;border:1.5px solid var(--rule)}
-.case .rows div{padding:6px 0;border-bottom:1.5px solid var(--rule)}
-.case .rows .k{font-size:22px;color:var(--grey);display:block}
-.case .rows img{height:64px;display:block;margin-top:4px}
-.zh{font-family:"WenQuanYi Zen Hei",sans-serif;font-size:40px;letter-spacing:.05em}
-
-/* conclusions and footer */
-ol.rules{padding-left:34px}
-ol.rules li{margin-bottom:10px}
-.refs{font-size:22px;color:var(--grey);padding-left:26px;margin:0}
-.refs li{margin:0 0 4px}
-.qr{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;border-top:1.5px solid var(--rule);padding-top:14px}
-.qr img{width:1.3in;display:block}
-.qr img.ai4s{width:1.9in}
-.qr p{margin:0;font-size:22px;color:var(--grey)}
-.qr p b{color:var(--ink);font-size:28px}
-.agentsvg{display:block;margin-bottom:8px}
-.linktab{margin-top:10px;font-size:26px}
-.linktab th{font-size:22px}
-.linktab td{padding:6px 6px;white-space:nowrap}
+/* BioEvidenceBench additions */
+#r1{grid-template-columns:0.41fr 0.59fr}
+#r2{grid-template-columns:0.70fr 0.30fr}
+#r3{grid-template-columns:0.60fr 0.40fr}
+main{gap:0.3in !important}
+.box>.in{padding:0.34in 0.34in 0.30in}
+h1{font-size:72px}
+.brand{gap:.3in}
+.brand .cas{width:2.7in;display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.3in .45in}
+.grid2 figure{margin:.05in 0 0}
+.scans{display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;margin:.05in 0 .2in}
+.scans img{display:block;border:1.5px solid var(--rule);border-radius:6px}
+.code{background:#f3f5f9;border:1.5px solid var(--rule);border-radius:10px;padding:.16in .2in;font-size:26px}
+.code .ln{font-family:"DejaVu Sans Mono",monospace;font-size:23px;white-space:pre;color:var(--ink)}
+.code .ln i{color:var(--faint);font-style:normal}
+.code .hl{background:#dfe6f3;outline:2px solid var(--accent);border-radius:3px}
+.code .out{font-family:"DejaVu Sans Mono",monospace;font-size:23px;color:var(--accent);margin:.1in 0}
+.code p{margin:.08in 0 0;color:var(--soft)}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.15in;margin:.1in 0}
+.choices div{border:2px solid var(--accent);border-radius:10px;padding:.1in;text-align:center;font-style:italic;font-weight:700;color:var(--accent)}
+.flip{transform:rotate(180deg);color:var(--soft);background:#f3f5f9;border-radius:8px;padding:.1in .15in;margin:.1in 0 .2in}
+.lost{color:#b3261e;font-weight:700}
+.dl{display:grid;grid-template-columns:1.25in 1fr;gap:.12in .2in;align-items:baseline;margin:.1in 0 .1in}
+.dl .v{font-size:34px;font-weight:700;color:var(--accent);text-align:right;font-variant-numeric:tabular-nums}
+.dl .d b{display:block}
+.dl .d span{color:var(--soft)}
+.zh{font-family:"WenQuanYi Zen Hei",sans-serif}
+.bencao{display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;margin-top:.1in}
+.bencao img{height:.62in;display:block}
 </style>
 </head>
 <body>
 <div class="poster">
+
 <header>
   <div>
+    <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>Where do AI agents lose evidence when they extract, ground and link data from historical scientific literature?</h1>
-    <p class="authors"><b>Dekun Sun</b></p>
-    <p class="affil">University of Pennsylvania (MAS-CS) · volunteer, California Academy of Sciences, Scientific Computing · independent project on public data</p>
+    <p class="key"><b>BioEvidenceBench · Key finding:</b> evidence is lost when the agent reads (F1 0.60 on library OCR, 0.95 on modern OCR) and when it links (14 of 34 names), not when it extracts.</p>
+    <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
-  <div class="logos">
+  <div class="brand">
     <img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
     <img class="cas" src="fig/cas_logo_reverse.png" alt="California Academy of Sciences">
+    <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>github.com/dekunsun/BioEvidenceBench</span></div>
   </div>
 </header>
+
 <main>
-<div class="row" style="grid-template-columns:1fr 1.18fr">
-  <section class="box">
-    <h2>1 &nbsp;Motivation</h2>
-    <p style="margin-bottom:8px">Agents for science increasingly read the literature for us; the Biodiversity Heritage Library alone holds 64 million scanned pages. To turn a page into a database record, five steps must hold: <b>read, extract, ground, link, review</b>. BioEvidenceBench measures where each fails. It tests the steps an agent relies on; it is not itself an agent.</p>
-    <figure style="margin-top:auto">
-      <img class="scanfull" src="fig/v2/hook_scan.png" alt="The printed name BULIMUS CHILENSIS on Reeve 1849, BHL page 8966790">
-      <div class="f1">
-        <img src="fig/v2/hook_shell.png" alt="Bulimus chilensis, Reeve plate XVII fig. 102">
-        <div class="readings">
-          <div><span class="k">Printed (1849)</span><span class="mono">BULIMUS CHILENSIS</span></div>
-          <div><span class="k">Library OCR, given to the agent</span><span class="mono lost">BuLlMLS CiilLE.NSls</span></div>
-        </div>
-      </div>
-      <p class="cap"><b>Figure 1.</b> Reeve (1849), BHL page 8966790, shell from plate XVII. An agent that quotes the OCR line faithfully still files the wrong species.</p>
-    </figure>
-  </section>
-  <section class="box">
-    <h2>2 &nbsp;Methods</h2>
-    <ul>
-      <li><b>Data.</b> Two English books: Reeve, shells (1849) and Butler, birds (1907); 16 held-out test pages.</li>
-      <li><b>Three texts per page.</b> Library OCR, modern OCR (dots.mocr) and expert transcription; the page stays the same.</li>
-      <li><b>Agent task.</b> Claude Opus 5.5 and Gemini 4 Carbon extract taxa, people, places, institutions and dates as a line number plus a verbatim quote; code slices each value.</li>
-      <li><b>Reference.</b> 607 mentions labelled by hand before any model output; second labeller agreement 0.90 exact.</li>
-      <li><b>Analysis.</b> Value F1 per book, 95% page-bootstrap intervals; plan pre-registered and frozen before the test pages ran.</li>
-    </ul>
-    <figure style="margin-top:auto">
-      <div class="thumbs">
-        <img src="fig/v2/gallery_reeve.png" alt="Reeve 1849 page">
-        <img src="fig/v2/gallery_plate.png" alt="Reeve plate XVII">
-        <img src="fig/v2/gallery_butler.png" alt="Butler 1907 page">
-      </div>
-      <p class="cap"><b>Figure 2.</b> Reeve (text page, plate XVII) and Butler. Design follows Lei, Docherty &amp; Cooper [1]: label before seeing model output; compare with simple baselines.</p>
-    </figure>
-  </section>
-</div>
-
-<div class="row" style="grid-template-columns:1fr">
-  <section class="box">
-    <h2>3 &nbsp;Results: where evidence was lost <span class="tag">16 test pages · red = evidence lost</span></h2>
-    <figure>
-      <svg class="agentsvg" viewBox="0 0 2167 336" width="100%" role="img" aria-label="The agent evidence chain: scanned page, 1 read (OCR text, 0.60 to 0.95), 2 extract by a language model that returns a line and verbatim quote and never rewrites the source text (0.93 to 0.98), 3 ground (code checks the quote, 0 recall lost), 4 link (database lookup, 14 of 34 lost), 5 review (50 of 75 shared), database record"><defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5f6670"/></marker></defs><rect x="2" y="2" width="2163" height="332" rx="20" fill="#f4f5f7" stroke="#011F5B" stroke-width="2.5"/>
-<text x="30" y="52" font-size="30" font-weight="700" fill="#011F5B">The agent: code owns the text</text>
-<text x="30" y="86" font-size="22" fill="#5f6670">the model only points; code slices every value</text>
-<rect x="30" y="192" width="220" height="122" rx="12" fill="#fff" stroke="#5f6670" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="140.0" y="248" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6670">Scanned</text>
-<text x="140.0" y="280" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6670">page</text>
-<rect x="308" y="192" width="344" height="122" rx="12" fill="#fff" stroke="#b3261e" stroke-width="3"/>
-<circle cx="342" cy="228" r="19" fill="#b3261e"/><text x="342" y="236" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">1</text>
-<text x="372" y="238" font-size="28" font-weight="700" fill="#1b1f24">Read</text>
-<text x="330" y="272" font-size="22" fill="#5f6670">OCR text, numbered lines</text>
-<text x="330" y="302" font-size="28" font-weight="700" fill="#b3261e">0.60 → 0.95</text>
-<rect x="710" y="192" width="344" height="122" rx="12" fill="#fff" stroke="#011F5B" stroke-width="2"/>
-<circle cx="744" cy="228" r="19" fill="#011F5B"/><text x="744" y="236" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">3</text>
-<text x="774" y="238" font-size="28" font-weight="700" fill="#1b1f24">Ground</text>
-<text x="732" y="272" font-size="22" fill="#5f6670">code checks the quote</text>
-<text x="732" y="302" font-size="28" font-weight="700" fill="#1b1f24">0 recall lost</text>
-<rect x="1112" y="192" width="344" height="122" rx="12" fill="#fff" stroke="#b3261e" stroke-width="3"/>
-<circle cx="1146" cy="228" r="19" fill="#b3261e"/><text x="1146" y="236" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">4</text>
-<text x="1176" y="238" font-size="28" font-weight="700" fill="#1b1f24">Link</text>
-<text x="1134" y="272" font-size="22" fill="#5f6670">database lookup (GBIF)</text>
-<text x="1134" y="302" font-size="28" font-weight="700" fill="#b3261e">14 of 34 lost</text>
-<rect x="1514" y="192" width="344" height="122" rx="12" fill="#fff" stroke="#b3261e" stroke-width="3"/>
-<circle cx="1548" cy="228" r="19" fill="#b3261e"/><text x="1548" y="236" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">5</text>
-<text x="1578" y="238" font-size="28" font-weight="700" fill="#1b1f24">Review</text>
-<text x="1536" y="272" font-size="22" fill="#5f6670">second model, then people</text>
-<text x="1536" y="302" font-size="28" font-weight="700" fill="#b3261e">50 of 75 shared</text>
-<rect x="1916" y="192" width="221" height="122" rx="12" fill="#fff" stroke="#5f6670" stroke-width="2" stroke-dasharray="8 6"/>
-<text x="2026.5" y="248" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6670">Database</text>
-<text x="2026.5" y="280" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6670">record</text>
-<line x1="256" y1="253" x2="300" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
-<line x1="658" y1="253" x2="702" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
-<line x1="1060" y1="253" x2="1104" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
-<line x1="1462" y1="253" x2="1506" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
-<line x1="1864" y1="253" x2="1908" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="540" y="22" width="640" height="128" rx="14" fill="#fff" stroke="#5f6670" stroke-width="2.5" stroke-dasharray="9 6"/>
-<g fill="#011F5B">
-<line x1="604" y1="40" x2="604" y2="54" stroke="#011F5B" stroke-width="4"/><circle cx="604" cy="40" r="6"/>
-<rect x="570" y="54" width="68" height="52" rx="13"/>
-<rect x="562" y="70" width="7" height="20" rx="3"/><rect x="639" y="70" width="7" height="20" rx="3"/>
-<circle cx="591" cy="77" r="8" fill="#fff"/><circle cx="617" cy="77" r="8" fill="#fff"/>
-<circle cx="593" cy="78" r="3.5"/><circle cx="619" cy="78" r="3.5"/>
-<rect x="592" y="92" width="24" height="5" rx="2.5" fill="#fff"/>
-<rect x="582" y="110" width="44" height="22" rx="7"/>
-</g>
-<circle cx="689" cy="60" r="19" fill="#011F5B"/><text x="689" y="68" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">2</text>
-<text x="720" y="70" font-size="28" font-weight="700" fill="#1b1f24">Extract <tspan font-weight="400" font-size="22" fill="#5f6670">· language model</tspan></text>
-<text x="670" y="104" font-size="22" fill="#5f6670">finds mentions; returns line + verbatim quote</text>
-<text x="670" y="134" font-size="28" font-weight="700" fill="#1b1f24">0.93–0.98</text>
-<line x1="660" y1="190" x2="660" y2="158" stroke="#5f6670" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#ah)"/>
-<line x1="1000" y1="152" x2="1000" y2="184" stroke="#5f6670" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#ah)"/>
-<text x="1214" y="78" font-size="26" font-weight="700" fill="#011F5B">never rewrites</text><text x="1214" y="110" font-size="26" font-weight="700" fill="#011F5B">the source text</text></svg>
-      <p class="cap"><b>Figure 3.</b> The agent's evidence chain on the 16 test pages; red: evidence lost. Values: F1 library → modern OCR (Butler); F1 of four Claude models; recall cost of quotes; read names lost at lookup; library-OCR errors both models made. Quotes, a second model and self-repair check the agent against its own input, so they miss fluent errors.</p>
-    </figure>
-    <div class="charts">
-      <figure>
-        <img src="fig/v3/f1_by_text.png" alt="Value F1 by text version with 95% intervals: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert 0.98 and 0.98">
-        <p class="cap"><b>Figure 4. Read.</b> Same pages, three texts. Better OCR recovers most of the loss. Bars: 95% intervals.</p>
-      </figure>
-      <figure>
-        <img src="fig/v3/names_vs_f1.png" alt="Value F1 against share of gold names intact, 24 OCR versions per book">
-        <p class="cap"><b>Figure 5. Read.</b> 24 OCR versions. Names surviving OCR predict F1; page error rate does not (ρ −0.11, −0.61). Exploratory.</p>
-      </figure>
-      <figure>
-        <img src="fig/v3/link_recall.png" alt="Butler link recall on the expert text: plain GBIF lookup 0.59, GBIF with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91">
-        <p class="cap"><b>Figure 6. Link.</b> 34 correctly read bird names. Plain lookup 0.59 (pre-registered); an LLM linker 0.91 (exploratory).</p>
-      </figure>
+<div class="row" id="r1">
+<div class="box">
+  <p class="act">01 · Motivation</p>
+  <div class="in">
+    <h2>When an agent files a species, did it read the page, or copy a misreading?</h2>
+    <div class="scans">
+      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:1.45in">
+      <img src="fig/v5/hook_scan_grey.png" alt="BULIMUS CHILENSIS printed in Reeve 1849, BHL page 8966790" style="width:100%">
     </div>
-  </section>
+    <svg viewBox="-3 -3 806 296" width="100%" role="img" aria-label="The printed name BULIMUS CHILENSIS, the library OCR BuLlMLS CiilLE.NSls, and the name the database needs, Bulimus chilensis; five steps must hold: read, extract, ground, link, review."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+<rect x="0" y="0" width="240" height="150" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2.5"/>
+<text x="120" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#15201c">Printed, 1849</text>
+<text x="120" y="86" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#15201c">BULIMUS</text>
+<text x="120" y="122" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#15201c">CHILENSIS</text>
+<path d="M246 75 H274" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="280" y="0" width="240" height="150" rx="12" fill="#fff" stroke="#b3261e" stroke-width="2.5"/>
+<text x="400" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#b3261e">Library OCR ✗</text>
+<text x="400" y="86" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#b3261e">BuLlMLS</text>
+<text x="400" y="122" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#b3261e">CiilLE.NSls</text>
+<path d="M526 75 H554" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="560" y="0" width="240" height="150" rx="12" fill="#fff" stroke="#011F5B" stroke-width="2.5"/>
+<text x="680" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#011F5B">Database needs ✓</text>
+<text x="680" y="86" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">Bulimus</text>
+<text x="680" y="122" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">chilensis</text>
+<text x="0" y="212" font-size="26" font-weight="700" fill="#15201c">Five steps must hold:</text>
+<rect x="0" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<text x="64" y="266" text-anchor="middle" font-size="26" font-weight="700" fill="#011F5B">read</text>
+<path d="M131 257 H159" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="163" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<text x="227" y="266" text-anchor="middle" font-size="26" font-weight="700" fill="#011F5B">extract</text>
+<path d="M294 257 H322" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="326" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<text x="390" y="266" text-anchor="middle" font-size="26" font-weight="700" fill="#011F5B">ground</text>
+<path d="M457 257 H485" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="489" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<text x="553" y="266" text-anchor="middle" font-size="26" font-weight="700" fill="#011F5B">link</text>
+<path d="M620 257 H648" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="652" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<text x="716" y="266" text-anchor="middle" font-size="26" font-weight="700" fill="#011F5B">review</text></svg>
+    <p class="note">An agent that quotes the OCR faithfully still files the wrong species.</p>
+  </div>
 </div>
-
-<div class="row" style="grid-template-columns:1.3fr 1fr">
-  <section class="box">
-    <h2>4 &nbsp;Two failures an agent cannot see</h2>
-    <figure style="display:grid;grid-template-columns:1fr 1.3fr;gap:0.3in">
-      <div class="panel">
-        <span class="lab">(a) Quiz:</span> one name is printed in 1849, the other was written by a modern OCR model. Which is on the page?
-        <div class="choices"><div>A &nbsp;Turritella brevisis</div><div>B &nbsp;Turritella brevialis</div></div>
-        <div class="flip"><img src="fig/v2/quiz_scan.png" alt="The printed line: The Turritella brevialis of Lamarck" style="width:100%;border:0;margin:0 0 6px">B is on the page; DeepSeek-OCR-2 wrote A. Two letters differ, nothing looks broken, and the page error rate barely moves.</div>
-      </div>
-      <div class="panel" style="border-top:0;margin-top:0;padding-top:0">
-        <span class="lab">(b) Read correctly, still not linked.</span>
-        <img src="fig/v2/link_page.png" alt="Sykes' Wagtail, Motacilla beema, Butler 1907, BHL page 8992647" style="width:100%">
-        <table class="linktab">
-          <tr><th>Printed (1907)</th><th>GBIF finds</th><th>Accepted today</th></tr>
-          <tr><td><i>Motacilla beema</i></td><td class="lost">genus only</td><td><i>Motacilla flava</i></td></tr>
-          <tr><td><i>Lusciniola schwarzi</i></td><td class="lost">genus only</td><td><i>Phylloscopus schwarzi</i></td></tr>
-          <tr><td><i>Aedon familiaris</i></td><td class="lost">genus only</td><td><i>Cercotrichas galactotes</i></td></tr>
-        </table>
-        <p style="margin:10px 0 0">The spelling is right; the name has moved since 1907. Linking, not reading, lost 14 of 34 correctly read Butler names.</p>
-      </div>
-    </figure>
-    
-    <p class="cap" style="margin-top:auto"><b>Figure 7.</b> Reeve page 8967281; Butler pages 8992647, 8992644 (accepted names checked with Avibase: a race, a new genus, a synonym). Neither error shows in the text the agent quotes.</p>
-  </section>
-  <section class="box">
-    <h2>5 &nbsp;Work in progress: classical Chinese</h2>
-    <div class="case">
-      <img class="page" src="fig/v2/bencao_page.png" alt="Bencao gangmu, Siku quanshu manuscript copy, half-leaf 036-1b">
-      <div class="rows">
-        <div><span class="k">Manuscript</span><img src="fig/v2/bencao_chars.png" alt="Tao Hongjing as written, 弘 one stroke short"></div>
-        <div><span class="k">Claude Opus reading the scan</span><span class="zh">陶<span class="lost">弘</span>景</span></div>
-        <div><span class="k">Record keeps</span>both forms</div>
-      </div>
-    </div>
-    <table style="margin-top:12px">
-      <tr><th>Text read</th><th class="n">Names intact</th><th class="n">Value F1 [95% CI]</th></tr>
-      <tr><td>Checked transcription</td><td class="n">100%</td><td class="n">0.98 [0.95, 0.99]</td></tr>
-      <tr><td>Claude Opus OCR</td><td class="n">88% (98%*)</td><td class="n">0.87 [0.83, 0.91]</td></tr>
-      <tr><td>PaddleOCR</td><td class="n">68% (81%*)</td><td class="n">0.72 [0.60, 0.83]</td></tr>
-    </table>
-    <p class="cap" style="margin-top:auto"><b>Table 1.</b> <i>Bencao gangmu</i> 本草綱目 (1578), 18th-century manuscript copy. Six development pages; eight-page test set frozen, not yet labelled. *Variant forms counted. The model writes the modern character: right for search, wrong for the edition.</p>
-  </section>
-</div>
-
-<div class="row" style="grid-template-columns:1fr">
-  <section class="box">
-    <h2>6 &nbsp;Conclusions: one rule per step</h2>
-    <div class="rules5">
-      <div class="lostn"><b>1 Read</b>Check that names survive OCR.</div>
-      <div><b>2 Extract</b>A small model is enough; fix the input.</div>
-      <div><b>3 Ground</b>Make the agent quote its source.</div>
-      <div class="lostn"><b>4 Link</b>Test the database link on its own.</div>
-      <div class="lostn"><b>5 Review</b>Agreement between models is not evidence.</div>
-    </div>
-    <div class="foot">
+<div class="box">
+  <p class="act">02 · Methodology</p>
+  <div class="in">
+    <h2>Same page, three texts: the model points, code writes the value</h2>
+    <div class="two">
+      <div><svg viewBox="-3 -3 566 606" width="100%" role="img" aria-label="One scanned page, read three ways: library OCR, modern OCR, expert transcription. The model returns a line and a verbatim quote; code checks the quote and slices the value; scored against 607 hand labels."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+<rect x="120" y="0" width="320" height="56" rx="28" fill="#fff" stroke="#011F5B" stroke-width="2.5"/>
+<text x="280" y="37" text-anchor="middle" font-size="30.2" font-weight="700" fill="#011F5B">One scanned page</text>
+<text x="280" y="94" text-anchor="middle" font-size="26" fill="#4d5a55">read three ways</text>
+<path d="M280 58 V70" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="0" y="112" width="175" height="90" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="87.5" y="151" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Library</text>
+<text x="87.5" y="183" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">OCR</text>
+<path d="M87 204 V250" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="190" y="112" width="175" height="90" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="277.5" y="151" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Modern</text>
+<text x="277.5" y="183" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">OCR</text>
+<path d="M277 204 V250" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="380" y="112" width="175" height="90" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="467.5" y="151" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Expert</text>
+<text x="467.5" y="183" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">transcript</text>
+<path d="M467 204 V250" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="70" y="256" width="420" height="90" rx="12" fill="#fff" stroke="#4d5a55" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="280.0" y="295" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Model returns</text>
+<text x="280.0" y="327" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">line + verbatim quote</text>
+<path d="M280 348 V384" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="70" y="390" width="420" height="90" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="280.0" y="429" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Code checks the quote,</text>
+<text x="280.0" y="461" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">slices the value</text>
+<path d="M280 482 V518" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="20" y="524" width="520" height="64" rx="32" fill="#011F5B"/>
+<text x="280" y="566" text-anchor="middle" font-size="30.2" font-weight="700" fill="#fff">Scored against 607 hand labels</text></svg></div>
       <div>
-        <p class="cap" style="margin-top:0">Limits: two English printed books and a six-page Chinese pilot; the same chain in materials papers (Fe₂O₃ read as Fe2O3) is untested.</p>
-        <ol class="refs">
-          <li>Lei, Docherty &amp; Cooper (2024). <i>Digital Discovery</i>.</li>
-          <li>FineBooks / IMPACT, <i>finebooks/bhl-impact-gt</i>, CC BY 3.0. Scans: BHL, Internet Archive, CADAL.</li>
-        </ol>
-      </div>
-      <div class="qr" style="border-top:0;padding-top:0">
-        <img src="fig/qr_repo.svg" alt="QR code to the repository">
-        <p><b>Preprint, data and every run</b><br>github.com/dekunsun/BioEvidenceBench</p>
-        <img class="ai4s" src="fig/ai4s_logo.png" alt="AI4S.fyi">
+        <p class="sub-h">Point, not write</p>
+        <div class="code">
+          <div class="ln"><i>1 </i> Species 102. (Mus. Cuming.)</div>
+          <div class="ln"><i>2 </i> <span class="hl">BULIMUS CHILENSIS</span>. Bul. testâ</div>
+          <div class="ln"><i>3 </i> oblongo-ovatâ, tenui, subtiliter</div>
+          <div class="out">model → {"line": 2, "quote": "BULIMUS CHILENSIS"}</div>
+          <p><b class="ink">Code</b> finds the quote in line 2 and slices the value from the text. A quote that differs from the text is logged as a silent correction.</p>
+        </div>
+        <p class="gate" style="white-space:normal"><b>Agents:</b> Claude Opus 5.5 and Gemini 4 Carbon. Design after Lei, Docherty &amp; Cooper (2024): label before seeing model output.</p>
       </div>
     </div>
-  </section>
+  </div>
+</div>
+</div>
+
+<div class="row" id="r2">
+<div class="box">
+  <p class="act">03 · Results</p>
+  <div class="in">
+    <h2>Evidence is lost when the agent reads and when it links, not when it extracts</h2>
+    <div class="grid2">
+      <div><p class="sub-h">A · Same pages, three texts: OCR decides F1</p>
+        <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
+      <div><p class="sub-h">B · 24 OCR versions: names intact predict F1</p>
+        <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure></div>
+      <div><p class="sub-h">C · Linking 34 correctly read names</p>
+        <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91"></figure></div>
+      <div><p class="sub-h">D · Spot the fake: which is printed in 1849?</p>
+        <div class="choices"><div>A · Turritella brevisis</div><div>B · Turritella brevialis</div></div>
+        <div class="flip">B is printed; a modern OCR model wrote A. Nothing looks broken.</div>
+        <p style="margin:0"><b>Read right, linked wrong:</b> <i>Motacilla beema</i> (1907) finds only the genus; today it is <i>Motacilla flava</i>.</p></div>
+    </div>
+  </div>
+</div>
+<div class="box">
+  <p class="act">04 · Protocol and Data</p>
+  <div class="in">
+    <p>Pre-registered · frozen before the test pages · deviations logged</p>
+    <p>F1 per book, 95% page-bootstrap intervals; the two books are never pooled.</p>
+    <p class="sub-h" style="margin-top:.25in">Data</p>
+    <div class="dl">
+      <div class="v">16</div><div class="d"><b>Test pages</b><span>Reeve 1849 shells · Butler 1907 birds</span></div>
+      <div class="v">607</div><div class="d"><b>Hand-labelled mentions</b><span>before any model output</span></div>
+      <div class="v">0.90</div><div class="d"><b>Labeller agreement</b><span>exact match, 5 pages</span></div>
+    </div>
+    <p class="sub-h" style="margin-top:auto;padding-top:.2in">Next: classical Chinese</p>
+    <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the manuscript, 弘 one stroke short"><span class="zh" style="font-size:40px">→ 陶<span class="lost">弘</span>景</span></div>
+    <p class="note" style="margin-top:.08in"><i>Bencao gangmu</i> 本草綱目 manuscript: the model writes the modern character, right for search, wrong for the edition.</p>
+  </div>
+</div>
+</div>
+
+<div class="row" id="r3">
+<div class="box">
+  <p class="act">05 · Proposed Framework</p>
+  <div class="in">
+    <h2>Code owns the text; the model points and quotes</h2>
+    <svg viewBox="-3 -3 1419 722" width="100%" role="img" aria-label="Two designs. Model writes the record: scanned page, model reads the OCR and writes the value, record, researcher trusts it; 1 in 12 repairs is wrong, and fluent OCR errors pass and look right. Code owns the text: scanned page, OCR text (F1 0.60 to 0.95 by OCR), code checks the quote and slices the value (0 recall lost), database lookup (14 of 34 names lost), person reviews (50 of 75 errors made by both models); the model, drawn as a robot, finds mentions and quotes the line, F1 0.93 to 0.98, and never rewrites the source text."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+<rect x="0" y="0" width="690" height="716" rx="18" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>
+<text x="25" y="46" font-size="30.2" font-weight="700" fill="#4d5a55">Model writes the record</text>
+<rect x="25" y="76" width="316" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="183.0" y="116" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Scanned page</text>
+<rect x="25" y="196" width="316" height="114" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="183.0" y="231" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Model</text>
+<text x="183.0" y="263" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">reads the OCR,</text>
+<text x="183.0" y="295" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">writes the value</text>
+<path d="M183 136 V191" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="25" y="370" width="316" height="114" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="183.0" y="405" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Record</text>
+<text x="183.0" y="437" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55"><tspan font-style='italic'>Turritella</tspan></text>
+<text x="183.0" y="469" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55"><tspan font-style='italic' fill='#b3261e' font-weight='700'>brevisis</tspan></text>
+<path d="M183 310 V365" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="25" y="550" width="316" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="183.0" y="590" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Researcher trusts it</text>
+<path d="M183 484 V545" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="366" y="232" font-size="30.2" font-weight="700" fill="#15201c">1 in 12 repairs</text>
+<text x="366" y="264" font-size="30.2" font-weight="700" fill="#15201c">is wrong; fluent</text>
+<text x="366" y="296" font-size="30.2" font-weight="700" fill="#15201c">OCR errors pass</text>
+<text x="366" y="328" font-size="30.2" font-weight="700" fill="#15201c">and look right</text>
+<rect x="723" y="0" width="690" height="716" rx="18" fill="#eef1f7" stroke="#011F5B" stroke-width="2"/>
+<text x="748" y="46" font-size="30.2" font-weight="700" fill="#011F5B">Code owns the text</text>
+<rect x="748" y="76" width="330" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="913.0" y="116" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Scanned page</text>
+<rect x="748" y="166" width="330" height="92" rx="12" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+<text x="913.0" y="206" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">OCR text</text>
+<text x="913.0" y="238" text-anchor="middle" font-size="30.2" font-weight="700" fill="#b3261e">F1 0.60 → 0.95</text>
+<path d="M913.0 136 V161" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="748" y="290" width="330" height="124" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="913.0" y="330" text-anchor="middle" font-size="30.2" font-weight="700" fill="#011F5B">Code checks quote,</text>
+<text x="913.0" y="362" text-anchor="middle" font-size="30.2" font-weight="700" fill="#011F5B">slices the value</text>
+<text x="913.0" y="394" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">0 recall lost</text>
+<path d="M913.0 258 V285" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="748" y="446" width="330" height="92" rx="12" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+<text x="913.0" y="486" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Database lookup</text>
+<text x="913.0" y="518" text-anchor="middle" font-size="30.2" font-weight="700" fill="#b3261e">14 of 34 lost</text>
+<path d="M913.0 414 V441" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="748" y="570" width="330" height="124" rx="12" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+<text x="913.0" y="610" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Person reviews</text>
+<text x="913.0" y="642" text-anchor="middle" font-size="30.2" font-weight="700" fill="#b3261e">50 of 75 errors made</text>
+<text x="913.0" y="674" text-anchor="middle" font-size="30.2" font-weight="700" fill="#b3261e">by both models</text>
+<path d="M913.0 538 V565" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1110" y="104" width="286" height="256" rx="12" fill="#fff" stroke="#4d5a55" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="1253.0" y1="123.8" x2="1253.0" y2="137.1" stroke="#011F5B" stroke-width="3.8"/><circle cx="1253.0" cy="123.8" r="5.7" fill="#011F5B"/><rect x="1220.7" y="137.1" width="64.6" height="49.4" rx="12.3" fill="#011F5B"/><rect x="1213.1" y="152.3" width="6.6" height="19.0" rx="2.8" fill="#011F5B"/><rect x="1286.2" y="152.3" width="6.6" height="19.0" rx="2.8" fill="#011F5B"/><circle cx="1240.7" cy="158.9" r="7.6" fill="#fff"/><circle cx="1265.4" cy="158.9" r="7.6" fill="#fff"/><circle cx="1242.5" cy="159.9" r="3.3" fill="#011F5B"/><circle cx="1267.2" cy="159.9" r="3.3" fill="#011F5B"/><rect x="1241.6" y="173.2" width="22.8" height="4.8" rx="2.4" fill="#fff"/><rect x="1232.1" y="190.3" width="41.8" height="20.9" rx="6.6" fill="#011F5B"/>
+<text x="1253.0" y="240" text-anchor="middle" font-size="30.2" font-weight="700" fill="#15201c">Model</text>
+<text x="1253.0" y="272" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">finds mentions,</text>
+<text x="1253.0" y="304" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">quotes the line</text>
+<text x="1253.0" y="336" text-anchor="middle" font-size="30.2" font-weight="700" fill="#011F5B">F1 0.93–0.98</text>
+<path d="M1078 212 H1105" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<path d="M1170 360 V384 H1083" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<text x="1273.0" y="456" text-anchor="middle" font-size="30.2" font-weight="700" fill="#011F5B">never rewrites</text>
+<text x="1273.0" y="488" text-anchor="middle" font-size="30.2" font-weight="700" fill="#011F5B">the source text</text></svg>
+  </div>
+</div>
+<div class="stack">
+<div class="box">
+  <p class="act">06 · Conclusion</p>
+  <div class="in"><ul class="concl">
+      <li><b>Finding.</b> Library OCR cost a third of the values; a plain database lookup lost 14 of 34 correctly read names. Extraction held (0.93–0.98).</li>
+      <li><b>For agent builders.</b> Check that names survive OCR; let the model point and code write; test the database link on its own; agreement between models is not evidence.</li>
+      <li><b>Next.</b> Reeve's names; the classical Chinese test pages. Materials papers are untested.</li>
+    </ul></div>
+</div>
+<div class="box contact">
+  <p class="act">Connect &amp; Explore</p>
+  <div class="in">
+    <div class="cw">
+      <div class="cw-left">
+        <img class="ai4s" src="fig/ai4s_logo.png" alt="AI4S.fyi">
+        <p>A map of AI4S people, research,<br>companies and capital, read at source.</p>
+      </div>
+      <div class="cw-qrs">
+        <div class="cx-qr"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi"><span>ai4s.fyi</span></div>
+        <div class="cx-qr"><img src="fig/qr_linkedin.svg" alt="QR code to Dekun Sun's LinkedIn profile"><span>LinkedIn</span></div>
+      </div>
+    </div>
+    <p class="cw-line">Dekun (Gloria) Sun on LinkedIn · @gloria_sun on X</p>
+  </div>
+</div>
+</div>
 </div>
 </main>
+
 </div>
 </body>
 </html>
