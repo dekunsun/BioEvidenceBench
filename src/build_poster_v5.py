@@ -30,9 +30,10 @@ def css() -> str:
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.5fr 0.5fr}
 #r2{grid-template-columns:0.665fr 0.335fr}
-#r3{grid-template-columns:0.54fr 0.46fr}
+#r3{grid-template-columns:0.46fr 0.54fr}
 main{gap:0.16in !important}
-main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
+main>.row{flex:1 1 auto}
+main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no empty space */  /* share any spare page height between the rows */
 .box>.in{padding:0.26in 0.34in 0.22in}
 h1{font-size:72px}
 .brand{gap:.3in}
@@ -49,6 +50,19 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .pairs .n{font-size:30px;font-weight:600;color:var(--accent);text-align:center}
 .pairs div{border:2px solid var(--rule);border-radius:10px;padding:.08in .12in;background:#fafbfc;font-size:25px;line-height:1.2}
 .pairs div i{color:var(--ink)}
+/* 04: two light panels, one type scale (title 24 bold, body 24, notes 20) */
+.quiz .panel{border:1.5px solid var(--rule);border-radius:10px;background:#f7f8fb;padding:.16in .2in;display:flex;flex-direction:column;justify-content:space-evenly}
+.quiz .panel:first-of-type{flex:1 1 auto !important;margin-bottom:.2in}
+.quiz .panel p{margin:0}
+.quiz .ph{font-weight:700;color:var(--accent);margin-bottom:.12in !important}
+.quiz .pn{font-size:20px;color:var(--soft);margin-top:.06in !important}
+.quiz .pq{margin:.14in 0 .08in !important}
+.quiz .pk{font-weight:600;color:var(--accent);margin-top:.12in !important}
+.quiz .panel .flip{transform:rotate(180deg);text-align:right;background:none;border-radius:0;border-bottom:1.5px solid var(--rule);padding:0 0 .06in;margin-top:.14in !important}
+.quiz .panel .bencao img{mix-blend-mode:multiply}
+.quiz .panel .opts .opt{background:#fff}
+.quiz .panel .opts .opt b,.quiz .panel .opts .opt i{font-size:24px}
+.quiz .panel .zh{font-size:30px;color:var(--accent)}
 .quiz .qh{font-size:34px;line-height:1.15;color:var(--accent);margin:0 0 .08in}
 .quiz .ans.flipped{transform:rotate(180deg);text-align:right;border-top:0;border-bottom:1.5px solid var(--rule);padding:0 0 .08in;margin-top:.12in}
 .quiz .opts{display:grid;grid-template-columns:1fr 1fr;gap:.12in}
@@ -123,7 +137,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 """
     # spread any spare height evenly inside each card instead of leaving it at the bottom
     c += "\n.box>.in{display:flex !important;flex-direction:column;justify-content:space-evenly !important}\n.box>.in>*{flex:none}\n"
-    c += "#r1 .box:first-child svg{width:90% !important;margin:0 auto;display:block}\n"  # keep its text at body size
+    c += "#r1 .box:first-child svg{width:96% !important;margin:0 auto;display:block}\n"  # keep its text at body size
     # one smaller type scale for the whole poster (2026-11-25): body 24, notes 20, card headers 32
     for old, new in (("font-size:26px", "font-size:24px"), ("font-size:22px", "font-size:20px"),
                      ("font-size:34px", "font-size:32px"), ("font-size:23px", "font-size:21px")):
@@ -355,7 +369,7 @@ def page() -> str:
   <div class="in">
     <h2>An agent that quotes the OCR faithfully can still file the wrong species.</h2>
     <div class="scans">
-      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:1.75in">
+      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:2.1in">
       <img src="fig/v5/hook_scan_grey.png" alt="BULIMUS CHILENSIS printed in Reeve 1849, BHL page 8966790" style="width:100%">
     </div>
     {motivation_svg()}
@@ -414,18 +428,20 @@ def page() -> str:
 <div class="box quiz">
   <p class="act">04 · Try it</p>
   <div class="in">
-    <h2 class="qh">Printed, or written by OCR?</h2>
-        <img class="qscan" src="fig/v5/quiz_granulosus.png" alt="The printed lines: Lesson, Voy. de la Coquille, pl. 8. f. 3. Bulimus granulosus, Broderip.">
-    <p class="note" style="margin:.04in 0 .12in;font-size:22px">Reeve 1849, BHL page 8966790</p>
-    <p style="margin:0 0 .08in">Which name is on the page?</p>
-    <div class="opts"><div class="opt"><b>A</b><i>Bulimus granulatus</i></div>
-    <div class="opt"><b>B</b><i>Bulimus granulosus</i></div></div>
-    <p style="margin:.1in 0 0;font-weight:600;color:var(--accent)">Both look scientifically plausible. Only one is supported by the source.</p>
-    <p class="ans flipped">Answer: B. A is a modern OCR model's reading.</p>
-    <p class="sub-h" style="margin:.14in 0 .02in">Exploratory extension: classical Chinese</p>
-    <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the Siku quanshu manuscript of the Bencao gangmu, 弘 one stroke short"><span class="zh" style="font-size:34px;color:var(--accent)">→ 陶弘景</span></div>
-    <p class="note" style="margin:.02in 0 0">本草綱目: the model writes the modern form.</p>
-
+    <div class="panel">
+      <p class="ph">Printed, or written by OCR?</p>
+      <img class="qscan" src="fig/v5/quiz_granulosus.png" alt="The printed lines: Lesson, Voy. de la Coquille, pl. 8. f. 3. Bulimus granulosus, Broderip.">
+      <p class="pn">Reeve 1849, BHL page 8966790</p>
+      <p class="pq">Which name is on the page?</p>
+      <div class="opts"><div class="opt"><b>A</b><i>Bulimus granulatus</i></div><div class="opt"><b>B</b><i>Bulimus granulosus</i></div></div>
+      <p class="pk">Both look plausible. Only one is supported by the source.</p>
+      <p class="pn flip">Answer: B. A is a modern OCR model's reading.</p>
+    </div>
+    <div class="panel">
+      <p class="ph">Exploratory: classical Chinese</p>
+      <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the Siku quanshu manuscript of the Bencao gangmu, 弘 one stroke short"><span class="zh">→ 陶弘景</span></div>
+      <p class="pn">本草綱目: the model writes the modern form.</p>
+    </div>
   </div>
 </div>
 </div>
