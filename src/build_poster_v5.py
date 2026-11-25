@@ -30,7 +30,7 @@ def css() -> str:
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.5fr 0.5fr}
 #r2{grid-template-columns:0.665fr 0.335fr}
-#r3{grid-template-columns:0.43fr 0.57fr}
+#r3{grid-template-columns:0.56fr 0.44fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}
 main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no empty space */  /* share any spare page height between the rows */
@@ -41,8 +41,10 @@ h1{font-size:72px}
 .brand .penn,.brand .cas{height:.95in !important;width:auto !important;display:block}  /* one row, same height */
 .brand{justify-items:center}
 h1{font-size:80px}
+.concl-wrap{margin:auto 0}  /* 06: one block, centred in the card */
 ol.concl2{margin:0;padding-left:.36in}
-ol.concl2 li{margin:0 0 .07in;line-height:1.3}
+ol.concl2 li{margin:0;padding:.12in 0;line-height:1.3;border-bottom:1.5px solid var(--rule)}
+ol.concl2 li:last-child{border-bottom:0}
 .hqrs{display:grid;grid-template-columns:repeat(3,auto);gap:.18in}
 .hqrs .hqr img{width:1.0in;height:1.0in}
 .hqrs .hqr span{font-size:22px}
@@ -91,6 +93,12 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .box.contact .cw-line{margin-top:.08in;padding-top:.08in}
 .big3 .agree{grid-column:1 / -1;border-top:1.5px solid var(--rule);padding-top:.1in}
 .big3 .punch2{font-weight:600;color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.18in;margin:.06in 0 0}
+.kpis>div{background:#f1f3f7;border-radius:10px;padding:.14in .2in}
+.kpis p{margin:0}
+.kpis .lab{color:var(--soft)}
+.kpis .num{font-size:52px;font-weight:700;color:var(--accent);line-height:1.15;margin:.04in 0 .06in;white-space:nowrap;font-variant-numeric:tabular-nums}
+.kpis .kt{font-weight:700;color:var(--ink)}
 .big3{display:grid;grid-template-columns:1fr 0.85fr 1.35fr;gap:.3in;margin:.08in 0 .05in;padding:.12in .25in;background:#f3f5f9;border-radius:10px}
 .big3 p{margin:0}
 .big3 .lab{color:var(--soft)}
@@ -136,8 +144,8 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 .grid2>div:nth-child(4){align-self:center}
 """
     # spread any spare height evenly inside each card instead of leaving it at the bottom
-    c += "\n.box>.in{display:flex !important;flex-direction:column;justify-content:space-evenly !important}\n.box>.in>*{flex:none}\n"
-    c += "#r1 .box:first-child svg{width:96% !important;margin:0 auto;display:block}\n"  # keep its text at body size
+    c += "\n.box>.in{display:flex !important;flex-direction:column;justify-content:space-between !important}\n.box>.in>*{flex:none}\n"
+    c += "#r1 .box:first-child svg{width:100% !important;margin:0 auto;display:block}\n"  # keep its text at body size
     # one smaller type scale for the whole poster (2026-11-25): body 24, notes 20, card headers 32
     for old, new in (("font-size:26px", "font-size:24px"), ("font-size:22px", "font-size:20px"),
                      ("font-size:34px", "font-size:32px"), ("font-size:23px", "font-size:21px")):
@@ -369,7 +377,7 @@ def page() -> str:
   <div class="in">
     <h2>An agent that quotes the OCR faithfully can still file the wrong species.</h2>
     <div class="scans">
-      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:2.1in">
+      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:2.3in">
       <img src="fig/v5/hook_scan_grey.png" alt="BULIMUS CHILENSIS printed in Reeve 1849, BHL page 8966790" style="width:100%">
     </div>
     {motivation_svg()}
@@ -406,14 +414,13 @@ def page() -> str:
 <div class="box">
   <p class="act">03 · Results</p>
   <div class="in">
-    <h2>Most evidence was lost at reading and linking; extraction lost little on these pages</h2>
-    <div class="big3">
-      <div><p class="lab">OCR · Butler</p><p class="num">0.60 → 0.95</p><p class="what">Extraction value F1</p></div>
-      <div><p class="lab">Entity linking</p><p class="num">14 / 34</p><p class="what">Failed links</p></div>
-      <div><p class="lab">Model agreement</p><p class="num">99–100%</p><p class="what">Despite shared errors</p></div>
-      <div class="agree"><p class="punch2">Two models can agree on the same mistake.</p>
-        <p class="lab">Proposed auto-accept sets still contained 50 / 75 errors on legacy OCR (Butler / Reeve).</p></div>
+    <h2>Where does reliability break down?</h2>
+    <div class="kpis">
+      <div><p class="lab">01 · Reading</p><p class="num">0.60 → 0.95</p><p class="kt">Better OCR</p><p class="lab">Value F1 on Butler's pages</p></div>
+      <div><p class="lab">02 · Linking</p><p class="num">14 / 34</p><p class="kt">Failed links</p><p class="lab">Despite correct extraction</p></div>
+      <div><p class="lab">03 · Verification</p><p class="num">99–100%</p><p class="kt">Model agreement</p><p class="lab">Yet shared errors persist</p></div>
     </div>
+    <p class="note" style="margin:.06in 0 0">On legacy OCR, proposed auto-accept sets contained 50 (Butler) and 75 (Reeve) errors.</p>
     <div class="grid3">
       <div><p class="sub-h">A · OCR quality matters</p>
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
@@ -458,6 +465,7 @@ def page() -> str:
 <div class="box">
   <p class="act">06 · Conclusion</p>
   <div class="in">
+    <div class="concl-wrap">
     <p class="sub-h" style="margin:0 0 .08in">Three rules for evidence-grounded scientific agents</p>
     <ol class="concl2">
       <li><b>Gate reading on name survival, not average error.</b> Page CER did not predict F1 (ρ = −0.11 / −0.61).</li>
@@ -465,6 +473,7 @@ def page() -> str:
       <li><b>Verify against the source, not consensus.</b> 99–100% model agreement still passed 50 and 75 errors.</li>
     </ol>
     <p class="note" style="margin:.06in 0 0">Scope: two English printed books, pre-registered. * Exploratory.</p>
+    </div>
   </div>
 </div>
 <div class="box contact">
