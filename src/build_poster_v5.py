@@ -29,7 +29,7 @@ def css() -> str:
     c += """
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.44fr 0.56fr}
-#r2{grid-template-columns:0.70fr 0.30fr}
+#r2{grid-template-columns:0.71fr 0.29fr}
 #r3{grid-template-columns:0.60fr 0.40fr}
 main{gap:0.25in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
@@ -39,6 +39,15 @@ h1{font-size:72px}
 .brand .penn,.brand .cas{width:2.75in !important;height:auto;display:block}  /* same width, so the two logos share left and right edges */
 .brand{justify-items:center}
 h1{font-size:80px}
+.big3{display:grid;grid-template-columns:1fr 0.85fr 1.35fr;gap:.3in;margin:.08in 0 .05in;padding:.12in .25in;background:#f3f5f9;border-radius:10px}
+.big3 p{margin:0}
+.big3 .lab{color:var(--soft)}
+.big3 .num{font-size:58px;font-weight:700;color:var(--accent);line-height:1.1;white-space:nowrap;font-variant-numeric:tabular-nums}
+.big3 .what{color:var(--ink);line-height:1.3}
+.punch{font-size:30px;font-weight:600;color:var(--accent);margin:.1in 0 .12in}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:.3in}
+.grid3 figure{margin:.04in 0 0}
+.dq{display:grid;grid-template-columns:auto 1.1fr 1fr;gap:.25in;align-items:center;margin-top:.14in;padding-top:.14in;border-top:1.5px solid var(--rule)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:.3in .45in}
 .grid2 figure{margin:.05in 0 0}
 .plates{display:grid;grid-template-columns:auto auto;justify-content:center;gap:.3in;margin:.05in 0 .12in}
@@ -199,7 +208,7 @@ def framework_svg() -> str:
          (166, 92, [("OCR text", 600, INK), ("F1 0.60 → 0.95", 400, RED)]),
          (290, 124, [("Code checks quote,", 600, NAVY), ("slices the value", 600, NAVY), ("0 recall lost", 400, SOFT)]),
          (446, 92, [("Database lookup", 600, INK), ("14 of 34 lost", 400, RED)]),
-         (570, 124, [("Person reviews", 600, INK), ("50 of 75 errors made", 400, RED), ("by both models", 400, RED)])]
+         (570, 124, [("Person reviews", 600, INK), ("agreed but wrong:", 400, RED), ("50 Butler · 75 Reeve", 400, RED)])]
     prev = None
     for y, h, lines in R:
         p.append(box(bx, y, bw, h, lines, stroke=RULE))
@@ -221,7 +230,7 @@ def framework_svg() -> str:
             f'record: scanned page, model reads the OCR and writes the value, record, researcher trusts it; 1 in '
             f'12 repairs is wrong, and fluent OCR errors pass and look right. Code owns the text: scanned page, OCR text '
             f'(F1 0.60 to 0.95 by OCR), code checks the quote and slices the value (0 recall lost), database '
-            f'lookup (14 of 34 names lost), person reviews (50 of 75 errors made by both models); the model, '
+            f'lookup (14 of 34 names lost), person reviews (values both models agreed on but wrong on library OCR: 50 in Butler, 75 in Reeve); the model, '
             f'drawn as a robot, finds mentions and quotes the line, F1 0.93 to 0.98, and never rewrites the '
             f'source text.">' + "\n".join(p) + "</svg>")
 
@@ -293,17 +302,24 @@ def page() -> str:
   <p class="act">03 · Results</p>
   <div class="in">
     <h2>Most evidence was lost at reading and linking; extraction lost little on these pages</h2>
-    <div class="grid2">
-      <div><p class="sub-h">A · Same pages, three texts: OCR decides F1</p>
+    <div class="big3">
+      <div><p class="lab">OCR · Butler</p><p class="num">0.60 → 0.95</p><p class="what">value F1, same pages, better OCR</p></div>
+      <div><p class="lab">Entity linking</p><p class="num">14 / 34</p><p class="what">read right, still not linked</p></div>
+      <div><p class="lab">Shared errors</p><p class="num">99–100%</p><p class="what">model agreement; agreed but wrong on library OCR: 50 Butler, 75 Reeve</p></div>
+    </div>
+    <p class="punch">Two agents can agree on the same mistake: both read the same damaged OCR.</p>
+    <div class="grid3">
+      <div><p class="sub-h">A · Three texts: OCR decides F1</p>
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
-      <div><p class="sub-h">B · 24 OCR versions: names intact predict F1</p>
+      <div><p class="sub-h">B · Names intact predict F1</p>
         <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure></div>
       <div><p class="sub-h">C · Linking 34 correctly read names</p>
         <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91"></figure></div>
-      <div><p class="sub-h">D · Spot the fake: which is printed in 1849?</p>
-        <div class="choices"><div>A · Turritella brevisis</div><div>B · Turritella brevialis</div></div>
-        <div class="flip">B is printed; a modern OCR model wrote A. Nothing looks broken.</div>
-        <p style="margin:0">Read right, linked wrong: <i>Motacilla beema</i> (1907) finds only the genus; today it is <i>Motacilla flava</i>.</p></div>
+    </div>
+    <div class="dq">
+      <p class="sub-h" style="margin:0">D · Spot the fake: which is printed in 1849?</p>
+      <div class="choices" style="margin:0"><div>A · Turritella brevisis</div><div>B · Turritella brevialis</div></div>
+      <div class="flip" style="margin:0">B is printed; a modern OCR model wrote A. Nothing looks broken.</div>
     </div>
   </div>
 </div>

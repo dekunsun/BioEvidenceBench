@@ -22,6 +22,9 @@ INK, GREY, RULE, NAVY, LIGHT = "#1b1f24", "#5f6670", "#d7dbe0", "#011F5B", "#8d9
 COL = {"Butler": NAVY, "Reeve": LIGHT}
 MARK = {"Butler": "o", "Reeve": "s"}
 FS = 20.0
+LINK_LABELS: dict[str, str] = {}  # optional relabelling of link_recall's bars (used by plot_poster_v5)
+LIB_LABEL_BELOW = False  # put the library-OCR values under the points (narrow charts)
+NARROW_F1 = False  # narrow chart: short legend labels, wider x range, lower y floor
 W, H = 7.27, 2.9
 
 plt.rcParams.update({"font.family": ["Inter", "DejaVu Sans"], "font.size": FS, "axes.edgecolor": GREY,
@@ -38,10 +41,14 @@ def f1_by_text() -> None:
         d = s[s.book == book].set_index("version").loc[order]
         x = [i + off for i in range(3)]
         ax.errorbar(x, d.value_F1, yerr=[d.value_F1 - d.value_F1_lo, d.value_F1_hi - d.value_F1], color=COL[book],
-                    lw=2, marker=MARK[book], ms=11, capsize=5, label=f"{book} ({'birds 1907' if book == 'Butler' else 'shells 1849'})")
+                    lw=2, marker=MARK[book], ms=11, capsize=5, label=book if NARROW_F1 else f"{book} ({'birds 1907' if book == 'Butler' else 'shells 1849'})")
         # labels: library OCR beside the points, modern OCR below (Butler) or above (Reeve); expert in the caption
-        ax.text(x[0] + (-0.09 if book == "Butler" else 0.09), d.value_F1.iloc[0], f"{d.value_F1.iloc[0]:.2f}",
-                ha="right" if book == "Butler" else "left", va="center", fontsize=FS, color=INK)
+        if LIB_LABEL_BELOW and book == "Butler":
+            ax.text(x[0] - 0.05, d.value_F1_lo.iloc[0] - 0.02, f"{d.value_F1.iloc[0]:.2f}", ha="center", va="top",
+                    fontsize=FS, color=INK)
+        else:
+            ax.text(x[0] + (-0.09 if book == "Butler" else 0.09), d.value_F1.iloc[0], f"{d.value_F1.iloc[0]:.2f}",
+                    ha="right" if book == "Butler" else "left", va="center", fontsize=FS, color=INK)
         if book == "Butler":  # below right of the point, clear of the line and the legend
             ax.text(x[1] + 0.08, d.value_F1.iloc[1] - 0.04, f"{d.value_F1.iloc[1]:.2f}", ha="left", va="top",
                     fontsize=FS, color=COL[book])
@@ -49,8 +56,8 @@ def f1_by_text() -> None:
             ax.text(x[1], d.value_F1.iloc[1] + 0.035, f"{d.value_F1.iloc[1]:.2f}", ha="center", va="bottom",
                     fontsize=FS, color=COL[book])
     ax.set_xticks(range(3), ["Library\nOCR", "Modern\nOCR", "Expert\ntranscription"])
-    ax.set_xlim(-0.5, 2.5)
-    ax.set_ylim(0.4, 1.08)
+    ax.set_xlim(-0.8 if NARROW_F1 else -0.5, 2.5)
+    ax.set_ylim(0.3 if NARROW_F1 else 0.4, 1.08)
     ax.set_yticks([0.4, 0.6, 0.8, 1.0])
     ax.set_ylabel("Value F1")
     ax.grid(axis="y", color=RULE, lw=1)
@@ -98,6 +105,7 @@ def link_recall() -> None:
         x = pd.read_csv(ROOT / "results" / folder / "summary.csv")
         x = x[(x.run == RUN) & (x.version == "expert") & (x.linker == "llm")]
         rows.append((name, float(x.correct.iloc[0] / x.gold_resolved.iloc[0]), False))
+    rows = [(LINK_LABELS.get(r[0], r[0]),) + r[1:] for r in rows]  # shorter labels for narrow charts
     fig, ax = plt.subplots(figsize=(W, H))
     for i, (lab, v, pre) in enumerate(rows):
         ax.bar(i, v, width=0.58, color=NAVY if pre else "white", edgecolor=NAVY, lw=2)

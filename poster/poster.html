@@ -175,7 +175,7 @@ footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
 
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.44fr 0.56fr}
-#r2{grid-template-columns:0.70fr 0.30fr}
+#r2{grid-template-columns:0.71fr 0.29fr}
 #r3{grid-template-columns:0.60fr 0.40fr}
 main{gap:0.25in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
@@ -185,6 +185,15 @@ h1{font-size:72px}
 .brand .penn,.brand .cas{width:2.75in !important;height:auto;display:block}  /* same width, so the two logos share left and right edges */
 .brand{justify-items:center}
 h1{font-size:80px}
+.big3{display:grid;grid-template-columns:1fr 0.85fr 1.35fr;gap:.3in;margin:.08in 0 .05in;padding:.12in .25in;background:#f3f5f9;border-radius:10px}
+.big3 p{margin:0}
+.big3 .lab{color:var(--soft)}
+.big3 .num{font-size:58px;font-weight:700;color:var(--accent);line-height:1.1;white-space:nowrap;font-variant-numeric:tabular-nums}
+.big3 .what{color:var(--ink);line-height:1.3}
+.punch{font-size:30px;font-weight:600;color:var(--accent);margin:.1in 0 .12in}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:.3in}
+.grid3 figure{margin:.04in 0 0}
+.dq{display:grid;grid-template-columns:auto 1.1fr 1fr;gap:.25in;align-items:center;margin-top:.14in;padding-top:.14in;border-top:1.5px solid var(--rule)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:.3in .45in}
 .grid2 figure{margin:.05in 0 0}
 .plates{display:grid;grid-template-columns:auto auto;justify-content:center;gap:.3in;margin:.05in 0 .12in}
@@ -318,17 +327,24 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <p class="act">03 · Results</p>
   <div class="in">
     <h2>Most evidence was lost at reading and linking; extraction lost little on these pages</h2>
-    <div class="grid2">
-      <div><p class="sub-h">A · Same pages, three texts: OCR decides F1</p>
+    <div class="big3">
+      <div><p class="lab">OCR · Butler</p><p class="num">0.60 → 0.95</p><p class="what">value F1, same pages, better OCR</p></div>
+      <div><p class="lab">Entity linking</p><p class="num">14 / 34</p><p class="what">read right, still not linked</p></div>
+      <div><p class="lab">Shared errors</p><p class="num">99–100%</p><p class="what">model agreement; agreed but wrong on library OCR: 50 Butler, 75 Reeve</p></div>
+    </div>
+    <p class="punch">Two agents can agree on the same mistake: both read the same damaged OCR.</p>
+    <div class="grid3">
+      <div><p class="sub-h">A · Three texts: OCR decides F1</p>
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
-      <div><p class="sub-h">B · 24 OCR versions: names intact predict F1</p>
+      <div><p class="sub-h">B · Names intact predict F1</p>
         <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure></div>
       <div><p class="sub-h">C · Linking 34 correctly read names</p>
         <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91"></figure></div>
-      <div><p class="sub-h">D · Spot the fake: which is printed in 1849?</p>
-        <div class="choices"><div>A · Turritella brevisis</div><div>B · Turritella brevialis</div></div>
-        <div class="flip">B is printed; a modern OCR model wrote A. Nothing looks broken.</div>
-        <p style="margin:0">Read right, linked wrong: <i>Motacilla beema</i> (1907) finds only the genus; today it is <i>Motacilla flava</i>.</p></div>
+    </div>
+    <div class="dq">
+      <p class="sub-h" style="margin:0">D · Spot the fake: which is printed in 1849?</p>
+      <div class="choices" style="margin:0"><div>A · Turritella brevisis</div><div>B · Turritella brevialis</div></div>
+      <div class="flip" style="margin:0">B is printed; a modern OCR model wrote A. Nothing looks broken.</div>
     </div>
   </div>
 </div>
@@ -355,7 +371,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <p class="act">05 · Proposed Framework</p>
   <div class="in">
     <h2>Code owns the text; the model points and quotes</h2>
-    <svg viewBox="-3 -3 1419 722" width="100%" role="img" aria-label="Two designs. Model writes the record: scanned page, model reads the OCR and writes the value, record, researcher trusts it; 1 in 12 repairs is wrong, and fluent OCR errors pass and look right. Code owns the text: scanned page, OCR text (F1 0.60 to 0.95 by OCR), code checks the quote and slices the value (0 recall lost), database lookup (14 of 34 names lost), person reviews (50 of 75 errors made by both models); the model, drawn as a robot, finds mentions and quotes the line, F1 0.93 to 0.98, and never rewrites the source text."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+    <svg viewBox="-3 -3 1419 722" width="100%" role="img" aria-label="Two designs. Model writes the record: scanned page, model reads the OCR and writes the value, record, researcher trusts it; 1 in 12 repairs is wrong, and fluent OCR errors pass and look right. Code owns the text: scanned page, OCR text (F1 0.60 to 0.95 by OCR), code checks the quote and slices the value (0 recall lost), database lookup (14 of 34 names lost), person reviews (values both models agreed on but wrong on library OCR: 50 in Butler, 75 in Reeve); the model, drawn as a robot, finds mentions and quotes the line, F1 0.93 to 0.98, and never rewrites the source text."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
 <rect x="0" y="0" width="690" height="716" rx="18" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>
 <text x="25" y="46" font-size="30.2" font-weight="700" fill="#4d5a55">Model writes the record</text>
 <rect x="25" y="76" width="316" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
@@ -396,8 +412,8 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <path d="M913.0 414 V441" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
 <rect x="748" y="570" width="330" height="124" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
 <text x="913.0" y="610" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Person reviews</text>
-<text x="913.0" y="642" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">50 of 75 errors made</text>
-<text x="913.0" y="674" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">by both models</text>
+<text x="913.0" y="642" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">agreed but wrong:</text>
+<text x="913.0" y="674" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">50 Butler · 75 Reeve</text>
 <path d="M913.0 538 V565" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
 <rect x="1110" y="104" width="286" height="256" rx="12" fill="#fff" stroke="#4d5a55" stroke-width="2" stroke-dasharray="9 7"/>
 <line x1="1253.0" y1="123.8" x2="1253.0" y2="137.1" stroke="#011F5B" stroke-width="3.8"/><circle cx="1253.0" cy="123.8" r="5.7" fill="#011F5B"/><rect x="1220.7" y="137.1" width="64.6" height="49.4" rx="12.3" fill="#011F5B"/><rect x="1213.1" y="152.3" width="6.6" height="19.0" rx="2.8" fill="#011F5B"/><rect x="1286.2" y="152.3" width="6.6" height="19.0" rx="2.8" fill="#011F5B"/><circle cx="1240.7" cy="158.9" r="7.6" fill="#fff"/><circle cx="1265.4" cy="158.9" r="7.6" fill="#fff"/><circle cx="1242.5" cy="159.9" r="3.3" fill="#011F5B"/><circle cx="1267.2" cy="159.9" r="3.3" fill="#011F5B"/><rect x="1241.6" y="173.2" width="22.8" height="4.8" rx="2.4" fill="#fff"/><rect x="1232.1" y="190.3" width="41.8" height="20.9" rx="6.6" fill="#011F5B"/>
