@@ -462,8 +462,7 @@ def page() -> str:
     <div class="panel">
       <p class="ph">Printed, or written by OCR?</p>
       <img class="qscan" src="fig/v5/quiz_granulosus.png" alt="The printed lines: Lesson, Voy. de la Coquille, pl. 8. f. 3. Bulimus granulosus, Broderip.">
-      <p class="pn">Reeve 1849, BHL page 8966790</p>
-      <p class="pq">Which name is on the page?</p>
+      <p class="pn" style="margin-bottom:.12in !important">Reeve 1849, BHL page 8966790</p>
       <div class="opts"><div class="opt"><b>A</b><i>Bulimus granulatus</i></div><div class="opt"><b>B</b><i>Bulimus granulosus</i></div></div>
       <p class="pn flip">Answer: B. A is a modern OCR model's reading.</p>
     </div>
