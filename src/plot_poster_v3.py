@@ -22,7 +22,7 @@ INK, GREY, RULE, NAVY, LIGHT = "#1b1f24", "#5f6670", "#d7dbe0", "#011F5B", "#8d9
 COL = {"Butler": NAVY, "Reeve": LIGHT}
 MARK = {"Butler": "o", "Reeve": "s"}
 FS = 20.0
-W, H = 7.27, 3.2
+W, H = 7.27, 3.0
 
 plt.rcParams.update({"font.family": ["Inter", "DejaVu Sans"], "font.size": FS, "axes.edgecolor": GREY,
                      "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK, "axes.spines.top": False,
@@ -42,8 +42,8 @@ def f1_by_text() -> None:
         # labels: library OCR beside the points, modern OCR below (Butler) or above (Reeve); expert in the caption
         ax.text(x[0] + (-0.09 if book == "Butler" else 0.09), d.value_F1.iloc[0], f"{d.value_F1.iloc[0]:.2f}",
                 ha="right" if book == "Butler" else "left", va="center", fontsize=FS, color=INK)
-        if book == "Butler":  # left of the point, clear of the legend in the lower right
-            ax.text(x[1] - 0.1, d.value_F1.iloc[1], f"{d.value_F1.iloc[1]:.2f}", ha="right", va="center",
+        if book == "Butler":  # below right of the point, clear of the line and the legend
+            ax.text(x[1] + 0.08, d.value_F1.iloc[1] - 0.04, f"{d.value_F1.iloc[1]:.2f}", ha="left", va="top",
                     fontsize=FS, color=COL[book])
         else:
             ax.text(x[1], d.value_F1.iloc[1] + 0.035, f"{d.value_F1.iloc[1]:.2f}", ha="center", va="bottom",

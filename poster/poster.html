@@ -29,10 +29,10 @@ h1{font-size:76px;line-height:1.08;font-weight:700;margin:0 0 20px;letter-spacin
 .logos img.cas{width:2.6in}
 
 /* body: rows read left to right */
-main{flex:1;display:flex;flex-direction:column;gap:0.2in;padding:0.24in 0.4in 0.24in;min-height:0;background:var(--tint)}
+main{flex:1;display:flex;flex-direction:column;gap:0.17in;padding:0.2in 0.4in 0.2in;min-height:0;background:var(--tint)}
 .row{display:grid;gap:0.3in;min-height:0}
-.box{background:#fff;border:1.5px solid var(--rule);padding:0.2in 0.3in 0.18in;min-height:0;overflow:hidden;display:flex;flex-direction:column}
-h2{font-size:42px;font-weight:700;color:var(--navy);margin:0 0 12px;padding-bottom:8px;border-bottom:3px solid var(--navy)}
+.box{background:#fff;border:1.5px solid var(--rule);padding:0.17in 0.3in 0.15in;min-height:0;overflow:hidden;display:flex;flex-direction:column}
+h2{font-size:42px;font-weight:700;color:var(--navy);margin:0 0 10px;padding-bottom:6px;border-bottom:3px solid var(--navy)}
 h2 .tag{float:right;font-size:22px;font-weight:600;color:var(--grey);padding-top:14px}
 p{margin:0 0 12px}
 ul,ol{margin:0 0 12px;padding-left:30px}
@@ -46,7 +46,7 @@ figure img{display:block;width:100%}
 /* figure 1 */
 .f1{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;margin-top:14px}
 img.scanfull{width:100%;display:block;border:1.5px solid var(--rule)}
-.f1 img{height:1.6in;width:auto;border:1.5px solid var(--rule)}
+.f1 img{height:1.5in;width:auto;border:1.5px solid var(--rule)}
 .readings{border-top:1.5px solid var(--rule)}
 .readings div{display:block;padding:10px 0;border-bottom:1.5px solid var(--rule)}
 .readings .k{display:block}
@@ -54,7 +54,7 @@ img.scanfull{width:100%;display:block;border:1.5px solid var(--rule)}
 
 /* thumbnails */
 .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.thumbs img{width:100%;height:1.75in;object-fit:cover;object-position:top;border:1.5px solid var(--rule)}
+.thumbs img{width:100%;height:1.4in;object-fit:cover;object-position:top;border:1.5px solid var(--rule)}
 
 /* tables */
 table{border-collapse:collapse;width:100%;font-size:26px;line-height:1.3}
@@ -106,7 +106,7 @@ tr:last-child td{border-bottom:2px solid var(--ink)}
 
 /* case study */
 .case{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
-.case img.page{height:2.9in;border:1.5px solid var(--rule)}
+.case img.page{height:2.45in;border:1.5px solid var(--rule)}
 .case .rows div{padding:6px 0;border-bottom:1.5px solid var(--rule)}
 .case .rows .k{font-size:22px;color:var(--grey);display:block}
 .case .rows img{height:64px;display:block;margin-top:4px}
@@ -118,10 +118,11 @@ ol.rules li{margin-bottom:10px}
 .refs{font-size:22px;color:var(--grey);padding-left:26px;margin:0}
 .refs li{margin:0 0 4px}
 .qr{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;border-top:1.5px solid var(--rule);padding-top:14px}
-.qr img{width:1.45in;display:block}
+.qr img{width:1.3in;display:block}
 .qr img.ai4s{width:1.9in}
 .qr p{margin:0;font-size:22px;color:var(--grey)}
 .qr p b{color:var(--ink);font-size:28px}
+.agentsvg{display:block;margin-bottom:8px}
 </style>
 </head>
 <body>
@@ -178,22 +179,58 @@ ol.rules li{margin-bottom:10px}
   <section class="box">
     <h2>3 &nbsp;Results: where evidence was lost <span class="tag">16 test pages · red = evidence lost</span></h2>
     <figure>
-      <div class="hchain">
-        <div class="node end">Scanned page</div>
-        <div class="arrow">→</div>
-        <div class="node lostn"><div class="top"><span class="no">1</span><span class="nm">Read</span></div><em>OCR</em><span class="val lost">0.60 → 0.95<small>F1, library → modern OCR</small></span></div>
-        <div class="arrow">→</div>
-        <div class="node"><div class="top"><span class="no">2</span><span class="nm">Extract</span></div><em>language model</em><span class="val">0.93–0.98<small>F1 of four Claude models</small></span></div>
-        <div class="arrow">→</div>
-        <div class="node"><div class="top"><span class="no">3</span><span class="nm">Ground</span></div><em>quote the source line</em><span class="val">0 recall lost<small>quotes required vs not</small></span></div>
-        <div class="arrow">→</div>
-        <div class="node lostn"><div class="top"><span class="no">4</span><span class="nm">Link</span></div><em>database lookup (GBIF)</em><span class="val lost">14 of 34 lost<small>correctly read names</small></span></div>
-        <div class="arrow">→</div>
-        <div class="node lostn"><div class="top"><span class="no">5</span><span class="nm">Review</span></div><em>a second model, then people</em><span class="val lost">50 of 75 shared<small>library-OCR errors both models made</small></span></div>
-        <div class="arrow">→</div>
-        <div class="node end">Database record</div>
-      </div>
-      <p class="cap"><b>Figure 3.</b> The agent's evidence chain (Butler values for steps 1 and 4). Quotes, a second model and self-repair check the agent against its own input, so they miss fluent errors; only an independent source catches them.</p>
+      <svg class="agentsvg" viewBox="0 0 2167 336" width="100%" role="img" aria-label="The agent evidence chain: scanned page, 1 read (OCR text, 0.60 to 0.95), 2 extract by a language model that returns a line and verbatim quote and never rewrites the source text (0.93 to 0.98), 3 ground (code checks the quote, 0 recall lost), 4 link (database lookup, 14 of 34 lost), 5 review (50 of 75 shared), database record"><defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5f6670"/></marker></defs><rect x="2" y="2" width="2163" height="332" rx="20" fill="#f4f5f7" stroke="#011F5B" stroke-width="2.5"/>
+<text x="30" y="52" font-size="30" font-weight="700" fill="#011F5B">The agent: code owns the text</text>
+<text x="30" y="86" font-size="22" fill="#5f6670">the model only points; code slices every value</text>
+<rect x="30" y="192" width="220" height="122" rx="12" fill="#fff" stroke="#5f6670" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="140.0" y="248" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6670">Scanned</text>
+<text x="140.0" y="280" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6670">page</text>
+<rect x="308" y="192" width="344" height="122" rx="12" fill="#fff" stroke="#b3261e" stroke-width="3"/>
+<circle cx="342" cy="228" r="19" fill="#b3261e"/><text x="342" y="236" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">1</text>
+<text x="372" y="238" font-size="28" font-weight="700" fill="#1b1f24">Read</text>
+<text x="330" y="272" font-size="22" fill="#5f6670">OCR text, numbered lines</text>
+<text x="330" y="302" font-size="28" font-weight="700" fill="#b3261e">0.60 → 0.95</text>
+<rect x="710" y="192" width="344" height="122" rx="12" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<circle cx="744" cy="228" r="19" fill="#011F5B"/><text x="744" y="236" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">3</text>
+<text x="774" y="238" font-size="28" font-weight="700" fill="#1b1f24">Ground</text>
+<text x="732" y="272" font-size="22" fill="#5f6670">code checks the quote</text>
+<text x="732" y="302" font-size="28" font-weight="700" fill="#1b1f24">0 recall lost</text>
+<rect x="1112" y="192" width="344" height="122" rx="12" fill="#fff" stroke="#b3261e" stroke-width="3"/>
+<circle cx="1146" cy="228" r="19" fill="#b3261e"/><text x="1146" y="236" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">4</text>
+<text x="1176" y="238" font-size="28" font-weight="700" fill="#1b1f24">Link</text>
+<text x="1134" y="272" font-size="22" fill="#5f6670">database lookup (GBIF)</text>
+<text x="1134" y="302" font-size="28" font-weight="700" fill="#b3261e">14 of 34 lost</text>
+<rect x="1514" y="192" width="344" height="122" rx="12" fill="#fff" stroke="#b3261e" stroke-width="3"/>
+<circle cx="1548" cy="228" r="19" fill="#b3261e"/><text x="1548" y="236" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">5</text>
+<text x="1578" y="238" font-size="28" font-weight="700" fill="#1b1f24">Review</text>
+<text x="1536" y="272" font-size="22" fill="#5f6670">second model, then people</text>
+<text x="1536" y="302" font-size="28" font-weight="700" fill="#b3261e">50 of 75 shared</text>
+<rect x="1916" y="192" width="221" height="122" rx="12" fill="#fff" stroke="#5f6670" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="2026.5" y="248" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6670">Database</text>
+<text x="2026.5" y="280" text-anchor="middle" font-size="26" font-weight="600" fill="#5f6670">record</text>
+<line x1="256" y1="253" x2="300" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="658" y1="253" x2="702" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="1060" y1="253" x2="1104" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="1462" y1="253" x2="1506" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="1864" y1="253" x2="1908" y2="253" stroke="#5f6670" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="540" y="22" width="640" height="128" rx="14" fill="#fff" stroke="#5f6670" stroke-width="2.5" stroke-dasharray="9 6"/>
+<g fill="#011F5B">
+<line x1="604" y1="40" x2="604" y2="54" stroke="#011F5B" stroke-width="4"/><circle cx="604" cy="40" r="6"/>
+<rect x="570" y="54" width="68" height="52" rx="13"/>
+<rect x="562" y="70" width="7" height="20" rx="3"/><rect x="639" y="70" width="7" height="20" rx="3"/>
+<circle cx="591" cy="77" r="8" fill="#fff"/><circle cx="617" cy="77" r="8" fill="#fff"/>
+<circle cx="593" cy="78" r="3.5"/><circle cx="619" cy="78" r="3.5"/>
+<rect x="592" y="92" width="24" height="5" rx="2.5" fill="#fff"/>
+<rect x="582" y="110" width="44" height="22" rx="7"/>
+</g>
+<circle cx="689" cy="60" r="19" fill="#011F5B"/><text x="689" y="68" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">2</text>
+<text x="720" y="70" font-size="28" font-weight="700" fill="#1b1f24">Extract <tspan font-weight="400" font-size="22" fill="#5f6670">· language model</tspan></text>
+<text x="670" y="104" font-size="22" fill="#5f6670">finds mentions; returns line + verbatim quote</text>
+<text x="670" y="134" font-size="28" font-weight="700" fill="#1b1f24">0.93–0.98</text>
+<line x1="660" y1="190" x2="660" y2="158" stroke="#5f6670" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#ah)"/>
+<line x1="1000" y1="152" x2="1000" y2="184" stroke="#5f6670" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#ah)"/>
+<text x="1214" y="78" font-size="26" font-weight="700" fill="#011F5B">never rewrites</text><text x="1214" y="110" font-size="26" font-weight="700" fill="#011F5B">the source text</text></svg>
+      <p class="cap"><b>Figure 3.</b> The agent's evidence chain on the 16 test pages; red: evidence lost. Values: F1 library → modern OCR (Butler); F1 of four Claude models; recall cost of quotes; read names lost at lookup; library-OCR errors both models made. Quotes, a second model and self-repair check the agent against its own input, so they miss fluent errors.</p>
     </figure>
     <div class="charts">
       <figure>
