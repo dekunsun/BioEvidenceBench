@@ -354,7 +354,7 @@ def page() -> str:
     <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>Where do AI agents lose evidence in historical scientific literature?</h1>
     <p class="key"><b>Key finding:</b> modern OCR lifted value F1 from 0.60–0.64 to 0.95–0.98, yet 14 of 34 extracted bird names still failed direct database linking. Accurate extraction is not enough for trustworthy scientific evidence.</p>
-    <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
+    <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · Research Collaborator, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
     <div class="logos"><img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania"></div>
