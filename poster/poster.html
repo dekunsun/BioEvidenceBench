@@ -125,7 +125,7 @@ ol.rules li{margin-bottom:10px}
   <section>
     <h2>2 &nbsp;Methods</h2>
     <ul>
-      <li><b>Data.</b> 16 held-out test pages from two English books: Reeve, shells (1849) and Butler, birds (1907).</li>
+      <li><b>Data.</b> The study uses two English books: Reeve, shells (1849) and Butler, birds (1907); 16 held-out test pages.</li>
       <li><b>Three texts per page.</b> Library OCR, modern OCR (dots.mocr) and expert transcription; the page stays the same.</li>
       <li><b>Agent task.</b> Claude Opus 5.5 and Gemini 4 Carbon extract taxa, people, places, institutions and dates, returning a line number and a verbatim quote; code slices each value from the text.</li>
       <li><b>Reference.</b> 607 mentions labelled by hand before any model output; a second labeller on 5 pages (agreement 0.90 exact, 0.95 overlap).</li>
@@ -187,7 +187,7 @@ ol.rules li{margin-bottom:10px}
     </figure>
   </section>
   <section>
-    <h2>5 &nbsp;Case study: 本草綱目</h2>
+    <h2>5 &nbsp;Work in progress: classical Chinese</h2>
     <div class="case">
       <img class="page" src="fig/v2/bencao_page.png" alt="Bencao gangmu, Siku quanshu manuscript copy, half-leaf 036-1b">
       <div class="rows">
@@ -202,7 +202,7 @@ ol.rules li{margin-bottom:10px}
       <tr><td>Claude Opus OCR</td><td class="n">88% (98%*)</td><td class="n">0.87 [0.83, 0.91]</td></tr>
       <tr><td>PaddleOCR</td><td class="n">68% (81%*)</td><td class="n">0.72 [0.60, 0.83]</td></tr>
     </table>
-    <p class="cap"><b>Table 2.</b> <i>Bencao gangmu</i> (1578), 18th-century manuscript copy; 6 pages, exploratory. *If variant forms count. The model writes the modern character: right for search, wrong for the edition.</p>
+    <p class="cap"><b>Table 2.</b> First extension of the method: <i>Bencao gangmu</i> 本草綱目 (1578), 18th-century manuscript copy. Six development pages only; an eight-page test set is frozen and not yet labelled. *If variant forms count. The model writes the modern character: right for search, wrong for the edition.</p>
   </section>
   <section>
     <h2>6 &nbsp;Conclusions</h2>
