@@ -176,7 +176,7 @@ footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.44fr 0.56fr}
 #r2{grid-template-columns:0.71fr 0.29fr}
-#r3{grid-template-columns:0.60fr 0.40fr}
+#r3{grid-template-columns:0.54fr 0.46fr}
 main{gap:0.25in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.34in 0.34in 0.30in}
@@ -197,6 +197,13 @@ h1{font-size:80px}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--soft);line-height:1.25}
 #r3 .box:first-child svg{max-height:6.2in}
+.zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
+.zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
+.box.contact .cx-qr img{max-width:1.0in}
+.box.contact .cw-left .ai4s{width:2.6in !important}
+.box.contact>.in{padding:0.2in 0.34in 0.16in !important}
+#r3 .stack .box:first-child>.in{padding-top:.22in;padding-bottom:.18in}
+.box.contact .cw-line{margin-top:.08in;padding-top:.08in}
 .big3{display:grid;grid-template-columns:1fr 0.85fr 1.35fr;gap:.3in;margin:.08in 0 .05in;padding:.12in .25in;background:#f3f5f9;border-radius:10px}
 .big3 p{margin:0}
 .big3 .lab{color:var(--soft)}
@@ -437,11 +444,19 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <div class="box">
   <p class="act">06 · Conclusion</p>
   <div class="in"><ul class="concl">
-      <li><b>Finding.</b> Library OCR cost a third of the values; a plain database lookup lost 14 of 34 correctly read names. Extraction lost little on these pages (0.93–0.98).</li>
-      <li><b>For agent builders.</b> Check that names survive OCR; let the model point and code write; test the database link on its own; agreement between models is not evidence.</li>
-      <li><b>Next.</b> Reeve's names; a classical Chinese pilot (本草綱目). Materials papers are untested.</li>
-    </ul></div>
-
+      <li><b>For agent builders.</b> Check that names survive OCR; let the model point and code write; test the database link on its own; agreement is not evidence.</li>
+      <li><b>Next.</b> Reeve's names; the eight held-out Chinese half-leaves; materials papers.</li>
+    </ul>
+    <p class="sub-h" style="margin:.1in 0 0">Exploratory extension: classical Chinese (本草綱目)</p>
+    <table class="zhtab">
+      <tr><th>Input</th><th class="num">CER</th><th class="num">Names intact</th><th class="num">Value F1</th></tr>
+      <tr><td>Scan-verified text</td><td class="num">0</td><td class="num">100%</td><td class="num">0.98</td></tr>
+      <tr><td>Claude Opus OCR</td><td class="num">0.03</td><td class="num">88%</td><td class="num">0.87</td></tr>
+      <tr><td>Claude Haiku OCR</td><td class="num">0.15</td><td class="num">69%</td><td class="num">0.68</td></tr>
+      <tr><td>PaddleOCR</td><td class="num">0.26</td><td class="num">68%</td><td class="num">0.72</td></tr>
+    </table>
+    <p class="note" style="margin:0"><i>Six development half-leaves; not an independent held-out evaluation.</i></p>
+  </div>
 </div>
 <div class="box contact">
   <p class="act">Connect &amp; Explore</p>
