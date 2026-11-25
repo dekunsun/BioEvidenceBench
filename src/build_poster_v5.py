@@ -30,7 +30,7 @@ def css() -> str:
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.5fr 0.5fr}
 #r2{grid-template-columns:0.665fr 0.335fr}
-#r3{grid-template-columns:0.56fr 0.44fr}
+#r3{grid-template-columns:0.47fr 0.53fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}
 main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no empty space */  /* share any spare page height between the rows */
@@ -42,6 +42,9 @@ h1{font-size:72px}
 .brand{justify-items:center}
 h1{font-size:80px}
 .concl-wrap{margin:auto 0}  /* 06: one block, centred in the card */
+.concl-wrap ol.concl2 li{font-size:27px !important;padding:.16in 0}
+.concl-wrap .sub-h{font-size:28px !important;color:var(--accent) !important}
+.concl-wrap .note{font-size:22px !important;margin-top:.12in !important}
 ol.concl2{margin:0;padding-left:.36in}
 ol.concl2 li{margin:0;padding:.12in 0;line-height:1.3;border-bottom:1.5px solid var(--rule)}
 ol.concl2 li:last-child{border-bottom:0}
