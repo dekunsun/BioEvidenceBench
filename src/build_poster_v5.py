@@ -29,14 +29,20 @@ def css() -> str:
     c += """
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.5fr 0.5fr}
-#r2{grid-template-columns:0.7fr 0.3fr}
+#r2{grid-template-columns:0.665fr 0.335fr}
 #r3{grid-template-columns:0.58fr 0.42fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}
 main>#r3{flex:0 0 auto}  /* last row only as tall as its content, so 06 has no empty space */  /* share any spare page height between the rows */
 .box>.in{padding:0.26in 0.34in 0.22in}
 h1{font-size:72px}
-.brand{gap:.3in}
+.brand{display:flex !important;flex-direction:row;align-items:center;gap:.3in}
+header{gap:.3in !important}
+.brand .hqr{display:flex;flex-direction:column;align-items:center}
+.brand .hqr img{width:1.3in !important;height:1.3in !important;margin:0}
+.brand .hqr span{font-size:20px !important;margin-top:.06in;line-height:1.25;text-align:center}
+.brand{position:relative}
+.brand .hqr{position:relative}
 .brand .logos{display:flex;gap:.3in;align-items:center;justify-content:center}
 .brand .penn,.brand .cas{height:.95in !important;width:auto !important;display:block}  /* one row, same height */
 .brand{justify-items:center}
@@ -53,8 +59,8 @@ ol.concl2 li:last-child{border-bottom:0}
 .pairs div{border:2px solid var(--rule);border-radius:10px;padding:.08in .12in;background:#fafbfc;font-size:25px;line-height:1.2}
 .pairs div i{color:var(--ink)}
 /* 04: two light panels, one type scale (title 24 bold, body 24, notes 20) */
-.quiz .panel{border:1.5px solid var(--rule);border-radius:10px;background:#f7f8fb;padding:.16in .2in;display:flex;flex-direction:column;justify-content:space-evenly}
-.quiz .panel:first-of-type{flex:1 1 auto !important;margin-bottom:.2in}
+.quiz .panel{border:1.5px solid var(--rule);border-radius:10px;background:#f7f8fb;padding:.16in .2in}
+
 .quiz .panel p{margin:0}
 .quiz .ph{font-weight:700;color:var(--accent);margin-bottom:.12in !important}
 .quiz .pn{font-size:20px;color:var(--soft);margin-top:.06in !important}
@@ -82,10 +88,10 @@ ol.concl2 li:last-child{border-bottom:0}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--ink);line-height:1.25}
 .facts .d small{display:block;font-size:22px;color:var(--soft)}
-#r3 .box:first-child svg{max-height:650px;margin:0 auto;display:block}
+#r3 .box:first-child svg{display:block}
 #r1 .two{grid-template-columns:minmax(0,0.45fr) minmax(0,0.55fr) !important}
 #r1 .two>div:first-child svg{width:100% !important;display:block}
-.zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
+.zhtab{font-size:24px;margin:.1in 0 0;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
 .box.contact .cx-qr img{max-width:1.0in}
 .box.contact .cw-left .ai4s{width:2.6in !important}
@@ -276,7 +282,7 @@ def framework_svg() -> str:
     width, so sizes are poster pixels). Left: the model writes the record (silent changes). Right: the
     evidence-aware workflow; solid steps were tested in this pilot, the dashed decision and its two exits
     are proposed. The measured numbers live in box 03."""
-    W, H = 1110, 790
+    W, H = 1420, 790
     TSTROKE, GREEN = "#9fb0d0", "#2e7d4f"
     p = [DEFS]
 
@@ -288,23 +294,23 @@ def framework_svg() -> str:
         p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}" stroke="{stroke}" stroke-width="2.5"{d}/>')
 
     # left: the model writes the record
-    p.append(f'<rect x="0" y="0" width="320" height="{H - 2}" rx="16" fill="#f2f3f5" stroke="#c4cbd0" stroke-width="2"/>')
-    t(160, 58, "Model writes", 32, 700, SOFT)
+    p.append(f'<rect x="0" y="0" width="380" height="{H - 2}" rx="16" fill="#f2f3f5" stroke="#c4cbd0" stroke-width="2"/>')
+    t(190, 58, "Model writes", 32, 700, SOFT)
     prev = None
     for i, lab in enumerate(["Scanned page", "Model repairs", "Writes value", "Record"]):
         y = 110 + i * 158
-        rect(30, y, 260, 84, stroke="#c4cbd0")
-        t(160, y + 52, lab, 28, 400, INK)
+        rect(40, y, 300, 84, stroke="#c4cbd0")
+        t(190, y + 52, lab, 28, 400, INK)
         if prev:
-            p.append(arrow(f"M160 {prev + 2} V{y - 5}"))
+            p.append(arrow(f"M190 {prev + 2} V{y - 5}"))
         prev = y + 84
-    t(160, 742, "Silent changes", 28, 400, RED, extra=' font-style="italic"')
+    t(190, 742, "Silent changes", 28, 400, RED, extra=' font-style="italic"')
 
     # right: evidence-aware workflow
-    x0 = 346
+    x0 = 410
     p.append(f'<rect x="{x0}" y="0" width="{W - x0 - 2}" height="{H - 2}" rx="16" fill="#f6f8fc" stroke="{TSTROKE}" stroke-width="2.5"/>')
     t(x0 + 30, 58, "Evidence-aware workflow", 32, 700, NAVY, "start")
-    bx, bw, bh, cx = x0 + 30, 400, 74, x0 + 30 + 200
+    bx, bw, bh, cx = x0 + 40, 480, 74, x0 + 40 + 240
     steps = ["OCR text", "Model points + quotes", "Code verifies + slices", "Resolve entity"]
     prev = None
     for i, lab in enumerate(steps):
@@ -316,13 +322,13 @@ def framework_svg() -> str:
         prev = y + bh
     p.append(robot(bx + bw - 28, 96 + 96 + 8, 0.52))
     # decision (proposed)
-    dy, hw, hh = 552, 190, 78
+    dy, hw, hh = 552, 210, 80
     p.append(arrow(f"M{cx} {prev + 2} V{dy - hh - 5}"))
     p.append(f'<path d="M{cx} {dy - hh} L{cx + hw} {dy} L{cx} {dy + hh} L{cx - hw} {dy} Z" fill="#fff" stroke="{SOFT}" stroke-width="2.5" stroke-dasharray="9 7"/>')
     t(cx, dy - 6, "Evidence", 28, 700, NAVY)
     t(cx, dy + 28, "sufficient?", 28, 700, NAVY)
     # no -> re-check or defer
-    rx, rw, ry, rh = 838, 240, 330, 110
+    rx, rw, ry, rh = 1110, 270, 330, 110
     rect(rx, ry, rw, rh, stroke=SOFT, dash=True)
     t(rx + rw / 2, ry + 46, "Re-check", 28, 500, NAVY)
     t(rx + rw / 2, ry + 82, "or defer", 28, 500, NAVY)
@@ -332,7 +338,7 @@ def framework_svg() -> str:
     ay = 696
     p.append(arrow(f"M{cx} {dy + hh + 2} V{ay - 5}", dash=True))
     t(cx + 20, dy + hh + 40, "Yes", 26, col=GREEN, anchor="start")
-    rect(bx - 10, ay, bw + 20, 74, "#eef6f0", GREEN, dash=True)
+    rect(bx, ay, bw, 74, "#eef6f0", GREEN, dash=True)
     t(cx, ay + 48, "Auditable record", 28, 700, GREEN)
     # legend
     rect(rx, 676, 40, 26, "#fff", TSTROKE, r=6)
@@ -367,7 +373,7 @@ def page() -> str:
   </div>
   <div class="brand">
     <div class="logos"><img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania"></div>
-    <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>github.com/dekunsun/BioEvidenceBench</span></div>
+    <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>github.com/dekunsun/<br>BioEvidenceBench</span></div>
   </div>
 </header>
 
@@ -452,6 +458,14 @@ def page() -> str:
       <p class="ph">Exploratory: classical Chinese</p>
       <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the Siku quanshu manuscript of the Bencao gangmu, 弘 one stroke short"><span class="zh">→ 陶弘景</span></div>
       <p class="pn">本草綱目: the model writes the modern form.</p>
+      <table class="zhtab">
+        <tr><th>Text read</th><th class="num">CER</th><th class="num">Names</th><th class="num">F1</th></tr>
+        <tr><td>Scan-verified</td><td class="num">0</td><td class="num">100%</td><td class="num">0.98</td></tr>
+        <tr><td>Opus OCR</td><td class="num">0.03</td><td class="num">88%</td><td class="num">0.87</td></tr>
+        <tr><td>Haiku OCR</td><td class="num">0.15</td><td class="num">69%</td><td class="num">0.68</td></tr>
+        <tr><td>PaddleOCR</td><td class="num">0.26</td><td class="num">68%</td><td class="num">0.72</td></tr>
+      </table>
+      <p class="pn">Six development half-leaves; exploratory.</p>
     </div>
   </div>
 </div>
