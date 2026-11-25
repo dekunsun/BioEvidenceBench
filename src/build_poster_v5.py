@@ -138,8 +138,13 @@ def make_images() -> None:
     from PIL import ImageOps
     page = ROOT / "data" / "cache" / "images" / "8966790.webp"
     if page.exists():
-        ImageOps.autocontrast(Image.open(page).convert("L").crop((1300, 405, 2120, 498)), cutoff=1).save(
-            out / "quiz_granulosus.png")
+        from PIL import ImageDraw
+        q = ImageOps.autocontrast(Image.open(page).convert("L").crop((1300, 405, 2120, 498)), cutoff=1).convert("RGB")
+        # box round the printed name, as in box 01 (Bulimus 1395-1513, granulosus 1524-1686, y 452-490 on the page)
+        q = ImageOps.expand(q, border=(0, 0, 0, 6), fill="white")  # room under the box line
+        ImageDraw.Draw(q).rounded_rectangle((1388 - 1300, 446 - 405, 1694 - 1300, 97), radius=4,
+                                            outline=(0, 0, 0), width=4)
+        q.save(out / "quiz_granulosus.png")
 
 
 def box(x, y, w, h, lines, stroke=RULE, dash=False, fill="#fff", anchor="middle"):
