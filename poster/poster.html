@@ -185,12 +185,21 @@ h1{font-size:72px}
 .brand .penn,.brand .cas{width:2.75in !important;height:auto;display:block}  /* same width, so the two logos share left and right edges */
 .brand{justify-items:center}
 h1{font-size:80px}
+ol.concl2{margin:0;padding-left:.36in}
+ol.concl2 li{margin:0 0 .07in;line-height:1.3}
+.hqrs{display:grid;grid-template-columns:repeat(3,auto);gap:.18in}
+.hqrs .hqr img{width:1.0in;height:1.0in}
+.hqrs .hqr span{font-size:22px}
+.pairs{display:grid;grid-template-columns:.4in 1fr 1fr;gap:.1in .12in;align-items:center}
+.pairs .n{font-size:30px;font-weight:600;color:var(--accent);text-align:center}
+.pairs div{border:2px solid var(--rule);border-radius:10px;padding:.08in .12in;background:#fafbfc;font-size:25px;line-height:1.2}
+.pairs div i{color:var(--ink)}
 .quiz .qh{font-size:36px;line-height:1.15;color:var(--accent);margin:0 0 .08in}
 .quiz .opt{display:flex;gap:.25in;align-items:baseline;border:2px solid var(--rule);border-radius:12px;padding:.14in .25in;margin:0 0 .14in;background:#fafbfc}
 .quiz .opt b{font-size:36px;color:var(--accent);font-weight:600}
 .quiz .opt i{font-size:40px;color:var(--ink)}
 .quiz .qscan{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6px}
-.quiz .ans{margin:.16in 0 0;color:var(--soft)}
+.quiz .ans{margin-top:auto;padding-top:.12in;border-top:1.5px solid var(--rule);font-size:22px;color:var(--soft)}
 .quiz .ans b{color:var(--ink);font-weight:600}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.3in;margin-top:.1in;padding:.12in .2in;background:#f3f5f9;border-radius:10px}
 .facts div{display:flex;gap:.14in;align-items:baseline}
@@ -262,7 +271,11 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <div class="brand">
     <img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
     <img class="cas" src="fig/cas_logo_reverse.png" alt="California Academy of Sciences">
-    <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>github.com/dekunsun/BioEvidenceBench</span></div>
+    <div class="hqrs">
+      <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>Code and data</span></div>
+      <div class="hqr"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi"><span>ai4s.fyi</span></div>
+      <div class="hqr"><img src="fig/qr_linkedin.svg" alt="QR code to Dekun Sun's LinkedIn profile"><span>LinkedIn</span></div>
+    </div>
   </div>
 </header>
 
@@ -372,14 +385,16 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <div class="box quiz">
   <p class="act">04 · Try it</p>
   <div class="in">
-    <h2 class="qh">Can you spot the OCR error?</h2>
-    <p class="note" style="margin:0 0 .14in">Real example · Reeve 1849, page 8967281</p>
-    <p style="margin:0 0 .12in">Which name is on the printed page?</p>
-    <div class="opt"><b>A</b><i>Turritella brevisis</i></div>
-    <div class="opt"><b>B</b><i>Turritella brevialis</i></div>
-    <p class="sub-h" style="margin:.26in 0 .08in">Check the page yourself:</p>
-    <img class="qscan" src="fig/v5/quiz_scan_grey.png" alt="The printed line: The Turritella brevialis of Lamarck (LeMesal of Adanson)">
-    <p class="ans"><b>Answer: B.</b> A modern OCR model wrote A. Two letters changed, nothing looks broken, and the page error rate barely moves.</p>
+    <h2 class="qh">Printed, or written by OCR?</h2>
+    <p style="margin:0 0 .14in">In each pair, one name is on the page; the other is a modern OCR model's reading of it. Which is printed?</p>
+    <div class="pairs">
+      <span class="n">1</span><div>A <i>Bulimus granulatus</i></div><div>B <i>Bulimus granulosus</i></div>
+      <span class="n">2</span><div>A <i>Phylloscopus viridanus</i></div><div>B <i>Phylloscopus viridans</i></div>
+      <span class="n">3</span><div>A <i>Turbo ungulinus</i></div><div>B <i>Turbo ungulatus</i></div>
+      <span class="n">4</span><div>A <i>Luscinia schwarzi</i></div><div>B <i>Lusciniola schwarzi</i></div>
+    </div>
+    <p class="note" style="margin:.12in 0 0">Every fake is well-formed Latin; nothing in the text looks broken. In pair 4 the fake is a real genus, so a database lookup would succeed, for the wrong bird.</p>
+    <p class="ans">Answers: 1 B · 2 A · 3 A · 4 B. Readings by Qwen3.5-9B, DeepSeek-OCR-2, olmOCR-2 and LightOnOCR-3 on test pages 8966790, 8992643, 8967281, 8992644.</p>
   </div>
 </div>
 </div>
@@ -449,10 +464,13 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <div class="stack">
 <div class="box">
   <p class="act">06 · Conclusion</p>
-  <div class="in"><ul class="concl">
-      <li><b>For agent builders.</b> Check that names survive OCR; let the model point and code write; test the database link on its own; agreement is not evidence.</li>
-      <li><b>Next.</b> Reeve's names; the eight held-out Chinese half-leaves; materials papers.</li>
-    </ul>
+  <div class="in"><ol class="concl2">
+      <li><b>Reading is the dominant loss.</b> On the same 16 pages, value F1 rose from 0.60 / 0.64 on library OCR to 0.95 / 0.98 on modern OCR (Butler / Reeve). Across 24 OCR versions, name survival predicted F1; page CER did not.</li>
+      <li><b>Extraction is not the bottleneck.</b> Four Claude models reached 0.93–0.98 on modern OCR; requiring verbatim quotes cost no recall.</li>
+      <li><b>Entity resolution fails separately.</b> A plain GBIF lookup missed 14 of 34 correctly read Butler names (synonymy, changed genera).</li>
+      <li><b>Agreement is not verification.</b> Two models agreed on 99–100% of values, yet the agreed set on library OCR held 50 and 75 errors.</li>
+    </ol>
+    <p class="note" style="margin:.04in 0 0"><b class="ink">Implication:</b> invest first in name-preserving OCR, then in entity resolution; route review by independent signals. Scope: two English printed books, pre-registered.</p>
     <p class="sub-h" style="margin:.1in 0 0">Exploratory extension: classical Chinese (本草綱目)</p>
     <table class="zhtab">
       <tr><th>Input</th><th class="num">CER</th><th class="num">Names intact</th><th class="num">Value F1</th></tr>
@@ -462,22 +480,6 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
       <tr><td>PaddleOCR</td><td class="num">0.26</td><td class="num">68%</td><td class="num">0.72</td></tr>
     </table>
     <p class="note" style="margin:0"><i>Six development half-leaves; not an independent held-out evaluation.</i></p>
-  </div>
-</div>
-<div class="box contact">
-  <p class="act">Connect &amp; Explore</p>
-  <div class="in">
-    <div class="cw">
-      <div class="cw-left">
-        <img class="ai4s" src="fig/ai4s_logo.png" alt="AI4S.fyi">
-        <p>A map of AI4S people, research,<br>companies and capital, read at source.</p>
-      </div>
-      <div class="cw-qrs">
-        <div class="cx-qr"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi"><span>ai4s.fyi</span></div>
-        <div class="cx-qr"><img src="fig/qr_linkedin.svg" alt="QR code to Dekun Sun's LinkedIn profile"><span>LinkedIn</span></div>
-      </div>
-    </div>
-    <p class="cw-line">Dekun (Gloria) Sun on LinkedIn · @gloria_sun on X</p>
   </div>
 </div>
 </div>
