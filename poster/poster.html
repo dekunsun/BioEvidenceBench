@@ -175,14 +175,15 @@ footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
 
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.44fr 0.56fr}
-#r2{grid-template-columns:0.71fr 0.29fr}
-#r3{grid-template-columns:0.54fr 0.46fr}
-main{gap:0.2in !important}
+#r2{grid-template-columns:0.665fr 0.335fr}
+#r3{grid-template-columns:0.5fr 0.5fr}
+main{gap:0.16in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
-.box>.in{padding:0.34in 0.34in 0.30in}
+.box>.in{padding:0.26in 0.34in 0.22in}
 h1{font-size:72px}
 .brand{gap:.3in}
-.brand .penn,.brand .cas{width:2.75in !important;height:auto;display:block}  /* same width, so the two logos share left and right edges */
+.brand .logos{display:flex;gap:.3in;align-items:center;justify-content:center}
+.brand .penn,.brand .cas{height:.95in !important;width:auto !important;display:block}  /* one row, same height */
 .brand{justify-items:center}
 h1{font-size:80px}
 ol.concl2{margin:0;padding-left:.36in}
@@ -199,19 +200,19 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .quiz .opt b{font-size:36px;color:var(--accent);font-weight:600}
 .quiz .opt i{font-size:40px;color:var(--ink)}
 .quiz .qscan{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6px}
-.quiz .ans{margin-top:auto;padding-top:.12in;border-top:1.5px solid var(--rule);font-size:22px;color:var(--soft)}
+.quiz .ans{margin-top:.08in;padding-top:.08in;border-top:1.5px solid var(--rule);font-size:22px;color:var(--soft)}
 .quiz .ans b{color:var(--ink);font-weight:600}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.3in;margin-top:.1in;padding:.12in .2in;background:#f3f5f9;border-radius:10px}
 .facts div{display:flex;gap:.14in;align-items:baseline}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--soft);line-height:1.25}
 #r3 .box:first-child svg{max-height:6.2in}
-#r1 .two{grid-template-columns:0.40fr 0.60fr !important}
+#r1 .two{grid-template-columns:0.37fr 0.63fr !important}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
 .box.contact .cx-qr img{max-width:1.0in}
 .box.contact .cw-left .ai4s{width:2.6in !important}
-.box.contact>.in{padding:0.2in 0.34in 0.16in !important}
+.box.contact>.in{padding:0.14in 0.34in 0.1in !important}
 #r3 .stack .box:first-child>.in{padding-top:.22in;padding-bottom:.18in}
 .box.contact .cw-line{margin-top:.08in;padding-top:.08in}
 .big3{display:grid;grid-template-columns:1fr 0.85fr 1.35fr;gap:.3in;margin:.08in 0 .05in;padding:.12in .25in;background:#f3f5f9;border-radius:10px}
@@ -265,17 +266,13 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <div>
     <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>Where do AI agents lose evidence in historical scientific literature?</h1>
-    <p class="key"><b>BioEvidenceBench · Key finding:</b> most evidence was lost at reading (value F1 0.60 on library OCR, 0.95 on modern OCR) and at linking (14 of 34 names); extraction lost little.</p>
+    <p class="key"><b>Key finding:</b> modern OCR lifted value F1 from 0.60–0.64 to 0.95–0.98, yet 14 of 34 correctly extracted bird names still failed direct database linking. Accurate extraction is not enough for trustworthy scientific evidence.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
-    <img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
-    <img class="cas" src="fig/cas_logo_reverse.png" alt="California Academy of Sciences">
-    <div class="hqrs">
-      <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>Code and data</span></div>
-      <div class="hqr"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi"><span>ai4s.fyi</span></div>
-      <div class="hqr"><img src="fig/qr_linkedin.svg" alt="QR code to Dekun Sun's LinkedIn profile"><span>LinkedIn</span></div>
-    </div>
+    <div class="logos"><img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
+    <img class="cas" src="fig/cas_logo_reverse.png" alt="California Academy of Sciences"></div>
+    <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>github.com/dekunsun/BioEvidenceBench</span></div>
   </div>
 </header>
 
@@ -284,13 +281,12 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <div class="box">
   <p class="act">01 · Motivation</p>
   <div class="in">
-    <h2>Two historical books, 1849 and 1907. An agent that quotes the OCR faithfully can still file the wrong species.</h2>
-    <div class="plates">
-      <figure><img src="fig/v5/reeve_plate17.jpg" alt="Reeve, Conchologia iconica 1849, plate XVII: Bulimus shells in colour"><figcaption>Reeve 1849, shells · plate XVII</figcaption></figure>
-      <figure><img src="fig/v5/butler_jay.jpg" alt="Butler, Birds of Great Britain and Ireland 1907, plate 96: the Jay"><figcaption>Butler 1907, birds · plate 96, Jay</figcaption></figure>
+    <h2>An agent that quotes the OCR faithfully can still file the wrong species.</h2>
+    <div class="scans">
+      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:1.75in">
+      <img src="fig/v5/hook_scan_grey.png" alt="BULIMUS CHILENSIS printed in Reeve 1849, BHL page 8966790" style="width:100%">
     </div>
-    <img class="line" src="fig/v5/bulimus_line.png" alt="The printed line BULIMUS CHILENSIS in Reeve 1849, BHL page 8966790">
-    <svg viewBox="-3 -3 806 130" width="100%" role="img" aria-label="The printed name BULIMUS CHILENSIS, the library OCR BuLlMLS CiilLE.NSls, and the name the database needs, Bulimus chilensis."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+    <svg viewBox="-3 -3 806 258" width="100%" role="img" aria-label="The printed name BULIMUS CHILENSIS, the library OCR BuLlMLS CiilLE.NSls, and the name the database needs, Bulimus chilensis. Five steps must hold: read, extract, ground, link, review; most evidence was lost at read and link."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
 <rect x="0" y="0" width="240" height="122" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2.5"/>
 <text x="120" y="32" text-anchor="middle" font-size="24" font-weight="400" fill="#4d5a55">Printed, 1849</text>
 <text x="120" y="72" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#15201c">BULIMUS</text>
@@ -304,7 +300,23 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <rect x="560" y="0" width="240" height="122" rx="12" fill="#fff" stroke="#011F5B" stroke-width="2.5"/>
 <text x="680" y="32" text-anchor="middle" font-size="24" font-weight="400" fill="#4d5a55">Database needs ✓</text>
 <text x="680" y="72" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">Bulimus</text>
-<text x="680" y="104" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">chilensis</text></svg>
+<text x="680" y="104" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">chilensis</text>
+<text x="0" y="178" font-size="25" fill="#4d5a55">Five steps must hold; most evidence was lost at the two in red:</text>
+<rect x="0" y="198" width="128" height="50" rx="25" fill="#f8eceb" stroke="#a8463c" stroke-width="3"/>
+<text x="64" y="232" text-anchor="middle" font-size="26" font-weight="600" fill="#a8463c">read</text>
+<path d="M131 223 H159" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="163" y="198" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<text x="227" y="232" text-anchor="middle" font-size="26" font-weight="500" fill="#011F5B">extract</text>
+<path d="M294 223 H322" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="326" y="198" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<text x="390" y="232" text-anchor="middle" font-size="26" font-weight="500" fill="#011F5B">ground</text>
+<path d="M457 223 H485" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="489" y="198" width="128" height="50" rx="25" fill="#f8eceb" stroke="#a8463c" stroke-width="3"/>
+<text x="553" y="232" text-anchor="middle" font-size="26" font-weight="600" fill="#a8463c">link</text>
+<path d="M620 223 H648" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="652" y="198" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
+<text x="716" y="232" text-anchor="middle" font-size="26" font-weight="500" fill="#011F5B">review</text></svg>
+    <p class="note" style="margin-top:.14in">Reeve, <i>Conchologia iconica</i> (1849), BHL page 8966790. The Biodiversity Heritage Library holds 64 million scanned pages like this.</p>
   </div>
 </div>
 <div class="box">
@@ -386,15 +398,17 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
   <p class="act">04 · Try it</p>
   <div class="in">
     <h2 class="qh">Printed, or written by OCR?</h2>
-    <p style="margin:0 0 .14in">In each pair, one name is on the page; the other is a modern OCR model's reading of it. Which is printed?</p>
+    <p style="margin:0 0 .1in">One name per pair is on the page; the other is a modern OCR model's reading.</p>
     <div class="pairs">
       <span class="n">1</span><div>A <i>Bulimus granulatus</i></div><div>B <i>Bulimus granulosus</i></div>
-      <span class="n">2</span><div>A <i>Phylloscopus viridanus</i></div><div>B <i>Phylloscopus viridans</i></div>
-      <span class="n">3</span><div>A <i>Turbo ungulinus</i></div><div>B <i>Turbo ungulatus</i></div>
-      <span class="n">4</span><div>A <i>Luscinia schwarzi</i></div><div>B <i>Lusciniola schwarzi</i></div>
+      <span class="n">2</span><div>A <i>Luscinia schwarzi</i></div><div>B <i>Lusciniola schwarzi</i></div>
     </div>
-    <p class="note" style="margin:.12in 0 0">Every fake is well-formed Latin; nothing in the text looks broken. In pair 4 the fake is a real genus, so a database lookup would succeed, for the wrong bird.</p>
-    <p class="ans">Answers: 1 B · 2 A · 3 A · 4 B. Readings by Qwen3.5-9B, DeepSeek-OCR-2, olmOCR-2 and LightOnOCR-3 on test pages 8966790, 8992643, 8967281, 8992644.</p>
+    <p class="note" style="margin:.1in 0 0">Both fakes are well-formed Latin; <i>Luscinia</i> is even a real genus, so a lookup would succeed, for the wrong bird.</p>
+    <p class="ans">Answers: 1 B · 2 B. Readings by Qwen3.5-9B (Reeve 8966790) and LightOnOCR-3 (Butler 8992644).</p>
+    <p class="sub-h" style="margin:.2in 0 .04in">Exploratory extension: classical Chinese</p>
+    <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the Siku quanshu manuscript of the Bencao gangmu, 弘 one stroke short"><span class="zh" style="font-size:40px;color:var(--accent)">→ 陶弘景</span></div>
+    <p class="note" style="margin:.04in 0 .04in"><i>Bencao gangmu</i> 本草綱目 manuscript: the model writes the modern character, right for search, wrong for the edition.</p>
+<p class="note" style="margin:0">Names kept intact track F1 here too: Opus OCR 88% → 0.87, PaddleOCR 68% → 0.72 (CER 0.03 vs 0.26). Six development half-leaves; exploratory.</p>
   </div>
 </div>
 </div>
@@ -403,83 +417,90 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 <div class="box">
   <p class="act">05 · Proposed Framework</p>
   <div class="in">
-    <h2>An evidence-aware scientific agent: a proposed workflow, informed by these results</h2>
-    <svg viewBox="-3 -3 1425 748" width="100%" role="img" aria-label="An evidence-aware scientific agent, proposed workflow. Research task; read source or OCR, keeping the original text (measured: value F1 0.60 to 0.95, library to modern OCR); extract entities, the model (drawn as a robot) points to a line and never rewrites it (F1 0.93 to 0.98); verify evidence by quote check and provenance (0 recall lost); resolve identity against a modern database (14 of 34 names lost). Then a decision, sufficient evidence? Two models agreeing is not enough: agreed but wrong, 50 in Butler and 75 in Reeve. Yes: auditable record. No: re-check the scan or ask a person, then read again. Signals that helped: OCR junk and no exact database match, not model agreement. Solid steps were measured; dashed ones are proposed and untested end to end."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
-<rect x="440" y="0" width="520" height="76" rx="12" fill="#011F5B" stroke="#011F5B" stroke-width="2"/>
-<text x="700" y="33" text-anchor="middle" font-size="30.2" font-weight="600" fill="#fff">Scientific research task</text>
-<text x="700" y="63" text-anchor="middle" font-size="25" fill="#c9d3e8">retrieve the relevant literature</text>
-<rect x="440" y="106" width="520" height="76" rx="12" fill="#eef1f7" stroke="#c4cbd0" stroke-width="2"/>
-<text x="700" y="139" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Read source / OCR</text>
-<text x="700" y="169" text-anchor="middle" font-size="25" fill="#4d5a55">keep the original text</text>
-<rect x="440" y="212" width="520" height="76" rx="12" fill="#eef1f7" stroke="#c4cbd0" stroke-width="2"/>
-<text x="700" y="245" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Extract scientific entities</text>
-<text x="700" y="275" text-anchor="middle" font-size="25" fill="#4d5a55">points to a line; never rewrites it</text>
-<rect x="440" y="318" width="520" height="76" rx="12" fill="#eef1f7" stroke="#c4cbd0" stroke-width="2"/>
-<text x="700" y="351" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Verify evidence</text>
-<text x="700" y="381" text-anchor="middle" font-size="25" fill="#4d5a55">quote check + source provenance</text>
-<rect x="440" y="424" width="520" height="76" rx="12" fill="#eef1f7" stroke="#c4cbd0" stroke-width="2"/>
-<text x="700" y="457" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Resolve entity identity</text>
-<text x="700" y="487" text-anchor="middle" font-size="25" fill="#4d5a55">historical name → modern database</text>
-<path d="M700 78 V100" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<path d="M700 184 V206" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<path d="M700 290 V312" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<path d="M700 396 V418" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<line x1="924" y1="222.4" x2="924" y2="230.8" stroke="#011F5B" stroke-width="2.4"/><circle cx="924.0" cy="222.4" r="3.6" fill="#011F5B"/><rect x="903.6" y="230.8" width="40.8" height="31.2" rx="7.8" fill="#011F5B"/><rect x="898.8" y="240.4" width="4.2" height="12.0" rx="1.8" fill="#011F5B"/><rect x="945.0" y="240.4" width="4.2" height="12.0" rx="1.8" fill="#011F5B"/><circle cx="916.2" cy="244.6" r="4.8" fill="#fff"/><circle cx="931.8" cy="244.6" r="4.8" fill="#fff"/><circle cx="917.4" cy="245.2" r="2.1" fill="#011F5B"/><circle cx="933.0" cy="245.2" r="2.1" fill="#011F5B"/><rect x="916.8" y="253.6" width="14.4" height="3.0" rx="1.5" fill="#fff"/><rect x="910.8" y="264.4" width="26.4" height="13.2" rx="4.2" fill="#011F5B"/>
-<text x="414" y="26" text-anchor="end" font-size="24" font-style="italic" fill="#4d5a55">measured, 16 test pages</text>
-<text x="414" y="142" text-anchor="end" font-size="26" fill="#a8463c">value F1 0.60 → 0.95</text>
-<text x="414" y="169" text-anchor="end" font-size="21" fill="#4d5a55">Butler, library → modern OCR</text>
-<text x="414" y="248" text-anchor="end" font-size="26" fill="#4d5a55">value F1 0.93–0.98</text>
-<text x="414" y="275" text-anchor="end" font-size="21" fill="#4d5a55">4 Claude models, modern OCR</text>
-<text x="414" y="354" text-anchor="end" font-size="26" fill="#4d5a55">no recall cost</text>
-<text x="414" y="381" text-anchor="end" font-size="21" fill="#4d5a55">recall, quote required vs not</text>
-<text x="414" y="460" text-anchor="end" font-size="26" fill="#a8463c">14 of 34 names lost</text>
-<text x="414" y="487" text-anchor="end" font-size="21" fill="#4d5a55">plain GBIF lookup, Butler</text>
-<path d="M700 502 V496" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<path d="M700 502 L910 572 L700 642 L490 572 Z" fill="#fff" stroke="#011F5B" stroke-width="2.5" stroke-dasharray="9 7"/>
-<text x="700" y="566" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Sufficient</text>
-<text x="700" y="600" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">evidence?</text>
-<text x="414" y="562" text-anchor="end" font-size="26" fill="#a8463c">auto-accept set still wrong:</text>
-<text x="414" y="594" text-anchor="end" font-size="26" fill="#a8463c">50 Butler · 75 Reeve</text>
-<text x="414" y="621" text-anchor="end" font-size="21" fill="#4d5a55">library OCR, both models agree</text>
-<path d="M700 642 V670" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<text x="716" y="668" font-size="24" fill="#4d5a55">yes</text>
-<rect x="440" y="676" width="520" height="62" rx="12" fill="#011F5B"/>
-<text x="700" y="717" text-anchor="middle" font-size="30.2" font-weight="600" fill="#fff">Auditable record</text>
-<path d="M910 572 H1346 V392" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
-<text x="928" y="560" font-size="24" fill="#4d5a55">no</text>
-<rect x="1050" y="246" width="330" height="140" rx="12" fill="#fff" stroke="#4d5a55" stroke-width="2" stroke-dasharray="9 7"/>
-<text x="1215.0" y="290" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Re-check the scan</text>
-<text x="1215.0" y="324" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">or ask a person</text>
-<text x="1215.0" y="358" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">to review</text>
-<path d="M1215.0 246 V144.0 H968" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
-<text x="1328" y="430" text-anchor="end" font-size="24" fill="#4d5a55">Signals that helped:</text>
-<text x="1328" y="460" text-anchor="end" font-size="24" fill="#4d5a55">OCR junk, no exact</text>
-<text x="1328" y="490" text-anchor="end" font-size="24" fill="#4d5a55">database match.</text>
-<text x="1328" y="520" text-anchor="end" font-size="24" fill="#4d5a55">Not: model agreement.</text>
-<text x="0" y="680" font-size="24" fill="#4d5a55">Solid: measured here.</text>
-<text x="0" y="708" font-size="24" fill="#4d5a55">Dashed: proposed, not</text>
-<text x="0" y="736" font-size="24" fill="#4d5a55">yet tested end to end.</text></svg>
+    <h2>Code owns the text; the model points and quotes</h2>
+    <svg viewBox="-3 -3 1419 722" width="100%" role="img" aria-label="Two designs. Model writes the record: scanned page, model reads the OCR, repairs it and writes the value, record, researcher trusts it; about 8% of changed values are wrong, and fluent OCR errors pass unrepaired. Code owns the text: scanned page, OCR text (F1 0.60 to 0.95 by OCR), code checks the quote and slices the value (0 recall lost), LLM linker plus GBIF lookup (recall 0.59 to 0.91 on 34 correctly read Butler names), human review (on library OCR the values both models agreed on still held 50 errors in Butler and 75 in Reeve); the model, drawn as a robot, finds mentions and quotes the line, F1 0.93 to 0.98, and never rewrites the source text."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+<rect x="0" y="0" width="690" height="716" rx="18" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>
+<text x="25" y="46" font-size="30.2" font-weight="700" fill="#4d5a55">Model writes the record</text>
+<rect x="25" y="76" width="316" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="183.0" y="116" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Scanned page</text>
+<rect x="25" y="196" width="316" height="114" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="183.0" y="231" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Model</text>
+<text x="183.0" y="263" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">reads the OCR,</text>
+<text x="183.0" y="295" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">repairs, writes value</text>
+<path d="M183 136 V191" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="25" y="370" width="316" height="114" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="183.0" y="405" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Record</text>
+<text x="183.0" y="437" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55"><tspan font-style='italic'>Turritella</tspan></text>
+<text x="183.0" y="469" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55"><tspan font-style='italic'>brevisis</tspan></text>
+<path d="M183 310 V365" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="25" y="550" width="316" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="183.0" y="590" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Researcher trusts it</text>
+<path d="M183 484 V545" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="366" y="232" font-size="30.2" font-weight="400" fill="#4d5a55">~8% of changed</text>
+<text x="366" y="264" font-size="30.2" font-weight="400" fill="#4d5a55">values are wrong;</text>
+<text x="366" y="296" font-size="30.2" font-weight="400" fill="#4d5a55">fluent OCR errors</text>
+<text x="366" y="328" font-size="30.2" font-weight="400" fill="#4d5a55">pass unrepaired</text>
+<rect x="723" y="0" width="690" height="716" rx="18" fill="#eef1f7" stroke="#011F5B" stroke-width="2"/>
+<text x="748" y="46" font-size="30.2" font-weight="700" fill="#011F5B">Code owns the text</text>
+<rect x="748" y="76" width="330" height="60" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="913.0" y="116" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Scanned page</text>
+<rect x="748" y="166" width="330" height="92" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="913.0" y="206" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">OCR text</text>
+<text x="913.0" y="238" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">F1 0.60 → 0.95</text>
+<path d="M913.0 136 V161" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="748" y="290" width="330" height="124" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="913.0" y="330" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">Code checks quote,</text>
+<text x="913.0" y="362" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">slices the value</text>
+<text x="913.0" y="394" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">0 recall lost</text>
+<path d="M913.0 258 V285" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="748" y="446" width="330" height="92" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="913.0" y="486" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">LLM linker + GBIF</text>
+<text x="913.0" y="518" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">recall 0.59 → 0.91</text>
+<path d="M913.0 414 V441" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="748" y="570" width="330" height="124" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2"/>
+<text x="913.0" y="610" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Human review</text>
+<text x="913.0" y="642" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">50 & 75 shared errors</text>
+<text x="913.0" y="674" text-anchor="middle" font-size="30.2" font-weight="400" fill="#a8463c">on legacy OCR</text>
+<path d="M913.0 538 V565" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="1110" y="104" width="286" height="256" rx="12" fill="#fff" stroke="#4d5a55" stroke-width="2" stroke-dasharray="9 7"/>
+<line x1="1253.0" y1="123.8" x2="1253.0" y2="137.1" stroke="#011F5B" stroke-width="3.8"/><circle cx="1253.0" cy="123.8" r="5.7" fill="#011F5B"/><rect x="1220.7" y="137.1" width="64.6" height="49.4" rx="12.3" fill="#011F5B"/><rect x="1213.1" y="152.3" width="6.6" height="19.0" rx="2.8" fill="#011F5B"/><rect x="1286.2" y="152.3" width="6.6" height="19.0" rx="2.8" fill="#011F5B"/><circle cx="1240.7" cy="158.9" r="7.6" fill="#fff"/><circle cx="1265.4" cy="158.9" r="7.6" fill="#fff"/><circle cx="1242.5" cy="159.9" r="3.3" fill="#011F5B"/><circle cx="1267.2" cy="159.9" r="3.3" fill="#011F5B"/><rect x="1241.6" y="173.2" width="22.8" height="4.8" rx="2.4" fill="#fff"/><rect x="1232.1" y="190.3" width="41.8" height="20.9" rx="6.6" fill="#011F5B"/>
+<text x="1253.0" y="240" text-anchor="middle" font-size="30.2" font-weight="600" fill="#15201c">Model</text>
+<text x="1253.0" y="272" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">finds mentions,</text>
+<text x="1253.0" y="304" text-anchor="middle" font-size="30.2" font-weight="400" fill="#4d5a55">quotes the line</text>
+<text x="1253.0" y="336" text-anchor="middle" font-size="30.2" font-weight="400" fill="#011F5B">F1 0.93–0.98</text>
+<path d="M1078 212 H1105" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<path d="M1170 360 V384 H1083" fill="none" stroke="#4d5a55" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+<text x="1273.0" y="456" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">never rewrites</text>
+<text x="1273.0" y="488" text-anchor="middle" font-size="30.2" font-weight="600" fill="#011F5B">the source text</text></svg>
   </div>
 </div>
 <div class="stack">
 <div class="box">
   <p class="act">06 · Conclusion</p>
-  <div class="in"><ol class="concl2">
-      <li><b>Reading is the dominant loss.</b> On the same 16 pages, value F1 rose from 0.60 / 0.64 on library OCR to 0.95 / 0.98 on modern OCR (Butler / Reeve). Across 24 OCR versions, name survival predicted F1; page CER did not.</li>
-      <li><b>Extraction is not the bottleneck.</b> Four Claude models reached 0.93–0.98 on modern OCR; requiring verbatim quotes cost no recall.</li>
-      <li><b>Entity resolution fails separately.</b> A plain GBIF lookup missed 14 of 34 correctly read Butler names (synonymy, changed genera).</li>
-      <li><b>Agreement is not verification.</b> Two models agreed on 99–100% of values, yet the agreed set on library OCR held 50 and 75 errors.</li>
+  <div class="in">
+    <p class="sub-h" style="margin:0 0 .08in">Three rules for evidence-grounded scientific agents</p>
+    <ol class="concl2">
+      <li><b>Gate perception on entity survival, not average error.</b> Low page CER can hide broken scientific names, and fluent OCR errors look plausible and resist downstream repair.</li>
+      <li><b>Spend reasoning on linking, not extraction.</b> On clean text a small model extracts nearly as well at ~1/15 of the cost; an LLM linker lifted name-link recall from 0.59 to 0.91 (exploratory).</li>
+      <li><b>Separate verification from consensus.</b> Two models agreeing on 99–100% of values would still auto-accept shared upstream mistakes. Let code slice verbatim evidence; route review by independent checks.</li>
     </ol>
-    <p class="note" style="margin:.04in 0 0"><b class="ink">Implication:</b> invest first in name-preserving OCR, then in entity resolution; route review by independent signals. Scope: two English printed books, pre-registered.</p>
-    <p class="sub-h" style="margin:.1in 0 0">Exploratory extension: classical Chinese (本草綱目)</p>
-    <table class="zhtab">
-      <tr><th>Input</th><th class="num">CER</th><th class="num">Names intact</th><th class="num">Value F1</th></tr>
-      <tr><td>Scan-verified text</td><td class="num">0</td><td class="num">100%</td><td class="num">0.98</td></tr>
-      <tr><td>Claude Opus OCR</td><td class="num">0.03</td><td class="num">88%</td><td class="num">0.87</td></tr>
-      <tr><td>Claude Haiku OCR</td><td class="num">0.15</td><td class="num">69%</td><td class="num">0.68</td></tr>
-      <tr><td>PaddleOCR</td><td class="num">0.26</td><td class="num">68%</td><td class="num">0.72</td></tr>
-    </table>
-    <p class="note" style="margin:0"><i>Six development half-leaves; not an independent held-out evaluation.</i></p>
+    <p class="note" style="margin:.06in 0 0"><b class="ink">Scope and next.</b> Pre-registered pilot on two English printed books (16 locked test pages); now extending to a vertical, hand-copied Chinese manuscript (<i>Bencao gangmu</i>) and to timed human audits.</p>
+  </div>
+</div>
+<div class="box contact">
+  <p class="act">Connect &amp; Explore</p>
+  <div class="in">
+    <div class="cw">
+      <div class="cw-left">
+        <img class="ai4s" src="fig/ai4s_logo.png" alt="AI4S.fyi">
+        <p>A map of AI4S people, research,<br>companies and capital, read at source.</p>
+      </div>
+      <div class="cw-qrs">
+        <div class="cx-qr"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi"><span>ai4s.fyi</span></div>
+        <div class="cx-qr"><img src="fig/qr_linkedin.svg" alt="QR code to Dekun Sun's LinkedIn profile"><span>LinkedIn</span></div>
+      </div>
+    </div>
+    <p class="cw-line">Dekun (Gloria) Sun on LinkedIn · @gloria_sun on X</p>
   </div>
 </div>
 </div>

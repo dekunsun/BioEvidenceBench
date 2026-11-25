@@ -29,14 +29,15 @@ def css() -> str:
     c += """
 /* BioEvidenceBench additions */
 #r1{grid-template-columns:0.44fr 0.56fr}
-#r2{grid-template-columns:0.71fr 0.29fr}
-#r3{grid-template-columns:0.54fr 0.46fr}
-main{gap:0.2in !important}
+#r2{grid-template-columns:0.665fr 0.335fr}
+#r3{grid-template-columns:0.5fr 0.5fr}
+main{gap:0.16in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
-.box>.in{padding:0.34in 0.34in 0.30in}
+.box>.in{padding:0.26in 0.34in 0.22in}
 h1{font-size:72px}
 .brand{gap:.3in}
-.brand .penn,.brand .cas{width:2.75in !important;height:auto;display:block}  /* same width, so the two logos share left and right edges */
+.brand .logos{display:flex;gap:.3in;align-items:center;justify-content:center}
+.brand .penn,.brand .cas{height:.95in !important;width:auto !important;display:block}  /* one row, same height */
 .brand{justify-items:center}
 h1{font-size:80px}
 ol.concl2{margin:0;padding-left:.36in}
@@ -53,19 +54,19 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .quiz .opt b{font-size:36px;color:var(--accent);font-weight:600}
 .quiz .opt i{font-size:40px;color:var(--ink)}
 .quiz .qscan{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6px}
-.quiz .ans{margin-top:auto;padding-top:.12in;border-top:1.5px solid var(--rule);font-size:22px;color:var(--soft)}
+.quiz .ans{margin-top:.08in;padding-top:.08in;border-top:1.5px solid var(--rule);font-size:22px;color:var(--soft)}
 .quiz .ans b{color:var(--ink);font-weight:600}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.3in;margin-top:.1in;padding:.12in .2in;background:#f3f5f9;border-radius:10px}
 .facts div{display:flex;gap:.14in;align-items:baseline}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--soft);line-height:1.25}
 #r3 .box:first-child svg{max-height:6.2in}
-#r1 .two{grid-template-columns:0.40fr 0.60fr !important}
+#r1 .two{grid-template-columns:0.37fr 0.63fr !important}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
 .box.contact .cx-qr img{max-width:1.0in}
 .box.contact .cw-left .ai4s{width:2.6in !important}
-.box.contact>.in{padding:0.2in 0.34in 0.16in !important}
+.box.contact>.in{padding:0.14in 0.34in 0.1in !important}
 #r3 .stack .box:first-child>.in{padding-top:.22in;padding-bottom:.18in}
 .box.contact .cw-line{margin-top:.08in;padding-top:.08in}
 .big3{display:grid;grid-template-columns:1fr 0.85fr 1.35fr;gap:.3in;margin:.08in 0 .05in;padding:.12in .25in;background:#f3f5f9;border-radius:10px}
@@ -166,7 +167,7 @@ def robot(cx, top, s=1.0):
 
 
 def motivation_svg() -> str:
-    W, H = 800, 124
+    W, H = 800, 252
     p = [DEFS]
     cards = [("Printed, 1849", "BULIMUS", "CHILENSIS", INK, RULE),
              ("Library OCR ✗", "BuLlMLS", "CiilLE.NSls", RED, RULE),
@@ -180,9 +181,19 @@ def motivation_svg() -> str:
         p.append(f'<text x="{x + 120}" y="104" text-anchor="middle" font-size="27" {fam} fill="{col}">{b}</text>')
         if i < 2:
             p.append(arrow(f"M{x + 246} 61 H{x + 274}"))
+    # the five steps a record depends on; read and link are where most evidence was lost
+    p.append(f'<text x="0" y="178" font-size="25" fill="{SOFT}">Five steps must hold; most evidence was lost at the two in red:</text>')
+    for i, st in enumerate(["read", "extract", "ground", "link", "review"]):
+        x, lost = i * 163, st in ("read", "link")
+        col = RED if lost else NAVY
+        p.append(f'<rect x="{x}" y="198" width="128" height="50" rx="25" fill="{"#f8eceb" if lost else "#fff"}" stroke="{col}" stroke-width="{3 if lost else 2}"/>')
+        p.append(f'<text x="{x + 64}" y="232" text-anchor="middle" font-size="26" font-weight="{600 if lost else 500}" fill="{col}">{st}</text>')
+        if i < 4:
+            p.append(arrow(f"M{x + 131} 223 H{x + 159}"))
     return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="The printed name '
             f'BULIMUS CHILENSIS, the library OCR BuLlMLS CiilLE.NSls, and the name the database needs, Bulimus '
-            f'chilensis.">' + "\n".join(p) + "</svg>")
+            f'chilensis. Five steps must hold: read, extract, ground, link, review; most evidence was lost at '
+            f'read and link.">' + "\n".join(p) + "</svg>")
 
 
 def methods_svg() -> str:
@@ -210,80 +221,58 @@ def methods_svg() -> str:
 
 
 def framework_svg() -> str:
-    """Box 05 (2026-11-25, from a reviewer's suggestion the author sent): an evidence-aware agent workflow
-    with a decision and a loop. Solid boxes are the steps this study measured; the decision, the re-check
-    and the person are proposed and untested end to end (dashed). Numbers on the left are the measured
-    losses on the 16 test pages; the signals note is the exploratory review-signal result."""
-    W, H = 1419, 742
-    TINT, LINE = "#eef1f7", "#c4cbd0"
+    W, H = 1419, 722
     p = [DEFS]
-    cx, x0, bw, bh = 700, 440, 520, 76
-
-    def step(y, title, sub, fill=TINT, tc=NAVY, sc=SOFT, stroke=LINE, dash=False):
-        d = ' stroke-dasharray="9 7"' if dash else ""
-        p.append(f'<rect x="{x0}" y="{y}" width="{bw}" height="{bh}" rx="12" fill="{fill}" stroke="{stroke}" stroke-width="2"{d}/>')
-        p.append(f'<text x="{cx}" y="{y + 33}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{tc}">{title}</text>')
-        if sub:
-            p.append(f'<text x="{cx}" y="{y + 63}" text-anchor="middle" font-size="25" fill="{sc}">{sub}</text>')
-
-    def note(y, text, col=SOFT, sub=""):
-        p.append(f'<text x="{x0 - 26}" y="{y}" text-anchor="end" font-size="26" fill="{col}">{text}</text>')
-        if sub:  # what the number measures, so it is never read as another metric
-            p.append(f'<text x="{x0 - 26}" y="{y + 27}" text-anchor="end" font-size="21" fill="{SOFT}">{sub}</text>')
-
-    ys = [0, 106, 212, 318, 424]
-    step(ys[0], "Scientific research task", "retrieve the relevant literature", fill=NAVY, tc="#fff", sc="#c9d3e8", stroke=NAVY)
-    step(ys[1], "Read source / OCR", "keep the original text")
-    step(ys[2], "Extract scientific entities", "points to a line; never rewrites it")
-    step(ys[3], "Verify evidence", "quote check + source provenance")
-    step(ys[4], "Resolve entity identity", "historical name → modern database")
-    for y in ys[:-1]:
-        p.append(arrow(f"M{cx} {y + bh + 2} V{y + 106 - 6}"))
-    p.append(robot(x0 + bw - 36, ys[2] + 8, 0.6))
-    # measured on the test pages (left column)
-    p.append(f'<text x="{x0 - 26}" y="26" text-anchor="end" font-size="24" font-style="italic" fill="{SOFT}">measured, 16 test pages</text>')
-    note(ys[1] + 36, "value F1 0.60 → 0.95", RED, "Butler, library → modern OCR")
-    note(ys[2] + 36, "value F1 0.93–0.98", SOFT, "4 Claude models, modern OCR")
-    note(ys[3] + 36, "no recall cost", SOFT, "recall, quote required vs not")
-    note(ys[4] + 36, "14 of 34 names lost", RED, "plain GBIF lookup, Butler")
-    # decision
-    dy, dh, dw = 572, 70, 210
-    p.append(arrow(f"M{cx} {ys[4] + bh + 2} V{dy - dh - 6}"))
-    p.append(f'<path d="M{cx} {dy - dh} L{cx + dw} {dy} L{cx} {dy + dh} L{cx - dw} {dy} Z" fill="#fff" stroke="{NAVY}" stroke-width="2.5" stroke-dasharray="9 7"/>')
-    p.append(f'<text x="{cx}" y="{dy - 6}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">Sufficient</text>')
-    p.append(f'<text x="{cx}" y="{dy + 28}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">evidence?</text>')
-    note(dy - 10, "auto-accept set still wrong:", RED)
-    note(dy + 22, "50 Butler · 75 Reeve", RED, "library OCR, both models agree")
-    # yes: the record
-    ry = 676
-    p.append(arrow(f"M{cx} {dy + dh} V{ry - 6}"))
-    p.append(f'<text x="{cx + 16}" y="{dy + dh + 26}" font-size="24" fill="{SOFT}">yes</text>')
-    p.append(f'<rect x="{x0}" y="{ry}" width="{bw}" height="62" rx="12" fill="{NAVY}"/>')
-    p.append(f'<text x="{cx}" y="{ry + 41}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="#fff">Auditable record</text>')
-    # no: re-check, then back to reading
-    lx, lw, ly, lh = 1050, 330, 246, 140
-    lc = lx + lw / 2
-    nx = lx + lw - 34  # the "no" line enters the box near its right edge, clear of the signals note
-    p.append(f'<path d="M{cx + dw} {dy} H{nx} V{ly + lh + 6}" fill="none" stroke="{SOFT}" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>')
-    p.append(f'<text x="{cx + dw + 18}" y="{dy - 12}" font-size="24" fill="{SOFT}">no</text>')
-    p.append(f'<rect x="{lx}" y="{ly}" width="{lw}" height="{lh}" rx="12" fill="#fff" stroke="{SOFT}" stroke-width="2" stroke-dasharray="9 7"/>')
-    for i, (t, wt, col) in enumerate([("Re-check the scan", 600, NAVY), ("or ask a person", 400, SOFT), ("to review", 400, SOFT)]):
-        p.append(f'<text x="{lc}" y="{ly + 44 + i * 34}" text-anchor="middle" font-size="{FS}" font-weight="{wt}" fill="{col}">{t}</text>')
-    p.append(f'<path d="M{lc} {ly} V{ys[1] + bh / 2} H{x0 + bw + 8}" fill="none" stroke="{SOFT}" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#ah)"/>')
-    for i, t in enumerate(["Signals that helped:", "OCR junk, no exact", "database match.", "Not: model agreement."]):
-        p.append(f'<text x="{nx - 18}" y="{ly + lh + 44 + i * 30}" text-anchor="end" font-size="24" fill="{SOFT}">{t}</text>')
-    # legend
-    for i, t in enumerate(["Solid: measured here.", "Dashed: proposed, not", "yet tested end to end."]):
-        p.append(f'<text x="0" y="{H - 62 + i * 28}" font-size="24" fill="{SOFT}">{t}</text>')
-    return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="An evidence-aware scientific '
-            f'agent, proposed workflow. Research task; read source or OCR, keeping the original text (measured: value F1 '
-            f'0.60 to 0.95, library to modern OCR); extract entities, the model (drawn as a robot) points to a line and never rewrites it (F1 0.93 '
-            f'to 0.98); verify evidence by quote check and provenance (0 recall lost); resolve identity against a '
-            f'modern database (14 of 34 names lost). Then a decision, sufficient evidence? Two models agreeing is '
-            f'not enough: agreed but wrong, 50 in Butler and 75 in Reeve. Yes: auditable record. No: re-check the '
-            f'scan or ask a person, then read again. Signals that helped: OCR junk and no exact database match, '
-            f'not model agreement. Solid steps were measured; dashed ones are proposed and untested end to end.">'
-            + "\n".join(p) + "</svg>")
+    # left: the model writes the record
+    p.append(f'<rect x="0" y="0" width="690" height="{H - 6}" rx="18" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>')
+    p.append(f'<text x="25" y="46" font-size="{FS}" font-weight="700" fill="{SOFT}">Model writes the record</text>')
+    L = [(76, 60, [("Scanned page", 600, INK)]),
+         (196, 114, [("Model", 600, INK), ("reads the OCR,", 400, SOFT), ("repairs, writes value", 400, SOFT)]),
+         (370, 114, [("Record", 600, INK), ("<tspan font-style='italic'>Turritella</tspan>", 400, SOFT),
+                     ("<tspan font-style='italic'>brevisis</tspan>", 400, SOFT)]),
+         (550, 60, [("Researcher trusts it", 600, INK)])]
+    prev = None
+    for y, h, lines in L:
+        p.append(box(25, y, 316, h, lines))
+        if prev:
+            p.append(arrow(f"M183 {prev} V{y - 5}"))
+        prev = y + h
+    for i, t in enumerate(["~8% of changed", "values are wrong;", "fluent OCR errors", "pass unrepaired"]):
+        p.append(f'<text x="366" y="{232 + i * 32}" font-size="{FS}" font-weight="400" fill="{SOFT}">{t}</text>')
+    # right: code owns the text
+    x0 = 723
+    p.append(f'<rect x="{x0}" y="0" width="690" height="{H - 6}" rx="18" fill="#eef1f7" stroke="{NAVY}" stroke-width="2"/>')
+    p.append(f'<text x="{x0 + 25}" y="46" font-size="{FS}" font-weight="700" fill="{NAVY}">Code owns the text</text>')
+    bx, bw = 748, 330
+    R = [(76, 60, [("Scanned page", 600, INK)]),
+         (166, 92, [("OCR text", 600, INK), ("F1 0.60 → 0.95", 400, RED)]),
+         (290, 124, [("Code checks quote,", 600, NAVY), ("slices the value", 600, NAVY), ("0 recall lost", 400, SOFT)]),
+         (446, 92, [("LLM linker + GBIF", 600, INK), ("recall 0.59 → 0.91", 400, RED)]),
+         (570, 124, [("Human review", 600, INK), ("50 & 75 shared errors", 400, RED), ("on legacy OCR", 400, RED)])]
+    prev = None
+    for y, h, lines in R:
+        p.append(box(bx, y, bw, h, lines, stroke=RULE))
+        if prev:
+            p.append(arrow(f"M{bx + bw / 2} {prev} V{y - 5}"))
+        prev = y + h
+    # the model on the side, with a robot
+    mx, my, mw, mh = 1110, 104, 286, 256
+    p.append(f'<rect x="{mx}" y="{my}" width="{mw}" height="{mh}" rx="12" fill="#fff" stroke="{SOFT}" stroke-width="2" stroke-dasharray="9 7"/>')
+    p.append(robot(mx + mw / 2, my + 16, 0.95))
+    for i, (t, wt, col) in enumerate([("Model", 600, INK), ("finds mentions,", 400, SOFT),
+                                      ("quotes the line", 400, SOFT), ("F1 0.93–0.98", 400, NAVY)]):
+        p.append(f'<text x="{mx + mw / 2}" y="{my + 136 + i * 32}" text-anchor="middle" font-size="{FS}" font-weight="{wt}" fill="{col}">{t}</text>')
+    p.append(arrow(f"M{bx + bw} 212 H{mx - 5}", dash=True))
+    p.append(arrow(f"M{mx + 60} {my + mh} V384 H{bx + bw + 5}", dash=True))
+    for i, t in enumerate(["never rewrites", "the source text"]):
+        p.append(f'<text x="{mx + mw / 2 + 20}" y="{456 + i * 32}" text-anchor="middle" font-size="{FS}" font-weight="600" fill="{NAVY}">{t}</text>')
+    return (f'<svg viewBox="-3 -3 {W} {H}" width="100%" role="img" aria-label="Two designs. Model writes the '
+            f'record: scanned page, model reads the OCR, repairs it and writes the value, record, researcher trusts it; '
+            f'about 8% of changed values are wrong, and fluent OCR errors pass unrepaired. Code owns the text: scanned page, OCR text '
+            f'(F1 0.60 to 0.95 by OCR), code checks the quote and slices the value (0 recall lost), LLM linker '
+            f'plus GBIF lookup (recall 0.59 to 0.91 on 34 correctly read Butler names), human review (on library OCR the values both models agreed on still held 50 errors in Butler and 75 in Reeve); the model, '
+            f'drawn as a robot, finds mentions and quotes the line, F1 0.93 to 0.98, and never rewrites the '
+            f'source text.">' + "\n".join(p) + "</svg>")
 
 
 def page() -> str:
@@ -302,17 +291,13 @@ def page() -> str:
   <div>
     <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>Where do AI agents lose evidence in historical scientific literature?</h1>
-    <p class="key"><b>BioEvidenceBench · Key finding:</b> most evidence was lost at reading (value F1 0.60 on library OCR, 0.95 on modern OCR) and at linking (14 of 34 names); extraction lost little.</p>
+    <p class="key"><b>Key finding:</b> modern OCR lifted value F1 from 0.60–0.64 to 0.95–0.98, yet 14 of 34 correctly extracted bird names still failed direct database linking. Accurate extraction is not enough for trustworthy scientific evidence.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
-    <img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
-    <img class="cas" src="fig/cas_logo_reverse.png" alt="California Academy of Sciences">
-    <div class="hqrs">
-      <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>Code and data</span></div>
-      <div class="hqr"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi"><span>ai4s.fyi</span></div>
-      <div class="hqr"><img src="fig/qr_linkedin.svg" alt="QR code to Dekun Sun's LinkedIn profile"><span>LinkedIn</span></div>
-    </div>
+    <div class="logos"><img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
+    <img class="cas" src="fig/cas_logo_reverse.png" alt="California Academy of Sciences"></div>
+    <div class="hqr"><img src="fig/qr_repo.svg" alt="QR code to the BioEvidenceBench repository"><span>github.com/dekunsun/BioEvidenceBench</span></div>
   </div>
 </header>
 
@@ -321,13 +306,13 @@ def page() -> str:
 <div class="box">
   <p class="act">01 · Motivation</p>
   <div class="in">
-    <h2>Two historical books, 1849 and 1907. An agent that quotes the OCR faithfully can still file the wrong species.</h2>
-    <div class="plates">
-      <figure><img src="fig/v5/reeve_plate17.jpg" alt="Reeve, Conchologia iconica 1849, plate XVII: Bulimus shells in colour"><figcaption>Reeve 1849, shells · plate XVII</figcaption></figure>
-      <figure><img src="fig/v5/butler_jay.jpg" alt="Butler, Birds of Great Britain and Ireland 1907, plate 96: the Jay"><figcaption>Butler 1907, birds · plate 96, Jay</figcaption></figure>
+    <h2>An agent that quotes the OCR faithfully can still file the wrong species.</h2>
+    <div class="scans">
+      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:1.75in">
+      <img src="fig/v5/hook_scan_grey.png" alt="BULIMUS CHILENSIS printed in Reeve 1849, BHL page 8966790" style="width:100%">
     </div>
-    <img class="line" src="fig/v5/bulimus_line.png" alt="The printed line BULIMUS CHILENSIS in Reeve 1849, BHL page 8966790">
     {motivation_svg()}
+    <p class="note" style="margin-top:.14in">Reeve, <i>Conchologia iconica</i> (1849), BHL page 8966790. The Biodiversity Heritage Library holds 64 million scanned pages like this.</p>
   </div>
 </div>
 <div class="box">
@@ -383,15 +368,17 @@ def page() -> str:
   <p class="act">04 · Try it</p>
   <div class="in">
     <h2 class="qh">Printed, or written by OCR?</h2>
-    <p style="margin:0 0 .14in">In each pair, one name is on the page; the other is a modern OCR model's reading of it. Which is printed?</p>
+    <p style="margin:0 0 .1in">One name per pair is on the page; the other is a modern OCR model's reading.</p>
     <div class="pairs">
       <span class="n">1</span><div>A <i>Bulimus granulatus</i></div><div>B <i>Bulimus granulosus</i></div>
-      <span class="n">2</span><div>A <i>Phylloscopus viridanus</i></div><div>B <i>Phylloscopus viridans</i></div>
-      <span class="n">3</span><div>A <i>Turbo ungulinus</i></div><div>B <i>Turbo ungulatus</i></div>
-      <span class="n">4</span><div>A <i>Luscinia schwarzi</i></div><div>B <i>Lusciniola schwarzi</i></div>
+      <span class="n">2</span><div>A <i>Luscinia schwarzi</i></div><div>B <i>Lusciniola schwarzi</i></div>
     </div>
-    <p class="note" style="margin:.12in 0 0">Every fake is well-formed Latin; nothing in the text looks broken. In pair 4 the fake is a real genus, so a database lookup would succeed, for the wrong bird.</p>
-    <p class="ans">Answers: 1 B · 2 A · 3 A · 4 B. Readings by Qwen3.5-9B, DeepSeek-OCR-2, olmOCR-2 and LightOnOCR-3 on test pages 8966790, 8992643, 8967281, 8992644.</p>
+    <p class="note" style="margin:.1in 0 0">Both fakes are well-formed Latin; <i>Luscinia</i> is even a real genus, so a lookup would succeed, for the wrong bird.</p>
+    <p class="ans">Answers: 1 B · 2 B. Readings by Qwen3.5-9B (Reeve 8966790) and LightOnOCR-3 (Butler 8992644).</p>
+    <p class="sub-h" style="margin:.2in 0 .04in">Exploratory extension: classical Chinese</p>
+    <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the Siku quanshu manuscript of the Bencao gangmu, 弘 one stroke short"><span class="zh" style="font-size:40px;color:var(--accent)">→ 陶弘景</span></div>
+    <p class="note" style="margin:.04in 0 .04in"><i>Bencao gangmu</i> 本草綱目 manuscript: the model writes the modern character, right for search, wrong for the edition.</p>
+<p class="note" style="margin:0">Names kept intact track F1 here too: Opus OCR 88% → 0.87, PaddleOCR 68% → 0.72 (CER 0.03 vs 0.26). Six development half-leaves; exploratory.</p>
   </div>
 </div>
 </div>
@@ -400,29 +387,37 @@ def page() -> str:
 <div class="box">
   <p class="act">05 · Proposed Framework</p>
   <div class="in">
-    <h2>An evidence-aware scientific agent: a proposed workflow, informed by these results</h2>
+    <h2>Code owns the text; the model points and quotes</h2>
     {framework_svg()}
   </div>
 </div>
 <div class="stack">
 <div class="box">
   <p class="act">06 · Conclusion</p>
-  <div class="in"><ol class="concl2">
-      <li><b>Reading is the dominant loss.</b> On the same 16 pages, value F1 rose from 0.60 / 0.64 on library OCR to 0.95 / 0.98 on modern OCR (Butler / Reeve). Across 24 OCR versions, name survival predicted F1; page CER did not.</li>
-      <li><b>Extraction is not the bottleneck.</b> Four Claude models reached 0.93–0.98 on modern OCR; requiring verbatim quotes cost no recall.</li>
-      <li><b>Entity resolution fails separately.</b> A plain GBIF lookup missed 14 of 34 correctly read Butler names (synonymy, changed genera).</li>
-      <li><b>Agreement is not verification.</b> Two models agreed on 99–100% of values, yet the agreed set on library OCR held 50 and 75 errors.</li>
+  <div class="in">
+    <p class="sub-h" style="margin:0 0 .08in">Three rules for evidence-grounded scientific agents</p>
+    <ol class="concl2">
+      <li><b>Gate perception on entity survival, not average error.</b> Low page CER can hide broken scientific names, and fluent OCR errors look plausible and resist downstream repair.</li>
+      <li><b>Spend reasoning on linking, not extraction.</b> On clean text a small model extracts nearly as well at ~1/15 of the cost; an LLM linker lifted name-link recall from 0.59 to 0.91 (exploratory).</li>
+      <li><b>Separate verification from consensus.</b> Two models agreeing on 99–100% of values would still auto-accept shared upstream mistakes. Let code slice verbatim evidence; route review by independent checks.</li>
     </ol>
-    <p class="note" style="margin:.04in 0 0"><b class="ink">Implication:</b> invest first in name-preserving OCR, then in entity resolution; route review by independent signals. Scope: two English printed books, pre-registered.</p>
-    <p class="sub-h" style="margin:.1in 0 0">Exploratory extension: classical Chinese (本草綱目)</p>
-    <table class="zhtab">
-      <tr><th>Input</th><th class="num">CER</th><th class="num">Names intact</th><th class="num">Value F1</th></tr>
-      <tr><td>Scan-verified text</td><td class="num">0</td><td class="num">100%</td><td class="num">0.98</td></tr>
-      <tr><td>Claude Opus OCR</td><td class="num">0.03</td><td class="num">88%</td><td class="num">0.87</td></tr>
-      <tr><td>Claude Haiku OCR</td><td class="num">0.15</td><td class="num">69%</td><td class="num">0.68</td></tr>
-      <tr><td>PaddleOCR</td><td class="num">0.26</td><td class="num">68%</td><td class="num">0.72</td></tr>
-    </table>
-    <p class="note" style="margin:0"><i>Six development half-leaves; not an independent held-out evaluation.</i></p>
+    <p class="note" style="margin:.06in 0 0"><b class="ink">Scope and next.</b> Pre-registered pilot on two English printed books (16 locked test pages); now extending to a vertical, hand-copied Chinese manuscript (<i>Bencao gangmu</i>) and to timed human audits.</p>
+  </div>
+</div>
+<div class="box contact">
+  <p class="act">Connect &amp; Explore</p>
+  <div class="in">
+    <div class="cw">
+      <div class="cw-left">
+        <img class="ai4s" src="fig/ai4s_logo.png" alt="AI4S.fyi">
+        <p>A map of AI4S people, research,<br>companies and capital, read at source.</p>
+      </div>
+      <div class="cw-qrs">
+        <div class="cx-qr"><img src="fig/qr_ai4s.svg" alt="QR code to ai4s.fyi"><span>ai4s.fyi</span></div>
+        <div class="cx-qr"><img src="fig/qr_linkedin.svg" alt="QR code to Dekun Sun's LinkedIn profile"><span>LinkedIn</span></div>
+      </div>
+    </div>
+    <p class="cw-line">Dekun (Gloria) Sun on LinkedIn · @gloria_sun on X</p>
   </div>
 </div>
 </div>
