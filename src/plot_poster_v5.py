@@ -31,7 +31,7 @@ def bencao_bars() -> None:
     d = pd.read_csv(v3.ROOT / "results" / "bencao_pilot" / "ocr_to_extraction_p2.csv").set_index("text")
     rows = [("Scan-verified", "verified_plain", "0"), ("Opus OCR", "claude_opus", "0.03"),
             ("Haiku OCR", "claude_haiku", "0.15"), ("PaddleOCR", "paddleocr", "0.26")]
-    fig, ax = plt.subplots(figsize=(3.6, 1.35))
+    fig, ax = plt.subplots(figsize=(3.6, 1.5))
     for i, (lab, key, cer) in enumerate(rows):
         from decimal import Decimal, ROUND_HALF_UP
         f1 = float(Decimal(str(d.loc[key, "ALL_PRIMARY_value_f1"])).quantize(Decimal("0.01"), ROUND_HALF_UP))  # 0.865 -> 0.87, as in the README
