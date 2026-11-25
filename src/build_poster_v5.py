@@ -28,9 +28,9 @@ def css() -> str:
     c = c.replace('"Noto Sans",sans-serif', '"Noto Sans","WenQuanYi Zen Hei",sans-serif')
     c += """
 /* BioEvidenceBench additions */
-#r1{grid-template-columns:0.44fr 0.56fr}
-#r2{grid-template-columns:0.635fr 0.365fr}
-#r3{grid-template-columns:0.56fr 0.44fr}
+#r1{grid-template-columns:0.5fr 0.5fr}
+#r2{grid-template-columns:0.665fr 0.335fr}
+#r3{grid-template-columns:0.54fr 0.46fr}
 main{gap:0.16in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.26in 0.34in 0.22in}
@@ -66,7 +66,7 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .facts .v{font-size:34px;font-weight:600;color:var(--accent)}
 .facts .d{color:var(--ink);line-height:1.25}
 .facts .d small{display:block;font-size:22px;color:var(--soft)}
-#r3 .box:first-child svg{max-height:7.4in}
+#r3 .box:first-child svg{max-height:none}
 #r1 .two{grid-template-columns:0.45fr 0.55fr !important}
 .zhtab{font-size:24px;margin:0 0 .06in;table-layout:auto}
 .zhtab th,.zhtab td{padding:.03in .1in;font-size:24px}
@@ -121,6 +121,13 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 #r3 .box:first-child>.in>h2{margin-bottom:0}
 .grid2>div:nth-child(4){align-self:center}
 """
+    # spread any spare height evenly inside each card instead of leaving it at the bottom
+    c += "\n.box>.in{display:flex !important;flex-direction:column;justify-content:space-evenly !important}\n.box>.in>*{flex:none}\n"
+    c += "#r1 .box:first-child svg{width:90% !important;margin:0 auto;display:block}\n"  # keep its text at body size
+    # one smaller type scale for the whole poster (2026-11-25): body 24, notes 20, card headers 32
+    for old, new in (("font-size:26px", "font-size:24px"), ("font-size:22px", "font-size:20px"),
+                     ("font-size:34px", "font-size:32px"), ("font-size:23px", "font-size:21px")):
+        c = c.replace(old, new)
     return c
 
 
@@ -242,91 +249,78 @@ def methods_svg() -> str:
 
 
 def framework_svg() -> str:
-    """Box 05, redrawn 2026-11-25 for legibility: the viewBox is about as wide as the box on the poster, so
-    text sizes are poster pixels (26 titles, 24 box text, 22 notes). Left: the model writes the record.
-    Right: code owns the text (tested steps, solid) and a proposed decision that routes each value to an
-    accepted record or to review (dashed). * = exploratory (LLM linker)."""
-    W, H = 1110, 690
-    TINT, TSTROKE, GREEN = "#eef1f7", "#9fb0d0", "#2e7d4f"
+    """Box 05, simplified 2026-11-25 from the author's sketch: few words, large type (viewBox about the box's
+    width, so sizes are poster pixels). Left: the model writes the record (silent changes). Right: the
+    evidence-aware workflow; solid steps were tested in this pilot, the dashed decision and its two exits
+    are proposed. The measured numbers live in box 03."""
+    W, H = 1110, 790
+    TSTROKE, GREEN = "#9fb0d0", "#2e7d4f"
     p = [DEFS]
 
-    def t(x, y, s, size=24, wt=400, col=INK, anchor="middle", extra=""):
+    def t(x, y, s, size=28, wt=400, col=INK, anchor="middle", extra=""):
         p.append(f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{wt}" fill="{col}" text-anchor="{anchor}"{extra}>{s}</text>')
 
-    def rect(x, y, w, h, fill="#fff", stroke=RULE, dash=False, r=12, sw=2):
+    def rect(x, y, w, h, fill="#fff", stroke=TSTROKE, dash=False, r=12):
         d = ' stroke-dasharray="9 7"' if dash else ""
-        p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"{d}/>')
+        p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}" stroke="{stroke}" stroke-width="2.5"{d}/>')
 
-    # legend
-    rect(560, 4, 44, 26, TINT, TSTROKE, r=7)
-    t(614, 25, "tested in this pilot", 22, col=SOFT, anchor="start")
-    rect(820, 4, 44, 26, "#fff", SOFT, dash=True, r=7)
-    t(874, 25, "proposed", 22, col=SOFT, anchor="start")
-
-    top = 48
     # left: the model writes the record
-    p.append(f'<rect x="0" y="{top}" width="300" height="{H - top - 2}" rx="16" fill="#f5f6f7" stroke="#c4cbd0" stroke-width="2"/>')
-    t(150, top + 44, "Model writes", 26, 700, SOFT)
-    t(150, top + 76, "the record", 26, 700, SOFT)
-    L = [(150, 60, ["Scanned page"]), (250, 96, ["Model reads,", "repairs, writes"]),
-         (386, 96, ["Record", "<tspan font-style='italic'>Turritella</tspan> <tspan font-style='italic' fill='" + RED + "'>brevisis</tspan>"]),
-         (522, 60, ["Researcher trusts it"])]
+    p.append(f'<rect x="0" y="0" width="320" height="{H - 2}" rx="16" fill="#f2f3f5" stroke="#c4cbd0" stroke-width="2"/>')
+    t(160, 58, "Model writes", 32, 700, SOFT)
     prev = None
-    for y, h, lines in L:
-        rect(22, y, 256, h)
-        y0 = y + h / 2 - (len(lines) - 1) * 15 + 8
-        for i, s in enumerate(lines):
-            t(150, y0 + i * 30, s, 24, 600 if i == 0 else 400, INK if i == 0 else SOFT)
+    for i, lab in enumerate(["Scanned page", "Model repairs", "Writes value", "Record"]):
+        y = 110 + i * 158
+        rect(30, y, 260, 84, stroke="#c4cbd0")
+        t(160, y + 52, lab, 28, 400, INK)
         if prev:
-            p.append(arrow(f"M150 {prev + 2} V{y - 4}"))
-        prev = y + h
-    t(150, 630, "no trace of changes", 22, col=SOFT, extra=' font-style="italic"')
+            p.append(arrow(f"M160 {prev + 2} V{y - 5}"))
+        prev = y + 84
+    t(160, 742, "Silent changes", 28, 400, RED, extra=' font-style="italic"')
 
-    # right: code owns the text
-    x0 = 326
-    p.append(f'<rect x="{x0}" y="{top}" width="{W - x0 - 2}" height="{H - top - 2}" rx="16" fill="#fff" stroke="{NAVY}" stroke-width="2.5"/>')
-    t(x0 + 24, top + 44, "Code owns the text", 26, 700, NAVY, "start")
-    bx, bw, bh = x0 + 24, 360, 84
-    R = [(120, "OCR text", ("value F1 0.60 → 0.95", RED)),
-         (244, "Model points to a quote", ("value F1 0.93–0.98", NAVY)),
-         (368, "Code checks the quote", ("slices the value from the text", SOFT)),
-         (492, "Link to GBIF", ("recall 0.59 → 0.91*", RED))]
+    # right: evidence-aware workflow
+    x0 = 346
+    p.append(f'<rect x="{x0}" y="0" width="{W - x0 - 2}" height="{H - 2}" rx="16" fill="#f6f8fc" stroke="{TSTROKE}" stroke-width="2.5"/>')
+    t(x0 + 30, 58, "Evidence-aware workflow", 32, 700, NAVY, "start")
+    bx, bw, bh, cx = x0 + 30, 400, 74, x0 + 30 + 200
+    steps = ["OCR text", "Model points + quotes", "Code verifies + slices", "Resolve entity"]
     prev = None
-    for y, title, (val, col) in R:
-        rect(bx, y, bw, bh, TINT, TSTROKE)
-        t(bx + 20, y + 36, title, 24, 600, INK, "start")
-        t(bx + 20, y + 67, val, 22, 400, col, "start")
+    for i, lab in enumerate(steps):
+        y = 96 + i * 96
+        rect(bx, y, bw, bh)
+        t(cx - (22 if i == 1 else 0), y + 47, lab, 28, 500, NAVY)
         if prev:
-            p.append(arrow(f"M{bx + bw / 2} {prev + 2} V{y - 4}"))
+            p.append(arrow(f"M{cx} {prev + 2} V{y - 5}"))
         prev = y + bh
-    p.append(robot(bx + bw - 34, 244 + 12, 0.62))
+    p.append(robot(bx + bw - 28, 96 + 96 + 8, 0.52))
     # decision (proposed)
-    cx, cy, hw, hh = 935, 410, 150, 74
-    p.append(arrow(f"M{bx + bw + 2} {492 + bh / 2} H{bx + bw + 28} V{cy} H{cx - hw - 4}"))
-    p.append(f'<path d="M{cx} {cy - hh} L{cx + hw} {cy} L{cx} {cy + hh} L{cx - hw} {cy} Z" fill="#fff" stroke="{SOFT}" stroke-width="2" stroke-dasharray="9 7"/>')
-    t(cx, cy - 6, "Evidence", 24, 600, NAVY)
-    t(cx, cy + 24, "sufficient?", 24, 600, NAVY)
-    # no: review (above)
-    ry = 150
-    rect(cx - 152, ry, 304, 96, dash=True, stroke=SOFT)
-    t(cx, ry + 38, "Review", 24, 700, NAVY)
-    t(cx, ry + 70, "re-check scan, or a person", 21, col=SOFT)
-    p.append(arrow(f"M{cx} {cy - hh - 2} V{ry + 96 + 4}", dash=True))
-    t(cx + 14, cy - hh - 20, "no", 22, col=RED, anchor="start")
-    # yes: accept (below)
-    ay = 540
-    p.append(arrow(f"M{cx} {cy + hh + 2} V{ay - 4}", dash=True))
-    t(cx + 14, cy + hh + 30, "yes", 22, col=GREEN, anchor="start")
-    rect(cx - 152, ay, 304, 96, "#eef6f0", GREEN, dash=True)
-    t(cx, ay + 38, "Accept record", 24, 700, INK)
-    t(cx, ay + 70, "page, line, quote kept", 22, col=SOFT)
-    return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="Two designs. Model writes the '
-            f'record: scanned page, the model reads, repairs and writes, record Turritella brevisis, researcher trusts '
-            f'it; no trace of changes. Code owns the text: OCR text, value F1 0.60 to 0.95; the model, drawn as a '
-            f'robot, points to a quote, value F1 0.93 to 0.98; code checks the quote and slices the value from the '
-            f'text; link to GBIF, recall 0.59 to 0.91 with an exploratory LLM linker. These steps were tested. '
-            f'Proposed: if the evidence is sufficient, accept the record with page, line and quote kept; if not, '
-            f'review by re-checking the scan or by a person.">' + "\n".join(p) + "</svg>")
+    dy, hw, hh = 552, 190, 78
+    p.append(arrow(f"M{cx} {prev + 2} V{dy - hh - 5}"))
+    p.append(f'<path d="M{cx} {dy - hh} L{cx + hw} {dy} L{cx} {dy + hh} L{cx - hw} {dy} Z" fill="#fff" stroke="{SOFT}" stroke-width="2.5" stroke-dasharray="9 7"/>')
+    t(cx, dy - 6, "Evidence", 28, 700, NAVY)
+    t(cx, dy + 28, "sufficient?", 28, 700, NAVY)
+    # no -> re-check or defer
+    rx, rw, ry, rh = 838, 240, 330, 110
+    rect(rx, ry, rw, rh, stroke=SOFT, dash=True)
+    t(rx + rw / 2, ry + 46, "Re-check", 28, 500, NAVY)
+    t(rx + rw / 2, ry + 82, "or defer", 28, 500, NAVY)
+    p.append(arrow(f"M{cx + hw + 2} {dy} H{rx + rw / 2} V{ry + rh + 5}", dash=True))
+    t(cx + hw + 60, dy - 14, "No", 26, col=RED)
+    # yes -> auditable record
+    ay = 696
+    p.append(arrow(f"M{cx} {dy + hh + 2} V{ay - 5}", dash=True))
+    t(cx + 20, dy + hh + 40, "Yes", 26, col=GREEN, anchor="start")
+    rect(bx - 10, ay, bw + 20, 74, "#eef6f0", GREEN, dash=True)
+    t(cx, ay + 48, "Auditable record", 28, 700, GREEN)
+    # legend
+    rect(rx, 676, 40, 26, "#fff", TSTROKE, r=6)
+    t(rx + 52, 697, "tested", 22, col=SOFT, anchor="start")
+    rect(rx, 720, 40, 26, "#fff", SOFT, dash=True, r=6)
+    t(rx + 52, 741, "proposed", 22, col=SOFT, anchor="start")
+    return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="Two designs. Model writes: '
+            f'scanned page, model repairs, writes value, record; silent changes. Evidence-aware workflow: OCR text, '
+            f'the model (drawn as a robot) points and quotes, code verifies the quote and slices the value, resolve '
+            f'entity; these steps were tested. Proposed: if the evidence is sufficient, an auditable record; if not, '
+            f're-check or defer.">' + "\n".join(p) + "</svg>")
 
 
 def page() -> str:
@@ -421,9 +415,8 @@ def page() -> str:
   <p class="act">04 · Try it</p>
   <div class="in">
     <h2 class="qh">Printed, or written by OCR?</h2>
-    <p class="note" style="margin:0 0 .12in">Can you spot the error a scientific agent might miss?</p>
-    <img class="qscan" src="fig/v5/quiz_granulosus.png" alt="The printed lines: Lesson, Voy. de la Coquille, pl. 8. f. 3. Bulimus granulosus, Broderip.">
-    <p class="note" style="margin:.04in 0 .12in;font-size:22px">Reeve, <i>Conchologia iconica</i> (1849), BHL page 8966790</p>
+        <img class="qscan" src="fig/v5/quiz_granulosus.png" alt="The printed lines: Lesson, Voy. de la Coquille, pl. 8. f. 3. Bulimus granulosus, Broderip.">
+    <p class="note" style="margin:.04in 0 .12in;font-size:22px">Reeve 1849, BHL page 8966790</p>
     <p style="margin:0 0 .08in">Which name is on the page?</p>
     <div class="opts"><div class="opt"><b>A</b><i>Bulimus granulatus</i></div>
     <div class="opt"><b>B</b><i>Bulimus granulosus</i></div></div>
@@ -431,7 +424,7 @@ def page() -> str:
     <p class="ans flipped">Answer: B. A is a modern OCR model's reading.</p>
     <p class="sub-h" style="margin:.14in 0 .02in">Exploratory extension: classical Chinese</p>
     <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the Siku quanshu manuscript of the Bencao gangmu, 弘 one stroke short"><span class="zh" style="font-size:34px;color:var(--accent)">→ 陶弘景</span></div>
-    <p class="note" style="margin:.02in 0 0">本草綱目 manuscript: the model writes the modern form.</p>
+    <p class="note" style="margin:.02in 0 0">本草綱目: the model writes the modern form.</p>
 
   </div>
 </div>
@@ -441,9 +434,8 @@ def page() -> str:
 <div class="box">
   <p class="act">05 · Proposed Framework</p>
   <div class="in">
-    <h2>Code owns the text; the model points, quotes, and defers</h2>
+    <h2>Code owns the text; the model points and quotes.</h2>
     {framework_svg()}
-    <p class="note" style="margin:.08in 0 0">* Exploratory. When the model repairs the text (left), ~8% of the values it changes are wrong.</p>
   </div>
 </div>
 <div class="stack">
@@ -456,7 +448,7 @@ def page() -> str:
       <li><b>Spend reasoning on linking, not extraction.</b> Small models extract almost as well at ~1/15 the cost; an LLM linker raised recall 0.59 → 0.91.*</li>
       <li><b>Verify against the source, not consensus.</b> 99–100% model agreement still passed 50 and 75 errors.</li>
     </ol>
-    <p class="note" style="margin:.06in 0 0">Two English printed books, 16 locked test pages, pre-registered; * exploratory. Next: a hand-copied Chinese manuscript and timed audits.</p>
+    <p class="note" style="margin:.06in 0 0">Scope: two English printed books, pre-registered. * Exploratory.</p>
   </div>
 </div>
 <div class="box contact">
