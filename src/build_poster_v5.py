@@ -317,8 +317,8 @@ def framework_svg() -> str:
     # right: evidence-aware workflow; red = where evidence was lost on the 16 test pages
     x0 = 460
     p.append(f'<rect x="{x0}" y="0" width="{W - x0 - 2}" height="{H - 2}" rx="16" fill="#f6f8fc" stroke="{TSTROKE}" stroke-width="2.5"/>')
-    t(x0 + 30, 58, "Evidence-aware workflow", 32, 700, NAVY, "start")
     bx, bw, bh, cx = x0 + 40, 540, 92, x0 + 40 + 270
+    t(cx, 58, "Evidence-aware workflow", 32, 700, NAVY)  # centred over its step column, like "Model writes"
     steps = [("OCR text", "value F1 0.60 → 0.95", True),
              ("Model points + quotes", "value F1 0.93–0.98", False),
              ("Code verifies + slices", "no recall lost to quoting", False),
