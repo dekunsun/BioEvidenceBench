@@ -32,10 +32,13 @@ def css() -> str:
 #r2{grid-template-columns:0.70fr 0.30fr}
 #r3{grid-template-columns:0.60fr 0.40fr}
 main{gap:0.3in !important}
+main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.34in 0.34in 0.30in}
 h1{font-size:72px}
 .brand{gap:.3in}
-.brand .cas{width:2.7in;display:block}
+.brand .penn,.brand .cas{width:2.75in !important;height:auto;display:block}  /* same width, so the two logos share left and right edges */
+.brand{justify-items:center}
+h1{font-size:80px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:.3in .45in}
 .grid2 figure{margin:.05in 0 0}
 .scans{display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;margin:.05in 0 .2in}
@@ -227,7 +230,7 @@ def page() -> str:
 <header>
   <div>
     <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
-    <h1>Where do AI agents lose evidence when they extract, ground and link data from historical scientific literature?</h1>
+    <h1>Where do AI agents lose evidence in historical scientific literature?</h1>
     <p class="key"><b>BioEvidenceBench · Key finding:</b> evidence is lost when the agent reads (F1 0.60 on library OCR, 0.95 on modern OCR) and when it links (14 of 34 names), not when it extracts.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
