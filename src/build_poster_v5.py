@@ -308,7 +308,7 @@ def page() -> str:
 <div class="box">
   <p class="act">01 · Motivation</p>
   <div class="in">
-    <h2>Two real books, 1849 and 1907. An agent that quotes the OCR faithfully can still file the wrong species.</h2>
+    <h2>Two historical books, 1849 and 1907. An agent that quotes the OCR faithfully can still file the wrong species.</h2>
     <div class="plates">
       <figure><img src="fig/v5/reeve_plate17.jpg" alt="Reeve, Conchologia iconica 1849, plate XVII: Bulimus shells in colour"><figcaption>Reeve 1849, shells · plate XVII</figcaption></figure>
       <figure><img src="fig/v5/butler_jay.jpg" alt="Butler, Birds of Great Britain and Ireland 1907, plate 96: the Jay"><figcaption>Butler 1907, birds · plate 96, Jay</figcaption></figure>
