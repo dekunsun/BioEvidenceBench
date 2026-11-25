@@ -39,6 +39,18 @@ h1{font-size:72px}
 .brand .penn,.brand .cas{width:2.75in !important;height:auto;display:block}  /* same width, so the two logos share left and right edges */
 .brand{justify-items:center}
 h1{font-size:80px}
+.quiz .qh{font-size:36px;line-height:1.15;color:var(--accent);margin:0 0 .08in}
+.quiz .opt{display:flex;gap:.25in;align-items:baseline;border:2px solid var(--rule);border-radius:12px;padding:.14in .25in;margin:0 0 .14in;background:#fafbfc}
+.quiz .opt b{font-size:36px;color:var(--accent);font-weight:600}
+.quiz .opt i{font-size:40px;color:var(--ink)}
+.quiz .qscan{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6px}
+.quiz .ans{margin:.16in 0 0;color:var(--soft)}
+.quiz .ans b{color:var(--ink);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.3in;margin-top:.1in;padding:.12in .2in;background:#f3f5f9;border-radius:10px}
+.facts div{display:flex;gap:.14in;align-items:baseline}
+.facts .v{font-size:34px;font-weight:600;color:var(--accent)}
+.facts .d{color:var(--soft);line-height:1.25}
+#r3 .box:first-child svg{max-height:6.2in}
 .big3{display:grid;grid-template-columns:1fr 0.85fr 1.35fr;gap:.3in;margin:.08in 0 .05in;padding:.12in .25in;background:#f3f5f9;border-radius:10px}
 .big3 p{margin:0}
 .big3 .lab{color:var(--soft)}
@@ -73,7 +85,7 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 .dl .d b{display:block}
 .dl .d span{color:var(--soft)}
 .zh{font-family:"WenQuanYi Zen Hei",sans-serif}
-.bencao{display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;margin-top:.1in}
+.bencao{display:grid;grid-template-columns:auto auto 1fr;gap:.2in;align-items:center;margin-top:.1in}
 .bencao img{height:.62in;display:block}
 /* spacing (2026-11-25): spread spare height evenly instead of leaving it at the bottom of a box */
 #r1 .two{align-items:center;flex:1}
@@ -310,9 +322,15 @@ def page() -> str:
           <div class="out">model → {{"line": 2, "quote": "BULIMUS CHILENSIS"}}</div>
           <p>Code finds the quote in line 2 and slices the value from the text. A quote that differs from the text is logged as a silent correction.</p>
         </div>
-        <p class="gate" style="white-space:normal">Agents: Claude Opus 5.5 and Gemini 4 Carbon. Design after Lei, Docherty &amp; Cooper (2024): label before seeing model output.</p>
+
       </div>
     </div>
+    <div class="facts">
+      <div><span class="v">16</span><span class="d">test pages, Reeve 1849 and Butler 1907</span></div>
+      <div><span class="v">607</span><span class="d">mentions labelled by hand first</span></div>
+      <div><span class="v">0.90</span><span class="d">agreement between two labellers</span></div>
+    </div>
+    <p class="note" style="margin:.08in 0 0">Pre-registered and frozen before the test pages · agents: Claude Opus 5.5, Gemini 4 Carbon · design after Lei, Docherty &amp; Cooper (2024)</p>
   </div>
 </div>
 </div>
@@ -336,27 +354,19 @@ def page() -> str:
       <div><p class="sub-h">C · Linking 34 correctly read names</p>
         <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91"></figure></div>
     </div>
-    <div class="dq">
-      <p class="sub-h" style="margin:0">D · Spot the fake: which is printed in 1849?</p>
-      <div class="choices" style="margin:0"><div>A · Turritella brevisis</div><div>B · Turritella brevialis</div></div>
-      <div class="flip" style="margin:0">B is printed; a modern OCR model wrote A. Nothing looks broken.</div>
-    </div>
   </div>
 </div>
-<div class="box">
-  <p class="act">04 · Protocol and Data</p>
+<div class="box quiz">
+  <p class="act">04 · Try it</p>
   <div class="in">
-    <p>Pre-registered · frozen before the test pages · deviations logged</p>
-    <p>F1 per book, 95% page-bootstrap intervals; the two books are never pooled.</p>
-    <p class="sub-h" style="margin-top:.25in">Data</p>
-    <div class="dl">
-      <div class="v">16</div><div class="d"><b>Test pages</b><span>Reeve 1849 shells · Butler 1907 birds</span></div>
-      <div class="v">607</div><div class="d"><b>Hand-labelled mentions</b><span>before any model output</span></div>
-      <div class="v">0.90</div><div class="d"><b>Labeller agreement</b><span>exact match, 5 pages</span></div>
-    </div>
-    <p class="sub-h" style="margin-top:auto;padding-top:.2in">Next: classical Chinese</p>
-    <div class="bencao"><img src="fig/v2/bencao_chars.png" alt="陶弘景 as written in the manuscript, 弘 one stroke short"><span class="zh" style="font-size:40px;color:var(--accent)">→ 陶弘景</span></div>
-    <p class="note" style="margin-top:.08in"><i>Bencao gangmu</i> 本草綱目 manuscript: the model writes the modern character, right for search, wrong for the edition.</p>
+    <h2 class="qh">Can you spot the OCR error?</h2>
+    <p class="note" style="margin:0 0 .14in">Real example · Reeve 1849, page 8967281</p>
+    <p style="margin:0 0 .12in">Which name is on the printed page?</p>
+    <div class="opt"><b>A</b><i>Turritella brevisis</i></div>
+    <div class="opt"><b>B</b><i>Turritella brevialis</i></div>
+    <p class="sub-h" style="margin:.26in 0 .08in">Check the page yourself:</p>
+    <img class="qscan" src="fig/v5/quiz_scan_grey.png" alt="The printed line: The Turritella brevialis of Lamarck (LeMesal of Adanson)">
+    <p class="ans"><b>Answer: B.</b> A modern OCR model wrote A. Two letters changed, nothing looks broken, and the page error rate barely moves.</p>
   </div>
 </div>
 </div>
@@ -375,8 +385,9 @@ def page() -> str:
   <div class="in"><ul class="concl">
       <li><b>Finding.</b> Library OCR cost a third of the values; a plain database lookup lost 14 of 34 correctly read names. Extraction lost little on these pages (0.93–0.98).</li>
       <li><b>For agent builders.</b> Check that names survive OCR; let the model point and code write; test the database link on its own; agreement between models is not evidence.</li>
-      <li><b>Next.</b> Reeve's names; the classical Chinese test pages. Materials papers are untested.</li>
+      <li><b>Next.</b> Reeve's names; a classical Chinese pilot (本草綱目). Materials papers are untested.</li>
     </ul></div>
+
 </div>
 <div class="box contact">
   <p class="act">Connect &amp; Explore</p>
