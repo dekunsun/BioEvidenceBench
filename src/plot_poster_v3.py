@@ -22,7 +22,7 @@ INK, GREY, RULE, NAVY, LIGHT = "#1b1f24", "#5f6670", "#d7dbe0", "#011F5B", "#8d9
 COL = {"Butler": NAVY, "Reeve": LIGHT}
 MARK = {"Butler": "o", "Reeve": "s"}
 FS = 20.0
-W, H = 7.27, 4.1
+W, H = 7.27, 3.2
 
 plt.rcParams.update({"font.family": ["Inter", "DejaVu Sans"], "font.size": FS, "axes.edgecolor": GREY,
                      "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK, "axes.spines.top": False,
@@ -42,8 +42,12 @@ def f1_by_text() -> None:
         # labels: library OCR beside the points, modern OCR below (Butler) or above (Reeve); expert in the caption
         ax.text(x[0] + (-0.09 if book == "Butler" else 0.09), d.value_F1.iloc[0], f"{d.value_F1.iloc[0]:.2f}",
                 ha="right" if book == "Butler" else "left", va="center", fontsize=FS, color=INK)
-        ax.text(x[1], d.value_F1.iloc[1] + (-0.05 if book == "Butler" else 0.035), f"{d.value_F1.iloc[1]:.2f}",
-                ha="center", va="top" if book == "Butler" else "bottom", fontsize=FS, color=COL[book])
+        if book == "Butler":  # left of the point, clear of the legend in the lower right
+            ax.text(x[1] - 0.1, d.value_F1.iloc[1], f"{d.value_F1.iloc[1]:.2f}", ha="right", va="center",
+                    fontsize=FS, color=COL[book])
+        else:
+            ax.text(x[1], d.value_F1.iloc[1] + 0.035, f"{d.value_F1.iloc[1]:.2f}", ha="center", va="bottom",
+                    fontsize=FS, color=COL[book])
     ax.set_xticks(range(3), ["Library\nOCR", "Modern\nOCR", "Expert\ntranscription"])
     ax.set_xlim(-0.5, 2.5)
     ax.set_ylim(0.4, 1.08)
@@ -52,7 +56,7 @@ def f1_by_text() -> None:
     ax.grid(axis="y", color=RULE, lw=1)
     ax.set_axisbelow(True)
     ax.tick_params(length=0)
-    ax.legend(loc="lower right", frameon=False, handlelength=1.6)
+    ax.legend(loc="lower right", frameon=False, handlelength=1.4, fontsize=FS - 3, borderaxespad=0.2)
     fig.tight_layout()
     fig.savefig(OUT / "f1_by_text.png", dpi=200, facecolor="white")
     plt.close(fig)
@@ -69,15 +73,15 @@ def names_vs_f1() -> None:
                    label=f"{book}, Spearman ρ = {rho:.2f}", zorder=3)
     ax.plot([0.5, 1.0], [0.5, 1.0], color=LIGHT, lw=1.2, ls=(0, (4, 4)))
     ax.set_xlim(0.5, 1.02)
-    ax.set_ylim(0.5, 1.02)
+    ax.set_ylim(0.38, 1.02)  # room under the diagonal for the legend
     ax.set_xticks([0.6, 0.8, 1.0])
-    ax.set_yticks([0.6, 0.8, 1.0])
+    ax.set_yticks([0.4, 0.6, 0.8, 1.0])
     ax.set_xlabel("Share of gold names intact after OCR")
     ax.set_ylabel("Value F1")
     ax.grid(color=RULE, lw=1)
     ax.set_axisbelow(True)
     ax.tick_params(length=0)
-    ax.legend(loc="lower right", frameon=False, handletextpad=0.3)
+    ax.legend(loc="lower right", frameon=False, handletextpad=0.3, fontsize=FS - 3, borderaxespad=0.2)
     fig.tight_layout()
     fig.savefig(OUT / "names_vs_f1.png", dpi=200, facecolor="white")
     plt.close(fig)

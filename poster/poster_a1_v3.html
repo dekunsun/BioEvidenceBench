@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BioEvidenceBench poster (A1)</title>
+<!-- A1 poster for Deep Matters 2026, version 3: a research-poster layout. Three columns read top to
+     bottom; one typeface (Inter) at four sizes (title 72, section 36, body 26, caption 21 px); one accent
+     colour (Penn navy) and red only for evidence that was lost. Canvas 24 x 33.92 in, zoomed by 0.9744
+     to fill A1. Charts: src/plot_poster_v3.py; scan crops: src/make_poster_assets.py.
+     Render: node poster/render.js "$PWD/poster" poster A1 -->
+<style>
+@page { size: 594mm 841mm; margin: 0; }
+:root{ --navy:#011F5B; --ink:#1b1f24; --grey:#5f6670; --rule:#d7dbe0; --tint:#f4f5f7; --red:#b3261e; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:594mm;height:841mm;overflow:hidden;background:#fff}
+body{font-family:"Inter",Arial,"WenQuanYi Zen Hei",sans-serif;color:var(--ink);font-size:31px;line-height:1.36}
+.poster{zoom:0.9744;width:24in;height:33.92in;overflow:hidden;display:flex;flex-direction:column}
+.mono{font-family:"DejaVu Sans Mono",monospace;font-size:29px}
+b{font-weight:700}
+i{font-style:italic}
+
+/* header */
+header{background:var(--navy);color:#fff;padding:0.5in 0.6in 0.42in;display:grid;grid-template-columns:1fr auto;gap:0.6in;align-items:center}
+h1{font-size:80px;line-height:1.08;font-weight:700;margin:0 0 20px;letter-spacing:-.01em}
+.authors{font-size:31px;margin:0;color:#fff}
+.affil{font-size:24px;margin:6px 0 0;color:#c2cde3}
+.logos{display:grid;justify-items:end;gap:26px}
+.logos img.penn{width:3.0in}
+.logos img.cas{width:2.6in}
+
+/* body: three columns */
+main{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:0.5in;padding:0.45in 0.6in 0.35in;min-height:0}
+.col{display:flex;flex-direction:column;justify-content:space-between;gap:30px;min-height:0}
+.col > section:only-child{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+h2{font-size:42px;font-weight:700;color:var(--navy);margin:0 0 14px;padding-bottom:8px;border-bottom:3px solid var(--navy)}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:30px}
+li{margin:0 0 8px}
+.cap{font-size:24px;color:var(--grey);margin:8px 0 0;line-height:1.35}
+.cap b{color:var(--ink)}
+figure{margin:0}
+figure img{display:block;width:100%}
+.lost{color:var(--red);font-weight:700}
+
+/* figure 1 */
+.f1{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;margin-top:14px}
+img.scanfull{width:100%;display:block;border:1.5px solid var(--rule)}
+.f1 img{height:2.2in;width:auto;border:1.5px solid var(--rule)}
+.readings{border-top:1.5px solid var(--rule)}
+.readings div{display:block;padding:10px 0;border-bottom:1.5px solid var(--rule)}
+.readings .k{display:block}
+.readings .k{font-size:24px;color:var(--grey)}
+
+/* thumbnails */
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.thumbs img{width:100%;height:2.3in;object-fit:cover;object-position:top;border:1.5px solid var(--rule)}
+
+/* tables */
+table{border-collapse:collapse;width:100%;font-size:28px;line-height:1.3}
+th{font-size:24px;color:var(--grey);font-weight:600;text-align:left;padding:6px 8px;border-bottom:2px solid var(--ink)}
+td{padding:9px 8px;border-bottom:1.5px solid var(--rule);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:2px solid var(--ink)}
+
+
+/* agent chain */
+.chain{display:flex;flex-direction:column;align-items:stretch}
+.chain .node{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;border:1.5px solid var(--rule);border-left:8px solid var(--navy);padding:8px 14px}
+.chain .node.lostn{border-left-color:var(--red)}
+.chain .node.end{display:block;text-align:center;border:1.5px dashed var(--grey);color:var(--grey);font-weight:600}
+.chain .no{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:24px}
+.chain .lostn .no{background:var(--red)}
+.chain .nm{font-weight:700}
+.chain .nm em{display:block;font-style:normal;font-weight:400;font-size:24px;color:var(--grey)}
+.chain .val{font-weight:700;white-space:nowrap}
+.chain .arrow{text-align:center;color:var(--grey);font-size:24px;line-height:1.1}
+/* figure 5 panels */
+.panel{border-top:1.5px solid var(--rule);padding-top:12px;margin-top:12px}
+.panel:first-child{border-top:0;margin-top:0;padding-top:0}
+.panel .lab{font-weight:700}
+.panel img{border:1.5px solid var(--rule);margin:8px 0}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0}
+.choices div{border:1.5px solid var(--ink);padding:10px 12px;font-family:"DejaVu Serif",serif;font-style:italic;font-size:31px;text-align:center}
+.flip{transform:rotate(180deg);font-size:24px;color:var(--grey);background:var(--tint);padding:8px 12px}
+
+/* case study */
+.case{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.case img.page{height:4.4in;border:1.5px solid var(--rule)}
+.case .rows div{padding:6px 0;border-bottom:1.5px solid var(--rule)}
+.case .rows .k{font-size:24px;color:var(--grey);display:block}
+.case .rows img{height:64px;display:block;margin-top:4px}
+.zh{font-family:"WenQuanYi Zen Hei",sans-serif;font-size:42px;letter-spacing:.05em}
+
+/* conclusions and footer */
+ol.rules{padding-left:34px}
+ol.rules li{margin-bottom:10px}
+.refs{font-size:24px;color:var(--grey);padding-left:26px;margin:0}
+.refs li{margin:0 0 4px}
+.qr{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;border-top:1.5px solid var(--rule);padding-top:14px}
+.qr img{width:1.7in;display:block}
+.qr img.ai4s{width:1.9in}
+.qr p{margin:0;font-size:24px;color:var(--grey)}
+.qr p b{color:var(--ink);font-size:31px}
+</style>
+</head>
+<body>
+<div class="poster">
+<header>
+  <div>
+    <h1>Where do AI agents lose evidence when they extract, ground and link data from historical scientific literature?</h1>
+    <p class="authors"><b>Dekun Sun</b></p>
+    <p class="affil">University of Pennsylvania (MAS-CS) · volunteer, California Academy of Sciences, Scientific Computing · independent project on public data · Deep Matters 2026, Agents for Science</p>
+  </div>
+  <div class="logos">
+    <img class="penn" src="fig/penn_logo_reverse.png" alt="University of Pennsylvania">
+    <img class="cas" src="fig/cas_logo_reverse.png" alt="California Academy of Sciences">
+  </div>
+</header>
+
+<main>
+<div class="col">
+  <section>
+    <h2>1 &nbsp;Motivation</h2>
+    <p>Agents for science increasingly read the literature for us. The Biodiversity Heritage Library alone holds 64 million scanned pages. Before an agent can turn a page into a database record, five steps must hold: <b>read, extract, ground, link, review</b>. BioEvidenceBench measures where each one fails. It evaluates the steps an agent relies on; it is not itself an agent.</p>
+    <figure>
+      <img class="scanfull" src="fig/v2/hook_scan.png" alt="The printed name BULIMUS CHILENSIS on Reeve 1849, BHL page 8966790">
+      <div class="f1">
+        <img src="fig/v2/hook_shell.png" alt="Bulimus chilensis, Reeve plate XVII fig. 102">
+        <div class="readings">
+          <div><span class="k">Printed (1849)</span><span class="mono">BULIMUS CHILENSIS</span></div>
+          <div><span class="k">Library OCR, given to the agent</span><span class="mono lost">BuLlMLS CiilLE.NSls</span></div>
+        </div>
+      </div>
+      <p class="cap"><b>Figure 1.</b> Reeve, <i>Conchologia iconica</i> (1849), BHL page 8966790, with the shell from plate XVII. An agent that quotes the OCR line faithfully still files the wrong species.</p>
+    </figure>
+  </section>
+  <section>
+    <h2>2 &nbsp;Methods</h2>
+    <ul>
+      <li><b>Data.</b> The study uses two English books: Reeve, shells (1849) and Butler, birds (1907); 16 held-out test pages.</li>
+      <li><b>Three texts per page.</b> Library OCR, modern OCR (dots.mocr) and expert transcription; the page stays the same.</li>
+      <li><b>Agent task.</b> Claude Opus 5.5 and Gemini 4 Carbon extract taxa, people, places, institutions and dates, returning a line number and a verbatim quote; code slices each value from the text.</li>
+      <li><b>Reference.</b> 607 mentions labelled by hand before any model output; a second labeller on 5 pages (agreement 0.90 exact, 0.95 overlap).</li>
+      <li><b>Analysis.</b> Value F1 per book with 95% page-bootstrap intervals; hypotheses and thresholds pre-registered, configuration frozen before the test pages ran.</li>
+    </ul>
+    <figure>
+      <div class="thumbs">
+        <img src="fig/v2/gallery_reeve.png" alt="Reeve 1849 page">
+        <img src="fig/v2/gallery_plate.png" alt="Reeve plate XVII">
+        <img src="fig/v2/gallery_butler.png" alt="Butler 1907 page">
+      </div>
+      <p class="cap"><b>Figure 2.</b> Test material: Reeve (text page and plate XVII) and Butler. The evaluation design follows Lei, Docherty &amp; Cooper [1]: label before seeing model output, compare with simple baselines.</p>
+    </figure>
+  </section>
+</div>
+
+<div class="col">
+  <section>
+    <h2>3 &nbsp;Results: where evidence was lost</h2>
+    <figure>
+      <div class="chain">
+        <div class="node end"><span class="nm">Scanned page</span></div>
+        <div class="arrow">↓</div>
+        <div class="node lostn"><span class="no">1</span><span class="nm">Read<em>OCR</em></span><span class="val lost">0.60 → 0.95</span></div>
+        <div class="arrow">↓</div>
+        <div class="node"><span class="no">2</span><span class="nm">Extract<em>language model</em></span><span class="val">0.93–0.98</span></div>
+        <div class="arrow">↓</div>
+        <div class="node"><span class="no">3</span><span class="nm">Ground<em>quote the source line</em></span><span class="val">0 recall lost</span></div>
+        <div class="arrow">↓</div>
+        <div class="node lostn"><span class="no">4</span><span class="nm">Link<em>database lookup (GBIF)</em></span><span class="val lost">14 of 34 lost</span></div>
+        <div class="arrow">↓</div>
+        <div class="node lostn"><span class="no">5</span><span class="nm">Review<em>a second model, then people</em></span><span class="val lost">50 of 75 shared</span></div>
+        <div class="arrow">↓</div>
+        <div class="node end"><span class="nm">Database record</span></div>
+      </div>
+      <p class="cap"><b>Figure 3.</b> The agent's evidence chain on the test pages; red: evidence lost. Values: F1 library → modern OCR (Butler); F1 of four Claude models; names lost at lookup; library-OCR errors both models made. Quotes, a second model and self-repair check the agent against its own input, so they miss fluent errors; only an independent source (the scan, another OCR, the database, a person) catches them.</p>
+    </figure>
+    <figure style="margin-top:18px">
+      <img src="fig/v3/f1_by_text.png" alt="Value F1 by text version with 95% intervals: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert 0.98 and 0.98">
+      <p class="cap"><b>Figure 4.</b> Same pages, three texts. Better OCR recovers most of the loss; expert transcription adds little (0.98 for both books). Bars: 95% page-bootstrap intervals.</p>
+    </figure>
+    <figure style="margin-top:18px">
+      <img src="fig/v3/names_vs_f1.png" alt="Value F1 against share of gold names intact, 24 OCR versions per book">
+      <p class="cap"><b>Figure 5.</b> 24 OCR versions of the same pages. Whether names survive OCR predicts F1; the page character error rate does not (ρ −0.11 and −0.61). Exploratory.</p>
+    </figure>
+    <figure style="margin-top:18px">
+      <img src="fig/v3/link_recall.png" alt="Butler link recall on the expert text: plain GBIF lookup 0.59, GBIF with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91">
+      <p class="cap"><b>Figure 6.</b> Linking 34 correctly read bird names (Butler, expert text). A plain lookup links 0.59 (pre-registered); an LLM linker reaches 0.91 (exploratory). Its misses are taxonomic judgement calls, so it still needs review.</p>
+    </figure>
+  </section>
+</div>
+
+<div class="col">
+  <section>
+    <h2>4 &nbsp;Two failures an agent cannot see</h2>
+    <figure>
+      <div class="panel">
+        <span class="lab">(a) Quiz:</span> one name is printed in 1849, the other was written by a modern OCR model. Which is on the page?
+        <div class="choices"><div>A &nbsp;Turritella brevisis</div><div>B &nbsp;Turritella brevialis</div></div>
+        <div class="flip">B is on the page; DeepSeek-OCR-2 wrote A. Two letters differ, nothing looks broken, and the page error rate barely moves.</div>
+      </div>
+      <div class="panel">
+        <span class="lab">(b)</span> Read correctly, still not linked.
+        <img src="fig/v2/link_page.png" alt="Sykes' Wagtail, Motacilla beema, Butler 1907, BHL page 8992647" style="width:100%">
+        <div class="mono">GBIF lookup: <span class="lost">genus Motacilla only</span><br>Accepted today: Motacilla flava</div>
+      </div>
+      <p class="cap"><b>Figure 7.</b> Reeve page 8967281 and Butler page 8992647. Neither error shows in the text the agent quotes.</p>
+    </figure>
+  </section>
+  <section>
+    <h2>5 &nbsp;Work in progress: classical Chinese</h2>
+    <div class="case">
+      <img class="page" src="fig/v2/bencao_page.png" alt="Bencao gangmu, Siku quanshu manuscript copy, half-leaf 036-1b">
+      <div class="rows">
+        <div><span class="k">Manuscript</span><img src="fig/v2/bencao_chars.png" alt="Tao Hongjing as written, 弘 one stroke short"></div>
+        <div><span class="k">Claude Opus reading the scan</span><span class="zh">陶<span class="lost">弘</span>景</span></div>
+        <div><span class="k">Record keeps</span>the manuscript's form and the standard form</div>
+      </div>
+    </div>
+    <table style="margin-top:12px">
+      <tr><th>Text read</th><th class="n">Names intact</th><th class="n">Value F1 [95% CI]</th></tr>
+      <tr><td>Checked transcription</td><td class="n">100%</td><td class="n">0.98 [0.95, 0.99]</td></tr>
+      <tr><td>Claude Opus OCR</td><td class="n">88% (98%*)</td><td class="n">0.87 [0.83, 0.91]</td></tr>
+      <tr><td>PaddleOCR</td><td class="n">68% (81%*)</td><td class="n">0.72 [0.60, 0.83]</td></tr>
+    </table>
+    <p class="cap"><b>Table 1.</b> First extension of the method: <i>Bencao gangmu</i> 本草綱目 (1578), 18th-century manuscript copy. Six development pages only; an eight-page test set is frozen and not yet labelled. *If variant forms count. The model writes the modern character: right for search, wrong for the edition.</p>
+  </section>
+  <section>
+    <h2>6 &nbsp;Conclusions</h2>
+    <ol class="rules">
+      <li><b>Read:</b> check that names survive OCR.</li>
+      <li><b>Extract:</b> a small model is enough; fix the input.</li>
+      <li><b>Ground:</b> make the agent quote its source.</li>
+      <li><b>Link:</b> test the database link on its own.</li>
+      <li><b>Review:</b> agreement between models is not evidence.</li>
+    </ol>
+    <p class="cap">Limits: two English printed books and a six-page Chinese pilot. The same chain likely applies to materials papers (Fe₂O₃ read as Fe2O3; "TiO₂" without its phase), but this is untested.</p>
+    <ol class="refs">
+      <li>Lei, Docherty &amp; Cooper (2024). <i>Digital Discovery</i>.</li>
+      <li>FineBooks / IMPACT ground truth, <i>finebooks/bhl-impact-gt</i>, CC BY 3.0. Scans: BHL; Internet Archive; CADAL.</li>
+    </ol>
+    <div class="qr">
+      <img src="fig/qr_repo.svg" alt="QR code to the repository">
+      <p><b>Preprint, data and every run</b><br>github.com/dekunsun/BioEvidenceBench</p>
+      <img class="ai4s" src="fig/ai4s_logo.png" alt="AI4S.fyi">
+    </div>
+  </section>
+</div>
+</main>
+</div>
+</body>
+</html>
