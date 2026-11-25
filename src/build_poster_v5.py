@@ -75,6 +75,8 @@ ol.concl2 li{margin:0 0 .07in;line-height:1.3}
 .box.contact>.in{padding:0.14in 0.34in 0.1in !important}
 #r3 .stack .box:first-child>.in{padding-top:.22in;padding-bottom:.18in}
 .box.contact .cw-line{margin-top:.08in;padding-top:.08in}
+.big3 .agree{grid-column:1 / -1;border-top:1.5px solid var(--rule);padding-top:.1in}
+.big3 .punch2{font-weight:600;color:var(--ink)}
 .big3{display:grid;grid-template-columns:1fr 0.85fr 1.35fr;gap:.3in;margin:.08in 0 .05in;padding:.12in .25in;background:#f3f5f9;border-radius:10px}
 .big3 p{margin:0}
 .big3 .lab{color:var(--soft)}
@@ -398,17 +400,19 @@ def page() -> str:
   <div class="in">
     <h2>Most evidence was lost at reading and linking; extraction lost little on these pages</h2>
     <div class="big3">
-      <div><p class="lab">OCR · Butler</p><p class="num">0.60 → 0.95</p><p class="what">value F1, same pages, better OCR</p></div>
-      <div><p class="lab">Entity linking</p><p class="num">14 / 34</p><p class="what">read right, still not linked</p></div>
-      <div><p class="lab">Shared errors</p><p class="num">99–100%</p><p class="what">model agreement; auto-accept set on library OCR still held 50 (Butler) and 75 (Reeve) errors</p></div>
+      <div><p class="lab">OCR · Butler</p><p class="num">0.60 → 0.95</p><p class="what">Extraction value F1</p></div>
+      <div><p class="lab">Entity linking</p><p class="num">14 / 34</p><p class="what">Failed links</p></div>
+      <div><p class="lab">Model agreement</p><p class="num">99–100%</p><p class="what">Despite shared errors</p></div>
+      <div class="agree"><p class="punch2">Two models can agree on the same mistake.</p>
+        <p class="lab">Proposed auto-accept sets still contained 50 / 75 errors on legacy OCR (Butler / Reeve).</p></div>
     </div>
     <div class="grid3">
-      <div><p class="sub-h">A · Three texts: OCR decides F1</p>
+      <div><p class="sub-h">A · OCR quality matters</p>
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
-      <div><p class="sub-h">B · Names intact predict F1</p>
+      <div><p class="sub-h">B · Name preservation vs F1</p>
         <figure><img src="fig/v5/names_vs_f1.png" alt="Value F1 against share of names intact after OCR, Spearman 0.95 Butler and 1.00 Reeve"></figure>
-        <p class="note" style="margin:.06in 0 0"><b class="ink">Page CER does not</b> <span style="white-space:nowrap">(ρ = −0.11 / −0.61)</span></p></div>
-      <div><p class="sub-h">C · Linking 34 correctly read names</p>
+        <p class="note" style="margin:.06in 0 0"><b class="ink">Page CER does not predict F1</b> <span style="white-space:nowrap">(ρ = −0.11 / −0.61)</span></p></div>
+      <div><p class="sub-h">C · Correct names, failed links</p>
         <figure><img src="fig/v5/link_recall.png" alt="Link recall: plain GBIF lookup 0.59, with context hint 0.62, LLM linker Haiku 0.76, Opus 0.91"></figure></div>
     </div>
   </div>
