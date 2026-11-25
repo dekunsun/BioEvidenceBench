@@ -418,7 +418,7 @@ def page() -> str:
           <div class="ln"><i>2 </i> <span class="hl">BULIMUS CHILENSIS</span>. Bul. testâ</div>
           <div class="ln"><i>3 </i> oblongo-ovatâ, tenui, subtiliter</div>
           <div class="out">model → {{"line": 2, "quote": "BULIMUS CHILENSIS"}}</div>
-          <p>Code finds the quote in line 2 and slices the value from the text. A quote that differs from the text is logged as a silent correction.</p>
+          <p>Code verifies the quote and extracts the source value.</p>
         </div>
 
       </div>
