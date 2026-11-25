@@ -28,10 +28,10 @@ def css() -> str:
     c = c.replace('"Noto Sans",sans-serif', '"Noto Sans","WenQuanYi Zen Hei",sans-serif')
     c += """
 /* BioEvidenceBench additions */
-#r1{grid-template-columns:0.41fr 0.59fr}
+#r1{grid-template-columns:0.44fr 0.56fr}
 #r2{grid-template-columns:0.70fr 0.30fr}
 #r3{grid-template-columns:0.60fr 0.40fr}
-main{gap:0.3in !important}
+main{gap:0.25in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.34in 0.34in 0.30in}
 h1{font-size:72px}
@@ -41,6 +41,11 @@ h1{font-size:72px}
 h1{font-size:80px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:.3in .45in}
 .grid2 figure{margin:.05in 0 0}
+.plates{display:grid;grid-template-columns:auto auto;justify-content:center;gap:.3in;margin:.05in 0 .12in}
+.plates figure{margin:0}
+.plates img{height:3.75in;width:auto;display:block;border:1.5px solid var(--rule);border-radius:6px}
+.plates figcaption{font-size:22px;margin-top:.04in}
+img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6px;margin:0 0 .14in}
 .scans{display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;margin:.05in 0 .2in}
 .scans img{display:block;border:1.5px solid var(--rule);border-radius:6px}
 .code{background:#f3f5f9;border:1.5px solid var(--rule);border-radius:10px;padding:.16in .2in;font-size:26px}
@@ -69,6 +74,21 @@ h1{font-size:80px}
 .grid2>div:nth-child(4){align-self:center}
 """
     return c
+
+
+def make_images() -> None:
+    """Colour plates and the printed line for box 01 (2026-11-25, after a review that asked for the real
+    books to be seen first). Plates: bhl-impact-gt page images, CC BY 3.0 (IMPACT / BHL): Butler plate 96,
+    Jay (BHL page 8992569, fetched from the dataset's images/ folder into data/cache/images/), and Reeve
+    plate XVII (docs/assets/overview/reeve_plate17.jpg). Margins are cropped; nothing else is changed."""
+    from PIL import Image
+    out = ROOT / "poster" / "fig" / "v5"
+    jay = ROOT / "data" / "cache" / "images" / "butler_plate_0253.webp"
+    if jay.exists():
+        Image.open(jay).convert("RGB").crop((70, 240, 2110, 2940)).resize((680, 900)).save(out / "butler_jay.jpg", quality=90)
+    Image.open(ROOT / "docs/assets/overview/reeve_plate17.jpg").convert("RGB").crop((80, 140, 920, 1120)).save(
+        out / "reeve_plate17.jpg", quality=90)
+    Image.open(out / "hook_scan_grey.png").crop((0, 52, 970, 150)).save(out / "bulimus_line.png")
 
 
 def box(x, y, w, h, lines, stroke=RULE, dash=False, fill="#fff", anchor="middle"):
@@ -108,32 +128,23 @@ def robot(cx, top, s=1.0):
 
 
 def motivation_svg() -> str:
-    W, H = 800, 290
+    W, H = 800, 124
     p = [DEFS]
     cards = [("Printed, 1849", "BULIMUS", "CHILENSIS", INK, RULE),
              ("Library OCR ✗", "BuLlMLS", "CiilLE.NSls", RED, RULE),
              ("Database needs ✓", "Bulimus", "chilensis", NAVY, NAVY)]
     for i, (h, a, b, col, st) in enumerate(cards):
         x = i * 280
-        p.append(f'<rect x="{x}" y="0" width="240" height="150" rx="12" fill="#fff" stroke="{st}" stroke-width="2.5"/>')
-        p.append(f'<text x="{x + 120}" y="38" text-anchor="middle" font-size="24" font-weight="400" fill="{SOFT}">{h}</text>')
+        p.append(f'<rect x="{x}" y="0" width="240" height="122" rx="12" fill="#fff" stroke="{st}" stroke-width="2.5"/>')
+        p.append(f'<text x="{x + 120}" y="32" text-anchor="middle" font-size="24" font-weight="400" fill="{SOFT}">{h}</text>')
         fam = 'style="font-family:\'DejaVu Sans Mono\',monospace"' if i < 2 else 'font-style="italic"'
-        p.append(f'<text x="{x + 120}" y="86" text-anchor="middle" font-size="27" {fam} fill="{col}">{a}</text>')
-        p.append(f'<text x="{x + 120}" y="122" text-anchor="middle" font-size="27" {fam} fill="{col}">{b}</text>')
+        p.append(f'<text x="{x + 120}" y="72" text-anchor="middle" font-size="27" {fam} fill="{col}">{a}</text>')
+        p.append(f'<text x="{x + 120}" y="104" text-anchor="middle" font-size="27" {fam} fill="{col}">{b}</text>')
         if i < 2:
-            p.append(arrow(f"M{x + 246} 75 H{x + 274}"))
-    # the five steps the record depends on
-    steps = ["read", "extract", "ground", "link", "review"]
-    p.append(f'<text x="0" y="212" font-size="26" font-weight="400" fill="{SOFT}">Five steps must hold:</text>')
-    for i, s in enumerate(steps):
-        x = i * 163
-        p.append(f'<rect x="{x}" y="232" width="128" height="50" rx="25" fill="#fff" stroke="{NAVY}" stroke-width="2"/>')
-        p.append(f'<text x="{x + 64}" y="266" text-anchor="middle" font-size="26" font-weight="500" fill="{NAVY}">{s}</text>')
-        if i < 4:
-            p.append(arrow(f"M{x + 131} 257 H{x + 159}"))
+            p.append(arrow(f"M{x + 246} 61 H{x + 274}"))
     return (f'<svg viewBox="-3 -3 {W + 6} {H + 6}" width="100%" role="img" aria-label="The printed name '
             f'BULIMUS CHILENSIS, the library OCR BuLlMLS CiilLE.NSls, and the name the database needs, Bulimus '
-            f'chilensis; five steps must hold: read, extract, ground, link, review.">' + "\n".join(p) + "</svg>")
+            f'chilensis.">' + "\n".join(p) + "</svg>")
 
 
 def methods_svg() -> str:
@@ -231,7 +242,7 @@ def page() -> str:
   <div>
     <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>Where do AI agents lose evidence in historical scientific literature?</h1>
-    <p class="key"><b>BioEvidenceBench · Key finding:</b> evidence is lost when the agent reads (F1 0.60 on library OCR, 0.95 on modern OCR) and when it links (14 of 34 names), not when it extracts.</p>
+    <p class="key"><b>BioEvidenceBench · Key finding:</b> most evidence was lost at reading (F1 0.60 on library OCR, 0.95 on modern OCR) and at linking (14 of 34 names); extraction lost little.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
@@ -246,13 +257,13 @@ def page() -> str:
 <div class="box">
   <p class="act">01 · Motivation</p>
   <div class="in">
-    <h2>When an agent files a species, did it read the page, or copy a misreading?</h2>
-    <div class="scans">
-      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:1.45in">
-      <img src="fig/v5/hook_scan_grey.png" alt="BULIMUS CHILENSIS printed in Reeve 1849, BHL page 8966790" style="width:100%">
+    <h2>Two real books, 1849 and 1907. An agent that quotes the OCR faithfully can still file the wrong species.</h2>
+    <div class="plates">
+      <figure><img src="fig/v5/reeve_plate17.jpg" alt="Reeve, Conchologia iconica 1849, plate XVII: Bulimus shells in colour"><figcaption>Reeve 1849, shells · plate XVII</figcaption></figure>
+      <figure><img src="fig/v5/butler_jay.jpg" alt="Butler, Birds of Great Britain and Ireland 1907, plate 96: the Jay"><figcaption>Butler 1907, birds · plate 96, Jay</figcaption></figure>
     </div>
+    <img class="line" src="fig/v5/bulimus_line.png" alt="The printed line BULIMUS CHILENSIS in Reeve 1849, BHL page 8966790">
     {motivation_svg()}
-    <p class="note">An agent that quotes the OCR faithfully still files the wrong species.</p>
   </div>
 </div>
 <div class="box">
@@ -281,7 +292,7 @@ def page() -> str:
 <div class="box">
   <p class="act">03 · Results</p>
   <div class="in">
-    <h2>Evidence is lost when the agent reads and when it links, not when it extracts</h2>
+    <h2>Most evidence was lost at reading and linking; extraction lost little on these pages</h2>
     <div class="grid2">
       <div><p class="sub-h">A · Same pages, three texts: OCR decides F1</p>
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
@@ -326,7 +337,7 @@ def page() -> str:
 <div class="box">
   <p class="act">06 · Conclusion</p>
   <div class="in"><ul class="concl">
-      <li><b>Finding.</b> Library OCR cost a third of the values; a plain database lookup lost 14 of 34 correctly read names. Extraction held (0.93–0.98).</li>
+      <li><b>Finding.</b> Library OCR cost a third of the values; a plain database lookup lost 14 of 34 correctly read names. Extraction lost little on these pages (0.93–0.98).</li>
       <li><b>For agent builders.</b> Check that names survive OCR; let the model point and code write; test the database link on its own; agreement between models is not evidence.</li>
       <li><b>Next.</b> Reeve's names; the classical Chinese test pages. Materials papers are untested.</li>
     </ul></div>
@@ -358,5 +369,6 @@ def page() -> str:
 
 
 if __name__ == "__main__":
+    make_images()
     (ROOT / "poster" / "poster.html").write_text(page())
     print("written poster/poster.html")

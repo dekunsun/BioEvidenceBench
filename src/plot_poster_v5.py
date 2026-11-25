@@ -13,7 +13,7 @@ import plot_poster_v3 as v3
 
 v3.OUT = v3.ROOT / "poster" / "fig" / "v5"
 v3.FS = 17.0
-v3.W, v3.H = 6.4, 3.05
+v3.W, v3.H = 6.4, 2.8
 v3.INK, v3.GREY = "#15201c", "#4d5a55"
 plt.rcParams.update({"font.family": ["Liberation Sans", "DejaVu Sans"], "font.size": v3.FS,
                      "axes.edgecolor": v3.GREY, "axes.labelcolor": v3.INK, "xtick.color": v3.INK,

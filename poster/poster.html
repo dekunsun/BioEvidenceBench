@@ -174,10 +174,10 @@ footer.bar .qrs img{width:1.1in;height:1.1in;display:block;margin:0 auto .04in}
 .cw-line{margin:.16in 0 0;padding-top:.14in;border-top:1.5px solid var(--rule);color:var(--soft);white-space:nowrap}
 
 /* BioEvidenceBench additions */
-#r1{grid-template-columns:0.41fr 0.59fr}
+#r1{grid-template-columns:0.44fr 0.56fr}
 #r2{grid-template-columns:0.70fr 0.30fr}
 #r3{grid-template-columns:0.60fr 0.40fr}
-main{gap:0.3in !important}
+main{gap:0.25in !important}
 main>.row{flex:1 1 auto}  /* share any spare page height between the rows */
 .box>.in{padding:0.34in 0.34in 0.30in}
 h1{font-size:72px}
@@ -187,6 +187,11 @@ h1{font-size:72px}
 h1{font-size:80px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:.3in .45in}
 .grid2 figure{margin:.05in 0 0}
+.plates{display:grid;grid-template-columns:auto auto;justify-content:center;gap:.3in;margin:.05in 0 .12in}
+.plates figure{margin:0}
+.plates img{height:3.75in;width:auto;display:block;border:1.5px solid var(--rule);border-radius:6px}
+.plates figcaption{font-size:22px;margin-top:.04in}
+img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6px;margin:0 0 .14in}
 .scans{display:grid;grid-template-columns:auto 1fr;gap:.2in;align-items:center;margin:.05in 0 .2in}
 .scans img{display:block;border:1.5px solid var(--rule);border-radius:6px}
 .code{background:#f3f5f9;border:1.5px solid var(--rule);border-radius:10px;padding:.16in .2in;font-size:26px}
@@ -222,7 +227,7 @@ h1{font-size:80px}
   <div>
     <p class="kicker">Work in progress · Deep Matters 2026 · Agents for Science · London</p>
     <h1>Where do AI agents lose evidence in historical scientific literature?</h1>
-    <p class="key"><b>BioEvidenceBench · Key finding:</b> evidence is lost when the agent reads (F1 0.60 on library OCR, 0.95 on modern OCR) and when it links (14 of 34 names), not when it extracts.</p>
+    <p class="key"><b>BioEvidenceBench · Key finding:</b> most evidence was lost at reading (F1 0.60 on library OCR, 0.95 on modern OCR) and at linking (14 of 34 names); extraction lost little.</p>
     <p class="authors"><b>Dekun Sun</b> <span class="aff">· University of Pennsylvania, MAS-CS · volunteer, California Academy of Sciences, Scientific Computing</span></p>
   </div>
   <div class="brand">
@@ -237,42 +242,27 @@ h1{font-size:80px}
 <div class="box">
   <p class="act">01 · Motivation</p>
   <div class="in">
-    <h2>When an agent files a species, did it read the page, or copy a misreading?</h2>
-    <div class="scans">
-      <img src="fig/v5/hook_shell_grey.png" alt="Bulimus chilensis, Reeve plate XVII" style="height:1.45in">
-      <img src="fig/v5/hook_scan_grey.png" alt="BULIMUS CHILENSIS printed in Reeve 1849, BHL page 8966790" style="width:100%">
+    <h2>Two real books, 1849 and 1907. An agent that quotes the OCR faithfully can still file the wrong species.</h2>
+    <div class="plates">
+      <figure><img src="fig/v5/reeve_plate17.jpg" alt="Reeve, Conchologia iconica 1849, plate XVII: Bulimus shells in colour"><figcaption>Reeve 1849, shells · plate XVII</figcaption></figure>
+      <figure><img src="fig/v5/butler_jay.jpg" alt="Butler, Birds of Great Britain and Ireland 1907, plate 96: the Jay"><figcaption>Butler 1907, birds · plate 96, Jay</figcaption></figure>
     </div>
-    <svg viewBox="-3 -3 806 296" width="100%" role="img" aria-label="The printed name BULIMUS CHILENSIS, the library OCR BuLlMLS CiilLE.NSls, and the name the database needs, Bulimus chilensis; five steps must hold: read, extract, ground, link, review."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
-<rect x="0" y="0" width="240" height="150" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2.5"/>
-<text x="120" y="38" text-anchor="middle" font-size="24" font-weight="400" fill="#4d5a55">Printed, 1849</text>
-<text x="120" y="86" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#15201c">BULIMUS</text>
-<text x="120" y="122" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#15201c">CHILENSIS</text>
-<path d="M246 75 H274" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="280" y="0" width="240" height="150" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2.5"/>
-<text x="400" y="38" text-anchor="middle" font-size="24" font-weight="400" fill="#4d5a55">Library OCR ✗</text>
-<text x="400" y="86" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#a8463c">BuLlMLS</text>
-<text x="400" y="122" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#a8463c">CiilLE.NSls</text>
-<path d="M526 75 H554" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="560" y="0" width="240" height="150" rx="12" fill="#fff" stroke="#011F5B" stroke-width="2.5"/>
-<text x="680" y="38" text-anchor="middle" font-size="24" font-weight="400" fill="#4d5a55">Database needs ✓</text>
-<text x="680" y="86" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">Bulimus</text>
-<text x="680" y="122" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">chilensis</text>
-<text x="0" y="212" font-size="26" font-weight="400" fill="#4d5a55">Five steps must hold:</text>
-<rect x="0" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
-<text x="64" y="266" text-anchor="middle" font-size="26" font-weight="500" fill="#011F5B">read</text>
-<path d="M131 257 H159" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="163" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
-<text x="227" y="266" text-anchor="middle" font-size="26" font-weight="500" fill="#011F5B">extract</text>
-<path d="M294 257 H322" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="326" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
-<text x="390" y="266" text-anchor="middle" font-size="26" font-weight="500" fill="#011F5B">ground</text>
-<path d="M457 257 H485" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="489" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
-<text x="553" y="266" text-anchor="middle" font-size="26" font-weight="500" fill="#011F5B">link</text>
-<path d="M620 257 H648" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
-<rect x="652" y="232" width="128" height="50" rx="25" fill="#fff" stroke="#011F5B" stroke-width="2"/>
-<text x="716" y="266" text-anchor="middle" font-size="26" font-weight="500" fill="#011F5B">review</text></svg>
-    <p class="note">An agent that quotes the OCR faithfully still files the wrong species.</p>
+    <img class="line" src="fig/v5/bulimus_line.png" alt="The printed line BULIMUS CHILENSIS in Reeve 1849, BHL page 8966790">
+    <svg viewBox="-3 -3 806 130" width="100%" role="img" aria-label="The printed name BULIMUS CHILENSIS, the library OCR BuLlMLS CiilLE.NSls, and the name the database needs, Bulimus chilensis."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4d5a55"/></marker></defs>
+<rect x="0" y="0" width="240" height="122" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2.5"/>
+<text x="120" y="32" text-anchor="middle" font-size="24" font-weight="400" fill="#4d5a55">Printed, 1849</text>
+<text x="120" y="72" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#15201c">BULIMUS</text>
+<text x="120" y="104" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#15201c">CHILENSIS</text>
+<path d="M246 61 H274" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="280" y="0" width="240" height="122" rx="12" fill="#fff" stroke="#d9dee6" stroke-width="2.5"/>
+<text x="400" y="32" text-anchor="middle" font-size="24" font-weight="400" fill="#4d5a55">Library OCR ✗</text>
+<text x="400" y="72" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#a8463c">BuLlMLS</text>
+<text x="400" y="104" text-anchor="middle" font-size="27" style="font-family:'DejaVu Sans Mono',monospace" fill="#a8463c">CiilLE.NSls</text>
+<path d="M526 61 H554" fill="none" stroke="#4d5a55" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="560" y="0" width="240" height="122" rx="12" fill="#fff" stroke="#011F5B" stroke-width="2.5"/>
+<text x="680" y="32" text-anchor="middle" font-size="24" font-weight="400" fill="#4d5a55">Database needs ✓</text>
+<text x="680" y="72" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">Bulimus</text>
+<text x="680" y="104" text-anchor="middle" font-size="27" font-style="italic" fill="#011F5B">chilensis</text></svg>
   </div>
 </div>
 <div class="box">
@@ -327,7 +317,7 @@ h1{font-size:80px}
 <div class="box">
   <p class="act">03 · Results</p>
   <div class="in">
-    <h2>Evidence is lost when the agent reads and when it links, not when it extracts</h2>
+    <h2>Most evidence was lost at reading and linking; extraction lost little on these pages</h2>
     <div class="grid2">
       <div><p class="sub-h">A · Same pages, three texts: OCR decides F1</p>
         <figure><img src="fig/v5/f1_by_text.png" alt="Value F1 by text: library OCR 0.60 and 0.64, modern OCR 0.95 and 0.98, expert transcription 0.98 and 0.98, with 95% intervals"></figure></div>
@@ -425,7 +415,7 @@ h1{font-size:80px}
 <div class="box">
   <p class="act">06 · Conclusion</p>
   <div class="in"><ul class="concl">
-      <li><b>Finding.</b> Library OCR cost a third of the values; a plain database lookup lost 14 of 34 correctly read names. Extraction held (0.93–0.98).</li>
+      <li><b>Finding.</b> Library OCR cost a third of the values; a plain database lookup lost 14 of 34 correctly read names. Extraction lost little on these pages (0.93–0.98).</li>
       <li><b>For agent builders.</b> Check that names survive OCR; let the model point and code write; test the database link on its own; agreement between models is not evidence.</li>
       <li><b>Next.</b> Reeve's names; the classical Chinese test pages. Materials papers are untested.</li>
     </ul></div>
