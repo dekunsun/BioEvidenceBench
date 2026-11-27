@@ -1,3 +1,4 @@
+# Exact versions for CI and reproduction: requirements-lock.txt (uv pip compile requirements.txt --python-version 3.11 --universal -o requirements-lock.txt)
 # Python 3.11+
 duckdb>=1.1        # SQL over Parquet on Hugging Face (hf:// paths)
 pandas>=2.2

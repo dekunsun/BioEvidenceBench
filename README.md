@@ -8,6 +8,8 @@
 
 *Open research pilot · November 2026 · Preprint in progress, not peer reviewed*
 
+[![Freeze verified & tests](https://github.com/dekunsun/BioEvidenceBench/actions/workflows/ci.yml/badge.svg)](https://github.com/dekunsun/BioEvidenceBench/actions/workflows/ci.yml)
+
 [**Decision memo**](docs/product.md) · [**Preprint**](https://dekunsun.github.io/BioEvidenceBench/docs/preprint/preprint.html) · [**RL technical report**](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html) · [**Full results**](docs/results.md) · [**Lessons learned**](docs/lessons_learned.md) · [**Reproduce**](#reproduce-the-evaluation) · [**Poster**](poster/preview.png) · [**中文版**](README_zh.md)
 
 </div>
@@ -249,7 +251,7 @@ The project contains the data loaders, annotation guide, frozen test protocol, s
 # From the repository root (Python and network access required)
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-lock.txt   # exact versions; requirements.txt has the lower bounds
 
 # Fetch the text versions and calculate OCR statistics
 python src/load_gt.py
@@ -261,7 +263,10 @@ python src/compute_cer.py --version modern_dots-mocr
 # Run local tests and check the frozen experiment files
 pytest -q
 python src/freeze.py --verify
+python src/bencao_freeze.py --verify
 ```
+
+The same three checks run on every push in [GitHub Actions](.github/workflows/ci.yml); the badge at the top shows the latest result.
 
 For **new LLM calls**, see [`src/run_extraction.py`](src/run_extraction.py) and the [evaluation settings](docs/eval_settings.md). API keys, costs, provider settings, output schema, and the sealed/unsealed test procedure matter; do not treat a new run against previously inspected pages as a fresh blind test. Each script under [`src/`](src/) starts with a note on what it does and how to run it; each run folder under [`results/`](results/) keeps its settings, prompts and raw outputs.
 

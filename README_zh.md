@@ -8,6 +8,8 @@
 
 *开放研究试点 · 2026 年 11 月 · 预印本撰写中，尚未经过同行评审*
 
+[![Freeze verified & tests](https://github.com/dekunsun/BioEvidenceBench/actions/workflows/ci.yml/badge.svg)](https://github.com/dekunsun/BioEvidenceBench/actions/workflows/ci.yml)
+
 [**English**](README.md) · [**决策备忘录**](docs/product.md#中文版) · [**研究预印本**](https://dekunsun.github.io/BioEvidenceBench/docs/preprint/preprint.html) · [**RL 技术报告**](https://dekunsun.github.io/BioEvidenceBench/docs/rl_report/rl_report.html) · [**完整结果**](docs/results.md) · [**经验教训**](docs/lessons_learned.md) · [**如何复现**](#如何复现实验) · [**Poster**](poster/preview.png)
 
 </div>
@@ -249,7 +251,7 @@ OCR 常使用 **CER（字符错误率）**衡量总体文字转录效果。但�
 # 在仓库根目录执行（需要 Python 和网络连接）
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-lock.txt   # 锁定的精确版本；requirements.txt 只写了最低版本
 
 # 获取文字版本，计算 OCR 统计
 python src/load_gt.py
@@ -261,7 +263,10 @@ python src/compute_cer.py --version modern_dots-mocr
 # 运行单元测试，核对冻结文件
 pytest -q
 python src/freeze.py --verify
+python src/bencao_freeze.py --verify
 ```
+
+每次推送都会在 [GitHub Actions](.github/workflows/ci.yml) 里自动运行这三项检查，页首的徽章显示最近一次的结果。
 
 如需**重新调用 LLM**，请查看 [`src/run_extraction.py`](src/run_extraction.py) 和 [运行设置](docs/eval_settings.md)。API 密钥、费用、模型调用方式、输出格式和测试集封存流程均影响结果。对已经查看过的页面重新运行，**不能称作新的盲测**。
 
