@@ -2,7 +2,8 @@
 (/home/user/dekunsun/livelab/poster/poster.html) with BioEvidenceBench content. The author found v4 too
 wordy and the large yellow scans busy, and asked for the LiveLab look: tinted card headers, one bold line
 per section, diagrams over text, scans small and in grey. The SVG diagrams are written here so their
-coordinates are in one place. Charts: src/plot_poster_v5.py; grey scans made from poster/fig/v2.
+coordinates are in one place. Charts: src/plot_poster_v5.py; grey scans in poster/fig/v5 were made once from
+the scan crops of src/make_poster_assets.py (poster/fig/v2).
 
     python src/build_poster_v5.py && node poster/render.js "$PWD/poster" poster A1
 """
@@ -161,18 +162,10 @@ img.line{width:100%;display:block;border:1.5px solid var(--rule);border-radius:6
 
 
 def make_images() -> None:
-    """Colour plates and the printed line for box 01 (2026-11-25, after a review that asked for the real
-    books to be seen first). Plates: bhl-impact-gt page images, CC BY 3.0 (IMPACT / BHL): Butler plate 96,
-    Jay (BHL page 8992569, fetched from the dataset's images/ folder into data/cache/images/), and Reeve
-    plate XVII (docs/assets/overview/reeve_plate17.jpg). Margins are cropped; nothing else is changed."""
+    """The quiz line for box 04. (The colour plates and printed BULIMUS line made here for a draft of box 01
+    on 2026-11-25 were dropped from the final poster; they are in git history.)"""
     from PIL import Image
     out = ROOT / "poster" / "fig" / "v5"
-    jay = ROOT / "data" / "cache" / "images" / "butler_plate_0253.webp"
-    if jay.exists():
-        Image.open(jay).convert("RGB").crop((70, 240, 2110, 2940)).resize((680, 900)).save(out / "butler_jay.jpg", quality=90)
-    Image.open(ROOT / "docs/assets/overview/reeve_plate17.jpg").convert("RGB").crop((80, 140, 920, 1120)).save(
-        out / "reeve_plate17.jpg", quality=90)
-    Image.open(out / "hook_scan_grey.png").crop((0, 52, 970, 150)).save(out / "bulimus_line.png")
     # quiz (box 04): the printed line with Bulimus granulosus, Reeve 1849, BHL page 8966790 (bhl-impact-gt
     # image, CC BY 3.0); position found once with Tesseract word boxes
     from PIL import ImageOps
