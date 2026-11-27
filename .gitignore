@@ -20,3 +20,6 @@ results/*.log
 
 # live watcher logs of running pods (copied into rl/training/runs/<run_id>/ when the run ends)
 rl/training/runpod/watch_*.log
+
+# Private working brief (personal background and the full decision log); never commit
+CLAUDE.local.md

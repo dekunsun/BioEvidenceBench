@@ -53,7 +53,7 @@ makes every judgment, and every judgment leaves a record.**
 | Deliveries are archived and committed unchanged before any comparison | Independence of the labels can be shown afterwards |
 | A small paid pilot first, cost per page reported, then a go-ahead; a cap on every run | Total API spend $55.96 (per run in `eval_settings.md`), no overrun |
 | Caps need headroom | One Gemini cap set too tight left 3 requests unsent and cost a re-run |
-| Decisions go into `CLAUDE.md` with the date and the labeller's own words | After a new session or a context reset, the assistant still knows what is settled |
+| Decisions go into the assistant's working brief (`CLAUDE.md`; personal context in an untracked `CLAUDE.local.md`) with the date and the labeller's own words | After a new session or a context reset, the assistant still knows what is settled |
 | Questions that need a person are grouped, each with a recommendation | 23 disagreements in 9 groups were adjudicated in one sentence |
 | Exploratory work is logged as a deviation before a conclusion is written | A post-hoc experiment is never presented as a pre-registered result |
 
