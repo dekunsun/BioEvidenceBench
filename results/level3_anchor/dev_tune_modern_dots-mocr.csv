@@ -1,0 +1,183 @@
+page_id,value,score,status0,iou,has_ref
+8967047,Mus. Taylor,77.6,box_ambiguous,,True
+8967047,BULIMUS BIVITTATUS,72.7,boxed,0.45,True
+8967047,TWO-FILLETED BULIMUS,85.1,boxed,0.383,True
+8967047,SOWERBY,74.6,boxed,0.507,True
+8967047,Brazil,78.7,boxed,0.527,True
+8967047,B. auris-leporis,80.5,boxed,,False
+8967047,Mus. Taylor,79.4,boxed,0.665,True
+8967047,BULIMUS MULIEBRIS,72.0,boxed,0.574,True
+8967047,EFFEMINATE BULIMUS,84.3,boxed,0.435,True
+8967047,New Granada,63.5,boxed,0.664,True
+8967047,Mus. Cuming,86.8,boxed,,False
+8967047,BULIMUS BOLIVIANUS,75.3,boxed,0.594,True
+8967047,BOLIVIAN BULIMUS,83.5,boxed,0.638,True
+8967047,PFEIFFER,75.4,boxed,0.531,True
+8967047,"Merida, Andes of Bolivia",80.0,boxed,0.612,True
+8967047,Pfeiffer,100.0,boxed,0.504,True
+8967047,B. annulatus,64.5,boxed,0.0,True
+8967047,Mus. Taylor,77.6,boxed,0.802,True
+8967047,BULIMUS PATRICIUS,72.0,boxed,0.184,True
+8967047,PATRICIAN BULIMUS,84.0,boxed,0.449,True
+8967047,New Granada,89.2,boxed,0.539,True
+8967047,Mus. Taylor,78.3,boxed,0.647,True
+8967047,BULIMUS SPECTATUS,69.3,boxed,0.46,True
+8967047,CHOICE BULIMUS,80.0,boxed,0.459,True
+8967060,VERY SMALL BULIMUS,87.1,boxed,0.485,True
+8967060,ADAMS,78.0,boxed,0.492,True
+8967060,Jamaica,79.4,boxed,0.612,True
+8967060,B. minimus,75.0,boxed,0.687,True
+8967060,Mus. Adams,76.9,boxed,0.726,True
+8967060,BULIMUS PAUPERCULUS,78.0,boxed,0.487,True
+8967060,MEAN-LOOKING BULIMUS,87.6,boxed,0.348,True
+8967060,ADAMS,78.0,boxed,0.492,True
+8967060,Jamaica,75.4,boxed,0.612,True
+8967060,Bulimi,91.7,boxed,0.506,True
+8967060,Jamaica,70.3,boxed,0.0,True
+8967060,Mus. Benson,61.0,box_ambiguous,,True
+8967060,BULIMUS TUTULUS,75.7,boxed,0.524,True
+8967060,LITTLE TUFT BULIMUS,87.4,boxed,0.576,True
+8967060,BENSON,53.1,box_ambiguous,,True
+8967060,"Humeerpore, Bundelkhund, India",85.7,boxed,0.76,True
+8967060,Benson,75.9,boxed,0.575,True
+8967147,Mus. Cuming,77.6,boxed,0.682,True
+8967147,ACHATINA PHILIPPIANA,78.0,boxed,0.483,True
+8967147,PHILIPPI'S ACHATINA,76.5,boxed,0.362,True
+8967147,PFEIFFER,69.0,boxed,0.457,True
+8967147,Glandina,88.2,boxed,0.0,True
+8967147,Jamaica,72.4,boxed,0.579,True
+8967147,Gosse,76.7,boxed,0.567,True
+8967147,Mus. Dennison,78.9,boxed,0.679,True
+8967147,ACHATINA MONILIFERA,62.3,box_ambiguous,,True
+8967147,NECKLACE-BOUND ACHATINA,86.0,boxed,0.365,True
+8967147,PFEIFFER,69.0,boxed,0.457,True
+8967147,Glandina,89.9,boxed,0.464,True
+8967147,"Coban, Vera Cruz, Central America",91.5,boxed,0.647,True
+8967147,Lattre,75.9,boxed,0.398,True
+8967147,Mus. Cuming,77.6,boxed,0.57,True
+8967147,ACHATINA OLEACEA,73.0,boxed,0.56,True
+8967147,OLIVE-SHAPED ACHATINA,80.9,boxed,0.305,True
+8967147,Helix (Cochlicopa) oleacea,80.0,boxed,0.495,True
+8967147,Férussac,92.1,boxed,0.0,True
+8967147,Glandina oleacea,69.9,boxed,0.598,True
+8967147,Beck,71.7,boxed,0.466,True
+8967147,Cuba,52.2,box_ambiguous,,True
+8967147,Mus. Cuming,77.6,boxed,0.666,True
+8967147,ACHATINA LEUCOZONIAS,75.6,boxed,0.399,True
+8967147,WHITE-ZONED ACHATINA,85.1,boxed,0.151,True
+8967147,SOWERBY,73.0,boxed,0.458,True
+8967147,Voluta leucozonias,80.0,boxed,0.528,True
+8967147,Walch,97.1,boxed,0.34,True
+8967147,Achatina albolineata,76.5,boxed,0.696,True
+8967147,Lamarck,74.6,boxed,0.52,True
+8967147,Férussac,75.4,boxed,0.496,True
+8967147,Polyphemus leucozonias,73.2,boxed,0.0,True
+8967147,Jan,70.6,boxed,0.489,True
+8967147,Glandina leucozonias,71.6,boxed,0.565,True
+8967147,Beck,67.9,boxed,0.457,True
+8967147,Martinique,59.6,boxed,0.758,True
+8967147,Walch,97.1,boxed,0.467,True
+8967147,Gmelin,83.9,boxed,0.471,True
+8967147,Dillwyn,74.6,boxed,0.496,True
+8992582,Jackdaw,100.0,boxed,0.601,True
+8992582,Jackdaw,100.0,boxed,0.699,True
+8992582,Continent,100.0,boxed,0.473,True
+8992582,England,100.0,boxed,0.541,True
+8992582,cliffs of Dover,100.0,boxed,0.647,True
+8992582,Jackdaw,100.0,boxed,0.687,True
+8992582,Jackdaw,100.0,boxed,0.708,True
+8992582,Lilford,100.0,boxed,0.335,True
+8992582,Jackdaw,97.3,boxed,0.719,True
+8992582,Lilford,100.0,boxed,0.612,True
+8992582,Barn Owl,100.0,boxed,0.578,True
+8992582,Daws,100.0,boxed,0.462,True
+8992582,pheasants,100.0,boxed,0.601,True
+8992582,partridges,100.0,boxed,0.656,True
+8992582,Owls,100.0,boxed,0.335,True
+8992582,Barn Owl,100.0,boxed,0.552,True
+8992582,Jackdaws,100.0,boxed,0.549,True
+8992582,Jackdaw,100.0,boxed,0.706,True
+8992582,House-Sparrow,100.0,boxed,0.698,True
+8992582,Daw,90.0,boxed,0.297,True
+8992582,Seebohm,94.6,boxed,0.518,True
+8992582,Gulls,100.0,boxed,0.566,True
+8992582,Jackdaw,94.6,boxed,0.673,True
+8992582,Rook,100.0,boxed,0.514,True
+8992582,Jackdaw,91.9,boxed,0.423,True
+8992601,Stevenson,94.9,boxed,0.453,True
+8992601,St. John,100.0,boxed,0.588,True
+8992601,grouse,100.0,boxed,0.443,True
+8992601,partridges,100.0,boxed,0.594,True
+8992601,hares,100.0,boxed,0.492,True
+8992601,wild duck,100.0,boxed,0.405,True
+8992601,pheasant,100.0,boxed,0.485,True
+8992601,Hooded Crow,100.0,boxed,0.517,True
+8992601,Peewits,100.0,boxed,0.465,True
+8992601,Gulls,100.0,boxed,0.455,True
+8992601,Redshanks,100.0,boxed,0.566,True
+8992601,Crow,100.0,boxed,0.481,True
+8992601,hoody,81.4,boxed,0.56,True
+8992601,ducks,100.0,boxed,0.586,True
+8992601,eagle,100.0,boxed,0.354,True
+8992601,peregrine falcon,100.0,boxed,0.679,True
+8992601,osprey,100.0,boxed,0.566,True
+8992601,Hoodies,94.6,boxed,0.546,True
+8992601,12th to the 30th of October,96.5,boxed,0.753,True
+8992601,T. H. Nelson,100.0,boxed,0.711,True
+8992601,F. Pilling,97.5,boxed,0.742,True
+8992601,Hoodies,97.3,boxed,0.421,True
+8992601,Seebohm,97.2,boxed,0.596,True
+8992601,Gätke,94.3,boxed,0.532,True
+8992601,Heligoland,100.0,boxed,0.628,True
+8992601,Weser,100.0,boxed,0.393,True
+8992601,Bremerhaven,100.0,boxed,0.485,True
+8992601,Gätke,91.4,boxed,0.298,True
+8992612,Alaudidæ,92.1,boxed,0.406,True
+8992612,Old World,100.0,boxed,0.443,True
+8992612,North America,100.0,boxed,0.511,True
+8992612,Jerdon,97.2,boxed,0.588,True
+8992612,Malayana,100.0,boxed,0.663,True
+8992612,Australia,89.7,boxed,0.434,True
+8992612,ALAUDIDÆ,64.5,boxed,0.486,True
+8992612,SKY-LARK,51.9,boxed,0.566,True
+8992612,Alauda arvensis,72.2,boxed,,False
+8992612,LINN.,89.9,boxed,0.608,True
+8992612,Europe,97.2,boxed,0.464,True
+8992612,Scandinavia,97.6,boxed,0.457,True
+8992612,North Africa,100.0,boxed,0.488,True
+8992612,slopes of the Atlas Mountains,100.0,boxed,0.769,True
+8992612,Russia,100.0,boxed,0.451,True
+8992612,Siberia,100.0,boxed,0.444,True
+8992612,Japan,100.0,boxed,0.5,True
+8992612,valley of the Amoor,100.0,boxed,0.055,True
+8992612,South-east Mongolia,100.0,boxed,0.261,True
+8992612,Turkestan,100.0,boxed,0.464,True
+8992612,Persia,100.0,boxed,0.303,True
+8992612,China,100.0,boxed,0.54,True
+8992612,North-west India,100.0,boxed,0.325,True
+8992612,Afghanistan,100.0,boxed,0.547,True
+8992612,Persia,100.0,boxed,0.502,True
+8992612,Asia Minor,100.0,boxed,0.491,True
+8992612,Palestine,100.0,boxed,0.406,True
+8992612,Egypt,100.0,boxed,0.447,True
+8992612,Madeira,100.0,boxed,0.506,True
+8992612,Greenland,100.0,boxed,0.483,True
+8992612,United States,100.0,boxed,0.651,True
+8992612,New Zealand,100.0,boxed,0.538,True
+8992612,Australia,94.9,boxed,0.5,True
+8992612,Great Britain,95.3,boxed,0.525,True
+8992612,Ireland,100.0,boxed,0.455,True
+8992612,Sky-Lark,100.0,boxed,0.564,True
+8992612,Sky-Lark,100.0,boxed,0.605,True
+8992612,A. dulcivox,92.7,boxed,0.544,True
+8992612,A. japonica,90.2,boxed,0.618,True
+8992612,A. cantarella,88.4,boxed,0.604,True
+8992612,A. liopus,90.1,boxed,0.691,True
+8992612,A. gulgula,90.0,boxed,,False
+8992612,A. australis,83.3,boxed,0.65,True
+8992612,A. cœlivox,87.5,boxed,0.562,True
+8992612,A. wattersi,85.4,boxed,,False
+8992612,A. sala,94.3,boxed,0.235,True
+8992612,Sky-Lark,94.7,boxed,0.586,True
+8992612,Bermudas,100.0,boxed,0.452,True
+8992612,1850,100.0,boxed,0.412,True

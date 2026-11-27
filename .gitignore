@@ -23,3 +23,6 @@ rl/training/runpod/watch_*.log
 
 # Private working brief (personal background and the full decision log); never commit
 CLAUDE.local.md
+
+# Level 3 labelling tool embeds the scans; rebuilt by src/make_box_labelling_tool.py
+results/level3_anchor/*.html
