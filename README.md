@@ -150,7 +150,7 @@ An AI result is more useful to a curator when the underlying record can be check
 | **LLM repair of legacy OCR** | **0.96 / 0.91** | Repaired readings are flagged; changed values must be checked against the scan. |
 | **Read the page image directly** | **0.96 / 0.98** *(value-bag scoring)* | Correct-looking values, but precise image positions may be unreliable. |
 
-In the repair experiment, about **92% of changed values** were correct; the rest illustrate why a repaired word must not be treated as automatically verified. Vision-model boxes located the right word for only **67% of Butler** and **40% of Reeve** values in a separate exploratory check.
+In the repair experiment, about **92% of changed values** were correct; the rest illustrate why a repaired word must not be treated as automatically verified. Vision-model boxes located the right word for only **67% of Butler** and **40% of Reeve** values in a separate exploratory check, and overlapped the printed value well (IoU ≥ 0.5) for only **52%** and **23%**.
 
 Requiring a quote in the **pre-registered** extraction comparison did not improve measured accuracy, but **both conditions already extracted source values through code**. That result cannot establish that evidence is unnecessary. Its benefits — traceability and reduced audit effort — need different measures.
 

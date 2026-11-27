@@ -423,7 +423,7 @@ OCR (from 0.12). Its remaining misses are taxonomic judgments (<code>Phylloscopu
 </tr>
 <tr>
 <td>Can a vision model give image-level evidence?</td>
-<td>Values yes, boxes no. Reading the image and drawing a box per mention (V3), Opus got 96–98% of values right, but the box contained the right word (Internet Archive hOCR words, lenient match) for 67% (Butler) and 40% (Reeve, dense two-column pages).</td>
+<td>Values yes, boxes no. Reading the image and drawing a box per mention (V3), Opus got 96–98% of values right, but the box contained the right word (Internet Archive hOCR words, lenient match) for 67% (Butler) and 40% (Reeve, dense two-column pages); with a strict criterion (IoU ≥ 0.5 against the whole printed value) 52% and 23%.</td>
 </tr>
 <tr>
 <td>Do cheap signals find the errors?</td>
